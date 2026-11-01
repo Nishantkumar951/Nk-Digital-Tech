@@ -259,13 +259,13 @@ Answer Engine Optimisation (AEO) and Generative Engine Optimisation (GEO) captur
 
 **Does NK Digital Tech handle digital marketing for small and mid-sized enterprises?**
 
-Yes. We partner with emerging enterprises, regional establishments and expanding mid-market companies across Delhi, Noida, Gurgaon, Faridabad and Ghaziabad. We construct custom, phased roadmaps that concentrate resources on the specific channels that generate the highest commercial return for your operating budget.
+Yes. We partner with emerging enterprises, regional establishments and expanding mid-market companies across Delhi, Noida, Gurgaon, Lucknow, Faridabad and Ghaziabad. We construct custom, phased roadmaps that concentrate resources on the specific channels that generate the highest commercial return for your operating budget.
 
 ---
 
 **What geographical areas within Delhi NCR do your teams cover?**
 
-We serve commercial enterprises situated throughout the entire National Capital Region, including South, Central, West, North and East Delhi, Noida, Greater Noida, Gurugram, Faridabad and Ghaziabad. Depending on client objectives, we also execute regional and pan-India organic growth campaigns.
+We serve commercial enterprises situated throughout the National Capital Region and key regional hubs, including South, Central, West, North and East Delhi, Noida, Greater Noida, Gurugram, Lucknow, Faridabad and Ghaziabad. Depending on client objectives, we also execute regional and pan-India organic growth campaigns.
 
 ---
 
@@ -281,7 +281,7 @@ We measure success through verified business metrics: qualified form inquiries, 
 
 Achieving sustained commercial growth in the highly competitive Delhi NCR marketplace requires a digital marketing strategy that addresses how real customers find answers today. Brands that limit their efforts to outdated methods fall behind as consumer search habits rapidly transition toward AI-assisted discovery.
 
-NK Digital Tech provides the strategic vision, technical capability and operational discipline needed to build lasting digital authority. Whether you require higher Google rankings, commanding local presence across Delhi, Noida and Gurgaon, or verified presence on Google AI Overviews, ChatGPT and Gemini, our team is ready to deliver. Contact our specialists today to schedule your comprehensive digital audit.
+NK Digital Tech provides the strategic vision, technical capability and operational discipline needed to build lasting digital authority. Whether you require higher Google rankings, commanding local presence across Delhi, Noida, Gurgaon and Lucknow, or verified presence on Google AI Overviews, ChatGPT and Gemini, our team is ready to deliver. Contact our specialists today to schedule your comprehensive digital audit.
 
 **Primary Call to Action:** Connect with NK Digital Tech Today
 
@@ -294,7 +294,7 @@ NK Digital Tech provides the strategic vision, technical capability and operatio
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "name": "NK Digital Tech",
-  "description": "Best digital marketing company in Delhi NCR delivering SEO, AI SEO, AEO, GEO, local SEO and web development for enterprises across Delhi, Noida and Gurgaon.",
+  "description": "Best digital marketing company in Delhi NCR delivering SEO, AI SEO, AEO, GEO, local SEO and web development for enterprises across Delhi, Noida, Gurgaon and Lucknow.",
   "url": "https://www.nkdigitaltech.in",
   "address": {
     "@type": "PostalAddress",

@@ -12,6 +12,8 @@ export interface Props {
   footerBio?: string;
   footerCoreDisciplines?: { label: string; href: string }[];
   footerTagline?: string;
+  ogImage?: string;
+  preloadImage?: string;
 }
 
 const {
@@ -34,6 +36,8 @@ const {
     { label: 'Website Design and Development', href: '#services' },
   ],
   footerTagline = 'Best Digital Marketing Company in Delhi NCR',
+  ogImage = 'https://www.nkdigitaltech.net/images/hero-best-digital-marketing-company-delhi-ncr.webp',
+  preloadImage,
 } = Astro.props;
 
 const schemaLocalBusiness = JSON.stringify({
@@ -144,7 +148,7 @@ const schemaFAQ = JSON.stringify({
   <meta property="og:type" content="website" />
   <meta property="og:url" content={canonical} />
   <meta property="og:site_name" content="NK Digital Tech" />
-  <meta property="og:image" content="https://www.nkdigitaltech.net/images/hero-best-digital-marketing-company-delhi-ncr.webp" />
+  <meta property="og:image" content={ogImage} />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
 
@@ -152,7 +156,11 @@ const schemaFAQ = JSON.stringify({
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content={title} />
   <meta name="twitter:description" content={description} />
-  <meta name="twitter:image" content="https://www.nkdigitaltech.net/images/hero-best-digital-marketing-company-delhi-ncr.webp" />
+  <meta name="twitter:image" content={ogImage} />
+
+  {preloadImage && (
+    <link rel="preload" as="image" href={preloadImage} fetchpriority="high" />
+  )}
 
   <!-- PWA & Theme -->
   <meta name="theme-color" content="#0284c7" />
@@ -256,7 +264,7 @@ const schemaFAQ = JSON.stringify({
       <!-- Mobile Menu Button -->
       <button
         id="menu-toggle"
-        class="lg:hidden text-slate-200 hover:text-white w-10 h-10 rounded-xl bg-slate-900/90 border border-slate-700/80 flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-brand-400"
+        class="lg:hidden text-slate-200 hover:text-white w-11 h-11 rounded-xl bg-slate-900/90 border border-slate-700/80 flex items-center justify-center flex-shrink-0 focus:outline-none focus:ring-2 focus:ring-brand-400"
         aria-label="Toggle navigation menu"
       >
         <svg id="menu-icon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -269,15 +277,15 @@ const schemaFAQ = JSON.stringify({
     </div>
 
     <!-- Mobile Menu Drawer -->
-    <div id="mobile-menu" class="hidden lg:hidden border-t border-slate-800 bg-[#050a14]/98 backdrop-blur-2xl px-5 py-6 shadow-2xl">
+    <div id="mobile-menu" class="hidden lg:hidden border-t border-slate-800 bg-[#050a14]/98 backdrop-blur-2xl px-4 sm:px-5 py-5 max-h-[82vh] overflow-y-auto shadow-2xl">
       <div class="flex flex-col gap-1 pb-5 border-b border-slate-800/80 text-sm font-medium">
-        <a href="#services" class="text-slate-200 hover:text-brand-300 hover:bg-slate-900/80 px-3.5 py-2.5 rounded-xl transition-colors">Services</a>
-        <a href="#locations" class="text-slate-200 hover:text-brand-300 hover:bg-slate-900/80 px-3.5 py-2.5 rounded-xl transition-colors">Regional Hubs</a>
-        <a href="#why-us" class="text-slate-200 hover:text-brand-300 hover:bg-slate-900/80 px-3.5 py-2.5 rounded-xl transition-colors">Why NK Digital Tech</a>
-        <a href="#clients" class="text-slate-200 hover:text-brand-300 hover:bg-slate-900/80 px-3.5 py-2.5 rounded-xl transition-colors">Our Clients</a>
-        <a href="#industries" class="text-slate-200 hover:text-brand-300 hover:bg-slate-900/80 px-3.5 py-2.5 rounded-xl transition-colors">Industries</a>
-        <a href="#testimonials" class="text-slate-200 hover:text-brand-300 hover:bg-slate-900/80 px-3.5 py-2.5 rounded-xl transition-colors">Client Testimonials</a>
-        <a href="#faq" class="text-slate-200 hover:text-brand-300 hover:bg-slate-900/80 px-3.5 py-2.5 rounded-xl transition-colors">FAQ</a>
+        <a href="#services" class="text-slate-200 hover:text-brand-300 hover:bg-slate-900/80 px-3.5 py-3 rounded-xl transition-colors">Services</a>
+        <a href="#locations" class="text-slate-200 hover:text-brand-300 hover:bg-slate-900/80 px-3.5 py-3 rounded-xl transition-colors">Regional Hubs</a>
+        <a href="#why-us" class="text-slate-200 hover:text-brand-300 hover:bg-slate-900/80 px-3.5 py-3 rounded-xl transition-colors">Why NK Digital Tech</a>
+        <a href="#clients" class="text-slate-200 hover:text-brand-300 hover:bg-slate-900/80 px-3.5 py-3 rounded-xl transition-colors">Our Clients</a>
+        <a href="#industries" class="text-slate-200 hover:text-brand-300 hover:bg-slate-900/80 px-3.5 py-3 rounded-xl transition-colors">Industries</a>
+        <a href="#testimonials" class="text-slate-200 hover:text-brand-300 hover:bg-slate-900/80 px-3.5 py-3 rounded-xl transition-colors">Client Testimonials</a>
+        <a href="#faq" class="text-slate-200 hover:text-brand-300 hover:bg-slate-900/80 px-3.5 py-3 rounded-xl transition-colors">FAQ</a>
       </div>
       <div class="pt-5 flex flex-col gap-3">
         <a href="#contact" class="btn-primary w-full text-center py-3.5">
@@ -330,9 +338,9 @@ const schemaFAQ = JSON.stringify({
         <!-- Column 2: Core Services -->
         <div>
           <h4 class="text-xs font-bold uppercase tracking-widest text-white mb-4">Core Disciplines</h4>
-          <ul class="space-y-2.5 text-xs">
+          <ul class="space-y-1.5 sm:space-y-2.5 text-xs">
             {footerCoreDisciplines.map((item) => (
-              <li><a href={item.href} class="hover:text-brand-400 transition-colors">{item.label}</a></li>
+              <li><a href={item.href} class="inline-block py-1 hover:text-brand-400 transition-colors">{item.label}</a></li>
             ))}
           </ul>
         </div>
@@ -340,11 +348,12 @@ const schemaFAQ = JSON.stringify({
         <!-- Column 3: Regional Service Centers -->
         <div>
           <h4 class="text-xs font-bold uppercase tracking-widest text-white mb-4">Regional Service Centers</h4>
-          <ul class="space-y-2.5 text-xs">
-            <li><a href="/best-digital-marketing-agency-in-delhi/" class="hover:text-brand-400 transition-colors">Digital Marketing Services in Delhi</a></li>
-            <li><a href="/best-digital-marketing-agency-in-noida/" class="hover:text-brand-400 transition-colors">Digital Marketing Services in Noida</a></li>
-            <li><a href="/best-digital-marketing-agency-in-gurgaon/" class="hover:text-brand-400 transition-colors">Digital Marketing Services in Gurgaon</a></li>
-            <li><a href="/best-digital-marketing-company-in-lucknow/" class="hover:text-brand-400 transition-colors">Digital Marketing Services in Lucknow</a></li>
+          <ul class="space-y-1.5 sm:space-y-2.5 text-xs">
+            <li><a href="/best-seo-company-in-delhi-ncr/" class="inline-block py-1 hover:text-brand-400 transition-colors">Best SEO Company in Delhi NCR</a></li>
+            <li><a href="/best-digital-marketing-agency-in-delhi/" class="inline-block py-1 hover:text-brand-400 transition-colors">Digital Marketing Services in Delhi</a></li>
+            <li><a href="/best-digital-marketing-agency-in-noida/" class="inline-block py-1 hover:text-brand-400 transition-colors">Digital Marketing Services in Noida</a></li>
+            <li><a href="/best-digital-marketing-agency-in-gurgaon/" class="inline-block py-1 hover:text-brand-400 transition-colors">Digital Marketing Services in Gurgaon</a></li>
+            <li><a href="/best-digital-marketing-company-in-lucknow/" class="inline-block py-1 hover:text-brand-400 transition-colors">Digital Marketing Services in Lucknow</a></li>
           </ul>
         </div>
 
@@ -353,7 +362,7 @@ const schemaFAQ = JSON.stringify({
           <h4 class="text-xs font-bold uppercase tracking-widest text-white mb-4">Connect With Us</h4>
           <ul class="space-y-3 text-xs">
             <li>
-              <a href="mailto:connect@nkdigitaltech.com" class="hover:text-brand-400 transition-colors flex items-center gap-2.5 text-slate-300 font-medium">
+              <a href="mailto:connect@nkdigitaltech.com" class="hover:text-brand-400 transition-colors inline-flex items-center gap-2.5 py-1 text-slate-300 font-medium break-all">
                 <svg class="w-4 h-4 text-brand-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
                 </svg>
@@ -368,10 +377,10 @@ const schemaFAQ = JSON.stringify({
               <span>Serving Delhi, Noida, Gurgaon, Lucknow, Faridabad &amp; Ghaziabad</span>
             </li>
           </ul>
-          <div class="mt-6">
-            <a href="#contact" class="inline-flex items-center gap-2 text-xs font-semibold text-brand-400 hover:text-brand-300">
+          <div class="mt-5">
+            <a href="#contact" class="inline-flex items-center gap-2 py-2 text-xs font-semibold text-brand-400 hover:text-brand-300">
               Schedule Your Digital Audit
-              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg class="w-3.5 h-3.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
               </svg>
             </a>
@@ -379,7 +388,7 @@ const schemaFAQ = JSON.stringify({
         </div>
       </div>
 
-      <div class="border-t border-slate-800/80 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+      <div class="border-t border-slate-800/80 pt-8 pb-16 sm:pb-0 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left text-xs text-slate-500">
         <div>
           &copy; <span id="footer-year"></span> <strong class="text-slate-300 font-semibold">NK Digital Tech</strong>. All rights reserved.
         </div>

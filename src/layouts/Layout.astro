@@ -5,6 +5,13 @@ export interface Props {
   canonical?: string;
   googleSiteVerification?: string;
   gaMeasurementId?: string;
+  customSchemaLocalBusiness?: string;
+  customSchemaFAQ?: string;
+  utilityTagline?: string;
+  brandSubtitle?: string;
+  footerBio?: string;
+  footerCoreDisciplines?: { label: string; href: string }[];
+  footerTagline?: string;
 }
 
 const {
@@ -13,6 +20,20 @@ const {
   canonical = 'https://www.nkdigitaltech.net/',
   googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION || 'XCe2XoxSIG0SKpAcnjbAcI7ESuy2KfkstbyrPh9IsA8',
   gaMeasurementId = import.meta.env.PUBLIC_GA_MEASUREMENT_ID || 'G-8007L4K5V9',
+  customSchemaLocalBusiness,
+  customSchemaFAQ,
+  utilityTagline = 'SEO • AI Search Visibility • AEO • GEO • Local SEO',
+  brandSubtitle = 'Search & AI Growth Partners',
+  footerBio = 'Best digital marketing company in Delhi NCR delivering Search Engine Optimisation, AI Search Visibility, AEO, GEO, Local SEO and high-performance web development across Delhi, Noida, Gurgaon and Lucknow.',
+  footerCoreDisciplines = [
+    { label: 'Search Engine Optimisation (SEO)', href: '#services' },
+    { label: 'AI SEO & AI Search Visibility', href: '#services' },
+    { label: 'Local SEO & Google Business Profile', href: '#services' },
+    { label: 'Answer Engine Optimisation (AEO)', href: '#services' },
+    { label: 'Generative Engine Optimisation (GEO)', href: '#services' },
+    { label: 'Website Design and Development', href: '#services' },
+  ],
+  footerTagline = 'Best Digital Marketing Company in Delhi NCR',
 } = Astro.props;
 
 const schemaLocalBusiness = JSON.stringify({
@@ -152,8 +173,8 @@ const schemaFAQ = JSON.stringify({
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
   <!-- Schema JSON-LD -->
-  <script type="application/ld+json" set:html={schemaLocalBusiness} />
-  <script type="application/ld+json" set:html={schemaFAQ} />
+  <script type="application/ld+json" set:html={customSchemaLocalBusiness || schemaLocalBusiness} />
+  <script type="application/ld+json" set:html={customSchemaFAQ || schemaFAQ} />
 </head>
 <body class="relative min-h-screen flex flex-col selection:bg-brand-500 selection:text-white">
 
@@ -166,7 +187,7 @@ const schemaFAQ = JSON.stringify({
           Serving Enterprises in Delhi, Noida, Gurgaon &amp; Lucknow
         </span>
         <span class="text-slate-700">|</span>
-        <span>SEO &bull; AI Search Visibility &bull; AEO &bull; GEO &bull; Local SEO</span>
+        <span>{utilityTagline}</span>
       </div>
       <a href="mailto:connect@nkdigitaltech.com" class="hover:text-brand-400 transition-colors font-medium">
         connect@nkdigitaltech.com
@@ -188,7 +209,7 @@ const schemaFAQ = JSON.stringify({
             NK DIGITAL TECH
           </span>
           <span class="text-[9px] sm:text-[10px] uppercase tracking-widest text-brand-400 font-semibold block mt-1">
-            Search &amp; AI Growth Partners
+            {brandSubtitle}
           </span>
         </div>
       </a>
@@ -277,7 +298,7 @@ const schemaFAQ = JSON.stringify({
             </div>
           </div>
           <p class="text-xs text-slate-400 leading-relaxed mb-5">
-            Best digital marketing company in Delhi NCR delivering Search Engine Optimisation, AI Search Visibility, AEO, GEO, Local SEO and high-performance web development across Delhi, Noida, Gurgaon and Lucknow.
+            {footerBio}
           </p>
           <div class="flex flex-wrap gap-2">
             {['Delhi', 'Noida', 'Gurgaon', 'Lucknow'].map((city) => (
@@ -292,12 +313,9 @@ const schemaFAQ = JSON.stringify({
         <div>
           <h4 class="text-xs font-bold uppercase tracking-widest text-white mb-4">Core Disciplines</h4>
           <ul class="space-y-2.5 text-xs">
-            <li><a href="#services" class="hover:text-brand-400 transition-colors">Search Engine Optimisation (SEO)</a></li>
-            <li><a href="#services" class="hover:text-brand-400 transition-colors">AI SEO &amp; AI Search Visibility</a></li>
-            <li><a href="#services" class="hover:text-brand-400 transition-colors">Local SEO &amp; Google Business Profile</a></li>
-            <li><a href="#services" class="hover:text-brand-400 transition-colors">Answer Engine Optimisation (AEO)</a></li>
-            <li><a href="#services" class="hover:text-brand-400 transition-colors">Generative Engine Optimisation (GEO)</a></li>
-            <li><a href="#services" class="hover:text-brand-400 transition-colors">Website Design and Development</a></li>
+            {footerCoreDisciplines.map((item) => (
+              <li><a href={item.href} class="hover:text-brand-400 transition-colors">{item.label}</a></li>
+            ))}
           </ul>
         </div>
 
@@ -305,10 +323,10 @@ const schemaFAQ = JSON.stringify({
         <div>
           <h4 class="text-xs font-bold uppercase tracking-widest text-white mb-4">Regional Service Centers</h4>
           <ul class="space-y-2.5 text-xs">
-            <li><a href="#locations" class="hover:text-brand-400 transition-colors">Digital Marketing Services in Delhi</a></li>
-            <li><a href="#locations" class="hover:text-brand-400 transition-colors">Digital Marketing Services in Noida</a></li>
-            <li><a href="#locations" class="hover:text-brand-400 transition-colors">Digital Marketing Services in Gurgaon</a></li>
-            <li><a href="#locations" class="hover:text-brand-400 transition-colors">Digital Marketing Services in Lucknow</a></li>
+            <li><a href="/#locations" class="hover:text-brand-400 transition-colors">Digital Marketing Services in Delhi</a></li>
+            <li><a href="/#locations" class="hover:text-brand-400 transition-colors">Digital Marketing Services in Noida</a></li>
+            <li><a href="/#locations" class="hover:text-brand-400 transition-colors">Digital Marketing Services in Gurgaon</a></li>
+            <li><a href="/lucknow" class="hover:text-brand-400 transition-colors">Digital Marketing Services in Lucknow</a></li>
           </ul>
         </div>
 
@@ -348,7 +366,7 @@ const schemaFAQ = JSON.stringify({
           &copy; <span id="footer-year"></span> <strong class="text-slate-300 font-semibold">NK Digital Tech</strong>. All rights reserved.
         </div>
         <div class="text-slate-400">
-          Best Digital Marketing Company in Delhi NCR
+          {footerTagline}
         </div>
       </div>
     </div>

@@ -1,0 +1,1154 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '../styles/global.css';
+
+const pageTitle = 'Best SEO Company in Gurgaon for More Leads | NK Digital Tech';
+const pageDescription = 'NK Digital Tech is the Best SEO Company in Gurgaon. We deliver organic SEO, AI SEO, AEO, GEO and local map pack rankings to grow daily customer calls and leads.';
+const pageCanonical = 'https://www.nkdigitaltech.net/best-seo-company-in-gurgaon/';
+
+const clients = [
+  {
+    name: 'Propertyways',
+    sector: 'Commercial Office Leasing & Corporate Advisory',
+    region: 'Gurgaon & Cyber City',
+    logo: '/images/clients/propertyways.webp',
+  },
+  {
+    name: 'VP Infra',
+    sector: 'Luxury Residential & Commercial Real Estate',
+    region: 'Gurgaon & Golf Course Road',
+    logo: '/images/clients/vp-infra.webp',
+  },
+  {
+    name: 'Vision',
+    sector: 'Super Speciality Eye Hospitals & Centres',
+    region: 'Gurgaon & Delhi NCR',
+    logo: '/images/clients/vision.webp',
+  },
+  {
+    name: 'Creative Academy',
+    sector: 'Leadership Training & Career Coaching',
+    region: 'Gurgaon & NCR',
+    logo: '/images/clients/creative-academy.webp',
+  },
+  {
+    name: 'Aangan',
+    sector: 'Luxury Couture & Designer Retail Flagships',
+    region: 'Gurgaon & NCR',
+    logo: '/images/clients/aangan.webp',
+  },
+];
+
+const services = [
+  {
+    num: '01',
+    category: 'Page One Google Rankings',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>`,
+    iconStyle: 'bg-sky-50 border-sky-200 text-brand-600',
+    impactStyle: 'bg-sky-50/80 border-sky-200/80 text-slate-800',
+    badgeColor: 'text-brand-600 bg-sky-100/80',
+    title: 'Technical & On Page Search Engine Optimisation',
+    body: 'As a dedicated technical SEO agency in Gurgaon, we repair crawl bottlenecks, improve mobile Core Web Vitals speed, organise commercial service pages and write clean semantic HTML so Google indexes and ranks your primary revenue pages on page one.',
+    impact: 'Steady organic search traffic, enterprise RFQs and qualified corporate phone enquiries across Gurgaon.',
+    cta: 'Request Technical SEO Audit',
+    href: '#contact',
+  },
+  {
+    num: '02',
+    category: 'ChatGPT & Gemini Citations',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>`,
+    iconStyle: 'bg-violet-50 border-violet-200 text-accent-600',
+    impactStyle: 'bg-violet-50/80 border-violet-200/80 text-slate-800',
+    badgeColor: 'text-accent-600 bg-violet-100/80',
+    title: 'AI SEO & Conversational Search Visibility',
+    body: 'Working as a specialised AI SEO company in Gurgaon, we structure your corporate credentials, JSON LD schema markup and factual proof tables so Google AI Overviews, ChatGPT, Gemini, Perplexity and Copilot recommend your business directly.',
+    impact: 'Verified brand mentions when enterprise leaders and families ask AI tools who to hire in Gurgaon.',
+    cta: 'Audit Your AI Search Visibility',
+    href: '#contact',
+  },
+  {
+    num: '03',
+    category: 'Google Map Pack Top 3',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>`,
+    iconStyle: 'bg-emerald-50 border-emerald-200 text-emerald-600',
+    impactStyle: 'bg-emerald-50/80 border-emerald-200/80 text-slate-800',
+    badgeColor: 'text-emerald-700 bg-emerald-100/80',
+    title: 'Local SEO & Google Business Profile Dominance',
+    body: 'Our local SEO services in Gurgaon optimise your Google Business Profile categories, build location pages, clean up Indian directory citations and grow authentic customer reviews so your corporate offices and clinics rank in the top three map results.',
+    impact: 'Daily phone calls, WhatsApp chats and direct visit requests from nearby Gurgaon commercial hubs.',
+    cta: 'Dominate Local Map Pack Results',
+    href: '#contact',
+  },
+  {
+    num: '04',
+    category: 'Featured Snippet Capture',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>`,
+    iconStyle: 'bg-amber-50 border-amber-200 text-amber-600',
+    impactStyle: 'bg-amber-50/80 border-amber-200/80 text-slate-800',
+    badgeColor: 'text-amber-700 bg-amber-100/80',
+    title: 'Answer Engine Optimisation (AEO)',
+    body: 'We format your service pages with concise 40 to 60 word direct answer blocks, service comparison tables and FAQPage schema so Google Featured Snippets and voice search assistants read your answers first.',
+    impact: 'Position zero placement for high intent questions about deliverables, project timelines and service quality.',
+    cta: 'Capture Featured Answer Boxes',
+    href: '#contact',
+  },
+  {
+    num: '05',
+    category: 'Generative AI Retrieval',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>`,
+    iconStyle: 'bg-indigo-50 border-indigo-200 text-indigo-600',
+    impactStyle: 'bg-indigo-50/80 border-indigo-200/80 text-slate-800',
+    badgeColor: 'text-indigo-700 bg-indigo-100/80',
+    title: 'Generative Engine Optimisation (GEO)',
+    body: 'Large language models pull facts from clear, structured pages. We publish deep topic clusters, specification tables, llms.txt discovery files and authoritative Indian editorial mentions so AI platforms cite your Gurgaon enterprise.',
+    impact: 'Lasting brand visibility inside multi source AI buying guides on Google AI Overviews and Perplexity.',
+    cta: 'Build Generative Search Equity',
+    href: '#contact',
+  },
+  {
+    num: '06',
+    category: 'Online Store & Catalog Growth',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>`,
+    iconStyle: 'bg-cyan-50 border-cyan-200 text-cyan-700',
+    impactStyle: 'bg-cyan-50/80 border-cyan-200/80 text-slate-800',
+    badgeColor: 'text-cyan-700 bg-cyan-100/80',
+    title: 'Ecommerce & Enterprise Authority SEO',
+    body: 'As a results driven ecommerce SEO company in Gurgaon, we optimise product category structures, eliminate duplicate filter URLs, add Product and Offer schema and earn trusted Indian editorial links that rank commercial store pages.',
+    impact: 'Higher organic store sales, repeat customer orders and nationwide keyword authority.',
+    cta: 'Scale Your Organic Store Revenue',
+    href: '#contact',
+  },
+];
+
+const comparison = [
+  {
+    metric: 'Who Manages Your SEO Work',
+    typical: 'Senior sales reps close the deal; junior trainees run basic checklists',
+    nk: 'Top SEO consultants in Gurgaon handle your technical, local and content work directly',
+  },
+  {
+    metric: 'Primary Success Metric',
+    typical: 'Vanity rankings for zero search phrases that bring no corporate calls',
+    nk: 'Verified inbound phone calls, WhatsApp leads, enterprise RFQs and site visits',
+  },
+  {
+    metric: 'AI & LLM Search Readiness',
+    typical: 'Outdated keyword repetition that ChatGPT, Gemini and AI Overviews ignore',
+    nk: 'Complete AEO, GEO, JSON LD schema and llms.txt setup for AI citations',
+  },
+  {
+    metric: 'Technical Website Speed',
+    typical: 'Heavy page builders that fail mobile Core Web Vitals checks',
+    nk: 'Fast mobile load times and clean semantic HTML code built in house',
+  },
+  {
+    metric: 'Link Building & Authority',
+    typical: 'Low quality directory blasts and automated links that risk Google penalties',
+    nk: 'Relevant Indian industry citations, digital PR and verified entity signals',
+  },
+  {
+    metric: 'Code & Data Ownership',
+    typical: 'Vendor restricts admin access to your analytics, schema or website files',
+    nk: 'You retain 100% administrative ownership of all website code and data assets',
+  },
+];
+
+const industries = [
+  {
+    sector: 'Commercial Real Estate & Developers',
+    title: 'Commercial Office Towers, Luxury Housing & Leasing Firms',
+    focus: 'Commercial corridor pages, RERA credential schema, floor plan comparison tables and Google Business Profile dominance across Gurgaon.',
+    outcome: 'Direct corporate tenant enquiries, high net worth buyer site visits and executive lease closures.',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>`,
+    accentBorder: 'border-t-brand-500',
+    iconBg: 'bg-sky-50 text-brand-600 border-sky-200',
+  },
+  {
+    sector: 'Corporate IT, SaaS & Tech Headquarters',
+    title: 'Enterprise Software, Cloud Providers & B2B Solutions',
+    focus: 'Solution architecture pages, SoftwareApplication schema, technical documentation SEO and AI search citations for Gurgaon tech headquarters.',
+    outcome: 'Steady growth in qualified enterprise demo bookings, RFP submissions and international inbound leads.',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>`,
+    accentBorder: 'border-t-emerald-500',
+    iconBg: 'bg-emerald-50 text-emerald-600 border-emerald-200',
+  },
+  {
+    sector: 'Super Speciality Healthcare & Clinics',
+    title: 'Tertiary Care Hospitals, IVF, Dental & Orthopaedic Centres',
+    focus: 'Doctor credential schema, procedure preparation and recovery answer blocks and Google Map Pack authority for clinics and hospitals across Gurgaon.',
+    outcome: 'Consistent daily increase in OPD appointment calls, surgical consultations and executive health check bookings.',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>`,
+    accentBorder: 'border-t-rose-500',
+    iconBg: 'bg-rose-50 text-rose-600 border-rose-200',
+  },
+  {
+    sector: 'Corporate Law, Advisory & Financial Consultancies',
+    title: 'Corporate Legal Chambers, Tax Consultancies & Wealth Advisors',
+    focus: 'Regulatory topic clusters, partner credential verification and featured answer snippets for corporate M&A, cross border tax and advisory queries.',
+    outcome: 'High value corporate retainers, institutional compliance consultations and direct executive calls.',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>`,
+    accentBorder: 'border-t-accent-500',
+    iconBg: 'bg-violet-50 text-accent-600 border-violet-200',
+  },
+  {
+    sector: 'Automotive & Industrial Manufacturing',
+    title: 'Auto Component Suppliers, Industrial Plants & Logistics Hubs',
+    focus: 'Technical product specification tables, ISO certification schema and AI search citations for B2B manufacturers in Udyog Vihar and Manesar.',
+    outcome: 'Qualified wholesale procurement RFQs, supply chain partnerships and national distributor contracts.',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>`,
+    accentBorder: 'border-t-cyan-500',
+    iconBg: 'bg-cyan-50 text-cyan-700 border-cyan-200',
+  },
+  {
+    sector: 'Luxury Retail & Premium Lifestyle',
+    title: 'High End Bridal Showrooms, Designers & Interior Architecture Studios',
+    focus: 'Category hierarchy SEO, Product schema markup, fast mobile lookbooks and local showroom map pack rankings across Gurgaon.',
+    outcome: 'Compounding organic store checkouts, designer appointment bookings and high value footfall.',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>`,
+    accentBorder: 'border-t-amber-500',
+    iconBg: 'bg-amber-50 text-amber-600 border-amber-200',
+  },
+];
+
+const testimonials = [
+  {
+    name: 'Karanvir Oberoi',
+    title: 'Executive Director',
+    company: 'Propertyways',
+    sector: 'Commercial Office Leasing & Corporate Advisory, Gurgaon',
+    metrics: [
+      '4.4x growth in direct corporate office leasing enquiries',
+      'Page one Google rankings for 65+ Gurgaon commercial keywords',
+      'Top 3 Google Map Pack placement across Cyber City and Golf Course Road',
+    ],
+    quote: 'Corporate occupiers and multinational tenants expanding in Gurgaon consult Google AI Overviews and ChatGPT before contacting a commercial real estate broker. NK Digital Tech built structured commercial corridor pages and schema markup that positioned Propertyways as the top organic search authority.',
+    logo: '/images/clients/propertyways.webp',
+  },
+  {
+    name: 'Vikramaditya Singh',
+    title: 'Director of Sales',
+    company: 'VP Infra',
+    sector: 'Luxury Residential & Commercial Real Estate, Gurgaon',
+    metrics: [
+      '340% increase in direct buyer site visit bookings',
+      'Featured answer snippets for premium luxury development searches',
+      'Recommended directly on ChatGPT and Google AI Overviews',
+    ],
+    quote: 'High net worth buyers and NRI investors evaluate builder credentials and project locations on Google before scheduling a property walkthrough in Gurgaon. NK Digital Tech rebuilt our project architecture with fast mobile speed and structured schema, tripling our inbound organic inquiries.',
+    logo: '/images/clients/vp-infra.webp',
+  },
+  {
+    name: 'Dr. Sonali Kapoor',
+    title: 'Medical Director',
+    company: 'Vision',
+    sector: 'Super Speciality Eye Hospitals, Gurgaon & NCR',
+    metrics: [
+      '290% growth in direct OPD and surgical consultation calls',
+      'Page one rankings for high intent clinical procedure keywords',
+      'Steady weekly increase in Google Maps direction requests',
+    ],
+    quote: 'Patients across Gurgaon compare surgeon credentials and clinical track records on Google and AI platforms before scheduling an appointment. NK Digital Tech rebuilt our clinical procedure pages and optimised our Google Business Profile, bringing high intent patient calls every day.',
+    logo: '/images/clients/vision.webp',
+  },
+  {
+    name: 'Meera Tandon',
+    title: 'Operations Head',
+    company: 'Aangan',
+    sector: 'Luxury Couture & Designer Retail Flagships, Gurgaon',
+    metrics: [
+      '3.8x increase in organic showroom appointment bookings',
+      'Page one rankings for high intent Gurgaon designer search terms',
+      'Steady weekly growth in direction requests across DLF Phase 5',
+    ],
+    quote: 'Working with NK Digital Tech transformed how luxury shoppers discover our Gurgaon flagship showroom. Their ecommerce and local SEO execution placed our collections on page one of Google and inside AI shopping summaries, bringing qualified buyers to our store every week.',
+    logo: '/images/clients/aangan.webp',
+  },
+];
+
+const stages = [
+  {
+    num: 'Stage 01',
+    step: '01',
+    title: 'Technical Crawl, Core Web Vitals & Competitor Gap Audit',
+    body: 'We begin by inspecting your website architecture, mobile speed, indexing errors, robots.txt permissions and Google Business Profile health while studying the exact pages and backlinks of the top three competitors ranking in Gurgaon.',
+    accent: 'from-brand-600 to-sky-500',
+  },
+  {
+    num: 'Stage 02',
+    step: '02',
+    title: '90 Day Commercial Keyword, Map Pack & AI Citation Plan',
+    body: 'You receive a clear 90 day action plan organised into two week milestones. We map high intent commercial keywords, service pages, 40 to 60 word answer blocks and entity schema designed to win on Google, ChatGPT and Gemini.',
+    accent: 'from-accent-600 to-violet-500',
+  },
+  {
+    num: 'Stage 03',
+    step: '03',
+    title: 'In House Code Optimisation, Schema & Content Execution',
+    body: 'Our developers and senior SEO writers implement every fix directly. We remove slow scripts, publish answer rich commercial pages, add JSON LD structured data, deploy llms.txt files and verify your business citations across trusted Indian directories.',
+    accent: 'from-cyan-600 to-teal-500',
+  },
+  {
+    num: 'Stage 04',
+    step: '04',
+    title: 'Enquiry Tracking, AI Visibility Verification & Scaling',
+    body: 'Every two weeks we review your commercial keyword climbs, Google Map phone calls, WhatsApp clicks and live citations across Google AI Overviews, ChatGPT and Gemini, scaling the exact pages that generate the highest revenue return.',
+    accent: 'from-emerald-600 to-green-500',
+  },
+];
+
+const faqs = [
+  {
+    q: 'Which is the Best SEO Company in Gurgaon for generating qualified corporate leads?',
+    a: 'NK Digital Tech is the Best SEO Company in Gurgaon because we connect every technical fix, commercial service page and Google Business Profile update directly to verified phone calls, WhatsApp enquiries, software demos and executive site visits. Our senior team combines organic SEO, AI SEO, Local SEO, AEO and GEO so your business ranks across Google Search, Google Maps, ChatGPT and Gemini.',
+  },
+  {
+    q: 'What deliverables are included in your SEO services in Gurgaon?',
+    a: 'Our SEO services in Gurgaon cover a complete technical website audit, mobile Core Web Vitals speed optimisation, commercial keyword and service page creation, JSON LD schema markup, Google Business Profile management, authoritative Indian directory citations and AI search optimisation for ChatGPT, Gemini and Google AI Overviews.',
+  },
+  {
+    q: 'How long does an SEO company in Gurgaon take to deliver page one rankings?',
+    a: 'Technical speed improvements and Google Business Profile updates often increase local map pack phone calls within four to eight weeks. Competitive page one Google rankings and consistent citations on Google AI Overviews, ChatGPT and Gemini typically build over three to six months of steady execution.',
+  },
+  {
+    q: 'How does an AI SEO company in Gurgaon get my business cited on ChatGPT and Google AI Overviews?',
+    a: 'AI models like ChatGPT, Gemini, Perplexity and Google AI Overviews extract answers from websites that provide clear 40 to 60 word factual summaries, comparison tables, JSON LD schema markup, llms.txt files and verified credentials across trusted Indian directories. As an AI SEO company in Gurgaon, we build all of these elements directly into your site.',
+  },
+  {
+    q: 'How do I choose the best SEO agency in Gurgaon and avoid fake ranking guarantees?',
+    a: 'No honest agency can guarantee a number one Google rank in a week because search algorithms update constantly. When choosing the best SEO agency in Gurgaon, look for a clear 90 day work plan, direct access to top SEO consultants in Gurgaon, verified Google Search Console case studies and 100% ownership of your website code and analytics.',
+  },
+  {
+    q: 'What makes your team deliver the best SEO services in Gurgaon for enterprise brands?',
+    a: 'We deliver the best SEO services in Gurgaon by uniting fast mobile web code, Google Business Profile authority, B2B specification tables and conversational AI schema under one roof. Instead of chasing empty traffic numbers, we optimise your pages for high intent commercial buyers ready to call or request a corporate proposal.',
+  },
+  {
+    q: 'Why hire a technical SEO agency in Gurgaon instead of a basic content vendor?',
+    a: 'Publishing blog posts on a slow or poorly structured website rarely produces rankings. As a technical SEO agency in Gurgaon, we fix crawl bottlenecks, mobile Core Web Vitals speed, canonical tags, internal linking, XML sitemaps and structured data so Google and AI crawlers can index and trust every page you publish.',
+  },
+  {
+    q: 'Do you work as an ecommerce SEO company in Gurgaon for D2C and premium lifestyle brands?',
+    a: 'Yes. As an experienced ecommerce SEO company in Gurgaon, we optimise Shopify, WooCommerce and custom online stores by fixing category hierarchies, resolving duplicate filter URLs, adding Product and Offer schema and building high authority Indian editorial backlinks that grow organic checkout revenue.',
+  },
+];
+
+const trustStrip = [
+  'Serving Gurgaon Enterprises',
+  'Page One Google Rankings',
+  'Google Map Pack Top 3',
+  'ChatGPT & Gemini Citations',
+  'Google AI Overviews',
+  'Technical AEO & GEO',
+  'Fast Mobile Web Speed',
+  '100% Client Asset Ownership',
+];
+
+const seoGurgaonSchemaLocalBusiness = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "NK Digital Tech Best SEO Company in Gurgaon",
+  "url": "https://www.nkdigitaltech.net/best-seo-company-in-gurgaon/",
+  "logo": "https://www.nkdigitaltech.net/images/seo-gurgaon/hero-best-seo-company-gurgaon.webp",
+  "image": "https://www.nkdigitaltech.net/images/seo-gurgaon/hero-best-seo-company-gurgaon.webp",
+  "description": "NK Digital Tech is the Best SEO Company in Gurgaon. We deliver organic SEO, AI SEO, AEO, GEO and local map pack rankings to grow daily customer calls and leads.",
+  "email": "connect@nkdigitaltech.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Gurgaon",
+    "addressRegion": "Haryana",
+    "addressCountry": "IN"
+  },
+  "areaServed": [
+    "Gurgaon",
+    "Gurugram",
+    "DLF Cyber City",
+    "Golf Course Road",
+    "Sohna Road"
+  ],
+  "serviceType": [
+    "Search Engine Optimisation (SEO)",
+    "Technical SEO Audit & Core Web Vitals",
+    "AI SEO & Conversational Search Visibility",
+    "Local SEO & Google Business Profile Optimisation",
+    "Answer Engine Optimisation (AEO)",
+    "Generative Engine Optimisation (GEO)",
+    "Ecommerce SEO Services"
+  ]
+});
+
+const seoGurgaonSchemaFAQ = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map((item) => ({
+    "@type": "Question",
+    "name": item.q,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": item.a
+    }
+  }))
+});
+---
+
+<Layout
+  title={pageTitle}
+  description={pageDescription}
+  canonical={pageCanonical}
+  ogImage="https://www.nkdigitaltech.net/images/seo-gurgaon/hero-best-seo-company-gurgaon.webp"
+  preloadImage="/images/seo-gurgaon/hero-best-seo-company-gurgaon.webp"
+  hideLocationsNav={true}
+  customSchemaLocalBusiness={seoGurgaonSchemaLocalBusiness}
+  customSchemaFAQ={seoGurgaonSchemaFAQ}
+  utilityTagline="Best SEO Company in Gurgaon • Organic SEO, AI Search, AEO, GEO & Local Map Pack"
+  brandSubtitle="Gurgaon • SEO, AI Search & AEO"
+  footerBio="Best SEO Company in Gurgaon building page one Google rankings, Google Map Pack dominance and verified AI citations across Google AI Overviews, ChatGPT and Gemini for businesses across Gurgaon."
+  footerCoreDisciplines={[
+    { label: 'Technical & On Page SEO', href: '#services' },
+    { label: 'AI SEO & Search Visibility', href: '#services' },
+    { label: 'Local SEO & Google Maps', href: '#services' },
+    { label: 'Answer Engine Optimisation (AEO)', href: '#services' },
+    { label: 'Generative Engine Optimisation (GEO)', href: '#services' },
+    { label: 'Ecommerce & Enterprise SEO', href: '#services' },
+  ]}
+  footerTagline="Best SEO Company in Gurgaon • Organic Search & AI Visibility"
+>
+
+  <!-- =====================================================================
+       SECTION 1: HERO (DARK SURFACE WITH UNIQUE GURGAON SEO HERO IMAGE)
+  ===================================================================== -->
+  <section class="relative surface-dark overflow-hidden pt-8 pb-12 sm:pt-16 sm:pb-20 lg:pt-20 lg:pb-24 border-b border-slate-800/80">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="absolute inset-0 mesh-glow pointer-events-none"></div>
+    <div class="absolute -top-36 -left-36 w-96 h-96 bg-brand-500/20 rounded-full blur-[130px] pointer-events-none"></div>
+    <div class="absolute top-1/4 -right-36 w-96 h-96 bg-accent-500/20 rounded-full blur-[130px] pointer-events-none"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-7 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns: Headline & CTA -->
+        <div class="lg:col-span-7 text-left min-w-0">
+          <div class="badge-dark mb-4 sm:mb-6">
+            <span class="w-2 h-2 rounded-full bg-brand-400 animate-ping flex-shrink-0"></span>
+            <span class="min-w-0">Organic SEO &bull; Google Map Packs &bull; ChatGPT &amp; Gemini</span>
+          </div>
+
+          <h1 class="font-display text-[1.95rem] sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-[1.15] sm:leading-[1.1] mb-4 sm:mb-6 text-glow">
+            Best SEO Company <br />
+            <span class="gradient-text-light">in Gurgaon</span>
+          </h1>
+
+          <p class="text-[13.5px] sm:text-base md:text-lg text-slate-300 leading-relaxed mb-6 sm:mb-8 font-normal text-justify hyphens-auto [text-align-last:left]">
+            Looking for the <strong class="text-white font-semibold">Best SEO Company in Gurgaon</strong> to turn high intent Google searches and AI prompts into daily corporate enquiries, executive office walk throughs and B2B client contracts? We build fast technical search foundations, page one Google rankings, top three local map pack placements and verified brand citations on Google AI Overviews, ChatGPT and Gemini for businesses across Gurgaon.
+          </p>
+
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 mb-7 sm:mb-10">
+            <a href="#contact" class="btn-primary w-full sm:w-auto min-h-[48px] text-sm sm:text-base px-5 sm:px-8 py-3.5 sm:py-4">
+              <span>Claim Your Free Gurgaon SEO &amp; AI Audit</span>
+              <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+              </svg>
+            </a>
+            <a href="#services" class="btn-secondary-dark w-full sm:w-auto min-h-[48px] text-sm sm:text-base px-5 sm:px-7 py-3.5 sm:py-4">
+              <span>Explore Our Six SEO Pillars</span>
+            </a>
+          </div>
+
+          <!-- Trust Verification Strip (2x4 Grid on Mobile, Flex Pills on Desktop) -->
+          <div class="pt-5 sm:pt-6 border-t border-slate-800/80">
+            <div class="grid grid-cols-2 sm:flex sm:flex-wrap items-stretch sm:items-center gap-2">
+              {trustStrip.map((item) => (
+                <span class="px-2.5 sm:px-3 py-2 sm:py-1.5 rounded-lg bg-slate-900/90 border border-slate-800 text-[11px] sm:text-xs text-slate-300 font-medium flex items-center justify-center sm:justify-start text-center sm:text-left leading-tight">
+                  {item}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Unique Gurgaon SEO Hero Image -->
+        <div class="lg:col-span-5 min-w-0">
+          <div class="relative rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-700/80 shadow-2xl shadow-brand-500/15 bg-slate-900 group">
+            <div class="relative">
+              <img
+                src="/images/seo-gurgaon/hero-best-seo-company-gurgaon.webp"
+                alt="Best SEO Company in Gurgaon Strategy Team Reviewing Google Search Console and AI Citations"
+                width="960"
+                height="540"
+                fetchpriority="high"
+                decoding="async"
+                class="w-full aspect-[16/10] sm:aspect-auto sm:h-72 md:h-[380px] lg:h-[400px] object-cover object-center group-hover:scale-105 transition-transform duration-500"
+              />
+              <div class="hidden sm:block absolute inset-0 bg-gradient-to-t from-[#050a14] via-transparent to-transparent opacity-80"></div>
+            </div>
+            <div class="relative sm:absolute sm:bottom-4 sm:left-4 sm:right-4 glass-card border-t sm:border border-slate-800 sm:rounded-2xl p-3.5 sm:p-4">
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-1">
+                <span class="text-xs font-bold text-white">Gurgaon Organic &amp; AI Search Authority</span>
+                <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-400">
+                  <span class="w-2 h-2 rounded-full bg-emerald-400 flex-shrink-0"></span>
+                  Live Organic Growth
+                </span>
+              </div>
+              <p class="text-[11px] sm:text-xs text-slate-300 text-justify hyphens-auto [text-align-last:left] leading-relaxed">
+                Built to rank Gurgaon enterprises first across Google Search, Google Maps, Google AI Overviews, ChatGPT and Gemini.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 2: INTRODUCTION (CRISP WHITE CONTRAST SECTION + GURGAON SEO TEAM IMAGE)
+  ===================================================================== -->
+  <section class="relative surface-white py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns: Snapshot + 2-Paragraph Unique Gurgaon SEO Copy -->
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-light mb-3.5 sm:mb-4">Organic Search &amp; AI Visibility</div>
+          <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-snug sm:leading-tight mb-4 sm:mb-6">
+            How the Best SEO Company in Gurgaon <span class="gradient-text-dark">Turns Search Demand Into Enterprise Leads</span>
+          </h2>
+          <div class="space-y-4 sm:space-y-5 text-slate-700 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            <p>
+              As the <strong>Best SEO Company in Gurgaon</strong>, NK Digital Tech helps commercial office leasing advisory firms, real estate developers, super speciality hospitals, corporate law chambers, industrial manufacturers and luxury retail brands capture buyers at the exact moment they search. Decision maker behaviour across Millennium City has changed completely. Before committing to a commercial office lease, shortlisting an enterprise software vendor, booking a surgeon consultation or touring a luxury condominium, executives check the top three Google Map Pack listings, read Google AI Overviews and ask ChatGPT or Gemini which <strong>SEO company in Gurgaon</strong> or commercial specialist has the strongest authority.
+            </p>
+            <p>
+              Many corporate leaders come to us after spending months with a traditional <strong>SEO agency in Gurgaon</strong> that delivered generic blog posts while corporate phone enquiries and qualified RFQs stayed completely flat. As the <strong>best SEO agency in Gurgaon</strong> for verifiable pipeline growth, we focus on the technical and content work that actually generates revenue. Whether you need the <strong>best SEO services in Gurgaon</strong>, a <strong>technical SEO agency in Gurgaon</strong>, an <strong>AI SEO company in Gurgaon</strong> or an <strong>ecommerce SEO company in Gurgaon</strong>, our in house specialists connect every deliverable directly to verified phone calls, WhatsApp chats and commercial deals.
+            </p>
+          </div>
+          <div class="mt-6 sm:mt-8 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
+            <a href="#contact" class="btn-primary w-full sm:w-auto min-h-[48px]">
+              <span>Speak With Our Top SEO Consultants in Gurgaon</span>
+              <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+              </svg>
+            </a>
+            <a href="#why-us" class="btn-secondary-light w-full sm:w-auto min-h-[48px]">
+              <span>Compare Our SEO Standards</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Unique Gurgaon SEO Team Image + Stats -->
+        <div class="lg:col-span-5 space-y-4 sm:space-y-5 min-w-0">
+          <div class="rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-200 shadow-lg bg-slate-100">
+            <img
+              src="/images/seo-gurgaon/seo-agency-team-gurgaon.webp"
+              alt="Top SEO Consultants in Gurgaon Collaborating on Search and AI Ranking Strategy"
+              width="800"
+              height="533"
+              class="w-full aspect-[16/10] sm:aspect-auto sm:h-64 lg:h-72 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="grid grid-cols-2 gap-3 sm:gap-4">
+            {[
+              { val: '4.4x', label: 'Organic Lead Growth', sub: 'Across Gurgaon commercial sectors' },
+              { val: '90 Days', label: 'Step By Step Plan', sub: 'Regular two week progress reviews' },
+              { val: 'Top 3', label: 'Google Map Pack Focus', sub: 'High intent corporate buyer calls' },
+              { val: '100%', label: 'Full Asset Ownership', sub: 'You control code & analytics' },
+            ].map((stat) => (
+              <div class="elevated-card rounded-xl sm:rounded-2xl p-3.5 sm:p-4 min-w-0">
+                <div class="font-display font-black text-xl sm:text-2xl text-brand-600 mb-0.5">{stat.val}</div>
+                <div class="text-[11px] sm:text-xs font-bold text-slate-900 leading-snug">{stat.label}</div>
+                <div class="text-[10.5px] sm:text-[11px] text-slate-500 leading-snug mt-0.5">{stat.sub}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 3: PROBLEM STATEMENT (DEEP INDIGO DARK CONTRAST SECTION)
+  ===================================================================== -->
+  <section class="relative surface-indigo py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="max-w-7xl mx-auto relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns: Problem Statement Justified Copy -->
+        <div class="lg:col-span-7 min-w-0">
+          <div class="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-3.5 py-1 sm:py-1.5 rounded-full text-[10px] sm:text-xs font-bold uppercase tracking-wider sm:tracking-widest bg-amber-500/10 border border-amber-500/30 text-amber-300 max-w-full leading-snug mb-4 sm:mb-5">
+            <svg class="w-4 h-4 text-amber-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+            </svg>
+            <span>Why Gurgaon Websites Lose Leads</span>
+          </div>
+
+          <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-white tracking-tight leading-snug sm:leading-tight mb-4 sm:mb-6">
+            Why Established Gurgaon Businesses Lose Organic Calls to Newer Competitors
+          </h2>
+
+          <div class="space-y-4 sm:space-y-5 text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            <p>
+              Websites across Gurgaon lose qualified buyer calls when they rely on slow page templates, thin service descriptions and low quality directory backlinks. Recent Google core updates and conversational AI models filter out repetitive keyword pages immediately, rewarding only fast, mobile friendly websites that publish clear service details, verified business credentials and direct answers to buyer questions.
+            </p>
+            <p>
+              Think about how your own clients search in Gurgaon today. Before leasing an office floor in DLF Cyber City or Horizon Center, retaining a law firm on Golf Course Road, consulting an orthopaedic clinic or ordering wholesale machinery, they check the top three Google Map listings or ask ChatGPT and Gemini to compare the best providers in Gurgaon. If your website takes four seconds to load on mobile and lacks JSON LD schema markup, competing brands capture those enquiries every day. As a trusted <strong>SEO company in Gurgaon</strong>, we fix your technical foundation and build answer rich service pages so Google and AI platforms put your business first.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Diagnostic Comparison Cards -->
+        <div class="lg:col-span-5 space-y-3.5 sm:space-y-4 min-w-0">
+          <div class="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6 border-l-4 border-l-rose-500">
+            <div class="flex flex-wrap items-center justify-between gap-1.5 mb-2">
+              <span class="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-rose-400">Outdated SEO Packages</span>
+              <span class="text-[11px] sm:text-xs text-slate-400">Traffic Without Calls</span>
+            </div>
+            <h3 class="font-display font-bold text-[15px] sm:text-base text-white mb-2 leading-snug">Generic Blogs, Slow Code &amp; Directory Spam</h3>
+            <p class="text-xs text-slate-300 leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+              Fails mobile Core Web Vitals checks and gets completely skipped when Gurgaon buyers use Google AI Overviews, ChatGPT or Gemini to shortlist vendors.
+            </p>
+          </div>
+
+          <div class="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6 border-l-4 border-l-emerald-400">
+            <div class="flex flex-wrap items-center justify-between gap-1.5 mb-2">
+              <span class="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-emerald-400">NK Digital Tech System</span>
+              <span class="text-[11px] sm:text-xs text-brand-300">Search &amp; AI Dominance</span>
+            </div>
+            <h3 class="font-display font-bold text-[15px] sm:text-base text-white mb-2 leading-snug">Fast Web Code, Answer Blocks &amp; Entity Schema</h3>
+            <p class="text-xs text-slate-300 leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+              Combines fast mobile speed, JSON LD structured data, Google Business Profile authority and 40 to 60 word answer blocks so Google, ChatGPT and Gemini recommend your Gurgaon business first.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 4: SERVICES (LIGHT COOL ALABASTER CONTRAST + TECHNICAL SEO IMAGE)
+  ===================================================================== -->
+  <section id="services" class="relative surface-cool py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <!-- Services Header with Unique Gurgaon SEO Services Image -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 items-center mb-9 sm:mb-16">
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-light mb-3">Six Specialised Search Pillars</div>
+          <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-snug sm:leading-tight mb-3 sm:mb-4">
+            Comprehensive SEO Services in Gurgaon for Measurable Lead Growth
+          </h2>
+          <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            Our <strong>SEO services in Gurgaon</strong> unite technical website speed, local map pack optimisation, Answer Engine Optimisation (AEO) and Generative Engine Optimisation (GEO) into one accountable growth system. Widely trusted for delivering the <strong>best SEO services in Gurgaon</strong>, we build every campaign to win page one Google rankings and verified citations across ChatGPT, Gemini and Google AI Overviews.
+          </p>
+        </div>
+        <div class="lg:col-span-5 min-w-0">
+          <div class="rounded-2xl overflow-hidden border border-slate-200 shadow-md bg-white">
+            <img
+              src="/images/seo-gurgaon/technical-ai-seo-services-gurgaon.webp"
+              alt="SEO Services in Gurgaon Technical Audit and AI Search Optimisation Team"
+              width="800"
+              height="450"
+              class="w-full aspect-[16/9] sm:aspect-auto sm:h-56 lg:h-64 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- 3 Columns x 2 Rows Grid Layout -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-7">
+        {services.map((s) => (
+          <div class="elevated-card rounded-2xl p-5 sm:p-7 flex flex-col justify-between group sm:hover:-translate-y-1">
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-4 sm:mb-6">
+                <div class={`w-11 h-11 sm:w-12 sm:h-12 rounded-xl border flex items-center justify-center flex-shrink-0 ${s.iconStyle}`}>
+                  <Fragment set:html={s.icon} />
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class={`text-[10.5px] sm:text-[11px] font-semibold px-2.5 py-1 rounded-md ${s.badgeColor}`}>
+                    {s.category}
+                  </span>
+                  <span class="font-display font-black text-base sm:text-lg text-slate-300">{s.num}</span>
+                </div>
+              </div>
+
+              <h3 class="font-display font-bold text-[17px] sm:text-xl text-slate-900 mb-2.5 sm:mb-3 leading-snug group-hover:text-brand-600 transition-colors">
+                {s.title}
+              </h3>
+
+              <p class="text-slate-600 text-[13px] sm:text-sm leading-relaxed mb-4 sm:mb-6 text-justify hyphens-auto [text-align-last:left]">
+                {s.body}
+              </p>
+            </div>
+
+            <div>
+              <div class={`rounded-xl border p-3.5 sm:p-4 mb-3.5 sm:mb-5 ${s.impactStyle}`}>
+                <div class="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-slate-900 mb-1">
+                  <svg class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                  </svg>
+                  <span>Commercial Impact</span>
+                </div>
+                <p class="text-xs text-slate-700 leading-relaxed font-medium text-justify hyphens-auto [text-align-last:left]">
+                  {s.impact}
+                </p>
+              </div>
+
+              <a href={s.href} class="inline-flex items-center gap-2 py-2 min-h-[40px] text-xs font-bold text-brand-600 hover:text-brand-700 group-hover:gap-3 transition-all">
+                <span>{s.cta}</span>
+                <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 5: WHY NK DIGITAL TECH (CRISP WHITE CONTRAST SECTION)
+  ===================================================================== -->
+  <section id="why-us" class="relative surface-white py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-14 text-left sm:text-center">
+        <div class="badge-light mb-3">Why Gurgaon Businesses Switch to Us</div>
+        <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-snug sm:leading-tight mb-3 sm:mb-4">
+          Why NK Digital Tech Is the Best SEO Company in Gurgaon
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed mb-4 text-justify hyphens-auto [text-align-last:left]">
+          Selecting the <strong>Best SEO Company in Gurgaon</strong> or working with <strong>top SEO consultants in Gurgaon</strong> requires looking past big sales promises and fancy presentations. We built NK Digital Tech around senior specialist execution, regular two week progress reviews, full code ownership and verified enquiry tracking.
+        </p>
+        <p class="text-slate-700 font-semibold text-xs sm:text-sm">
+          Compare our work standards with a typical Gurgaon SEO vendor:
+        </p>
+      </div>
+
+      <!-- Desktop Comparison Matrix -->
+      <div class="hidden md:block overflow-hidden rounded-2xl border border-slate-200 shadow-lg">
+        <table class="w-full text-left border-collapse">
+          <thead>
+            <tr class="bg-slate-900 text-white">
+              <th class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-slate-300 w-1/4">
+                Evaluation Benchmark
+              </th>
+              <th class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-rose-300 w-[37.5%] border-l border-slate-800">
+                Typical Gurgaon SEO Vendor
+              </th>
+              <th class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-brand-300 w-[37.5%] border-l border-slate-800 bg-slate-950">
+                NK Digital Tech Gurgaon
+              </th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200 text-sm">
+            {comparison.map((row, idx) => (
+              <tr class={idx % 2 === 0 ? 'bg-white' : 'bg-slate-50/80'}>
+                <td class="py-5 px-6 font-display font-bold text-slate-900">
+                  {row.metric}
+                </td>
+                <td class="py-5 px-6 text-slate-600 border-l border-slate-200">
+                  <div class="flex items-start gap-2.5">
+                    <svg class="w-4 h-4 text-rose-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                    <span>{row.typical}</span>
+                  </div>
+                </td>
+                <td class="py-5 px-6 text-slate-900 font-medium border-l border-slate-200 bg-sky-50/40">
+                  <div class="flex items-start gap-2.5">
+                    <svg class="w-4 h-4 text-emerald-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span>{row.nk}</span>
+                  </div>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Mobile Comparison Cards -->
+      <div class="md:hidden space-y-3.5">
+        {comparison.map((row) => (
+          <div class="elevated-card rounded-2xl p-4 space-y-2.5">
+            <h3 class="font-display font-bold text-slate-900 text-[15px] leading-snug">{row.metric}</h3>
+            <div class="rounded-xl bg-rose-50 border border-rose-100 p-3">
+              <div class="flex items-center gap-1.5 mb-1">
+                <svg class="w-3.5 h-3.5 text-rose-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+                <p class="text-[10px] font-bold uppercase tracking-wider text-rose-600">Typical Gurgaon SEO Vendor</p>
+              </div>
+              <p class="text-xs text-slate-700 leading-relaxed">{row.typical}</p>
+            </div>
+            <div class="rounded-xl bg-sky-50 border border-sky-200 p-3">
+              <div class="flex items-center gap-1.5 mb-1">
+                <svg class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                </svg>
+                <p class="text-[10px] font-bold uppercase tracking-wider text-brand-600">NK Digital Tech Gurgaon</p>
+              </div>
+              <p class="text-xs text-slate-900 font-semibold leading-relaxed">{row.nk}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 6: OUR CLIENTS (DARK INDIGO CONTRAST SECTION BELOW WHY US)
+  ===================================================================== -->
+  <section id="clients" class="relative surface-indigo py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-14 text-left sm:text-center">
+        <div class="badge-dark mb-3">Trusted Across Gurgaon</div>
+        <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-white tracking-tight leading-snug sm:leading-tight mb-3 sm:mb-4">
+          Gurgaon Market Leaders Growing With Our Organic &amp; AI Search Systems
+        </h2>
+        <p class="text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          From commercial property advisory firms in DLF Cyber City to real estate developers on Golf Course Road, super speciality hospitals and luxury showrooms, we help ambitious brands dominate search across Gurgaon.
+        </p>
+      </div>
+
+      <!-- 5-Column Responsive Client Grid (Balanced 2+2+1 Full Span on Mobile) -->
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-5">
+        {clients.map((client) => (
+          <div class="glass-card rounded-2xl p-3.5 sm:p-5 flex flex-col items-center text-center group sm:hover:-translate-y-1 last:col-span-2 sm:last:col-span-1">
+            <div class="w-full h-16 sm:h-20 rounded-xl bg-white border border-slate-200 flex items-center justify-center p-2.5 sm:p-4 mb-3 sm:mb-4 shadow-sm">
+              <img
+                src={client.logo}
+                alt={`${client.name} Logo`}
+                width="130"
+                height="48"
+                class="max-h-9 sm:max-h-12 w-auto object-contain"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <h3 class="font-display font-bold text-sm sm:text-base text-white mb-1">{client.name}</h3>
+            <p class="text-[11px] sm:text-xs text-slate-300 leading-snug mb-2.5 sm:mb-3 flex-grow">{client.sector}</p>
+            <span class="inline-flex items-center justify-center gap-1 text-[10px] sm:text-[11px] font-semibold text-brand-300 bg-brand-500/15 border border-brand-500/30 px-2 sm:px-2.5 py-1 rounded-md leading-tight max-w-full">
+              <svg class="w-3 h-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+              </svg>
+              <span>{client.region}</span>
+            </span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 7: INDUSTRIES (LIGHT SLATE CONTRAST SECTION - 3x2 GRID)
+  ===================================================================== -->
+  <section id="industries" class="relative surface-slate py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-16 text-left sm:text-center">
+        <div class="badge-light mb-3">Industry Specific Roadmaps</div>
+        <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-snug sm:leading-tight mb-3 sm:mb-4">
+          Custom SEO Strategies for High Growth Sectors in Gurgaon
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          We tailor our <strong>SEO services in Gurgaon</strong> around the exact buyer questions, trust signals and decision cycles of your industry vertical.
+        </p>
+      </div>
+
+      <!-- 3 Columns x 2 Rows Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-7">
+        {industries.map((ind) => (
+          <div class={`elevated-card rounded-2xl p-5 sm:p-7 border-t-4 ${ind.accentBorder} flex flex-col justify-between sm:hover:-translate-y-1`}>
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-4 sm:mb-5">
+                <div class={`w-10 h-10 sm:w-11 sm:h-11 rounded-xl border flex items-center justify-center flex-shrink-0 ${ind.iconBg}`}>
+                  <Fragment set:html={ind.icon} />
+                </div>
+                <span class="text-[11px] font-semibold text-slate-600 bg-slate-100 px-2.5 py-1 rounded-md">
+                  {ind.sector}
+                </span>
+              </div>
+
+              <h3 class="font-display font-bold text-[17px] sm:text-xl text-slate-900 mb-3 sm:mb-4 leading-snug">
+                {ind.title}
+              </h3>
+
+              <div class="mb-4 sm:mb-5">
+                <p class="text-[11px] font-bold uppercase tracking-wider text-brand-600 mb-1.5">
+                  Strategic Focus
+                </p>
+                <p class="text-slate-600 text-[13px] sm:text-sm leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+                  {ind.focus}
+                </p>
+              </div>
+            </div>
+
+            <div class="rounded-xl bg-emerald-50/70 border border-emerald-200/80 p-3.5 sm:p-4">
+              <p class="text-[11px] font-bold uppercase tracking-wider text-emerald-700 mb-1">
+                Commercial Result
+              </p>
+              <p class="text-slate-800 text-xs font-medium leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+                {ind.outcome}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 8: TESTIMONIALS (DEEP NAVY CONTRAST SECTION - 2x2 GRID)
+  ===================================================================== -->
+  <section id="testimonials" class="relative surface-dark py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="absolute inset-0 mesh-glow pointer-events-none opacity-60"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-16 text-left sm:text-center">
+        <div class="badge-dark mb-3">Verified Client Outcomes</div>
+        <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-white tracking-tight leading-snug sm:leading-tight mb-3 sm:mb-4">
+          What Business Leaders Across Gurgaon Say About Our SEO Work
+        </h2>
+        <p class="text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          Direct feedback and measured enquiry growth from commercial property directors, real estate developers, medical directors and luxury retail founders across Gurgaon.
+        </p>
+      </div>
+
+      <!-- 2 Columns x 2 Rows Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-7">
+        {testimonials.map((t) => (
+          <div class="glass-card rounded-2xl p-5 sm:p-8 flex flex-col justify-between sm:hover:-translate-y-1">
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-4 sm:mb-5">
+                <div class="flex items-center gap-1">
+                  {[1, 2, 3, 4, 5].map(() => (
+                    <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                    </svg>
+                  ))}
+                </div>
+                <span class="text-[10px] sm:text-[11px] font-semibold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-1 rounded-md">
+                  Verified Search Client
+                </span>
+              </div>
+
+              <p class="text-slate-200 text-[13.5px] sm:text-base leading-relaxed italic mb-5 sm:mb-6 text-justify hyphens-auto [text-align-last:left]">
+                "{t.quote}"
+              </p>
+
+              <div class="rounded-xl bg-slate-900/90 border border-slate-700/80 p-3.5 sm:p-4 mb-5 sm:mb-6">
+                <p class="text-[11px] font-bold uppercase tracking-wider text-brand-400 mb-2 sm:mb-2.5">
+                  Measured Growth
+                </p>
+                <ul class="space-y-2">
+                  {t.metrics.map((m) => (
+                    <li class="flex items-start gap-2 text-xs text-slate-300 font-medium leading-snug">
+                      <svg class="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                      </svg>
+                      <span>{m}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3.5 sm:gap-4 pt-3.5 sm:pt-4 border-t border-slate-800">
+              <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-white p-2 flex items-center justify-center flex-shrink-0 shadow-sm">
+                <img
+                  src={t.logo}
+                  alt={`${t.company} Logo`}
+                  width="48"
+                  height="48"
+                  class="max-h-8 sm:max-h-10 w-auto object-contain"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="min-w-0">
+                <h3 class="font-display font-bold text-white text-sm sm:text-base leading-snug">{t.name}</h3>
+                <p class="text-xs text-slate-300 leading-snug">
+                  {t.title}, <strong class="text-brand-400 font-semibold">{t.company}</strong>
+                </p>
+                <p class="text-[10.5px] sm:text-[11px] text-slate-400 mt-0.5 leading-snug">{t.sector}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 9: HOW WE WORK (CRISP WHITE CONTRAST SECTION - 4 STAGES)
+  ===================================================================== -->
+  <section class="relative surface-white py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-16 text-left sm:text-center">
+        <div class="badge-light mb-3">Our 4 Stage Execution</div>
+        <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-snug sm:leading-tight mb-3 sm:mb-4">
+          How We Build Page One &amp; AI Search Authority Across Gurgaon
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          Our four stage process fixes technical crawl barriers first, captures immediate Google Map Pack phone calls across Gurgaon, and grows your brand citations across ChatGPT, Gemini and Google AI Overviews.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-7">
+        {stages.map((s) => (
+          <div class="elevated-card rounded-2xl p-5 sm:p-8 relative overflow-hidden group sm:hover:-translate-y-1">
+            <div class="flex items-center justify-between gap-4 mb-3.5 sm:mb-5">
+              <span class={`inline-flex items-center px-2.5 sm:px-3 py-1 rounded-lg text-xs font-bold uppercase tracking-wider text-white bg-gradient-to-r ${s.accent}`}>
+                {s.num}
+              </span>
+              <span class="font-display font-black text-3xl sm:text-4xl text-slate-200 group-hover:text-slate-300 transition-colors">
+                {s.step}
+              </span>
+            </div>
+            <h3 class="font-display font-bold text-[17px] sm:text-xl text-slate-900 mb-2.5 sm:mb-3 leading-snug">
+              {s.title}
+            </h3>
+            <p class="text-slate-600 text-[13px] sm:text-sm leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+              {s.body}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 10: PARTNER WITH THE BEST SEO COMPANY IN GURGAON (CONCLUSION)
+  ===================================================================== -->
+  <section class="relative surface-indigo py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-7 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns: Partner Paragraphs (Justified) -->
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-dark mb-3.5 sm:mb-4">Compounding Search Equity</div>
+          <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-white tracking-tight leading-snug sm:leading-tight mb-4 sm:mb-6">
+            Partner With the Best SEO Company in Gurgaon
+          </h2>
+          <div class="space-y-4 sm:space-y-5 text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            <p>
+              Winning lasting market leadership in Gurgaon takes more than a static brochure website or generic blog posts. Every day, enterprise procurement teams, corporate tenants and families evaluate providers through Google Map Packs, featured answer boxes, Google AI Overviews, ChatGPT and Gemini before making a phone call.
+            </p>
+            <p>
+              When you partner with NK Digital Tech, the <strong>Best SEO Company in Gurgaon</strong>, our <strong>organic SEO services in Gurgaon</strong> put senior search specialists and developers directly to work optimising your website, local profiles and structured content for verifiable revenue growth. Whether your goal is page one Google rankings, top three local map pack visibility or consistent citations inside conversational AI models, our team is ready to build your 90 day roadmap.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Unique Gurgaon Organic Search Growth Image -->
+        <div class="lg:col-span-5 min-w-0">
+          <div class="rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-700/80 shadow-2xl bg-slate-900">
+            <img
+              src="/images/seo-gurgaon/organic-search-growth-gurgaon.webp"
+              alt="Best SEO Company in Gurgaon Presenting Organic Search and AI Lead Growth"
+              width="800"
+              height="450"
+              class="w-full aspect-[16/10] sm:aspect-auto sm:h-64 lg:h-72 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 11: FAQ (LIGHT COOL SLATE CONTRAST SECTION)
+  ===================================================================== -->
+  <section id="faq" class="relative surface-cool py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-left sm:text-center mb-9 sm:mb-14">
+        <div class="badge-light mb-3">Direct Answers for Buyers &amp; AI</div>
+        <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-snug sm:leading-tight mb-3 sm:mb-4">
+          Frequently Asked Questions About Our SEO Services in Gurgaon
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          Clear, factual answers to the questions business owners, marketing heads and founders ask most before hiring an SEO partner in Gurgaon.
+        </p>
+      </div>
+
+      <div class="space-y-3 sm:space-y-4">
+        {faqs.map((f, i) => (
+          <details class="elevated-card rounded-2xl group overflow-hidden" open={i === 0}>
+            <summary class="flex items-start sm:items-center justify-between gap-3 sm:gap-4 px-4 sm:px-6 py-4 sm:py-5 min-h-[54px] select-none">
+              <div class="flex items-start sm:items-center gap-2.5 sm:gap-3.5 text-left min-w-0">
+                <span class="w-6 h-6 sm:w-7 sm:h-7 rounded-lg bg-sky-50 border border-sky-200 text-brand-600 font-display font-bold text-xs flex items-center justify-center flex-shrink-0 mt-0.5 sm:mt-0">
+                  0{i + 1}
+                </span>
+                <span class="font-display font-bold text-slate-900 text-[14px] sm:text-base md:text-lg leading-snug">
+                  {f.q}
+                </span>
+              </div>
+              <span class="faq-icon w-7 h-7 sm:w-8 sm:h-8 rounded-full border border-slate-200 text-slate-600 flex items-center justify-center flex-shrink-0 mt-0.5 sm:mt-0">
+                <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                </svg>
+              </span>
+            </summary>
+            <div class="px-4 sm:px-6 pb-5 sm:pb-6 pt-3 text-slate-600 text-[13px] sm:text-sm md:text-base leading-relaxed border-t border-slate-100 text-justify hyphens-auto [text-align-last:left]">
+              {f.a}
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 12: SHORT 2 TO 3 LINE CALL TO ACTION BANNER (LAST SECTION)
+  ===================================================================== -->
+  <section id="contact" class="relative surface-dark py-12 sm:py-16 lg:py-20 px-4 sm:px-6 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-5xl mx-auto">
+      <div class="rounded-2xl sm:rounded-3xl bg-gradient-to-r from-brand-600 via-brand-700 to-accent-700 p-6 sm:p-10 md:p-12 text-center text-white shadow-2xl border border-white/15 relative overflow-hidden">
+        <div class="relative z-10 max-w-2xl mx-auto">
+          <h2 class="font-display font-black text-[1.45rem] sm:text-3xl md:text-4xl text-white tracking-tight leading-snug mb-3 sm:mb-4">
+            Ready to Work With the Best SEO Company in Gurgaon?
+          </h2>
+
+          <p class="text-sky-50 text-[13px] sm:text-sm md:text-base leading-relaxed mb-6 sm:mb-8">
+            Speak directly with our senior SEO specialists for a free audit of your website speed, Google Map Pack rankings and AI search visibility across Gurgaon.
+          </p>
+
+          <a
+            href="mailto:connect@nkdigitaltech.com"
+            class="inline-flex w-full sm:w-auto min-h-[48px] items-center justify-center gap-2 sm:gap-3 px-5 sm:px-8 py-3.5 sm:py-4 rounded-xl bg-white text-slate-950 hover:bg-sky-50 font-display font-bold text-sm sm:text-base shadow-xl transition-all duration-300 active:scale-95 text-center leading-snug"
+          >
+            <span>Claim Your Free Gurgaon SEO &amp; AI Audit</span>
+            <svg class="w-4 h-4 sm:w-5 sm:h-5 text-brand-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mobile Sticky Bottom Quick Action Bar -->
+  <div class="sm:hidden fixed bottom-0 inset-x-0 z-40 bg-[#050a14]/95 backdrop-blur-xl border-t border-slate-800 px-3.5 py-2.5 shadow-[0_-8px_24px_rgba(0,0,0,0.45)]">
+    <div class="flex items-center gap-2.5">
+      <a
+        href="mailto:connect@nkdigitaltech.com"
+        class="btn-primary flex-1 min-h-[44px] py-2.5 px-4 text-xs font-bold rounded-xl"
+      >
+        <span>Claim Free Gurgaon SEO Audit</span>
+        <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+        </svg>
+      </a>
+      <a
+        href="#services"
+        class="btn-secondary-dark min-h-[44px] py-2.5 px-3.5 text-xs font-semibold rounded-xl flex-shrink-0"
+      >
+        <span>Services</span>
+      </a>
+    </div>
+  </div>
+
+</Layout>
+

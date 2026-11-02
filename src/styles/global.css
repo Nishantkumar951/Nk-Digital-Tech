@@ -3,74 +3,153 @@
 @tailwind utilities;
 
 @layer base {
-  html { scroll-behavior: smooth; }
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
   body {
-    background-color: #060913;
-    color: #f1f5f9;
+    background-color: #050a14;
+    color: #0f172a;
     font-family: 'Plus Jakarta Sans', sans-serif;
     overflow-x: hidden;
   }
 }
 
 @layer components {
-  .font-display  { font-family: 'Outfit', sans-serif; }
+  .font-display {
+    font-family: 'Outfit', sans-serif;
+  }
 
+  /* Dark Section Surfaces */
+  .surface-dark {
+    background-color: #050a14;
+    color: #f8fafc;
+  }
+  .surface-navy {
+    background: linear-gradient(180deg, #071022 0%, #050b18 100%);
+    color: #f8fafc;
+  }
+  .surface-indigo {
+    background: linear-gradient(135deg, #070e20 0%, #0c1631 50%, #070d1c 100%);
+    color: #f8fafc;
+  }
+
+  /* Light Section Surfaces for High Contrast */
+  .surface-white {
+    background-color: #ffffff;
+    color: #0f172a;
+  }
+  .surface-slate {
+    background-color: #f8fafc;
+    color: #0f172a;
+  }
+  .surface-cool {
+    background: linear-gradient(180deg, #f1f5f9 0%, #f8fafc 100%);
+    color: #0f172a;
+  }
+
+  /* Dark Glass Card */
   .glass-card {
-    background: rgba(15, 23, 42, 0.65);
+    background: rgba(15, 23, 42, 0.72);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-    border: 1px solid rgba(255,255,255,0.08);
-    transition: border-color 0.3s ease;
+    border: 1px solid rgba(148, 163, 184, 0.14);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   }
-  .glass-card:hover { border-color: rgba(56,189,248,0.3); }
+  .glass-card:hover {
+    border-color: rgba(56, 189, 248, 0.45);
+    box-shadow: 0 20px 40px -15px rgba(14, 165, 233, 0.18);
+  }
 
-  .mesh-gradient {
+  /* Light Elevated Card */
+  .elevated-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 20px -4px rgba(15, 23, 42, 0.05);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .elevated-card:hover {
+    border-color: #38bdf8;
+    box-shadow: 0 20px 40px -12px rgba(14, 165, 233, 0.14);
+  }
+
+  /* Background Textures */
+  .grid-pattern-dark {
+    background-size: 44px 44px;
     background-image:
-      radial-gradient(at 10% 20%, rgba(14,165,233,0.15) 0px, transparent 50%),
-      radial-gradient(at 90% 10%, rgba(139,92,246,0.18) 0px, transparent 50%),
-      radial-gradient(at 50% 80%, rgba(56,189,248,0.12) 0px, transparent 50%);
+      linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
   }
-
-  .text-glow { text-shadow: 0 0 35px rgba(56,189,248,0.35); }
-
-  .grid-pattern {
-    background-size: 40px 40px;
+  .grid-pattern-light {
+    background-size: 44px 44px;
     background-image:
-      linear-gradient(to right, rgba(255,255,255,0.03) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(255,255,255,0.03) 1px, transparent 1px);
+      linear-gradient(to right, rgba(15, 23, 42, 0.03) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(15, 23, 42, 0.03) 1px, transparent 1px);
   }
 
-  .section-label {
-    @apply text-xs font-bold uppercase tracking-widest text-brand-400 mb-3;
+  .mesh-glow {
+    background-image:
+      radial-gradient(at 15% 20%, rgba(14, 165, 233, 0.16) 0px, transparent 50%),
+      radial-gradient(at 85% 15%, rgba(139, 92, 246, 0.18) 0px, transparent 50%),
+      radial-gradient(at 50% 85%, rgba(56, 189, 248, 0.12) 0px, transparent 50%);
   }
 
-  .section-heading {
-    @apply font-display font-extrabold text-2xl sm:text-3xl md:text-4xl text-white leading-tight;
+  /* Typography Helpers */
+  .text-glow {
+    text-shadow: 0 0 40px rgba(56, 189, 248, 0.32);
   }
-
-  .section-sub {
-    @apply text-slate-400 leading-relaxed max-w-3xl;
-  }
-
-  .gradient-text {
+  .gradient-text-light {
     @apply bg-gradient-to-r from-brand-400 via-sky-300 to-accent-400 bg-clip-text text-transparent;
   }
-
-  .btn-primary {
-    @apply inline-flex items-center gap-2 px-7 py-4 rounded-xl bg-gradient-to-r from-brand-500 to-accent-600
-           hover:from-brand-400 hover:to-accent-500 text-white font-semibold text-sm shadow-lg
-           shadow-brand-500/25 transition-all duration-300 active:scale-95;
+  .gradient-text-dark {
+    @apply bg-gradient-to-r from-brand-600 via-brand-500 to-accent-600 bg-clip-text text-transparent;
   }
 
-  .btn-outline {
-    @apply inline-flex items-center gap-2 px-7 py-4 rounded-xl glass-card border border-brand-500/40
-           hover:border-brand-400 text-sky-300 hover:text-white font-semibold text-sm
+  /* Badges */
+  .badge-dark {
+    @apply inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest bg-brand-500/10 border border-brand-500/30 text-brand-300;
+  }
+  .badge-light {
+    @apply inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest bg-sky-50 border border-sky-200 text-brand-600;
+  }
+
+  /* Buttons */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-xl
+           bg-gradient-to-r from-brand-500 via-brand-600 to-accent-600
+           hover:from-brand-400 hover:via-brand-500 hover:to-accent-500
+           text-white font-semibold text-sm shadow-lg shadow-brand-500/25
+           transition-all duration-300 active:scale-95;
+  }
+  .btn-secondary-dark {
+    @apply inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-xl
+           bg-slate-900/80 border border-slate-700 hover:border-brand-400
+           text-slate-200 hover:text-white font-semibold text-sm
+           transition-all duration-300;
+  }
+  .btn-secondary-light {
+    @apply inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-xl
+           bg-white border border-slate-200 hover:border-brand-500
+           text-slate-800 hover:text-brand-600 font-semibold text-sm shadow-sm
            transition-all duration-300;
   }
 
-  /* FAQ accordion */
-  details > summary { list-style: none; cursor: pointer; }
-  details > summary::-webkit-details-marker { display: none; }
-  details[open] .faq-icon { transform: rotate(45deg); }
-  .faq-icon { transition: transform 0.3s ease; }
+  /* FAQ Accordion */
+  details > summary {
+    list-style: none;
+    cursor: pointer;
+  }
+  details > summary::-webkit-details-marker {
+    display: none;
+  }
+  details[open] .faq-icon {
+    transform: rotate(45deg);
+    background-color: #0284c7;
+    color: #ffffff;
+    border-color: #0284c7;
+  }
+  .faq-icon {
+    transition: all 0.25s ease;
+  }
 }

@@ -1,0 +1,1237 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '../styles/global.css';
+
+const pageTitle = 'Best SEO Company in Delhi NCR for Leads | NK Digital Tech';
+const pageDescription = 'NK Digital Tech is the Best SEO Company in Delhi NCR. We deliver organic SEO, AI SEO, AEO, GEO and local map rankings across Delhi, Noida, Gurgaon and Lucknow.';
+const pageCanonical = 'https://www.nkdigitaltech.net/best-seo-company-in-delhi-ncr/';
+
+const clients = [
+  {
+    name: 'Aangan',
+    sector: 'Bridal Couture & Ethnic Retail Showrooms',
+    region: 'Delhi, Gurgaon & Lucknow',
+    logo: '/images/clients/aangan.webp',
+  },
+  {
+    name: 'Propertyways',
+    sector: 'Commercial Leasing & Luxury Real Estate',
+    region: 'Gurgaon, Noida & Delhi',
+    logo: '/images/clients/propertyways.webp',
+  },
+  {
+    name: 'Creative Academy',
+    sector: 'Competitive Exam & Skill Coaching',
+    region: 'Delhi, Noida & Lucknow',
+    logo: '/images/clients/creative-academy.webp',
+  },
+  {
+    name: 'VP Infra',
+    sector: 'Residential Townships & Civil Projects',
+    region: 'Noida, Gurgaon & Lucknow',
+    logo: '/images/clients/vp-infra.webp',
+  },
+  {
+    name: 'Vision',
+    sector: 'Super Speciality Eye Care & Diagnostics',
+    region: 'Delhi NCR & Lucknow',
+    logo: '/images/clients/vision.webp',
+  },
+];
+
+const services = [
+  {
+    num: '01',
+    category: 'Commercial Google Rankings',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>`,
+    iconStyle: 'bg-sky-50 border-sky-200 text-brand-600',
+    impactStyle: 'bg-sky-50/80 border-sky-200/80 text-slate-800',
+    badgeColor: 'text-brand-600 bg-sky-100/80',
+    title: 'Technical & On Page Search Engine Optimisation',
+    body: 'As a specialized technical SEO agency in Delhi NCR, we eliminate crawl bottlenecks, fix Core Web Vitals speed scores, structure commercial service silos and build clean semantic HTML so Google indexes and ranks your primary revenue pages on page one.',
+    impact: 'Compounding organic search traffic and qualified buyer calls across Delhi, Noida, Gurgaon and Lucknow.',
+    cta: 'Request Technical SEO Audit',
+    href: '#contact',
+  },
+  {
+    num: '02',
+    category: 'ChatGPT & Gemini Citations',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>`,
+    iconStyle: 'bg-violet-50 border-violet-200 text-accent-600',
+    impactStyle: 'bg-violet-50/80 border-violet-200/80 text-slate-800',
+    badgeColor: 'text-accent-600 bg-violet-100/80',
+    title: 'AI SEO & Conversational Search Visibility',
+    body: 'Working as a forward looking AI SEO company in Delhi NCR, we engineer your brand entity, JSON LD knowledge graphs and factual proof blocks so Google AI Overviews, ChatGPT, Gemini, Perplexity and Copilot cite your business as a trusted market leader.',
+    impact: 'Direct brand recommendations when corporate buyers and consumers ask AI assistants who to hire.',
+    cta: 'Audit Your AI Search Visibility',
+    href: '#contact',
+  },
+  {
+    num: '03',
+    category: 'Google Map Pack Top 3',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>`,
+    iconStyle: 'bg-emerald-50 border-emerald-200 text-emerald-600',
+    impactStyle: 'bg-emerald-50/80 border-emerald-200/80 text-slate-800',
+    badgeColor: 'text-emerald-700 bg-emerald-100/80',
+    title: 'Local SEO & Google Business Profile Dominance',
+    body: 'Our local SEO services in Delhi NCR and Lucknow optimise your Google Business Profile categories, build hyper local corridor pages, verify Indian directory citations and establish steady customer review velocity across every branch you operate.',
+    impact: 'Top three Google Map Pack placement driving daily phone calls, WhatsApp chats and showroom walk ins.',
+    cta: 'Dominate Local Map Pack Results',
+    href: '#contact',
+  },
+  {
+    num: '04',
+    category: 'Featured Snippet Capture',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>`,
+    iconStyle: 'bg-amber-50 border-amber-200 text-amber-600',
+    impactStyle: 'bg-amber-50/80 border-amber-200/80 text-slate-800',
+    badgeColor: 'text-amber-700 bg-amber-100/80',
+    title: 'Answer Engine Optimisation (AEO)',
+    body: 'We format your commercial pages with 40 to 60 word direct answer snapshots, cost breakdown tables and FAQPage schema so Google Featured Snippets and voice search assistants read your answers aloud before competitors even appear.',
+    impact: 'Position zero authority for high intent buyer questions regarding pricing, timelines and comparisons.',
+    cta: 'Capture Featured Answer Boxes',
+    href: '#contact',
+  },
+  {
+    num: '05',
+    category: 'Generative AI Retrieval',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>`,
+    iconStyle: 'bg-indigo-50 border-indigo-200 text-indigo-600',
+    impactStyle: 'bg-indigo-50/80 border-indigo-200/80 text-slate-800',
+    badgeColor: 'text-indigo-700 bg-indigo-100/80',
+    title: 'Generative Engine Optimisation (GEO)',
+    body: 'Generative models retrieve facts from structured, self contained content blocks. We publish deep topic clusters, specification matrices, llms.txt indexes and verified third party mentions so LLM retrieval systems select your brand.',
+    impact: 'Sustained visibility inside multi source AI buyer guides across Google AI Overviews and Perplexity.',
+    cta: 'Build Generative Search Equity',
+    href: '#contact',
+  },
+  {
+    num: '06',
+    category: 'Catalog & Store Scaling',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>`,
+    iconStyle: 'bg-cyan-50 border-cyan-200 text-cyan-700',
+    impactStyle: 'bg-cyan-50/80 border-cyan-200/80 text-slate-800',
+    badgeColor: 'text-cyan-700 bg-cyan-100/80',
+    title: 'Ecommerce & Enterprise Authority SEO',
+    body: 'As an experienced ecommerce SEO company in Delhi NCR, we optimise product category hierarchies, resolve faceted crawl waste, implement Product and Offer schema and earn high authority Indian editorial backlinks that move transactional terms.',
+    impact: 'Higher organic checkout revenue, lower customer acquisition cost and nationwide keyword dominance.',
+    cta: 'Scale Your Organic Store Revenue',
+    href: '#contact',
+  },
+];
+
+const cities = [
+  {
+    hub: 'Hub 01',
+    city: 'Delhi',
+    corridor: 'Connaught Place • South Delhi • Nehru Place • Okhla',
+    keyword: 'Organic SEO Services in Delhi',
+    desc: 'We deliver organic SEO services in Delhi for hospitals in South Delhi, law chambers in Connaught Place, coaching academies in Rajendra Nagar and industrial exporters in Okhla and Naraina.',
+    cta: 'Explore Delhi Service Center',
+    href: '/best-digital-marketing-agency-in-delhi/',
+    accent: 'from-brand-500 to-sky-400',
+  },
+  {
+    hub: 'Hub 02',
+    city: 'Noida',
+    corridor: 'Sector 62 • Sector 18 • Noida Expressway • Greater Noida',
+    keyword: 'B2B, SaaS & Industrial SEO in Noida',
+    desc: 'From IT and SaaS enterprises in Sector 62 and Sector 135 to clinics in Sector 18 and factories in Ecotech, we build page one Google rankings and AI citations across Noida.',
+    cta: 'Explore Noida Service Center',
+    href: '/best-digital-marketing-agency-in-noida/',
+    accent: 'from-accent-500 to-violet-400',
+  },
+  {
+    hub: 'Hub 03',
+    city: 'Gurgaon',
+    corridor: 'DLF Cyber City • Golf Course Road • Sohna Road • Manesar',
+    keyword: 'Enterprise & Luxury SEO in Gurgaon',
+    desc: 'We engineer high intent search authority for corporate headquarters in Cyber City, luxury real estate developers on Golf Course Road and automotive manufacturers in IMT Manesar.',
+    cta: 'Explore Gurgaon Service Center',
+    href: '/best-digital-marketing-agency-in-gurgaon/',
+    accent: 'from-cyan-500 to-teal-400',
+  },
+  {
+    hub: 'Hub 04',
+    city: 'Lucknow',
+    corridor: 'Gomti Nagar • Hazratganj • Aliganj • Amar Shaheed Path',
+    keyword: 'Regional Map Pack & Search SEO in Lucknow',
+    desc: 'Our team captures high intent local searches for township builders along Shaheed Path, speciality clinics in Gomti Nagar, showrooms in Hazratganj and coaching centres in Aliganj.',
+    cta: 'Explore Lucknow Service Center',
+    href: '/best-digital-marketing-company-in-lucknow/',
+    accent: 'from-emerald-500 to-green-400',
+  },
+];
+
+const comparison = [
+  {
+    metric: 'Who Executes Your SEO Campaign',
+    typical: 'Senior sales reps pitch you; junior interns run generic checklists',
+    nk: 'Top SEO consultants in Delhi NCR manage your technical and content sprints directly',
+  },
+  {
+    metric: 'Primary Success Metric',
+    typical: 'Vanity keyword rankings for zero volume phrases that bring no calls',
+    nk: 'Verified inbound phone calls, WhatsApp leads, RFQs and commercial revenue',
+  },
+  {
+    metric: 'AI & LLM Search Readiness',
+    typical: 'Outdated keyword stuffing that ChatGPT, Gemini and AI Overviews ignore',
+    nk: 'Complete AEO, GEO, JSON LD schema and llms.txt architecture for AI citations',
+  },
+  {
+    metric: 'Technical Website Performance',
+    typical: 'Bloated page builders that fail mobile Core Web Vitals assessments',
+    nk: 'Sub second mobile load times and clean semantic code built in house',
+  },
+  {
+    metric: 'Link Building & Authority',
+    typical: 'Spammy directory blasts and toxic private blog networks that risk penalties',
+    nk: 'Contextual Indian industry citations, digital PR and verified entity signals',
+  },
+  {
+    metric: 'Code & Data Ownership',
+    typical: 'Agency withholds admin rights to your analytics, schema or CMS changes',
+    nk: 'You retain 100% administrative ownership of all website code and data assets',
+  },
+];
+
+const industries = [
+  {
+    sector: 'Real Estate & Builders',
+    title: 'Commercial Leasing, Luxury Projects & Townships',
+    focus: 'Corridor specific project silos, RERA schema, floor plan tables and Google Map Pack dominance across Golf Course Road, Noida Expressway and Amar Shaheed Path.',
+    outcome: 'Direct buyer site visit calls, NRI investor enquiries and commercial lease closures without portal dependency.',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>`,
+    accentBorder: 'border-t-brand-500',
+    iconBg: 'bg-sky-50 text-brand-600 border-sky-200',
+  },
+  {
+    sector: 'Healthcare & Hospitals',
+    title: 'Multi Speciality Hospitals, IVF, Dental & Eye Clinics',
+    focus: 'Doctor credential schema, procedure cost and recovery answer snapshots and local map pack authority across South Delhi, Gurgaon, Noida and Lucknow.',
+    outcome: 'Consistent daily growth in OPD appointment calls, surgical consultations and diagnostic walk ins.',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>`,
+    accentBorder: 'border-t-rose-500',
+    iconBg: 'bg-rose-50 text-rose-600 border-rose-200',
+  },
+  {
+    sector: 'B2B Tech & Manufacturing',
+    title: 'SaaS Firms, Industrial Exporters & OEM Suppliers',
+    focus: 'Technical product specification matrices, ISO credential schema and AI search citations for IT corridors in Noida and Gurgaon alongside factories in Okhla and Manesar.',
+    outcome: 'Qualified enterprise demo requests, bulk wholesale RFQs and national vendor contracts.',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>`,
+    accentBorder: 'border-t-emerald-500',
+    iconBg: 'bg-emerald-50 text-emerald-600 border-emerald-200',
+  },
+  {
+    sector: 'Education & Coaching',
+    title: 'Universities, IB Schools & Exam Coaching Institutes',
+    focus: 'Course syllabus tables, fee comparison blocks and student FAQ schema across Rajendra Nagar, Mukherjee Nagar, Noida Sector 62 and Aliganj Lucknow.',
+    outcome: 'Higher student admission calls, brochure downloads and direct campus counselling visits.',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"/></svg>`,
+    accentBorder: 'border-t-cyan-500',
+    iconBg: 'bg-cyan-50 text-cyan-700 border-cyan-200',
+  },
+  {
+    sector: 'Legal, Tax & Advisory',
+    title: 'Corporate Law Chambers, CA Firms & Consultancies',
+    focus: 'Topical regulatory guides, partner credential verification and featured answer snippets for corporate litigation, GST, audit and advisory searches.',
+    outcome: 'High value corporate retainers, institutional compliance inquiries and direct partner consultations.',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>`,
+    accentBorder: 'border-t-accent-500',
+    iconBg: 'bg-violet-50 text-accent-600 border-violet-200',
+  },
+  {
+    sector: 'Ecommerce & Luxury Retail',
+    title: 'D2C Brands, Bridal Flagships & Interior Studios',
+    focus: 'Category hierarchy SEO, Product schema markup, fast mobile lookbooks and local showroom map pack rankings across South Extension, Galleria Market and Hazratganj.',
+    outcome: 'Compounding organic store checkouts, showroom appointment bookings and direction requests.',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>`,
+    accentBorder: 'border-t-amber-500',
+    iconBg: 'bg-amber-50 text-amber-600 border-amber-200',
+  },
+];
+
+const testimonials = [
+  {
+    name: 'Karanvir Oberoi',
+    title: 'Executive Director',
+    company: 'Propertyways',
+    sector: 'Commercial & Luxury Real Estate, Gurgaon, Noida & Delhi',
+    metrics: [
+      '4.3x increase in direct organic property enquiries',
+      'Cited directly on ChatGPT, Gemini and Google AI Overviews',
+      'Top 3 Google Map Pack rankings across NCR commercial corridors',
+    ],
+    quote: 'Corporate tenants and HNI buyers across Gurgaon, Noida and Delhi now ask ChatGPT or read Google AI Overviews before calling a property advisor. NK Digital Tech rebuilt our corridor pages with structured comparison tables and schema markup. Within four months our organic enquiries quadrupled.',
+    logo: '/images/clients/propertyways.webp',
+  },
+  {
+    name: 'Dr. Sonali Kapoor',
+    title: 'Medical Director',
+    company: 'Vision',
+    sector: 'Super Speciality Eye Surgery Centres, Delhi NCR & Lucknow',
+    metrics: [
+      '290% growth in direct OPD and surgical consultation calls',
+      'Page one Google rankings for 65+ clinical procedure keywords',
+      '1.2 second mobile page load speed across all branch pages',
+    ],
+    quote: 'Patients searching for cataract and laser eye specialists compare hospital credentials carefully on Google and AI search tools. NK Digital Tech overhauled our clinical content, technical speed and Google Business Profiles across Delhi NCR and Lucknow, nearly tripling our inbound patient phone calls.',
+    logo: '/images/clients/vision.webp',
+  },
+  {
+    name: 'Ashish Khandelwal',
+    title: 'Academic Director',
+    company: 'Creative Academy',
+    sector: 'Competitive Exam Coaching, Delhi, Noida & Lucknow',
+    metrics: [
+      '240% jump in direct student admission inquiries',
+      'Featured answer snippets for fee and batch comparison queries',
+      'Top local map pack visibility across three cities',
+    ],
+    quote: 'Students and parents compare faculty track records, test series and fee structures on Google and ChatGPT long before visiting a centre. NK Digital Tech structured our course pages with clear answer blocks and FAQ schema so AI engines recommend Creative Academy first.',
+    logo: '/images/clients/creative-academy.webp',
+  },
+  {
+    name: 'Vikramaditya Singh',
+    title: 'Director of Projects',
+    company: 'VP Infra',
+    sector: 'Residential Group Housing & Townships, Noida & Lucknow',
+    metrics: [
+      '3.8x growth in verified weekend site visit bookings',
+      'Page one organic rankings across Noida Expressway and Shaheed Path',
+      '52% reduction in blended customer acquisition cost',
+    ],
+    quote: 'Buying shared leads from property portals meant competing with fifteen brokers calling the same family. NK Digital Tech engineered our technical SEO and project landing pages for Noida and Lucknow. We now fill our weekend site visit calendar through direct organic search calls.',
+    logo: '/images/clients/vp-infra.webp',
+  },
+];
+
+const stages = [
+  {
+    num: 'Stage 01',
+    step: '01',
+    title: 'Technical Crawl, Core Web Vitals & Competitor Gap Audit',
+    body: 'We begin by inspecting your website architecture, mobile speed, indexing errors, robots.txt permissions and Google Business Profile health while reverse engineering the exact pages and backlinks of the top three competitors ranking in Delhi, Noida, Gurgaon and Lucknow.',
+    accent: 'from-brand-600 to-sky-500',
+  },
+  {
+    num: 'Stage 02',
+    step: '02',
+    title: '90 Day Commercial Keyword, Map Pack & AI Citation Roadmap',
+    body: 'You receive a clear 90 day sprint plan organised into two week milestones. We map high intent commercial keywords, city specific service pages, 40 to 60 word answer snapshots and entity schema designed to win on Google, ChatGPT and Gemini.',
+    accent: 'from-accent-600 to-violet-500',
+  },
+  {
+    num: 'Stage 03',
+    step: '03',
+    title: 'In House Code Optimisation, Schema & Content Execution',
+    body: 'Our developers and senior SEO writers implement every fix directly. We strip out slow scripts, publish answer rich commercial pages, inject JSON LD structured data, deploy llms.txt files and verify your NAP citations across trusted Indian directories.',
+    accent: 'from-cyan-600 to-teal-500',
+  },
+  {
+    num: 'Stage 04',
+    step: '04',
+    title: 'Enquiry Attribution, AI Visibility Verification & Scaling',
+    body: 'Every two weeks we review your commercial keyword climbs, Google Map phone calls, WhatsApp clicks and live citations across Google AI Overviews, ChatGPT and Gemini, scaling the exact pages that generate the highest revenue return.',
+    accent: 'from-emerald-600 to-green-500',
+  },
+];
+
+const faqs = [
+  {
+    q: 'Which is the Best SEO Company in Delhi NCR for generating real business leads?',
+    a: 'NK Digital Tech is the Best SEO Company in Delhi NCR because we tie every technical fix, content cluster and local citation directly to verified phone calls, WhatsApp chats and commercial enquiries. Our senior specialists integrate organic SEO, AI SEO, Local SEO, AEO and GEO across Delhi, Noida, Gurgaon and Lucknow.',
+  },
+  {
+    q: 'How much do SEO services in Delhi NCR cost and what is the realistic timeline?',
+    a: 'Professional SEO services in Delhi NCR typically range from ₹25,000 to ₹85,000 per month depending on your industry competition, website size and number of target cities. Technical speed fixes and Google Business Profile updates often lift local calls within four to eight weeks, while competitive page one rankings and steady AI citations compound over three to six months.',
+  },
+  {
+    q: 'How does an AI SEO company in Delhi NCR get brands cited on ChatGPT, Gemini and Google AI Overviews?',
+    a: 'AI platforms like ChatGPT, Gemini, Perplexity and Google AI Overviews cite websites that provide concise 40 to 60 word factual answer blocks, comparison tables, JSON LD schema markup, llms.txt discovery files and consistent entity credentials across trusted Indian directories. As an AI SEO company in Delhi NCR, we engineer all five layers into your website.',
+  },
+  {
+    q: 'How do I choose the best SEO agency in Delhi NCR without falling for fake ranking guarantees?',
+    a: 'No honest agency can guarantee a number one rank overnight because Google and AI algorithms update continuously. When evaluating the best SEO agency in Delhi NCR, look for transparent 90 day sprint deliverables, direct access to senior SEO consultants, full ownership of your website code and reporting focused on qualified leads rather than vanity impressions.',
+  },
+  {
+    q: 'What is included in your local SEO services in Delhi NCR and Lucknow?',
+    a: 'Our local SEO services in Delhi NCR and Lucknow cover complete Google Business Profile category and service optimisation, hyper local landing pages for commercial hubs in Delhi, Noida, Gurgaon and Lucknow, Indian business directory citation cleanup, local Q&A schema and customer review growth systems that secure top three Google Map Pack placements.',
+  },
+  {
+    q: 'What makes a technical SEO agency in Delhi NCR different from a basic content vendor?',
+    a: 'A basic vendor only writes surface level blog posts that rarely rank. As a technical SEO agency in Delhi NCR, we audit and repair your underlying crawl architecture, Core Web Vitals mobile speed, canonical tags, internal link equity, XML sitemaps, AI bot permissions and structured data so search engines can index and trust every page.',
+  },
+  {
+    q: 'Do you provide ecommerce SEO and multi city campaigns across Delhi, Noida, Gurgaon and Lucknow?',
+    a: 'Yes. As both an ecommerce SEO company in Delhi NCR and a multi location search partner, we scale D2C product catalogues with clean category hierarchies and Product schema while building dedicated city silos that capture local commercial demand across Delhi, Noida, Gurgaon and Lucknow simultaneously.',
+  },
+  {
+    q: 'Why should we work with top SEO consultants in Delhi NCR who combine AEO and GEO with traditional SEO?',
+    a: 'Over half of modern commercial buyers read instant summaries on Google AI Overviews or ask ChatGPT and Gemini to shortlist vendors before clicking a website. Working with top SEO consultants in Delhi NCR who unite traditional Search Engine Optimisation with Answer Engine Optimisation (AEO) and Generative Engine Optimisation (GEO) keeps your brand visible across every search touchpoint.',
+  },
+];
+
+const trustStrip = [
+  'Delhi, Noida, Gurgaon & Lucknow',
+  'Page One Google Rankings',
+  'Google Map Pack Top 3',
+  'ChatGPT & Gemini Citations',
+  'Google AI Overviews',
+  'Technical AEO & GEO',
+  'Core Web Vitals Engineering',
+  '100% Client Asset Ownership',
+];
+
+const seoDelhiNcrSchemaLocalBusiness = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "NK Digital Tech Best SEO Company in Delhi NCR",
+  "url": "https://www.nkdigitaltech.net/best-seo-company-in-delhi-ncr/",
+  "logo": "https://www.nkdigitaltech.net/images/seo-delhi-ncr/hero-best-seo-company-delhi-ncr.webp",
+  "image": "https://www.nkdigitaltech.net/images/seo-delhi-ncr/hero-best-seo-company-delhi-ncr.webp",
+  "description": "NK Digital Tech is the Best SEO Company in Delhi NCR. We deliver organic SEO, AI SEO, AEO, GEO and local map rankings across Delhi, Noida, Gurgaon and Lucknow.",
+  "email": "connect@nkdigitaltech.com",
+  "priceRange": "₹₹",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "New Delhi",
+    "addressRegion": "Delhi NCR",
+    "addressCountry": "IN"
+  },
+  "areaServed": [
+    "Delhi NCR",
+    "New Delhi",
+    "Noida",
+    "Greater Noida",
+    "Gurgaon",
+    "Gurugram",
+    "Lucknow",
+    "Faridabad",
+    "Ghaziabad"
+  ],
+  "serviceType": [
+    "Search Engine Optimisation (SEO)",
+    "Technical SEO Audit & Core Web Vitals",
+    "AI SEO & Conversational Search Visibility",
+    "Local SEO & Google Business Profile Optimisation",
+    "Answer Engine Optimisation (AEO)",
+    "Generative Engine Optimisation (GEO)",
+    "Ecommerce SEO Services"
+  ]
+});
+
+const seoDelhiNcrSchemaFAQ = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map((item) => ({
+    "@type": "Question",
+    "name": item.q,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": item.a
+    }
+  }))
+});
+---
+
+<Layout
+  title={pageTitle}
+  description={pageDescription}
+  canonical={pageCanonical}
+  customSchemaLocalBusiness={seoDelhiNcrSchemaLocalBusiness}
+  customSchemaFAQ={seoDelhiNcrSchemaFAQ}
+  utilityTagline="Best SEO Company in Delhi NCR • Serving Delhi, Noida, Gurgaon & Lucknow"
+  brandSubtitle="SEO, AI Search, AEO & GEO"
+  footerBio="Best SEO Company in Delhi NCR engineering page one Google rankings, Google Map Pack dominance and verified AI citations across Google AI Overviews, ChatGPT and Gemini for businesses in Delhi, Noida, Gurgaon and Lucknow."
+  footerCoreDisciplines={[
+    { label: 'Technical & On Page SEO', href: '#services' },
+    { label: 'AI SEO & Search Visibility', href: '#services' },
+    { label: 'Local SEO & Google Maps', href: '#services' },
+    { label: 'Answer Engine Optimisation (AEO)', href: '#services' },
+    { label: 'Generative Engine Optimisation (GEO)', href: '#services' },
+    { label: 'Ecommerce & Enterprise SEO', href: '#services' },
+  ]}
+  footerTagline="Best SEO Company in Delhi NCR • Delhi, Noida, Gurgaon & Lucknow"
+>
+
+  <!-- =====================================================================
+       SECTION 1: HERO (DARK SURFACE WITH UNIQUE SEO HERO IMAGE & SUBHEADLINE)
+  ===================================================================== -->
+  <section class="relative surface-dark overflow-hidden pt-10 pb-16 sm:pt-16 sm:pb-20 lg:pt-20 lg:pb-24 border-b border-slate-800/80">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="absolute inset-0 mesh-glow pointer-events-none"></div>
+    <div class="absolute -top-36 -left-36 w-96 h-96 bg-brand-500/20 rounded-full blur-[130px] pointer-events-none"></div>
+    <div class="absolute top-1/4 -right-36 w-96 h-96 bg-accent-500/20 rounded-full blur-[130px] pointer-events-none"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns: Headline & CTA -->
+        <div class="lg:col-span-7 text-left">
+          <div class="badge-dark mb-5 sm:mb-6">
+            <span class="w-2 h-2 rounded-full bg-brand-400 animate-ping flex-shrink-0"></span>
+            <span>Organic SEO &bull; Google Map Packs &bull; ChatGPT &amp; Gemini &bull; Delhi, Noida, Gurgaon &amp; Lucknow</span>
+          </div>
+
+          <h1 class="font-display text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-[1.15] sm:leading-[1.1] mb-5 sm:mb-6 text-glow">
+            Best SEO Company <br class="hidden sm:inline" />
+            <span class="gradient-text-light">in Delhi NCR</span>
+          </h1>
+
+          <p class="text-sm sm:text-base md:text-lg text-slate-300 leading-relaxed mb-6 sm:mb-8 font-normal text-left sm:text-justify">
+            Looking for the <strong class="text-white font-semibold">Best SEO Company in Delhi NCR</strong> to turn commercial searches into daily phone calls, qualified B2B enquiries and showroom visits? We engineer technical search foundations, page one Google rankings, top three local map pack placements and verified brand citations on Google AI Overviews, ChatGPT and Gemini for ambitious businesses across Delhi, Noida, Gurgaon and Lucknow.
+          </p>
+
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 mb-8 sm:mb-10">
+            <a href="#contact" class="btn-primary w-full sm:w-auto text-sm sm:text-base px-6 sm:px-8 py-3.5 sm:py-4">
+              <span>Claim Your Free SEO &amp; AI Search Audit</span>
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+              </svg>
+            </a>
+            <a href="#services" class="btn-secondary-dark w-full sm:w-auto text-sm sm:text-base px-6 sm:px-7 py-3.5 sm:py-4">
+              <span>Explore Our Six SEO Pillars</span>
+            </a>
+          </div>
+
+          <!-- Trust Verification Strip -->
+          <div class="pt-6 border-t border-slate-800/80">
+            <div class="flex flex-wrap items-center gap-2">
+              {trustStrip.map((item) => (
+                <span class="px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-lg bg-slate-900/90 border border-slate-800 text-[11px] sm:text-xs text-slate-300 font-medium">
+                  {item}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Unique SEO Hero Image -->
+        <div class="lg:col-span-5">
+          <div class="relative rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-700/80 shadow-2xl shadow-brand-500/15 bg-slate-900 group">
+            <img
+              src="/images/seo-delhi-ncr/hero-best-seo-company-delhi-ncr.webp"
+              alt="Best SEO Company in Delhi NCR Strategy Team Analysing Search Console and AI Citations"
+              width="960"
+              height="540"
+              fetchpriority="high"
+              decoding="async"
+              class="w-full h-56 sm:h-72 md:h-[380px] lg:h-[400px] object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#050a14] via-transparent to-transparent opacity-80"></div>
+            <div class="absolute bottom-3 sm:bottom-4 left-3 sm:left-4 right-3 sm:right-4 glass-card rounded-xl sm:rounded-2xl p-3 sm:p-4">
+              <div class="flex items-center justify-between gap-2 mb-1">
+                <span class="text-xs font-bold text-white">Delhi NCR &amp; Lucknow Search Authority</span>
+                <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-400">
+                  <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                  Live Organic Growth
+                </span>
+              </div>
+              <p class="text-[11px] sm:text-xs text-slate-300 text-left sm:text-justify leading-relaxed">
+                Engineered to rank enterprises across Delhi, Noida, Gurgaon and Lucknow first on Google Search, Google Maps, ChatGPT and Gemini.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 2: INTRODUCTION (CRISP WHITE CONTRAST SECTION + SEO TEAM IMAGE)
+  ===================================================================== -->
+  <section class="relative surface-white py-14 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns: Snapshot + 2-Paragraph Unique SEO Copy -->
+        <div class="lg:col-span-7">
+          <div class="badge-light mb-4">Organic Search &amp; AI Engineering</div>
+          <h2 class="font-display font-extrabold text-2xl sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-tight mb-5 sm:mb-6">
+            How the Best SEO Company in Delhi NCR <span class="gradient-text-dark">Turns Search Intent Into Revenue</span>
+          </h2>
+          <div class="space-y-4 sm:space-y-5 text-slate-700 text-sm sm:text-base leading-relaxed text-left sm:text-justify">
+            <p>
+              As the <strong>Best SEO Company in Delhi NCR</strong>, NK Digital Tech helps commercial enterprises in Delhi, Noida, Gurgaon and Lucknow capture high intent buyers at the exact moment they search. Modern buyers no longer scroll through pages of generic directory links. Whether a procurement head in Gurgaon is shortlisting industrial suppliers, a patient in South Delhi is booking a specialist surgeon, a SaaS founder in Noida is comparing enterprise partners or a family in Lucknow is evaluating township projects, they check Google Map Packs, read Google AI Overviews and ask ChatGPT or Gemini who to trust.
+            </p>
+            <p>
+              Most business owners approach us after losing months with a conventional <strong>SEO agency in Delhi NCR</strong> that promised overnight rankings and delivered automated PDF charts while sales calls remained flat. As the <strong>best SEO agency in Delhi NCR</strong> for accountable pipeline growth, we fix what actually moves the needle. Whether you need a <strong>technical SEO agency in Delhi NCR</strong>, an <strong>AI SEO company in Delhi NCR</strong> or an <strong>ecommerce SEO company in Delhi NCR</strong>, our in house specialists tie every sprint directly to verified phone calls, WhatsApp inquiries and commercial revenue.
+            </p>
+          </div>
+          <div class="mt-6 sm:mt-8 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
+            <a href="#contact" class="btn-primary w-full sm:w-auto">
+              <span>Speak With Our Top SEO Consultants</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+              </svg>
+            </a>
+            <a href="#why-us" class="btn-secondary-light w-full sm:w-auto">
+              <span>Compare Our SEO Standards</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Unique SEO Team Image + Stats -->
+        <div class="lg:col-span-5 space-y-4 sm:space-y-5">
+          <div class="rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-200 shadow-lg bg-slate-100">
+            <img
+              src="/images/seo-delhi-ncr/seo-agency-team-delhi-ncr.webp"
+              alt="Top SEO Consultants in Delhi NCR Reviewing Technical Search Architecture"
+              width="800"
+              height="533"
+              class="w-full h-52 sm:h-64 lg:h-72 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="grid grid-cols-2 gap-3 sm:gap-4">
+            {[
+              { val: '4.3x', label: 'Organic Lead Growth', sub: 'Across Delhi NCR & Lucknow' },
+              { val: '90 Days', label: 'Sprint Based Roadmap', sub: 'Fortnightly milestone reviews' },
+              { val: 'Top 3', label: 'Google Map Pack Focus', sub: 'Delhi, Noida, Gurgaon & Lucknow' },
+              { val: '100%', label: 'Full Asset Ownership', sub: 'You control code & analytics' },
+            ].map((stat) => (
+              <div class="elevated-card rounded-xl sm:rounded-2xl p-3 sm:p-4">
+                <div class="font-display font-black text-xl sm:text-2xl text-brand-600 mb-0.5">{stat.val}</div>
+                <div class="text-[11px] sm:text-xs font-bold text-slate-900">{stat.label}</div>
+                <div class="text-[10px] sm:text-[11px] text-slate-500 leading-tight">{stat.sub}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 3: PROBLEM STATEMENT (DEEP INDIGO DARK CONTRAST SECTION)
+  ===================================================================== -->
+  <section class="relative surface-indigo py-14 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="max-w-7xl mx-auto relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns: Problem Statement Justified Copy -->
+        <div class="lg:col-span-7">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest bg-amber-500/10 border border-amber-500/30 text-amber-300 mb-5">
+            <svg class="w-4 h-4 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+            </svg>
+            <span>Why Websites Lose Search Visibility</span>
+          </div>
+
+          <h2 class="font-display font-extrabold text-2xl sm:text-3xl lg:text-4xl text-white tracking-tight leading-tight mb-5 sm:mb-6">
+            Why Established Businesses in Delhi, Noida, Gurgaon and Lucknow Lose Organic Leads
+          </h2>
+
+          <div class="space-y-4 sm:space-y-5 text-slate-300 text-sm sm:text-base leading-relaxed text-left sm:text-justify">
+            <p>
+              Websites across Delhi NCR and Lucknow lose organic enquiries when they rely on outdated keyword repetition, slow page templates and unverified directory backlinks. Modern Google core updates and AI answer engines filter out thin content immediately, rewarding only fast, technically clean websites that provide structured facts, verified local credentials and direct answers to buyer questions.
+            </p>
+            <p>
+              Think about how your own customers search today. Before calling a hospital, builder, law firm or manufacturer, they check the top three Google Map listings or ask ChatGPT and Gemini to compare the best providers in their city. If your site takes four seconds to load on mobile, lacks JSON LD schema markup and has no city specific service pages, competing brands capture those calls every single day. As a trusted <strong>SEO Company in Delhi NCR</strong>, we rebuild your technical and topical foundation so both Google and AI search engines put your business first.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Diagnostic Comparison Cards -->
+        <div class="lg:col-span-5 space-y-3.5 sm:space-y-4">
+          <div class="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6 border-l-4 border-l-rose-500">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-xs font-bold uppercase tracking-wider text-rose-400">Outdated SEO Packages</span>
+              <span class="text-xs text-slate-400">Rankings Without Calls</span>
+            </div>
+            <h3 class="font-display font-bold text-base text-white mb-2">Generic Blogs, Slow Code &amp; Directory Spam</h3>
+            <p class="text-xs text-slate-300 leading-relaxed text-left sm:text-justify">
+              Fails Google Core Web Vitals checks and gets completely ignored when buyers across Delhi, Noida, Gurgaon and Lucknow use Google AI Overviews, ChatGPT or Gemini.
+            </p>
+          </div>
+
+          <div class="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6 border-l-4 border-l-emerald-400">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-xs font-bold uppercase tracking-wider text-emerald-400">NK Digital Tech Architecture</span>
+              <span class="text-xs text-brand-300">Search &amp; AI Dominance</span>
+            </div>
+            <h3 class="font-display font-bold text-base text-white mb-2">Technical Speed, Answer Snapshots &amp; Entity Schema</h3>
+            <p class="text-xs text-slate-300 leading-relaxed text-left sm:text-justify">
+              Unites sub second web code, JSON LD structured data, local map authority and 40 to 60 word answer blocks so Google, ChatGPT and Gemini cite your brand first.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 4: SERVICES (LIGHT COOL ALABASTER CONTRAST + TECHNICAL SEO IMAGE)
+  ===================================================================== -->
+  <section id="services" class="relative surface-cool py-14 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <!-- Services Header with Unique SEO Services Image -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 items-center mb-10 sm:mb-16">
+        <div class="lg:col-span-7">
+          <div class="badge-light mb-3">Six Specialised Search Pillars</div>
+          <h2 class="font-display font-extrabold text-2xl sm:text-3xl lg:text-4xl text-slate-900 tracking-tight mb-3 sm:mb-4">
+            Comprehensive SEO Services in Delhi NCR and Lucknow
+          </h2>
+          <p class="text-slate-600 text-sm sm:text-base leading-relaxed text-left sm:text-justify">
+            Our <strong>SEO services in Delhi NCR</strong> integrate technical website engineering, local map pack optimisation, Answer Engine Optimisation (AEO) and Generative Engine Optimisation (GEO) into one cohesive growth system. Every deliverable is built to secure page one Google rankings and verified citations across ChatGPT, Gemini and Google AI Overviews.
+          </p>
+        </div>
+        <div class="lg:col-span-5">
+          <div class="rounded-2xl overflow-hidden border border-slate-200 shadow-md bg-white">
+            <img
+              src="/images/seo-delhi-ncr/technical-ai-seo-services-delhi-ncr.webp"
+              alt="Technical SEO Services in Delhi NCR and AI Search Optimisation Specialists"
+              width="800"
+              height="450"
+              class="w-full h-48 sm:h-56 lg:h-64 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- 3 Columns x 2 Rows Grid Layout -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-7">
+        {services.map((s) => (
+          <div class="elevated-card rounded-2xl p-5 sm:p-7 flex flex-col justify-between group hover:-translate-y-1">
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-5 sm:mb-6">
+                <div class={`w-11 h-11 sm:w-12 sm:h-12 rounded-xl border flex items-center justify-center ${s.iconStyle}`}>
+                  <Fragment set:html={s.icon} />
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class={`text-[11px] font-semibold px-2.5 py-1 rounded-md ${s.badgeColor}`}>
+                    {s.category}
+                  </span>
+                  <span class="font-display font-black text-base sm:text-lg text-slate-300">{s.num}</span>
+                </div>
+              </div>
+
+              <h3 class="font-display font-bold text-lg sm:text-xl text-slate-900 mb-2.5 sm:mb-3 leading-snug group-hover:text-brand-600 transition-colors">
+                {s.title}
+              </h3>
+
+              <p class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-5 sm:mb-6 text-left sm:text-justify">
+                {s.body}
+              </p>
+            </div>
+
+            <div>
+              <div class={`rounded-xl border p-3.5 sm:p-4 mb-4 sm:mb-5 ${s.impactStyle}`}>
+                <div class="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-slate-900 mb-1">
+                  <svg class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                  </svg>
+                  <span>Commercial Impact</span>
+                </div>
+                <p class="text-xs text-slate-700 leading-relaxed font-medium text-left sm:text-justify">
+                  {s.impact}
+                </p>
+              </div>
+
+              <a href={s.href} class="inline-flex items-center gap-2 text-xs font-bold text-brand-600 hover:text-brand-700 group-hover:gap-3 transition-all">
+                <span>{s.cta}</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 5: REGIONAL LOCATIONS (DARK NAVY + MULTI-CITY LOCAL SEO IMAGE)
+  ===================================================================== -->
+  <section id="locations" class="relative surface-navy py-14 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <!-- Regional Header with Unique Multi-City Local SEO Image -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 items-center mb-10 sm:mb-16">
+        <div class="lg:col-span-7">
+          <div class="badge-dark mb-3">Four Regional Search Centers</div>
+          <h2 class="font-display font-extrabold text-2xl sm:text-3xl lg:text-4xl text-white tracking-tight mb-3 sm:mb-4">
+            Targeted SEO Coverage Across Delhi, Noida, Gurgaon and Lucknow
+          </h2>
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed text-left sm:text-justify">
+            Search intent varies sharply across North India’s commercial hubs. A corporate software query in Gurgaon Cyber City or Noida Sector 62 requires a completely different content and schema architecture than a patient search in South Delhi or a homebuyer search along Amar Shaheed Path in Lucknow. We engineer dedicated regional search campaigns for every market you serve.
+          </p>
+        </div>
+        <div class="lg:col-span-5">
+          <div class="rounded-2xl overflow-hidden border border-slate-700/80 shadow-xl bg-slate-900">
+            <img
+              src="/images/seo-delhi-ncr/local-seo-delhi-noida-gurgaon-lucknow.webp"
+              alt="Local SEO Services in Delhi NCR covering Delhi, Noida, Gurgaon and Lucknow"
+              width="800"
+              height="450"
+              class="w-full h-48 sm:h-56 lg:h-64 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- 1 Row x 4 Columns Responsive Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+        {cities.map((c) => (
+          <div class="glass-card rounded-2xl p-5 sm:p-6 flex flex-col justify-between group hover:-translate-y-1">
+            <div>
+              <div class={`h-1 w-full bg-gradient-to-r ${c.accent} rounded-full mb-4 sm:mb-5`}></div>
+
+              <div class="flex items-center justify-between gap-2 mb-3.5 sm:mb-4">
+                <span class="px-2.5 py-1 rounded-md bg-slate-800 border border-slate-700 text-[11px] font-bold uppercase tracking-wider text-brand-300">
+                  {c.hub}
+                </span>
+                <span class="text-xs font-semibold text-slate-400">{c.city}</span>
+              </div>
+
+              <h3 class="font-display font-bold text-base sm:text-lg text-white mb-2.5 sm:mb-3 leading-snug">
+                {c.keyword}
+              </h3>
+
+              <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-4 sm:mb-5 text-left sm:text-justify">
+                {c.desc}
+              </p>
+            </div>
+
+            <div class="pt-3.5 sm:pt-4 border-t border-slate-800">
+              <p class="text-[11px] text-slate-400 mb-3 sm:mb-4 leading-normal">
+                <strong class="text-slate-300">Key Corridors:</strong> {c.corridor}
+              </p>
+              <a href={c.href} class="inline-flex items-center gap-1.5 text-xs font-bold text-brand-400 hover:text-brand-300 group-hover:gap-2.5 transition-all">
+                <span>{c.cta}</span>
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 6: WHY NK DIGITAL TECH (CRISP WHITE CONTRAST SECTION)
+  ===================================================================== -->
+  <section id="why-us" class="relative surface-white py-14 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-10 sm:mb-14 text-center">
+        <div class="badge-light mb-3">Why Enterprises Switch to Us</div>
+        <h2 class="font-display font-extrabold text-2xl sm:text-3xl lg:text-4xl text-slate-900 tracking-tight mb-3 sm:mb-4">
+          Why NK Digital Tech Is the Best SEO Company in Delhi NCR
+        </h2>
+        <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-4 text-left sm:text-justify">
+          Selecting the <strong>Best SEO Company in Delhi NCR</strong> or partnering with <strong>top SEO consultants in Delhi NCR</strong> requires looking past flashy pitch decks. We built NK Digital Tech around senior specialist execution, fortnightly sprint accountability, full code ownership and verified enquiry tracking across Delhi, Noida, Gurgaon and Lucknow.
+        </p>
+        <p class="text-slate-700 font-semibold text-xs sm:text-sm">
+          Compare our engineering standards with a typical SEO vendor:
+        </p>
+      </div>
+
+      <!-- Desktop Comparison Matrix -->
+      <div class="hidden md:block overflow-hidden rounded-2xl border border-slate-200 shadow-lg">
+        <table class="w-full text-left border-collapse">
+          <thead>
+            <tr class="bg-slate-900 text-white">
+              <th class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-slate-300 w-1/4">
+                Evaluation Benchmark
+              </th>
+              <th class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-rose-300 w-[37.5%] border-l border-slate-800">
+                Typical SEO Vendor
+              </th>
+              <th class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-brand-300 w-[37.5%] border-l border-slate-800 bg-slate-950">
+                NK Digital Tech (Delhi NCR &amp; Lucknow)
+              </th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200 text-sm">
+            {comparison.map((row, idx) => (
+              <tr class={idx % 2 === 0 ? 'bg-white' : 'bg-slate-50/80'}>
+                <td class="py-5 px-6 font-display font-bold text-slate-900">
+                  {row.metric}
+                </td>
+                <td class="py-5 px-6 text-slate-600 border-l border-slate-200">
+                  <div class="flex items-start gap-2.5">
+                    <svg class="w-4 h-4 text-rose-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                    <span>{row.typical}</span>
+                  </div>
+                </td>
+                <td class="py-5 px-6 text-slate-900 font-medium border-l border-slate-200 bg-sky-50/40">
+                  <div class="flex items-start gap-2.5">
+                    <svg class="w-4 h-4 text-emerald-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span>{row.nk}</span>
+                  </div>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Mobile Comparison Cards -->
+      <div class="md:hidden space-y-3.5 sm:space-y-4">
+        {comparison.map((row) => (
+          <div class="elevated-card rounded-2xl p-4 sm:p-5 space-y-3">
+            <h3 class="font-display font-bold text-slate-900 text-sm sm:text-base">{row.metric}</h3>
+            <div class="rounded-xl bg-rose-50 border border-rose-100 p-3 sm:p-3.5">
+              <p class="text-[10px] font-bold uppercase tracking-wider text-rose-600 mb-1">Typical SEO Vendor</p>
+              <p class="text-xs text-slate-700 leading-relaxed">{row.typical}</p>
+            </div>
+            <div class="rounded-xl bg-sky-50 border border-sky-200 p-3 sm:p-3.5">
+              <p class="text-[10px] font-bold uppercase tracking-wider text-brand-600 mb-1">NK Digital Tech</p>
+              <p class="text-xs text-slate-900 font-semibold leading-relaxed">{row.nk}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 7: OUR CLIENTS (DARK INDIGO CONTRAST SECTION BELOW WHY US)
+  ===================================================================== -->
+  <section id="clients" class="relative surface-indigo py-14 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-10 sm:mb-14 text-center">
+        <div class="badge-dark mb-3">Trusted Across North India</div>
+        <h2 class="font-display font-extrabold text-2xl sm:text-3xl lg:text-4xl text-white tracking-tight mb-3 sm:mb-4">
+          Market Leaders Growing With Our Organic &amp; AI Search Systems
+        </h2>
+        <p class="text-slate-300 text-sm sm:text-base leading-relaxed text-left sm:text-justify">
+          From luxury real estate advisors and township developers to super speciality eye hospitals, coaching academies and designer retail flagships, we help ambitious brands dominate search across Delhi, Noida, Gurgaon and Lucknow.
+        </p>
+      </div>
+
+      <!-- 5-Column Responsive Client Grid -->
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3.5 sm:gap-5">
+        {clients.map((client) => (
+          <div class="glass-card rounded-2xl p-3.5 sm:p-5 flex flex-col items-center text-center group hover:-translate-y-1">
+            <div class="w-full h-16 sm:h-20 rounded-xl bg-white border border-slate-200 flex items-center justify-center p-2.5 sm:p-4 mb-3 sm:mb-4 shadow-sm">
+              <img
+                src={client.logo}
+                alt={`${client.name} Logo`}
+                width="130"
+                height="48"
+                class="max-h-9 sm:max-h-12 w-auto object-contain"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <h3 class="font-display font-bold text-sm sm:text-base text-white mb-1">{client.name}</h3>
+            <p class="text-[11px] sm:text-xs text-slate-300 leading-snug mb-2.5 sm:mb-3 flex-grow">{client.sector}</p>
+            <span class="inline-flex items-center gap-1 text-[10px] sm:text-[11px] font-semibold text-brand-300 bg-brand-500/15 border border-brand-500/30 px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-md">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+              </svg>
+              {client.region}
+            </span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 8: INDUSTRIES (LIGHT SLATE CONTRAST SECTION - 3x2 GRID)
+  ===================================================================== -->
+  <section id="industries" class="relative surface-slate py-14 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-10 sm:mb-16 text-center">
+        <div class="badge-light mb-3">Industry Specific Roadmaps</div>
+        <h2 class="font-display font-extrabold text-2xl sm:text-3xl lg:text-4xl text-slate-900 tracking-tight mb-3 sm:mb-4">
+          Custom SEO Architecture for High Growth Industry Verticals
+        </h2>
+        <p class="text-slate-600 text-sm sm:text-base leading-relaxed text-left sm:text-justify">
+          We configure our <strong>SEO services in Delhi NCR</strong> and Lucknow around the exact buyer questions, compliance standards and conversion cycles of your commercial vertical.
+        </p>
+      </div>
+
+      <!-- 3 Columns x 2 Rows Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-7">
+        {industries.map((ind) => (
+          <div class={`elevated-card rounded-2xl p-5 sm:p-7 border-t-4 ${ind.accentBorder} flex flex-col justify-between hover:-translate-y-1`}>
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-4 sm:mb-5">
+                <div class={`w-10 h-10 sm:w-11 sm:h-11 rounded-xl border flex items-center justify-center ${ind.iconBg}`}>
+                  <Fragment set:html={ind.icon} />
+                </div>
+                <span class="text-[11px] font-semibold text-slate-500 bg-slate-100 px-2.5 py-1 rounded-md">
+                  {ind.sector}
+                </span>
+              </div>
+
+              <h3 class="font-display font-bold text-lg sm:text-xl text-slate-900 mb-3 sm:mb-4 leading-snug">
+                {ind.title}
+              </h3>
+
+              <div class="mb-4 sm:mb-5">
+                <p class="text-[11px] font-bold uppercase tracking-wider text-brand-600 mb-1.5">
+                  Strategic Focus
+                </p>
+                <p class="text-slate-600 text-xs sm:text-sm leading-relaxed text-left sm:text-justify">
+                  {ind.focus}
+                </p>
+              </div>
+            </div>
+
+            <div class="rounded-xl bg-emerald-50/70 border border-emerald-200/80 p-3.5 sm:p-4">
+              <p class="text-[11px] font-bold uppercase tracking-wider text-emerald-700 mb-1">
+                Commercial Result
+              </p>
+              <p class="text-slate-800 text-xs font-medium leading-relaxed text-left sm:text-justify">
+                {ind.outcome}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 9: TESTIMONIALS (DEEP NAVY CONTRAST SECTION - 2x2 GRID)
+  ===================================================================== -->
+  <section id="testimonials" class="relative surface-dark py-14 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="absolute inset-0 mesh-glow pointer-events-none opacity-60"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-10 sm:mb-16 text-center">
+        <div class="badge-dark mb-3">Verified Client Outcomes</div>
+        <h2 class="font-display font-extrabold text-2xl sm:text-3xl lg:text-4xl text-white tracking-tight mb-3 sm:mb-4">
+          What Business Leaders Across Delhi NCR and Lucknow Say About Us
+        </h2>
+        <p class="text-slate-300 text-sm sm:text-base leading-relaxed text-left sm:text-justify">
+          Direct feedback and measured enquiry growth from executive directors, medical heads and academic founders across Delhi, Noida, Gurgaon and Lucknow.
+        </p>
+      </div>
+
+      <!-- 2 Columns x 2 Rows Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 sm:gap-7">
+        {testimonials.map((t) => (
+          <div class="glass-card rounded-2xl p-5 sm:p-8 flex flex-col justify-between hover:-translate-y-1">
+            <div>
+              <div class="flex items-center justify-between gap-4 mb-4 sm:mb-5">
+                <div class="flex items-center gap-1">
+                  {[1, 2, 3, 4, 5].map(() => (
+                    <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                    </svg>
+                  ))}
+                </div>
+                <span class="text-[10px] sm:text-[11px] font-semibold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-1 rounded-md">
+                  Verified Search Client
+                </span>
+              </div>
+
+              <p class="text-slate-200 text-sm sm:text-base leading-relaxed italic mb-5 sm:mb-6 text-left sm:text-justify">
+                "{t.quote}"
+              </p>
+
+              <div class="rounded-xl bg-slate-900/90 border border-slate-700/80 p-3.5 sm:p-4 mb-5 sm:mb-6">
+                <p class="text-[11px] font-bold uppercase tracking-wider text-brand-400 mb-2 sm:mb-2.5">
+                  Measured Growth
+                </p>
+                <ul class="space-y-2">
+                  {t.metrics.map((m) => (
+                    <li class="flex items-start gap-2 text-xs text-slate-300 font-medium">
+                      <svg class="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                      </svg>
+                      <span>{m}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3.5 sm:gap-4 pt-3.5 sm:pt-4 border-t border-slate-800">
+              <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-white p-2 flex items-center justify-center flex-shrink-0 shadow-sm">
+                <img
+                  src={t.logo}
+                  alt={`${t.company} Logo`}
+                  width="48"
+                  height="48"
+                  class="max-h-8 sm:max-h-10 w-auto object-contain"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div>
+                <h3 class="font-display font-bold text-white text-sm sm:text-base">{t.name}</h3>
+                <p class="text-xs text-slate-300">
+                  {t.title}, <strong class="text-brand-400 font-semibold">{t.company}</strong>
+                </p>
+                <p class="text-[10px] sm:text-[11px] text-slate-400 mt-0.5">{t.sector}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 10: HOW WE WORK (CRISP WHITE CONTRAST SECTION - 4 STAGES)
+  ===================================================================== -->
+  <section class="relative surface-white py-14 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-10 sm:mb-16 text-center">
+        <div class="badge-light mb-3">Our 4 Stage Execution</div>
+        <h2 class="font-display font-extrabold text-2xl sm:text-3xl lg:text-4xl text-slate-900 tracking-tight mb-3 sm:mb-4">
+          How We Engineer Page One &amp; AI Search Authority Across Delhi NCR
+        </h2>
+        <p class="text-slate-600 text-sm sm:text-base leading-relaxed text-left sm:text-justify">
+          Our four stage methodology resolves technical crawl barriers first, captures immediate Google Map Pack calls across Delhi, Noida, Gurgaon and Lucknow, and scales your brand citations across ChatGPT, Gemini and Google AI Overviews.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-7">
+        {stages.map((s) => (
+          <div class="elevated-card rounded-2xl p-5 sm:p-8 relative overflow-hidden group hover:-translate-y-1">
+            <div class="flex items-center justify-between gap-4 mb-4 sm:mb-5">
+              <span class={`inline-flex items-center px-2.5 sm:px-3 py-1 rounded-lg text-xs font-bold uppercase tracking-wider text-white bg-gradient-to-r ${s.accent}`}>
+                {s.num}
+              </span>
+              <span class="font-display font-black text-3xl sm:text-4xl text-slate-200 group-hover:text-slate-300 transition-colors">
+                {s.step}
+              </span>
+            </div>
+            <h3 class="font-display font-bold text-lg sm:text-xl text-slate-900 mb-2.5 sm:mb-3 leading-snug">
+              {s.title}
+            </h3>
+            <p class="text-slate-600 text-xs sm:text-sm leading-relaxed text-left sm:text-justify">
+              {s.body}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 11: PARTNER WITH THE BEST SEO COMPANY IN DELHI NCR (CONCLUSION)
+  ===================================================================== -->
+  <section class="relative surface-indigo py-14 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns: Partner Paragraphs (Justified) -->
+        <div class="lg:col-span-7">
+          <div class="badge-dark mb-4">Compounding Search Equity</div>
+          <h2 class="font-display font-extrabold text-2xl sm:text-3xl lg:text-4xl text-white tracking-tight leading-tight mb-5 sm:mb-6">
+            Partner With the Best SEO Company in Delhi NCR
+          </h2>
+          <div class="space-y-4 sm:space-y-5 text-slate-300 text-sm sm:text-base leading-relaxed text-left sm:text-justify">
+            <p>
+              Securing lasting market leadership across Delhi, Noida, Gurgaon and Lucknow takes more than a static brochure website or recycled blog posts. Every day, commercial buyers and families evaluate providers through Google Map Packs, featured answer boxes, Google AI Overviews, ChatGPT and Gemini before making a phone call.
+            </p>
+            <p>
+              When you partner with NK Digital Tech, the <strong>Best SEO Company in Delhi NCR</strong>, you work directly with senior search architects and developers who engineer your website, local profiles and structured content for verifiable revenue growth. Whether your goal is page one Google rankings, multi city map pack dominance or consistent citations inside conversational AI models, our team is ready to build your 90 day roadmap.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Unique Organic Search Growth Image -->
+        <div class="lg:col-span-5">
+          <div class="rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-700/80 shadow-2xl bg-slate-900">
+            <img
+              src="/images/seo-delhi-ncr/organic-search-growth-delhi-ncr.webp"
+              alt="Best SEO Company in Delhi NCR Presenting Organic Search and AI Lead Growth"
+              width="800"
+              height="450"
+              class="w-full h-52 sm:h-64 lg:h-72 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 12: FAQ (LIGHT COOL SLATE CONTRAST SECTION)
+  ===================================================================== -->
+  <section id="faq" class="relative surface-cool py-14 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-10 sm:mb-14">
+        <div class="badge-light mb-3">Direct Answers for Buyers &amp; AI</div>
+        <h2 class="font-display font-extrabold text-2xl sm:text-3xl lg:text-4xl text-slate-900 tracking-tight mb-3 sm:mb-4">
+          Frequently Asked Questions About Our SEO Services in Delhi NCR
+        </h2>
+        <p class="text-slate-600 text-sm sm:text-base leading-relaxed text-left sm:text-justify">
+          Clear, factual answers to the questions business owners, marketing heads and founders ask most before hiring an SEO partner across Delhi, Noida, Gurgaon and Lucknow.
+        </p>
+      </div>
+
+      <div class="space-y-3.5 sm:space-y-4">
+        {faqs.map((f, i) => (
+          <details class="elevated-card rounded-2xl group overflow-hidden" open={i === 0}>
+            <summary class="flex items-center justify-between gap-3 sm:gap-4 px-4 sm:px-6 py-4 sm:py-5 select-none">
+              <div class="flex items-center gap-3 sm:gap-3.5 text-left">
+                <span class="w-6 h-6 sm:w-7 sm:h-7 rounded-lg bg-sky-50 border border-sky-200 text-brand-600 font-display font-bold text-xs flex items-center justify-center flex-shrink-0">
+                  0{i + 1}
+                </span>
+                <span class="font-display font-bold text-slate-900 text-sm sm:text-base md:text-lg leading-snug">
+                  {f.q}
+                </span>
+              </div>
+              <span class="faq-icon w-7 h-7 sm:w-8 sm:h-8 rounded-full border border-slate-200 text-slate-600 flex items-center justify-center flex-shrink-0">
+                <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                </svg>
+              </span>
+            </summary>
+            <div class="px-4 sm:px-6 pb-5 sm:pb-6 pt-3 text-slate-600 text-xs sm:text-sm md:text-base leading-relaxed border-t border-slate-100 text-left sm:text-justify">
+              {f.a}
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 13: SHORT 2 TO 3 LINE CALL TO ACTION BANNER (LAST SECTION)
+  ===================================================================== -->
+  <section id="contact" class="relative surface-dark py-12 sm:py-16 lg:py-20 px-4 sm:px-6 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-5xl mx-auto">
+      <div class="rounded-2xl sm:rounded-3xl bg-gradient-to-r from-brand-600 via-brand-700 to-accent-700 p-6 sm:p-10 md:p-12 text-center text-white shadow-2xl border border-white/15 relative overflow-hidden">
+        <div class="relative z-10 max-w-2xl mx-auto">
+          <h2 class="font-display font-black text-2xl sm:text-3xl md:text-4xl text-white tracking-tight mb-3 sm:mb-4">
+            Ready to Work With the Best SEO Company in Delhi NCR?
+          </h2>
+
+          <p class="text-sky-50 text-xs sm:text-sm md:text-base leading-relaxed mb-6 sm:mb-8">
+            Speak directly with our senior SEO architects for a free audit of your website speed, Google Map Pack rankings and AI search visibility across Delhi, Noida, Gurgaon and Lucknow.
+          </p>
+
+          <a
+            href="mailto:connect@nkdigitaltech.com"
+            class="inline-flex w-full sm:w-auto items-center justify-center gap-2.5 sm:gap-3 px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl bg-white text-slate-950 hover:bg-sky-50 font-display font-bold text-sm sm:text-base shadow-xl transition-all duration-300 active:scale-95"
+          >
+            <span>Claim Your Free SEO &amp; AI Search Audit</span>
+            <svg class="w-4 h-4 sm:w-5 sm:h-5 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</Layout>

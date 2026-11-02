@@ -116,31 +116,31 @@
 
   /* Badges */
   .badge-dark {
-    @apply inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest bg-brand-500/10 border border-brand-500/30 text-brand-300;
+    @apply inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-3.5 py-1 sm:py-1.5 rounded-full text-[10px] sm:text-xs font-bold uppercase tracking-wider sm:tracking-widest bg-brand-500/10 border border-brand-500/30 text-brand-300 max-w-full leading-snug;
   }
   .badge-light {
-    @apply inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest bg-sky-50 border border-sky-200 text-brand-600;
+    @apply inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-3.5 py-1 sm:py-1.5 rounded-full text-[10px] sm:text-xs font-bold uppercase tracking-wider sm:tracking-widest bg-sky-50 border border-sky-200 text-brand-600 max-w-full leading-snug;
   }
 
   /* Buttons */
   .btn-primary {
-    @apply inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-xl
+    @apply inline-flex items-center justify-center gap-2 sm:gap-2.5 px-5 sm:px-7 py-3.5 sm:py-4 rounded-xl
            bg-gradient-to-r from-brand-500 via-brand-600 to-accent-600
            hover:from-brand-400 hover:via-brand-500 hover:to-accent-500
-           text-white font-semibold text-sm shadow-lg shadow-brand-500/25
-           transition-all duration-300 active:scale-95;
+           text-white font-semibold text-xs sm:text-sm shadow-lg shadow-brand-500/25
+           transition-all duration-300 active:scale-95 text-center;
   }
   .btn-secondary-dark {
-    @apply inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-xl
+    @apply inline-flex items-center justify-center gap-2 sm:gap-2.5 px-5 sm:px-7 py-3.5 sm:py-4 rounded-xl
            bg-slate-900/80 border border-slate-700 hover:border-brand-400
-           text-slate-200 hover:text-white font-semibold text-sm
-           transition-all duration-300;
+           text-slate-200 hover:text-white font-semibold text-xs sm:text-sm
+           transition-all duration-300 text-center;
   }
   .btn-secondary-light {
-    @apply inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-xl
+    @apply inline-flex items-center justify-center gap-2 sm:gap-2.5 px-5 sm:px-7 py-3.5 sm:py-4 rounded-xl
            bg-white border border-slate-200 hover:border-brand-500
-           text-slate-800 hover:text-brand-600 font-semibold text-sm shadow-sm
-           transition-all duration-300;
+           text-slate-800 hover:text-brand-600 font-semibold text-xs sm:text-sm shadow-sm
+           transition-all duration-300 text-center;
   }
 
   /* FAQ Accordion */

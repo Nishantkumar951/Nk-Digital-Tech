@@ -3,12 +3,16 @@ export interface Props {
   title?: string;
   description?: string;
   canonical?: string;
+  googleSiteVerification?: string;
+  gaMeasurementId?: string;
 }
 
 const {
   title = 'Best Digital Marketing Company in Delhi NCR | NK Digital Tech',
   description = 'NK Digital Tech is the best digital marketing company in Delhi NCR. We offer SEO, AI SEO, AEO, GEO, local SEO and web development for real business enquiries.',
   canonical = 'https://www.nkdigitaltech.net/',
+  googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION || '',
+  gaMeasurementId = import.meta.env.PUBLIC_GA_MEASUREMENT_ID || '',
 } = Astro.props;
 
 const schemaLocalBusiness = JSON.stringify({
@@ -118,6 +122,25 @@ const schemaFAQ = JSON.stringify({
   <meta property="og:description" content={description} />
   <meta property="og:type" content="website" />
   <meta property="og:url" content={canonical} />
+  <link rel="sitemap" href="/sitemap.xml" />
+
+  <!-- Google Search Console Verification -->
+  {googleSiteVerification && (
+    <meta name="google-site-verification" content={googleSiteVerification} />
+  )}
+
+  <!-- Google Analytics 4 (GA4) -->
+  {gaMeasurementId && (
+    <>
+      <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${gaMeasurementId}`}></script>
+      <script is:inline define:vars={{ gaMeasurementId }}>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', gaMeasurementId);
+      </script>
+    </>
+  )}
 
   <!-- Favicon -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='48' fill='%230f172a'/><text x='50' y='65' font-size='42' font-family='sans-serif' font-weight='900' fill='%2338bdf8' text-anchor='middle'>NK</text></svg>" />

@@ -11,3 +11,4 @@ Framework: Astro 4.16.0
 Styling: Tailwind CSS
 Hosting: Vercel Edge Network
 Managed by: Square Root SEO Technical Discovery Standards (squarerootseo.com)
+

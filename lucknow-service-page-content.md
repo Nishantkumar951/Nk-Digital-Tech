@@ -45,7 +45,7 @@ NK Digital Tech is the Best Digital Marketing Company in Lucknow. We offer SEO, 
 9. Website design company in Lucknow
 10. Online marketing company in Lucknow
 
-## Complete Service Page Copy (Published at `/lucknow`)
+## Complete Service Page Copy (Published at `/best-digital-marketing-company-in-lucknow/`)
 
 ### Section 1: Hero
 **H1:** Best Digital Marketing Company in Lucknow

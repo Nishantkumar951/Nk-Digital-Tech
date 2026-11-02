@@ -1,0 +1,20 @@
+{
+  "name": "NK Digital Tech",
+  "short_name": "NK Digital",
+  "description": "Best digital marketing company in Delhi NCR delivering SEO, AI SEO, AEO, GEO, local SEO and web development across Delhi, Noida, Gurgaon and Lucknow.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#050a14",
+  "theme_color": "#0284c7",
+  "lang": "en-IN",
+  "orientation": "portrait-primary",
+  "categories": ["business", "marketing", "technology"],
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "maskable any"
+    }
+  ]
+}

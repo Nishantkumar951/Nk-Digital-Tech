@@ -1,0 +1,36 @@
+# https://www.nkdigitaltech.net — Complete Content Index
+> Generated: 2026-11-02
+> Managed by: Square Root SEO Technical Discovery Standards
+
+## Core Pages
+
+- [Homepage](https://www.nkdigitaltech.net/): Best digital marketing company in Delhi NCR delivering SEO, AI SEO, AEO, GEO, local SEO, and web development. Features our 6 core capabilities, 4 regional hubs, client case studies, comparison matrix, 4-stage execution model, and verified client testimonials.
+- [Delhi Regional Service Hub](https://www.nkdigitaltech.net/best-digital-marketing-agency-in-delhi/): Comprehensive 13-section commercial service page targeting New Delhi enterprises. Includes Connaught Place, South Delhi, Nehru Place, Okhla, and NSP corridor search strategies.
+- [Noida Regional Service Hub](https://www.nkdigitaltech.net/best-digital-marketing-agency-in-noida/): Complete regional service architecture targeting Noida and Greater Noida IT corridors, industrial sectors, and commercial hubs.
+- [Gurgaon Regional Service Hub](https://www.nkdigitaltech.net/best-digital-marketing-agency-in-gurgaon/): Enterprise search marketing and AI citations engineered for DLF Cyber City, Golf Course Road, Sohna Road, and IMT Manesar corporations.
+- [Lucknow Regional Service Hub](https://www.nkdigitaltech.net/best-digital-marketing-company-in-lucknow/): Regional organic search and local map pack dominance across Hazratganj, Gomti Nagar, Aliganj, and Amar Shaheed Path.
+
+## Core Capabilities & Practice Disciplines
+
+- Search Engine Optimisation (SEO): Technical crawl architecture, Core Web Vitals remediation, semantic keyword clusters, and sustainable domain authority.
+- AI SEO & AI Search Visibility: Entity structuring, topical depth, and structured JSON-LD data designed for discovery on ChatGPT, Gemini, and Google AI Overviews.
+- Local SEO & Google Business Profile: Google Map Pack top 3 dominance, local citation cleanup across Indian directories, and hyper-local conversion funnels.
+- Answer Engine Optimisation (AEO): Information architecture structured to secure Google featured snippets, AI answer blocks, and voice search answers.
+- Generative Engine Optimisation (GEO): Long-form topical authority, corporate knowledge graph alignment, and conversational citation engineering.
+- Website Design and Development: Sub-second, mobile-first static web architecture built on Astro, Tailwind CSS, clean semantic markup, and zero layout shift.
+
+## Key Commercial Corridors & Coverage
+
+- Delhi: Connaught Place, South Delhi, Nehru Place, Okhla, Rajouri Garden, Netaji Subhash Place, Kirti Nagar, Rohini, Dwarka, Aerocity, Naraina, Bawana.
+- Noida: Sector 62, Sector 18, Sector 15, Sector 16, Greater Noida Expressway, Sector 132, Sector 142, Yamuna Expressway, Ecotech Industrial.
+- Gurgaon: DLF Cyber City, Cyber Hub, Golf Course Road, Golf Course Extension Road, Sohna Road, Southern Peripheral Road, Dwarka Expressway, Udyog Vihar, IMT Manesar.
+- Lucknow: Hazratganj, Gomti Nagar, Gomti Nagar Extension, Aliganj, Kapoorthala, Indira Nagar, Mahanagar, Amar Shaheed Path, Transport Nagar.
+
+## Technical Specifications & Verification
+
+- Sitemap: https://www.nkdigitaltech.net/sitemap.xml
+- Robots: https://www.nkdigitaltech.net/robots.txt
+- Security: https://www.nkdigitaltech.net/.well-known/security.txt
+- Humans: https://www.nkdigitaltech.net/humans.txt
+- Manifest: https://www.nkdigitaltech.net/manifest.webmanifest
+- LLM Highlights: https://www.nkdigitaltech.net/llms.txt

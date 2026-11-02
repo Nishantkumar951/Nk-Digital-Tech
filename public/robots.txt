@@ -1,4 +1,129 @@
+# =============================================
+# robots.txt — https://www.nkdigitaltech.net
+# Last updated: 2026-11-02
+# Managed by: Square Root SEO Technical Discovery Standards
+# =============================================
+
+# -----------------------------------------------
+# SECTION 1: Search Engine Crawlers
+# -----------------------------------------------
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Googlebot-Mobile
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Yandex
+Allow: /
+
+# -----------------------------------------------
+# SECTION 2: AI & LLM Training Crawlers (ALLOW)
+# SRS Policy: Full access for Generative Engine Optimisation (GEO)
+# AI visibility = GEO ranking signal. Never block.
+# -----------------------------------------------
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: Diffbot
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+# -----------------------------------------------
+# SECTION 3: SEO Audit Tool Crawlers (ALLOW)
+# -----------------------------------------------
+User-agent: AhrefsBot
+Allow: /
+
+User-agent: SemrushBot
+Allow: /
+
+User-agent: MJ12bot
+Allow: /
+
+User-agent: DotBot
+Allow: /
+
+# -----------------------------------------------
+# SECTION 4: Malicious / Aggressive Scrapers (BLOCK)
+# -----------------------------------------------
+User-agent: MauiBot
+Disallow: /
+
+User-agent: SurveyBot
+Disallow: /
+
+User-agent: Cliqzbot
+Disallow: /
+
+# -----------------------------------------------
+# SECTION 5: Global Site Access & Asset Shielding
+# -----------------------------------------------
 User-agent: *
 Allow: /
 
+# Disallow utility, private and compiled asset paths
+Disallow: /api/
+Disallow: /_astro/
+Disallow: /404
+Disallow: /500
+
+# -----------------------------------------------
+# SECTION 6: Sitemaps & AI Index References
+# -----------------------------------------------
 Sitemap: https://www.nkdigitaltech.net/sitemap.xml

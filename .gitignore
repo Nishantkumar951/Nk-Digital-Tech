@@ -1,4 +1,6 @@
-node_modules
-serve.js
+node_modules/
+dist/
+.env
 .DS_Store
-
+*.log
+serve.js

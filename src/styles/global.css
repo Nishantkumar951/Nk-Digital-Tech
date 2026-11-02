@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body {
+    background-color: #060913;
+    color: #f1f5f9;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    overflow-x: hidden;
+  }
+}
+
+@layer components {
+  .font-display  { font-family: 'Outfit', sans-serif; }
+
+  .glass-card {
+    background: rgba(15, 23, 42, 0.65);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255,255,255,0.08);
+    transition: border-color 0.3s ease;
+  }
+  .glass-card:hover { border-color: rgba(56,189,248,0.3); }
+
+  .mesh-gradient {
+    background-image:
+      radial-gradient(at 10% 20%, rgba(14,165,233,0.15) 0px, transparent 50%),
+      radial-gradient(at 90% 10%, rgba(139,92,246,0.18) 0px, transparent 50%),
+      radial-gradient(at 50% 80%, rgba(56,189,248,0.12) 0px, transparent 50%);
+  }
+
+  .text-glow { text-shadow: 0 0 35px rgba(56,189,248,0.35); }
+
+  .grid-pattern {
+    background-size: 40px 40px;
+    background-image:
+      linear-gradient(to right, rgba(255,255,255,0.03) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255,255,255,0.03) 1px, transparent 1px);
+  }
+
+  .section-label {
+    @apply text-xs font-bold uppercase tracking-widest text-brand-400 mb-3;
+  }
+
+  .section-heading {
+    @apply font-display font-extrabold text-2xl sm:text-3xl md:text-4xl text-white leading-tight;
+  }
+
+  .section-sub {
+    @apply text-slate-400 leading-relaxed max-w-3xl;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-brand-400 via-sky-300 to-accent-400 bg-clip-text text-transparent;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-7 py-4 rounded-xl bg-gradient-to-r from-brand-500 to-accent-600
+           hover:from-brand-400 hover:to-accent-500 text-white font-semibold text-sm shadow-lg
+           shadow-brand-500/25 transition-all duration-300 active:scale-95;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center gap-2 px-7 py-4 rounded-xl glass-card border border-brand-500/40
+           hover:border-brand-400 text-sky-300 hover:text-white font-semibold text-sm
+           transition-all duration-300;
+  }
+
+  /* FAQ accordion */
+  details > summary { list-style: none; cursor: pointer; }
+  details > summary::-webkit-details-marker { display: none; }
+  details[open] .faq-icon { transform: rotate(45deg); }
+  .faq-icon { transition: transform 0.3s ease; }
+}

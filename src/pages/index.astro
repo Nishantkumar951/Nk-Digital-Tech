@@ -1,0 +1,516 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '../styles/global.css';
+
+const services = [
+  {
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>`,
+    color: 'brand',
+    title: 'Search Engine Optimisation (SEO)',
+    body: 'Technical SEO, high-intent keyword targeting and sustainable domain authority built to secure prominent page-one rankings on Google.',
+    impact: 'Consistent organic inbound traffic and pipeline growth without recurring ad spend.',
+    href: '/services/seo',
+  },
+  {
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>`,
+    color: 'accent',
+    title: 'AI SEO & AI Search Visibility',
+    body: 'Entity structuring, topical mapping and brand verification designed to get your enterprise recommended on ChatGPT, Gemini and Google AI Overviews.',
+    impact: 'Prominent citations when high-intent prospects query conversational AI assistants.',
+    href: '/services/ai-seo',
+  },
+  {
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>`,
+    color: 'cyan',
+    title: 'Local SEO & Google Business Profile',
+    body: 'Hyper-local search engine dominance, verified local citations and Google Business Profile optimisation across Delhi, Noida and Gurgaon.',
+    impact: 'Top ranking in regional map packs, driving phone calls and local commercial visits.',
+    href: '/services/local-seo',
+  },
+  {
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>`,
+    color: 'emerald',
+    title: 'Answer Engine Optimisation (AEO)',
+    body: 'Structuring website content into precise, authoritative answer formats engineered to secure Google featured snippets and direct answers.',
+    impact: 'Zero-click search capture that answers buyer questions and establishes market authority.',
+    href: '/services/aeo',
+  },
+  {
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>`,
+    color: 'violet',
+    title: 'Generative Engine Optimisation (GEO)',
+    body: 'Long-form entity depth, authoritative digital footprint development and knowledge-graph alignment across generative language models.',
+    impact: 'Long-term brand discoverability within generative search engine summaries.',
+    href: '/services/geo',
+  },
+  {
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>`,
+    color: 'orange',
+    title: 'Website Design and Development',
+    body: 'Lightning-fast, mobile-first web engineering built on clean technical code and conversion-focused information architecture.',
+    impact: 'Sub-second load speeds, strong Core Web Vitals and frictionless lead capture.',
+    href: '/services/web-development',
+  },
+];
+
+const serviceIconColors: Record<string, string> = {
+  brand:   'bg-brand-500/10 border-brand-500/20 text-brand-400',
+  accent:  'bg-accent-500/10 border-accent-500/20 text-accent-400',
+  cyan:    'bg-cyan-500/10 border-cyan-500/20 text-cyan-400',
+  emerald: 'bg-emerald-500/10 border-emerald-500/20 text-emerald-400',
+  violet:  'bg-violet-500/10 border-violet-500/20 text-violet-400',
+  orange:  'bg-orange-500/10 border-orange-500/20 text-orange-400',
+};
+
+const cities = [
+  { city: 'Delhi', keyword: 'Digital Marketing Services in Delhi', desc: 'We help Delhi enterprises build commanding organic search rankings, targeted local visibility, and consistent inbound business leads across competitive markets.', href: '/delhi' },
+  { city: 'Noida', keyword: 'Digital Marketing Services in Noida', desc: 'We scale Noida tech, manufacturing, and commercial brands with targeted SEO, Google map rankings, and proven inbound lead generation strategies.', href: '/noida' },
+  { city: 'Gurgaon', keyword: 'Digital Marketing Services in Gurgaon', desc: 'We position Gurugram corporate enterprises and startups at the forefront of Google search, conversational AI answers, and executive lead generation.', href: '/gurgaon' },
+  { city: 'Lucknow', keyword: 'Digital Marketing Services in Lucknow', desc: 'We establish commanding search authority for Lucknow businesses, capturing local buying demand through targeted SEO, Google profiles, and web engineering.', href: '/lucknow' },
+];
+
+const industries = [
+  { title: 'Real Estate & Infrastructure', focus: 'Hyper-local Google Map Pack dominance, geo-targeted landing pages for Gurugram luxury corridors and Noida commercial zones.', outcome: 'High-intent buyer inquiries, direct site visits and verified investor registrations.', icon: '🏗️' },
+  { title: 'Corporate & Professional Services', focus: 'AEO snippet capture, corporate entity verification and localised search visibility for legal, financial and management consulting practices.', outcome: 'Direct executive inquiries, institutional retainers and qualified advisory leads.', icon: '💼' },
+  { title: 'Educational & Training Institutes', focus: 'High-intent organic search authority, programme schema integration and local visibility across major Delhi NCR student hubs.', outcome: 'Direct student admissions, prospectus downloads and verified campus inquiries.', icon: '🎓' },
+  { title: 'B2B Manufacturing & Industrial', focus: 'Deep topical authority, AI search visibility for equipment specifications and industrial procurement directories.', outcome: 'Direct RFQ submissions, vendor shortlist inclusions and national distributor contracts.', icon: '⚙️' },
+  { title: 'Healthcare & Medical Facilities', focus: 'Hyper-local search dominance, medical professional schema, trusted answer-first content and Google Business Profile management.', outcome: 'Direct patient appointment bookings, teleconsultation inquiries and increased clinic footfall.', icon: '🏥' },
+  { title: 'Retail & E-Commerce Brands', focus: 'Technical catalogue architecture, product schema optimisation, local store inventory search and conversational AI discovery.', outcome: 'Accelerated direct-to-consumer sales, higher basket value and increased retail footfall across Delhi NCR stores.', icon: '🛒' },
+];
+
+const testimonials = [
+  { name: 'Rajesh Sharma', title: 'Managing Director', company: 'VP Infra', sector: 'Real Estate & Infrastructure, Noida', metrics: ['310% increase in verified project inquiries', '#1 rank for high-value Noida commercial keywords', '45% drop in cost-per-lead vs paid media'], quote: 'Before onboarding NK Digital Tech, our real estate developments in Noida struggled for organic visibility against large aggregators. Within four months, their local SEO and technical architecture propelled our primary projects into the top Google Map Pack positions. We experienced a threefold increase in verified site-visit bookings with complete transparency in reporting.', logo: '/images/clients/vp-infra.webp' },
+  { name: 'Pooja Aggarwal', title: 'Founder & CMO', company: 'Propertyways', sector: 'Real Estate Advisory & Asset Management, Gurugram', metrics: ['4.2x organic pipeline growth in 6 months', 'Regular citations in Google AI Overviews and ChatGPT', '68% increase in corporate lease inquiries'], quote: 'The shift to AI search visibility was a decisive move for Propertyways. High-intent corporate clients searching for commercial leases in Gurugram now encounter our brand prominently in Google AI Overviews and answer snippets. NK Digital Tech is the first digital marketing agency in Delhi NCR that delivered accountable revenue outcomes instead of vanity metrics.', logo: '/images/clients/propertyways.webp' },
+  { name: 'Sanjay Verma', title: 'Director', company: 'Creative Academy', sector: 'Professional Education & Skill Development, Delhi', metrics: ['185% increase in organic student enrollments', 'Dominant top-three ranking across Delhi student clusters', 'Zero dependence on expensive third-party lead brokers'], quote: 'Our academy previously relied heavily on costly paid ad channels that became increasingly unsustainable. NK Digital Tech overhauled our search presence and deployed an answer-focused content strategy. We achieved record course admissions this session while substantially reducing our blended customer acquisition costs.', logo: '/images/clients/creative-academy.webp' },
+  { name: 'Meera Tandon', title: 'Operations Head', company: 'Aangan', sector: 'Ethnic Apparel & Luxury Retail, Delhi NCR', metrics: ['240% growth in organic brand discovery searches', 'Steady footfall growth across regional retail stores', 'High-volume inquiries for seasonal collections'], quote: 'NK Digital Tech understands regional buyer behaviour thoroughly. Their targeted search optimisation and local presence management have created a continuous pipeline of genuine retail buyers visiting our stores and website every single week.', logo: '/images/clients/aangan.webp' },
+];
+
+const comparison = [
+  { metric: 'Account Leadership', typical: 'Senior directors pitch; inexperienced junior staff execute', nk: 'Experienced marketing strategists manage and execute your campaign' },
+  { metric: 'Performance Reporting', typical: 'Superficial graphs tracking impressions and raw clicks', nk: 'Direct reporting on qualified enquiries, pipeline value and conversions' },
+  { metric: 'Digital Asset Ownership', typical: 'Agency retains administrative control over ad and analytic data', nk: 'You maintain 100% ownership and administrative rights to every asset' },
+  { metric: 'Strategic Methodology', typical: 'Standardised templates reused across unrelated industries', nk: 'Tailored strategies engineered around your commercial sector in NCR' },
+  { metric: 'Search Scope', typical: 'Conventional search only, ignoring emerging AI platforms', nk: 'Omnichannel search authority: Google, AI Overviews, ChatGPT and Gemini' },
+  { metric: 'Operational Communication', typical: 'Monthly automated PDFs with little strategic commentary', nk: 'Direct access to campaign leaders with regular strategic reviews' },
+];
+
+const faqs = [
+  { q: 'What makes NK Digital Tech the best digital marketing company in Delhi NCR?', a: 'NK Digital Tech is recognised as the best digital marketing company in Delhi NCR because we combine foundational organic SEO with modern AI search optimisation across Google AI Overviews, ChatGPT and Gemini. Rather than relying on outdated techniques or third-party outsourcing, our in-house strategists build tailored campaigns that prioritise genuine commercial enquiries over cosmetic traffic numbers.' },
+  { q: 'How do your digital marketing services in Delhi NCR differ from traditional agencies?', a: 'Our digital marketing services in Delhi NCR provide complete channel coverage for how modern buyers search. While conventional agencies focus exclusively on standard Google rankings, we optimise your business entity across conversational AI systems, local map packs, featured answer snippets and responsive web assets, backed by full client account ownership and revenue-focused reporting.' },
+  { q: 'What specific platforms are covered under your AI search visibility services?', a: 'Our AI search visibility services optimise your digital assets for discovery across Google AI Overviews, ChatGPT, Gemini, Perplexity and Microsoft Copilot. We ensure your corporate entity, product capabilities and service credentials are structured and verified so that conversational AI assistants accurately cite and recommend your business.' },
+  { q: 'How long does it take to achieve measurable results with organic SEO in Delhi NCR?', a: 'Initial improvements in local search visibility, technical performance and Google Business Profile discovery frequently manifest within four to eight weeks. Competitive commercial keyword rankings and broader domain authority typically require three to six months of structured, continuous optimisation, depending on existing domain strength and regional industry competition.' },
+  { q: 'Why should a business invest in AEO and GEO alongside standard SEO?', a: 'Answer Engine Optimisation (AEO) and Generative Engine Optimisation (GEO) capture the rapidly growing volume of users who rely on instant answer snippets and generative AI recommendations. Implementing these strategies alongside standard SEO ensures your business remains visible across both traditional search listings and modern AI search answers.' },
+  { q: 'Does NK Digital Tech handle digital marketing for small and mid-sized enterprises?', a: 'Yes. We partner with emerging enterprises, regional establishments and expanding mid-market companies across Delhi, Noida, Gurgaon, Lucknow, Faridabad and Ghaziabad. We construct custom, phased roadmaps that concentrate resources on the specific channels that generate the highest commercial return for your operating budget.' },
+  { q: 'What geographical areas within Delhi NCR do your teams cover?', a: 'We serve commercial enterprises situated throughout the National Capital Region and key regional hubs, including South, Central, West, North and East Delhi, Noida, Greater Noida, Gurugram, Lucknow, Faridabad and Ghaziabad. Depending on client objectives, we also execute regional and pan-India organic growth campaigns.' },
+  { q: 'How does NK Digital Tech measure and report campaign success?', a: 'We measure success through verified business metrics: qualified form inquiries, inbound phone calls, organic keyword progression for commercial phrases, local pack visibility and confirmed AI citations. Clients receive transparent, scheduled reporting with direct access to campaign strategists.' },
+];
+
+const stages = [
+  { num: '01', title: 'Comprehensive Digital and Competitor Audit', body: 'We perform an exhaustive diagnostic of your current digital assets, including technical website architecture, crawlability, search visibility, backlink equity and Google Business Profile status. We simultaneously benchmark your direct competitors across Delhi NCR to identify exploitable search opportunities.' },
+  { num: '02', title: 'Custom Strategy and AI Roadmap Development', body: 'Using empirical audit findings, we construct a 90-day operational roadmap tailored to your specific market vertical and growth targets. This plan outlines specific technical milestones, content creation schedules, local search targets and AI platform visibility initiatives without unnecessary jargon.' },
+  { num: '03', title: 'Multi-Channel Technical and Content Execution', body: 'Our team implements required optimisations directly across your digital infrastructure. We execute technical code updates, publish authoritative content assets, refine structured schema data, manage local citations and align brand signals for AI retrieval.' },
+  { num: '04', title: 'Measurement, Refinement and Performance Scaling', body: 'We monitor keyword trajectory, qualified lead acquisition, user engagement and AI platform mentions continuously. As performance data matures, we recalibrate campaign levers to ensure steady, compounding commercial growth across all target search channels.' },
+];
+---
+
+<Layout>
+  <!-- ============================================================
+       HERO
+  ============================================================ -->
+  <section class="relative min-h-[88vh] flex flex-col items-center justify-center text-center px-6 py-20 md:py-28 overflow-hidden">
+    <!-- Announcement badge -->
+    <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-gradient-to-r from-brand-500/10 via-accent-500/10 to-brand-500/10 border border-brand-500/30 text-brand-300 text-xs sm:text-sm font-medium mb-8 animate-float">
+      <svg class="w-4 h-4 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+      <span>Google AI Overviews &bull; ChatGPT &bull; Gemini Visibility</span>
+    </div>
+
+    <!-- H1 -->
+    <h1 class="font-display text-4xl sm:text-6xl md:text-7xl font-black tracking-tight leading-[1.1] mb-6 text-glow max-w-5xl">
+      Best Digital Marketing<br class="hidden sm:block" />
+      <span class="gradient-text">Company in Delhi NCR</span>
+    </h1>
+
+    <!-- Subheadline -->
+    <p class="max-w-3xl mx-auto text-base sm:text-lg md:text-xl text-slate-300 font-normal leading-relaxed mb-10">
+      We help ambitious enterprises in Delhi, Noida and Gurgaon build organic search supremacy and AI search visibility, positioning your brand across Google, Google AI Overviews, ChatGPT, Gemini and every platform where your buyers evaluate decisions today.
+    </p>
+
+    <!-- CTA buttons -->
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
+      <a href="#contact" class="btn-primary text-base px-8 py-4">
+        Book a Strategic Consultation
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/></svg>
+      </a>
+      <a href="#services" class="btn-outline text-base px-8 py-4">
+        View Our Services
+      </a>
+    </div>
+
+    <!-- Trust strip -->
+    <div class="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-xs text-slate-500 font-medium">
+      {['Serving Delhi NCR Enterprises','Search Engine Optimisation','AI Search Visibility','Google AI Overviews','AEO','GEO','Local SEO','High-Performance Web Architecture'].map((item, i) => (
+        <>
+          <span class="text-slate-400">{item}</span>
+          {i < 7 && <span class="text-slate-700 select-none">|</span>}
+        </>
+      ))}
+    </div>
+  </section>
+
+  <!-- ============================================================
+       OUR CLIENTS
+  ============================================================ -->
+  <section class="relative py-16 px-6 border-t border-b border-slate-800/60 bg-[#04070f]/40">
+    <div class="max-w-6xl mx-auto text-center">
+      <p class="section-label">Trusted By</p>
+      <h2 class="section-heading mb-3">Trusted by Leading Brands Across Delhi NCR</h2>
+      <p class="section-sub mx-auto mb-10 text-sm">
+        We partner with regional market leaders, high-growth enterprises and established businesses throughout Delhi, Noida and Gurgaon to engineer their search dominance and accelerate inbound pipeline growth.
+      </p>
+      <!-- 5-logo grid -->
+      <div class="flex flex-wrap items-center justify-center gap-8 md:gap-14">
+        {[
+          { src: '/images/clients/aangan.webp',           alt: 'Aangan Logo' },
+          { src: '/images/clients/propertyways.webp',     alt: 'Propertyways Logo' },
+          { src: '/images/clients/creative-academy.webp', alt: 'Creative Academy Logo' },
+          { src: '/images/clients/vp-infra.webp',         alt: 'VP Infra Logo' },
+          { src: '/images/clients/vision.webp',           alt: 'Vision Logo' },
+        ].map(({ src, alt }) => (
+          <div class="glass-card rounded-xl px-6 py-4 flex items-center justify-center h-16 w-36 hover:-translate-y-1 transition-transform duration-300">
+            <img src={src} alt={alt} width="120" height="40" class="max-h-10 w-auto object-contain filter brightness-90 hover:brightness-110 transition-all duration-300" loading="lazy" />
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       INTRODUCTION
+  ============================================================ -->
+  <section class="relative py-20 px-6">
+    <div class="max-w-4xl mx-auto">
+      <p class="section-label">About NK Digital Tech</p>
+      <h2 class="section-heading mb-8">The Best Digital Marketing Company in Delhi NCR</h2>
+      <div class="space-y-5 text-slate-300 leading-relaxed text-base">
+        <p>
+          NK Digital Tech is the best digital marketing company in Delhi NCR for businesses seeking a search presence engineered around current customer search behaviour. Rather than chasing superficial vanity metrics, we deliver targeted organic search authority across traditional search engines and next-generation AI platforms including Google AI Overviews, ChatGPT and Gemini. We partner with commercial enterprises across Delhi, Noida and Gurgaon to turn search visibility into qualified commercial enquiries.
+        </p>
+        <p>
+          Most business leaders we consult have previously invested in digital agencies with disappointing outcomes. They received dense monthly reports filled with impressions and technical jargon, yet their incoming enquiry volume remained stagnant. The core issue is rarely the ad budget; it is the reliance on obsolete tactics that ignore how buyers discover solutions today. We resolve that breakdown by combining foundational technical SEO with modern answer engine and generative engine optimisation.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       PROBLEM STATEMENT
+  ============================================================ -->
+  <section class="relative py-16 px-6">
+    <div class="max-w-4xl mx-auto glass-card rounded-2xl p-8 md:p-12">
+      <p class="section-label">The Challenge</p>
+      <h2 class="section-heading mb-6">Why Regional Brands Remain Invisible in Modern Search</h2>
+      <div class="space-y-5 text-slate-300 leading-relaxed">
+        <p>
+          Your direct competitors are securing visibility on Google, Google AI Overviews, ChatGPT and Gemini while your company remains unmentioned. That continuous absence costs your enterprise high-value commercial enquiries every single day.
+        </p>
+        <p>
+          Traditional agency models in Delhi NCR remain attached to past search patterns. When a procurement head in Gurgaon consults ChatGPT for enterprise vendor options, or a homeowner in Noida evaluates an AI Overview recommendation on Google, legacy keyword tactics fail to register. If your corporate entity is not properly structured, verified and recognised by these emerging discovery engines, your business loses potential clients before you even know they are looking. NK Digital Tech bridges this critical gap.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SERVICES
+  ============================================================ -->
+  <section id="services" class="relative py-20 px-6">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-14">
+        <p class="section-label">What We Do</p>
+        <h2 class="section-heading mb-4">Digital Marketing Services in Delhi NCR</h2>
+        <p class="section-sub mx-auto text-sm">
+          We deliver six specialised service disciplines structured to build total search dominance for businesses throughout Delhi, Noida and Gurgaon. Each core capability operates as an integrated module within our growth framework, directing visitors from initial search inquiry to qualified commercial conversion.
+        </p>
+      </div>
+
+      <!-- 3x2 Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {services.map((s) => (
+          <div class="glass-card rounded-2xl p-7 flex flex-col hover:-translate-y-1 transition-transform duration-300 group">
+            <div class={`w-12 h-12 rounded-xl border flex items-center justify-center mb-5 ${serviceIconColors[s.color]}`}>
+              <Fragment set:html={s.icon} />
+            </div>
+            <h3 class="font-display font-bold text-lg text-white mb-3 leading-snug">{s.title}</h3>
+            <p class="text-slate-400 text-sm leading-relaxed mb-4 flex-grow">{s.body}</p>
+            <div class="border-t border-slate-700/50 pt-4 mt-auto">
+              <p class="text-xs text-brand-400 font-semibold uppercase tracking-wide mb-1">Key Impact</p>
+              <p class="text-slate-300 text-sm leading-relaxed">{s.impact}</p>
+            </div>
+            <a href={s.href} class="mt-5 inline-flex items-center gap-1 text-xs text-brand-400 hover:text-brand-300 font-semibold transition-colors group-hover:gap-2">
+              View Service Page
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/></svg>
+            </a>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       REGIONAL LOCATIONS: 1 ROW x 4 COLUMNS
+  ============================================================ -->
+  <section class="relative py-20 px-6 bg-[#04070f]/40 border-y border-slate-800/60">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-12">
+        <p class="section-label">Regional Service Centers</p>
+        <h2 class="section-heading mb-4">Regional Service Centers: Delhi, Noida, Gurgaon and Lucknow</h2>
+        <p class="section-sub mx-auto text-sm">
+          NK Digital Tech delivers dedicated search growth and digital marketing operations across primary business corridors in Northern India. Each regional territory is supported by specialised local market strategies tailored to regional competition, commercial density and localised buyer intent.
+        </p>
+      </div>
+
+      <!-- 4-column grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {cities.map((c) => (
+          <div class="glass-card rounded-2xl p-6 flex flex-col hover:-translate-y-1 transition-transform duration-300 group">
+            <div class="w-10 h-10 rounded-xl bg-brand-500/10 border border-brand-500/20 flex items-center justify-center text-brand-400 mb-4">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            </div>
+            <h3 class="font-display font-bold text-white text-base mb-3 leading-snug">{c.keyword}</h3>
+            <p class="text-slate-400 text-sm leading-relaxed flex-grow mb-5">{c.desc}</p>
+            <a href={c.href} class="inline-flex items-center gap-1 text-xs text-brand-400 hover:text-brand-300 font-semibold transition-colors group-hover:gap-2">
+              Explore {c.city} Page
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/></svg>
+            </a>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       WHY NK DIGITAL TECH
+  ============================================================ -->
+  <section id="why-us" class="relative py-20 px-6">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-12">
+        <p class="section-label">Why Choose Us</p>
+        <h2 class="section-heading mb-4">Why NK Digital Tech Is the Best Digital Marketing Agency in Delhi NCR</h2>
+        <p class="section-sub mx-auto text-sm">
+          Many digital agencies across Delhi NCR claim industry leadership, yet few offer authentic transparency regarding execution personnel, realistic 90-day progress milestones or forward-looking AI search preparation. NK Digital Tech was established to replace generic agency promises with verifiable, data-backed commercial performance.
+        </p>
+      </div>
+
+      <!-- Comparison table (desktop) / cards (mobile) -->
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm border-collapse hidden md:table">
+          <thead>
+            <tr class="border-b border-slate-700/60">
+              <th class="text-left py-4 px-5 text-xs font-bold uppercase tracking-widest text-slate-500 w-1/4">Evaluation Metric</th>
+              <th class="text-left py-4 px-5 text-xs font-bold uppercase tracking-widest text-slate-500 w-3/8">Typical Agency Approach</th>
+              <th class="text-left py-4 px-5 text-xs font-bold uppercase tracking-widest text-brand-400 w-3/8">The NK Digital Tech Standard</th>
+            </tr>
+          </thead>
+          <tbody>
+            {comparison.map((row, i) => (
+              <tr class={`border-b border-slate-800/40 ${i % 2 === 0 ? 'bg-[#04070f]/20' : ''} hover:bg-brand-500/5 transition-colors`}>
+                <td class="py-4 px-5 font-semibold text-slate-300">{row.metric}</td>
+                <td class="py-4 px-5 text-slate-500">{row.typical}</td>
+                <td class="py-4 px-5 text-slate-200">{row.nk}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Mobile cards -->
+      <div class="md:hidden space-y-4">
+        {comparison.map((row) => (
+          <div class="glass-card rounded-xl p-5">
+            <h4 class="font-display font-bold text-white text-sm mb-3">{row.metric}</h4>
+            <div class="grid grid-cols-1 gap-3">
+              <div class="rounded-lg bg-slate-800/30 p-3">
+                <p class="text-[10px] text-slate-500 font-semibold uppercase tracking-wide mb-1">Typical Agency</p>
+                <p class="text-slate-400 text-sm">{row.typical}</p>
+              </div>
+              <div class="rounded-lg bg-brand-500/5 border border-brand-500/20 p-3">
+                <p class="text-[10px] text-brand-400 font-semibold uppercase tracking-wide mb-1">NK Digital Tech</p>
+                <p class="text-slate-200 text-sm">{row.nk}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       INDUSTRIES: 3x2 GRID
+  ============================================================ -->
+  <section id="industries" class="relative py-20 px-6 bg-[#04070f]/40 border-y border-slate-800/60">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-14">
+        <p class="section-label">Industry Expertise</p>
+        <h2 class="section-heading mb-4">Specialised Industry Experience Across Delhi NCR</h2>
+        <p class="section-sub mx-auto text-sm">
+          NK Digital Tech provides digital marketing services in Delhi NCR across high-growth commercial sectors. Every growth programme is configured around the specific purchasing cycles, decision-makers and regional search behaviours of your target vertical.
+        </p>
+      </div>
+
+      <!-- 3x2 Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {industries.map((ind) => (
+          <div class="glass-card rounded-2xl p-7 hover:-translate-y-1 transition-transform duration-300">
+            <div class="text-3xl mb-4">{ind.icon}</div>
+            <h3 class="font-display font-bold text-white text-base mb-4 leading-snug">{ind.title}</h3>
+            <div class="space-y-3">
+              <div>
+                <p class="text-[10px] text-brand-400 font-semibold uppercase tracking-wide mb-1">Strategic Focus</p>
+                <p class="text-slate-400 text-sm leading-relaxed">{ind.focus}</p>
+              </div>
+              <div class="border-t border-slate-700/40 pt-3">
+                <p class="text-[10px] text-emerald-400 font-semibold uppercase tracking-wide mb-1">Commercial Outcome</p>
+                <p class="text-slate-300 text-sm leading-relaxed">{ind.outcome}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       TESTIMONIALS: 2x2 GRID
+  ============================================================ -->
+  <section id="testimonials" class="relative py-20 px-6">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-14">
+        <p class="section-label">Client Results</p>
+        <h2 class="section-heading mb-4">What Regional Business Leaders Say About NK Digital Tech</h2>
+        <p class="section-sub mx-auto text-sm">
+          Direct feedback and measurable commercial outcomes from corporate founders, managing directors and marketing heads across Delhi, Noida and Gurgaon who chose NK Digital Tech as their strategic search growth partner.
+        </p>
+      </div>
+
+      <!-- 2x2 Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {testimonials.map((t) => (
+          <div class="glass-card rounded-2xl p-7 flex flex-col hover:-translate-y-1 transition-transform duration-300">
+            <!-- Quote -->
+            <svg class="w-8 h-8 text-brand-500/40 mb-4 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+            <p class="text-slate-300 text-sm leading-relaxed italic mb-6 flex-grow">"{t.quote}"</p>
+
+            <!-- Metrics -->
+            <div class="border-t border-b border-slate-700/40 py-4 mb-5">
+              <ul class="space-y-1.5">
+                {t.metrics.map((m) => (
+                  <li class="flex items-start gap-2 text-xs text-slate-400">
+                    <svg class="w-3.5 h-3.5 text-brand-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                    {m}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <!-- Client info -->
+            <div class="flex items-center gap-4">
+              <img src={t.logo} alt={`${t.company} Logo`} width="48" height="48" class="w-12 h-12 rounded-xl object-contain bg-slate-800/50 p-1 flex-shrink-0" loading="lazy" />
+              <div>
+                <p class="font-display font-bold text-white text-sm">{t.name}</p>
+                <p class="text-slate-400 text-xs">{t.title}, <span class="text-brand-400">{t.company}</span></p>
+                <p class="text-slate-500 text-[11px] mt-0.5">{t.sector}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       HOW WE WORK
+  ============================================================ -->
+  <section class="relative py-20 px-6 bg-[#04070f]/40 border-y border-slate-800/60">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-14">
+        <p class="section-label">Our Process</p>
+        <h2 class="section-heading mb-4">Systematic Four-Stage Execution Framework</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {stages.map((s) => (
+          <div class="glass-card rounded-2xl p-7 hover:-translate-y-1 transition-transform duration-300">
+            <div class="font-display text-4xl font-black gradient-text mb-4 leading-none">{s.num}</div>
+            <h3 class="font-display font-bold text-white text-base mb-3 leading-snug">{s.title}</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">{s.body}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FAQ
+  ============================================================ -->
+  <section id="faq" class="relative py-20 px-6">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-14">
+        <p class="section-label">FAQ</p>
+        <h2 class="section-heading mb-4">Frequently Asked Questions</h2>
+      </div>
+      <div class="space-y-4">
+        {faqs.map((f) => (
+          <details class="glass-card rounded-2xl group">
+            <summary class="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer">
+              <span class="font-display font-semibold text-white text-sm sm:text-base leading-snug">{f.q}</span>
+              <svg class="faq-icon w-5 h-5 text-brand-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+              </svg>
+            </summary>
+            <div class="px-6 pb-6 text-slate-400 text-sm leading-relaxed border-t border-slate-700/40 pt-4">
+              {f.a}
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CONCLUSION + CTA
+  ============================================================ -->
+  <section id="contact" class="relative py-24 px-6 overflow-hidden">
+    <!-- Decorative background blob -->
+    <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+      <div class="w-[600px] h-[400px] bg-brand-500/8 rounded-full blur-[120px]"></div>
+    </div>
+
+    <div class="relative max-w-3xl mx-auto text-center">
+      <p class="section-label justify-center flex">Partner With Us</p>
+      <h2 class="section-heading mb-6">Partner with the Best Digital Marketing Company in Delhi NCR</h2>
+      <div class="space-y-5 text-slate-300 leading-relaxed text-base mb-10">
+        <p>
+          Achieving sustained commercial growth in the highly competitive Delhi NCR marketplace requires a digital marketing strategy that addresses how real customers find answers today. Brands that limit their efforts to outdated methods fall behind as consumer search habits rapidly transition toward AI-assisted discovery.
+        </p>
+        <p>
+          NK Digital Tech provides the strategic vision, technical capability and operational discipline needed to build lasting digital authority. Whether you require higher Google rankings, commanding local presence across Delhi, Noida, Gurgaon and Lucknow, or verified presence on Google AI Overviews, ChatGPT and Gemini, our team is ready to deliver. Contact our specialists today to schedule your comprehensive digital audit.
+        </p>
+      </div>
+
+      <!-- CTA -->
+      <a href="mailto:connect@nkdigitaltech.com" class="btn-primary text-base px-10 py-5 text-lg">
+        Connect with NK Digital Tech Today
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/></svg>
+      </a>
+
+      <!-- Trust badges -->
+      <div class="flex flex-wrap items-center justify-center gap-6 mt-12 text-xs text-slate-500">
+        {['Delhi', 'Noida', 'Gurgaon', 'Lucknow'].map((city) => (
+          <span class="flex items-center gap-1.5">
+            <svg class="w-3.5 h-3.5 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            {city}
+          </span>
+        ))}
+      </div>
+    </div>
+  </section>
+</Layout>

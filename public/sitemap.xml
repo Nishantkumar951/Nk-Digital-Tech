@@ -1,35 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.nkdigitaltech.net/</loc>
-    <lastmod>2026-11-02T12:05:00+05:30</lastmod>
+    <lastmod>2026-11-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
-    <image:image>
-      <image:loc>https://www.nkdigitaltech.net/images/hero-best-digital-marketing-company-delhi-ncr.webp</image:loc>
-      <image:title>Best Digital Marketing Company in Delhi NCR - NK Digital Tech</image:title>
-      <image:caption>Strategic search analytics and digital marketing dominance for Delhi, Noida, Gurgaon and Lucknow</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.nkdigitaltech.net/images/digital-marketing-services-delhi-ncr-team.webp</image:loc>
-      <image:title>Digital Marketing Services in Delhi NCR Team</image:title>
-      <image:caption>NK Digital Tech marketing professionals reviewing organic search rankings</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.nkdigitaltech.net/images/local-seo-services-delhi-ncr.webp</image:loc>
-      <image:title>Local SEO Services in Delhi NCR</image:title>
-      <image:caption>Local search and Google Business Profile optimization across Delhi, Noida, Gurgaon and Lucknow</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.nkdigitaltech.net/images/website-development-company-delhi.webp</image:loc>
-      <image:title>Website Development Company Delhi NCR</image:title>
-      <image:caption>High performance web architecture and technical SEO engineering</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.nkdigitaltech.net/images/nk-digital-tech-team-delhi.webp</image:loc>
-      <image:title>NK Digital Tech Team Delhi</image:title>
-      <image:caption>Executive strategy and digital marketing consulting team in New Delhi</image:caption>
-    </image:image>
   </url>
 </urlset>

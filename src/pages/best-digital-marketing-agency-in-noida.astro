@@ -1,0 +1,1228 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '../styles/global.css';
+
+const pageTitle = 'Best Digital Marketing Agency in Noida | NK Digital Tech';
+const pageDescription = 'NK Digital Tech is the Best Digital Marketing Agency in Noida. We provide SEO, AI SEO, AEO, GEO, local SEO and web development for steady business enquiries.';
+const pageCanonical = 'https://www.nkdigitaltech.net/best-digital-marketing-agency-in-noida/';
+
+const clients = [
+  {
+    name: 'VP Infra',
+    sector: 'Commercial Towers & Group Housing',
+    region: 'Noida Expressway & Sector 150',
+    logo: '/images/clients/vp-infra.webp',
+  },
+  {
+    name: 'Propertyways',
+    sector: 'IT Park Leasing & Corporate Assets',
+    region: 'Sector 62 & Sector 135',
+    logo: '/images/clients/propertyways.webp',
+  },
+  {
+    name: 'Creative Academy',
+    sector: 'Tech Upskilling & Campus Training',
+    region: 'Sector 63 & Knowledge Park',
+    logo: '/images/clients/creative-academy.webp',
+  },
+  {
+    name: 'Vision',
+    sector: 'Multi Speciality Eye & Laser Centres',
+    region: 'Sector 18 & Central Noida',
+    logo: '/images/clients/vision.webp',
+  },
+  {
+    name: 'Aangan',
+    sector: 'Designer Apparel & Flagship Retail',
+    region: 'Sector 18 & Mall Corridor',
+    logo: '/images/clients/aangan.webp',
+  },
+];
+
+const services = [
+  {
+    num: '01',
+    category: 'Page One Search Rankings',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>`,
+    iconStyle: 'bg-sky-50 border-sky-200 text-brand-600',
+    impactStyle: 'bg-sky-50/80 border-sky-200/80 text-slate-800',
+    badgeColor: 'text-brand-600 bg-sky-100/80',
+    title: 'Search Engine Optimisation (SEO)',
+    body: 'As a technical SEO company in Noida, we resolve crawl bottlenecks, build high intent commercial landing pages and earn authoritative backlinks through our SEO services in Noida so your business captures page one demand.',
+    impact: 'Consistent pipeline of inbound enterprise RFQs, demo requests and phone enquiries.',
+    cta: 'Book Your Technical SEO Audit',
+    href: '#contact',
+  },
+  {
+    num: '02',
+    category: 'AI Platform Discovery',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>`,
+    iconStyle: 'bg-violet-50 border-violet-200 text-accent-600',
+    impactStyle: 'bg-violet-50/80 border-violet-200/80 text-slate-800',
+    badgeColor: 'text-accent-600 bg-violet-100/80',
+    title: 'AI SEO & AI Search Visibility',
+    body: 'We align your corporate entity data, case study proof and technical documentation so Google AI Overviews, ChatGPT, Gemini, Perplexity and Microsoft Copilot cite your Noida company when buyers shortlist vendors.',
+    impact: 'Verified brand recommendations inside conversational AI buyer comparisons.',
+    cta: 'Audit Your AI Search Visibility',
+    href: '#contact',
+  },
+  {
+    num: '03',
+    category: 'Hyper Local Map Dominance',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>`,
+    iconStyle: 'bg-emerald-50 border-emerald-200 text-emerald-600',
+    impactStyle: 'bg-emerald-50/80 border-emerald-200/80 text-slate-800',
+    badgeColor: 'text-emerald-700 bg-emerald-100/80',
+    title: 'Local SEO & Google Business Profile',
+    body: 'As an experienced local SEO company in Noida, our local SEO services in Noida optimise your Google Business Profile, sector specific citations and customer reviews across Sector 18, Sector 62, Sector 63 and the Expressway.',
+    impact: 'Top three Google Map Pack placement driving direct calls, direction clicks and showroom or clinic visits.',
+    cta: 'Dominate Noida Map Pack Results',
+    href: '#contact',
+  },
+  {
+    num: '04',
+    category: 'Featured Snippet Capture',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>`,
+    iconStyle: 'bg-amber-50 border-amber-200 text-amber-600',
+    impactStyle: 'bg-amber-50/80 border-amber-200/80 text-slate-800',
+    badgeColor: 'text-amber-700 bg-amber-100/80',
+    title: 'Answer Engine Optimisation (AEO)',
+    body: 'We structure your service and product pages with concise question and answer blocks paired with JSON LD schema so Google extracts your website for position zero answer boxes and voice queries.',
+    impact: 'Immediate authority at the very top of search results when decision makers evaluate pricing and specs.',
+    cta: 'Capture Position Zero Answers',
+    href: '#contact',
+  },
+  {
+    num: '05',
+    category: 'Generative Model Authority',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>`,
+    iconStyle: 'bg-indigo-50 border-indigo-200 text-indigo-600',
+    impactStyle: 'bg-indigo-50/80 border-indigo-200/80 text-slate-800',
+    badgeColor: 'text-indigo-700 bg-indigo-100/80',
+    title: 'Generative Engine Optimisation (GEO)',
+    body: 'We build deep topical clusters, benchmark tables and verified industry data points that generative language models like ChatGPT, Gemini and Perplexity pull into their synthesized vendor recommendations.',
+    impact: 'Long term brand inclusion whenever prospects ask AI tools to compare providers in Noida.',
+    cta: 'Scale Generative Search Presence',
+    href: '#contact',
+  },
+  {
+    num: '06',
+    category: 'Conversion Web Engineering',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>`,
+    iconStyle: 'bg-cyan-50 border-cyan-200 text-cyan-700',
+    impactStyle: 'bg-cyan-50/80 border-cyan-200/80 text-slate-800',
+    badgeColor: 'text-cyan-700 bg-cyan-100/80',
+    title: 'Website Design and Development',
+    body: 'As a specialist website development company in Noida and website design company in Noida, we engineer fast, mobile responsive web architectures built to pass Core Web Vitals and convert enterprise visitors.',
+    impact: 'Sub second load times, clean schema ready code and higher enquiry conversion rates.',
+    cta: 'Modernise Your Web Architecture',
+    href: '#contact',
+  },
+];
+
+const cities = [
+  {
+    hub: 'Cluster 01',
+    city: 'Sector 62 & Sector 63',
+    corridor: 'Electronic City • Institutional Area • NH 24 Tech Belt',
+    keyword: 'IT, SaaS & B2B Enterprise SEO',
+    desc: 'Sector 62 and Sector 63 host hundreds of software exporters, SaaS startups and B2B service firms. We build technical search authority and ChatGPT visibility that brings qualified enterprise leads.',
+    cta: 'Audit Your Sector 62 Presence',
+    href: '#contact',
+    accent: 'from-brand-500 to-sky-400',
+  },
+  {
+    hub: 'Cluster 02',
+    city: 'Noida Expressway',
+    corridor: 'Sector 125 • Sector 135 • Sector 142 • Sector 150',
+    keyword: 'Corporate Towers, Hospitals & Real Estate',
+    desc: 'Along the Noida Greater Noida Expressway, luxury developers, corporate campuses and super speciality hospitals compete for high value enquiries. We position your brand at the top of Google and AI answers.',
+    cta: 'Audit Your Expressway Presence',
+    href: '#contact',
+    accent: 'from-accent-500 to-violet-400',
+  },
+  {
+    hub: 'Cluster 03',
+    city: 'Sector 18 & Central Noida',
+    corridor: 'Atta Market • Sector 15 • Sector 16 Film City • Sector 50',
+    keyword: 'Retail, Clinics & Professional Practices',
+    desc: 'Shoppers and families in central Noida check Google Maps, reviews and instant AI summaries before visiting a clinic, showroom or consultant. We put your business in the top three map positions.',
+    cta: 'Audit Your Sector 18 Presence',
+    href: '#contact',
+    accent: 'from-cyan-500 to-teal-400',
+  },
+  {
+    hub: 'Cluster 04',
+    city: 'Phase 2 & Greater Noida',
+    corridor: 'Sector 80 • Sector 83 • Pari Chowk • Knowledge Park',
+    keyword: 'Industrial Manufacturing & Universities',
+    desc: 'We engineer B2B product discovery for manufacturing plants in Phase 2 and student admission pipelines for colleges and institutes across Greater Noida Knowledge Park.',
+    cta: 'Audit Your Greater Noida Presence',
+    href: '#contact',
+    accent: 'from-emerald-500 to-green-400',
+  },
+];
+
+const comparison = [
+  {
+    metric: 'Execution Team',
+    typical: 'Account managers pitch; inexperienced interns handle your SEO work',
+    nk: 'Senior technical SEO and web architects execute your Noida campaign',
+  },
+  {
+    metric: 'Success Metrics',
+    typical: 'Monthly spreadsheets celebrating raw traffic and low intent clicks',
+    nk: 'Accountable tracking of phone calls, form fills, RFQs and SQLs',
+  },
+  {
+    metric: 'Code & Data Ownership',
+    typical: 'Agency restricts admin access to your CMS, Search Console or listings',
+    nk: 'You hold 100% ownership of your website repository and analytics',
+  },
+  {
+    metric: 'Search Strategy',
+    typical: 'Identical checklist applied to a Sector 18 store and a Sector 62 SaaS firm',
+    nk: 'Custom 90 day roadmap built around your specific Noida buyer journey',
+  },
+  {
+    metric: 'AI Search Coverage',
+    typical: 'Focuses only on old blue links while ignoring ChatGPT and Gemini',
+    nk: 'Full AEO and GEO engineering for Google AI Overviews, ChatGPT and Gemini',
+  },
+  {
+    metric: 'Review Cadence',
+    typical: 'Automated monthly emails with no clear plan for next month',
+    nk: 'Biweekly strategy sprints with transparent deliverable tracking',
+  },
+];
+
+const industries = [
+  {
+    sector: 'Technology & Software',
+    title: 'IT Services, SaaS & Tech Startups',
+    focus: 'Solution comparison pages, software schema and generative AI citations for tech companies in Sector 62, Sector 63 and Sector 135.',
+    outcome: 'Qualified product demo requests, enterprise RFPs and international client enquiries.',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>`,
+    accentBorder: 'border-t-brand-500',
+    iconBg: 'bg-sky-50 text-brand-600 border-sky-200',
+  },
+  {
+    sector: 'Property & Commercial Spaces',
+    title: 'Real Estate Developers & Coworking Hubs',
+    focus: 'Sector specific landing pages, Google Map Pack authority and AI overview capture along the Noida Expressway, Sector 150 and Greater Noida West.',
+    outcome: 'Verified site visit bookings, commercial office lease enquiries and direct buyer calls.',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>`,
+    accentBorder: 'border-t-accent-500',
+    iconBg: 'bg-violet-50 text-accent-600 border-violet-200',
+  },
+  {
+    sector: 'Industrial & Exports',
+    title: 'B2B Manufacturing & Electronics Units',
+    focus: 'Technical catalogue architecture, ISO and specification schema and procurement keyword rankings for factories in Phase 2, Sector 80 and Sector 83.',
+    outcome: 'Direct bulk order enquiries, vendor empanelment and distributor partnerships.',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>`,
+    accentBorder: 'border-t-emerald-500',
+    iconBg: 'bg-emerald-50 text-emerald-600 border-emerald-200',
+  },
+  {
+    sector: 'Healthcare & Wellness',
+    title: 'Hospitals, IVF, Dental & Diagnostics',
+    focus: 'Doctor credential schema, patient symptom answer blocks and local map pack rankings across Sector 18, Sector 50, Sector 78 and Indirapuram.',
+    outcome: 'Daily OPD appointment calls, preventive health bookings and walk in patients.',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>`,
+    accentBorder: 'border-t-rose-500',
+    iconBg: 'bg-rose-50 text-rose-600 border-rose-200',
+  },
+  {
+    sector: 'Higher Education & EdTech',
+    title: 'Universities, Colleges & Training Hubs',
+    focus: 'Course curriculum schema, placement record tables and answer rich admission pages across Knowledge Park and Sector 62.',
+    outcome: 'Increased student admission forms, campus tour bookings and direct counselling calls.',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"/></svg>`,
+    accentBorder: 'border-t-cyan-500',
+    iconBg: 'bg-cyan-50 text-cyan-700 border-cyan-200',
+  },
+  {
+    sector: 'Retail & Consumer Brands',
+    title: 'Showrooms, Interiors & D2C Brands',
+    focus: 'Fast mobile product pages, local store inventory schema and Google Business Profile management across Sector 18, Sector 104 and Mall corridors.',
+    outcome: 'Higher store footfall, interior consultation calls and direct online orders.',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>`,
+    accentBorder: 'border-t-amber-500',
+    iconBg: 'bg-amber-50 text-amber-600 border-amber-200',
+  },
+];
+
+const testimonials = [
+  {
+    name: 'Siddharth Malhotra',
+    title: 'VP of Growth',
+    company: 'VP Infra',
+    sector: 'Commercial & Residential Projects, Noida Expressway',
+    metrics: [
+      '340% increase in direct buyer site visit bookings',
+      'Top 3 Google Map Pack rank across Sector 150 and Expressway terms',
+      '52% lower customer acquisition cost through organic search',
+    ],
+    quote: 'Competing against giant real estate portals along the Noida Expressway was draining our marketing budget. NK Digital Tech rebuilt our project pages with fast code, floor plan schema and local map signals. Within five months we were ranking in the top three on Google and receiving direct calls from serious homebuyers.',
+    logo: '/images/clients/vp-infra.webp',
+  },
+  {
+    name: 'Neha Khanna',
+    title: 'Director of Operations',
+    company: 'Propertyways',
+    sector: 'Corporate Office Leasing, Sector 62 & Sector 135',
+    metrics: [
+      'Cited directly in ChatGPT, Gemini and Google AI Overviews',
+      '3.9x growth in enterprise office leasing enquiries',
+      'First page rankings for Noida IT park commercial keywords',
+    ],
+    quote: 'When IT companies expand into Sector 62 or along the Expressway, their procurement teams now ask ChatGPT or check Google AI Overviews to shortlist commercial leasing partners. NK Digital Tech structured our building data so AI tools recommend Propertyways consistently. Our inbound corporate pipeline has never been stronger.',
+    logo: '/images/clients/propertyways.webp',
+  },
+  {
+    name: 'Gaurav Bansal',
+    title: 'Centre Head',
+    company: 'Creative Academy',
+    sector: 'IT Certification & Skill Institute, Sector 63',
+    metrics: [
+      '230% jump in organic student batch registrations',
+      'Featured answer snippets for Noida tech course queries',
+      'Top local map visibility across Sector 62 and Sector 63',
+    ],
+    quote: 'Graduates and working professionals in Noida research course syllabi, placement stats and fees thoroughly before booking a demo class. NK Digital Tech transformed our website into a fast, answer focused platform that ranks at the top of Google and brings us daily student walk ins.',
+    logo: '/images/clients/creative-academy.webp',
+  },
+  {
+    name: 'Dr. Prateek Arora',
+    title: 'Clinical Director',
+    company: 'Vision',
+    sector: 'Super Speciality Eye Care Centre, Sector 18',
+    metrics: [
+      '280% increase in direct OPD appointment phone calls',
+      'Top 3 Google Map Pack placement in central Noida',
+      '1.4 second mobile page load speed across treatment pages',
+    ],
+    quote: 'Patients in Noida look up treatment details and doctor credentials on their phones before choosing an eye hospital. NK Digital Tech optimised our Google Business Profile and rewrote our surgical pages with clear patient FAQs, doubling our direct appointment calls within ninety days.',
+    logo: '/images/clients/vision.webp',
+  },
+];
+
+const stages = [
+  {
+    num: 'Phase 01',
+    step: '01',
+    title: 'Technical Code, Core Web Vitals & Noida Competitor Audit',
+    body: 'We begin by auditing your website speed, crawl architecture, schema gaps and Google Business Profile standing. Simultaneously, we dissect the exact keyword, content and backlink footprint of the top ranking competitors in your Noida sector.',
+    accent: 'from-brand-600 to-sky-500',
+  },
+  {
+    num: 'Phase 02',
+    step: '02',
+    title: '90 Day Commercial Keyword, Map Pack & AI Search Blueprint',
+    body: 'We build a practical 90 day execution plan mapped to your revenue goals. Every two week sprint defines exact service pages, Sector specific local signals, AEO answer blocks and entity verifications required to win on Google, ChatGPT and Gemini.',
+    accent: 'from-accent-600 to-violet-500',
+  },
+  {
+    num: 'Phase 03',
+    step: '03',
+    title: 'In House Technical SEO, Content & Schema Deployment',
+    body: 'Our developers and strategists implement every fix directly. We eliminate render blocking scripts, publish deep commercial pages, inject JSON LD structured data, optimise your Google Business Profile and verify your citations across Indian business directories.',
+    accent: 'from-cyan-600 to-teal-500',
+  },
+  {
+    num: 'Phase 04',
+    step: '04',
+    title: 'Lead Attribution, AI Citation Tracking & Pipeline Scaling',
+    body: 'We track verified phone calls, WhatsApp leads, demo form submissions, map pack rankings and brand mentions inside Google AI Overviews, ChatGPT and Gemini. Each month we double down on the pages driving the highest commercial return.',
+    accent: 'from-emerald-600 to-green-500',
+  },
+];
+
+const faqs = [
+  {
+    q: 'Why is NK Digital Tech considered the Best Digital Marketing Agency in Noida?',
+    a: 'NK Digital Tech is the Best Digital Marketing Agency in Noida because we engineer measurable organic pipeline growth rather than chasing vanity clicks. Our in house team integrates technical Search Engine Optimisation (SEO), AI SEO, Local SEO, Answer Engine Optimisation (AEO), Generative Engine Optimisation (GEO) and high speed web development to generate verified customer enquiries.',
+  },
+  {
+    q: 'How do your digital marketing services in Noida help companies appear on ChatGPT and Gemini?',
+    a: 'Conversational AI platforms like ChatGPT, Gemini, Perplexity and Google AI Overviews extract recommendations from websites that feature structured comparison data, clear factual answer blocks, JSON LD schema markup and verified authority signals. Our AI SEO, AEO and GEO frameworks structure your Noida business so these models cite you directly.',
+  },
+  {
+    q: 'How long does it take to see measurable leads from your SEO services in Noida?',
+    a: 'Technical speed fixes, Google Business Profile optimisation and local map pack rankings across Noida sectors typically start lifting phone calls within four to eight weeks. Competitive page one Google rankings for high intent B2B or consumer keywords and consistent AI citations compound over three to six months.',
+  },
+  {
+    q: 'What is included when we hire you as a local SEO company in Noida?',
+    a: 'Our local SEO services in Noida include complete Google Business Profile category and service optimisation, sector specific landing pages for hubs like Sector 62, Sector 18 and the Noida Expressway, verified NAP citations across Indian directories, local Q&A structuring and customer review velocity systems.',
+  },
+  {
+    q: 'How is an SEO agency in Noida different if it includes AEO and GEO?',
+    a: 'A conventional SEO agency in Noida only tracks ten blue links on Google. By combining Answer Engine Optimisation (AEO) and Generative Engine Optimisation (GEO) with technical SEO, we ensure your business captures featured answer snippets, Google AI Overviews and vendor shortlists generated by ChatGPT and Gemini.',
+  },
+  {
+    q: 'Do you build custom websites as a website development company in Noida?',
+    a: 'Yes. As a specialised website development company in Noida and website design company in Noida, we engineer mobile first, fast loading websites with clean semantic code, strong Core Web Vitals performance, integrated JSON LD schema and high converting enquiry architecture.',
+  },
+  {
+    q: 'Do you work with both B2B tech firms in Sector 62 and consumer brands in Sector 18?',
+    a: 'Yes. As a versatile digital marketing company in Noida and online marketing company in Noida, we tailor our search strategies to your exact market. For Sector 62 SaaS and IT firms we build technical B2B topic clusters and AI citations, while for Sector 18 and Expressway clinics, showrooms and builders we prioritise local map dominance and high intent buyer queries.',
+  },
+  {
+    q: 'Who owns our website code, content and analytics accounts during the campaign?',
+    a: 'You retain 100% administrative ownership of your domain, website code, Google Search Console, Google Analytics and Google Business Profile at all times. We believe client retention should be earned through transparent lead growth, never by locking your digital assets.',
+  },
+];
+
+const trustStrip = [
+  'Noida B2B & Consumer Search Specialists',
+  'Page One Google Rankings',
+  'Google Map Pack Top 3',
+  'ChatGPT & Gemini Citations',
+  'Google AI Overviews',
+  'Technical AEO & GEO',
+  'Core Web Vitals Engineering',
+  '100% Asset Ownership',
+];
+
+const noidaSchemaLocalBusiness = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "NK Digital Tech Noida",
+  "url": "https://www.nkdigitaltech.net/best-digital-marketing-agency-in-noida/",
+  "logo": "https://www.nkdigitaltech.net/images/hero-best-digital-marketing-company-delhi-ncr.webp",
+  "image": "https://www.nkdigitaltech.net/images/hero-best-digital-marketing-company-delhi-ncr.webp",
+  "description": "NK Digital Tech is the Best Digital Marketing Agency in Noida. We provide SEO, AI SEO, AEO, GEO, local SEO and web development for steady business enquiries.",
+  "email": "connect@nkdigitaltech.com",
+  "priceRange": "₹₹",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Noida",
+    "addressRegion": "Uttar Pradesh",
+    "addressCountry": "IN"
+  },
+  "areaServed": [
+    "Noida",
+    "Sector 62 Noida",
+    "Sector 63 Noida",
+    "Sector 18 Noida",
+    "Noida Greater Noida Expressway",
+    "Sector 125 Noida",
+    "Sector 135 Noida",
+    "Sector 150 Noida",
+    "Greater Noida"
+  ],
+  "serviceType": [
+    "Search Engine Optimisation (SEO)",
+    "AI SEO & AI Search Visibility",
+    "Local SEO & Google Business Profile",
+    "Answer Engine Optimisation (AEO)",
+    "Generative Engine Optimisation (GEO)",
+    "Website Design and Development"
+  ]
+});
+
+const noidaSchemaFAQ = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map((item) => ({
+    "@type": "Question",
+    "name": item.q,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": item.a
+    }
+  }))
+});
+---
+
+<Layout
+  title={pageTitle}
+  description={pageDescription}
+  canonical={pageCanonical}
+  customSchemaLocalBusiness={noidaSchemaLocalBusiness}
+  customSchemaFAQ={noidaSchemaFAQ}
+  utilityTagline="Best Digital Marketing Agency in Noida • SEO, AI SEO, AEO, GEO & Web Architecture"
+  brandSubtitle="Noida • SEO, AI Search & Web"
+  footerBio="Best Digital Marketing Agency in Noida engineering page one Google rankings, Google Map Pack dominance and AI search visibility across Google AI Overviews, ChatGPT and Gemini."
+  footerCoreDisciplines={[
+    { label: 'Search Engine Optimisation (SEO)', href: '#services' },
+    { label: 'AI SEO & AI Search Visibility', href: '#services' },
+    { label: 'Local SEO & Google Business Profile', href: '#services' },
+    { label: 'Answer Engine Optimisation (AEO)', href: '#services' },
+    { label: 'Generative Engine Optimisation (GEO)', href: '#services' },
+    { label: 'Website Design and Development', href: '#services' },
+  ]}
+  footerTagline="Engineered for High Speed Search & AI Visibility in Noida"
+>
+
+  <!-- =====================================================================
+       SECTION 1: HERO (DARK SURFACE WITH HERO IMAGE 1 & JUSTIFIED SUBHEADLINE)
+  ===================================================================== -->
+  <section class="relative surface-dark overflow-hidden pt-10 pb-16 sm:pt-16 sm:pb-20 lg:pt-20 lg:pb-24 border-b border-slate-800/80">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="absolute inset-0 mesh-glow pointer-events-none"></div>
+    <div class="absolute -top-36 -left-36 w-96 h-96 bg-brand-500/20 rounded-full blur-[130px] pointer-events-none"></div>
+    <div class="absolute top-1/4 -right-36 w-96 h-96 bg-accent-500/20 rounded-full blur-[130px] pointer-events-none"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns: Headline & CTA -->
+        <div class="lg:col-span-7 text-left">
+          <div class="badge-dark mb-5 sm:mb-6">
+            <span class="w-2 h-2 rounded-full bg-brand-400 animate-ping"></span>
+            <span>Technical SEO &bull; Google Maps &bull; ChatGPT &amp; Gemini &bull; Web Engineering</span>
+          </div>
+
+          <h1 class="font-display text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-[1.15] sm:leading-[1.1] mb-5 sm:mb-6 text-glow">
+            Best Digital Marketing <br class="hidden sm:inline" />
+            <span class="gradient-text-light">Agency in Noida</span>
+          </h1>
+
+          <p class="text-sm sm:text-base md:text-lg text-slate-300 leading-relaxed mb-6 sm:mb-8 font-normal text-left sm:text-justify">
+            Searching for the <strong class="text-white font-semibold">Best Digital Marketing Agency in Noida</strong> to scale qualified enterprise leads and local customer calls? We build high speed web architectures, page one Google rankings, top three map pack visibility and verified brand citations across Google AI Overviews, ChatGPT and Gemini for ambitious companies in Noida.
+          </p>
+
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 mb-8 sm:mb-10">
+            <a href="#contact" class="btn-primary w-full sm:w-auto text-sm sm:text-base px-6 sm:px-8 py-3.5 sm:py-4">
+              <span>Request Your Free Noida Search Audit</span>
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+              </svg>
+            </a>
+            <a href="#services" class="btn-secondary-dark w-full sm:w-auto text-sm sm:text-base px-6 sm:px-7 py-3.5 sm:py-4">
+              <span>Explore Our Six Core Services</span>
+            </a>
+          </div>
+
+          <!-- Trust Verification Strip -->
+          <div class="pt-6 border-t border-slate-800/80">
+            <div class="flex flex-wrap items-center gap-2">
+              {trustStrip.map((item) => (
+                <span class="px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-lg bg-slate-900/90 border border-slate-800 text-[11px] sm:text-xs text-slate-300 font-medium">
+                  {item}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Designed Image 1 (Hero Banner) -->
+        <div class="lg:col-span-5">
+          <div class="relative rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-700/80 shadow-2xl shadow-brand-500/15 bg-slate-900 group">
+            <img
+              src="/images/hero-best-digital-marketing-company-delhi-ncr.webp"
+              alt="Best Digital Marketing Agency in Noida Search and AI Growth"
+              width="960"
+              height="540"
+              class="w-full h-56 sm:h-72 md:h-[380px] lg:h-[400px] object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#050a14] via-transparent to-transparent opacity-80"></div>
+            <div class="absolute bottom-3 sm:bottom-4 left-3 sm:left-4 right-3 sm:right-4 glass-card rounded-xl sm:rounded-2xl p-3 sm:p-4">
+              <div class="flex items-center justify-between gap-2 mb-1">
+                <span class="text-xs font-bold text-white">Noida Search &amp; AI Command</span>
+                <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-400">
+                  <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                  Verified Pipeline
+                </span>
+              </div>
+              <p class="text-[11px] sm:text-xs text-slate-300 text-left sm:text-justify leading-relaxed">
+                Engineered to position Noida enterprises first across Google Search, local map packs, Google AI Overviews, ChatGPT and Gemini.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 2: INTRODUCTION (CRISP WHITE CONTRAST SECTION + IMAGE 5)
+  ===================================================================== -->
+  <section class="relative surface-white py-14 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns: Concise 2-Paragraph Unique Noida Copy -->
+        <div class="lg:col-span-7">
+          <div class="badge-light mb-4">Noida Search Partner</div>
+          <h2 class="font-display font-extrabold text-2xl sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-tight mb-5 sm:mb-6">
+            Why Fast Growing Companies Choose the <span class="gradient-text-dark">Best Digital Marketing Agency in Noida</span>
+          </h2>
+          <div class="space-y-4 sm:space-y-5 text-slate-700 text-sm sm:text-base leading-relaxed text-left sm:text-justify">
+            <p>
+              Noida is one of India’s sharpest commercial battlegrounds. Whether you run a B2B SaaS firm in Sector 62, a real estate group along the Noida Expressway or a super speciality clinic near Sector 18, your buyers research thoroughly before reaching out. Decision makers read Google AI Overviews, ask ChatGPT and Gemini to compare vendors and check the top three Google Map listings. As the <strong>Best Digital Marketing Agency in Noida</strong>, NK Digital Tech engineers your digital footprint so your company wins that evaluation.
+            </p>
+            <p>
+              Too many businesses in Noida have burned months with agencies that delivered generic blog posts and vanity traffic charts while qualified enquiries stayed flat. As an accountable <strong>digital marketing company in Noida</strong>, we replace guesswork with technical precision. Whether you need a proven <strong>SEO company in Noida</strong>, a <strong>local SEO company in Noida</strong> or a <strong>website development company in Noida</strong>, our in house team aligns every line of code and content around real revenue conversations.
+            </p>
+          </div>
+          <div class="mt-6 sm:mt-8 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
+            <a href="#contact" class="btn-primary w-full sm:w-auto">
+              <span>Consult Our Noida Strategists</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+              </svg>
+            </a>
+            <a href="#why-us" class="btn-secondary-light w-full sm:w-auto">
+              <span>Compare Our Execution Model</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Designed Image 5 + Unique Noida Stats -->
+        <div class="lg:col-span-5 space-y-4 sm:space-y-5">
+          <div class="rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-200 shadow-lg bg-slate-100">
+            <img
+              src="/images/nk-digital-tech-team-delhi.webp"
+              alt="NK Digital Tech Strategy Team Serving Noida Enterprises"
+              width="800"
+              height="533"
+              class="w-full h-52 sm:h-64 lg:h-72 object-cover"
+              loading="lazy"
+            />
+          </div>
+          <div class="grid grid-cols-2 gap-3 sm:gap-4">
+            {[
+              { val: '3.9x', label: 'Qualified Pipeline Lift', sub: 'Across B2B & local search' },
+              { val: '14 Days', label: 'Sprint Review Cadence', sub: 'Direct specialist reporting' },
+              { val: '4 Clusters', label: 'Noida & Greater Noida', sub: 'Sector specific targeting' },
+              { val: '100%', label: 'Repository & Data Control', sub: 'Zero vendor lock in' },
+            ].map((stat) => (
+              <div class="elevated-card rounded-xl sm:rounded-2xl p-3 sm:p-4">
+                <div class="font-display font-black text-xl sm:text-2xl text-brand-600 mb-0.5">{stat.val}</div>
+                <div class="text-[11px] sm:text-xs font-bold text-slate-900">{stat.label}</div>
+                <div class="text-[10px] sm:text-[11px] text-slate-500 leading-tight">{stat.sub}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 3: PROBLEM STATEMENT (DEEP INDIGO DARK CONTRAST SECTION)
+  ===================================================================== -->
+  <section class="relative surface-indigo py-14 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="max-w-7xl mx-auto relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns: Problem Statement Justified Copy -->
+        <div class="lg:col-span-7">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest bg-amber-500/10 border border-amber-500/30 text-amber-300 mb-5">
+            <svg class="w-4 h-4 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+            </svg>
+            <span>Why Noida Pipelines Stall</span>
+          </div>
+
+          <h2 class="font-display font-extrabold text-2xl sm:text-3xl lg:text-4xl text-white tracking-tight leading-tight mb-5 sm:mb-6">
+            Why Established Noida Companies Get Skipped on Google &amp; AI Search
+          </h2>
+
+          <div class="space-y-4 sm:space-y-5 text-slate-300 text-sm sm:text-base leading-relaxed text-left sm:text-justify">
+            <p>
+              Every day in Noida, procurement heads, homebuyers and patients search for the exact solutions your company provides. Yet if your brand is missing from the top three Google Map results, absent from Google AI Overviews and unmentioned when buyers prompt ChatGPT or Gemini, those high value leads go straight to your competitors.
+            </p>
+            <p>
+              Most Noida websites struggle because they were built as static digital brochures. Heavy JavaScript slows down mobile loading, service pages lack structured comparison data and entity signals are completely missing. Legacy agencies keep selling bulk directory links and shallow articles that modern search algorithms ignore. We rebuild your technical foundation, schema markup and topical depth so search engines and AI platforms cite your business with confidence.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Diagnostic Comparison Cards -->
+        <div class="lg:col-span-5 space-y-3.5 sm:space-y-4">
+          <div class="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6 border-l-4 border-l-rose-500">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-xs font-bold uppercase tracking-wider text-rose-400">Standard Noida Vendor</span>
+              <span class="text-xs text-slate-400">Cosmetic Metrics</span>
+            </div>
+            <h3 class="font-display font-bold text-base text-white mb-2">Bloated Code &amp; Shallow Keyword Pages</h3>
+            <p class="text-xs text-slate-300 leading-relaxed text-left sm:text-justify">
+              Fails to get shortlisted when enterprise buyers or local consumers in Noida consult ChatGPT, Gemini, Google AI Overviews or Google Map Packs.
+            </p>
+          </div>
+
+          <div class="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6 border-l-4 border-l-emerald-400">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-xs font-bold uppercase tracking-wider text-emerald-400">NK Digital Tech Architecture</span>
+              <span class="text-xs text-brand-300">Full Funnel Search</span>
+            </div>
+            <h3 class="font-display font-bold text-base text-white mb-2">Technical SEO, Entity Schema &amp; AI Citations</h3>
+            <p class="text-xs text-slate-300 leading-relaxed text-left sm:text-justify">
+              Combines clean Core Web Vitals engineering, sector specific local authority and structured answer blocks so Google and AI models recommend you first.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 4: SERVICES (LIGHT COOL ALABASTER CONTRAST + IMAGE 2 + 3x2 GRID)
+  ===================================================================== -->
+  <section id="services" class="relative surface-cool py-14 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <!-- Services Header with Designed Image 2 -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 items-center mb-10 sm:mb-16">
+        <div class="lg:col-span-7">
+          <div class="badge-light mb-3">Six Core Disciplines</div>
+          <h2 class="font-display font-extrabold text-2xl sm:text-3xl lg:text-4xl text-slate-900 tracking-tight mb-3 sm:mb-4">
+            Digital Marketing Services in Noida
+          </h2>
+          <p class="text-slate-600 text-sm sm:text-base leading-relaxed text-left sm:text-justify">
+            Our <strong>digital marketing services in Noida</strong> unite six specialised search and web disciplines into one cohesive growth engine. Every module is engineered to capture high intent buyers across Google Search, local map packs, Google AI Overviews, ChatGPT and Gemini and convert them into verified sales enquiries.
+          </p>
+        </div>
+        <div class="lg:col-span-5">
+          <div class="rounded-2xl overflow-hidden border border-slate-200 shadow-md bg-white">
+            <img
+              src="/images/digital-marketing-services-delhi-ncr-team.webp"
+              alt="Digital Marketing Services in Noida Technical SEO and AI Search Team"
+              width="800"
+              height="450"
+              class="w-full h-48 sm:h-56 lg:h-64 object-cover"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- 3 Columns x 2 Rows Grid Layout -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-7">
+        {services.map((s) => (
+          <div class="elevated-card rounded-2xl p-5 sm:p-7 flex flex-col justify-between group hover:-translate-y-1">
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-5 sm:mb-6">
+                <div class={`w-11 h-11 sm:w-12 sm:h-12 rounded-xl border flex items-center justify-center ${s.iconStyle}`}>
+                  <Fragment set:html={s.icon} />
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class={`text-[11px] font-semibold px-2.5 py-1 rounded-md ${s.badgeColor}`}>
+                    {s.category}
+                  </span>
+                  <span class="font-display font-black text-base sm:text-lg text-slate-300">{s.num}</span>
+                </div>
+              </div>
+
+              <h3 class="font-display font-bold text-lg sm:text-xl text-slate-900 mb-2.5 sm:mb-3 leading-snug group-hover:text-brand-600 transition-colors">
+                {s.title}
+              </h3>
+
+              <p class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-5 sm:mb-6 text-left sm:text-justify">
+                {s.body}
+              </p>
+            </div>
+
+            <div>
+              <div class={`rounded-xl border p-3.5 sm:p-4 mb-4 sm:mb-5 ${s.impactStyle}`}>
+                <div class="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-slate-900 mb-1">
+                  <svg class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                  </svg>
+                  <span>Pipeline Impact</span>
+                </div>
+                <p class="text-xs text-slate-700 leading-relaxed font-medium text-left sm:text-justify">
+                  {s.impact}
+                </p>
+              </div>
+
+              <a href={s.href} class="inline-flex items-center gap-2 text-xs font-bold text-brand-600 hover:text-brand-700 group-hover:gap-3 transition-all">
+                <span>{s.cta}</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 5: REGIONAL LOCATIONS (DARK NAVY + IMAGE 3 + 1 ROW x 4 COLUMNS)
+  ===================================================================== -->
+  <section id="locations" class="relative surface-navy py-14 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <!-- Regional Header with Designed Image 3 -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 items-center mb-10 sm:mb-16">
+        <div class="lg:col-span-7">
+          <div class="badge-dark mb-3">Sector Level Precision</div>
+          <h2 class="font-display font-extrabold text-2xl sm:text-3xl lg:text-4xl text-white tracking-tight mb-3 sm:mb-4">
+            Targeted Search Strategies Across Noida Commercial Clusters
+          </h2>
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed text-left sm:text-justify">
+            Noida’s economy is divided into distinct sector clusters. Ranking a B2B software exporter in Sector 62 demands a completely different search playbook from driving patient walk ins in Sector 18 or booking township site visits on the Expressway. We build custom visibility strategies for each corridor.
+          </p>
+        </div>
+        <div class="lg:col-span-5">
+          <div class="rounded-2xl overflow-hidden border border-slate-700/80 shadow-xl bg-slate-900">
+            <img
+              src="/images/local-seo-services-delhi-ncr.webp"
+              alt="Local SEO Services Across Sector 62, Sector 18 and Noida Expressway"
+              width="800"
+              height="450"
+              class="w-full h-48 sm:h-56 lg:h-64 object-cover"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- 1 Row x 4 Columns Responsive Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+        {cities.map((c) => (
+          <div class="glass-card rounded-2xl p-5 sm:p-6 flex flex-col justify-between group hover:-translate-y-1">
+            <div>
+              <div class={`h-1 w-full bg-gradient-to-r ${c.accent} rounded-full mb-4 sm:mb-5`}></div>
+
+              <div class="flex items-center justify-between gap-2 mb-3.5 sm:mb-4">
+                <span class="px-2.5 py-1 rounded-md bg-slate-800 border border-slate-700 text-[11px] font-bold uppercase tracking-wider text-brand-300">
+                  {c.hub}
+                </span>
+                <span class="text-xs font-semibold text-slate-400">{c.city}</span>
+              </div>
+
+              <h3 class="font-display font-bold text-base sm:text-lg text-white mb-2.5 sm:mb-3 leading-snug">
+                {c.keyword}
+              </h3>
+
+              <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-4 sm:mb-5 text-left sm:text-justify">
+                {c.desc}
+              </p>
+            </div>
+
+            <div class="pt-3.5 sm:pt-4 border-t border-slate-800">
+              <p class="text-[11px] text-slate-400 mb-3 sm:mb-4 leading-normal">
+                <strong class="text-slate-300">Key Zones:</strong> {c.corridor}
+              </p>
+              <a href={c.href} class="inline-flex items-center gap-1.5 text-xs font-bold text-brand-400 hover:text-brand-300 group-hover:gap-2.5 transition-all">
+                <span>{c.cta}</span>
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 6: WHY NK DIGITAL TECH (CRISP WHITE CONTRAST SECTION)
+  ===================================================================== -->
+  <section id="why-us" class="relative surface-white py-14 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-10 sm:mb-14 text-center">
+        <div class="badge-light mb-3">Why Noida Leaders Switch to Us</div>
+        <h2 class="font-display font-extrabold text-2xl sm:text-3xl lg:text-4xl text-slate-900 tracking-tight mb-3 sm:mb-4">
+          Why NK Digital Tech Is the Best Digital Marketing Agency in Noida
+        </h2>
+        <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-4 text-left sm:text-justify">
+          Selecting an <strong>SEO agency in Noida</strong> or an <strong>online marketing company in Noida</strong> requires looking past polished sales decks. We built NK Digital Tech around senior engineering execution, biweekly sprint accountability and verifiable lead attribution across Google and AI platforms.
+        </p>
+        <p class="text-slate-700 font-semibold text-xs sm:text-sm">
+          Compare our engineering standards against a typical local vendor:
+        </p>
+      </div>
+
+      <!-- Desktop Comparison Matrix -->
+      <div class="hidden md:block overflow-hidden rounded-2xl border border-slate-200 shadow-lg">
+        <table class="w-full text-left border-collapse">
+          <thead>
+            <tr class="bg-slate-900 text-white">
+              <th class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-slate-300 w-1/4">
+                Operational Standard
+              </th>
+              <th class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-rose-300 w-[37.5%] border-l border-slate-800">
+                Typical Noida Vendor
+              </th>
+              <th class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-brand-300 w-[37.5%] border-l border-slate-800 bg-slate-950">
+                NK Digital Tech Noida
+              </th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200 text-sm">
+            {comparison.map((row, idx) => (
+              <tr class={idx % 2 === 0 ? 'bg-white' : 'bg-slate-50/80'}>
+                <td class="py-5 px-6 font-display font-bold text-slate-900">
+                  {row.metric}
+                </td>
+                <td class="py-5 px-6 text-slate-600 border-l border-slate-200">
+                  <div class="flex items-start gap-2.5">
+                    <svg class="w-4 h-4 text-rose-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                    <span>{row.typical}</span>
+                  </div>
+                </td>
+                <td class="py-5 px-6 text-slate-900 font-medium border-l border-slate-200 bg-sky-50/40">
+                  <div class="flex items-start gap-2.5">
+                    <svg class="w-4 h-4 text-emerald-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span>{row.nk}</span>
+                  </div>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Mobile Comparison Cards -->
+      <div class="md:hidden space-y-3.5 sm:space-y-4">
+        {comparison.map((row) => (
+          <div class="elevated-card rounded-2xl p-4 sm:p-5 space-y-3">
+            <h3 class="font-display font-bold text-slate-900 text-sm sm:text-base">{row.metric}</h3>
+            <div class="rounded-xl bg-rose-50 border border-rose-100 p-3 sm:p-3.5">
+              <p class="text-[10px] font-bold uppercase tracking-wider text-rose-600 mb-1">Typical Noida Vendor</p>
+              <p class="text-xs text-slate-700 leading-relaxed">{row.typical}</p>
+            </div>
+            <div class="rounded-xl bg-sky-50 border border-sky-200 p-3 sm:p-3.5">
+              <p class="text-[10px] font-bold uppercase tracking-wider text-brand-600 mb-1">NK Digital Tech Noida</p>
+              <p class="text-xs text-slate-900 font-semibold leading-relaxed">{row.nk}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 7: OUR CLIENTS (DARK INDIGO CONTRAST SECTION BELOW WHY US)
+  ===================================================================== -->
+  <section id="clients" class="relative surface-indigo py-14 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-10 sm:mb-14 text-center">
+        <div class="badge-dark mb-3">Enterprise &amp; Regional Partners</div>
+        <h2 class="font-display font-extrabold text-2xl sm:text-3xl lg:text-4xl text-white tracking-tight mb-3 sm:mb-4">
+          Ambitious Brands Scaling With Our Search Architecture
+        </h2>
+        <p class="text-slate-300 text-sm sm:text-base leading-relaxed text-left sm:text-justify">
+          From Expressway real estate developers and commercial leasing firms to eye hospitals and training academies, we power sustainable organic lead generation for high growth organisations.
+        </p>
+      </div>
+
+      <!-- 5-Column Responsive Client Grid -->
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3.5 sm:gap-5">
+        {clients.map((client) => (
+          <div class="glass-card rounded-2xl p-3.5 sm:p-5 flex flex-col items-center text-center group hover:-translate-y-1">
+            <div class="w-full h-16 sm:h-20 rounded-xl bg-white border border-slate-200 flex items-center justify-center p-2.5 sm:p-4 mb-3 sm:mb-4 shadow-sm">
+              <img
+                src={client.logo}
+                alt={`${client.name} Logo`}
+                width="130"
+                height="48"
+                class="max-h-9 sm:max-h-12 w-auto object-contain"
+                loading="lazy"
+              />
+            </div>
+            <h3 class="font-display font-bold text-sm sm:text-base text-white mb-1">{client.name}</h3>
+            <p class="text-[11px] sm:text-xs text-slate-300 leading-snug mb-2.5 sm:mb-3 flex-grow">{client.sector}</p>
+            <span class="inline-flex items-center gap-1 text-[10px] sm:text-[11px] font-semibold text-brand-300 bg-brand-500/15 border border-brand-500/30 px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-md">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+              </svg>
+              {client.region}
+            </span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 8: INDUSTRIES (LIGHT SLATE CONTRAST SECTION - 3x2 GRID)
+  ===================================================================== -->
+  <section id="industries" class="relative surface-slate py-14 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-10 sm:mb-16 text-center">
+        <div class="badge-light mb-3">Vertical Playbooks</div>
+        <h2 class="font-display font-extrabold text-2xl sm:text-3xl lg:text-4xl text-slate-900 tracking-tight mb-3 sm:mb-4">
+          Domain Specific Search Playbooks for Noida Industries
+        </h2>
+        <p class="text-slate-600 text-sm sm:text-base leading-relaxed text-left sm:text-justify">
+          We customise our <strong>digital marketing services in Noida</strong> around the exact decision timelines, technical evaluation criteria and local search habits of your industry vertical.
+        </p>
+      </div>
+
+      <!-- 3 Columns x 2 Rows Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-7">
+        {industries.map((ind) => (
+          <div class={`elevated-card rounded-2xl p-5 sm:p-7 border-t-4 ${ind.accentBorder} flex flex-col justify-between hover:-translate-y-1`}>
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-4 sm:mb-5">
+                <div class={`w-10 h-10 sm:w-11 sm:h-11 rounded-xl border flex items-center justify-center ${ind.iconBg}`}>
+                  <Fragment set:html={ind.icon} />
+                </div>
+                <span class="text-[11px] font-semibold text-slate-500 bg-slate-100 px-2.5 py-1 rounded-md">
+                  {ind.sector}
+                </span>
+              </div>
+
+              <h3 class="font-display font-bold text-lg sm:text-xl text-slate-900 mb-3 sm:mb-4 leading-snug">
+                {ind.title}
+              </h3>
+
+              <div class="mb-4 sm:mb-5">
+                <p class="text-[11px] font-bold uppercase tracking-wider text-brand-600 mb-1.5">
+                  Search Architecture
+                </p>
+                <p class="text-slate-600 text-xs sm:text-sm leading-relaxed text-left sm:text-justify">
+                  {ind.focus}
+                </p>
+              </div>
+            </div>
+
+            <div class="rounded-xl bg-emerald-50/70 border border-emerald-200/80 p-3.5 sm:p-4">
+              <p class="text-[11px] font-bold uppercase tracking-wider text-emerald-700 mb-1">
+                Verified Outcome
+              </p>
+              <p class="text-slate-800 text-xs font-medium leading-relaxed text-left sm:text-justify">
+                {ind.outcome}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 9: TESTIMONIALS (DEEP NAVY CONTRAST SECTION - 2x2 GRID)
+  ===================================================================== -->
+  <section id="testimonials" class="relative surface-dark py-14 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="absolute inset-0 mesh-glow pointer-events-none opacity-60"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-10 sm:mb-16 text-center">
+        <div class="badge-dark mb-3">Client Proof</div>
+        <h2 class="font-display font-extrabold text-2xl sm:text-3xl lg:text-4xl text-white tracking-tight mb-3 sm:mb-4">
+          How Noida Enterprises Scaled Their Pipeline With NK Digital Tech
+        </h2>
+        <p class="text-slate-300 text-sm sm:text-base leading-relaxed text-left sm:text-justify">
+          Measured commercial outcomes from directors, clinical heads and growth leaders across Noida who partnered with our team for organic search and AI visibility.
+        </p>
+      </div>
+
+      <!-- 2 Columns x 2 Rows Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 sm:gap-7">
+        {testimonials.map((t) => (
+          <div class="glass-card rounded-2xl p-5 sm:p-8 flex flex-col justify-between hover:-translate-y-1">
+            <div>
+              <div class="flex items-center justify-between gap-4 mb-4 sm:mb-5">
+                <div class="flex items-center gap-1">
+                  {[1, 2, 3, 4, 5].map(() => (
+                    <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                    </svg>
+                  ))}
+                </div>
+                <span class="text-[10px] sm:text-[11px] font-semibold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-1 rounded-md">
+                  Verified Noida Client
+                </span>
+              </div>
+
+              <p class="text-slate-200 text-sm sm:text-base leading-relaxed italic mb-5 sm:mb-6 text-left sm:text-justify">
+                "{t.quote}"
+              </p>
+
+              <div class="rounded-xl bg-slate-900/90 border border-slate-700/80 p-3.5 sm:p-4 mb-5 sm:mb-6">
+                <p class="text-[11px] font-bold uppercase tracking-wider text-brand-400 mb-2 sm:mb-2.5">
+                  Verified Impact
+                </p>
+                <ul class="space-y-2">
+                  {t.metrics.map((m) => (
+                    <li class="flex items-start gap-2 text-xs text-slate-300 font-medium">
+                      <svg class="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                      </svg>
+                      <span>{m}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3.5 sm:gap-4 pt-3.5 sm:pt-4 border-t border-slate-800">
+              <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-white p-2 flex items-center justify-center flex-shrink-0 shadow-sm">
+                <img
+                  src={t.logo}
+                  alt={`${t.company} Logo`}
+                  width="48"
+                  height="48"
+                  class="max-h-8 sm:max-h-10 w-auto object-contain"
+                  loading="lazy"
+                />
+              </div>
+              <div>
+                <h3 class="font-display font-bold text-white text-sm sm:text-base">{t.name}</h3>
+                <p class="text-xs text-slate-300">
+                  {t.title}, <strong class="text-brand-400 font-semibold">{t.company}</strong>
+                </p>
+                <p class="text-[10px] sm:text-[11px] text-slate-400 mt-0.5">{t.sector}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 10: HOW WE WORK (CRISP WHITE CONTRAST SECTION - 4 STAGES)
+  ===================================================================== -->
+  <section class="relative surface-white py-14 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-10 sm:mb-16 text-center">
+        <div class="badge-light mb-3">Our 4 Phase Engineering Model</div>
+        <h2 class="font-display font-extrabold text-2xl sm:text-3xl lg:text-4xl text-slate-900 tracking-tight mb-3 sm:mb-4">
+          How We Build Compounding Search &amp; AI Authority in Noida
+        </h2>
+        <p class="text-slate-600 text-sm sm:text-base leading-relaxed text-left sm:text-justify">
+          Every campaign follows a structured four phase engineering workflow designed to resolve technical debt quickly, capture immediate Google Map Pack demand and scale citations across ChatGPT, Gemini and Google AI Overviews.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-7">
+        {stages.map((s) => (
+          <div class="elevated-card rounded-2xl p-5 sm:p-8 relative overflow-hidden group hover:-translate-y-1">
+            <div class="flex items-center justify-between gap-4 mb-4 sm:mb-5">
+              <span class={`inline-flex items-center px-2.5 sm:px-3 py-1 rounded-lg text-xs font-bold uppercase tracking-wider text-white bg-gradient-to-r ${s.accent}`}>
+                {s.num}
+              </span>
+              <span class="font-display font-black text-3xl sm:text-4xl text-slate-200 group-hover:text-slate-300 transition-colors">
+                {s.step}
+              </span>
+            </div>
+            <h3 class="font-display font-bold text-lg sm:text-xl text-slate-900 mb-2.5 sm:mb-3 leading-snug">
+              {s.title}
+            </h3>
+            <p class="text-slate-600 text-xs sm:text-sm leading-relaxed text-left sm:text-justify">
+              {s.body}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 11: PARTNER WITH THE BEST DIGITAL MARKETING AGENCY (ABOVE FAQ)
+  ===================================================================== -->
+  <section class="relative surface-indigo py-14 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns: Partner Paragraphs (Justified) -->
+        <div class="lg:col-span-7">
+          <div class="badge-dark mb-4">Long Term Search Equity</div>
+          <h2 class="font-display font-extrabold text-2xl sm:text-3xl lg:text-4xl text-white tracking-tight leading-tight mb-5 sm:mb-6">
+            Partner with the Best Digital Marketing Agency in Noida
+          </h2>
+          <div class="space-y-4 sm:space-y-5 text-slate-300 text-sm sm:text-base leading-relaxed text-left sm:text-justify">
+            <p>
+              Standing out in Noida’s fast moving commercial market requires more than a template website or sporadic keyword updates. Buyer discovery has shifted permanently toward Google Map Packs, featured answer snippets, Google AI Overviews, ChatGPT and Gemini.
+            </p>
+            <p>
+              When you partner with NK Digital Tech, the <strong>Best Digital Marketing Agency in Noida</strong>, you gain an engineering led team dedicated to turning organic search into your most reliable revenue channel. Whether you want page one Google rankings, dominant local visibility across Noida sectors or verified AI citations, our specialists are ready to build your roadmap.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Designed Image 4 (Website Development & Technical Architecture) -->
+        <div class="lg:col-span-5">
+          <div class="rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-700/80 shadow-2xl bg-slate-900">
+            <img
+              src="/images/website-development-company-delhi.webp"
+              alt="Website Development and Technical Search Architecture in Noida"
+              width="800"
+              height="450"
+              class="w-full h-52 sm:h-64 lg:h-72 object-cover"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 12: FAQ (LIGHT COOL SLATE CONTRAST SECTION)
+  ===================================================================== -->
+  <section id="faq" class="relative surface-cool py-14 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-10 sm:mb-14">
+        <div class="badge-light mb-3">Direct Answers</div>
+        <h2 class="font-display font-extrabold text-2xl sm:text-3xl lg:text-4xl text-slate-900 tracking-tight mb-3 sm:mb-4">
+          Frequently Asked Questions About Our Noida Services
+        </h2>
+        <p class="text-slate-600 text-sm sm:text-base leading-relaxed text-left sm:text-justify">
+          Clear, factual answers to the questions Noida founders, marketing heads and business owners ask before partnering with us.
+        </p>
+      </div>
+
+      <div class="space-y-3.5 sm:space-y-4">
+        {faqs.map((f, i) => (
+          <details class="elevated-card rounded-2xl group overflow-hidden" open={i === 0}>
+            <summary class="flex items-center justify-between gap-3 sm:gap-4 px-4 sm:px-6 py-4 sm:py-5 select-none">
+              <div class="flex items-center gap-3 sm:gap-3.5 text-left">
+                <span class="w-6 h-6 sm:w-7 sm:h-7 rounded-lg bg-sky-50 border border-sky-200 text-brand-600 font-display font-bold text-xs flex items-center justify-center flex-shrink-0">
+                  0{i + 1}
+                </span>
+                <span class="font-display font-bold text-slate-900 text-sm sm:text-base md:text-lg leading-snug">
+                  {f.q}
+                </span>
+              </div>
+              <span class="faq-icon w-7 h-7 sm:w-8 sm:h-8 rounded-full border border-slate-200 text-slate-600 flex items-center justify-center flex-shrink-0">
+                <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                </svg>
+              </span>
+            </summary>
+            <div class="px-4 sm:px-6 pb-5 sm:pb-6 pt-3 text-slate-600 text-xs sm:text-sm md:text-base leading-relaxed border-t border-slate-100 text-left sm:text-justify">
+              {f.a}
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 13: SHORT 2 TO 3 LINE CALL TO ACTION BANNER (LAST SECTION)
+  ===================================================================== -->
+  <section id="contact" class="relative surface-dark py-12 sm:py-16 lg:py-20 px-4 sm:px-6 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-5xl mx-auto">
+      <div class="rounded-2xl sm:rounded-3xl bg-gradient-to-r from-brand-600 via-brand-700 to-accent-700 p-6 sm:p-10 md:p-12 text-center text-white shadow-2xl border border-white/15 relative overflow-hidden">
+        <div class="relative z-10 max-w-2xl mx-auto">
+          <h2 class="font-display font-black text-2xl sm:text-3xl md:text-4xl text-white tracking-tight mb-3 sm:mb-4">
+            Ready to Scale Your Search Pipeline in Noida?
+          </h2>
+
+          <p class="text-sky-50 text-xs sm:text-sm md:text-base leading-relaxed mb-6 sm:mb-8">
+            Connect with our senior search engineers for a free technical audit of your website, Google Business Profile and AI visibility across Noida.
+          </p>
+
+          <a
+            href="mailto:connect@nkdigitaltech.com"
+            class="inline-flex w-full sm:w-auto items-center justify-center gap-2.5 sm:gap-3 px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl bg-white text-slate-950 hover:bg-sky-50 font-display font-bold text-sm sm:text-base shadow-xl transition-all duration-300 active:scale-95"
+          >
+            <span>Book Your Free Noida Search Audit</span>
+            <svg class="w-4 h-4 sm:w-5 sm:h-5 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</Layout>

@@ -133,12 +133,13 @@ const schemaFAQ = JSON.stringify({
   {gaMeasurementId && (
     <>
       <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${gaMeasurementId}`}></script>
-      <script is:inline define:vars={{ gaMeasurementId }}>
+      <script is:inline set:html={`
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
+        window.gtag = gtag;
         gtag('js', new Date());
-        gtag('config', gaMeasurementId);
-      </script>
+        gtag('config', '${gaMeasurementId}');
+      `} />
     </>
   )}
 

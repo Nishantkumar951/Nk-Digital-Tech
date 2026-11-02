@@ -387,38 +387,38 @@ const trustStrip = [
   <!-- =====================================================================
        SECTION 1: HERO (DARK SURFACE WITH HERO IMAGE 1 & JUSTIFIED SUBHEADLINE)
   ===================================================================== -->
-  <section class="relative surface-dark overflow-hidden pt-14 pb-20 lg:pt-20 lg:pb-24 border-b border-slate-800/80">
+  <section class="relative surface-dark overflow-hidden pt-10 pb-16 sm:pt-16 sm:pb-20 lg:pt-20 lg:pb-24 border-b border-slate-800/80">
     <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
     <div class="absolute inset-0 mesh-glow pointer-events-none"></div>
     <div class="absolute -top-36 -left-36 w-96 h-96 bg-brand-500/20 rounded-full blur-[130px] pointer-events-none"></div>
     <div class="absolute top-1/4 -right-36 w-96 h-96 bg-accent-500/20 rounded-full blur-[130px] pointer-events-none"></div>
 
-    <div class="relative z-10 max-w-7xl mx-auto px-6">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-12 items-center">
         <!-- Left 7 Columns: Headline & CTA -->
         <div class="lg:col-span-7 text-left">
-          <div class="badge-dark mb-6">
+          <div class="badge-dark mb-5 sm:mb-6">
             <span class="w-2 h-2 rounded-full bg-brand-400 animate-ping"></span>
             <span>Google AI Overviews &bull; ChatGPT &bull; Gemini &bull; Organic Search</span>
           </div>
 
-          <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-[1.1] mb-6 text-glow">
+          <h1 class="font-display text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-[1.15] sm:leading-[1.1] mb-5 sm:mb-6 text-glow">
             Best Digital Marketing <br class="hidden sm:inline" />
             <span class="gradient-text-light">Company in Delhi NCR</span>
           </h1>
 
-          <p class="text-base sm:text-lg text-slate-300 leading-relaxed mb-8 font-normal text-justify">
+          <p class="text-sm sm:text-base md:text-lg text-slate-300 leading-relaxed mb-6 sm:mb-8 font-normal text-left sm:text-justify">
             We help ambitious enterprises in Delhi, Noida, Gurgaon and Lucknow build organic search supremacy and AI search visibility, positioning your brand across Google, Google AI Overviews, ChatGPT, Gemini and every platform where your buyers evaluate decisions today.
           </p>
 
-          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 mb-10">
-            <a href="#contact" class="btn-primary text-base px-8 py-4">
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 mb-8 sm:mb-10">
+            <a href="#contact" class="btn-primary w-full sm:w-auto text-sm sm:text-base px-6 sm:px-8 py-3.5 sm:py-4">
               <span>Book a Strategic Consultation</span>
               <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
               </svg>
             </a>
-            <a href="#services" class="btn-secondary-dark text-base px-7 py-4">
+            <a href="#services" class="btn-secondary-dark w-full sm:w-auto text-sm sm:text-base px-6 sm:px-7 py-3.5 sm:py-4">
               <span>Explore Our Services</span>
             </a>
           </div>
@@ -427,7 +427,7 @@ const trustStrip = [
           <div class="pt-6 border-t border-slate-800/80">
             <div class="flex flex-wrap items-center gap-2">
               {trustStrip.map((item) => (
-                <span class="px-3 py-1.5 rounded-lg bg-slate-900/90 border border-slate-800 text-xs text-slate-300 font-medium">
+                <span class="px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-lg bg-slate-900/90 border border-slate-800 text-[11px] sm:text-xs text-slate-300 font-medium">
                   {item}
                 </span>
               ))}
@@ -437,16 +437,16 @@ const trustStrip = [
 
         <!-- Right 5 Columns: Designed Image 1 (Hero Banner) -->
         <div class="lg:col-span-5">
-          <div class="relative rounded-3xl overflow-hidden border border-slate-700/80 shadow-2xl shadow-brand-500/15 bg-slate-900 group">
+          <div class="relative rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-700/80 shadow-2xl shadow-brand-500/15 bg-slate-900 group">
             <img
               src="/images/hero-best-digital-marketing-company-delhi-ncr.webp"
               alt="Best Digital Marketing Company in Delhi NCR - Strategic Search Analytics"
               width="960"
               height="540"
-              class="w-full h-[340px] sm:h-[400px] object-cover group-hover:scale-105 transition-transform duration-500"
+              class="w-full h-56 sm:h-72 md:h-[380px] lg:h-[400px] object-cover group-hover:scale-105 transition-transform duration-500"
             />
             <div class="absolute inset-0 bg-gradient-to-t from-[#050a14] via-transparent to-transparent opacity-80"></div>
-            <div class="absolute bottom-4 left-4 right-4 glass-card rounded-2xl p-4">
+            <div class="absolute bottom-3 sm:bottom-4 left-3 sm:left-4 right-3 sm:right-4 glass-card rounded-xl sm:rounded-2xl p-3 sm:p-4">
               <div class="flex items-center justify-between gap-2 mb-1">
                 <span class="text-xs font-bold text-white">Omnichannel Search Command</span>
                 <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-400">
@@ -454,7 +454,7 @@ const trustStrip = [
                   Active Visibility
                 </span>
               </div>
-              <p class="text-xs text-slate-300 text-justify">
+              <p class="text-[11px] sm:text-xs text-slate-300 text-left sm:text-justify leading-relaxed">
                 Engineered for top discovery across Google Search, Google AI Overviews, ChatGPT and Gemini in Delhi, Noida, Gurgaon and Lucknow.
               </p>
             </div>
@@ -467,16 +467,16 @@ const trustStrip = [
   <!-- =====================================================================
        SECTION 2: INTRODUCTION (CRISP WHITE CONTRAST SECTION + IMAGE 5)
   ===================================================================== -->
-  <section class="relative surface-white py-24 px-6 border-b border-slate-200">
+  <section class="relative surface-white py-14 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
     <div class="max-w-7xl mx-auto">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-12 items-center">
         <!-- Left 7 Columns: Full Justified Copy -->
         <div class="lg:col-span-7">
           <div class="badge-light mb-4">About NK Digital Tech</div>
-          <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-slate-900 tracking-tight leading-tight mb-6">
+          <h2 class="font-display font-extrabold text-2xl sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-tight mb-5 sm:mb-6">
             Engineering Search Presence Around <span class="gradient-text-dark">Modern Buyer Discovery</span>
           </h2>
-          <div class="space-y-5 text-slate-700 text-base leading-relaxed text-justify">
+          <div class="space-y-4 sm:space-y-5 text-slate-700 text-sm sm:text-base leading-relaxed text-left sm:text-justify">
             <p>
               NK Digital Tech is the best digital marketing company in Delhi NCR for businesses seeking a search presence engineered around current customer search behaviour. Rather than chasing superficial vanity metrics, we deliver targeted organic search authority across traditional search engines and next-generation AI platforms including Google AI Overviews, ChatGPT and Gemini. We partner with commercial enterprises across Delhi, Noida, Gurgaon and Lucknow to turn search visibility into qualified commercial enquiries.
             </p>
@@ -484,42 +484,42 @@ const trustStrip = [
               Most business leaders we consult have previously invested in digital agencies with disappointing outcomes. They received dense monthly reports filled with impressions and technical jargon, yet their incoming enquiry volume remained stagnant. The core issue is rarely the ad budget; it is the reliance on obsolete tactics that ignore how buyers discover solutions today. We resolve that breakdown by combining foundational technical SEO with modern answer engine and generative engine optimisation.
             </p>
           </div>
-          <div class="mt-8 flex flex-wrap items-center gap-4">
-            <a href="#contact" class="btn-primary">
+          <div class="mt-6 sm:mt-8 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
+            <a href="#contact" class="btn-primary w-full sm:w-auto">
               <span>Schedule a Strategy Call</span>
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
               </svg>
             </a>
-            <a href="#why-us" class="btn-secondary-light">
+            <a href="#why-us" class="btn-secondary-light w-full sm:w-auto">
               <span>Compare Our Operating Model</span>
             </a>
           </div>
         </div>
 
         <!-- Right 5 Columns: Designed Image 5 (NK Digital Tech Team) + Key Stats -->
-        <div class="lg:col-span-5 space-y-5">
-          <div class="rounded-3xl overflow-hidden border border-slate-200 shadow-lg bg-slate-100">
+        <div class="lg:col-span-5 space-y-4 sm:space-y-5">
+          <div class="rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-200 shadow-lg bg-slate-100">
             <img
               src="/images/nk-digital-tech-team-delhi.webp"
               alt="NK Digital Tech Strategy Team in New Delhi"
               width="800"
               height="533"
-              class="w-full h-64 sm:h-72 object-cover"
+              class="w-full h-52 sm:h-64 lg:h-72 object-cover"
               loading="lazy"
             />
           </div>
-          <div class="grid grid-cols-2 gap-4">
+          <div class="grid grid-cols-2 gap-3 sm:gap-4">
             {[
               { val: '310%', label: 'Verified Inquiry Surge', sub: 'Across regional campaigns' },
               { val: '4.2x', label: 'Organic Pipeline Growth', sub: 'Within 6-month roadmaps' },
               { val: '4 Hubs', label: 'Delhi, Noida, Gurgaon, Lucknow', sub: 'Dedicated local strategies' },
               { val: '100%', label: 'Client Asset Ownership', sub: 'Full administrative control' },
             ].map((stat) => (
-              <div class="elevated-card rounded-2xl p-4">
-                <div class="font-display font-black text-2xl text-brand-600 mb-0.5">{stat.val}</div>
-                <div class="text-xs font-bold text-slate-900">{stat.label}</div>
-                <div class="text-[11px] text-slate-500">{stat.sub}</div>
+              <div class="elevated-card rounded-xl sm:rounded-2xl p-3 sm:p-4">
+                <div class="font-display font-black text-xl sm:text-2xl text-brand-600 mb-0.5">{stat.val}</div>
+                <div class="text-[11px] sm:text-xs font-bold text-slate-900">{stat.label}</div>
+                <div class="text-[10px] sm:text-[11px] text-slate-500 leading-tight">{stat.sub}</div>
               </div>
             ))}
           </div>
@@ -531,10 +531,10 @@ const trustStrip = [
   <!-- =====================================================================
        SECTION 4: PROBLEM STATEMENT (DEEP INDIGO DARK CONTRAST SECTION)
   ===================================================================== -->
-  <section class="relative surface-indigo py-24 px-6 border-b border-slate-800/80 overflow-hidden">
+  <section class="relative surface-indigo py-14 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
     <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
     <div class="max-w-7xl mx-auto relative z-10">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-12 items-center">
         <!-- Left 7 Columns: Problem Statement Justified Copy -->
         <div class="lg:col-span-7">
           <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest bg-amber-500/10 border border-amber-500/30 text-amber-300 mb-5">
@@ -544,11 +544,11 @@ const trustStrip = [
             <span>The Visibility Gap</span>
           </div>
 
-          <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-white tracking-tight leading-tight mb-6">
+          <h2 class="font-display font-extrabold text-2xl sm:text-3xl lg:text-4xl text-white tracking-tight leading-tight mb-5 sm:mb-6">
             Why Regional Brands Remain Invisible in Modern Search
           </h2>
 
-          <div class="space-y-5 text-slate-300 text-base leading-relaxed text-justify">
+          <div class="space-y-4 sm:space-y-5 text-slate-300 text-sm sm:text-base leading-relaxed text-left sm:text-justify">
             <p>
               Your direct competitors are securing visibility on Google, Google AI Overviews, ChatGPT and Gemini while your company remains unmentioned. That continuous absence costs your enterprise high-value commercial enquiries every single day.
             </p>
@@ -559,25 +559,25 @@ const trustStrip = [
         </div>
 
         <!-- Right 5 Columns: Diagnostic Comparison Cards -->
-        <div class="lg:col-span-5 space-y-4">
-          <div class="glass-card rounded-2xl p-6 border-l-4 border-l-rose-500">
+        <div class="lg:col-span-5 space-y-3.5 sm:space-y-4">
+          <div class="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6 border-l-4 border-l-rose-500">
             <div class="flex items-center justify-between mb-2">
               <span class="text-xs font-bold uppercase tracking-wider text-rose-400">Obsolete Agency Model</span>
               <span class="text-xs text-slate-400">Legacy Search Only</span>
             </div>
             <h3 class="font-display font-bold text-base text-white mb-2">Unstructured Entities &amp; Generic Keywords</h3>
-            <p class="text-xs text-slate-300 leading-relaxed text-justify">
+            <p class="text-xs text-slate-300 leading-relaxed text-left sm:text-justify">
               Fails to register when decision-makers in Delhi, Noida, Gurgaon and Lucknow consult ChatGPT, Gemini or Google AI Overviews for trusted vendor recommendations.
             </p>
           </div>
 
-          <div class="glass-card rounded-2xl p-6 border-l-4 border-l-emerald-400">
+          <div class="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6 border-l-4 border-l-emerald-400">
             <div class="flex items-center justify-between mb-2">
               <span class="text-xs font-bold uppercase tracking-wider text-emerald-400">The NK Digital Tech Bridge</span>
               <span class="text-xs text-brand-300">Omnichannel Authority</span>
             </div>
             <h3 class="font-display font-bold text-base text-white mb-2">Verified Entity Structuring &amp; AI Retrieval</h3>
-            <p class="text-xs text-slate-300 leading-relaxed text-justify">
+            <p class="text-xs text-slate-300 leading-relaxed text-left sm:text-justify">
               Aligns technical SEO, schema markup, local citations and knowledge-graph signals so Google, ChatGPT and Gemini cite your brand first.
             </p>
           </div>
@@ -589,16 +589,16 @@ const trustStrip = [
   <!-- =====================================================================
        SECTION 5: SERVICES (LIGHT COOL ALABASTER CONTRAST + IMAGE 2 + 3x2 GRID)
   ===================================================================== -->
-  <section id="services" class="relative surface-cool py-24 px-6 border-b border-slate-200">
+  <section id="services" class="relative surface-cool py-14 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
     <div class="max-w-7xl mx-auto">
       <!-- Services Header with Designed Image 2 -->
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center mb-16">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 items-center mb-10 sm:mb-16">
         <div class="lg:col-span-7">
           <div class="badge-light mb-3">Core Capabilities</div>
-          <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-slate-900 tracking-tight mb-4">
+          <h2 class="font-display font-extrabold text-2xl sm:text-3xl lg:text-4xl text-slate-900 tracking-tight mb-3 sm:mb-4">
             Digital Marketing Services in Delhi NCR
           </h2>
-          <p class="text-slate-600 text-sm sm:text-base leading-relaxed text-justify">
+          <p class="text-slate-600 text-sm sm:text-base leading-relaxed text-left sm:text-justify">
             We deliver six specialised service disciplines structured to build total search dominance for businesses throughout Delhi, Noida, Gurgaon and Lucknow. Each core capability operates as an integrated module within our growth framework, directing visitors from initial search inquiry to qualified commercial conversion. Detailed technical breakdowns, deliverables and case studies are accessible through each dedicated service page.
           </p>
         </div>
@@ -609,7 +609,7 @@ const trustStrip = [
               alt="Digital Marketing Services in Delhi NCR Team Analysing Search Rankings"
               width="800"
               height="450"
-              class="w-full h-56 sm:h-64 object-cover"
+              class="w-full h-48 sm:h-56 lg:h-64 object-cover"
               loading="lazy"
             />
           </div>
@@ -617,40 +617,40 @@ const trustStrip = [
       </div>
 
       <!-- 3 Columns x 2 Rows Grid Layout -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-7">
         {services.map((s) => (
-          <div class="elevated-card rounded-2xl p-7 flex flex-col justify-between group hover:-translate-y-1">
+          <div class="elevated-card rounded-2xl p-5 sm:p-7 flex flex-col justify-between group hover:-translate-y-1">
             <div>
-              <div class="flex items-center justify-between gap-2 mb-6">
-                <div class={`w-12 h-12 rounded-xl border flex items-center justify-center ${s.iconStyle}`}>
+              <div class="flex items-center justify-between gap-2 mb-5 sm:mb-6">
+                <div class={`w-11 h-11 sm:w-12 sm:h-12 rounded-xl border flex items-center justify-center ${s.iconStyle}`}>
                   <Fragment set:html={s.icon} />
                 </div>
                 <div class="flex items-center gap-2">
                   <span class={`text-[11px] font-semibold px-2.5 py-1 rounded-md ${s.badgeColor}`}>
                     {s.category}
                   </span>
-                  <span class="font-display font-black text-lg text-slate-300">{s.num}</span>
+                  <span class="font-display font-black text-base sm:text-lg text-slate-300">{s.num}</span>
                 </div>
               </div>
 
-              <h3 class="font-display font-bold text-xl text-slate-900 mb-3 leading-snug group-hover:text-brand-600 transition-colors">
+              <h3 class="font-display font-bold text-lg sm:text-xl text-slate-900 mb-2.5 sm:mb-3 leading-snug group-hover:text-brand-600 transition-colors">
                 {s.title}
               </h3>
 
-              <p class="text-slate-600 text-sm leading-relaxed mb-6 text-justify">
+              <p class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-5 sm:mb-6 text-left sm:text-justify">
                 {s.body}
               </p>
             </div>
 
             <div>
-              <div class={`rounded-xl border p-4 mb-5 ${s.impactStyle}`}>
+              <div class={`rounded-xl border p-3.5 sm:p-4 mb-4 sm:mb-5 ${s.impactStyle}`}>
                 <div class="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-slate-900 mb-1">
                   <svg class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
                   </svg>
                   <span>Key Impact</span>
                 </div>
-                <p class="text-xs text-slate-700 leading-relaxed font-medium text-justify">
+                <p class="text-xs text-slate-700 leading-relaxed font-medium text-left sm:text-justify">
                   {s.impact}
                 </p>
               </div>
@@ -671,17 +671,17 @@ const trustStrip = [
   <!-- =====================================================================
        SECTION 6: REGIONAL LOCATIONS (DARK NAVY + IMAGE 3 + 1 ROW x 4 COLUMNS)
   ===================================================================== -->
-  <section id="locations" class="relative surface-navy py-24 px-6 border-b border-slate-800/80 overflow-hidden">
+  <section id="locations" class="relative surface-navy py-14 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
     <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
     <div class="relative z-10 max-w-7xl mx-auto">
       <!-- Regional Header with Designed Image 3 (Local SEO / Connaught Place) -->
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center mb-16">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 items-center mb-10 sm:mb-16">
         <div class="lg:col-span-7">
           <div class="badge-dark mb-3">Regional Coverage</div>
-          <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-white tracking-tight mb-4">
+          <h2 class="font-display font-extrabold text-2xl sm:text-3xl lg:text-4xl text-white tracking-tight mb-3 sm:mb-4">
             Regional Service Centers: Delhi, Noida, Gurgaon and Lucknow
           </h2>
-          <p class="text-slate-300 text-sm sm:text-base leading-relaxed text-justify">
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed text-left sm:text-justify">
             NK Digital Tech delivers dedicated search growth and digital marketing operations across primary business corridors in Northern India. Each regional territory is supported by specialised local market strategies tailored to regional competition, commercial density and localised buyer intent.
           </p>
         </div>
@@ -692,7 +692,7 @@ const trustStrip = [
               alt="Local SEO Services Across Delhi, Noida, Gurgaon and Lucknow"
               width="800"
               height="450"
-              class="w-full h-56 sm:h-64 object-cover"
+              class="w-full h-48 sm:h-56 lg:h-64 object-cover"
               loading="lazy"
             />
           </div>
@@ -700,30 +700,30 @@ const trustStrip = [
       </div>
 
       <!-- 1 Row x 4 Columns Responsive Grid -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
         {cities.map((c) => (
-          <div class="glass-card rounded-2xl p-6 flex flex-col justify-between group hover:-translate-y-1">
+          <div class="glass-card rounded-2xl p-5 sm:p-6 flex flex-col justify-between group hover:-translate-y-1">
             <div>
-              <div class={`h-1 w-full bg-gradient-to-r ${c.accent} rounded-full mb-5`}></div>
+              <div class={`h-1 w-full bg-gradient-to-r ${c.accent} rounded-full mb-4 sm:mb-5`}></div>
 
-              <div class="flex items-center justify-between gap-2 mb-4">
+              <div class="flex items-center justify-between gap-2 mb-3.5 sm:mb-4">
                 <span class="px-2.5 py-1 rounded-md bg-slate-800 border border-slate-700 text-[11px] font-bold uppercase tracking-wider text-brand-300">
                   {c.hub}
                 </span>
                 <span class="text-xs font-semibold text-slate-400">{c.city}</span>
               </div>
 
-              <h3 class="font-display font-bold text-lg text-white mb-3 leading-snug">
+              <h3 class="font-display font-bold text-base sm:text-lg text-white mb-2.5 sm:mb-3 leading-snug">
                 {c.keyword}
               </h3>
 
-              <p class="text-slate-300 text-sm leading-relaxed mb-5 text-justify">
+              <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-4 sm:mb-5 text-left sm:text-justify">
                 {c.desc}
               </p>
             </div>
 
-            <div class="pt-4 border-t border-slate-800">
-              <p class="text-[11px] text-slate-400 mb-4 leading-normal">
+            <div class="pt-3.5 sm:pt-4 border-t border-slate-800">
+              <p class="text-[11px] text-slate-400 mb-3 sm:mb-4 leading-normal">
                 <strong class="text-slate-300">Key Corridors:</strong> {c.corridor}
               </p>
               <a href={c.href} class="inline-flex items-center gap-1.5 text-xs font-bold text-brand-400 hover:text-brand-300 group-hover:gap-2.5 transition-all">
@@ -742,17 +742,17 @@ const trustStrip = [
   <!-- =====================================================================
        SECTION 7: WHY NK DIGITAL TECH (CRISP WHITE CONTRAST SECTION)
   ===================================================================== -->
-  <section id="why-us" class="relative surface-white py-24 px-6 border-b border-slate-200">
+  <section id="why-us" class="relative surface-white py-14 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
     <div class="max-w-7xl mx-auto">
-      <div class="max-w-3xl mx-auto mb-14 text-center">
+      <div class="max-w-3xl mx-auto mb-10 sm:mb-14 text-center">
         <div class="badge-light mb-3">Why Choose NK Digital Tech</div>
-        <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-slate-900 tracking-tight mb-4">
+        <h2 class="font-display font-extrabold text-2xl sm:text-3xl lg:text-4xl text-slate-900 tracking-tight mb-3 sm:mb-4">
           Why NK Digital Tech Is the Best Digital Marketing Agency in Delhi NCR
         </h2>
-        <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-4 text-justify">
+        <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-4 text-left sm:text-justify">
           Many digital agencies across Delhi NCR claim industry leadership, yet few offer authentic transparency regarding execution personnel, realistic 90-day progress milestones or forward-looking AI search preparation. NK Digital Tech was established to replace generic agency promises with verifiable, data-backed commercial performance.
         </p>
-        <p class="text-slate-700 font-semibold text-sm">
+        <p class="text-slate-700 font-semibold text-xs sm:text-sm">
           Our operating model contrasts sharply with standard agency practices:
         </p>
       </div>
@@ -802,17 +802,17 @@ const trustStrip = [
       </div>
 
       <!-- Mobile Comparison Cards -->
-      <div class="md:hidden space-y-4">
+      <div class="md:hidden space-y-3.5 sm:space-y-4">
         {comparison.map((row) => (
-          <div class="elevated-card rounded-2xl p-5 space-y-3">
-            <h3 class="font-display font-bold text-slate-900 text-base">{row.metric}</h3>
-            <div class="rounded-xl bg-rose-50 border border-rose-100 p-3.5">
+          <div class="elevated-card rounded-2xl p-4 sm:p-5 space-y-3">
+            <h3 class="font-display font-bold text-slate-900 text-sm sm:text-base">{row.metric}</h3>
+            <div class="rounded-xl bg-rose-50 border border-rose-100 p-3 sm:p-3.5">
               <p class="text-[10px] font-bold uppercase tracking-wider text-rose-600 mb-1">Typical Agency Approach</p>
-              <p class="text-xs text-slate-700">{row.typical}</p>
+              <p class="text-xs text-slate-700 leading-relaxed">{row.typical}</p>
             </div>
-            <div class="rounded-xl bg-sky-50 border border-sky-200 p-3.5">
+            <div class="rounded-xl bg-sky-50 border border-sky-200 p-3 sm:p-3.5">
               <p class="text-[10px] font-bold uppercase tracking-wider text-brand-600 mb-1">The NK Digital Tech Standard</p>
-              <p class="text-xs text-slate-900 font-semibold">{row.nk}</p>
+              <p class="text-xs text-slate-900 font-semibold leading-relaxed">{row.nk}</p>
             </div>
           </div>
         ))}
@@ -823,36 +823,36 @@ const trustStrip = [
   <!-- =====================================================================
        SECTION 7: OUR CLIENTS (DARK INDIGO CONTRAST SECTION BELOW WHY US)
   ===================================================================== -->
-  <section id="clients" class="relative surface-indigo py-24 px-6 border-b border-slate-800/80 overflow-hidden">
+  <section id="clients" class="relative surface-indigo py-14 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
     <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
     <div class="relative z-10 max-w-7xl mx-auto">
-      <div class="max-w-3xl mx-auto mb-14 text-center">
+      <div class="max-w-3xl mx-auto mb-10 sm:mb-14 text-center">
         <div class="badge-dark mb-3">Our Clients</div>
-        <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-white tracking-tight mb-4">
+        <h2 class="font-display font-extrabold text-2xl sm:text-3xl lg:text-4xl text-white tracking-tight mb-3 sm:mb-4">
           Trusted by Leading Brands Across Delhi NCR
         </h2>
-        <p class="text-slate-300 text-sm sm:text-base leading-relaxed text-justify">
+        <p class="text-slate-300 text-sm sm:text-base leading-relaxed text-left sm:text-justify">
           We partner with regional market leaders, high-growth enterprises and established businesses throughout Delhi, Noida, Gurgaon and Lucknow to engineer their search dominance and accelerate inbound pipeline growth.
         </p>
       </div>
 
-      <!-- 5-Column Client Grid -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">
+      <!-- 5-Column Responsive Client Grid (2-cols on mobile, 3-cols on tablet, 5-cols on desktop) -->
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3.5 sm:gap-5">
         {clients.map((client) => (
-          <div class="glass-card rounded-2xl p-6 flex flex-col items-center text-center group hover:-translate-y-1">
-            <div class="w-full h-20 rounded-xl bg-white border border-slate-200 flex items-center justify-center p-4 mb-4 shadow-sm">
+          <div class="glass-card rounded-2xl p-3.5 sm:p-5 flex flex-col items-center text-center group hover:-translate-y-1">
+            <div class="w-full h-16 sm:h-20 rounded-xl bg-white border border-slate-200 flex items-center justify-center p-2.5 sm:p-4 mb-3 sm:mb-4 shadow-sm">
               <img
                 src={client.logo}
                 alt={`${client.name} Logo`}
                 width="130"
                 height="48"
-                class="max-h-12 w-auto object-contain"
+                class="max-h-9 sm:max-h-12 w-auto object-contain"
                 loading="lazy"
               />
             </div>
-            <h3 class="font-display font-bold text-base text-white mb-1">{client.name}</h3>
-            <p class="text-xs text-slate-300 leading-snug mb-3 flex-grow">{client.sector}</p>
-            <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-brand-300 bg-brand-500/15 border border-brand-500/30 px-2.5 py-1 rounded-md">
+            <h3 class="font-display font-bold text-sm sm:text-base text-white mb-1">{client.name}</h3>
+            <p class="text-[11px] sm:text-xs text-slate-300 leading-snug mb-2.5 sm:mb-3 flex-grow">{client.sector}</p>
+            <span class="inline-flex items-center gap-1 text-[10px] sm:text-[11px] font-semibold text-brand-300 bg-brand-500/15 border border-brand-500/30 px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-md">
               <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
               </svg>
@@ -867,25 +867,25 @@ const trustStrip = [
   <!-- =====================================================================
        SECTION 8: INDUSTRIES (LIGHT SLATE CONTRAST SECTION - 3x2 GRID)
   ===================================================================== -->
-  <section id="industries" class="relative surface-slate py-24 px-6 border-b border-slate-200">
+  <section id="industries" class="relative surface-slate py-14 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
     <div class="max-w-7xl mx-auto">
-      <div class="max-w-3xl mx-auto mb-16 text-center">
+      <div class="max-w-3xl mx-auto mb-10 sm:mb-16 text-center">
         <div class="badge-light mb-3">Sector Specialisation</div>
-        <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-slate-900 tracking-tight mb-4">
+        <h2 class="font-display font-extrabold text-2xl sm:text-3xl lg:text-4xl text-slate-900 tracking-tight mb-3 sm:mb-4">
           Specialised Industry Experience Across Delhi NCR
         </h2>
-        <p class="text-slate-600 text-sm sm:text-base leading-relaxed text-justify">
+        <p class="text-slate-600 text-sm sm:text-base leading-relaxed text-left sm:text-justify">
           NK Digital Tech provides digital marketing services in Delhi NCR across high-growth commercial sectors. Every growth programme is configured around the specific purchasing cycles, decision-makers and regional search behaviours of your target vertical.
         </p>
       </div>
 
       <!-- 3 Columns x 2 Rows Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-7">
         {industries.map((ind) => (
-          <div class={`elevated-card rounded-2xl p-7 border-t-4 ${ind.accentBorder} flex flex-col justify-between hover:-translate-y-1`}>
+          <div class={`elevated-card rounded-2xl p-5 sm:p-7 border-t-4 ${ind.accentBorder} flex flex-col justify-between hover:-translate-y-1`}>
             <div>
-              <div class="flex items-center justify-between gap-2 mb-5">
-                <div class={`w-11 h-11 rounded-xl border flex items-center justify-center ${ind.iconBg}`}>
+              <div class="flex items-center justify-between gap-2 mb-4 sm:mb-5">
+                <div class={`w-10 h-10 sm:w-11 sm:h-11 rounded-xl border flex items-center justify-center ${ind.iconBg}`}>
                   <Fragment set:html={ind.icon} />
                 </div>
                 <span class="text-[11px] font-semibold text-slate-500 bg-slate-100 px-2.5 py-1 rounded-md">
@@ -893,25 +893,25 @@ const trustStrip = [
                 </span>
               </div>
 
-              <h3 class="font-display font-bold text-xl text-slate-900 mb-4 leading-snug">
+              <h3 class="font-display font-bold text-lg sm:text-xl text-slate-900 mb-3 sm:mb-4 leading-snug">
                 {ind.title}
               </h3>
 
-              <div class="mb-5">
+              <div class="mb-4 sm:mb-5">
                 <p class="text-[11px] font-bold uppercase tracking-wider text-brand-600 mb-1.5">
                   Strategic Focus
                 </p>
-                <p class="text-slate-600 text-sm leading-relaxed text-justify">
+                <p class="text-slate-600 text-xs sm:text-sm leading-relaxed text-left sm:text-justify">
                   {ind.focus}
                 </p>
               </div>
             </div>
 
-            <div class="rounded-xl bg-emerald-50/70 border border-emerald-200/80 p-4">
+            <div class="rounded-xl bg-emerald-50/70 border border-emerald-200/80 p-3.5 sm:p-4">
               <p class="text-[11px] font-bold uppercase tracking-wider text-emerald-700 mb-1">
                 Commercial Outcome
               </p>
-              <p class="text-slate-800 text-xs font-medium leading-relaxed text-justify">
+              <p class="text-slate-800 text-xs font-medium leading-relaxed text-left sm:text-justify">
                 {ind.outcome}
               </p>
             </div>
@@ -924,45 +924,45 @@ const trustStrip = [
   <!-- =====================================================================
        SECTION 9: TESTIMONIALS (DEEP NAVY CONTRAST SECTION - 2x2 GRID)
   ===================================================================== -->
-  <section id="testimonials" class="relative surface-dark py-24 px-6 border-b border-slate-800/80 overflow-hidden">
+  <section id="testimonials" class="relative surface-dark py-14 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
     <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
     <div class="absolute inset-0 mesh-glow pointer-events-none opacity-60"></div>
 
     <div class="relative z-10 max-w-7xl mx-auto">
-      <div class="max-w-3xl mx-auto mb-16 text-center">
+      <div class="max-w-3xl mx-auto mb-10 sm:mb-16 text-center">
         <div class="badge-dark mb-3">Verified Client Outcomes</div>
-        <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-white tracking-tight mb-4">
+        <h2 class="font-display font-extrabold text-2xl sm:text-3xl lg:text-4xl text-white tracking-tight mb-3 sm:mb-4">
           What Regional Business Leaders Say About NK Digital Tech
         </h2>
-        <p class="text-slate-300 text-sm sm:text-base leading-relaxed text-justify">
+        <p class="text-slate-300 text-sm sm:text-base leading-relaxed text-left sm:text-justify">
           Direct feedback and measurable commercial outcomes from corporate founders, managing directors and marketing heads across Delhi, Noida, Gurgaon and Lucknow who chose NK Digital Tech as their strategic search growth partner.
         </p>
       </div>
 
       <!-- 2 Columns x 2 Rows Grid -->
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-7">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 sm:gap-7">
         {testimonials.map((t) => (
-          <div class="glass-card rounded-2xl p-8 flex flex-col justify-between hover:-translate-y-1">
+          <div class="glass-card rounded-2xl p-5 sm:p-8 flex flex-col justify-between hover:-translate-y-1">
             <div>
-              <div class="flex items-center justify-between gap-4 mb-5">
+              <div class="flex items-center justify-between gap-4 mb-4 sm:mb-5">
                 <div class="flex items-center gap-1">
                   {[1, 2, 3, 4, 5].map(() => (
-                    <svg class="w-4 h-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
+                    <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
                       <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
                     </svg>
                   ))}
                 </div>
-                <span class="text-[11px] font-semibold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-1 rounded-md">
+                <span class="text-[10px] sm:text-[11px] font-semibold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-1 rounded-md">
                   Verified Enterprise Client
                 </span>
               </div>
 
-              <p class="text-slate-200 text-sm sm:text-base leading-relaxed italic mb-6 text-justify">
+              <p class="text-slate-200 text-sm sm:text-base leading-relaxed italic mb-5 sm:mb-6 text-left sm:text-justify">
                 "{t.quote}"
               </p>
 
-              <div class="rounded-xl bg-slate-900/90 border border-slate-700/80 p-4 mb-6">
-                <p class="text-[11px] font-bold uppercase tracking-wider text-brand-400 mb-2.5">
+              <div class="rounded-xl bg-slate-900/90 border border-slate-700/80 p-3.5 sm:p-4 mb-5 sm:mb-6">
+                <p class="text-[11px] font-bold uppercase tracking-wider text-brand-400 mb-2 sm:mb-2.5">
                   Measured Commercial Impact
                 </p>
                 <ul class="space-y-2">
@@ -978,23 +978,23 @@ const trustStrip = [
               </div>
             </div>
 
-            <div class="flex items-center gap-4 pt-4 border-t border-slate-800">
-              <div class="w-14 h-14 rounded-xl bg-white p-2 flex items-center justify-center flex-shrink-0 shadow-sm">
+            <div class="flex items-center gap-3.5 sm:gap-4 pt-3.5 sm:pt-4 border-t border-slate-800">
+              <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-white p-2 flex items-center justify-center flex-shrink-0 shadow-sm">
                 <img
                   src={t.logo}
                   alt={`${t.company} Logo`}
                   width="48"
                   height="48"
-                  class="max-h-10 w-auto object-contain"
+                  class="max-h-8 sm:max-h-10 w-auto object-contain"
                   loading="lazy"
                 />
               </div>
               <div>
-                <h3 class="font-display font-bold text-white text-base">{t.name}</h3>
+                <h3 class="font-display font-bold text-white text-sm sm:text-base">{t.name}</h3>
                 <p class="text-xs text-slate-300">
                   {t.title}, <strong class="text-brand-400 font-semibold">{t.company}</strong>
                 </p>
-                <p class="text-[11px] text-slate-400 mt-0.5">{t.sector}</p>
+                <p class="text-[10px] sm:text-[11px] text-slate-400 mt-0.5">{t.sector}</p>
               </div>
             </div>
           </div>
@@ -1006,33 +1006,33 @@ const trustStrip = [
   <!-- =====================================================================
        SECTION 10: HOW WE WORK (CRISP WHITE CONTRAST SECTION - 4 STAGES)
   ===================================================================== -->
-  <section class="relative surface-white py-24 px-6 border-b border-slate-200">
+  <section class="relative surface-white py-14 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
     <div class="max-w-7xl mx-auto">
-      <div class="max-w-3xl mx-auto mb-16 text-center">
+      <div class="max-w-3xl mx-auto mb-10 sm:mb-16 text-center">
         <div class="badge-light mb-3">Our Execution Methodology</div>
-        <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-slate-900 tracking-tight mb-4">
+        <h2 class="font-display font-extrabold text-2xl sm:text-3xl lg:text-4xl text-slate-900 tracking-tight mb-3 sm:mb-4">
           Systematic Four-Stage Execution Framework
         </h2>
-        <p class="text-slate-600 text-sm sm:text-base leading-relaxed text-justify">
+        <p class="text-slate-600 text-sm sm:text-base leading-relaxed text-left sm:text-justify">
           From exhaustive technical diagnostics across Delhi, Noida, Gurgaon and Lucknow to continuous AI citation scaling, our four-stage methodology delivers compounding search authority.
         </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-7">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-7">
         {stages.map((s) => (
-          <div class="elevated-card rounded-2xl p-8 relative overflow-hidden group hover:-translate-y-1">
-            <div class="flex items-center justify-between gap-4 mb-5">
-              <span class={`inline-flex items-center px-3 py-1 rounded-lg text-xs font-bold uppercase tracking-wider text-white bg-gradient-to-r ${s.accent}`}>
+          <div class="elevated-card rounded-2xl p-5 sm:p-8 relative overflow-hidden group hover:-translate-y-1">
+            <div class="flex items-center justify-between gap-4 mb-4 sm:mb-5">
+              <span class={`inline-flex items-center px-2.5 sm:px-3 py-1 rounded-lg text-xs font-bold uppercase tracking-wider text-white bg-gradient-to-r ${s.accent}`}>
                 {s.num}
               </span>
-              <span class="font-display font-black text-4xl text-slate-200 group-hover:text-slate-300 transition-colors">
+              <span class="font-display font-black text-3xl sm:text-4xl text-slate-200 group-hover:text-slate-300 transition-colors">
                 {s.step}
               </span>
             </div>
-            <h3 class="font-display font-bold text-xl text-slate-900 mb-3 leading-snug">
+            <h3 class="font-display font-bold text-lg sm:text-xl text-slate-900 mb-2.5 sm:mb-3 leading-snug">
               {s.title}
             </h3>
-            <p class="text-slate-600 text-sm leading-relaxed text-justify">
+            <p class="text-slate-600 text-xs sm:text-sm leading-relaxed text-left sm:text-justify">
               {s.body}
             </p>
           </div>
@@ -1044,17 +1044,17 @@ const trustStrip = [
   <!-- =====================================================================
        SECTION 10: PARTNER WITH THE BEST DIGITAL MARKETING COMPANY (ABOVE FAQ)
   ===================================================================== -->
-  <section class="relative surface-indigo py-24 px-6 border-b border-slate-800/80 overflow-hidden">
+  <section class="relative surface-indigo py-14 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
     <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
     <div class="relative z-10 max-w-7xl mx-auto">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-12 items-center">
         <!-- Left 7 Columns: Partner Paragraphs (Justified) -->
         <div class="lg:col-span-7">
           <div class="badge-dark mb-4">Long-Term Digital Authority</div>
-          <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-white tracking-tight leading-tight mb-6">
+          <h2 class="font-display font-extrabold text-2xl sm:text-3xl lg:text-4xl text-white tracking-tight leading-tight mb-5 sm:mb-6">
             Partner with the Best Digital Marketing Company in Delhi NCR
           </h2>
-          <div class="space-y-5 text-slate-300 text-base leading-relaxed text-justify">
+          <div class="space-y-4 sm:space-y-5 text-slate-300 text-sm sm:text-base leading-relaxed text-left sm:text-justify">
             <p>
               Achieving sustained commercial growth in the highly competitive Delhi NCR marketplace requires a digital marketing strategy that addresses how real customers find answers today. Brands that limit their efforts to outdated methods fall behind as consumer search habits rapidly transition toward AI-assisted discovery.
             </p>
@@ -1066,13 +1066,13 @@ const trustStrip = [
 
         <!-- Right 5 Columns: Designed Image 4 (Website Development & Technical Architecture) -->
         <div class="lg:col-span-5">
-          <div class="rounded-3xl overflow-hidden border border-slate-700/80 shadow-2xl bg-slate-900">
+          <div class="rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-700/80 shadow-2xl bg-slate-900">
             <img
               src="/images/website-development-company-delhi.webp"
               alt="Website Development and Technical Search Architecture in Delhi NCR"
               width="800"
               height="450"
-              class="w-full h-64 sm:h-72 object-cover"
+              class="w-full h-52 sm:h-64 lg:h-72 object-cover"
               loading="lazy"
             />
           </div>
@@ -1084,37 +1084,37 @@ const trustStrip = [
   <!-- =====================================================================
        SECTION 11: FAQ (LIGHT COOL SLATE CONTRAST SECTION)
   ===================================================================== -->
-  <section id="faq" class="relative surface-cool py-24 px-6 border-b border-slate-200">
+  <section id="faq" class="relative surface-cool py-14 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
     <div class="max-w-4xl mx-auto">
-      <div class="text-center mb-14">
+      <div class="text-center mb-10 sm:mb-14">
         <div class="badge-light mb-3">Direct Answers</div>
-        <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-slate-900 tracking-tight mb-4">
+        <h2 class="font-display font-extrabold text-2xl sm:text-3xl lg:text-4xl text-slate-900 tracking-tight mb-3 sm:mb-4">
           Frequently Asked Questions
         </h2>
-        <p class="text-slate-600 text-sm sm:text-base leading-relaxed text-justify">
+        <p class="text-slate-600 text-sm sm:text-base leading-relaxed text-left sm:text-justify">
           Direct, structured answers covering our SEO, AI search visibility, AEO, GEO and regional operations across Delhi, Noida, Gurgaon and Lucknow.
         </p>
       </div>
 
-      <div class="space-y-4">
+      <div class="space-y-3.5 sm:space-y-4">
         {faqs.map((f, i) => (
           <details class="elevated-card rounded-2xl group overflow-hidden" open={i === 0}>
-            <summary class="flex items-center justify-between gap-4 px-6 py-5 select-none">
-              <div class="flex items-center gap-3.5 text-left">
-                <span class="w-7 h-7 rounded-lg bg-sky-50 border border-sky-200 text-brand-600 font-display font-bold text-xs flex items-center justify-center flex-shrink-0">
+            <summary class="flex items-center justify-between gap-3 sm:gap-4 px-4 sm:px-6 py-4 sm:py-5 select-none">
+              <div class="flex items-center gap-3 sm:gap-3.5 text-left">
+                <span class="w-6 h-6 sm:w-7 sm:h-7 rounded-lg bg-sky-50 border border-sky-200 text-brand-600 font-display font-bold text-xs flex items-center justify-center flex-shrink-0">
                   0{i + 1}
                 </span>
-                <span class="font-display font-bold text-slate-900 text-base sm:text-lg leading-snug">
+                <span class="font-display font-bold text-slate-900 text-sm sm:text-base md:text-lg leading-snug">
                   {f.q}
                 </span>
               </div>
-              <span class="faq-icon w-8 h-8 rounded-full border border-slate-200 text-slate-600 flex items-center justify-center flex-shrink-0">
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <span class="faq-icon w-7 h-7 sm:w-8 sm:h-8 rounded-full border border-slate-200 text-slate-600 flex items-center justify-center flex-shrink-0">
+                <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
                 </svg>
               </span>
             </summary>
-            <div class="px-6 pb-6 pt-3 text-slate-600 text-sm sm:text-base leading-relaxed border-t border-slate-100 text-justify">
+            <div class="px-4 sm:px-6 pb-5 sm:pb-6 pt-3 text-slate-600 text-xs sm:text-sm md:text-base leading-relaxed border-t border-slate-100 text-left sm:text-justify">
               {f.a}
             </div>
           </details>
@@ -1126,25 +1126,25 @@ const trustStrip = [
   <!-- =====================================================================
        SECTION 13: SHORT 2-3 LINE CALL TO ACTION BANNER (LAST SECTION)
   ===================================================================== -->
-  <section id="contact" class="relative surface-dark py-20 px-6 overflow-hidden">
+  <section id="contact" class="relative surface-dark py-12 sm:py-16 lg:py-20 px-4 sm:px-6 overflow-hidden">
     <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
     <div class="relative z-10 max-w-5xl mx-auto">
-      <div class="rounded-3xl bg-gradient-to-r from-brand-600 via-brand-700 to-accent-700 p-8 sm:p-12 text-center text-white shadow-2xl border border-white/15 relative overflow-hidden">
+      <div class="rounded-2xl sm:rounded-3xl bg-gradient-to-r from-brand-600 via-brand-700 to-accent-700 p-6 sm:p-10 md:p-12 text-center text-white shadow-2xl border border-white/15 relative overflow-hidden">
         <div class="relative z-10 max-w-2xl mx-auto">
-          <h2 class="font-display font-black text-2xl sm:text-3xl md:text-4xl text-white tracking-tight mb-4">
+          <h2 class="font-display font-black text-2xl sm:text-3xl md:text-4xl text-white tracking-tight mb-3 sm:mb-4">
             Ready to Dominate Google &amp; AI Search?
           </h2>
 
-          <p class="text-sky-50 text-sm sm:text-base leading-relaxed mb-8">
+          <p class="text-sky-50 text-xs sm:text-sm md:text-base leading-relaxed mb-6 sm:mb-8">
             Contact our specialists today to schedule your comprehensive digital audit and receive a custom 90-day search growth roadmap across Delhi, Noida, Gurgaon and Lucknow.
           </p>
 
           <a
             href="mailto:connect@nkdigitaltech.com"
-            class="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-white text-slate-950 hover:bg-sky-50 font-display font-bold text-base shadow-xl transition-all duration-300 active:scale-95"
+            class="inline-flex w-full sm:w-auto items-center justify-center gap-2.5 sm:gap-3 px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl bg-white text-slate-950 hover:bg-sky-50 font-display font-bold text-sm sm:text-base shadow-xl transition-all duration-300 active:scale-95"
           >
             <span>Connect with NK Digital Tech Today</span>
-            <svg class="w-5 h-5 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg class="w-4 h-4 sm:w-5 sm:h-5 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
             </svg>
           </a>

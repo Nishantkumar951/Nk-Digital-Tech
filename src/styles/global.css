@@ -7,12 +7,20 @@
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    overflow-x: hidden;
   }
   body {
     background-color: #050a14;
     color: #0f172a;
     font-family: 'Plus Jakarta Sans', sans-serif;
     overflow-x: hidden;
+    width: 100%;
+  }
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+    word-break: break-word;
   }
 }
 

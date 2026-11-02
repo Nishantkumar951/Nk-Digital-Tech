@@ -154,6 +154,23 @@ Our operating model contrasts sharply with standard agency practices:
 
 ---
 
+### [OUR CLIENTS SECTION]
+
+#### Trusted by Leading Brands Across Delhi NCR
+
+We partner with regional market leaders, high-growth enterprises and established businesses throughout Delhi, Noida, Gurgaon and Lucknow to engineer their search dominance and accelerate inbound pipeline growth.
+
+<!-- Client Logos in WebP Format: 5 Column Grid -->
+| Logo | Client Brand | Industry Sector | Regional Presence |
+|:---:|:---:|:---:|:---:|
+| `![Aangan Logo](aangan.webp)` | **Aangan** | Premium Apparel & Retail | Delhi NCR |
+| `![Propertyways Logo](propertyways.webp)` | **Propertyways** | Commercial & Residential Real Estate | Gurugram / Delhi NCR |
+| `![Creative Academy Logo](creative-academy.webp)` | **Creative Academy** | Professional Education & Skill Development | Delhi NCR |
+| `![VP Infra Logo](vp-infra.webp)` | **VP Infra** | Infrastructure & Real Estate Development | Noida / Delhi NCR |
+| `![Vision Logo](vision.webp)` | **Vision** | Eyecare, Optical & Healthcare Retail | Delhi NCR |
+
+---
+
 ### [INDUSTRIES SECTION: ROWS AND COLUMNS DESIGN]
 
 #### Specialized Industry Experience Across Delhi NCR
@@ -265,23 +282,6 @@ We serve commercial enterprises situated throughout the National Capital Region 
 **How does NK Digital Tech measure and report campaign success?**
 
 We measure success through verified business metrics: qualified form inquiries, inbound phone calls, organic keyword progression for commercial phrases, local pack visibility and confirmed AI citations. Clients receive transparent, scheduled reporting with direct access to campaign strategists.
-
----
-
-### [OUR CLIENTS SECTION]
-
-#### Trusted by Leading Brands Across Delhi NCR
-
-We partner with regional market leaders, high-growth enterprises and established businesses throughout Delhi, Noida, Gurgaon and Lucknow to engineer their search dominance and accelerate inbound pipeline growth.
-
-<!-- Client Logos in WebP Format: 5 Column Grid -->
-| Logo | Client Brand | Industry Sector | Regional Presence |
-|:---:|:---:|:---:|:---:|
-| `![Aangan Logo](aangan.webp)` | **Aangan** | Premium Apparel & Retail | Delhi NCR |
-| `![Propertyways Logo](propertyways.webp)` | **Propertyways** | Commercial & Residential Real Estate | Gurugram / Delhi NCR |
-| `![Creative Academy Logo](creative-academy.webp)` | **Creative Academy** | Professional Education & Skill Development | Delhi NCR |
-| `![VP Infra Logo](vp-infra.webp)` | **VP Infra** | Infrastructure & Real Estate Development | Noida / Delhi NCR |
-| `![Vision Logo](vision.webp)` | **Vision** | Eyecare, Optical & Healthcare Retail | Delhi NCR |
 
 ---
 

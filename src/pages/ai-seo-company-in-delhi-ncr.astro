@@ -1,0 +1,1256 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '../styles/global.css';
+
+const pageTitle = 'AI SEO Company in Delhi NCR for Citations | NK Digital Tech';
+const pageDescription = 'NK Digital Tech is an AI SEO Company in Delhi NCR helping brands get cited on Google AI Overviews, ChatGPT, Gemini and Perplexity for daily buyer enquiries.';
+const pageCanonical = 'https://www.nkdigitaltech.net/ai-seo-company-in-delhi-ncr/';
+
+const clients = [
+  {
+    name: 'Aangan',
+    sector: 'Bridal Couture & Ethnic Retail Showrooms',
+    region: 'Delhi, Gurgaon & Lucknow',
+    logo: '/images/clients/aangan.webp',
+  },
+  {
+    name: 'Propertyways',
+    sector: 'Commercial Leasing & Luxury Real Estate',
+    region: 'Gurgaon, Noida & Delhi',
+    logo: '/images/clients/propertyways.webp',
+  },
+  {
+    name: 'Creative Academy',
+    sector: 'Competitive Exam & Skill Coaching',
+    region: 'Delhi, Noida & Lucknow',
+    logo: '/images/clients/creative-academy.webp',
+  },
+  {
+    name: 'VP Infra',
+    sector: 'Residential Townships & Civil Projects',
+    region: 'Noida, Gurgaon & Lucknow',
+    logo: '/images/clients/vp-infra.webp',
+  },
+  {
+    name: 'Vision',
+    sector: 'Super Speciality Eye Care & Diagnostics',
+    region: 'Delhi NCR & Lucknow',
+    logo: '/images/clients/vision.webp',
+  },
+];
+
+const services = [
+  {
+    num: '01',
+    category: 'Google AI Overviews',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>`,
+    iconStyle: 'bg-sky-50 border-sky-200 text-brand-600',
+    impactStyle: 'bg-sky-50/80 border-sky-200/80 text-slate-800',
+    badgeColor: 'text-brand-600 bg-sky-100/80',
+    title: 'Google AI Overview Optimisation',
+    body: 'Our Google AI Overview optimisation places your brand inside the instant summary box at the very top of Google search results. We format commercial pages with crisp 40 to 60 word factual definitions, comparison tables and verified author credentials that Google retrieval systems quote directly.',
+    impact: 'Source link placement above traditional organic listings across Delhi, Noida, Gurgaon and Lucknow.',
+    cta: 'Audit Your AI Overview Visibility',
+    href: '#contact',
+  },
+  {
+    num: '02',
+    category: 'OpenAI & ChatGPT Search',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>`,
+    iconStyle: 'bg-violet-50 border-violet-200 text-accent-600',
+    impactStyle: 'bg-violet-50/80 border-violet-200/80 text-slate-800',
+    badgeColor: 'text-accent-600 bg-violet-100/80',
+    title: 'ChatGPT SEO Services & Prompt Citations',
+    body: 'Through dedicated ChatGPT SEO services, we map the exact natural language prompts buyers type when asking OpenAI models to recommend vendors, clinics, builders or consultants. We open access for GPTBot and OAI SearchBot, publish structured service facts and align Bing index signals.',
+    impact: 'Named brand recommendations with clickable source citations when prospects ask ChatGPT who to hire.',
+    cta: 'Check Your ChatGPT Brand Mentions',
+    href: '#contact',
+  },
+  {
+    num: '03',
+    category: 'Gemini & Knowledge Graph',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>`,
+    iconStyle: 'bg-emerald-50 border-emerald-200 text-emerald-600',
+    impactStyle: 'bg-emerald-50/80 border-emerald-200/80 text-slate-800',
+    badgeColor: 'text-emerald-700 bg-emerald-100/80',
+    title: 'Google Gemini & Entity Graph SEO',
+    body: 'Google Gemini connects website content with Google Knowledge Graph entities, Google Business Profiles and verified customer reviews. As an experienced AI search optimisation company, we connect your Organization, Service and LocalBusiness schema with consistent Indian business records.',
+    impact: 'Trusted local and commercial shortlisting when Android and Workspace users ask Gemini for top providers.',
+    cta: 'Build Your Brand Entity Graph',
+    href: '#contact',
+  },
+  {
+    num: '04',
+    category: 'Direct Answer Extraction',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>`,
+    iconStyle: 'bg-amber-50 border-amber-200 text-amber-600',
+    impactStyle: 'bg-amber-50/80 border-amber-200/80 text-slate-800',
+    badgeColor: 'text-amber-700 bg-amber-100/80',
+    title: 'Answer Engine Optimisation Services',
+    body: 'Our Answer Engine Optimisation services turn long, unfocused web pages into question led headings followed immediately by clear, factual answers, numbered steps and FAQPage markup. Answer engines like Perplexity, Copilot and voice assistants extract these clean blocks first.',
+    impact: 'Zero click authority and high trust referral clicks from buyers comparing specifications and timelines.',
+    cta: 'Structure Pages for Direct Answers',
+    href: '#contact',
+  },
+  {
+    num: '05',
+    category: 'Multi Source Consensus',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>`,
+    iconStyle: 'bg-indigo-50 border-indigo-200 text-indigo-600',
+    impactStyle: 'bg-indigo-50/80 border-indigo-200/80 text-slate-800',
+    badgeColor: 'text-indigo-700 bg-indigo-100/80',
+    title: 'Generative Engine Optimisation Agency',
+    body: 'Large language models verify claims across independent websites before recommending any company. Working as a specialised Generative Engine Optimisation agency, we build third party brand mentions across Indian trade publications, verified review platforms and industry directories.',
+    impact: 'Consistent cross web validation that convinces Perplexity, Claude and ChatGPT to cite your business.',
+    cta: 'Strengthen Multi Source Citations',
+    href: '#contact',
+  },
+  {
+    num: '06',
+    category: 'Machine Readable Code',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>`,
+    iconStyle: 'bg-cyan-50 border-cyan-200 text-cyan-700',
+    impactStyle: 'bg-cyan-50/80 border-cyan-200/80 text-slate-800',
+    badgeColor: 'text-cyan-700 bg-cyan-100/80',
+    title: 'Technical LLM SEO Services & llms.txt',
+    body: 'Many AI crawlers cannot execute heavy JavaScript frameworks, leaving client rendered websites blank during retrieval. Our technical LLM SEO services deliver clean static HTML, custom llms.txt and llms full.txt indexes, nested JSON LD graphs and proper crawler rules.',
+    impact: 'Instant, error free content parsing by GPTBot, PerplexityBot, ClaudeBot and Google Extended.',
+    cta: 'Deploy Technical LLM Readiness',
+    href: '#contact',
+  },
+];
+
+const cities = [
+  {
+    hub: 'Hub 01',
+    city: 'Delhi',
+    keyword: 'AI SEO Services in Delhi',
+    desc: 'We help super speciality hospitals, corporate law chambers, coaching institutes, luxury retail showrooms and manufacturers in Delhi earn direct brand citations on Google AI Overviews, ChatGPT and Gemini.',
+    cta: 'Explore Delhi Service Page',
+    href: '/best-seo-company-in-delhi/',
+    accent: 'from-brand-500 to-sky-400',
+  },
+  {
+    hub: 'Hub 02',
+    city: 'Noida',
+    keyword: 'AI SEO Services in Noida',
+    desc: 'We structure entity data, product comparison matrices and llms.txt discovery files so SaaS platforms, IT exporters, real estate builders and clinics across Noida get shortlisted by AI assistants.',
+    cta: 'Explore Noida Service Page',
+    href: '/best-seo-company-in-noida/',
+    accent: 'from-accent-500 to-violet-400',
+  },
+  {
+    hub: 'Hub 03',
+    city: 'Gurgaon',
+    keyword: 'AI SEO Services in Gurgaon',
+    desc: 'We position corporate advisory firms, commercial property consultants, enterprise B2B vendors and healthcare groups in Gurgaon inside high intent ChatGPT, Perplexity and Gemini buyer recommendations.',
+    cta: 'Explore Gurgaon Service Page',
+    href: '/best-seo-company-in-gurgaon/',
+    accent: 'from-cyan-500 to-teal-400',
+  },
+  {
+    hub: 'Hub 04',
+    city: 'Lucknow',
+    keyword: 'AI SEO Services in Lucknow',
+    desc: 'We connect residential township developers, medical centres, educational academies and retail brands in Lucknow with local buyers searching through Google AI Overviews, voice search and Gemini.',
+    cta: 'Explore Lucknow Service Page',
+    href: '/best-seo-company-in-lucknow/',
+    accent: 'from-emerald-500 to-green-400',
+  },
+];
+
+const comparison = [
+  {
+    metric: 'How Buyer Queries Are Researched',
+    typical: 'Targets only short two word keywords while ignoring full conversational questions',
+    nk: 'Maps real 10 to 25 word buyer prompts asked on ChatGPT, Gemini, Perplexity and Google',
+  },
+  {
+    metric: 'Content Structure & Fact Density',
+    typical: 'Publishes long, repetitive blog posts filled with fluff that AI models skip',
+    nk: 'Writes 40 to 60 word self contained answer blocks, data tables and verifiable proof',
+  },
+  {
+    metric: 'AI Crawler & Rendering Readiness',
+    typical: 'Leaves GPTBot or PerplexityBot blocked or serves unreadable JavaScript pages',
+    nk: 'Delivers fast server rendered HTML, llms.txt indexes and explicit AI bot permissions',
+  },
+  {
+    metric: 'Brand Entity & Knowledge Graph',
+    typical: 'Adds basic meta tags without connecting company, founder or branch credentials',
+    nk: 'Deploys nested JSON LD entity graphs matched across trusted Indian directories',
+  },
+  {
+    metric: 'How Visibility Is Measured',
+    typical: 'Sends monthly blue link rank sheets with zero tracking of AI search answers',
+    nk: 'Tracks live brand citations across Google AI Overviews, ChatGPT, Gemini and phone leads',
+  },
+  {
+    metric: 'Who Leads Your Campaign',
+    typical: 'Junior account coordinators experimenting with generic automated text tools',
+    nk: 'Senior AI SEO consultants in Delhi NCR with 100% client ownership of code and data',
+  },
+];
+
+const industries = [
+  {
+    sector: 'Real Estate & Builders',
+    title: 'Commercial Advisors, Luxury Projects & Townships',
+    focus: 'Buyers ask ChatGPT and Gemini to compare RERA registered projects, possession records and commercial leasing yields across Delhi, Noida, Gurgaon and Lucknow. We publish project comparison tables and verified builder entity schema.',
+    outcome: 'Direct citations in AI property comparison prompts that generate qualified site visit bookings.',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>`,
+    accentBorder: 'border-t-brand-500',
+    iconBg: 'bg-sky-50 text-brand-600 border-sky-200',
+  },
+  {
+    sector: 'Healthcare & Hospitals',
+    title: 'Super Speciality Hospitals, IVF, Dental & Eye Centres',
+    focus: 'Patients ask Google AI Overviews and Gemini detailed questions about surgical safety, recovery timelines and specialist qualifications. We structure doctor reviewed clinical answers with MedicalClinic and Physician schema.',
+    outcome: 'Trusted clinical citations that convert medical research queries into daily OPD consultation calls.',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>`,
+    accentBorder: 'border-t-rose-500',
+    iconBg: 'bg-rose-50 text-rose-600 border-rose-200',
+  },
+  {
+    sector: 'B2B SaaS & Manufacturing',
+    title: 'Software Platforms, Exporters & Industrial Suppliers',
+    focus: 'Procurement teams use Perplexity, Copilot and ChatGPT to shortlist ISO certified suppliers and enterprise software tools. We publish structured technical specification sheets, integration matrices and compliance data.',
+    outcome: 'Inclusion on AI generated vendor shortlists leading to enterprise demos and bulk RFQ enquiries.',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>`,
+    accentBorder: 'border-t-emerald-500',
+    iconBg: 'bg-emerald-50 text-emerald-600 border-emerald-200',
+  },
+  {
+    sector: 'Education & Coaching',
+    title: 'Universities, Skill Institutes & Exam Academies',
+    focus: 'Students and parents ask conversational AI tools which institute has the strongest selection record, faculty credentials and syllabus coverage. We format batch structures, Course schema and verified student outcomes.',
+    outcome: 'Prominent AI recommendations that drive direct counselling calls and campus admission visits.',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"/></svg>`,
+    accentBorder: 'border-t-cyan-500',
+    iconBg: 'bg-cyan-50 text-cyan-700 border-cyan-200',
+  },
+  {
+    sector: 'Legal, Tax & Advisory',
+    title: 'Corporate Law Firms, CA Practices & Consultancies',
+    focus: 'Founders and CFOs turn to Google AI Overviews and Perplexity for clear explanations on corporate compliance, FEMA rules, GST audits and arbitration. We build partner attributed legal and financial answer libraries.',
+    outcome: 'Authoritative source links inside AI regulatory summaries that attract corporate advisory retainers.',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>`,
+    accentBorder: 'border-t-accent-500',
+    iconBg: 'bg-violet-50 text-accent-600 border-violet-200',
+  },
+  {
+    sector: 'Ecommerce & Luxury Retail',
+    title: 'D2C Brands, Bridal Couture & Interior Studios',
+    focus: 'Shoppers ask ChatGPT Shopping and Gemini where to find authentic bridal couture, handcrafted furniture or clean D2C products. We implement rich Product schema, material attributes and showroom entity signals.',
+    outcome: 'Direct product and showroom citations inside AI shopping assistants driving checkouts and store visits.',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>`,
+    accentBorder: 'border-t-amber-500',
+    iconBg: 'bg-amber-50 text-amber-600 border-amber-200',
+  },
+];
+
+const testimonials = [
+  {
+    name: 'Karanvir Oberoi',
+    title: 'Executive Director',
+    company: 'Propertyways',
+    sector: 'Commercial & Luxury Real Estate, Gurgaon, Noida & Delhi',
+    metrics: [
+      'Cited directly in ChatGPT and Gemini commercial property prompts',
+      'Featured inside Google AI Overviews for NCR leasing queries',
+      '4.3x growth in qualified corporate tenant and HNI buyer calls',
+    ],
+    quote: 'Senior decision makers relocating offices to Gurgaon or Noida now ask ChatGPT and Gemini which commercial real estate firm handles Grade A leasing before they ever search a directory. NK Digital Tech restructured our project pages with factual comparison tables, JSON LD schema and llms.txt files, making Propertyways a consistently cited advisor.',
+    logo: '/images/clients/propertyways.webp',
+  },
+  {
+    name: 'Dr. Sonali Kapoor',
+    title: 'Medical Director',
+    company: 'Vision',
+    sector: 'Super Speciality Eye Surgery Centres, Delhi NCR & Lucknow',
+    metrics: [
+      'Quoted as a primary clinical source in Google AI Overviews',
+      'Recommended on Gemini for cataract and laser eye queries',
+      '290% increase in direct patient consultation calls',
+    ],
+    quote: 'Patients researching eye surgery ask detailed questions on Google and Gemini about lens options and recovery safety. NK Digital Tech built doctor verified 50 word answer blocks and clinical schema across our Delhi NCR and Lucknow pages. Today AI search summaries cite our specialists directly and patients call already trusting our hospital.',
+    logo: '/images/clients/vision.webp',
+  },
+  {
+    name: 'Ashish Khandelwal',
+    title: 'Academic Director',
+    company: 'Creative Academy',
+    sector: 'Competitive Exam Coaching, Delhi, Noida & Lucknow',
+    metrics: [
+      'Named in ChatGPT and Perplexity coaching comparison answers',
+      'Captured position zero answer boxes across 40+ student queries',
+      '240% jump in direct admission counselling enquiries',
+    ],
+    quote: 'Students and parents routinely ask ChatGPT to compare coaching batches, faculty experience and past results across Delhi, Noida and Lucknow. NK Digital Tech organised our syllabus tables and FAQ schema so AI engines can verify every detail cleanly, driving our highest ever organic admission season.',
+    logo: '/images/clients/creative-academy.webp',
+  },
+  {
+    name: 'Meenakshi Malhotra',
+    title: 'Creative Head',
+    company: 'Aangan',
+    sector: 'Bridal Couture & Designer Retail, Delhi, Gurgaon & Lucknow',
+    metrics: [
+      'Recommended in ChatGPT and Gemini bridal showroom queries',
+      'Strong entity visibility across Delhi, Gurgaon and Lucknow',
+      '3.1x increase in private bridal appointment bookings',
+    ],
+    quote: 'Brides planning weddings in North India ask AI assistants where to book authentic handcrafted couture appointments. NK Digital Tech aligned our showroom entity profiles, collection attributes and regional pages, turning conversational AI recommendations into booked showroom consultations every week.',
+    logo: '/images/clients/aangan.webp',
+  },
+];
+
+const stages = [
+  {
+    num: 'Stage 01',
+    step: '01',
+    title: 'AI Citation Baseline, Prompt & Bot Access Audit',
+    body: 'We test 50+ commercial buyer prompts live across Google AI Overviews, ChatGPT, Gemini and Perplexity to measure where your brand and your competitors appear today. Simultaneously, we inspect robots.txt rules, server rendering and schema gaps blocking GPTBot, OAI SearchBot, PerplexityBot or Google Extended.',
+    accent: 'from-brand-600 to-sky-500',
+  },
+  {
+    num: 'Stage 02',
+    step: '02',
+    title: 'Conversational Prompt Mapping & Entity Blueprint',
+    body: 'You receive a clear 90 day plan broken into two week milestones. We map exact buyer questions across Delhi, Noida, Gurgaon and Lucknow, design your Organization and Service knowledge graph connections and plan every commercial answer page required for LLM retrieval.',
+    accent: 'from-accent-600 to-violet-500',
+  },
+  {
+    num: 'Stage 03',
+    step: '03',
+    title: 'Answer Snapshot Publishing, Schema & llms.txt Setup',
+    body: 'Our in house writers and developers rewrite vague copy into 40 to 60 word direct answer snapshots, specification tables and verified FAQs. We inject clean JSON LD structured data, publish llms.txt and llms full.txt machine indexes and build third party Indian industry citations.',
+    accent: 'from-cyan-600 to-teal-500',
+  },
+  {
+    num: 'Stage 04',
+    step: '04',
+    title: 'Multi Model Citation Verification & Lead Attribution',
+    body: 'Every two weeks we verify your live brand mentions inside Google AI Overviews, ChatGPT, Gemini and Perplexity alongside referral traffic from AI domains, Google Map calls and direct buyer enquiries, expanding the topic clusters that bring the strongest commercial return.',
+    accent: 'from-emerald-600 to-green-500',
+  },
+];
+
+const faqs = [
+  {
+    q: 'Which is the best AI SEO company in Delhi NCR to get cited on ChatGPT, Gemini and Google AI Overviews?',
+    a: 'NK Digital Tech is a leading AI SEO Company in Delhi NCR focused on earning verifiable brand citations across Google AI Overviews, ChatGPT, Gemini, Perplexity and Microsoft Copilot. Our senior specialists combine Answer Engine Optimisation, Generative Engine Optimisation, clean JSON LD entity graphs and llms.txt indexing for businesses across Delhi, Noida, Gurgaon and Lucknow.',
+  },
+  {
+    q: 'How do Google AI Overviews, ChatGPT and Gemini decide which companies to recommend?',
+    a: 'AI models use Retrieval Augmented Generation to scan trusted search indexes, extract concise 40 to 60 word factual passages and cross check brand credentials across independent websites. Companies with fast server rendered HTML, clear comparison tables, nested schema markup and consistent reviews across Indian business directories get cited far more often than vague brochure sites.',
+  },
+  {
+    q: 'Why does my website rank on Google but never get mentioned by ChatGPT or Perplexity?',
+    a: 'Ranking in traditional blue links does not guarantee AI citations. Websites often stay invisible in ChatGPT and Perplexity because firewalls or robots.txt files block GPTBot and PerplexityBot, key service facts sit locked inside client side JavaScript, pages bury answers under long introductions or third party directories show inconsistent company details.',
+  },
+  {
+    q: 'What is the difference between traditional SEO, AEO and GEO?',
+    a: 'Traditional SEO helps individual web pages rank in standard search engine link lists. Answer Engine Optimisation structures pages with question led headings, concise definitions and FAQ schema to win direct answer boxes and voice responses. Generative Engine Optimisation builds deep entity authority, structured data tables and multi source brand consensus so conversational LLMs recommend your company.',
+  },
+  {
+    q: 'What is an llms.txt file and does my business website need one for AI SEO?',
+    a: 'An llms.txt file is a clean, machine readable markdown directory placed at the root of your domain that guides large language models directly to your core services, regional offices and factual documentation without HTML clutter. Pairing llms.txt with clean semantic HTML and JSON LD schema makes it much easier for AI assistants to summarise your business accurately.',
+  },
+  {
+    q: 'How long do AI SEO services in Delhi NCR take to earn citations in AI models?',
+    a: 'Once technical crawler blocks are cleared, answer snapshots are published and structured schema is indexed, brands often begin appearing in Perplexity, ChatGPT Search and Google AI Overviews within four to eight weeks. Broader conversational prompt share across competitive categories in Delhi, Noida, Gurgaon and Lucknow compounds steadily over three to six months.',
+  },
+  {
+    q: 'How do you track brand citations and leads coming from ChatGPT, Gemini and AI Overviews?',
+    a: 'We measure AI search performance across three clear layers. First, we run recurring prompt audits across ChatGPT, Gemini, Perplexity and Google AI Overviews to record citation frequency and sentiment. Second, we segment referral sessions from chatgpt.com, perplexity.ai and gemini.google.com in analytics. Third, we track direct phone calls, WhatsApp enquiries and branded search lift.',
+  },
+  {
+    q: 'Can local businesses in Delhi, Noida, Gurgaon and Lucknow benefit from AI search optimisation?',
+    a: 'Yes. Buyers now ask conversational location prompts such as who is the most reliable eye hospital in South Delhi, commercial property advisor in Gurgaon, IT partner in Noida or township builder in Lucknow. Aligning city specific pages, Google Business Profiles, local reviews and LocalBusiness schema helps your branches win those local AI recommendations.',
+  },
+];
+
+const trustStrip = [
+  'Google AI Overview Citations',
+  'ChatGPT & OpenAI Visibility',
+  'Google Gemini Entity SEO',
+  'Perplexity & Copilot Answers',
+  'AEO & GEO Frameworks',
+  'llms.txt & JSON LD Schema',
+  'Delhi, Noida, Gurgaon & Lucknow',
+  '100% Client Asset Ownership',
+];
+
+const aiSeoSchemaLocalBusiness = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "NK Digital Tech AI SEO Company in Delhi NCR",
+  "url": "https://www.nkdigitaltech.net/ai-seo-company-in-delhi-ncr/",
+  "logo": "https://www.nkdigitaltech.net/images/ai-seo-delhi-ncr/hero-ai-seo-company-delhi-ncr.webp",
+  "image": "https://www.nkdigitaltech.net/images/ai-seo-delhi-ncr/hero-ai-seo-company-delhi-ncr.webp",
+  "description": "NK Digital Tech is an AI SEO Company in Delhi NCR helping brands get cited on Google AI Overviews, ChatGPT, Gemini and Perplexity for daily buyer enquiries.",
+  "email": "connect@nkdigitaltech.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "New Delhi",
+    "addressRegion": "Delhi NCR",
+    "addressCountry": "IN"
+  },
+  "areaServed": [
+    "Delhi NCR",
+    "New Delhi",
+    "Noida",
+    "Greater Noida",
+    "Gurgaon",
+    "Gurugram",
+    "Lucknow",
+    "Faridabad",
+    "Ghaziabad"
+  ],
+  "serviceType": [
+    "AI SEO Services",
+    "Google AI Overview Optimisation",
+    "ChatGPT SEO Services",
+    "Google Gemini Entity SEO",
+    "Answer Engine Optimisation (AEO)",
+    "Generative Engine Optimisation (GEO)",
+    "LLM SEO Services & llms.txt Implementation"
+  ]
+});
+
+const aiSeoSchemaFAQ = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map((item) => ({
+    "@type": "Question",
+    "name": item.q,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": item.a
+    }
+  }))
+});
+---
+
+<Layout
+  title={pageTitle}
+  description={pageDescription}
+  canonical={pageCanonical}
+  ogImage="https://www.nkdigitaltech.net/images/ai-seo-delhi-ncr/hero-ai-seo-company-delhi-ncr.webp"
+  preloadImage="/images/ai-seo-delhi-ncr/hero-ai-seo-company-delhi-ncr.webp"
+  customSchemaLocalBusiness={aiSeoSchemaLocalBusiness}
+  customSchemaFAQ={aiSeoSchemaFAQ}
+  utilityTagline="AI SEO Company in Delhi NCR • Serving Delhi, Noida, Gurgaon & Lucknow"
+  brandSubtitle="AI SEO, AEO, GEO & LLM Citations"
+  footerBio="AI SEO Company in Delhi NCR helping commercial brands secure direct citations across Google AI Overviews, ChatGPT, Gemini, Perplexity and Copilot across Delhi, Noida, Gurgaon and Lucknow."
+  footerTagline="AI SEO Company in Delhi NCR • Delhi, Noida, Gurgaon & Lucknow"
+>
+
+  <!-- =====================================================================
+       SECTION 1: HERO (DARK SURFACE WITH UNIQUE AI SEO HERO IMAGE & SUBHEADLINE)
+  ===================================================================== -->
+  <section class="relative surface-dark overflow-hidden pt-8 pb-12 sm:pt-16 sm:pb-20 lg:pt-20 lg:pb-24 border-b border-slate-800/80">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="absolute inset-0 mesh-glow pointer-events-none"></div>
+    <div class="absolute -top-36 -left-36 w-96 h-96 bg-brand-500/20 rounded-full blur-[130px] pointer-events-none"></div>
+    <div class="absolute top-1/4 -right-36 w-96 h-96 bg-accent-500/20 rounded-full blur-[130px] pointer-events-none"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-7 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns: Headline & CTA -->
+        <div class="lg:col-span-7 text-left min-w-0">
+          <div class="badge-dark mb-4 sm:mb-6">
+            <span class="w-2 h-2 rounded-full bg-brand-400 animate-ping flex-shrink-0"></span>
+            <span class="min-w-0">Google AI Overviews &bull; ChatGPT &bull; Gemini &bull; Perplexity</span>
+          </div>
+
+          <h1 class="font-display text-[1.95rem] sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-[1.15] sm:leading-[1.1] mb-4 sm:mb-6 text-glow">
+            AI SEO Company <br />
+            <span class="gradient-text-light">in Delhi NCR</span>
+          </h1>
+
+          <p class="text-[13.5px] sm:text-base md:text-lg text-slate-300 leading-relaxed mb-6 sm:mb-8 font-normal text-justify hyphens-auto [text-align-last:left]">
+            NK Digital Tech is a specialised <strong class="text-white font-semibold">AI SEO Company in Delhi NCR</strong> helping commercial brands get directly cited, quoted and recommended inside Google AI Overviews, ChatGPT, Google Gemini, Perplexity and Microsoft Copilot. We structure factual answer snapshots, clean JSON LD entity graphs, llms.txt indexes and verified third party credentials for ambitious businesses across Delhi, Noida, Gurgaon and Lucknow.
+          </p>
+
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 mb-7 sm:mb-10">
+            <a href="#contact" class="btn-primary w-full sm:w-auto min-h-[48px] text-sm sm:text-base px-5 sm:px-8 py-3.5 sm:py-4">
+              <span>Claim Your Free AI Citation Audit</span>
+              <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+              </svg>
+            </a>
+            <a href="#services" class="btn-secondary-dark w-full sm:w-auto min-h-[48px] text-sm sm:text-base px-5 sm:px-7 py-3.5 sm:py-4">
+              <span>Explore Our Six AI SEO Pillars</span>
+            </a>
+          </div>
+
+          <!-- Trust Verification Strip (2x4 Grid on Mobile, Flex Pills on Desktop) -->
+          <div class="pt-5 sm:pt-6 border-t border-slate-800/80">
+            <div class="grid grid-cols-2 sm:flex sm:flex-wrap items-stretch sm:items-center gap-2">
+              {trustStrip.map((item) => (
+                <span class="px-2.5 sm:px-3 py-2 sm:py-1.5 rounded-lg bg-slate-900/90 border border-slate-800 text-[11px] sm:text-xs text-slate-300 font-medium flex items-center justify-center sm:justify-start text-center sm:text-left leading-tight">
+                  {item}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Unique AI SEO Hero Image -->
+        <div class="lg:col-span-5 min-w-0">
+          <div class="relative rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-700/80 shadow-2xl shadow-brand-500/15 bg-slate-900 group">
+            <div class="relative">
+              <img
+                src="/images/ai-seo-delhi-ncr/hero-ai-seo-company-delhi-ncr.webp"
+                alt="AI SEO Company in Delhi NCR Specialists Reviewing ChatGPT Gemini and Google AI Overview Citations"
+                width="960"
+                height="540"
+                fetchpriority="high"
+                decoding="async"
+                class="w-full aspect-[16/10] sm:aspect-auto sm:h-72 md:h-[380px] lg:h-[400px] object-cover object-center group-hover:scale-105 transition-transform duration-500"
+              />
+              <div class="hidden sm:block absolute inset-0 bg-gradient-to-t from-[#050a14] via-transparent to-transparent opacity-80"></div>
+            </div>
+            <div class="relative sm:absolute sm:bottom-4 sm:left-4 sm:right-4 glass-card border-t sm:border border-slate-800 sm:rounded-2xl p-3.5 sm:p-4">
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-1">
+                <span class="text-xs font-bold text-white">Conversational AI Citation System</span>
+                <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-400">
+                  <span class="w-2 h-2 rounded-full bg-emerald-400 flex-shrink-0"></span>
+                  Live LLM Discovery
+                </span>
+              </div>
+              <p class="text-[11px] sm:text-xs text-slate-300 text-justify hyphens-auto [text-align-last:left] leading-relaxed">
+                Built so Google AI Overviews, ChatGPT, Gemini and Perplexity cite your brand across Delhi, Noida, Gurgaon and Lucknow.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 2: INTRODUCTION (CRISP WHITE CONTRAST SECTION + AI SEO TEAM IMAGE)
+  ===================================================================== -->
+  <section class="relative surface-white py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns: Snapshot + Unique AI SEO Copy -->
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-light mb-3.5 sm:mb-4">AEO, GEO &amp; LLM Search Citations</div>
+          <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-snug sm:leading-tight mb-4 sm:mb-6">
+            How Our AI SEO Company in Delhi NCR <span class="gradient-text-dark">Gets Your Brand Cited by AI Models</span>
+          </h2>
+          <div class="space-y-4 sm:space-y-5 text-slate-700 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            <p>
+              An <strong>AI SEO Company in Delhi NCR</strong> helps businesses earn direct mentions, source links and shortlisted recommendations inside Google AI Overviews, ChatGPT, Google Gemini, Perplexity and Microsoft Copilot. Buyer behaviour across North India has shifted from typing fragmented two word phrases to asking full, detailed questions. Decision makers in Gurgaon, Noida, Delhi and Lucknow now ask AI assistants to compare hospital success rates, shortlist RERA approved commercial builders, evaluate enterprise software vendors or recommend trusted legal and financial advisors before opening a single tab.
+            </p>
+            <p>
+              When an executive or consumer asks a conversational prompt, large language models do not hand out ten blue links. They synthesise one confident answer from two or three verifiable sources. Partnering with an experienced <strong>AI SEO agency in Delhi NCR</strong> puts your company inside that exact answer. Recognised by clients as the <strong>best AI SEO company in Delhi NCR</strong> for accountable pipeline growth, we combine <strong>Answer Engine Optimisation</strong>, <strong>Generative Engine Optimisation</strong> and technical <strong>LLM SEO services</strong> so AI platforms understand your credentials, verify your track record and send high trust buyers straight to your team.
+            </p>
+          </div>
+          <div class="mt-6 sm:mt-8 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
+            <a href="#contact" class="btn-primary w-full sm:w-auto min-h-[48px]">
+              <span>Speak With Our AI SEO Consultants</span>
+              <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+              </svg>
+            </a>
+            <a href="#why-us" class="btn-secondary-light w-full sm:w-auto min-h-[48px]">
+              <span>Compare AI Citation Standards</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Unique AI SEO Team Image + Stats -->
+        <div class="lg:col-span-5 space-y-4 sm:space-y-5 min-w-0">
+          <div class="rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-200 shadow-lg bg-slate-100">
+            <img
+              src="/images/ai-seo-delhi-ncr/ai-seo-agency-team-delhi-ncr.webp"
+              alt="AI SEO Consultants in Delhi NCR Mapping Entity Graphs and Conversational Prompts"
+              width="800"
+              height="533"
+              class="w-full aspect-[16/10] sm:aspect-auto sm:h-64 lg:h-72 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="grid grid-cols-2 gap-3 sm:gap-4">
+            {[
+              { val: '5 Models', label: 'AI Overview, ChatGPT, Gemini', sub: 'Plus Perplexity & Copilot' },
+              { val: '40 to 60', label: 'Word Answer Snapshots', sub: 'Built for clean RAG retrieval' },
+              { val: '90 Days', label: 'Citation Action Plan', sub: 'Two week review milestones' },
+              { val: '100%', label: 'Code & Schema Ownership', sub: 'Full client admin control' },
+            ].map((stat) => (
+              <div class="elevated-card rounded-xl sm:rounded-2xl p-3.5 sm:p-4 min-w-0">
+                <div class="font-display font-black text-xl sm:text-2xl text-brand-600 mb-0.5">{stat.val}</div>
+                <div class="text-[11px] sm:text-xs font-bold text-slate-900 leading-snug">{stat.label}</div>
+                <div class="text-[10.5px] sm:text-[11px] text-slate-500 leading-snug mt-0.5">{stat.sub}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 3: PROBLEM STATEMENT (DEEP INDIGO DARK CONTRAST SECTION)
+  ===================================================================== -->
+  <section class="relative surface-indigo py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="max-w-7xl mx-auto relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns: Problem Statement Justified Copy -->
+        <div class="lg:col-span-7 min-w-0">
+          <div class="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-3.5 py-1 sm:py-1.5 rounded-full text-[10px] sm:text-xs font-bold uppercase tracking-wider sm:tracking-widest bg-amber-500/10 border border-amber-500/30 text-amber-300 max-w-full leading-snug mb-4 sm:mb-5">
+            <svg class="w-4 h-4 text-amber-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+            </svg>
+            <span>Why AI Models Skip Most Websites</span>
+          </div>
+
+          <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-white tracking-tight leading-snug sm:leading-tight mb-4 sm:mb-6">
+            Why Even Well Ranked Websites Stay Invisible on ChatGPT, Gemini and Google AI Overviews
+          </h2>
+
+          <div class="space-y-4 sm:space-y-5 text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            <p>
+              Ranking in traditional search results no longer guarantees that ChatGPT, Gemini or Google AI Overviews will mention your business. Most corporate websites across Delhi, Noida, Gurgaon and Lucknow remain invisible to AI assistants because of four specific technical and editorial gaps. Either security settings accidentally block GPTBot and PerplexityBot, heavy client side JavaScript hides core text from non rendering AI crawlers, promotional copy buries plain facts under vague slogans or external business directories show conflicting company details.
+            </p>
+            <p>
+              Retrieval systems powering modern answer engines extract passages based on factual clarity, entity confidence and third party consensus. When a competitor publishes a clean comparison table, verified Service schema and a direct 50 word answer to a buyer prompt while your page offers generic sales paragraphs, the AI model cites your competitor every time. Working with a dedicated <strong>AI search optimisation company</strong> removes every technical barrier and turns your website into the primary reference source AI models trust.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Diagnostic Comparison Cards -->
+        <div class="lg:col-span-5 space-y-3.5 sm:space-y-4 min-w-0">
+          <div class="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6 border-l-4 border-l-rose-500">
+            <div class="flex flex-wrap items-center justify-between gap-1.5 mb-2">
+              <span class="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-rose-400">Why AI Skips Your Brand</span>
+              <span class="text-[11px] sm:text-xs text-slate-400">Zero LLM Citations</span>
+            </div>
+            <h3 class="font-display font-bold text-[15px] sm:text-base text-white mb-2 leading-snug">Blocked Bots, Unstructured Prose &amp; Missing Entities</h3>
+            <p class="text-xs text-slate-300 leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+              Heavy JavaScript pages, vague marketing claims and absent JSON LD schema prevent ChatGPT, Gemini, Perplexity and Google AI Overviews from verifying or quoting your services.
+            </p>
+          </div>
+
+          <div class="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6 border-l-4 border-l-emerald-400">
+            <div class="flex flex-wrap items-center justify-between gap-1.5 mb-2">
+              <span class="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-emerald-400">NK Digital Tech Citation System</span>
+              <span class="text-[11px] sm:text-xs text-brand-300">First Choice AI Source</span>
+            </div>
+            <h3 class="font-display font-bold text-[15px] sm:text-base text-white mb-2 leading-snug">Answer Snapshots, Entity Graphs &amp; llms.txt</h3>
+            <p class="text-xs text-slate-300 leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+              Delivers clean static HTML, 40 to 60 word direct answers, nested schema markup and cross web consensus so AI models cite and recommend your business with confidence.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 4: SERVICES (LIGHT COOL ALABASTER CONTRAST + AI SEO SERVICES IMAGE)
+  ===================================================================== -->
+  <section id="services" class="relative surface-cool py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <!-- Services Header with Unique AI SEO Services Image -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 items-center mb-9 sm:mb-16">
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-light mb-3">Six Conversational Search Pillars</div>
+          <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-snug sm:leading-tight mb-3 sm:mb-4">
+            Specialised AI SEO Services in Delhi NCR and Lucknow
+          </h2>
+          <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            Our <strong>AI SEO services in Delhi NCR</strong> unite Google AI Overview capture, OpenAI prompt visibility, Google Knowledge Graph entity building, AEO, GEO and technical machine readability. Every deliverable is built so conversational search models cite your business accurately and send ready to buy prospects directly to you.
+          </p>
+        </div>
+        <div class="lg:col-span-5 min-w-0">
+          <div class="rounded-2xl overflow-hidden border border-slate-200 shadow-md bg-white">
+            <img
+              src="/images/ai-seo-delhi-ncr/chatgpt-gemini-ai-seo-services.webp"
+              alt="AI SEO Services in Delhi NCR Optimising for ChatGPT Gemini and Google AI Overviews"
+              width="800"
+              height="450"
+              class="w-full aspect-[16/9] sm:aspect-auto sm:h-56 lg:h-64 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- 3 Columns x 2 Rows Grid Layout -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-7">
+        {services.map((s) => (
+          <div class="elevated-card rounded-2xl p-5 sm:p-7 flex flex-col justify-between group sm:hover:-translate-y-1">
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-4 sm:mb-6">
+                <div class={`w-11 h-11 sm:w-12 sm:h-12 rounded-xl border flex items-center justify-center flex-shrink-0 ${s.iconStyle}`}>
+                  <Fragment set:html={s.icon} />
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class={`text-[10.5px] sm:text-[11px] font-semibold px-2.5 py-1 rounded-md ${s.badgeColor}`}>
+                    {s.category}
+                  </span>
+                  <span class="font-display font-black text-base sm:text-lg text-slate-300">{s.num}</span>
+                </div>
+              </div>
+
+              <h3 class="font-display font-bold text-[17px] sm:text-xl text-slate-900 mb-2.5 sm:mb-3 leading-snug group-hover:text-brand-600 transition-colors">
+                {s.title}
+              </h3>
+
+              <p class="text-slate-600 text-[13px] sm:text-sm leading-relaxed mb-4 sm:mb-6 text-justify hyphens-auto [text-align-last:left]">
+                {s.body}
+              </p>
+            </div>
+
+            <div>
+              <div class={`rounded-xl border p-3.5 sm:p-4 mb-3.5 sm:mb-5 ${s.impactStyle}`}>
+                <div class="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-slate-900 mb-1">
+                  <svg class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                  </svg>
+                  <span>Citation Impact</span>
+                </div>
+                <p class="text-xs text-slate-700 leading-relaxed font-medium text-justify hyphens-auto [text-align-last:left]">
+                  {s.impact}
+                </p>
+              </div>
+
+              <a href={s.href} class="inline-flex items-center gap-2 py-2 min-h-[40px] text-xs font-bold text-brand-600 hover:text-brand-700 group-hover:gap-3 transition-all">
+                <span>{s.cta}</span>
+                <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 5: REGIONAL LOCATIONS (DARK NAVY + MULTI CITY AI SEO IMAGE)
+  ===================================================================== -->
+  <section id="locations" class="relative surface-navy py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <!-- Regional Header with Unique Multi City AI SEO Image -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 items-center mb-9 sm:mb-16">
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-dark mb-3">Four Regional AI Search Hubs</div>
+          <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-white tracking-tight leading-snug sm:leading-tight mb-3 sm:mb-4">
+            Regional AI SEO Coverage Across Delhi, Noida, Gurgaon and Lucknow
+          </h2>
+          <p class="text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            Conversational prompts carry strong city context. A founder asking ChatGPT for an enterprise IT vendor in Noida or a corporate tenant querying Gemini for office space in Gurgaon expects verified local proof, just as families in Delhi and Lucknow ask AI assistants for trusted hospitals, academies and builders in their own city. We align your regional pages, local schema and review signals across all four markets.
+          </p>
+        </div>
+        <div class="lg:col-span-5 min-w-0">
+          <div class="rounded-2xl overflow-hidden border border-slate-700/80 shadow-xl bg-slate-900">
+            <img
+              src="/images/ai-seo-delhi-ncr/ai-seo-delhi-noida-gurgaon-lucknow.webp"
+              alt="Regional AI SEO Company in Delhi NCR Serving Delhi Noida Gurgaon and Lucknow"
+              width="800"
+              height="450"
+              class="w-full aspect-[16/9] sm:aspect-auto sm:h-56 lg:h-64 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- 1 Row x 4 Columns Responsive Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+        {cities.map((c) => (
+          <div class="glass-card rounded-2xl p-5 sm:p-6 flex flex-col justify-between group sm:hover:-translate-y-1">
+            <div>
+              <div class={`h-1 w-full bg-gradient-to-r ${c.accent} rounded-full mb-4 sm:mb-5`}></div>
+
+              <div class="flex items-center justify-between gap-2 mb-3.5 sm:mb-4">
+                <span class="px-2.5 py-1 rounded-md bg-slate-800 border border-slate-700 text-[11px] font-bold uppercase tracking-wider text-brand-300">
+                  {c.hub}
+                </span>
+                <span class="text-xs font-semibold text-slate-400">{c.city}</span>
+              </div>
+
+              <h3 class="font-display font-bold text-base sm:text-lg text-white mb-2.5 sm:mb-3 leading-snug">
+                {c.keyword}
+              </h3>
+
+              <p class="text-slate-300 text-[13px] sm:text-sm leading-relaxed mb-4 sm:mb-5 text-justify hyphens-auto [text-align-last:left]">
+                {c.desc}
+              </p>
+            </div>
+
+            <div class="pt-3.5 sm:pt-4 border-t border-slate-800">
+              <a href={c.href} class="inline-flex items-center gap-1.5 py-2 min-h-[40px] text-xs font-bold text-brand-400 hover:text-brand-300 group-hover:gap-2.5 transition-all">
+                <span>{c.cta}</span>
+                <svg class="w-3.5 h-3.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 6: WHY NK DIGITAL TECH (CRISP WHITE CONTRAST SECTION)
+  ===================================================================== -->
+  <section id="why-us" class="relative surface-white py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-14 text-left sm:text-center">
+        <div class="badge-light mb-3">Why Enterprises Choose Us</div>
+        <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-snug sm:leading-tight mb-3 sm:mb-4">
+          Why NK Digital Tech Leads as an AI SEO Company in Delhi NCR
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed mb-4 text-justify hyphens-auto [text-align-last:left]">
+          Many agencies simply rename their old blog packages and call themselves AI specialists. Working with dedicated <strong>AI SEO consultants in Delhi NCR</strong> means building machine readable entity infrastructure, human written factual depth and verified multi platform citations that stand up to every model update.
+        </p>
+        <p class="text-slate-700 font-semibold text-xs sm:text-sm">
+          Compare a conventional keyword vendor with our AI citation methodology:
+        </p>
+      </div>
+
+      <!-- Desktop Comparison Matrix -->
+      <div class="hidden md:block overflow-hidden rounded-2xl border border-slate-200 shadow-lg">
+        <table class="w-full text-left border-collapse">
+          <thead>
+            <tr class="bg-slate-900 text-white">
+              <th class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-slate-300 w-1/4">
+                Evaluation Benchmark
+              </th>
+              <th class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-rose-300 w-[37.5%] border-l border-slate-800">
+                Conventional Keyword Vendor
+              </th>
+              <th class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-brand-300 w-[37.5%] border-l border-slate-800 bg-slate-950">
+                NK Digital Tech (AI Citation System)
+              </th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200 text-sm">
+            {comparison.map((row, idx) => (
+              <tr class={idx % 2 === 0 ? 'bg-white' : 'bg-slate-50/80'}>
+                <td class="py-5 px-6 font-display font-bold text-slate-900">
+                  {row.metric}
+                </td>
+                <td class="py-5 px-6 text-slate-600 border-l border-slate-200">
+                  <div class="flex items-start gap-2.5">
+                    <svg class="w-4 h-4 text-rose-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                    <span>{row.typical}</span>
+                  </div>
+                </td>
+                <td class="py-5 px-6 text-slate-900 font-medium border-l border-slate-200 bg-sky-50/40">
+                  <div class="flex items-start gap-2.5">
+                    <svg class="w-4 h-4 text-emerald-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span>{row.nk}</span>
+                  </div>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Mobile Comparison Cards -->
+      <div class="md:hidden space-y-3.5">
+        {comparison.map((row) => (
+          <div class="elevated-card rounded-2xl p-4 space-y-2.5">
+            <h3 class="font-display font-bold text-slate-900 text-[15px] leading-snug">{row.metric}</h3>
+            <div class="rounded-xl bg-rose-50 border border-rose-100 p-3">
+              <div class="flex items-center gap-1.5 mb-1">
+                <svg class="w-3.5 h-3.5 text-rose-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+                <p class="text-[10px] font-bold uppercase tracking-wider text-rose-600">Conventional Vendor</p>
+              </div>
+              <p class="text-xs text-slate-700 leading-relaxed">{row.typical}</p>
+            </div>
+            <div class="rounded-xl bg-sky-50 border border-sky-200 p-3">
+              <div class="flex items-center gap-1.5 mb-1">
+                <svg class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                </svg>
+                <p class="text-[10px] font-bold uppercase tracking-wider text-brand-600">NK Digital Tech</p>
+              </div>
+              <p class="text-xs text-slate-900 font-semibold leading-relaxed">{row.nk}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 7: OUR CLIENTS (DARK INDIGO CONTRAST SECTION BELOW WHY US)
+  ===================================================================== -->
+  <section id="clients" class="relative surface-indigo py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-14 text-left sm:text-center">
+        <div class="badge-dark mb-3">Brands Cited Across AI Search</div>
+        <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-white tracking-tight leading-snug sm:leading-tight mb-3 sm:mb-4">
+          Enterprises Earning Recommendations on ChatGPT, Gemini &amp; AI Overviews
+        </h2>
+        <p class="text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          Commercial property advisors, township builders, super speciality eye hospitals, exam coaching academies and designer couture houses across Delhi, Noida, Gurgaon and Lucknow rely on NK Digital Tech to stay visible inside conversational search.
+        </p>
+      </div>
+
+      <!-- 5 Column Responsive Client Grid (Balanced 2+2+1 Full Span on Mobile) -->
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-5">
+        {clients.map((client) => (
+          <div class="glass-card rounded-2xl p-3.5 sm:p-5 flex flex-col items-center text-center group sm:hover:-translate-y-1 last:col-span-2 sm:last:col-span-1">
+            <div class="w-full h-16 sm:h-20 rounded-xl bg-white border border-slate-200 flex items-center justify-center p-2.5 sm:p-4 mb-3 sm:mb-4 shadow-sm">
+              <img
+                src={client.logo}
+                alt={`${client.name} Logo`}
+                width="130"
+                height="48"
+                class="max-h-9 sm:max-h-12 w-auto object-contain"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <h3 class="font-display font-bold text-sm sm:text-base text-white mb-1">{client.name}</h3>
+            <p class="text-[11px] sm:text-xs text-slate-300 leading-snug mb-2.5 sm:mb-3 flex-grow">{client.sector}</p>
+            <span class="inline-flex items-center justify-center gap-1 text-[10px] sm:text-[11px] font-semibold text-brand-300 bg-brand-500/15 border border-brand-500/30 px-2 sm:px-2.5 py-1 rounded-md leading-tight max-w-full">
+              <svg class="w-3 h-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+              </svg>
+              <span>{client.region}</span>
+            </span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 8: INDUSTRIES (LIGHT SLATE CONTRAST SECTION - 3x2 GRID)
+  ===================================================================== -->
+  <section id="industries" class="relative surface-slate py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-16 text-left sm:text-center">
+        <div class="badge-light mb-3">Industry Prompt Roadmaps</div>
+        <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-snug sm:leading-tight mb-3 sm:mb-4">
+          Sector Specific AI Citation Playbooks Across Six Verticals
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          Every industry faces distinct buyer prompts and verification standards inside ChatGPT, Gemini, Perplexity and Google AI Overviews. We build structured topic clusters around how real customers evaluate providers in your sector.
+        </p>
+      </div>
+
+      <!-- 3 Columns x 2 Rows Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-7">
+        {industries.map((ind) => (
+          <div class={`elevated-card rounded-2xl p-5 sm:p-7 border-t-4 ${ind.accentBorder} flex flex-col justify-between sm:hover:-translate-y-1`}>
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-4 sm:mb-5">
+                <div class={`w-10 h-10 sm:w-11 sm:h-11 rounded-xl border flex items-center justify-center flex-shrink-0 ${ind.iconBg}`}>
+                  <Fragment set:html={ind.icon} />
+                </div>
+                <span class="text-[11px] font-semibold text-slate-600 bg-slate-100 px-2.5 py-1 rounded-md">
+                  {ind.sector}
+                </span>
+              </div>
+
+              <h3 class="font-display font-bold text-[17px] sm:text-xl text-slate-900 mb-3 sm:mb-4 leading-snug">
+                {ind.title}
+              </h3>
+
+              <div class="mb-4 sm:mb-5">
+                <p class="text-[11px] font-bold uppercase tracking-wider text-brand-600 mb-1.5">
+                  AI Prompt Strategy
+                </p>
+                <p class="text-slate-600 text-[13px] sm:text-sm leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+                  {ind.focus}
+                </p>
+              </div>
+            </div>
+
+            <div class="rounded-xl bg-emerald-50/70 border border-emerald-200/80 p-3.5 sm:p-4">
+              <p class="text-[11px] font-bold uppercase tracking-wider text-emerald-700 mb-1">
+                Commercial Result
+              </p>
+              <p class="text-slate-800 text-xs font-medium leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+                {ind.outcome}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 9: TESTIMONIALS (DEEP NAVY CONTRAST SECTION - 2x2 GRID)
+  ===================================================================== -->
+  <section id="testimonials" class="relative surface-dark py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="absolute inset-0 mesh-glow pointer-events-none opacity-60"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-16 text-left sm:text-center">
+        <div class="badge-dark mb-3">Verified AI Citation Outcomes</div>
+        <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-white tracking-tight leading-snug sm:leading-tight mb-3 sm:mb-4">
+          How AI Citations Drive Qualified Leads Across Delhi NCR and Lucknow
+        </h2>
+        <p class="text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          Measured citation wins and inbound enquiry growth reported by executive leaders across real estate, super speciality healthcare, education and luxury retail.
+        </p>
+      </div>
+
+      <!-- 2 Columns x 2 Rows Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-7">
+        {testimonials.map((t) => (
+          <div class="glass-card rounded-2xl p-5 sm:p-8 flex flex-col justify-between sm:hover:-translate-y-1">
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-4 sm:mb-5">
+                <div class="flex items-center gap-1">
+                  {[1, 2, 3, 4, 5].map(() => (
+                    <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                    </svg>
+                  ))}
+                </div>
+                <span class="text-[10px] sm:text-[11px] font-semibold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-1 rounded-md">
+                  Verified AI Search Client
+                </span>
+              </div>
+
+              <p class="text-slate-200 text-[13.5px] sm:text-base leading-relaxed italic mb-5 sm:mb-6 text-justify hyphens-auto [text-align-last:left]">
+                "{t.quote}"
+              </p>
+
+              <div class="rounded-xl bg-slate-900/90 border border-slate-700/80 p-3.5 sm:p-4 mb-5 sm:mb-6">
+                <p class="text-[11px] font-bold uppercase tracking-wider text-brand-400 mb-2 sm:mb-2.5">
+                  Measured Citation Impact
+                </p>
+                <ul class="space-y-2">
+                  {t.metrics.map((m) => (
+                    <li class="flex items-start gap-2 text-xs text-slate-300 font-medium leading-snug">
+                      <svg class="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                      </svg>
+                      <span>{m}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3.5 sm:gap-4 pt-3.5 sm:pt-4 border-t border-slate-800">
+              <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-white p-2 flex items-center justify-center flex-shrink-0 shadow-sm">
+                <img
+                  src={t.logo}
+                  alt={`${t.company} Logo`}
+                  width="48"
+                  height="48"
+                  class="max-h-8 sm:max-h-10 w-auto object-contain"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="min-w-0">
+                <h3 class="font-display font-bold text-white text-sm sm:text-base leading-snug">{t.name}</h3>
+                <p class="text-xs text-slate-300 leading-snug">
+                  {t.title}, <strong class="text-brand-400 font-semibold">{t.company}</strong>
+                </p>
+                <p class="text-[10.5px] sm:text-[11px] text-slate-400 mt-0.5 leading-snug">{t.sector}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 10: HOW WE WORK (CRISP WHITE CONTRAST SECTION - 4 STAGES)
+  ===================================================================== -->
+  <section class="relative surface-white py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-16 text-left sm:text-center">
+        <div class="badge-light mb-3">Our 4 Stage Citation Process</div>
+        <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-snug sm:leading-tight mb-3 sm:mb-4">
+          How We Build Verified AI Search Citations in 90 Days
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          Our four stage process removes technical AI crawler blocks first, structures commercial answer passages across your priority pages and verifies live brand mentions across Google AI Overviews, ChatGPT, Gemini and Perplexity.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-7">
+        {stages.map((s) => (
+          <div class="elevated-card rounded-2xl p-5 sm:p-8 relative overflow-hidden group sm:hover:-translate-y-1">
+            <div class="flex items-center justify-between gap-4 mb-3.5 sm:mb-5">
+              <span class={`inline-flex items-center px-2.5 sm:px-3 py-1 rounded-lg text-xs font-bold uppercase tracking-wider text-white bg-gradient-to-r ${s.accent}`}>
+                {s.num}
+              </span>
+              <span class="font-display font-black text-3xl sm:text-4xl text-slate-200 group-hover:text-slate-300 transition-colors">
+                {s.step}
+              </span>
+            </div>
+            <h3 class="font-display font-bold text-[17px] sm:text-xl text-slate-900 mb-2.5 sm:mb-3 leading-snug">
+              {s.title}
+            </h3>
+            <p class="text-slate-600 text-[13px] sm:text-sm leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+              {s.body}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 11: PARTNER WITH THE AI SEO COMPANY IN DELHI NCR (CONCLUSION)
+  ===================================================================== -->
+  <section class="relative surface-indigo py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-7 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns: Partner Paragraphs (Justified) -->
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-dark mb-3.5 sm:mb-4">Future Proof Search Authority</div>
+          <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-white tracking-tight leading-snug sm:leading-tight mb-4 sm:mb-6">
+            Partner With a Trusted AI SEO Company in Delhi NCR
+          </h2>
+          <div class="space-y-4 sm:space-y-5 text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            <p>
+              Search discovery will never go back to ten simple blue links. Across Delhi, Noida, Gurgaon and Lucknow, B2B buyers, patients, property investors and students now rely on Google AI Overviews, ChatGPT, Google Gemini, Perplexity and Copilot to filter noise and name the two or three providers worth contacting. Brands that build clean entity authority today secure a compounding referral advantage while slower competitors wonder why click volume faded.
+            </p>
+            <p>
+              When you choose NK Digital Tech as your <strong>AI SEO Company in Delhi NCR</strong>, you work directly with senior search strategists and developers who align technical HTML speed, structured answer snapshots, JSON LD schema, llms.txt discovery files and third party consensus around measurable business enquiries. Reach out today for a live citation audit showing exactly how AI models describe your brand and your competitors right now.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Unique AI Citation Growth Image -->
+        <div class="lg:col-span-5 min-w-0">
+          <div class="rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-700/80 shadow-2xl bg-slate-900">
+            <img
+              src="/images/ai-seo-delhi-ncr/generative-ai-citation-growth.webp"
+              alt="AI SEO Company in Delhi NCR Reviewing Verified ChatGPT and Google AI Overview Lead Growth"
+              width="800"
+              height="450"
+              class="w-full aspect-[16/10] sm:aspect-auto sm:h-64 lg:h-72 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 12: FAQ (LIGHT COOL SLATE CONTRAST SECTION)
+  ===================================================================== -->
+  <section id="faq" class="relative surface-cool py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-left sm:text-center mb-9 sm:mb-14">
+        <div class="badge-light mb-3">Conversational AI &amp; Buyer Answers</div>
+        <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-snug sm:leading-tight mb-3 sm:mb-4">
+          Frequently Asked Questions About Hiring an AI SEO Company in Delhi NCR
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          Direct, self contained answers to the exact questions founders, marketing directors and buyers ask on ChatGPT, Gemini, Perplexity and Google before choosing an AI search partner.
+        </p>
+      </div>
+
+      <div class="space-y-3 sm:space-y-4">
+        {faqs.map((f, i) => (
+          <details class="elevated-card rounded-2xl group overflow-hidden" open={i === 0}>
+            <summary class="flex items-start sm:items-center justify-between gap-3 sm:gap-4 px-4 sm:px-6 py-4 sm:py-5 min-h-[54px] select-none">
+              <div class="flex items-start sm:items-center gap-2.5 sm:gap-3.5 text-left min-w-0">
+                <span class="w-6 h-6 sm:w-7 sm:h-7 rounded-lg bg-sky-50 border border-sky-200 text-brand-600 font-display font-bold text-xs flex items-center justify-center flex-shrink-0 mt-0.5 sm:mt-0">
+                  0{i + 1}
+                </span>
+                <span class="font-display font-bold text-slate-900 text-[14px] sm:text-base md:text-lg leading-snug">
+                  {f.q}
+                </span>
+              </div>
+              <span class="faq-icon w-7 h-7 sm:w-8 sm:h-8 rounded-full border border-slate-200 text-slate-600 flex items-center justify-center flex-shrink-0 mt-0.5 sm:mt-0">
+                <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                </svg>
+              </span>
+            </summary>
+            <div class="px-4 sm:px-6 pb-5 sm:pb-6 pt-3 text-slate-600 text-[13px] sm:text-sm md:text-base leading-relaxed border-t border-slate-100 text-justify hyphens-auto [text-align-last:left]">
+              {f.a}
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 13: SHORT 2 TO 3 LINE CALL TO ACTION BANNER (LAST SECTION)
+  ===================================================================== -->
+  <section id="contact" class="relative surface-dark py-12 sm:py-16 lg:py-20 px-4 sm:px-6 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-5xl mx-auto">
+      <div class="rounded-2xl sm:rounded-3xl bg-gradient-to-r from-brand-600 via-brand-700 to-accent-700 p-6 sm:p-10 md:p-12 text-center text-white shadow-2xl border border-white/15 relative overflow-hidden">
+        <div class="relative z-10 max-w-2xl mx-auto">
+          <h2 class="font-display font-black text-[1.45rem] sm:text-3xl md:text-4xl text-white tracking-tight leading-snug mb-3 sm:mb-4">
+            Ready to Get Cited on Google AI Overviews, ChatGPT &amp; Gemini?
+          </h2>
+
+          <p class="text-sky-50 text-[13px] sm:text-sm md:text-base leading-relaxed mb-6 sm:mb-8">
+            Request a free live AI citation audit from our senior strategists covering your prompt visibility across Delhi, Noida, Gurgaon and Lucknow.
+          </p>
+
+          <a
+            href="mailto:connect@nkdigitaltech.com"
+            class="inline-flex w-full sm:w-auto min-h-[48px] items-center justify-center gap-2 sm:gap-3 px-5 sm:px-8 py-3.5 sm:py-4 rounded-xl bg-white text-slate-950 hover:bg-sky-50 font-display font-bold text-sm sm:text-base shadow-xl transition-all duration-300 active:scale-95 text-center leading-snug"
+          >
+            <span>Claim Your Free AI Citation Audit</span>
+            <svg class="w-4 h-4 sm:w-5 sm:h-5 text-brand-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mobile Sticky Bottom Quick Action Bar -->
+  <div class="sm:hidden fixed bottom-0 inset-x-0 z-40 bg-[#050a14]/95 backdrop-blur-xl border-t border-slate-800 px-3.5 py-2.5 shadow-[0_-8px_24px_rgba(0,0,0,0.45)]">
+    <div class="flex items-center gap-2.5">
+      <a
+        href="mailto:connect@nkdigitaltech.com"
+        class="btn-primary flex-1 min-h-[44px] py-2.5 px-4 text-xs font-bold rounded-xl"
+      >
+        <span>Claim Free AI Citation Audit</span>
+        <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+        </svg>
+      </a>
+      <a
+        href="#services"
+        class="btn-secondary-dark min-h-[44px] py-2.5 px-3.5 text-xs font-semibold rounded-xl flex-shrink-0"
+      >
+        <span>Services</span>
+      </a>
+    </div>
+  </div>
+
+</Layout>

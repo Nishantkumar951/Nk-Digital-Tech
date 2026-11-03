@@ -1,0 +1,1289 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '../styles/global.css';
+
+const pageTitle = 'AEO Services in Delhi NCR That Win Leads | NK Digital Tech';
+const pageDescription = 'Win direct answer boxes and voice searches with AEO Services in Delhi NCR by NK Digital Tech. Clean schema, trusted brand citations and daily buyer enquiries.';
+const pageCanonical = 'https://www.nkdigitaltech.net/aeo-services-in-delhi-ncr/';
+
+const aeoFooterDisciplines = [
+  { label: 'Search Engine Optimisation (SEO)', href: '/best-seo-company-in-delhi-ncr/' },
+  { label: 'Local SEO & Google Business Profile', href: '/local-seo-services-in-delhi-ncr/' },
+  { label: 'Answer Engine Optimisation (AEO)', href: '/aeo-services-in-delhi-ncr/' },
+  { label: 'Conversational Search Visibility', href: '/ai-seo-company-in-delhi-ncr/' },
+  { label: 'Generative Engine Optimisation (GEO)', href: '#services' },
+  { label: 'Website Design and Development', href: '#services' },
+];
+
+const clients = [
+  {
+    name: 'Vision',
+    sector: 'Super Speciality Eye Care & Diagnostics',
+    region: 'Delhi NCR & Lucknow',
+    logo: '/images/clients/vision.webp',
+  },
+  {
+    name: 'Aangan',
+    sector: 'Bridal Couture & Ethnic Retail Showrooms',
+    region: 'Delhi, Gurgaon & Lucknow',
+    logo: '/images/clients/aangan.webp',
+  },
+  {
+    name: 'Propertyways',
+    sector: 'Commercial Leasing & Luxury Real Estate',
+    region: 'Gurgaon, Noida & Delhi',
+    logo: '/images/clients/propertyways.webp',
+  },
+  {
+    name: 'Creative Academy',
+    sector: 'Competitive Exam & Skill Coaching',
+    region: 'Delhi, Noida & Lucknow',
+    logo: '/images/clients/creative-academy.webp',
+  },
+  {
+    name: 'VP Infra',
+    sector: 'Residential Townships & Civil Projects',
+    region: 'Noida, Gurgaon & Lucknow',
+    logo: '/images/clients/vp-infra.webp',
+  },
+];
+
+const services = [
+  {
+    num: '01',
+    category: 'Answer Snapshots',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>`,
+    iconStyle: 'bg-sky-50 border-sky-200 text-brand-600',
+    impactStyle: 'bg-sky-50/80 border-sky-200/80 text-slate-800',
+    badgeColor: 'text-brand-600 bg-sky-100/80',
+    title: 'Answer First Content & Snapshot Structuring',
+    body: 'Through our answer engine optimization services, we place clear 40 to 60 word factual answer blocks right below question headings, supported by clean comparison tables, numbered steps and verifiable data.',
+    impact: 'Higher direct citations inside top summary panels when buyers research solutions.',
+    cta: 'Audit Your Page Answer Structure',
+    href: '#contact',
+  },
+  {
+    num: '02',
+    category: 'Position Zero & PAA',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>`,
+    iconStyle: 'bg-emerald-50 border-emerald-200 text-emerald-600',
+    impactStyle: 'bg-emerald-50/80 border-emerald-200/80 text-slate-800',
+    badgeColor: 'text-emerald-700 bg-emerald-100/80',
+    title: 'Featured Snippet & People Also Ask Capture',
+    body: 'Our featured snippet optimisation maps real buyer questions, concise definition pairs, ordered lists and HTML specification tables so search platforms quote your domain at Position Zero above organic links.',
+    impact: 'Owns top of screen authority and expands brand visibility across People Also Ask boxes.',
+    cta: 'Capture Position Zero Snippets',
+    href: '#contact',
+  },
+  {
+    num: '03',
+    category: 'JSON LD Architecture',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>`,
+    iconStyle: 'bg-violet-50 border-violet-200 text-accent-600',
+    impactStyle: 'bg-violet-50/80 border-violet-200/80 text-slate-800',
+    badgeColor: 'text-accent-600 bg-violet-100/80',
+    title: 'Nested JSON LD & Schema Markup Services',
+    body: 'Our schema markup services deploy clean, error free Organization, Service, FAQPage, HowTo, Speakable and BreadcrumbList JSON LD code so answer parsers read your credentials, locations and capabilities without guesswork.',
+    impact: 'Machine readable proof that removes ambiguity and earns trusted brand attributions.',
+    cta: 'Validate Your Site Schema Markup',
+    href: '#contact',
+  },
+  {
+    num: '04',
+    category: 'Spoken & Mobile Queries',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"/></svg>`,
+    iconStyle: 'bg-amber-50 border-amber-200 text-amber-600',
+    impactStyle: 'bg-amber-50/80 border-amber-200/80 text-slate-800',
+    badgeColor: 'text-amber-700 bg-amber-100/80',
+    title: 'Voice Search Optimisation Services',
+    body: 'Our voice search optimisation services calibrate service pages for natural spoken questions, conversational phrasing, Speakable markup and fast mobile load speeds across English and regional Hinglish queries.',
+    impact: 'Captures immediate phone calls when mobile users ask voice assistants for nearby experts.',
+    cta: 'Optimise for Spoken Search Queries',
+    href: '#contact',
+  },
+  {
+    num: '05',
+    category: 'Zero Click Authority',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>`,
+    iconStyle: 'bg-indigo-50 border-indigo-200 text-indigo-600',
+    impactStyle: 'bg-indigo-50/80 border-indigo-200/80 text-slate-800',
+    badgeColor: 'text-indigo-700 bg-indigo-100/80',
+    title: 'Zero Click Search Optimisation & Brand Recall',
+    body: 'Our zero click search optimisation embeds your brand name, proprietary methodology and clear next step hooks inside concise answer blocks so summary readers search your company by name and enquire.',
+    impact: 'Turns instant on screen impressions into branded searches and high trust discovery calls.',
+    cta: 'Build Zero Click Brand Demand',
+    href: '#contact',
+  },
+  {
+    num: '06',
+    category: 'Entity & Knowledge Graph',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>`,
+    iconStyle: 'bg-cyan-50 border-cyan-200 text-cyan-700',
+    impactStyle: 'bg-cyan-50/80 border-cyan-200/80 text-slate-800',
+    badgeColor: 'text-cyan-700 bg-cyan-100/80',
+    title: 'Entity Verification & Knowledge Graph Authority',
+    body: 'We unify your founder credentials, corporate registrations, trade directory profiles, author bios and sameAs entity references so knowledge graphs recognise your business as a verified primary source.',
+    impact: 'Consistent brand recommendations when answer engines shortlist trusted regional vendors.',
+    cta: 'Strengthen Your Entity Authority',
+    href: '#contact',
+  },
+];
+
+const cities = [
+  {
+    hub: 'Hub 01',
+    city: 'Delhi',
+    keyword: 'AEO & Answer Citations in Delhi',
+    desc: 'We help hospitals, law chambers, coaching academies, retail showrooms and industrial units across Connaught Place, South Delhi, Nehru Place, Dwarka, Rohini and Okhla earn direct answer citations.',
+    cta: 'Explore Delhi AEO Strategy',
+    href: '#contact',
+    accent: 'from-brand-500 to-sky-400',
+  },
+  {
+    hub: 'Hub 02',
+    city: 'Noida',
+    keyword: 'AEO & Answer Citations in Noida',
+    desc: 'We structure question led service pages, clean JSON LD schemas and entity authority for software firms, builders, clinics and OEM plants across Sector 62, Sector 18, Noida Expressway and Greater Noida.',
+    cta: 'Explore Noida AEO Strategy',
+    href: '#contact',
+    accent: 'from-accent-500 to-violet-400',
+  },
+  {
+    hub: 'Hub 03',
+    city: 'Gurgaon',
+    keyword: 'AEO & Answer Citations in Gurgaon',
+    desc: 'We position corporate advisories, luxury realty developers, SaaS enterprises and diagnostic chains across DLF Cyber City, Golf Course Road, Sohna Road and Udyog Vihar inside featured answer summaries.',
+    cta: 'Explore Gurgaon AEO Strategy',
+    href: '#contact',
+    accent: 'from-cyan-500 to-teal-400',
+  },
+  {
+    hub: 'Hub 04',
+    city: 'Lucknow',
+    keyword: 'AEO & Answer Citations in Lucknow',
+    desc: 'We build bilingual voice search readiness, People Also Ask ownership and verified entity trust for townships, hospitals, academies and showrooms across Gomti Nagar, Hazratganj, Aliganj and Shaheed Path.',
+    cta: 'Explore Lucknow AEO Strategy',
+    href: '#contact',
+    accent: 'from-emerald-500 to-green-400',
+  },
+];
+
+const comparison = [
+  {
+    metric: 'How Service Content Is Written',
+    typical: 'Buries simple answers beneath 600 words of repetitive filler that answer parsers skip',
+    nk: 'Places 40 to 60 word factual answer snapshots right below every question heading',
+  },
+  {
+    metric: 'Structured Data & Schema Depth',
+    typical: 'Installs a default plugin with broken or empty JSON LD fields and zero entity connections',
+    nk: 'Handcrafts nested Organization, Service, FAQPage, HowTo and Speakable JSON LD graphs',
+  },
+  {
+    metric: 'Question & Buyer Intent Mapping',
+    typical: 'Chases broad two word phrases while ignoring spoken comparison and decision questions',
+    nk: 'Maps exact commercial questions buyers ask across People Also Ask and voice search',
+  },
+  {
+    metric: 'Entity Proof & Source Credibility',
+    typical: 'Publishes anonymous blog posts with zero author credentials or external directory proof',
+    nk: 'Connects verified author bios, ISO or RERA numbers and trusted Indian business portals',
+  },
+  {
+    metric: 'Formatting for Direct Extraction',
+    typical: 'Publishes long unbroken walls of text without specification tables or ordered steps',
+    nk: 'Builds clean HTML comparison tables, concise bullet lists and standalone answer blocks',
+  },
+  {
+    metric: 'How Campaign ROI Is Measured',
+    typical: 'Sends generic keyword rank spreadsheets while ignoring featured answers and real leads',
+    nk: 'Tracks Position Zero wins, answer box share of voice, branded searches and buyer calls',
+  },
+];
+
+const industries = [
+  {
+    sector: 'Site Visits & Leasing',
+    title: 'Real Estate & Property',
+    focus: 'We structure RERA verified project facts, corridor FAQs and Property schema so homebuyers receive direct answers first.',
+    outcome: 'Featured project citations and qualified weekend site visit enquiries.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>`,
+    accentBorder: 'border-t-brand-500',
+    iconBg: 'bg-sky-50 text-brand-600 border-sky-200',
+  },
+  {
+    sector: 'Turnkey Design Briefs',
+    title: 'Interior Designers',
+    focus: 'We publish clear room scope guides, turnkey process steps and Service schema that win top design answer boxes.',
+    outcome: 'Steady studio consultations from homeowners comparing interior firms.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"/></svg>`,
+    accentBorder: 'border-t-amber-500',
+    iconBg: 'bg-amber-50 text-amber-600 border-amber-200',
+  },
+  {
+    sector: 'OEM & Factory RFQs',
+    title: 'Manufacturing Businesses',
+    focus: 'We format technical tolerance tables, ISO compliance facts and Product schema so procurement buyers cite your plant directly.',
+    outcome: 'Direct specification downloads, distributor calls and B2B RFQs.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>`,
+    accentBorder: 'border-t-emerald-500',
+    iconBg: 'bg-emerald-50 text-emerald-600 border-emerald-200',
+  },
+  {
+    sector: 'Batch Admissions',
+    title: 'Education & Coaching Institutes',
+    focus: 'We organise course eligibility answers, batch schedules and Course schema so parents and students see your institute first.',
+    outcome: 'Higher student counselling calls and direct batch admission enquiries.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"/></svg>`,
+    accentBorder: 'border-t-cyan-500',
+    iconBg: 'bg-cyan-50 text-cyan-700 border-cyan-200',
+  },
+  {
+    sector: 'Product Shortlists',
+    title: 'SaaS & Technology Companies',
+    focus: 'We build software comparison matrices, integration guides and SoftwareApplication schema that secure direct B2B shortlist citations.',
+    outcome: 'Qualified enterprise demo requests from software evaluation teams.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>`,
+    accentBorder: 'border-t-indigo-500',
+    iconBg: 'bg-indigo-50 text-indigo-600 border-indigo-200',
+  },
+  {
+    sector: 'Civil & EPC Tenders',
+    title: 'Construction',
+    focus: 'We structure EPC capability summaries, safety credentials and Organization schema for commercial tender and project evaluators.',
+    outcome: 'Stronger pre qualification trust and commercial construction enquiries.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 21h18M5 21V7l8-4v18M19 21V11l-6-4M9 9v.01M9 12v.01M9 15v.01M9 18v.01"/></svg>`,
+    accentBorder: 'border-t-orange-500',
+    iconBg: 'bg-orange-50 text-orange-600 border-orange-200',
+  },
+  {
+    sector: 'Corporate Advisory',
+    title: 'Professional & Business Services',
+    focus: 'We publish crisp executive answer blocks, methodology steps and verified credentials that capture corporate advisory discovery.',
+    outcome: 'Consistent inbound consultation calls from enterprise decision makers.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>`,
+    accentBorder: 'border-t-teal-500',
+    iconBg: 'bg-teal-50 text-teal-700 border-teal-200',
+  },
+  {
+    sector: 'Tax, GST & Wealth',
+    title: 'Accounting & Financial Services',
+    focus: 'We write plain spoken GST, audit and tax compliance answers backed by author credentials and FAQPage schema.',
+    outcome: 'High trust corporate tax, audit and wealth retainer enquiries.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>`,
+    accentBorder: 'border-t-rose-500',
+    iconBg: 'bg-rose-50 text-rose-600 border-rose-200',
+  },
+  {
+    sector: 'Law Chambers & Counsel',
+    title: 'Legal Services',
+    focus: 'We structure clear statutory explainers, chamber practice summaries and LegalService schema for corporate counsels and litigants.',
+    outcome: 'Direct chamber consultation bookings and corporate legal mandates.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"/></svg>`,
+    accentBorder: 'border-t-accent-500',
+    iconBg: 'bg-violet-50 text-accent-600 border-violet-200',
+  },
+];
+
+const testimonials = [
+  {
+    name: 'Anirudh Deshpande',
+    initials: 'AD',
+    avatarGradient: 'from-brand-500 to-sky-400',
+    title: 'VP of Growth',
+    company: 'CloudPulse Enterprise Systems',
+    sector: 'B2B SaaS & Workflow Software, Gurgaon',
+    impact: '34 Position Zero snippets & 2.6x qualified demo calls',
+    quote: 'Rebuilding our product comparison pages with concise answer snapshots and clean schema put our brand at the top of buyer evaluation queries across Delhi NCR.',
+  },
+  {
+    name: 'Dr. Meenakshi Tandon',
+    initials: 'MT',
+    avatarGradient: 'from-emerald-500 to-teal-400',
+    title: 'Medical Director',
+    company: 'ClearSight Surgical Centre',
+    sector: 'Super Speciality Ophthalmology, South Delhi',
+    impact: 'Top People Also Ask answers & 2.9x patient calls',
+    quote: 'Patients ask detailed procedure questions before booking a surgeon. NK Digital Tech structured doctor reviewed FAQ blocks that now bring daily consultation calls.',
+  },
+  {
+    name: 'Harshvardhan Goenka',
+    initials: 'HG',
+    avatarGradient: 'from-amber-500 to-orange-400',
+    title: 'Director',
+    company: 'Aurelia Spaces Realty',
+    sector: 'Luxury Residential & Commercial Realty, Noida',
+    impact: '3.2x surge in branded project searches & site visits',
+    quote: 'Homebuyers checking Noida Expressway corridor comparisons now read our RERA verified project summaries first and call our sales lounge directly.',
+  },
+  {
+    name: 'Siddharth Malhotra',
+    initials: 'SM',
+    avatarGradient: 'from-cyan-500 to-sky-400',
+    title: 'Managing Director',
+    company: 'Trident Precision Forgings',
+    sector: 'Industrial & OEM Manufacturing, Okhla & Faridabad',
+    impact: '21 technical spec snippets & steady OEM RFQ enquiries',
+    quote: 'Converting our PDF catalogues into clean HTML specification tables and Product schema helped procurement heads discover and shortlist our plant immediately.',
+  },
+  {
+    name: 'CA Ritika Bhargava',
+    initials: 'RB',
+    avatarGradient: 'from-rose-500 to-pink-400',
+    title: 'Senior Partner',
+    company: 'Bhargava & Co. Advisors',
+    sector: 'Corporate Tax & Audit Advisory, Connaught Place',
+    impact: '2.7x jump in corporate compliance retainer enquiries',
+    quote: 'Founders searching complex cross border tax and GST compliance questions now see our firm cited directly in top answer boxes and reach out for retainers.',
+  },
+  {
+    name: 'Karanveer Awasthi',
+    initials: 'KA',
+    avatarGradient: 'from-accent-500 to-violet-400',
+    title: 'Academic Head',
+    company: 'Scholars Crest Institute',
+    sector: 'Competitive Exam Coaching, Delhi & Lucknow',
+    impact: '220% growth in voice & mobile admission enquiries',
+    quote: 'Students and parents use voice search constantly during admission season. Clear eligibility snapshots and Course schema doubled our counselling desk calls.',
+  },
+];
+
+const stages = [
+  {
+    num: 'Stage 01',
+    step: '01',
+    title: 'Question Demand Audit, Snippet Gap & Entity Diagnostic',
+    body: 'We audit how search summaries, Position Zero boxes, People Also Ask panels and voice assistants currently answer commercial questions in your category. Simultaneously, we inspect your existing JSON LD schemas, author credentials and directory consistency across Delhi NCR.',
+    accent: 'from-brand-600 to-sky-500',
+  },
+  {
+    num: 'Stage 02',
+    step: '02',
+    title: 'Conversational Query Mapping & Answer Architecture Plan',
+    body: 'You receive a clear fortnightly roadmap built around buyer evaluation questions, spoken mobile queries and comparison searches across Delhi, Noida, Gurgaon and Lucknow. Every service and pillar page gets mapped to exact question headings and structured data types.',
+    accent: 'from-accent-600 to-violet-500',
+  },
+  {
+    num: 'Stage 03',
+    step: '03',
+    title: 'Snapshot Copywriting, HTML Tables & Nested Schema Setup',
+    body: 'Our specialists write crisp 40 to 60 word direct answers below every heading, build clean HTML comparison tables and deploy validated Organization, Service, FAQPage, HowTo and Speakable JSON LD markup across your priority pages.',
+    accent: 'from-cyan-600 to-teal-500',
+  },
+  {
+    num: 'Stage 04',
+    step: '04',
+    title: 'Entity Authority Sync, Citation Tracking & Lead Reporting',
+    body: 'Every two weeks we strengthen your external entity signals across trusted Indian portals, monitor newly captured featured snippets and People Also Ask placements and report verified branded search growth, form enquiries and phone calls.',
+    accent: 'from-emerald-600 to-green-500',
+  },
+];
+
+const faqs = [
+  {
+    q: 'Which company provides the most reliable AEO Services in Delhi NCR for direct buyer enquiries?',
+    a: 'NK Digital Tech delivers specialised AEO Services in Delhi NCR designed around 40 to 60 word factual answer snapshots, validated JSON LD schema graphs, People Also Ask ownership and verified entity authority. Our senior strategists help hospitals, builders, manufacturers, coaching institutes and B2B companies across Delhi, Noida, Gurgaon and Lucknow turn direct search citations into daily enquiries.',
+  },
+  {
+    q: 'What is Answer Engine Optimisation and how does it differ from traditional SEO?',
+    a: 'Traditional search optimisation focuses on ranking web pages among ten blue links for short typed keywords. Answer Engine Optimisation structures your pages with concise factual answers, clean HTML tables, verified author credentials and machine readable JSON LD schema so search summaries, featured snippets and voice assistants quote and recommend your business directly.',
+  },
+  {
+    q: 'If search platforms display direct answers on the results page, how does my business still generate leads?',
+    a: 'Buyers who read a clear, credible summary citing your brand name, proprietary framework and verified credentials trust your company before clicking a single ad. When they move from early research to vendor shortlisting, they click your cited source link, search your company directly by name or call your office with far higher purchase intent.',
+  },
+  {
+    q: 'How do you structure service pages and blogs to win Position Zero featured snippets and People Also Ask boxes?',
+    a: 'We place exact conversational buyer questions in clean H2 and H3 headings and answer each question immediately in a standalone 40 to 60 word paragraph written in plain language. Below that snapshot, we include structured HTML comparison tables, numbered process lists and factual proof points that search parsers extract cleanly.',
+  },
+  {
+    q: 'Which JSON LD structured data schemas matter most for earning direct answer citations?',
+    a: 'The highest impact structured data types for commercial businesses are Organization, LocalBusiness, ProfessionalService, Service, Product, FAQPage, HowTo, Speakable, Person for expert authors and BreadcrumbList. Nesting these schemas accurately with verified sameAs profile links removes ambiguity about what your company offers and where you operate.',
+  },
+  {
+    q: 'Does Answer Engine Optimisation replace organic SEO or work alongside it?',
+    a: 'Answer Engine Optimisation works directly alongside foundational technical SEO and local map optimisation rather than replacing them. Strong crawl health, fast page speed and domain authority give your pages indexation trust, while answer snapshots and nested JSON LD schema turn that authority into Position Zero snippets and spoken search citations.',
+  },
+  {
+    q: 'How long does it take to see featured snippet wins, voice search visibility and lead growth?',
+    a: 'Pages that already hold top twenty organic visibility often capture People Also Ask placements and featured snippets within four to six weeks of deploying 40 to 60 word answer snapshots and clean FAQPage schema. Broader entity authority and competitive commercial answer citations across Delhi NCR compound steadily over three to five months.',
+  },
+  {
+    q: 'How do you measure and report return on investment from an AEO campaign?',
+    a: 'We track measurable commercial indicators rather than vague impression charts. Every fortnightly report covers newly won Position Zero snippets, People Also Ask box ownership, Search Console impression and click growth on question queries, rising branded search volume and verified phone calls and consultation forms.',
+  },
+];
+
+const trustStrip = [
+  'Position Zero Featured Snippets',
+  '40 to 60 Word Answer Snapshots',
+  'Nested JSON LD Schema Graphs',
+  'People Also Ask Ownership',
+  'Voice & Spoken Query Ready',
+  'Verified Entity Knowledge Graph',
+  'Delhi, Noida, Gurgaon & Lucknow',
+  '100% Client Data Ownership',
+];
+
+const aeoSchemaLocalBusiness = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "NK Digital Tech AEO Services in Delhi NCR",
+  "url": "https://www.nkdigitaltech.net/aeo-services-in-delhi-ncr/",
+  "logo": "https://www.nkdigitaltech.net/images/aeo-delhi-ncr/hero-aeo-services-delhi-ncr.webp",
+  "image": "https://www.nkdigitaltech.net/images/aeo-delhi-ncr/hero-aeo-services-delhi-ncr.webp",
+  "description": "NK Digital Tech delivers AEO Services in Delhi NCR with answer first content snapshots, nested JSON LD schema markup, featured snippet optimisation and voice search readiness across Delhi, Noida, Gurgaon and Lucknow.",
+  "email": "connect@nkdigitaltech.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "New Delhi",
+    "addressRegion": "Delhi NCR",
+    "addressCountry": "IN"
+  },
+  "areaServed": [
+    "Delhi NCR",
+    "New Delhi",
+    "Noida",
+    "Greater Noida",
+    "Gurgaon",
+    "Gurugram",
+    "Lucknow",
+    "Faridabad",
+    "Ghaziabad"
+  ],
+  "serviceType": [
+    "AEO Services in Delhi NCR",
+    "Answer Engine Optimization Services",
+    "Featured Snippet Optimisation",
+    "Schema Markup Services",
+    "Voice Search Optimisation Services",
+    "Zero Click Search Optimisation"
+  ]
+});
+
+const aeoSchemaFAQ = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map((item) => ({
+    "@type": "Question",
+    "name": item.q,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": item.a
+    }
+  }))
+});
+---
+
+<Layout
+  title={pageTitle}
+  description={pageDescription}
+  canonical={pageCanonical}
+  ogImage="https://www.nkdigitaltech.net/images/aeo-delhi-ncr/hero-aeo-services-delhi-ncr.webp"
+  preloadImage="/images/aeo-delhi-ncr/hero-aeo-services-delhi-ncr.webp"
+  customSchemaLocalBusiness={aeoSchemaLocalBusiness}
+  customSchemaFAQ={aeoSchemaFAQ}
+  utilityTagline="AEO Services in Delhi NCR • Serving Delhi, Noida, Gurgaon & Lucknow"
+  brandSubtitle="Answer Engine & Search Growth"
+  footerBio="Trusted AEO agency in Delhi NCR helping clinics, builders, software firms, manufacturers and advisories win direct answer citations across Delhi, Noida, Gurgaon and Lucknow."
+  footerCoreDisciplines={aeoFooterDisciplines}
+  footerTagline="AEO Services in Delhi NCR • Delhi, Noida, Gurgaon & Lucknow"
+>
+
+  <!-- =====================================================================
+       SECTION 1: HERO (DARK SURFACE WITH UNIQUE AEO HERO IMAGE)
+  ===================================================================== -->
+  <section class="relative surface-dark overflow-hidden pt-4 pb-8 sm:pt-14 sm:pb-16 lg:pt-16 lg:pb-20 border-b border-slate-800/80">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="absolute inset-0 mesh-glow pointer-events-none"></div>
+    <div class="absolute -top-24 -left-24 sm:-top-36 sm:-left-36 w-56 h-56 sm:w-96 sm:h-96 bg-brand-500/20 rounded-full blur-[80px] sm:blur-[130px] pointer-events-none"></div>
+    <div class="absolute top-1/4 -right-24 sm:-right-36 w-56 h-56 sm:w-96 sm:h-96 bg-accent-500/20 rounded-full blur-[80px] sm:blur-[130px] pointer-events-none"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns: Headline & CTA -->
+        <div class="lg:col-span-7 text-left min-w-0">
+          <div class="badge-dark mb-3.5 sm:mb-5 text-[9.5px] sm:text-xs py-1.5 px-2.5 sm:px-3.5">
+            <span class="w-2 h-2 rounded-full bg-brand-400 animate-ping flex-shrink-0"></span>
+            <span class="min-w-0 break-words">Direct Answers &bull; Schema Markup &bull; Snippets &bull; Voice Search</span>
+          </div>
+
+          <h1 class="font-display text-[1.75rem] xs:text-[1.95rem] sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-[1.15] sm:leading-[1.1] mb-3.5 sm:mb-5 text-glow">
+            AEO Services <br />
+            <span class="gradient-text-light">in Delhi NCR</span>
+          </h1>
+
+          <p class="text-[13.5px] sm:text-base md:text-lg text-slate-300 leading-[1.65] sm:leading-relaxed mb-5 sm:mb-7 font-normal text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+            NK Digital Tech delivers <strong class="text-white font-semibold">AEO Services in Delhi NCR</strong> that make your business the trusted direct answer when buyers ask detailed commercial questions on modern search platforms and voice assistants. We structure clear, factual website answers and verified brand authority so ready to buy customers see your company recommended first and reach out directly.
+          </p>
+
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-4 mb-5 sm:mb-8">
+            <a href="#contact" class="btn-primary w-full sm:w-auto min-h-[48px] text-[13.5px] sm:text-base px-4 sm:px-8 py-3.5 sm:py-4">
+              <span>Claim Your Free Answer Engine Audit</span>
+              <svg class="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+              </svg>
+            </a>
+            <a href="#services" class="btn-secondary-dark w-full sm:w-auto min-h-[48px] text-[13.5px] sm:text-base px-4 sm:px-7 py-3.5 sm:py-4">
+              <span>Explore Our Six AEO Pillars</span>
+            </a>
+          </div>
+
+          <!-- Trust Verification Strip (2x4 Grid on Mobile, Flex Pills on Desktop) -->
+          <div class="pt-4 sm:pt-5 border-t border-slate-800/80">
+            <div class="grid grid-cols-2 sm:flex sm:flex-wrap items-stretch sm:items-center gap-2">
+              {trustStrip.map((item) => (
+                <span class="px-2.5 sm:px-3 py-2 sm:py-1.5 min-h-[40px] sm:min-h-0 rounded-lg bg-slate-900/90 border border-slate-800 text-[10.5px] sm:text-xs text-slate-300 font-medium flex items-center justify-center sm:justify-start text-center sm:text-left leading-tight sm:leading-snug break-words">
+                  {item}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Unique AEO Hero Image -->
+        <div class="lg:col-span-5 min-w-0">
+          <div class="relative rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-700/80 shadow-2xl shadow-brand-500/15 bg-slate-900 group">
+            <div class="relative">
+              <img
+                src="/images/aeo-delhi-ncr/hero-aeo-services-delhi-ncr.webp"
+                alt="AEO Services in Delhi NCR Strategists Reviewing Featured Answer Citations and Search Visibility Analytics"
+                width="960"
+                height="540"
+                sizes="(max-width: 1024px) 100vw, 42vw"
+                fetchpriority="high"
+                decoding="async"
+                class="w-full aspect-[16/9] sm:aspect-auto sm:h-64 md:h-[330px] lg:h-[350px] object-cover object-center sm:group-hover:scale-105 transition-transform duration-500"
+              />
+              <div class="hidden sm:block absolute inset-0 bg-gradient-to-t from-[#050a14] via-transparent to-transparent opacity-80"></div>
+            </div>
+            <div class="relative sm:absolute sm:bottom-4 sm:left-4 sm:right-4 glass-card border-t sm:border border-slate-800 sm:rounded-2xl p-3.5 sm:p-4">
+              <div class="flex flex-wrap items-center justify-between gap-1.5 mb-1">
+                <span class="text-xs font-bold text-white">Direct Answer Citation System</span>
+                <span class="inline-flex items-center gap-1 text-[10.5px] sm:text-xs font-semibold text-emerald-400">
+                  <span class="w-2 h-2 rounded-full bg-emerald-400 flex-shrink-0"></span>
+                  Position Zero Ready
+                </span>
+              </div>
+              <p class="text-[11.5px] sm:text-xs text-slate-300 text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left] leading-relaxed">
+                Structured so instant search summaries, featured boxes and voice assistants cite your brand first across Delhi NCR.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 2: INTRODUCTION (CRISP WHITE CONTRAST SECTION + AEO TEAM IMAGE)
+  ===================================================================== -->
+  <section class="relative surface-white overflow-hidden py-9 sm:py-16 lg:py-20 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns: Snapshot + Concise Unique AEO Copy -->
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-light mb-3 sm:mb-3.5">Direct Answer &amp; Position Zero Authority</div>
+          <h2 class="font-display font-extrabold text-[1.35rem] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3.5 sm:mb-5">
+            How Our AEO Services in Delhi NCR <span class="gradient-text-dark">Put Your Brand First in Instant Search Answers</span>
+          </h2>
+          <div class="space-y-3.5 sm:space-y-4 text-slate-700 text-[13.5px] sm:text-base leading-[1.68] sm:leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+            <p>
+              Our <strong>AEO Services in Delhi NCR</strong> structure your website pages, expert answers, HTML comparison tables and nested JSON LD schema so search engines and conversational answer platforms quote your business directly. Modern buyers rarely type two word phrases anymore; they ask complete questions comparing capabilities, timelines, credentials and regional service standards before contacting a vendor.
+            </p>
+            <p>
+              When an instant summary or featured answer box resolves that question at the top of the screen, the cited brand captures immediate buyer trust. Partnering with our <strong>AEO Agency in Delhi NCR</strong> connects structured answer blocks with the domain strength of the <a href="/best-seo-company-in-delhi-ncr/" class="text-brand-600 hover:text-brand-700 active:opacity-80 font-semibold transition-colors">Best SEO Company in Delhi NCR</a> and hyper local proximity from our <a href="/local-seo-services-in-delhi-ncr/" class="text-brand-600 hover:text-brand-700 active:opacity-80 font-semibold transition-colors">Local SEO Services in Delhi NCR</a> so prospects discover, trust and call your team daily.
+            </p>
+          </div>
+          <div class="mt-5 sm:mt-7 flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-4">
+            <a href="#contact" class="btn-primary w-full sm:w-auto min-h-[48px]">
+              <span>Speak With Our AEO Strategists</span>
+              <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+              </svg>
+            </a>
+            <a href="#why-us" class="btn-secondary-light w-full sm:w-auto min-h-[48px]">
+              <span>Compare Answer Engine Standards</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Unique AEO Team Image + Stats -->
+        <div class="lg:col-span-5 space-y-3.5 sm:space-y-4 min-w-0">
+          <div class="rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-200 shadow-lg bg-slate-100">
+            <img
+              src="/images/aeo-delhi-ncr/aeo-agency-team-delhi-ncr.webp"
+              alt="AEO Agency in Delhi NCR Consultants Planning Structured Answer Snapshots and Schema Graphs"
+              width="800"
+              height="533"
+              sizes="(max-width: 1024px) 100vw, 42vw"
+              class="w-full aspect-[16/9] sm:aspect-auto sm:h-56 lg:h-60 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="grid grid-cols-2 gap-2.5 sm:gap-3.5">
+            {[
+              { val: 'Position 0', label: 'Featured Answer Target', sub: 'Above standard blue links' },
+              { val: '40 to 60w', label: 'Snapshot Answer Rule', sub: 'Built for clean extraction' },
+              { val: '4 Cities', label: 'Regional Hub Coverage', sub: 'Delhi, Noida, Gurgaon & Lucknow' },
+              { val: '100%', label: 'JSON LD Validation', sub: 'Clean nested entity graphs' },
+            ].map((stat) => (
+              <div class="elevated-card rounded-xl sm:rounded-2xl p-3 sm:p-3.5 min-w-0">
+                <div class="font-display font-black text-[1.05rem] sm:text-2xl text-brand-600 mb-0.5 leading-tight sm:whitespace-nowrap">{stat.val}</div>
+                <div class="text-[11px] sm:text-xs font-bold text-slate-900 leading-snug">{stat.label}</div>
+                <div class="text-[10.5px] sm:text-[11px] text-slate-500 leading-snug mt-0.5">{stat.sub}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 3: PROBLEM STATEMENT (DEEP INDIGO DARK CONTRAST SECTION)
+  ===================================================================== -->
+  <section class="relative surface-indigo py-9 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="max-w-7xl mx-auto relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns: Problem Statement Copy -->
+        <div class="lg:col-span-7 min-w-0">
+          <div class="inline-flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3.5 py-1.5 rounded-xl sm:rounded-full text-[10px] sm:text-xs font-bold uppercase tracking-normal sm:tracking-widest bg-amber-500/10 border border-amber-500/30 text-amber-300 max-w-full leading-snug mb-4 sm:mb-5">
+            <svg class="w-4 h-4 text-amber-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+            </svg>
+            <span class="min-w-0 break-words">Why Ranked Websites Still Miss Direct Citations</span>
+          </div>
+
+          <h2 class="font-display font-extrabold text-[1.35rem] sm:text-3xl lg:text-4xl text-white tracking-tight leading-[1.22] sm:leading-tight mb-4 sm:mb-6">
+            Why Established Brands Across Delhi NCR Get Skipped by Instant Answer Summaries
+          </h2>
+
+          <div class="space-y-3.5 sm:space-y-4 text-slate-300 text-[13.5px] sm:text-base leading-[1.68] sm:leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+            <p>
+              Even companies holding page one Google rankings lose high intent enquiries every day when top summary boxes, featured snippets and voice assistants quote a smaller competitor instead. Answer parsers skip pages that bury simple facts inside vague marketing intros, lock specifications inside unindexed PDFs or lack Organization, Service and FAQPage schema markup.
+            </p>
+            <p>
+              Modern answer engines extract clear, self contained passages backed by verified author credentials and consistent external citations. Working with a dedicated <strong>AEO Company in Delhi NCR</strong> within the <a href="/" class="text-brand-300 hover:text-white active:opacity-80 font-semibold transition-colors">Best Digital Marketing Company in Delhi NCR</a> turns unstructured service pages into trusted reference sources that get quoted first.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Diagnostic Comparison Cards -->
+        <div class="lg:col-span-5 space-y-3.5 sm:space-y-4 min-w-0">
+          <div class="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6 border-l-4 border-l-rose-500 min-w-0">
+            <div class="flex flex-wrap items-center justify-between gap-1.5 mb-2">
+              <span class="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-rose-400">Why Answer Engines Skip You</span>
+              <span class="text-[11px] sm:text-xs text-slate-400">Zero Citation Share</span>
+            </div>
+            <h3 class="font-display font-bold text-[15px] sm:text-base text-white mb-2 leading-snug">Walls of Filler Text, Missing Schema &amp; Weak Entity Proof</h3>
+            <p class="text-xs text-slate-300 leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+              Long promotional paragraphs without direct 40 to 60 word answers, absent JSON LD markup and unverified author credentials leave answer parsers unable to quote your site safely.
+            </p>
+          </div>
+
+          <div class="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6 border-l-4 border-l-emerald-400 min-w-0">
+            <div class="flex flex-wrap items-center justify-between gap-1.5 mb-2">
+              <span class="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-emerald-400">NK Digital Tech AEO Architecture</span>
+              <span class="text-[11px] sm:text-xs text-brand-300">Quoted Primary Source</span>
+            </div>
+            <h3 class="font-display font-bold text-[15px] sm:text-base text-white mb-2 leading-snug">Snapshot Blocks, HTML Data Tables &amp; Nested JSON LD</h3>
+            <p class="text-xs text-slate-300 leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+              Pairs concise question led answer snapshots with structured comparison tables, Speakable and FAQPage schema and verified regional entity citations that win buyer calls.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 4: SERVICES (LIGHT COOL ALABASTER CONTRAST + SCHEMA AEO IMAGE)
+  ===================================================================== -->
+  <section id="services" class="relative surface-cool overflow-hidden scroll-mt-16 sm:scroll-mt-20 py-9 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <!-- Services Header with Unique AEO Schema Image -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 items-center mb-7 sm:mb-16">
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-light mb-3">Six Answer Engine Growth Pillars</div>
+          <h2 class="font-display font-extrabold text-[1.35rem] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+            Complete Answer Engine Optimisation &amp; Schema Architecture
+          </h2>
+          <p class="text-slate-600 text-[13.5px] sm:text-base leading-[1.68] sm:leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+            Our <strong>answer engine optimisation</strong> deliverables cover every technical and editorial signal modern search parsers check before quoting a business. Each pillar turns complex buyer questions into clear, extractable answers that generate direct brand recall and qualified sales enquiries.
+          </p>
+        </div>
+        <div class="lg:col-span-5 min-w-0">
+          <div class="rounded-2xl overflow-hidden border border-slate-200 shadow-md bg-white">
+            <img
+              src="/images/aeo-delhi-ncr/answer-engine-optimisation-schema-delhi-ncr.webp"
+              alt="Answer Engine Optimisation Specialist Structuring JSON LD Schema Graphs and Direct Answer Cards"
+              width="800"
+              height="450"
+              sizes="(max-width: 1024px) 100vw, 42vw"
+              class="w-full aspect-[16/9] sm:aspect-auto sm:h-56 lg:h-64 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- 3 Columns x 2 Rows Grid Layout -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-7">
+        {services.map((s) => (
+          <div class="elevated-card rounded-2xl p-4 sm:p-7 flex flex-col justify-between group sm:hover:-translate-y-1 min-w-0">
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-3.5 sm:mb-6">
+                <div class={`w-10 h-10 sm:w-12 sm:h-12 rounded-xl border flex items-center justify-center flex-shrink-0 ${s.iconStyle}`}>
+                  <Fragment set:html={s.icon} />
+                </div>
+                <div class="flex items-center gap-1.5 sm:gap-2 min-w-0">
+                  <span class={`text-[10px] sm:text-[11px] font-semibold px-2 sm:px-2.5 py-1 rounded-md truncate ${s.badgeColor}`}>
+                    {s.category}
+                  </span>
+                  <span class="font-display font-black text-sm sm:text-lg text-slate-300 flex-shrink-0">{s.num}</span>
+                </div>
+              </div>
+
+              <h3 class="font-display font-bold text-[16.5px] sm:text-xl text-slate-900 mb-2.5 sm:mb-3 leading-snug group-hover:text-brand-600 transition-colors">
+                {s.title}
+              </h3>
+
+              <p class="text-slate-600 text-[13px] sm:text-sm leading-[1.65] sm:leading-relaxed mb-4 sm:mb-6 text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+                {s.body}
+              </p>
+            </div>
+
+            <div>
+              <div class={`rounded-xl border p-3.5 sm:p-4 mb-3.5 sm:mb-5 ${s.impactStyle}`}>
+                <div class="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-slate-900 mb-1">
+                  <svg class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                  </svg>
+                  <span>Direct Citation Impact</span>
+                </div>
+                <p class="text-xs text-slate-700 leading-relaxed font-medium text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+                  {s.impact}
+                </p>
+              </div>
+
+              <a href={s.href} class="w-full sm:w-auto inline-flex items-center justify-between sm:justify-start gap-2 rounded-xl sm:rounded-none bg-slate-50 active:bg-sky-50 sm:bg-transparent border border-slate-200/80 sm:border-0 px-3.5 sm:px-0 py-2.5 min-h-[44px] text-xs font-bold text-brand-600 hover:text-brand-700 group-hover:gap-3 transition-all">
+                <span class="text-left leading-snug">{s.cta}</span>
+                <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 5: REGIONAL LOCATIONS (DARK NAVY + MULTI CITY AEO IMAGE)
+  ===================================================================== -->
+  <section id="locations" class="relative surface-navy scroll-mt-16 sm:scroll-mt-20 py-9 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <!-- Regional Header with Unique Multi City AEO Image -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 items-center mb-7 sm:mb-16">
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-dark mb-3">Four Regional Answer Engine Hubs</div>
+          <h2 class="font-display font-extrabold text-[1.35rem] sm:text-3xl lg:text-4xl text-white tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+            Targeted Answer Engine Coverage Across Delhi, Noida, Gurgaon and Lucknow
+          </h2>
+          <p class="text-slate-300 text-[13.5px] sm:text-base leading-[1.68] sm:leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+            Buyer questions change across commercial corridors. A patient comparing eye surgeons in South Delhi, an enterprise CTO shortlisting vendors in Noida Sector 62, a corporate tenant evaluating towers on Golf Course Road in Gurgaon and a family researching coaching institutes in Lucknow each ask distinct regional questions. We pair city specific answer blocks with proven organic growth from our <a href="/best-seo-company-in-delhi/" class="text-brand-300 hover:text-white active:opacity-80 font-semibold transition-colors">Best SEO Company in Delhi</a> and regional campaigns led by our <a href="/best-digital-marketing-company-in-lucknow/" class="text-brand-300 hover:text-white active:opacity-80 font-semibold transition-colors">Best Digital Marketing Company in Lucknow</a>.
+          </p>
+        </div>
+        <div class="lg:col-span-5 min-w-0">
+          <div class="rounded-2xl overflow-hidden border border-slate-700/80 shadow-xl bg-slate-900">
+            <img
+              src="/images/aeo-delhi-ncr/aeo-delhi-noida-gurgaon-lucknow.webp"
+              alt="AEO Services in Delhi NCR Serving Corporate Hubs Across Delhi Noida Gurgaon and Lucknow"
+              width="800"
+              height="450"
+              sizes="(max-width: 1024px) 100vw, 42vw"
+              class="w-full aspect-[16/9] sm:aspect-auto sm:h-56 lg:h-64 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- 1 Row x 4 Columns Responsive Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5 sm:gap-6">
+        {cities.map((c) => (
+          <div class="glass-card rounded-2xl p-4 sm:p-6 flex flex-col justify-between group sm:hover:-translate-y-1 min-w-0">
+            <div>
+              <div class={`h-1 w-full bg-gradient-to-r ${c.accent} rounded-full mb-3.5 sm:mb-5`}></div>
+
+              <div class="flex items-center justify-between gap-2 mb-3 sm:mb-4">
+                <span class="px-2.5 py-1 rounded-md bg-slate-800 border border-slate-700 text-[11px] font-bold uppercase tracking-wider text-brand-300">
+                  {c.hub}
+                </span>
+                <span class="text-xs font-semibold text-slate-400">{c.city}</span>
+              </div>
+
+              <h3 class="font-display font-bold text-base sm:text-lg text-white mb-2 sm:mb-3 leading-snug">
+                <a href={c.href} class="inline-block py-0.5 text-white hover:text-brand-300 transition-colors">
+                  {c.keyword}
+                </a>
+              </h3>
+
+              <p class="text-slate-300 text-[13px] sm:text-sm leading-[1.65] sm:leading-relaxed mb-4 sm:mb-5 text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+                {c.desc}
+              </p>
+            </div>
+
+            <div class="pt-0 sm:pt-4 border-t-0 sm:border-t border-slate-800">
+              <a href={c.href} class="w-full sm:w-auto inline-flex items-center justify-between sm:justify-start gap-2 rounded-xl sm:rounded-none bg-slate-900/90 active:bg-slate-800 sm:bg-transparent border border-slate-700/80 sm:border-0 px-3.5 sm:px-0 py-2.5 min-h-[44px] text-xs font-bold text-brand-400 hover:text-brand-300 group-hover:gap-2.5 transition-all">
+                <span class="text-left leading-snug">{c.cta}</span>
+                <svg class="w-3.5 h-3.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 6: WHY NK DIGITAL TECH (CRISP WHITE CONTRAST SECTION)
+  ===================================================================== -->
+  <section id="why-us" class="relative surface-white overflow-hidden scroll-mt-16 sm:scroll-mt-20 py-9 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-7 sm:mb-14 text-left sm:text-center">
+        <div class="badge-light mb-3">Why Regional Brands Choose Us</div>
+        <h2 class="font-display font-extrabold text-[1.35rem] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+          Why Businesses Choose NK Digital Tech for Answer Engine Citations
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-[1.68] sm:leading-relaxed mb-4 text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+          Many agencies simply rename old keyword retainers without changing how a single page or schema graph is built. Decision makers looking for the <strong>best AEO company in Delhi NCR</strong> work directly with our senior <strong>AEO consultants in Delhi NCR</strong> to deploy 40 to 60 word answer snapshots, HTML specification tables, validated JSON LD entities and measurable citation tracking.
+        </p>
+        <p class="text-slate-700 font-semibold text-xs sm:text-sm">
+          Compare a conventional content vendor with our Answer Engine Growth System:
+        </p>
+      </div>
+
+      <!-- Desktop Comparison Matrix -->
+      <div class="hidden md:block overflow-hidden rounded-2xl border border-slate-200 shadow-lg">
+        <table class="w-full text-left border-collapse">
+          <thead>
+            <tr class="bg-slate-900 text-white">
+              <th class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-slate-300 w-1/4">
+                Evaluation Benchmark
+              </th>
+              <th class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-rose-300 w-[37.5%] border-l border-slate-800">
+                Conventional Content Vendor
+              </th>
+              <th class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-brand-300 w-[37.5%] border-l border-slate-800 bg-slate-950">
+                NK Digital Tech (AEO Citation System)
+              </th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200 text-sm">
+            {comparison.map((row, idx) => (
+              <tr class={idx % 2 === 0 ? 'bg-white' : 'bg-slate-50/80'}>
+                <td class="py-5 px-6 font-display font-bold text-slate-900">
+                  {row.metric}
+                </td>
+                <td class="py-5 px-6 text-slate-600 border-l border-slate-200">
+                  <div class="flex items-start gap-2.5">
+                    <svg class="w-4 h-4 text-rose-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                    <span>{row.typical}</span>
+                  </div>
+                </td>
+                <td class="py-5 px-6 text-slate-900 font-medium border-l border-slate-200 bg-sky-50/40">
+                  <div class="flex items-start gap-2.5">
+                    <svg class="w-4 h-4 text-emerald-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span>{row.nk}</span>
+                  </div>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Mobile Comparison Cards -->
+      <div class="md:hidden space-y-3">
+        {comparison.map((row) => (
+          <div class="elevated-card rounded-2xl p-3.5 space-y-2.5 min-w-0">
+            <h3 class="font-display font-bold text-slate-900 text-[14.5px] leading-snug pb-2 border-b border-slate-100">{row.metric}</h3>
+            <div class="rounded-xl bg-rose-50 border border-rose-100 p-3">
+              <div class="flex items-center gap-1.5 mb-1">
+                <svg class="w-3.5 h-3.5 text-rose-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+                <p class="text-[10px] font-bold uppercase tracking-wider text-rose-600">Conventional Content Vendor</p>
+              </div>
+              <p class="text-xs text-slate-700 leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">{row.typical}</p>
+            </div>
+            <div class="rounded-xl bg-sky-50 border border-sky-200 p-3">
+              <div class="flex items-center gap-1.5 mb-1">
+                <svg class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                </svg>
+                <p class="text-[10px] font-bold uppercase tracking-wider text-brand-600">NK Digital Tech</p>
+              </div>
+              <p class="text-xs text-slate-900 font-semibold leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">{row.nk}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 7: OUR CLIENTS (DARK INDIGO CONTRAST SECTION BELOW WHY US)
+  ===================================================================== -->
+  <section id="clients" class="relative surface-indigo scroll-mt-16 sm:scroll-mt-20 py-9 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-7 sm:mb-14 text-left sm:text-center">
+        <div class="badge-dark mb-3">Brands Winning Direct Answers</div>
+        <h2 class="font-display font-extrabold text-[1.35rem] sm:text-3xl lg:text-4xl text-white tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+          Regional Enterprises Building Trusted Answer Authority
+        </h2>
+        <p class="text-slate-300 text-[13.5px] sm:text-base leading-[1.68] sm:leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+          Super speciality eye hospitals, bridal couture showrooms, commercial real estate advisors, coaching academies and township developers across Delhi, Noida, Gurgaon and Lucknow rely on NK Digital Tech to structure clear, citation worthy digital assets.
+        </p>
+      </div>
+
+      <!-- 5 Column Responsive Client Grid (Balanced 2+2+1 Full Span on Mobile) -->
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2.5 sm:gap-5">
+        {clients.map((client) => (
+          <div class="glass-card rounded-2xl p-3 sm:p-5 flex flex-col items-center text-center group sm:hover:-translate-y-1 last:col-span-2 sm:last:col-span-1 min-w-0">
+            <div class="w-full max-w-[200px] sm:max-w-none mx-auto h-14 sm:h-20 rounded-xl bg-white border border-slate-200 flex items-center justify-center p-2.5 sm:p-4 mb-2.5 sm:mb-4 shadow-sm">
+              <img
+                src={client.logo}
+                alt={`${client.name} Logo`}
+                width="130"
+                height="48"
+                class="max-h-9 sm:max-h-12 w-auto object-contain"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <h3 class="font-display font-bold text-[13.5px] sm:text-base text-white mb-1 leading-snug">{client.name}</h3>
+            <p class="text-[10.5px] sm:text-xs text-slate-300 leading-snug mb-2.5 sm:mb-3 flex-grow">{client.sector}</p>
+            <span class="w-full sm:w-auto inline-flex items-center justify-center gap-1 text-[9.5px] sm:text-[11px] font-semibold text-brand-300 bg-brand-500/15 border border-brand-500/30 px-2 sm:px-2.5 py-1 rounded-md leading-tight max-w-full">
+              <svg class="w-2.5 h-2.5 sm:w-3 sm:h-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+              </svg>
+              <span class="text-center leading-tight break-words">{client.region}</span>
+            </span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 8: INDUSTRIES (LIGHT SLATE CONTRAST SECTION - 3x3 GRID)
+  ===================================================================== -->
+  <section id="industries" class="relative surface-slate overflow-hidden scroll-mt-16 sm:scroll-mt-20 py-9 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-7 sm:mb-14 text-left sm:text-center">
+        <div class="badge-light mb-3">Sector Specific Answer Playbooks</div>
+        <h2 class="font-display font-extrabold text-[1.35rem] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+          Answer Engine Frameworks Tailored Across Nine Commercial Verticals
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-[1.68] sm:leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+          How a homebuyer evaluates RERA registered projects in Noida differs completely from how an enterprise buyer compares SaaS platforms in Gurgaon, an interior studio in South Delhi or an OEM plant in Okhla. We tailor question blocks, data tables and JSON LD schemas across nine high value verticals.
+        </p>
+      </div>
+
+      <!-- 3 Columns x 3 Rows Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3.5 sm:gap-6">
+        {industries.map((ind) => (
+          <div class={`elevated-card rounded-2xl p-4 sm:p-6 border-t-4 ${ind.accentBorder} flex flex-col justify-between sm:hover:-translate-y-1 md:last:col-span-2 lg:last:col-span-1 min-w-0`}>
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-3 sm:mb-4">
+                <div class={`w-10 h-10 sm:w-11 sm:h-11 rounded-xl border flex items-center justify-center flex-shrink-0 ${ind.iconBg}`}>
+                  <Fragment set:html={ind.icon} />
+                </div>
+                <span class="text-[10.5px] sm:text-[11px] font-semibold text-slate-600 bg-slate-100 px-2.5 py-1 rounded-md truncate">
+                  {ind.sector}
+                </span>
+              </div>
+
+              <h3 class="font-display font-bold text-[16.5px] sm:text-lg text-slate-900 mb-2 leading-snug">
+                {ind.title}
+              </h3>
+
+              <p class="text-slate-600 text-[13px] sm:text-sm leading-[1.65] sm:leading-relaxed mb-3.5 sm:mb-4 text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+                {ind.focus}
+              </p>
+            </div>
+
+            <div class="rounded-xl bg-emerald-50/70 border border-emerald-200/80 p-3 sm:p-3.5">
+              <div class="flex items-center gap-1.5 text-[10.5px] font-bold uppercase tracking-wider text-emerald-700 mb-0.5">
+                <svg class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                </svg>
+                <span>Commercial Result</span>
+              </div>
+              <p class="text-slate-800 text-xs font-medium leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+                {ind.outcome}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 9: TESTIMONIALS (DEEP NAVY CONTRAST SECTION - 3x2 GRID)
+  ===================================================================== -->
+  <section id="testimonials" class="relative surface-dark scroll-mt-16 sm:scroll-mt-20 py-9 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="absolute inset-0 mesh-glow pointer-events-none opacity-60"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-7 sm:mb-14 text-left sm:text-center">
+        <div class="badge-dark mb-3">Verified Citation Outcomes</div>
+        <h2 class="font-display font-extrabold text-[1.35rem] sm:text-3xl lg:text-4xl text-white tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+          How Direct Answer Citations Drive Buyer Calls Across Delhi NCR
+        </h2>
+        <p class="text-slate-300 text-[13.5px] sm:text-base leading-[1.68] sm:leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+          Direct feedback on featured snippet wins, People Also Ask visibility and inbound sales enquiries shared by software leaders, medical directors, realty developers, manufacturers, CA partners and coaching founders.
+        </p>
+      </div>
+
+      <!-- 3 Columns x 2 Rows Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+        {testimonials.map((t) => (
+          <div class="glass-card rounded-2xl p-4 sm:p-6 flex flex-col justify-between sm:hover:-translate-y-1 min-w-0">
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-3.5 sm:mb-4">
+                <div class="flex items-center gap-0.5 sm:gap-1 flex-shrink-0">
+                  {[1, 2, 3, 4, 5].map(() => (
+                    <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                    </svg>
+                  ))}
+                </div>
+                <span class="text-[10px] sm:text-[11px] font-semibold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-md">
+                  Verified Client Result
+                </span>
+              </div>
+
+              <p class="text-slate-200 text-[13px] sm:text-sm leading-[1.65] sm:leading-relaxed italic mb-4 text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+                "{t.quote}"
+              </p>
+
+              <div class="rounded-xl bg-slate-900/90 border border-slate-700/80 px-3 py-2.5 mb-4 flex items-start sm:items-center gap-2">
+                <svg class="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5 sm:mt-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                </svg>
+                <span class="text-xs text-slate-200 font-semibold leading-snug break-words">{t.impact}</span>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3 pt-3.5 border-t border-slate-800">
+              <div class={`w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-gradient-to-br ${t.avatarGradient} flex items-center justify-center flex-shrink-0 shadow-md`}>
+                <span class="font-display font-bold text-xs sm:text-sm text-white tracking-wide">{t.initials}</span>
+              </div>
+              <div class="min-w-0">
+                <h3 class="font-display font-bold text-white text-sm leading-snug break-words">{t.name}</h3>
+                <p class="text-xs text-slate-300 leading-snug break-words">
+                  {t.title}, <strong class="text-brand-400 font-semibold">{t.company}</strong>
+                </p>
+                <p class="text-[10.5px] sm:text-[11px] text-slate-400 mt-0.5 leading-snug break-words">{t.sector}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 10: HOW WE WORK (CRISP WHITE CONTRAST SECTION - 4 STAGES)
+  ===================================================================== -->
+  <section id="process" class="relative surface-white overflow-hidden scroll-mt-16 sm:scroll-mt-20 py-9 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-7 sm:mb-16 text-left sm:text-center">
+        <div class="badge-light mb-3">Our 4 Stage AEO Workflow</div>
+        <h2 class="font-display font-extrabold text-[1.35rem] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+          How We Build Position Zero Snippets and Trusted Brand Citations
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-[1.68] sm:leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+          Our four stage methodology uncovers high intent commercial questions first, structures standalone 40 to 60 word answer blocks and HTML comparison tables second, and validates nested JSON LD entity graphs for durable direct answer leadership.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-7">
+        {stages.map((s) => (
+          <div class="elevated-card rounded-2xl p-4 sm:p-8 relative overflow-hidden group sm:hover:-translate-y-1 min-w-0">
+            <div class="flex items-center justify-between gap-4 mb-3.5 sm:mb-5">
+              <span class={`inline-flex items-center px-2.5 sm:px-3 py-1 rounded-lg text-xs font-bold uppercase tracking-wider text-white bg-gradient-to-r ${s.accent}`}>
+                {s.num}
+              </span>
+              <span class="font-display font-black text-2xl sm:text-4xl text-slate-200 group-hover:text-slate-300 transition-colors">
+                {s.step}
+              </span>
+            </div>
+            <h3 class="font-display font-bold text-[16.5px] sm:text-xl text-slate-900 mb-2.5 sm:mb-3 leading-snug">
+              {s.title}
+            </h3>
+            <p class="text-slate-600 text-[13px] sm:text-sm leading-[1.65] sm:leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+              {s.body}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 11: PARTNER WITH NK DIGITAL TECH (CONCLUSION)
+  ===================================================================== -->
+  <section class="relative surface-indigo py-9 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns: Partner Paragraphs (Conclusion) -->
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-dark mb-3 sm:mb-4">Compounding Direct Answer Authority</div>
+          <h2 class="font-display font-extrabold text-[1.35rem] sm:text-3xl lg:text-4xl text-white tracking-tight leading-[1.22] sm:leading-tight mb-4 sm:mb-6">
+            Turn Buyer Questions Into Direct Citations and Daily Sales Enquiries
+          </h2>
+          <div class="space-y-3.5 sm:space-y-5 text-slate-300 text-[13.5px] sm:text-base leading-[1.68] sm:leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+            <p>
+              Decision makers across North India now expect immediate, factual answers before shortlisting any hospital, property developer, manufacturer, law chamber or software company. Whether a prospect speaks a query into a phone in South Delhi, compares enterprise vendors in Noida or Gurgaon, or checks institute credentials in Lucknow, the company quoted inside the top summary box wins immediate credibility.
+            </p>
+            <p>
+              When you choose NK Digital Tech for <strong>AEO Services in Delhi NCR</strong>, you partner directly with senior strategists who combine 40 to 60 word answer snapshots, clean HTML data tables, nested JSON LD schema markup and verified entity signals while keeping full website and analytics ownership in your hands. Claim your free Answer Engine Readiness Audit today to see which buyer questions your competitors currently own and how fast your brand can capture them.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Unique AEO Direct Answer Leads Image -->
+        <div class="lg:col-span-5 min-w-0">
+          <div class="rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-700/80 shadow-2xl bg-slate-900">
+            <img
+              src="/images/aeo-delhi-ncr/aeo-direct-answer-leads-delhi-ncr.webp"
+              alt="AEO Services in Delhi NCR Delivering Verified Direct Answer Citations and Inbound Buyer Leads"
+              width="800"
+              height="450"
+              sizes="(max-width: 1024px) 100vw, 42vw"
+              class="w-full aspect-[16/9] sm:aspect-auto sm:h-64 lg:h-72 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 12: FAQ (LIGHT COOL SLATE CONTRAST SECTION)
+  ===================================================================== -->
+  <section id="faq" class="relative surface-cool overflow-hidden scroll-mt-16 sm:scroll-mt-20 py-9 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-left sm:text-center mb-7 sm:mb-14">
+        <div class="badge-light mb-3">Answer Engine &amp; Schema FAQs</div>
+        <h2 class="font-display font-extrabold text-[1.35rem] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+          Frequently Asked Questions About AEO Services in Delhi NCR
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-[1.68] sm:leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+          Direct, standalone answers to the questions founders, marketing heads, clinic directors and enterprise teams ask before investing in Answer Engine Optimisation.
+        </p>
+      </div>
+
+      <div class="space-y-3 sm:space-y-4">
+        {faqs.map((f, i) => (
+          <details class="elevated-card rounded-2xl group overflow-hidden" open={i === 0}>
+            <summary class="flex items-start sm:items-center justify-between gap-2.5 sm:gap-4 px-3.5 sm:px-6 py-3.5 sm:py-5 min-h-[56px] active:bg-sky-50/60 transition-colors select-none">
+              <div class="flex items-start sm:items-center gap-2.5 sm:gap-3.5 text-left min-w-0">
+                <span class="w-6 h-6 sm:w-7 sm:h-7 rounded-lg bg-sky-50 border border-sky-200 text-brand-600 font-display font-bold text-xs flex items-center justify-center flex-shrink-0 mt-0.5 sm:mt-0">
+                  0{i + 1}
+                </span>
+                <span class="font-display font-bold text-slate-900 text-[13.5px] sm:text-base md:text-lg leading-snug break-words">
+                  {f.q}
+                </span>
+              </div>
+              <span class="faq-icon w-7 h-7 sm:w-8 sm:h-8 rounded-full border border-slate-200 text-slate-600 flex items-center justify-center flex-shrink-0 mt-0.5 sm:mt-0">
+                <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                </svg>
+              </span>
+            </summary>
+            <div class="px-3.5 sm:px-6 pb-4 sm:pb-6 pt-3 text-slate-600 text-[13px] sm:text-sm md:text-base leading-[1.68] sm:leading-relaxed border-t border-slate-100 text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+              {f.a}
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 13: SHORT 2 TO 3 LINE CALL TO ACTION BANNER (LAST SECTION)
+  ===================================================================== -->
+  <section id="contact" class="relative surface-dark scroll-mt-16 sm:scroll-mt-20 pt-9 pb-12 sm:py-16 lg:py-20 px-4 sm:px-6 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-5xl mx-auto">
+      <div class="rounded-2xl sm:rounded-3xl bg-gradient-to-r from-brand-600 via-brand-700 to-accent-700 p-5 sm:p-10 md:p-12 text-center text-white shadow-2xl border border-white/15 relative overflow-hidden">
+        <div class="relative z-10 max-w-2xl mx-auto">
+          <h2 class="font-display font-black text-[1.35rem] sm:text-3xl md:text-4xl text-white tracking-tight leading-[1.22] sm:leading-snug mb-3 sm:mb-4">
+            Ready to Make Your Brand the Direct Answer Buyers See First?
+          </h2>
+
+          <p class="text-sky-50 text-[13px] sm:text-sm md:text-base leading-relaxed mb-5 sm:mb-8 text-center">
+            Request a free featured snippet, JSON LD schema and buyer question gap audit from our senior AEO strategists across Delhi, Noida, Gurgaon and Lucknow.
+          </p>
+
+          <a
+            href="mailto:connect@nkdigitaltech.com"
+            class="inline-flex w-full sm:w-auto min-h-[50px] items-center justify-center gap-2 sm:gap-3 px-4 sm:px-8 py-3.5 sm:py-4 rounded-xl bg-white text-slate-950 hover:bg-sky-50 font-display font-bold text-[13.5px] sm:text-base shadow-xl transition-all duration-300 active:scale-[0.98] select-none text-center leading-snug"
+          >
+            <span>Claim Your Free Answer Engine Audit</span>
+            <svg class="w-4 h-4 sm:w-5 sm:h-5 text-brand-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mobile Sticky Bottom Quick Action Bar -->
+  <div class="mobile-sticky-cta sm:hidden fixed bottom-0 inset-x-0 z-40 bg-[#050a14]/95 backdrop-blur-xl border-t border-slate-800 px-3 pt-2.5 pb-[max(0.65rem,env(safe-area-inset-bottom))] shadow-[0_-8px_24px_rgba(0,0,0,0.45)] transition-all duration-200">
+    <div class="flex items-center gap-2.5">
+      <a
+        href="mailto:connect@nkdigitaltech.com"
+        class="btn-primary flex-1 min-h-[46px] py-2.5 px-3 text-xs font-bold rounded-xl whitespace-nowrap"
+      >
+        <span>Free AEO Audit</span>
+        <svg class="w-3.5 h-3.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+        </svg>
+      </a>
+      <a
+        href="#services"
+        class="btn-secondary-dark min-h-[46px] py-2.5 px-3.5 text-xs font-semibold rounded-xl flex-shrink-0 whitespace-nowrap"
+      >
+        <span>Services</span>
+      </a>
+    </div>
+  </div>
+
+</Layout>
+

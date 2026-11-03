@@ -1,0 +1,1252 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '../styles/global.css';
+
+const pageTitle = 'Local SEO Services in Lucknow for Leads | NK Digital Tech';
+const pageDescription = 'NK Digital Tech offers Local SEO Services in Lucknow with GMB optimization, verified local citations and top 3 Google Map Pack rankings for daily buyer calls.';
+const pageCanonical = 'https://www.nkdigitaltech.net/local-seo-services-in-lucknow/';
+
+const clients = [
+  {
+    name: 'VP Infra',
+    sector: 'Plotted Townships & Civil Projects',
+    region: 'Shaheed Path & Sushant Golf City',
+    logo: '/images/clients/vp-infra.webp',
+  },
+  {
+    name: 'Propertyways',
+    sector: 'Commercial Spaces & Residential Advisory',
+    region: 'Gomti Nagar & Vibhuti Khand',
+    logo: '/images/clients/propertyways.webp',
+  },
+  {
+    name: 'Creative Academy',
+    sector: 'Competitive Exam & Career Coaching',
+    region: 'Aliganj, Kapoorthala & Indira Nagar',
+    logo: '/images/clients/creative-academy.webp',
+  },
+  {
+    name: 'Vision',
+    sector: 'Super Speciality Eye Care & Diagnostics',
+    region: 'Hazratganj, Gomti Nagar & Alambagh',
+    logo: '/images/clients/vision.webp',
+  },
+  {
+    name: 'Aangan',
+    sector: 'Bridal Couture & Heritage Retail',
+    region: 'Hazratganj & Patrakarpuram Hub',
+    logo: '/images/clients/aangan.webp',
+  },
+];
+
+const services = [
+  {
+    num: '01',
+    category: 'Google Business Profile',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>`,
+    iconStyle: 'bg-sky-50 border-sky-200 text-brand-600',
+    impactStyle: 'bg-sky-50/80 border-sky-200/80 text-slate-800',
+    badgeColor: 'text-brand-600 bg-sky-100/80',
+    title: 'Google Business Profile Optimisation & GMB Setup',
+    body: 'Through our GMB optimization services Lucknow businesses get exact main and extra categories, clear 50 word intros, full service menus, pre answered Q&As and 20+ real premises photos.',
+    impact: 'Stronger listing trust and direct tap to call leads from Lucknow customers.',
+    cta: 'Audit Your Lucknow Google Profile',
+    href: '#contact',
+  },
+  {
+    num: '02',
+    category: 'Top 3 Map Pack',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/></svg>`,
+    iconStyle: 'bg-emerald-50 border-emerald-200 text-emerald-600',
+    impactStyle: 'bg-emerald-50/80 border-emerald-200/80 text-slate-800',
+    badgeColor: 'text-emerald-700 bg-emerald-100/80',
+    title: 'Google Map Pack Ranking Services in Lucknow',
+    body: 'Our Google Map Pack ranking services widen your map reach across nearby Lucknow neighbourhoods and pin codes while guarding your profile against spam listings and rival edits.',
+    impact: 'Steady top three map placement when families and buyers search across Lucknow.',
+    cta: 'Check Your Lucknow Map Rank',
+    href: '#contact',
+  },
+  {
+    num: '03',
+    category: 'NAP & Directory Trust',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>`,
+    iconStyle: 'bg-violet-50 border-violet-200 text-accent-600',
+    impactStyle: 'bg-violet-50/80 border-violet-200/80 text-slate-800',
+    badgeColor: 'text-accent-600 bg-violet-100/80',
+    title: 'Local Citation Building Services & Address Cleanup',
+    body: 'Our local citation building services match your exact Name, Khand or Market Address and Phone number across Justdial, IndiaMART, Sulekha, Practo, Apple Maps and Bing.',
+    impact: 'Clean directory proof that confirms your Lucknow location to Google.',
+    cta: 'Clean Up Your Lucknow Citations',
+    href: '#contact',
+  },
+  {
+    num: '04',
+    category: 'GBP Posts & Reviews',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/></svg>`,
+    iconStyle: 'bg-amber-50 border-amber-200 text-amber-600',
+    impactStyle: 'bg-amber-50/80 border-amber-200/80 text-slate-800',
+    badgeColor: 'text-amber-700 bg-amber-100/80',
+    title: 'Weekly Google Posts & Customer Rating Growth',
+    body: 'We publish helpful weekly updates on your Google Business Profile, add real Lucknow office or showroom photos and run honest review requests with polite replies.',
+    impact: 'Fresh listing activity and trusted five star ratings that win local callers.',
+    cta: 'Grow Your Lucknow Review Rating',
+    href: '#contact',
+  },
+  {
+    num: '05',
+    category: 'Neighbourhood Pages',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>`,
+    iconStyle: 'bg-indigo-50 border-indigo-200 text-indigo-600',
+    impactStyle: 'bg-indigo-50/80 border-indigo-200/80 text-slate-800',
+    badgeColor: 'text-indigo-700 bg-indigo-100/80',
+    title: 'Near Me SEO Services & Bilingual Voice Readiness',
+    body: 'Our near me SEO services build fast area pages with embedded Google Maps, LocalBusiness JSON LD schema, clear chauraha landmarks and natural Hindi plus English voice phrasing.',
+    impact: 'Captures urgent mobile and voice searches from nearby Lucknow residents.',
+    cta: 'Launch Lucknow Area Pages',
+    href: '#contact',
+  },
+  {
+    num: '06',
+    category: 'Multi Branch & Local AI',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>`,
+    iconStyle: 'bg-cyan-50 border-cyan-200 text-cyan-700',
+    impactStyle: 'bg-cyan-50/80 border-cyan-200/80 text-slate-800',
+    badgeColor: 'text-cyan-700 bg-cyan-100/80',
+    title: 'Multi Location SEO Services Across Lucknow',
+    body: 'Our multi location SEO services organise separate branch, showroom, campus and factory pins across Lucknow with UTM phone tracking and Gemini map entity sync.',
+    impact: 'Clean map rankings and separate call tracking for every Lucknow branch.',
+    cta: 'Unify Your Lucknow Branches',
+    href: '#contact',
+  },
+];
+
+const zones = [
+  {
+    hub: 'Zone 01',
+    area: 'Corporate & IT Hub',
+    keyword: 'Gomti Nagar, Vibhuti Khand & Patrakarpuram',
+    desc: 'We help corporate offices, interior studios, hospitals, legal chambers and IT firms across Gomti Nagar and Vibhuti Khand win top three map calls.',
+    cta: 'Audit Gomti Nagar Map Rank',
+    href: '#contact',
+    accent: 'from-brand-500 to-sky-400',
+  },
+  {
+    hub: 'Zone 02',
+    area: 'Central & Heritage',
+    keyword: 'Hazratganj, Ashok Marg, Mahanagar & Charbagh',
+    desc: 'We optimise Google profiles, photo galleries and customer ratings for CA offices, flagship showrooms, clinics and advisories in central Lucknow.',
+    cta: 'Audit Central Lucknow Map Rank',
+    href: '#contact',
+    accent: 'from-accent-500 to-violet-400',
+  },
+  {
+    hub: 'Zone 03',
+    area: 'Township Corridor',
+    keyword: 'Shaheed Path, Sushant Golf City & Gomti Nagar Ext',
+    desc: 'We verify RERA township pins, real project photos and highway corridor pages for builders, schools and hospitals along Shaheed Path and Sultanpur Road.',
+    cta: 'Audit Shaheed Path Map Rank',
+    href: '#contact',
+    accent: 'from-cyan-500 to-teal-400',
+  },
+  {
+    hub: 'Zone 04',
+    area: 'Education & Industrial',
+    keyword: 'Aliganj, Indira Nagar, Chinhat & Amausi',
+    desc: 'We standardise coaching centre pins across Aliganj and Indira Nagar alongside factory and warehouse addresses in Chinhat, Nadarganj and Transport Nagar.',
+    cta: 'Audit North & Industrial Rank',
+    href: '#contact',
+    accent: 'from-emerald-500 to-green-400',
+  },
+];
+
+const comparison = [
+  {
+    metric: 'Google Business Profile Setup',
+    typical: 'Selects one vague category and leaves services, Q&As and photos empty',
+    nk: 'Sets exact Lucknow business categories, full service menus and buyer Q&As',
+  },
+  {
+    metric: 'Khand & Landmark Address Match',
+    typical: 'Leaves messy khand spellings and old phone numbers on Justdial and IndiaMART',
+    nk: 'Locks 100% matching Name, Khand Address and Phone across top Indian portals',
+  },
+  {
+    metric: 'Weekly Profile Activity',
+    typical: 'Claims the pin once and leaves the Google listing inactive for months',
+    nk: 'Publishes weekly Google updates and real Lucknow office, site or store photos',
+  },
+  {
+    metric: 'Local Area & Voice Pages',
+    typical: 'Uses thin copied pages with zero local landmark or voice search support',
+    nk: 'Builds fast neighbourhood pages with LocalBusiness schema and bilingual cues',
+  },
+  {
+    metric: 'Reviews & Spam Pin Defence',
+    typical: 'Ignores customer reviews and lets fake keyword stuffed pins push you down',
+    nk: 'Runs steady review growth, writes polite replies and protects your pin weekly',
+  },
+  {
+    metric: 'Call & Direction Reporting',
+    typical: 'Shares generic view numbers without showing real phone calls or visits',
+    nk: 'Tracks verified Google Maps phone calls, direction taps and website enquiries',
+  },
+];
+
+const industries = [
+  {
+    sector: 'Townships & Plots',
+    title: 'Real Estate & Property',
+    focus: 'We verify RERA township pins, site photos and corridor pages across Shaheed Path and Gomti Nagar Extension.',
+    outcome: 'Steady weekend site visits and direct plot or flat booking calls.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>`,
+    accentBorder: 'border-t-brand-500',
+    iconBg: 'bg-sky-50 text-brand-600 border-sky-200',
+  },
+  {
+    sector: 'Bungalow & Flat Design',
+    title: 'Interior Designers',
+    focus: 'We showcase Lucknow studio pins, completed bungalow and flat photos and genuine reviews for families moving home.',
+    outcome: 'More home design consultations and showroom walk ins across Lucknow.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"/></svg>`,
+    accentBorder: 'border-t-amber-500',
+    iconBg: 'bg-amber-50 text-amber-600 border-amber-200',
+  },
+  {
+    sector: 'Industrial & Wholesale',
+    title: 'Manufacturing Businesses',
+    focus: 'We clean up Amausi, Nadarganj, Chinhat and Dewa Road plant pins, product catalogues and IndiaMART directory records.',
+    outcome: 'Verified wholesale RFQ calls, factory visits and UP dealer enquiries.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>`,
+    accentBorder: 'border-t-emerald-500',
+    iconBg: 'bg-emerald-50 text-emerald-600 border-emerald-200',
+  },
+  {
+    sector: 'PCS, NEET & JEE Hubs',
+    title: 'Education & Coaching Institutes',
+    focus: 'We optimise Aliganj, Hazratganj, Kapoorthala and Indira Nagar coaching profiles with batch details, classroom photos and reviews.',
+    outcome: 'Higher student walk ins and direct parent admission phone calls.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"/></svg>`,
+    accentBorder: 'border-t-cyan-500',
+    iconBg: 'bg-cyan-50 text-cyan-700 border-cyan-200',
+  },
+  {
+    sector: 'IT City & Software Teams',
+    title: 'SaaS & Technology Companies',
+    focus: 'We build verified Vibhuti Khand and IT City office listings, software categories and clear Google Maps entities.',
+    outcome: 'Stronger client trust, regional partner calls and software demo bookings.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>`,
+    accentBorder: 'border-t-indigo-500',
+    iconBg: 'bg-indigo-50 text-indigo-600 border-indigo-200',
+  },
+  {
+    sector: 'Civil & Villa Builders',
+    title: 'Construction',
+    focus: 'We set up verified Lucknow civil contractor listings, real site progress photos and highway corridor landing pages.',
+    outcome: 'Direct commercial build enquiries, villa contracts and tender invites.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 21h18M5 21V7l8-4v18M19 21V11l-6-4M9 9v.01M9 12v.01M9 15v.01M9 18v.01"/></svg>`,
+    accentBorder: 'border-t-orange-500',
+    iconBg: 'bg-orange-50 text-orange-600 border-orange-200',
+  },
+  {
+    sector: 'Consulting & B2B Support',
+    title: 'Professional & Business Services',
+    focus: 'We tune B2B categories, directory citations and client ratings for Lucknow staffing, HR, event and consulting agencies.',
+    outcome: 'Consistent discovery calls from local businesses, hospitals and institutions.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>`,
+    accentBorder: 'border-t-teal-500',
+    iconBg: 'bg-teal-50 text-teal-700 border-teal-200',
+  },
+  {
+    sector: 'CA, GST & MSME Audit',
+    title: 'Accounting & Financial Services',
+    focus: 'We strengthen Lucknow CA, GST, company setup and tax firm listings with service menus and genuine reviews.',
+    outcome: 'Steady trader compliance, MSME audit and yearly tax retainers.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>`,
+    accentBorder: 'border-t-rose-500',
+    iconBg: 'bg-rose-50 text-rose-600 border-rose-200',
+  },
+  {
+    sector: 'High Court & Civil Law',
+    title: 'Legal Services',
+    focus: 'We organise High Court bench, Gomti Nagar and Hazratganj legal chamber pins, practice pages and client reviews.',
+    outcome: 'Direct civil, property, family and corporate law consultation calls.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"/></svg>`,
+    accentBorder: 'border-t-accent-500',
+    iconBg: 'bg-violet-50 text-accent-600 border-violet-200',
+  },
+];
+
+const testimonials = [
+  {
+    name: 'Anurag Srivastava',
+    initials: 'AS',
+    avatarGradient: 'from-brand-500 to-sky-400',
+    title: 'Managing Director',
+    company: 'Awadh Greens Infra',
+    sector: 'Plotted Township & Villas, Shaheed Path',
+    impact: 'Top 3 map spot & 2.8x weekend site visits',
+    quote: 'Families looking for LDA and RERA plots along Shaheed Path search Google Maps before visiting. NK Digital Tech put our site office in the top three, doubling weekend walk ins.',
+  },
+  {
+    name: 'Neha Mehrotra',
+    initials: 'NM',
+    avatarGradient: 'from-amber-500 to-orange-400',
+    title: 'Principal Designer',
+    company: 'Kothi & Craft Interiors',
+    sector: 'Bungalow & Flat Interiors, Gomti Nagar',
+    impact: '3.1x rise in direct studio consultation calls',
+    quote: 'Sharing real photos of our Lucknow bungalow and apartment projects on Google Maps changed everything. Homeowners in Gomti Nagar and Sushant Golf City now call us directly.',
+  },
+  {
+    name: 'Harshit Agarwal',
+    initials: 'HA',
+    avatarGradient: 'from-emerald-500 to-teal-400',
+    title: 'Partner',
+    company: 'Chinhat Agro & Packaging',
+    sector: 'Industrial Packaging Unit, Chinhat',
+    impact: '100% pin accuracy & 2.7x wholesale enquiries',
+    quote: 'Distributors across eastern UP used to call wrong numbers on old directories. Cleaning up our Chinhat factory pin and IndiaMART records brought steady bulk orders.',
+  },
+  {
+    name: 'Prashant Shukla',
+    initials: 'PS',
+    avatarGradient: 'from-cyan-500 to-sky-400',
+    title: 'Founder',
+    company: 'Sankalp PCS & NEET Hub',
+    sector: 'Competitive Exam Coaching, Aliganj',
+    impact: '230% jump in student & parent walk ins',
+    quote: 'Students arriving in Aliganj and Kapoorthala check Google ratings first. Weekly batch updates and verified student reviews pushed us into the top three map pack.',
+  },
+  {
+    name: 'CA Vivek Tandon',
+    initials: 'VT',
+    avatarGradient: 'from-rose-500 to-pink-400',
+    title: 'Senior Partner',
+    company: 'Tandon & Associates CA',
+    sector: 'Tax, GST & MSME Audit, Hazratganj',
+    impact: 'Top 3 Hazratganj rank & steady retainers',
+    quote: 'Traders, builders and clinic owners in central Lucknow now find our CA office right at the top of Google Maps for GST and audit support. Call quality is superb.',
+  },
+  {
+    name: 'Adv. Farhan Kidwai',
+    initials: 'FK',
+    avatarGradient: 'from-accent-500 to-violet-400',
+    title: 'Chamber Head',
+    company: 'Kidwai Law Chambers',
+    sector: 'High Court & Property Law, Vibhuti Khand',
+    impact: '2.9x growth in direct chamber consultations',
+    quote: 'NK Digital Tech fixed our chamber pin near the High Court bench in Vibhuti Khand and built clear practice pages. Clients now navigate to our office without confusion.',
+  },
+];
+
+const stages = [
+  {
+    num: 'Stage 01',
+    step: '01',
+    title: 'Neighbourhood Pin Check & Citation Audit',
+    body: 'We check your live Google Map rank across Gomti Nagar, Hazratganj, Aliganj, Indira Nagar, Shaheed Path and Chinhat. We also spot duplicate pins, wrong categories and mismatched khand addresses.',
+    accent: 'from-brand-600 to-sky-500',
+  },
+  {
+    num: 'Stage 02',
+    step: '02',
+    title: 'Category Setup & Area Page Plan',
+    body: 'We pick the exact primary and extra categories used by top Lucknow competitors. Then we plan fast neighbourhood pages, bilingual search cues and LocalBusiness schema code.',
+    accent: 'from-accent-600 to-violet-500',
+  },
+  {
+    num: 'Stage 03',
+    step: '03',
+    title: 'GMB Optimization, Citations & Weekly Posts',
+    body: 'Our team writes a simple 50 word intro, adds complete service lists, uploads 20+ real Lucknow office or showroom photos, fixes Justdial and IndiaMART listings and posts weekly updates.',
+    accent: 'from-cyan-600 to-teal-500',
+  },
+  {
+    num: 'Stage 04',
+    step: '04',
+    title: 'Review Growth, Pin Defence & Call Reports',
+    body: 'We help your staff earn steady reviews from happy customers, reply promptly to every rating, block spam map edits and share clear monthly reports on calls and direction taps.',
+    accent: 'from-emerald-600 to-green-500',
+  },
+];
+
+const faqs = [
+  {
+    q: 'What is included in your Local SEO Services in Lucknow?',
+    a: 'Our Local SEO Services in Lucknow cover full Google Business Profile setup, accurate category selection, 100% matching khand and market citations across Indian directories, weekly Google updates, neighbourhood landing pages, LocalBusiness schema code, customer review workflows and monthly call reports.',
+  },
+  {
+    q: 'How soon can my Lucknow business reach the top 3 Google Map Pack?',
+    a: 'Once duplicate listings and category mistakes are cleaned up, most Lucknow businesses see ranking gains within four to six weeks. Busy markets like Gomti Nagar, Hazratganj, Aliganj and Shaheed Path usually reach stable top three map spots within three to four months.',
+  },
+  {
+    q: 'What do your GMB optimization services Lucknow cover?',
+    a: 'Our GMB optimization services Lucknow include primary and extra category tuning, a clear 50 word business summary, full service menus, 20+ real premises photos, pre answered customer Q&As and UTM call tracking.',
+  },
+  {
+    q: 'Do you optimise for Hindi and Hinglish voice searches in Lucknow?',
+    a: 'Yes. Many families, patients and property buyers in Lucknow use mobile voice search and landmark names like chauraha or khand numbers. Our near me SEO services include natural conversational phrasing and landmark context so Google matches those queries to your pin.',
+  },
+  {
+    q: 'Why hire a local SEO agency in Lucknow instead of running only ads?',
+    a: 'Paid ads stop bringing calls the moment your ad balance ends. Partnering with a dedicated local SEO agency in Lucknow builds organic top three map visibility that delivers daily phone calls, direction taps and walk ins without per click charges.',
+  },
+  {
+    q: 'Can you manage multiple branches or site offices across Lucknow?',
+    a: 'Yes. Through our multi location SEO services, we maintain separate Google Business Profiles, distinct area landing pages and individual phone tracking for branches across Gomti Nagar, Hazratganj, Alambagh, Shaheed Path and Chinhat.',
+  },
+  {
+    q: 'Do I keep 100% ownership of my Google Business Profile?',
+    a: 'Yes, always. Your business remains the Primary Owner of your Google Business Profile, website pages and analytics accounts while our local SEO consultants in Lucknow handle daily updates as managers.',
+  },
+];
+
+const trustStrip = [
+  'Top 3 Lucknow Map Rank',
+  'Accurate GMB Setup',
+  '100% Khand & Pin Match',
+  'Weekly Updates & Photos',
+  'Hindi & English Voice Ready',
+  'Genuine Star Ratings',
+  'Citywide Lucknow Reach',
+  'You Keep Admin Control',
+];
+
+const localSeoLucknowSchemaLocalBusiness = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'ProfessionalService',
+  name: 'NK Digital Tech - Local SEO Services in Lucknow',
+  description: pageDescription,
+  url: pageCanonical,
+  email: 'connect@nkdigitaltech.com',
+  image: 'https://www.nkdigitaltech.net/images/local-seo-lucknow/hero-local-seo-services-lucknow.webp',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Lucknow',
+    addressRegion: 'Uttar Pradesh',
+    addressCountry: 'IN',
+  },
+  areaServed: [
+    { '@type': 'City', name: 'Lucknow' },
+  ],
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Local SEO Services in Lucknow',
+    itemListElement: services.map((s) => ({
+      '@type': 'Offer',
+      itemOffered: {
+        '@type': 'Service',
+        name: s.title,
+        description: s.body,
+      },
+    })),
+  },
+});
+
+const localSeoLucknowSchemaFAQ = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((f) => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: f.a,
+    },
+  })),
+});
+---
+
+<Layout
+  title={pageTitle}
+  description={pageDescription}
+  canonical={pageCanonical}
+  ogImage="https://www.nkdigitaltech.net/images/local-seo-lucknow/hero-local-seo-services-lucknow.webp"
+  preloadImage="/images/local-seo-lucknow/hero-local-seo-services-lucknow.webp"
+  customSchemaLocalBusiness={localSeoLucknowSchemaLocalBusiness}
+  customSchemaFAQ={localSeoLucknowSchemaFAQ}
+  utilityTagline="Local SEO Services in Lucknow • Top 3 Google Map Pack & GMB Growth"
+  brandSubtitle="Local SEO, GMB & Map Pack Growth"
+  footerBio="Trusted local SEO agency in Lucknow helping builders, interior designers, factories, coaching institutes, clinics and CA firms win top three Google Map Pack calls across Lucknow."
+  footerTagline="Local SEO Services in Lucknow • Google Business Profile & Map Pack Specialists"
+>
+
+  <!-- =====================================================================
+       SECTION 1: HERO (DARK SURFACE WITH UNIQUE LUCKNOW LOCAL SEO HERO IMAGE)
+  ===================================================================== -->
+  <section class="relative surface-dark overflow-hidden pt-5 pb-8 sm:pt-14 sm:pb-16 lg:pt-16 lg:pb-20 border-b border-slate-800/80">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="absolute inset-0 mesh-glow pointer-events-none"></div>
+    <div class="absolute -top-24 -left-24 sm:-top-36 sm:-left-36 w-64 h-64 sm:w-96 sm:h-96 bg-brand-500/20 rounded-full blur-[90px] sm:blur-[130px] pointer-events-none"></div>
+    <div class="absolute top-1/4 -right-24 sm:-right-36 w-64 h-64 sm:w-96 sm:h-96 bg-accent-500/20 rounded-full blur-[90px] sm:blur-[130px] pointer-events-none"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns: Headline & CTA (Zero Specific Sub-Areas in Hero) -->
+        <div class="lg:col-span-7 text-left min-w-0">
+          <div class="badge-dark mb-3 sm:mb-5 text-[9.5px] sm:text-xs tracking-tight sm:tracking-widest items-start sm:items-center">
+            <span class="w-2 h-2 rounded-full bg-brand-400 animate-ping flex-shrink-0 mt-1 sm:mt-0"></span>
+            <span class="min-w-0">Lucknow Map Pins &bull; GMB Care &bull; Directory Fix &bull; Voice Ready</span>
+          </div>
+
+          <h1 class="font-display text-[1.75rem] sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-[1.15] sm:leading-[1.1] mb-3.5 sm:mb-5 text-glow">
+            Local SEO Services <br />
+            <span class="gradient-text-light">in Lucknow</span>
+          </h1>
+
+          <p class="text-[13.5px] sm:text-base md:text-lg text-slate-300 leading-relaxed mb-5 sm:mb-7 font-normal text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+            NK Digital Tech offers <strong class="text-white font-semibold">Local SEO Services in Lucknow</strong> designed to bring your showroom, office, coaching centre or factory into the top three Google Map listings. Day after day, we help local searches across Lucknow turn into direct phone calls, map routes and customer visits.
+          </p>
+
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-4 mb-5 sm:mb-8">
+            <a href="#contact" class="btn-primary w-full sm:w-auto min-h-[48px] text-[13px] sm:text-base px-4 sm:px-8 py-3.5 sm:py-4">
+              <span>Book Your Free Lucknow Map Audit</span>
+              <svg class="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+              </svg>
+            </a>
+            <a href="#services" class="btn-secondary-dark w-full sm:w-auto min-h-[48px] text-[13px] sm:text-base px-4 sm:px-7 py-3.5 sm:py-4">
+              <span>Browse Our Six Local Growth Services</span>
+            </a>
+          </div>
+
+          <div class="pt-4 sm:pt-5 border-t border-slate-800/80">
+            <div class="grid grid-cols-2 sm:flex sm:flex-wrap items-stretch sm:items-center gap-2">
+              {trustStrip.map((item) => (
+                <span class="px-2.5 sm:px-3 py-1.5 min-h-[36px] sm:min-h-0 rounded-lg bg-slate-900/90 border border-slate-800 text-[10.5px] sm:text-xs text-slate-300 font-medium flex items-center justify-start gap-1.5 text-left leading-snug min-w-0">
+                  <svg class="w-3 h-3 text-emerald-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                  <span class="min-w-0">{item}</span>
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Unique Lucknow Local SEO Hero Image -->
+        <div class="lg:col-span-5 min-w-0">
+          <div class="relative rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-700/80 shadow-2xl shadow-brand-500/15 bg-slate-900 group">
+            <div class="relative">
+              <img
+                src="/images/local-seo-lucknow/hero-local-seo-services-lucknow.webp"
+                alt="Local SEO Services in Lucknow Strategists Reviewing Google Map Pack Rankings and Call Analytics"
+                width="960"
+                height="540"
+                sizes="(max-width: 1024px) 100vw, 42vw"
+                fetchpriority="high"
+                decoding="async"
+                class="w-full aspect-[16/9] sm:aspect-auto sm:h-64 md:h-[330px] lg:h-[350px] object-cover object-center sm:group-hover:scale-105 transition-transform duration-500"
+              />
+              <div class="hidden sm:block absolute inset-0 bg-gradient-to-t from-[#050a14] via-transparent to-transparent opacity-80"></div>
+            </div>
+            <div class="relative sm:absolute sm:bottom-4 sm:left-4 sm:right-4 glass-card border-t sm:border border-slate-800 sm:rounded-2xl p-3.5 sm:p-4">
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-1">
+                <span class="text-xs font-bold text-white">Lucknow Google Map 3 Pack System</span>
+                <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-400">
+                  <span class="w-2 h-2 rounded-full bg-emerald-400 flex-shrink-0"></span>
+                  Live Pin Visibility
+                </span>
+              </div>
+              <p class="text-[11px] sm:text-xs text-slate-300 text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left] leading-relaxed">
+                Built so nearby families and buyers on Google Maps, voice search and Gemini call your Lucknow team first.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 2: INTRODUCTION (CRISP WHITE CONTRAST SECTION + LUCKNOW TEAM IMAGE)
+  ===================================================================== -->
+  <section class="relative surface-white py-9 sm:py-16 lg:py-20 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 lg:gap-12 items-center">
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-light mb-3 sm:mb-3.5">Lucknow Google Business Profile &amp; Map Pack Growth</div>
+          <h2 class="font-display font-extrabold text-[1.35rem] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3.5 sm:mb-5">
+            How Our Local SEO Services in Lucknow <span class="gradient-text-dark">Put Your Business in the Top 3</span>
+          </h2>
+          <div class="space-y-3.5 sm:space-y-4 text-slate-700 text-[13.5px] sm:text-base leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+            <p>
+              Our <strong>Local SEO Services in Lucknow</strong> combine accurate Google Business Profile setup, clean khand and market citations, neighbourhood pages and steady customer reviews. When people in Gomti Nagar, Hazratganj, Aliganj, Indira Nagar or along Shaheed Path search for a trusted business nearby, Google shows three map pins right above regular website links.
+            </p>
+            <p>
+              Those top three listings win most local phone calls, direction taps and showroom walk ins. Working with our <strong>local SEO agency in Lucknow</strong> connects your Google Maps listing with strong <a href="/best-seo-company-in-lucknow/" class="text-brand-600 hover:text-brand-700 font-semibold transition-colors">Lucknow organic SEO</a> and <a href="/ai-seo-company-in-lucknow/" class="text-brand-600 hover:text-brand-700 font-semibold transition-colors">AI search visibility</a> so local buyers reach your desk before calling anyone else.
+            </p>
+          </div>
+          <div class="mt-5 sm:mt-7 flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-4">
+            <a href="#contact" class="btn-primary w-full sm:w-auto min-h-[48px]">
+              <span>Speak With Our Lucknow Local SEO Team</span>
+              <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+              </svg>
+            </a>
+            <a href="#why-us" class="btn-secondary-light w-full sm:w-auto min-h-[48px]">
+              <span>Compare Local Map Pack Standards</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 space-y-3.5 sm:space-y-4 min-w-0">
+          <div class="rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-200 shadow-lg bg-slate-100">
+            <img
+              src="/images/local-seo-lucknow/local-seo-agency-team-lucknow.webp"
+              alt="Local SEO Agency in Lucknow Team Auditing Google Business Profiles and Directory Citations"
+              width="800"
+              height="533"
+              sizes="(max-width: 1024px) 100vw, 42vw"
+              class="w-full aspect-[16/9] sm:aspect-auto sm:h-56 lg:h-60 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="grid grid-cols-2 gap-2.5 sm:gap-3.5">
+            {[
+              { val: 'Top 3 Pack', label: 'Google Map Goal', sub: 'Built for direct phone calls' },
+              { val: '100% NAP', label: 'Khand & Pin Match', sub: 'Across Indian directories' },
+              { val: 'All Zones', label: 'Full Lucknow Reach', sub: 'Gomti Nagar to Shaheed Path' },
+              { val: '100%', label: 'Profile Ownership', sub: 'Full client admin control' },
+            ].map((stat) => (
+              <div class="elevated-card rounded-xl sm:rounded-2xl p-3 sm:p-3.5 min-w-0 flex flex-col justify-between">
+                <div class="font-display font-black text-[1.05rem] sm:text-2xl text-brand-600 mb-0.5 whitespace-nowrap">{stat.val}</div>
+                <div class="text-[11px] sm:text-xs font-bold text-slate-900 leading-snug">{stat.label}</div>
+                <div class="text-[10.5px] sm:text-[11px] text-slate-500 leading-snug mt-0.5">{stat.sub}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 3: PROBLEM STATEMENT (DEEP INDIGO DARK CONTRAST SECTION)
+  ===================================================================== -->
+  <section class="relative surface-indigo py-9 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="max-w-7xl mx-auto relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 lg:gap-12 items-center">
+        <div class="lg:col-span-7 min-w-0">
+          <div class="inline-flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3.5 py-1 sm:py-1.5 rounded-xl sm:rounded-full text-[10px] sm:text-xs font-bold uppercase tracking-normal sm:tracking-widest bg-amber-500/10 border border-amber-500/30 text-amber-300 max-w-full leading-snug mb-4 sm:mb-5">
+            <svg class="w-4 h-4 text-amber-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+            </svg>
+            <span>Why Lucknow Businesses Lose Map Calls</span>
+          </div>
+
+          <h2 class="font-display font-extrabold text-[1.35rem] sm:text-3xl lg:text-4xl text-white tracking-tight leading-[1.22] sm:leading-tight mb-4 sm:mb-6">
+            Why Respected Lucknow Brands Stay Hidden Below the Top 3 Map Pack
+          </h2>
+
+          <div class="space-y-3.5 sm:space-y-4 text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+            <p>
+              New townships, coaching markets, corporate towers and retail hubs across Lucknow have made local search far more competitive. Trusted builders, clinics, interior studios, academies and factories often miss out on the top three Google Map spots because khand spellings do not match on Justdial, old landline numbers still float around online or the Google listing sits untouched for months.
+            </p>
+            <p>
+              Google promotes Lucknow businesses that keep clean address records, post fresh weekly updates, gather honest customer reviews and publish helpful area pages. Hiring an experienced <strong>local SEO company in Lucknow</strong> repairs every weak signal so nearby customers call and visit your team first.
+            </p>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 space-y-3.5 sm:space-y-4 min-w-0">
+          <div class="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6 border-l-4 border-l-rose-500">
+            <div class="flex flex-wrap items-center justify-between gap-1.5 mb-2">
+              <span class="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-rose-400">Why Google Skips Your Pin</span>
+              <span class="text-[11px] sm:text-xs text-slate-400">Buried Below Top 3</span>
+            </div>
+            <h3 class="font-display font-bold text-[15px] sm:text-base text-white mb-2 leading-snug">Mismatched Khand Addresses, Duplicate Pins &amp; Quiet Listings</h3>
+            <p class="text-xs text-slate-300 leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+              Wrong categories, old mobile numbers on Indian directories, zero weekly posts and missing schema keep your Lucknow business hidden from nearby buyers.
+            </p>
+          </div>
+
+          <div class="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6 border-l-4 border-l-emerald-400">
+            <div class="flex flex-wrap items-center justify-between gap-1.5 mb-2">
+              <span class="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-emerald-400">NK Digital Tech Map System</span>
+              <span class="text-[11px] sm:text-xs text-brand-300">Top 3 Local Authority</span>
+            </div>
+            <h3 class="font-display font-bold text-[15px] sm:text-base text-white mb-2 leading-snug">Verified Citations, Complete GMB Setup &amp; Area Pages</h3>
+            <p class="text-xs text-slate-300 leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+              Combines exact category tuning, 100% matching Lucknow directory records, weekly Google posts and fast neighbourhood pages to win daily calls.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 4: SERVICES (LIGHT COOL ALABASTER CONTRAST + GMB IMAGE)
+  ===================================================================== -->
+  <section id="services" class="relative surface-cool scroll-mt-16 sm:scroll-mt-20 py-9 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 items-center mb-7 sm:mb-16">
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-light mb-3">Six Simple Local Growth Pillars</div>
+          <h2 class="font-display font-extrabold text-[1.35rem] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+            Complete Local SEO &amp; Google Business Profile Optimisation in Lucknow
+          </h2>
+          <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+            Our <strong>Google Business Profile optimisation</strong> and local website work improve relevance, distance reach and buyer trust across Lucknow neighbourhoods. Every pillar is built to increase direct phone calls, direction requests and walk in enquiries.
+          </p>
+        </div>
+        <div class="lg:col-span-5 min-w-0">
+          <div class="rounded-2xl overflow-hidden border border-slate-200 shadow-md bg-white">
+            <img
+              src="/images/local-seo-lucknow/gmb-optimization-services-lucknow.webp"
+              alt="GMB Optimization Services Lucknow Specialist Updating Google Map Pins and Business Photos"
+              width="800"
+              height="450"
+              sizes="(max-width: 1024px) 100vw, 42vw"
+              class="w-full aspect-[16/9] sm:aspect-auto sm:h-56 lg:h-64 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-7">
+        {services.map((s) => (
+          <div class="elevated-card rounded-2xl p-4 sm:p-7 flex flex-col justify-between group sm:hover:-translate-y-1">
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-3.5 sm:mb-6">
+                <div class={`w-10 h-10 sm:w-12 sm:h-12 rounded-xl border flex items-center justify-center flex-shrink-0 ${s.iconStyle}`}>
+                  <Fragment set:html={s.icon} />
+                </div>
+                <div class="flex items-center gap-1.5 sm:gap-2 min-w-0">
+                  <span class={`text-[10px] sm:text-[11px] font-semibold px-2 sm:px-2.5 py-1 rounded-md truncate ${s.badgeColor}`}>
+                    {s.category}
+                  </span>
+                  <span class="font-display font-black text-sm sm:text-lg text-slate-300 flex-shrink-0">{s.num}</span>
+                </div>
+              </div>
+
+              <h3 class="font-display font-bold text-[16.5px] sm:text-xl text-slate-900 mb-2.5 sm:mb-3 leading-snug group-hover:text-brand-600 transition-colors">
+                {s.title}
+              </h3>
+
+              <p class="text-slate-600 text-[13px] sm:text-sm leading-relaxed mb-4 sm:mb-6 text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+                {s.body}
+              </p>
+            </div>
+
+            <div>
+              <div class={`rounded-xl border p-3.5 sm:p-4 mb-3.5 sm:mb-5 ${s.impactStyle}`}>
+                <div class="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-slate-900 mb-1">
+                  <svg class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                  </svg>
+                  <span>Local Lead Impact</span>
+                </div>
+                <p class="text-xs text-slate-700 leading-relaxed font-medium text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+                  {s.impact}
+                </p>
+              </div>
+
+              <a href={s.href} class="w-full sm:w-auto inline-flex items-center justify-between sm:justify-start gap-2 rounded-xl sm:rounded-none bg-slate-50 active:bg-sky-50 sm:bg-transparent border border-slate-200/80 sm:border-0 px-3.5 sm:px-0 py-2.5 min-h-[44px] text-xs font-bold text-brand-600 hover:text-brand-700 sm:group-hover:gap-3 transition-all min-w-0">
+                <span class="min-w-0 text-left leading-snug">{s.cta}</span>
+                <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 5: LUCKNOW COMMERCIAL ZONES (DARK NAVY + CORRIDORS IMAGE)
+  ===================================================================== -->
+  <section id="locations" class="relative surface-navy scroll-mt-16 sm:scroll-mt-20 py-9 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 items-center mb-7 sm:mb-16">
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-dark mb-3">Four Key Lucknow Map Zones</div>
+          <h2 class="font-display font-extrabold text-[1.35rem] sm:text-3xl lg:text-4xl text-white tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+            Neighbourhood Map Coverage Across Every Major Lucknow Pocket
+          </h2>
+          <p class="text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+            Map Pack results shift completely from one Lucknow zone to the next. A corporate buyer in Vibhuti Khand, a shopper in Hazratganj, a plot buyer on Shaheed Path and a parent in Aliganj each see different top three Google Map pins. We tune your area pages, map coordinates and local citations for every Lucknow pocket you serve, and connect regional multi city brands via our <a href="/local-seo-services-in-delhi-ncr/" class="text-brand-300 hover:text-white font-semibold transition-colors">Delhi NCR local SEO hub</a>.
+          </p>
+        </div>
+        <div class="lg:col-span-5 min-w-0">
+          <div class="rounded-2xl overflow-hidden border border-slate-700/80 shadow-xl bg-slate-900">
+            <img
+              src="/images/local-seo-lucknow/local-seo-corridors-lucknow.webp"
+              alt="Local SEO Services in Lucknow Covering Gomti Nagar Hazratganj Shaheed Path and Aliganj"
+              width="800"
+              height="450"
+              sizes="(max-width: 1024px) 100vw, 42vw"
+              class="w-full aspect-[16/9] sm:aspect-auto sm:h-56 lg:h-64 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5 sm:gap-6">
+        {zones.map((z) => (
+          <div class="glass-card rounded-2xl p-4 sm:p-6 flex flex-col justify-between group sm:hover:-translate-y-1">
+            <div>
+              <div class={`h-1 w-full bg-gradient-to-r ${z.accent} rounded-full mb-3.5 sm:mb-5`}></div>
+
+              <div class="flex items-center justify-between gap-2 mb-3 sm:mb-4 min-w-0">
+                <span class="px-2.5 py-1 rounded-md bg-slate-800 border border-slate-700 text-[10.5px] sm:text-[11px] font-bold uppercase tracking-wider text-brand-300 flex-shrink-0">
+                  {z.hub}
+                </span>
+                <span class="text-[11px] sm:text-xs font-semibold text-slate-400 truncate text-right min-w-0">{z.area}</span>
+              </div>
+
+              <h3 class="font-display font-bold text-base sm:text-lg text-white mb-2 sm:mb-3 leading-snug">
+                {z.keyword}
+              </h3>
+
+              <p class="text-slate-300 text-[13px] sm:text-sm leading-relaxed mb-4 sm:mb-5 text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+                {z.desc}
+              </p>
+            </div>
+
+            <div class="pt-0 sm:pt-4 border-t-0 sm:border-t border-slate-800">
+              <a href={z.href} class="w-full sm:w-auto inline-flex items-center justify-between sm:justify-start gap-2 rounded-xl sm:rounded-none bg-slate-900/90 active:bg-slate-800 sm:bg-transparent border border-slate-700/80 sm:border-0 px-3.5 sm:px-0 py-2.5 min-h-[44px] text-xs font-bold text-brand-400 hover:text-brand-300 sm:group-hover:gap-2.5 transition-all min-w-0">
+                <span class="min-w-0 text-left leading-snug">{z.cta}</span>
+                <svg class="w-3.5 h-3.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 6: WHY NK DIGITAL TECH (CRISP WHITE CONTRAST SECTION)
+  ===================================================================== -->
+  <section id="why-us" class="relative surface-white scroll-mt-16 sm:scroll-mt-20 py-9 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-7 sm:mb-14 text-left sm:text-center">
+        <div class="badge-light mb-3">Why Lucknow Brands Choose Us</div>
+        <h2 class="font-display font-extrabold text-[1.35rem] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+          Why Companies Pick NK Digital Tech for Google Map Pack Growth in Lucknow
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed mb-4 text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+          Many local vendors verify a pin once and leave it untouched. Businesses searching for the <strong>best local SEO company in Lucknow</strong> partner directly with our <strong>local SEO consultants in Lucknow</strong> for clean khand citations, weekly Google updates, honest customer reviews and clear call tracking.
+        </p>
+        <p class="text-slate-700 font-semibold text-xs sm:text-sm">
+          Compare a typical directory vendor with our Lucknow Map Pack system:
+        </p>
+      </div>
+
+      <div class="hidden md:block overflow-hidden rounded-2xl border border-slate-200 shadow-lg">
+        <table class="w-full text-left border-collapse">
+          <thead>
+            <tr class="bg-slate-900 text-white">
+              <th class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-slate-300 w-1/4">
+                What Matters Most
+              </th>
+              <th class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-rose-300 w-[37.5%] border-l border-slate-800">
+                Typical Directory Vendor
+              </th>
+              <th class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-brand-300 w-[37.5%] border-l border-slate-800 bg-slate-950">
+                NK Digital Tech (Lucknow Map Pack System)
+              </th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200 text-sm">
+            {comparison.map((row, idx) => (
+              <tr class={idx % 2 === 0 ? 'bg-white' : 'bg-slate-50/80'}>
+                <td class="py-5 px-6 font-display font-bold text-slate-900">
+                  {row.metric}
+                </td>
+                <td class="py-5 px-6 text-slate-600 border-l border-slate-200">
+                  <div class="flex items-start gap-2.5">
+                    <svg class="w-4 h-4 text-rose-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                    <span>{row.typical}</span>
+                  </div>
+                </td>
+                <td class="py-5 px-6 text-slate-900 font-medium border-l border-slate-200 bg-sky-50/40">
+                  <div class="flex items-start gap-2.5">
+                    <svg class="w-4 h-4 text-emerald-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span>{row.nk}</span>
+                  </div>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <div class="md:hidden space-y-3">
+        {comparison.map((row) => (
+          <div class="elevated-card rounded-2xl p-3.5 space-y-2.5">
+            <h3 class="font-display font-bold text-slate-900 text-[14.5px] leading-snug pb-2 border-b border-slate-100">{row.metric}</h3>
+            <div class="rounded-xl bg-rose-50 border border-rose-100 p-3">
+              <div class="flex items-center gap-1.5 mb-1">
+                <svg class="w-3.5 h-3.5 text-rose-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+                <p class="text-[10px] font-bold uppercase tracking-wider text-rose-600">Typical Directory Vendor</p>
+              </div>
+              <p class="text-xs text-slate-700 leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">{row.typical}</p>
+            </div>
+            <div class="rounded-xl bg-sky-50 border border-sky-200 p-3">
+              <div class="flex items-center gap-1.5 mb-1">
+                <svg class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                </svg>
+                <p class="text-[10px] font-bold uppercase tracking-wider text-brand-600">NK Digital Tech</p>
+              </div>
+              <p class="text-xs text-slate-900 font-semibold leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">{row.nk}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 7: OUR CLIENTS (DARK INDIGO CONTRAST SECTION)
+  ===================================================================== -->
+  <section id="clients" class="relative surface-indigo scroll-mt-16 sm:scroll-mt-20 py-9 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-7 sm:mb-14 text-left sm:text-center">
+        <div class="badge-dark mb-3">Brands Winning Google Maps</div>
+        <h2 class="font-display font-extrabold text-[1.35rem] sm:text-3xl lg:text-4xl text-white tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+          Trusted Lucknow Leaders Capturing Top 3 Map Pack Calls
+        </h2>
+        <p class="text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+          Township developers, property consultants, exam academies, eye hospitals and bridal couture showrooms across Lucknow count on NK Digital Tech for steady top three Google Map visibility.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2.5 sm:gap-5">
+        {clients.map((client) => (
+          <div class="glass-card rounded-2xl p-3 sm:p-5 flex flex-col items-center text-center group sm:hover:-translate-y-1 last:col-span-2 sm:last:col-span-1">
+            <div class="w-full max-w-[180px] sm:max-w-none mx-auto h-14 sm:h-20 rounded-xl bg-white border border-slate-200 flex items-center justify-center p-2.5 sm:p-4 mb-2.5 sm:mb-4 shadow-sm">
+              <img
+                src={client.logo}
+                alt={`${client.name} Logo`}
+                width="130"
+                height="48"
+                class="max-h-9 sm:max-h-12 w-auto object-contain"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <h3 class="font-display font-bold text-[13.5px] sm:text-base text-white mb-1 leading-snug">{client.name}</h3>
+            <p class="text-[10.5px] sm:text-xs text-slate-300 leading-snug mb-2.5 sm:mb-3 flex-grow">{client.sector}</p>
+            <span class="w-full sm:w-auto inline-flex items-center justify-center gap-1 text-[9.5px] sm:text-[11px] font-semibold text-brand-300 bg-brand-500/15 border border-brand-500/30 px-2 sm:px-2.5 py-1.5 sm:py-1 rounded-lg sm:rounded-md leading-tight max-w-full">
+              <svg class="w-2.5 h-2.5 sm:w-3 sm:h-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+              </svg>
+              <span class="text-center leading-tight">{client.region}</span>
+            </span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 8: INDUSTRIES (LIGHT SLATE CONTRAST SECTION - 3x3 GRID)
+  ===================================================================== -->
+  <section id="industries" class="relative surface-slate scroll-mt-16 sm:scroll-mt-20 py-9 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-7 sm:mb-14 text-left sm:text-center">
+        <div class="badge-light mb-3">Lucknow Sector Map Playbooks</div>
+        <h2 class="font-display font-extrabold text-[1.35rem] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+          Local Map Pack Strategies Tailored Across Nine Commercial Verticals
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+          How a family searches for a bungalow interior designer in Gomti Nagar differs completely from how a dealer checks a Chinhat factory or a student picks an Aliganj coaching hub. We customise your GBP categories, photos and area pages across nine Lucknow verticals.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3.5 sm:gap-6">
+        {industries.map((ind) => (
+          <div class={`elevated-card rounded-2xl p-4 sm:p-6 border-t-4 ${ind.accentBorder} flex flex-col justify-between sm:hover:-translate-y-1 md:last:col-span-2 lg:last:col-span-1`}>
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-3 sm:mb-4">
+                <div class={`w-10 h-10 sm:w-11 sm:h-11 rounded-xl border flex items-center justify-center flex-shrink-0 ${ind.iconBg}`}>
+                  <Fragment set:html={ind.icon} />
+                </div>
+                <span class="text-[10.5px] sm:text-[11px] font-semibold text-slate-600 bg-slate-100 px-2.5 py-1 rounded-md truncate">
+                  {ind.sector}
+                </span>
+              </div>
+
+              <h3 class="font-display font-bold text-[16.5px] sm:text-lg text-slate-900 mb-2 leading-snug">
+                {ind.title}
+              </h3>
+
+              <p class="text-slate-600 text-[13px] sm:text-sm leading-relaxed mb-3.5 sm:mb-4 text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+                {ind.focus}
+              </p>
+            </div>
+
+            <div class="rounded-xl bg-emerald-50/70 border border-emerald-200/80 p-3 sm:p-3.5">
+              <div class="flex items-center gap-1.5 text-[10.5px] font-bold uppercase tracking-wider text-emerald-700 mb-0.5">
+                <svg class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                </svg>
+                <span>Commercial Result</span>
+              </div>
+              <p class="text-slate-800 text-xs font-medium leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+                {ind.outcome}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 9: TESTIMONIALS (DEEP NAVY CONTRAST SECTION - 3x2 GRID)
+  ===================================================================== -->
+  <section id="testimonials" class="relative surface-dark scroll-mt-16 sm:scroll-mt-20 py-9 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="absolute inset-0 mesh-glow pointer-events-none opacity-60"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-7 sm:mb-14 text-left sm:text-center">
+        <div class="badge-dark mb-3">Verified Lucknow Map Outcomes</div>
+        <h2 class="font-display font-extrabold text-[1.35rem] sm:text-3xl lg:text-4xl text-white tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+          How Google Map Pack Rankings Drive Calls and Walk Ins Across Lucknow
+        </h2>
+        <p class="text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+          Short client feedback on phone call growth, direction taps and walk in visits shared by Lucknow township developers, interior studios, plant owners, coaching founders, CAs and advocates.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+        {testimonials.map((t) => (
+          <div class="glass-card rounded-2xl p-4 sm:p-6 flex flex-col justify-between sm:hover:-translate-y-1">
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-1.5 sm:gap-2 mb-3.5 sm:mb-4">
+                <div class="flex items-center gap-0.5 sm:gap-1 flex-shrink-0">
+                  {[1, 2, 3, 4, 5].map(() => (
+                    <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                    </svg>
+                  ))}
+                </div>
+                <span class="text-[9.5px] sm:text-[11px] font-semibold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-md whitespace-nowrap">
+                  Verified Lucknow Client
+                </span>
+              </div>
+
+              <p class="text-slate-200 text-[13px] sm:text-sm leading-relaxed italic mb-4 text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+                "{t.quote}"
+              </p>
+
+              <div class="rounded-xl bg-slate-900/90 border border-slate-700/80 px-3 py-2.5 mb-4 flex items-start sm:items-center gap-2">
+                <svg class="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5 sm:mt-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                </svg>
+                <span class="text-xs text-slate-200 font-semibold leading-snug">{t.impact}</span>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3 pt-3.5 border-t border-slate-800">
+              <div class={`w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-gradient-to-br ${t.avatarGradient} flex items-center justify-center flex-shrink-0 shadow-md`}>
+                <span class="font-display font-bold text-xs sm:text-sm text-white tracking-wide">{t.initials}</span>
+              </div>
+              <div class="min-w-0">
+                <h3 class="font-display font-bold text-white text-sm leading-snug">{t.name}</h3>
+                <p class="text-xs text-slate-300 leading-snug">
+                  {t.title}, <strong class="text-brand-400 font-semibold">{t.company}</strong>
+                </p>
+                <p class="text-[10.5px] sm:text-[11px] text-slate-400 mt-0.5 leading-snug">{t.sector}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 10: HOW WE WORK (CRISP WHITE CONTRAST SECTION - 4 STAGES)
+  ===================================================================== -->
+  <section id="process" class="relative surface-white scroll-mt-16 sm:scroll-mt-20 py-9 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-7 sm:mb-16 text-left sm:text-center">
+        <div class="badge-light mb-3">Our 4 Stage Lucknow Map Process</div>
+        <h2 class="font-display font-extrabold text-[1.35rem] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+          How We Build Top 3 Google Map Pack Rankings in Lucknow
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+          Our four step process cleans up duplicate pins and messy khand addresses first, builds your Google profile and Lucknow area pages second, and compounds weekly updates and reviews for steady phone leads.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-7">
+        {stages.map((s) => (
+          <div class="elevated-card rounded-2xl p-4 sm:p-8 relative overflow-hidden group sm:hover:-translate-y-1">
+            <div class="flex items-center justify-between gap-4 mb-3.5 sm:mb-5">
+              <span class={`inline-flex items-center px-2.5 sm:px-3 py-1 rounded-lg text-xs font-bold uppercase tracking-wider text-white bg-gradient-to-r ${s.accent}`}>
+                {s.num}
+              </span>
+              <span class="font-display font-black text-2xl sm:text-4xl text-slate-200 group-hover:text-slate-300 transition-colors">
+                {s.step}
+              </span>
+            </div>
+            <h3 class="font-display font-bold text-[16.5px] sm:text-xl text-slate-900 mb-2.5 sm:mb-3 leading-snug">
+              {s.title}
+            </h3>
+            <p class="text-slate-600 text-[13px] sm:text-sm leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+              {s.body}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 11: PARTNER WITH NK DIGITAL TECH (CONCLUSION)
+  ===================================================================== -->
+  <section class="relative surface-indigo py-9 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 lg:gap-12 items-center">
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-dark mb-3 sm:mb-4">Steady Local Calls &amp; Walk Ins</div>
+          <h2 class="font-display font-extrabold text-[1.35rem] sm:text-3xl lg:text-4xl text-white tracking-tight leading-[1.22] sm:leading-tight mb-4 sm:mb-6">
+            Turn Nearby Lucknow Searches Into Daily Phone Calls and Walk Ins
+          </h2>
+          <div class="space-y-3.5 sm:space-y-5 text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+            <p>
+              Buyers across Lucknow move quickly and contact businesses inside the top three Google Map spots. Whether a family wants a bungalow interior studio, an investor checks a Shaheed Path township, a student visits a coaching centre or a dealer calls a Chinhat factory, they check distance, photos and star ratings first. Leaving your listing half finished sends those calls straight to local competitors.
+            </p>
+            <p>
+              When you choose NK Digital Tech for <strong>Local SEO Services in Lucknow</strong>, our team manages your GMB setup, khand and market citations, weekly Google posts, LocalBusiness schema and call tracking while you keep 100% profile ownership. Claim your free Lucknow map audit today to see your exact ranking across nearby neighbourhoods.
+            </p>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 min-w-0">
+          <div class="rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-700/80 shadow-2xl bg-slate-900">
+            <img
+              src="/images/local-seo-lucknow/google-map-pack-calls-growth-lucknow.webp"
+              alt="Local SEO Services in Lucknow Delivering Direct Google Map Pack Phone Calls and Walk Ins"
+              width="800"
+              height="450"
+              sizes="(max-width: 1024px) 100vw, 42vw"
+              class="w-full aspect-[16/9] sm:aspect-auto sm:h-64 lg:h-72 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 12: FAQ (LIGHT COOL SLATE CONTRAST SECTION)
+  ===================================================================== -->
+  <section id="faq" class="relative surface-cool scroll-mt-16 sm:scroll-mt-20 py-9 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-left sm:text-center mb-7 sm:mb-14">
+        <div class="badge-light mb-3">Lucknow Google Maps &amp; Local SEO Answers</div>
+        <h2 class="font-display font-extrabold text-[1.35rem] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+          Frequently Asked Questions About Local SEO Services in Lucknow
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+          Clear, simple answers to common questions Lucknow business owners, builders and directors ask before starting Google Business Profile and local map work.
+        </p>
+      </div>
+
+      <div class="space-y-3 sm:space-y-4">
+        {faqs.map((f, i) => (
+          <details class="elevated-card rounded-2xl group overflow-hidden" open={i === 0}>
+            <summary class="flex items-start sm:items-center justify-between gap-3 sm:gap-4 px-4 sm:px-6 py-3.5 sm:py-5 min-h-[52px] active:bg-slate-50/90 transition-colors select-none">
+              <div class="flex items-start sm:items-center gap-2.5 sm:gap-3.5 text-left min-w-0">
+                <span class="w-6 h-6 sm:w-7 sm:h-7 rounded-lg bg-sky-50 border border-sky-200 text-brand-600 font-display font-bold text-xs flex items-center justify-center flex-shrink-0 mt-0.5 sm:mt-0">
+                  0{i + 1}
+                </span>
+                <span class="font-display font-bold text-slate-900 text-[14px] sm:text-base md:text-lg leading-snug">
+                  {f.q}
+                </span>
+              </div>
+              <span class="faq-icon w-7 h-7 sm:w-8 sm:h-8 rounded-full border border-slate-200 text-slate-600 flex items-center justify-center flex-shrink-0 mt-0.5 sm:mt-0">
+                <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                </svg>
+              </span>
+            </summary>
+            <div class="px-4 sm:px-6 pb-5 sm:pb-6 pt-3 text-slate-600 text-[13px] sm:text-sm md:text-base leading-relaxed border-t border-slate-100 text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+              {f.a}
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 13: CALL TO ACTION BANNER (LAST SECTION)
+  ===================================================================== -->
+  <section id="contact" class="relative surface-dark scroll-mt-16 sm:scroll-mt-20 py-9 sm:py-16 lg:py-20 px-4 sm:px-6 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-5xl mx-auto">
+      <div class="rounded-2xl sm:rounded-3xl bg-gradient-to-r from-brand-600 via-brand-700 to-accent-700 p-5 sm:p-10 md:p-12 text-center text-white shadow-2xl border border-white/15 relative overflow-hidden">
+        <div class="relative z-10 max-w-2xl mx-auto">
+          <h2 class="font-display font-black text-[1.35rem] sm:text-3xl md:text-4xl text-white tracking-tight leading-[1.22] sm:leading-snug mb-3 sm:mb-4">
+            Ready to Rank Your Lucknow Business in the Top 3 Google Map Pack?
+          </h2>
+
+          <p class="text-sky-50 text-[13px] sm:text-sm md:text-base leading-relaxed mb-6 sm:mb-8 text-left sm:text-center">
+            Request a free Google Business Profile and neighbourhood map rank check from our Lucknow local SEO specialists today.
+          </p>
+
+          <a
+            href="mailto:connect@nkdigitaltech.com"
+            class="inline-flex w-full sm:w-auto min-h-[48px] items-center justify-center gap-2 sm:gap-3 px-4 sm:px-8 py-3.5 sm:py-4 rounded-xl bg-white text-slate-950 hover:bg-sky-50 font-display font-bold text-[13px] sm:text-base shadow-xl transition-all duration-300 active:scale-[0.98] select-none text-center leading-snug"
+          >
+            <span>Claim Your Free Lucknow Map Pack Audit</span>
+            <svg class="w-4 h-4 sm:w-5 sm:h-5 text-brand-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mobile Sticky Bottom Quick Action Bar -->
+  <div class="mobile-sticky-cta sm:hidden fixed bottom-0 inset-x-0 z-40 bg-[#050a14]/95 backdrop-blur-xl border-t border-slate-800 px-3 pt-2.5 pb-[max(0.625rem,env(safe-area-inset-bottom))] shadow-[0_-8px_24px_rgba(0,0,0,0.45)] transition-all duration-200">
+    <div class="flex items-center gap-2.5">
+      <a
+        href="mailto:connect@nkdigitaltech.com"
+        class="btn-primary flex-1 min-h-[44px] py-2.5 px-3 text-xs font-bold rounded-xl min-w-0"
+      >
+        <span class="truncate">Free Lucknow Map Audit</span>
+        <svg class="w-3.5 h-3.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+        </svg>
+      </a>
+      <a
+        href="#services"
+        class="btn-secondary-dark min-h-[44px] py-2.5 px-3.5 text-xs font-semibold rounded-xl flex-shrink-0 whitespace-nowrap"
+      >
+        <span>Services</span>
+      </a>
+    </div>
+  </div>
+
+</Layout>

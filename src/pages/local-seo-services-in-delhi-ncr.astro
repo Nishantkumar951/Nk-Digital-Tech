@@ -126,8 +126,8 @@ const cities = [
     city: 'Delhi',
     keyword: 'Local SEO & Map Pack in Delhi',
     desc: 'We help hospitals, law chambers, coaching academies, bridal showrooms and factories across Connaught Place, South Delhi, Nehru Place, Dwarka, Rohini and Okhla win top three Google Map Pack calls.',
-    cta: 'Explore Delhi SEO Page',
-    href: '/best-seo-company-in-delhi/',
+    cta: 'Explore Delhi Local SEO Page',
+    href: '/local-seo-services-in-delhi/',
     accent: 'from-brand-500 to-sky-400',
   },
   {
@@ -135,8 +135,8 @@ const cities = [
     city: 'Noida',
     keyword: 'Local SEO & Map Pack in Noida',
     desc: 'We optimise Google Business Profiles, sector landing pages and verified directory citations for clinics, builders, IT offices and OEM units across Sector 62, Sector 18, Noida Expressway and Greater Noida.',
-    cta: 'Explore Noida SEO Page',
-    href: '/best-seo-company-in-noida/',
+    cta: 'Explore Noida Local SEO Page',
+    href: '/local-seo-services-in-noida/',
     accent: 'from-accent-500 to-violet-400',
   },
   {
@@ -144,8 +144,8 @@ const cities = [
     city: 'Gurgaon',
     keyword: 'Local SEO & Map Pack in Gurgaon',
     desc: 'We position corporate advisories, luxury realty offices, diagnostic centres and hospitality brands across DLF Cyber City, Golf Course Road, Sohna Road and Udyog Vihar at the top of local map searches.',
-    cta: 'Explore Gurgaon SEO Page',
-    href: '/best-seo-company-in-gurgaon/',
+    cta: 'Explore Gurgaon Local SEO Page',
+    href: '/local-seo-services-in-gurgaon/',
     accent: 'from-cyan-500 to-teal-400',
   },
   {
@@ -153,8 +153,8 @@ const cities = [
     city: 'Lucknow',
     keyword: 'Local SEO & Map Pack in Lucknow',
     desc: 'We build commanding Google Maps visibility, bilingual voice search readiness and review authority for townships, hospitals, academies and showrooms across Gomti Nagar, Hazratganj, Aliganj and Shaheed Path.',
-    cta: 'Explore Lucknow SEO Page',
-    href: '/best-seo-company-in-lucknow/',
+    cta: 'Explore Lucknow Local SEO Page',
+    href: '/local-seo-services-in-lucknow/',
     accent: 'from-emerald-500 to-green-400',
   },
 ];
@@ -822,7 +822,9 @@ const localSeoSchemaFAQ = JSON.stringify({
               </div>
 
               <h3 class="font-display font-bold text-base sm:text-lg text-white mb-2 sm:mb-3 leading-snug">
-                {c.keyword}
+                <a href={c.href} class="text-white hover:text-brand-300 transition-colors">
+                  {c.keyword}
+                </a>
               </h3>
 
               <p class="text-slate-300 text-[13px] sm:text-sm leading-relaxed mb-4 sm:mb-5 text-justify hyphens-auto [text-align-last:left]">

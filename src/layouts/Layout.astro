@@ -410,20 +410,24 @@ const schemaFAQ = JSON.stringify({
     const menuIcon = document.getElementById('menu-icon');
     const closeIcon = document.getElementById('close-icon');
     const stickyBars = document.querySelectorAll('.mobile-sticky-cta');
+    let menuOpen = false;
+    let bottomVisible = false;
 
-    function syncStickyBars(menuHidden: boolean) {
+    function updateStickyVisibility() {
+      const shouldHide = menuOpen || bottomVisible;
       stickyBars.forEach((bar) => {
-        if (menuHidden) {
-          bar.classList.remove('translate-y-full', 'pointer-events-none', 'opacity-0');
-        } else {
+        if (shouldHide) {
           bar.classList.add('translate-y-full', 'pointer-events-none', 'opacity-0');
+        } else {
+          bar.classList.remove('translate-y-full', 'pointer-events-none', 'opacity-0');
         }
       });
     }
 
     function toggleMenu() {
       const isHidden = Boolean(mobileMenu?.classList.toggle('hidden'));
-      toggle?.setAttribute('aria-expanded', String(!isHidden));
+      menuOpen = !isHidden;
+      toggle?.setAttribute('aria-expanded', String(menuOpen));
       if (isHidden) {
         menuIcon?.classList.remove('hidden');
         closeIcon?.classList.add('hidden');
@@ -431,19 +435,37 @@ const schemaFAQ = JSON.stringify({
         menuIcon?.classList.add('hidden');
         closeIcon?.classList.remove('hidden');
       }
-      syncStickyBars(isHidden);
+      updateStickyVisibility();
     }
 
     function closeMenu() {
       mobileMenu?.classList.add('hidden');
+      menuOpen = false;
       toggle?.setAttribute('aria-expanded', 'false');
       menuIcon?.classList.remove('hidden');
       closeIcon?.classList.add('hidden');
-      syncStickyBars(true);
+      updateStickyVisibility();
     }
 
     toggle?.addEventListener('click', toggleMenu);
     mobileMenu?.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+
+    const bottomTargets = [document.getElementById('contact'), document.querySelector('footer')].filter(Boolean) as Element[];
+    if (bottomTargets.length > 0 && 'IntersectionObserver' in window) {
+      const visibleSet = new Set<Element>();
+      const obs = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) visibleSet.add(entry.target);
+            else visibleSet.delete(entry.target);
+          });
+          bottomVisible = visibleSet.size > 0;
+          updateStickyVisibility();
+        },
+        { threshold: 0.12 }
+      );
+      bottomTargets.forEach((el) => obs.observe(el));
+    }
   </script>
 </body>
 </html>

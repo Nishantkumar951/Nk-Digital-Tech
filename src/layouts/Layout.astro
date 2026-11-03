@@ -225,18 +225,18 @@ const schemaFAQ = JSON.stringify({
 
   <!-- Sticky Navigation Header -->
   <header class="w-full border-b border-slate-800/80 bg-[#050a14]/95 backdrop-blur-xl sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3.5 sm:py-4 flex items-center justify-between gap-4">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between gap-3 sm:gap-4">
 
       <!-- Brand Logo -->
-      <a href="/" class="flex items-center gap-3 sm:gap-3.5 group flex-shrink-0">
-        <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-gradient-to-tr from-brand-600 via-brand-500 to-accent-500 flex items-center justify-center font-display font-black text-lg sm:text-xl text-white shadow-lg shadow-brand-500/25 group-hover:scale-105 transition-transform duration-300">
+      <a href="/" class="flex items-center gap-2.5 sm:gap-3.5 group min-w-0">
+        <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-gradient-to-tr from-brand-600 via-brand-500 to-accent-500 flex items-center justify-center font-display font-black text-lg sm:text-xl text-white shadow-lg shadow-brand-500/25 group-hover:scale-105 transition-transform duration-300 flex-shrink-0">
           NK
         </div>
-        <div>
-          <span class="font-display font-extrabold text-base sm:text-lg tracking-tight text-white block leading-none">
+        <div class="min-w-0">
+          <span class="font-display font-extrabold text-[15px] sm:text-lg tracking-tight text-white block leading-none truncate">
             NK DIGITAL TECH
           </span>
-          <span class="text-[9px] sm:text-[10px] uppercase tracking-widest text-brand-400 font-semibold block mt-1">
+          <span class="text-[9px] sm:text-[10px] uppercase tracking-wider sm:tracking-widest text-brand-400 font-semibold block mt-1 truncate">
             {brandSubtitle}
           </span>
         </div>
@@ -266,8 +266,10 @@ const schemaFAQ = JSON.stringify({
       <!-- Mobile Menu Button -->
       <button
         id="menu-toggle"
-        class="lg:hidden text-slate-200 hover:text-white w-11 h-11 rounded-xl bg-slate-900/90 border border-slate-700/80 flex items-center justify-center flex-shrink-0 focus:outline-none focus:ring-2 focus:ring-brand-400"
+        class="lg:hidden text-slate-200 hover:text-white active:bg-slate-800 w-11 h-11 rounded-xl bg-slate-900/90 border border-slate-700/80 flex items-center justify-center flex-shrink-0 focus:outline-none focus:ring-2 focus:ring-brand-400"
         aria-label="Toggle navigation menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
       >
         <svg id="menu-icon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
@@ -339,22 +341,22 @@ const schemaFAQ = JSON.stringify({
 
         <!-- Column 2: Core Services -->
         <div>
-          <h4 class="text-xs font-bold uppercase tracking-widest text-white mb-4">Core Disciplines</h4>
-          <ul class="space-y-1.5 sm:space-y-2.5 text-xs">
+          <h4 class="text-xs font-bold uppercase tracking-widest text-white mb-3.5 sm:mb-4">Core Disciplines</h4>
+          <ul class="space-y-1 sm:space-y-2 text-xs">
             {footerCoreDisciplines.map((item) => (
-              <li><a href={item.href} class="inline-block py-1 hover:text-brand-400 transition-colors">{item.label}</a></li>
+              <li><a href={item.href} class="inline-flex items-center py-1.5 min-h-[36px] sm:min-h-0 sm:py-1 hover:text-brand-400 transition-colors">{item.label}</a></li>
             ))}
           </ul>
         </div>
 
         <!-- Column 3: Regional Service Centers -->
         <div>
-          <h4 class="text-xs font-bold uppercase tracking-widest text-white mb-4">Regional Service Centers</h4>
-          <ul class="space-y-1.5 sm:space-y-2.5 text-xs">
-            <li><a href="/best-digital-marketing-agency-in-delhi/" class="inline-block py-1 hover:text-brand-400 transition-colors">Digital Marketing Services in Delhi</a></li>
-            <li><a href="/best-digital-marketing-agency-in-noida/" class="inline-block py-1 hover:text-brand-400 transition-colors">Digital Marketing Services in Noida</a></li>
-            <li><a href="/best-digital-marketing-agency-in-gurgaon/" class="inline-block py-1 hover:text-brand-400 transition-colors">Digital Marketing Services in Gurgaon</a></li>
-            <li><a href="/best-digital-marketing-company-in-lucknow/" class="inline-block py-1 hover:text-brand-400 transition-colors">Digital Marketing Services in Lucknow</a></li>
+          <h4 class="text-xs font-bold uppercase tracking-widest text-white mb-3.5 sm:mb-4">Regional Service Centers</h4>
+          <ul class="space-y-1 sm:space-y-2 text-xs">
+            <li><a href="/best-digital-marketing-agency-in-delhi/" class="inline-flex items-center py-1.5 min-h-[36px] sm:min-h-0 sm:py-1 hover:text-brand-400 transition-colors">Digital Marketing Services in Delhi</a></li>
+            <li><a href="/best-digital-marketing-agency-in-noida/" class="inline-flex items-center py-1.5 min-h-[36px] sm:min-h-0 sm:py-1 hover:text-brand-400 transition-colors">Digital Marketing Services in Noida</a></li>
+            <li><a href="/best-digital-marketing-agency-in-gurgaon/" class="inline-flex items-center py-1.5 min-h-[36px] sm:min-h-0 sm:py-1 hover:text-brand-400 transition-colors">Digital Marketing Services in Gurgaon</a></li>
+            <li><a href="/best-digital-marketing-company-in-lucknow/" class="inline-flex items-center py-1.5 min-h-[36px] sm:min-h-0 sm:py-1 hover:text-brand-400 transition-colors">Digital Marketing Services in Lucknow</a></li>
           </ul>
         </div>
 
@@ -389,7 +391,7 @@ const schemaFAQ = JSON.stringify({
         </div>
       </div>
 
-      <div class="border-t border-slate-800/80 pt-8 pb-16 sm:pb-0 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left text-xs text-slate-500">
+      <div class="border-t border-slate-800/80 pt-8 pb-20 sm:pb-0 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left text-xs text-slate-500">
         <div>
           &copy; <span id="footer-year"></span> <strong class="text-slate-300 font-semibold">NK Digital Tech</strong>. All rights reserved.
         </div>
@@ -407,9 +409,21 @@ const schemaFAQ = JSON.stringify({
     const mobileMenu = document.getElementById('mobile-menu');
     const menuIcon = document.getElementById('menu-icon');
     const closeIcon = document.getElementById('close-icon');
+    const stickyBars = document.querySelectorAll('.mobile-sticky-cta');
+
+    function syncStickyBars(menuHidden: boolean) {
+      stickyBars.forEach((bar) => {
+        if (menuHidden) {
+          bar.classList.remove('translate-y-full', 'pointer-events-none', 'opacity-0');
+        } else {
+          bar.classList.add('translate-y-full', 'pointer-events-none', 'opacity-0');
+        }
+      });
+    }
 
     function toggleMenu() {
-      const isHidden = mobileMenu?.classList.toggle('hidden');
+      const isHidden = Boolean(mobileMenu?.classList.toggle('hidden'));
+      toggle?.setAttribute('aria-expanded', String(!isHidden));
       if (isHidden) {
         menuIcon?.classList.remove('hidden');
         closeIcon?.classList.add('hidden');
@@ -417,12 +431,15 @@ const schemaFAQ = JSON.stringify({
         menuIcon?.classList.add('hidden');
         closeIcon?.classList.remove('hidden');
       }
+      syncStickyBars(isHidden);
     }
 
     function closeMenu() {
       mobileMenu?.classList.add('hidden');
+      toggle?.setAttribute('aria-expanded', 'false');
       menuIcon?.classList.remove('hidden');
       closeIcon?.classList.add('hidden');
+      syncStickyBars(true);
     }
 
     toggle?.addEventListener('click', toggleMenu);

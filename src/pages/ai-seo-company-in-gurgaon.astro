@@ -1,0 +1,1150 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '../styles/global.css';
+
+const pageTitle = 'AI SEO Company in Gurgaon for Citations | NK Digital Tech';
+const pageDescription = 'Work with NK Digital Tech, an AI SEO Company in Gurgaon helping Cyber City and Golf Course Road brands get cited on ChatGPT, Gemini and Google AI Overviews.';
+const pageCanonical = 'https://www.nkdigitaltech.net/ai-seo-company-in-gurgaon/';
+
+const clients = [
+  {
+    name: 'Propertyways',
+    sector: 'Grade A Office Leasing & Ultra Luxury Realty',
+    region: 'Cyber City & Golf Course Road',
+    logo: '/images/clients/propertyways.webp',
+  },
+  {
+    name: 'VP Infra',
+    sector: 'Commercial Towers & Residential Corridors',
+    region: 'Dwarka Expressway & Sohna Road',
+    logo: '/images/clients/vp-infra.webp',
+  },
+  {
+    name: 'Vision',
+    sector: 'Quaternary Eye Surgery & Diagnostics',
+    region: 'Sector 38, Sector 51 & MG Road',
+    logo: '/images/clients/vision.webp',
+  },
+  {
+    name: 'Aangan',
+    sector: 'Bespoke Bridal Couture & Luxury Retail',
+    region: 'MG Road & Golf Course Extension',
+    logo: '/images/clients/aangan.webp',
+  },
+  {
+    name: 'Creative Academy',
+    sector: 'Executive Upskilling & Test Prep Centres',
+    region: 'Sector 14 & Sohna Road, Gurgaon',
+    logo: '/images/clients/creative-academy.webp',
+  },
+];
+
+const services = [
+  {
+    num: '01',
+    category: 'Google AI Overviews',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>`,
+    iconStyle: 'bg-sky-50 border-sky-200 text-brand-600',
+    impactStyle: 'bg-sky-50/80 border-sky-200/80 text-slate-800',
+    badgeColor: 'text-brand-600 bg-sky-100/80',
+    title: 'Google AI Overview Optimisation in Gurgaon',
+    body: 'Our Google AI Overview optimisation in Gurgaon formats your commercial landing pages with concise 40 to 60 word executive summaries and data tables quoted above organic links.',
+    impact: 'Top source links for Cyber City, Golf Course Road and corporate Gurgaon searches.',
+    cta: 'Audit Your Gurgaon AI Overview Share',
+    href: '#contact',
+  },
+  {
+    num: '02',
+    category: 'OpenAI & ChatGPT Search',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>`,
+    iconStyle: 'bg-violet-50 border-violet-200 text-accent-600',
+    impactStyle: 'bg-violet-50/80 border-violet-200/80 text-slate-800',
+    badgeColor: 'text-accent-600 bg-violet-100/80',
+    title: 'ChatGPT SEO Services in Gurgaon',
+    body: 'With dedicated ChatGPT SEO services in Gurgaon, we research C suite and HNI prompts, clear GPTBot firewall rules and publish verifiable proof so OpenAI names your company.',
+    impact: 'Direct brand shortlisting when Gurugram decision makers ask ChatGPT who to trust.',
+    cta: 'Check Your ChatGPT Brand Visibility',
+    href: '#contact',
+  },
+  {
+    num: '03',
+    category: 'Gemini & Corporate Entities',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>`,
+    iconStyle: 'bg-emerald-50 border-emerald-200 text-emerald-600',
+    impactStyle: 'bg-emerald-50/80 border-emerald-200/80 text-slate-800',
+    badgeColor: 'text-emerald-700 bg-emerald-100/80',
+    title: 'Google Gemini & Gurugram Knowledge Graph',
+    body: 'We link your corporate entity markup, Google Business Profile offices and verified reviews across DLF Cyber City, Udyog Vihar and Sohna Road for instant Gemini recognition.',
+    impact: 'Trusted enterprise recommendations inside Google Gemini, Workspace and Maps.',
+    cta: 'Strengthen Your Gurgaon Entity Graph',
+    href: '#contact',
+  },
+  {
+    num: '04',
+    category: 'Executive Answer Blocks',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>`,
+    iconStyle: 'bg-amber-50 border-amber-200 text-amber-600',
+    impactStyle: 'bg-amber-50/80 border-amber-200/80 text-slate-800',
+    badgeColor: 'text-amber-700 bg-amber-100/80',
+    title: 'Answer Engine Optimisation Services',
+    body: 'Our Answer Engine Optimisation services turn complex B2B, financial and property pages into clear question headings, crisp factual passages and FAQPage schema for Perplexity.',
+    impact: 'Position zero ownership across high value Gurgaon advisory and buyer comparisons.',
+    cta: 'Capture Executive Answer Snippets',
+    href: '#contact',
+  },
+  {
+    num: '05',
+    category: 'Cross Web Authority',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>`,
+    iconStyle: 'bg-indigo-50 border-indigo-200 text-indigo-600',
+    impactStyle: 'bg-indigo-50/80 border-indigo-200/80 text-slate-800',
+    badgeColor: 'text-indigo-700 bg-indigo-100/80',
+    title: 'Generative Engine Optimisation Agency',
+    body: 'Acting as your Generative Engine Optimisation agency, we establish consistent brand verification across business publications, analyst portals and authoritative Indian registries.',
+    impact: 'External authority signals that give Copilot, Claude and ChatGPT confidence to cite you.',
+    cta: 'Expand Verified Third Party Proof',
+    href: '#contact',
+  },
+  {
+    num: '06',
+    category: 'AI Ready Architecture',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>`,
+    iconStyle: 'bg-cyan-50 border-cyan-200 text-cyan-700',
+    impactStyle: 'bg-cyan-50/80 border-cyan-200/80 text-slate-800',
+    badgeColor: 'text-cyan-700 bg-cyan-100/80',
+    title: 'Technical LLM SEO Services & llms.txt',
+    body: 'Our technical LLM SEO services implement clean server rendered HTML, structured llms.txt directories and nested JSON LD graphs so AI bots index your site without script friction.',
+    impact: 'Complete machine readability across GPTBot, PerplexityBot and Microsoft Copilot.',
+    cta: 'Upgrade Technical AI Crawlability',
+    href: '#contact',
+  },
+];
+
+const comparison = [
+  {
+    metric: 'Enterprise & HNI Prompt Research',
+    typical: 'Bids on broad two word terms while missing C suite and investor AI conversations',
+    nk: 'Captures 15 to 30 word Gurgaon buyer prompts across ChatGPT, Copilot, Perplexity and Gemini',
+  },
+  {
+    metric: 'Executive Fact Density',
+    typical: 'Publishes generic agency blog filler with zero verifiable credentials or data tables',
+    nk: 'Builds 40 to 60 word executive answer blocks, yield matrices and compliance proof',
+  },
+  {
+    metric: 'Corporate Firewall & Bot Access',
+    typical: 'Accidentally blocks OpenAI or Perplexity crawlers behind strict enterprise WAF rules',
+    nk: 'Configures clean static HTML, root llms.txt maps and verified AI search bot access',
+  },
+  {
+    metric: 'Gurugram HQ Entity Graph',
+    typical: 'Leaves Cyber City or Golf Course Road office data fragmented across directories',
+    nk: 'Connects Organization, Service and executive profiles across trusted business portals',
+  },
+  {
+    metric: 'Boardroom Citation Reporting',
+    typical: 'Shares vanity impression charts with zero visibility into AI assistant recommendations',
+    nk: 'Audits live citations on ChatGPT, Gemini and AI Overviews tied to inbound mandates',
+  },
+  {
+    metric: 'Senior Strategy & Asset Control',
+    typical: 'Hands enterprise accounts to junior coordinators using automated content spinners',
+    nk: 'Led by senior AI SEO consultants in Gurgaon with 100% client code and data ownership',
+  },
+];
+
+const industries = [
+  {
+    sector: 'Enterprise B2B & Fintech',
+    title: 'Cyber City SaaS Platforms, Fintechs & Global GCCs',
+    focus: 'Chief technology officers, CFOs and procurement teams across DLF Cyber City and Udyog Vihar use Microsoft Copilot, Perplexity and ChatGPT to evaluate enterprise software, cybersecurity and fintech vendors. We structure SOC2 credentials, API tables and SoftwareApplication schema.',
+    outcome: 'Consistent shortlisting inside enterprise AI vendor comparisons driving qualified RFP invitations.',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>`,
+    accentBorder: 'border-t-brand-500',
+    iconBg: 'bg-sky-50 text-brand-600 border-sky-200',
+  },
+  {
+    sector: 'Luxury & Commercial Realty',
+    title: 'Golf Course Road Condominiums & Grade A Office Advisors',
+    focus: 'HNI investors, expats and corporate real estate heads ask ChatGPT and Gemini to compare luxury residences and Grade A office towers along Golf Course Road, Golf Course Extension, Sohna Road and Dwarka Expressway. We publish RERA verified corridor comparison tables.',
+    outcome: 'Authoritative AI property citations generating private HNI viewings and corporate lease mandates.',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>`,
+    accentBorder: 'border-t-accent-500',
+    iconBg: 'bg-violet-50 text-accent-600 border-violet-200',
+  },
+  {
+    sector: 'Quaternary Healthcare',
+    title: 'Super Speciality Hospitals, Fertility & Medical Tourism Hubs',
+    focus: 'Domestic families and international patients flying into Gurugram query Google AI Overviews and Gemini about robotic surgery outcomes, IVF success rates and senior surgeons in Sector 38, Sector 51 and Golf Course Road. We deploy clinician reviewed medical answers and Physician schema.',
+    outcome: 'Verified clinical source links converting domestic and international medical prompts into consultations.',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>`,
+    accentBorder: 'border-t-rose-500',
+    iconBg: 'bg-rose-50 text-rose-600 border-rose-200',
+  },
+  {
+    sector: 'Automotive & Industrial OEM',
+    title: 'IMT Manesar & Udyog Vihar Component Exporters',
+    focus: 'Global supply chain buyers use Perplexity and ChatGPT to identify IATF and ISO certified automotive component makers, robotics suppliers and industrial exporters in IMT Manesar, Pace City and Udyog Vihar. We publish machine readable tolerance tables and compliance sheets.',
+    outcome: 'Inclusion on international AI procurement shortlists delivering high volume export RFQs.',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>`,
+    accentBorder: 'border-t-emerald-500',
+    iconBg: 'bg-emerald-50 text-emerald-600 border-emerald-200',
+  },
+  {
+    sector: 'Advisory, Wealth & Legal',
+    title: 'Management Consultancies, Wealth Offices & Corporate Law',
+    focus: 'Promoters, venture backed founders and family offices in Gurugram ask Perplexity and Google AI Overviews about M&A structuring, cross border taxation, wealth management and ESOP regulations. We build partner authored advisory hubs backed by Person and Organization schema.',
+    outcome: 'Trusted citations in executive research threads converting into high retainer advisory calls.',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>`,
+    accentBorder: 'border-t-cyan-500',
+    iconBg: 'bg-cyan-50 text-cyan-700 border-cyan-200',
+  },
+  {
+    sector: 'Bespoke Interiors & D2C',
+    title: 'Turnkey Interior Architects, Luxury Flagships & D2C HQs',
+    focus: 'Penthouse owners and shoppers across Golf Course Road, Galleria Market and MG Road ask ChatGPT Shopping and Gemini for luxury interior architects, bridal studios and clean consumer brands. We structure Product attributes, project specs and verified studio entities.',
+    outcome: 'Named brand recommendations inside conversational shopping assistants driving consultations.',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>`,
+    accentBorder: 'border-t-amber-500',
+    iconBg: 'bg-amber-50 text-amber-600 border-amber-200',
+  },
+];
+
+const testimonials = [
+  {
+    name: 'Karanvir Oberoi',
+    title: 'Executive Director',
+    company: 'Propertyways',
+    sector: 'Grade A Commercial Leasing & Luxury Realty, Cyber City & Golf Course Road',
+    metrics: [
+      'Named first in ChatGPT and Perplexity Gurugram leasing prompts',
+      'Cited inside Google AI Overviews for Golf Course Road comparisons',
+      '4.5x growth in Fortune 500 tenant and HNI investor enquiries',
+    ],
+    quote: 'Global capability centres moving into DLF Cyber City and HNI buyers evaluating Golf Course Road penthouses ask ChatGPT and Perplexity which advisory firm has verified inventory before making a single phone call. NK Digital Tech rebuilt our corridor research pages with clean data tables, nested JSON LD schema and llms.txt files, turning AI answers into our highest value mandate channel.',
+    logo: '/images/clients/propertyways.webp',
+  },
+  {
+    name: 'Vikramaditya Singh',
+    title: 'Director of Projects',
+    company: 'VP Infra',
+    sector: 'Commercial & Residential Developments, Dwarka Expressway & Sohna Road',
+    metrics: [
+      'Featured in Gemini and ChatGPT Dwarka Expressway builder prompts',
+      'Consistent position zero citations across 30+ RERA buyer questions',
+      '3.9x jump in qualified weekend site visit bookings',
+    ],
+    quote: 'NRI and corporate buyers researching Dwarka Expressway and Sohna Road projects rely heavily on Gemini and ChatGPT to verify RERA timelines and construction quality. NK Digital Tech formatted our project specs into concise factual passages and schema graphs that AI platforms quote every day.',
+    logo: '/images/clients/vp-infra.webp',
+  },
+  {
+    name: 'Dr. Sonali Kapoor',
+    title: 'Medical Director',
+    company: 'Vision',
+    sector: 'Quaternary Eye Care Centres, Sector 38 & MG Road, Gurgaon',
+    metrics: [
+      'Quoted as a trusted clinical source inside Google AI Overviews',
+      'Shortlisted on Gemini for Gurugram robotic laser and cataract prompts',
+      '285% increase in direct corporate and international patient calls',
+    ],
+    quote: 'Corporate executives and international patients visiting Gurugram ask detailed medical questions on Google AI Overviews and Gemini before booking surgery. NK Digital Tech structured surgeon verified 50 word clinical answers and Physician schema across our pages, driving a sharp rise in direct OPD bookings.',
+    logo: '/images/clients/vision.webp',
+  },
+  {
+    name: 'Meenakshi Malhotra',
+    title: 'Creative Head',
+    company: 'Aangan',
+    sector: 'Luxury Bridal Couture Studio, MG Road & Golf Course Extension',
+    metrics: [
+      'Recommended in ChatGPT and Gemini Gurugram couture appointments',
+      'Strong showroom entity authority across Millennium City searches',
+      '3.2x growth in private bridal styling consultations',
+    ],
+    quote: 'Families across Golf Course Road and DLF Phase 1 ask ChatGPT where to schedule bespoke bridal couture trials in Gurgaon without driving across town. NK Digital Tech connected our studio entity markup, collection attributes and press mentions so AI assistants recommend Aangan directly.',
+    logo: '/images/clients/aangan.webp',
+  },
+];
+
+const stages = [
+  {
+    num: 'Stage 01',
+    step: '01',
+    title: 'Gurugram Executive Prompt & WAF Bot Audit',
+    body: 'We benchmark 50+ high ticket buyer prompts across Google AI Overviews, ChatGPT, Microsoft Copilot, Gemini and Perplexity against Cyber City and Golf Course Road competitors. At the same time, we inspect enterprise firewall rules, JavaScript rendering and schema gaps blocking AI crawlers.',
+    accent: 'from-brand-600 to-sky-500',
+  },
+  {
+    num: 'Stage 02',
+    step: '02',
+    title: 'C Suite & HNI Question Blueprint & Entity Graph',
+    body: 'You get a transparent roadmap organised into two week deliverables. We map exact corporate, investor and patient prompts across Gurugram corridors, link your Organization, executive and branch knowledge graphs and plan every commercial answer hub.',
+    accent: 'from-accent-600 to-violet-500',
+  },
+  {
+    num: 'Stage 03',
+    step: '03',
+    title: 'Executive Answer Blocks, JSON LD & llms.txt Launch',
+    body: 'Our strategists and developers replace generic brochure prose with 40 to 60 word factual summaries, comparison matrices and verified FAQs. We ship nested JSON LD structured data, root llms.txt markdown maps and authoritative business directory signals.',
+    accent: 'from-cyan-600 to-teal-500',
+  },
+  {
+    num: 'Stage 04',
+    step: '04',
+    title: 'Live Multi Model Citation & Mandate Attribution',
+    body: 'Every fortnight we track your brand citations across ChatGPT, Copilot, Gemini, Perplexity and Google AI Overviews alongside AI referral sessions, map calls and enterprise enquiries, expanding the Gurugram topics delivering the highest ROI.',
+    accent: 'from-emerald-600 to-green-500',
+  },
+];
+
+const faqs = [
+  {
+    q: 'Which is the best AI SEO company in Gurgaon for corporate, real estate and enterprise brands?',
+    a: 'NK Digital Tech is a trusted AI SEO Company in Gurgaon helping Cyber City SaaS firms, Golf Course Road real estate advisors, quaternary hospitals and Manesar exporters earn verifiable citations across Google AI Overviews, ChatGPT, Microsoft Copilot, Gemini and Perplexity.',
+  },
+  {
+    q: 'Why do enterprise buyers in Gurugram rely on Copilot, Perplexity and ChatGPT before contacting vendors?',
+    a: 'Executives, CFOs and HNI investors across DLF Cyber City and Golf Course Road use conversational AI assistants to compare vendor compliance, RERA track records and clinical credentials in seconds instead of opening ten separate tabs. Only brands with clear, machine verifiable proof make that initial shortlist.',
+  },
+  {
+    q: 'Why does our Gurgaon corporate website rank on Google but never appear in ChatGPT or Copilot answers?',
+    a: 'Enterprise websites often get skipped by conversational models because strict WAF or CDN rules block GPTBot and PerplexityBot, key product tables sit trapped inside client side JavaScript, landing pages use vague corporate slogans instead of factual numbers or external business portals show mismatched Gurugram office details.',
+  },
+  {
+    q: 'How do AEO and GEO differ from conventional SEO for Gurugram companies?',
+    a: 'Conventional SEO focuses on blue link positions for short keywords. Answer Engine Optimisation formats pages with question headings, 40 to 60 word factual definitions and FAQPage schema for instant answer capture. Generative Engine Optimisation connects corporate entity graphs, data matrices and third party media proof so LLMs recommend your firm.',
+  },
+  {
+    q: 'How does an llms.txt file help our Gurugram enterprise get cited accurately by AI?',
+    a: 'An llms.txt file is a clean markdown index hosted at your domain root that directs large language models straight to your verified service lines, compliance documentation, case metrics and Gurugram office records without navigation clutter, preventing AI hallucinations and improving citation accuracy.',
+  },
+  {
+    q: 'What timeline should we expect from AI SEO services in Gurgaon?',
+    a: 'Once firewall bot blocks are cleared, server rendered 40 to 60 word answer blocks go live and nested JSON LD schema is indexed, Gurugram brands frequently begin capturing citations on Perplexity, ChatGPT Search and Google AI Overviews within four to eight weeks, with broader category authority compounding over three to six months.',
+  },
+  {
+    q: 'How do you attribute enterprise leads, phone calls and RFPs to AI search platforms?',
+    a: 'We report across three transparent layers. First, we run scheduled prompt tracking across ChatGPT, Copilot, Gemini, Perplexity and Google AI Overviews to measure citation share. Second, we segment referral sessions from chatgpt.com, perplexity.ai, copilot.microsoft.com and gemini.google.com. Third, we log direct calls, WhatsApp chats and RFP forms.',
+  },
+  {
+    q: 'Do your AI search strategies cover all commercial zones across Gurgaon and Manesar?',
+    a: 'Yes. We structure corridor specific entity schema, comparison pages and Google Business Profile signals across DLF Cyber City, Udyog Vihar, Golf Course Road, Golf Course Extension Road, MG Road, Sohna Road, Sector 38, Sector 51, Dwarka Expressway and IMT Manesar.',
+  },
+];
+
+const trustStrip = [
+  'Google AI Overview Citations',
+  'ChatGPT & Copilot Visibility',
+  'Google Gemini Entity SEO',
+  'Perplexity Executive Answers',
+  'AEO & GEO Frameworks',
+  'llms.txt & JSON LD Schema',
+  'Cyber City to Golf Course Rd',
+  '100% Client Asset Ownership',
+];
+
+const aiSeoGurgaonSchemaLocalBusiness = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "NK Digital Tech AI SEO Company in Gurgaon",
+  "url": "https://www.nkdigitaltech.net/ai-seo-company-in-gurgaon/",
+  "logo": "https://www.nkdigitaltech.net/images/ai-seo-gurgaon/hero-ai-seo-company-gurgaon.webp",
+  "image": "https://www.nkdigitaltech.net/images/ai-seo-gurgaon/hero-ai-seo-company-gurgaon.webp",
+  "description": "Work with NK Digital Tech, an AI SEO Company in Gurgaon helping Cyber City and Golf Course Road brands get cited on ChatGPT, Gemini and Google AI Overviews.",
+  "email": "connect@nkdigitaltech.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Gurgaon",
+    "addressRegion": "Haryana",
+    "addressCountry": "IN"
+  },
+  "areaServed": [
+    "Gurgaon",
+    "Gurugram",
+    "DLF Cyber City",
+    "Golf Course Road",
+    "Golf Course Extension Road",
+    "Udyog Vihar",
+    "Sohna Road",
+    "MG Road Gurgaon",
+    "Dwarka Expressway",
+    "IMT Manesar"
+  ],
+  "serviceType": [
+    "AI SEO Services in Gurgaon",
+    "Google AI Overview Optimisation",
+    "ChatGPT SEO Services",
+    "Google Gemini Entity SEO",
+    "Answer Engine Optimisation (AEO)",
+    "Generative Engine Optimisation (GEO)",
+    "LLM SEO Services & llms.txt Implementation"
+  ]
+});
+
+const aiSeoGurgaonSchemaFAQ = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map((item) => ({
+    "@type": "Question",
+    "name": item.q,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": item.a
+    }
+  }))
+});
+---
+
+<Layout
+  title={pageTitle}
+  description={pageDescription}
+  canonical={pageCanonical}
+  ogImage="https://www.nkdigitaltech.net/images/ai-seo-gurgaon/hero-ai-seo-company-gurgaon.webp"
+  preloadImage="/images/ai-seo-gurgaon/hero-ai-seo-company-gurgaon.webp"
+  customSchemaLocalBusiness={aiSeoGurgaonSchemaLocalBusiness}
+  customSchemaFAQ={aiSeoGurgaonSchemaFAQ}
+  utilityTagline="AI SEO Company in Gurgaon • Citations on Google AI Overviews, ChatGPT & Copilot"
+  brandSubtitle="Gurgaon AI SEO, AEO & GEO"
+  footerBio="AI SEO Company in Gurgaon helping Cyber City enterprises, Golf Course Road realty advisors, hospitals and B2B exporters earn direct citations on Google AI Overviews, ChatGPT, Gemini and Perplexity."
+  footerTagline="AI SEO Company in Gurgaon • Gurugram Enterprise AI Search Specialists"
+  hideLocationsNav={true}
+>
+
+  <!-- =====================================================================
+       SECTION 1: HERO (DARK SURFACE WITH UNIQUE GURGAON AI SEO HERO IMAGE)
+  ===================================================================== -->
+  <section class="relative surface-dark overflow-hidden pt-7 pb-10 sm:pt-14 sm:pb-16 lg:pt-16 lg:pb-20 border-b border-slate-800/80">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="absolute inset-0 mesh-glow pointer-events-none"></div>
+    <div class="absolute -top-36 -left-36 w-96 h-96 bg-brand-500/20 rounded-full blur-[130px] pointer-events-none"></div>
+    <div class="absolute top-1/4 -right-36 w-96 h-96 bg-accent-500/20 rounded-full blur-[130px] pointer-events-none"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-7 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns: Headline & CTA -->
+        <div class="lg:col-span-7 text-left min-w-0">
+          <div class="badge-dark mb-4 sm:mb-5">
+            <span class="w-2 h-2 rounded-full bg-brand-400 animate-ping flex-shrink-0"></span>
+            <span class="min-w-0">Google AI Overviews &bull; ChatGPT &bull; Gemini &bull; Perplexity</span>
+          </div>
+
+          <h1 class="font-display text-[1.95rem] sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-[1.15] sm:leading-[1.1] mb-4 sm:mb-5 text-glow">
+            AI SEO Company <br />
+            <span class="gradient-text-light">in Gurgaon</span>
+          </h1>
+
+          <p class="text-[13.5px] sm:text-base md:text-lg text-slate-300 leading-relaxed mb-5 sm:mb-7 font-normal text-justify hyphens-auto [text-align-last:left]">
+            NK Digital Tech is an <strong class="text-white font-semibold">AI SEO Company in Gurgaon</strong> helping corporate brands, real estate advisors, hospitals and B2B enterprises get directly cited on Google AI Overviews, ChatGPT, Gemini and Perplexity. We convert executive buyer prompts into daily consultations, RFPs and qualified enquiries across DLF Cyber City, Golf Course Road, Sohna Road and Dwarka Expressway.
+          </p>
+
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 mb-6 sm:mb-8">
+            <a href="#contact" class="btn-primary w-full sm:w-auto min-h-[48px] text-sm sm:text-base px-5 sm:px-8 py-3.5 sm:py-4">
+              <span>Claim Your Free Gurgaon AI Citation Audit</span>
+              <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+              </svg>
+            </a>
+            <a href="#services" class="btn-secondary-dark w-full sm:w-auto min-h-[48px] text-sm sm:text-base px-5 sm:px-7 py-3.5 sm:py-4">
+              <span>Explore Our Six AI SEO Pillars</span>
+            </a>
+          </div>
+
+          <!-- Trust Verification Strip (2x4 Grid on Mobile, Flex Pills on Desktop) -->
+          <div class="pt-4 sm:pt-5 border-t border-slate-800/80">
+            <div class="grid grid-cols-2 sm:flex sm:flex-wrap items-stretch sm:items-center gap-2">
+              {trustStrip.map((item) => (
+                <span class="px-2.5 sm:px-3 py-2 sm:py-1.5 rounded-lg bg-slate-900/90 border border-slate-800 text-[11px] sm:text-xs text-slate-300 font-medium flex items-center justify-center sm:justify-start text-center sm:text-left leading-tight">
+                  {item}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Unique Gurgaon AI SEO Hero Image -->
+        <div class="lg:col-span-5 min-w-0">
+          <div class="relative rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-700/80 shadow-2xl shadow-brand-500/15 bg-slate-900 group">
+            <div class="relative">
+              <img
+                src="/images/ai-seo-gurgaon/hero-ai-seo-company-gurgaon.webp"
+                alt="AI SEO Company in Gurgaon Strategists Reviewing ChatGPT Gemini and Google AI Overview Citations"
+                width="960"
+                height="540"
+                fetchpriority="high"
+                decoding="async"
+                class="w-full aspect-[16/10] sm:aspect-auto sm:h-64 md:h-[330px] lg:h-[350px] object-cover object-center group-hover:scale-105 transition-transform duration-500"
+              />
+              <div class="hidden sm:block absolute inset-0 bg-gradient-to-t from-[#050a14] via-transparent to-transparent opacity-80"></div>
+            </div>
+            <div class="relative sm:absolute sm:bottom-4 sm:left-4 sm:right-4 glass-card border-t sm:border border-slate-800 sm:rounded-2xl p-3.5 sm:p-4">
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-1">
+                <span class="text-xs font-bold text-white">Gurugram Enterprise Citation System</span>
+                <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-400">
+                  <span class="w-2 h-2 rounded-full bg-emerald-400 flex-shrink-0"></span>
+                  Live LLM Discovery
+                </span>
+              </div>
+              <p class="text-[11px] sm:text-xs text-slate-300 text-justify hyphens-auto [text-align-last:left] leading-relaxed">
+                Structured so Google AI Overviews, ChatGPT, Copilot and Gemini shortlist your Gurgaon brand first.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 2: INTRODUCTION (CRISP WHITE CONTRAST SECTION + GURGAON TEAM IMAGE)
+  ===================================================================== -->
+  <section class="relative surface-white py-10 sm:py-16 lg:py-20 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-7 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns: Concise Unique Gurgaon AI SEO Copy -->
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-light mb-3 sm:mb-3.5">Gurugram AEO, GEO &amp; Executive Citations</div>
+          <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-snug sm:leading-tight mb-3.5 sm:mb-5">
+            How Our AI SEO Company in Gurgaon <span class="gradient-text-dark">Places Your Brand Inside Executive AI Answers</span>
+          </h2>
+          <div class="space-y-3.5 sm:space-y-4 text-slate-700 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            <p>
+              As an <strong>AI SEO Company in Gurgaon</strong>, we help ambitious enterprises secure direct mentions and clickable source links inside Google AI Overviews, ChatGPT, Microsoft Copilot, Gemini and Perplexity. Corporate leaders in DLF Cyber City, HNI families along Golf Course Road and procurement teams in Udyog Vihar and Manesar now ask AI assistants to vet vendors before opening any website.
+            </p>
+            <p>
+              When a buyer submits a detailed comparison prompt, AI engines build one authoritative shortlist from two or three verifiable sources rather than displaying ten blue links. Partnering with our <strong>AI SEO agency in Gurgaon</strong> places your firm squarely inside that shortlist and turns high ticket research into direct inbound mandates.
+            </p>
+          </div>
+          <div class="mt-5 sm:mt-7 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
+            <a href="#contact" class="btn-primary w-full sm:w-auto min-h-[48px]">
+              <span>Speak With Our Gurgaon AI SEO Consultants</span>
+              <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+              </svg>
+            </a>
+            <a href="#why-us" class="btn-secondary-light w-full sm:w-auto min-h-[48px]">
+              <span>Compare AI Citation Standards</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Unique Gurgaon AI SEO Team Image + Stats -->
+        <div class="lg:col-span-5 space-y-3.5 sm:space-y-4 min-w-0">
+          <div class="rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-200 shadow-lg bg-slate-100">
+            <img
+              src="/images/ai-seo-gurgaon/ai-seo-agency-team-gurgaon.webp"
+              alt="AI SEO Consultants in Gurgaon Auditing Corporate Entity Graphs and Prompt Citations"
+              width="800"
+              height="533"
+              class="w-full aspect-[16/10] sm:aspect-auto sm:h-56 lg:h-60 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="grid grid-cols-2 gap-3 sm:gap-3.5">
+            {[
+              { val: '5+ Models', label: 'AI Overview, ChatGPT, Copilot', sub: 'Plus Gemini & Perplexity' },
+              { val: '40 to 60', label: 'Word Executive Answers', sub: 'Formatted for clean citation' },
+              { val: 'All Hubs', label: 'Cyber City to Manesar', sub: 'Complete Gurugram coverage' },
+              { val: '100%', label: 'Code & Schema Ownership', sub: 'Full client admin control' },
+            ].map((stat) => (
+              <div class="elevated-card rounded-xl sm:rounded-2xl p-3 sm:p-3.5 min-w-0">
+                <div class="font-display font-black text-xl sm:text-2xl text-brand-600 mb-0.5">{stat.val}</div>
+                <div class="text-[11px] sm:text-xs font-bold text-slate-900 leading-snug">{stat.label}</div>
+                <div class="text-[10.5px] sm:text-[11px] text-slate-500 leading-snug mt-0.5">{stat.sub}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 3: PROBLEM STATEMENT (DEEP INDIGO DARK CONTRAST SECTION)
+  ===================================================================== -->
+  <section class="relative surface-indigo py-11 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="max-w-7xl mx-auto relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns: Concise Problem Statement Copy -->
+        <div class="lg:col-span-7 min-w-0">
+          <div class="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-3.5 py-1 sm:py-1.5 rounded-full text-[10px] sm:text-xs font-bold uppercase tracking-wider sm:tracking-widest bg-amber-500/10 border border-amber-500/30 text-amber-300 max-w-full leading-snug mb-4 sm:mb-5">
+            <svg class="w-4 h-4 text-amber-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+            </svg>
+            <span>Why Gurugram Enterprises Get Overlooked</span>
+          </div>
+
+          <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-white tracking-tight leading-snug sm:leading-tight mb-4 sm:mb-6">
+            Why High Growth Gurgaon Companies Remain Invisible on ChatGPT, Copilot and AI Overviews
+          </h2>
+
+          <div class="space-y-3.5 sm:space-y-4 text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            <p>
+              Even well funded brands in DLF Cyber City, Golf Course Road and Udyog Vihar get left out of ChatGPT, Copilot and Google AI Overviews when corporate security rules block GPTBot, heavy JavaScript frameworks hide product or compliance tables or web pages rely on broad taglines instead of verifiable facts.
+            </p>
+            <p>
+              Large language models quote companies that publish crisp factual passages backed by nested schema markup and consistent authority across respected business portals. Hiring a specialist <strong>AI search optimisation company in Gurgaon</strong> eliminates every technical barrier so AI assistants cite your enterprise with confidence.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Diagnostic Comparison Cards -->
+        <div class="lg:col-span-5 space-y-3.5 sm:space-y-4 min-w-0">
+          <div class="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6 border-l-4 border-l-rose-500">
+            <div class="flex flex-wrap items-center justify-between gap-1.5 mb-2">
+              <span class="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-rose-400">Why AI Skips Gurgaon Firms</span>
+              <span class="text-[11px] sm:text-xs text-slate-400">Zero Executive Mentions</span>
+            </div>
+            <h3 class="font-display font-bold text-[15px] sm:text-base text-white mb-2 leading-snug">WAF Bot Blocks, Script Heavy Pages &amp; Vague Claims</h3>
+            <p class="text-xs text-slate-300 leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+              Blocked OpenAI crawlers, JavaScript locked data tables and unverified corporate profiles stop ChatGPT, Copilot and Perplexity from recommending your Gurugram brand.
+            </p>
+          </div>
+
+          <div class="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6 border-l-4 border-l-emerald-400">
+            <div class="flex flex-wrap items-center justify-between gap-1.5 mb-2">
+              <span class="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-emerald-400">NK Digital Tech Citation System</span>
+              <span class="text-[11px] sm:text-xs text-brand-300">Preferred Gurgaon Source</span>
+            </div>
+            <h3 class="font-display font-bold text-[15px] sm:text-base text-white mb-2 leading-snug">Executive Answer Blocks, Entity Graphs &amp; llms.txt</h3>
+            <p class="text-xs text-slate-300 leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+              Pairs clean server rendered HTML, 40 to 60 word executive summaries, nested JSON LD graphs and business press proof so AI platforms cite your Gurgaon company first.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 4: SERVICES (LIGHT COOL ALABASTER CONTRAST + GURGAON AI SEO IMAGE)
+  ===================================================================== -->
+  <section id="services" class="relative surface-cool scroll-mt-20 py-11 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <!-- Services Header with Unique Gurgaon AI SEO Services Image -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 items-center mb-9 sm:mb-16">
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-light mb-3">Six Conversational Search Pillars</div>
+          <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-snug sm:leading-tight mb-3 sm:mb-4">
+            Specialised AI SEO Services in Gurgaon
+          </h2>
+          <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            Our <strong>AI SEO services in Gurgaon</strong> bring together Google AI Overview capture, ChatGPT and Copilot prompt strategy, Gurugram entity graphs, AEO, GEO and clean llms.txt architecture to win executive buyer trust.
+          </p>
+        </div>
+        <div class="lg:col-span-5 min-w-0">
+          <div class="rounded-2xl overflow-hidden border border-slate-200 shadow-md bg-white">
+            <img
+              src="/images/ai-seo-gurgaon/chatgpt-gemini-ai-seo-gurgaon.webp"
+              alt="AI SEO Services in Gurgaon Strategist Building Knowledge Graph and ChatGPT Citations"
+              width="800"
+              height="450"
+              class="w-full aspect-[16/9] sm:aspect-auto sm:h-56 lg:h-64 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- 3 Columns x 2 Rows Grid Layout -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-7">
+        {services.map((s) => (
+          <div class="elevated-card rounded-2xl p-5 sm:p-7 flex flex-col justify-between group sm:hover:-translate-y-1">
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-4 sm:mb-6">
+                <div class={`w-11 h-11 sm:w-12 sm:h-12 rounded-xl border flex items-center justify-center flex-shrink-0 ${s.iconStyle}`}>
+                  <Fragment set:html={s.icon} />
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class={`text-[10.5px] sm:text-[11px] font-semibold px-2.5 py-1 rounded-md ${s.badgeColor}`}>
+                    {s.category}
+                  </span>
+                  <span class="font-display font-black text-base sm:text-lg text-slate-300">{s.num}</span>
+                </div>
+              </div>
+
+              <h3 class="font-display font-bold text-[17px] sm:text-xl text-slate-900 mb-2.5 sm:mb-3 leading-snug group-hover:text-brand-600 transition-colors">
+                {s.title}
+              </h3>
+
+              <p class="text-slate-600 text-[13px] sm:text-sm leading-relaxed mb-4 sm:mb-6 text-justify hyphens-auto [text-align-last:left]">
+                {s.body}
+              </p>
+            </div>
+
+            <div>
+              <div class={`rounded-xl border p-3.5 sm:p-4 mb-3.5 sm:mb-5 ${s.impactStyle}`}>
+                <div class="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-slate-900 mb-1">
+                  <svg class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                  </svg>
+                  <span>Citation Impact</span>
+                </div>
+                <p class="text-xs text-slate-700 leading-relaxed font-medium text-justify hyphens-auto [text-align-last:left]">
+                  {s.impact}
+                </p>
+              </div>
+
+              <a href={s.href} class="inline-flex items-center gap-2 py-2.5 min-h-[44px] text-xs font-bold text-brand-600 hover:text-brand-700 group-hover:gap-3 transition-all">
+                <span>{s.cta}</span>
+                <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 5: WHY NK DIGITAL TECH (CRISP WHITE CONTRAST SECTION)
+  ===================================================================== -->
+  <section id="why-us" class="relative surface-white scroll-mt-20 py-11 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-14 text-left sm:text-center">
+        <div class="badge-light mb-3">Why Gurugram Leaders Partner With Us</div>
+        <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-snug sm:leading-tight mb-3 sm:mb-4">
+          Why NK Digital Tech Leads as an AI SEO Company in Gurgaon
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed mb-4 text-justify hyphens-auto [text-align-last:left]">
+          Most retainers in Gurugram still revolve around generic blog quotas that conversational AI models ignore completely. Companies evaluating the <strong>best AI SEO company in Gurgaon</strong> work directly with our senior <strong>AI SEO consultants in Gurgaon</strong> to build verifiable entity data, clean static pages and tracked citations across ChatGPT, Copilot, Gemini and Google AI Overviews.
+        </p>
+        <p class="text-slate-700 font-semibold text-xs sm:text-sm">
+          Compare a conventional keyword vendor with our Gurgaon enterprise citation system:
+        </p>
+      </div>
+
+      <!-- Desktop Comparison Matrix -->
+      <div class="hidden md:block overflow-hidden rounded-2xl border border-slate-200 shadow-lg">
+        <table class="w-full text-left border-collapse">
+          <thead>
+            <tr class="bg-slate-900 text-white">
+              <th class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-slate-300 w-1/4">
+                Evaluation Benchmark
+              </th>
+              <th class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-rose-300 w-[37.5%] border-l border-slate-800">
+                Conventional Keyword Vendor
+              </th>
+              <th class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-brand-300 w-[37.5%] border-l border-slate-800 bg-slate-950">
+                NK Digital Tech (Gurgaon AI Citation System)
+              </th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200 text-sm">
+            {comparison.map((row, idx) => (
+              <tr class={idx % 2 === 0 ? 'bg-white' : 'bg-slate-50/80'}>
+                <td class="py-5 px-6 font-display font-bold text-slate-900">
+                  {row.metric}
+                </td>
+                <td class="py-5 px-6 text-slate-600 border-l border-slate-200">
+                  <div class="flex items-start gap-2.5">
+                    <svg class="w-4 h-4 text-rose-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                    <span>{row.typical}</span>
+                  </div>
+                </td>
+                <td class="py-5 px-6 text-slate-900 font-medium border-l border-slate-200 bg-sky-50/40">
+                  <div class="flex items-start gap-2.5">
+                    <svg class="w-4 h-4 text-emerald-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span>{row.nk}</span>
+                  </div>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Mobile Comparison Cards -->
+      <div class="md:hidden space-y-3.5">
+        {comparison.map((row) => (
+          <div class="elevated-card rounded-2xl p-4 space-y-2.5">
+            <h3 class="font-display font-bold text-slate-900 text-[15px] leading-snug">{row.metric}</h3>
+            <div class="rounded-xl bg-rose-50 border border-rose-100 p-3">
+              <div class="flex items-center gap-1.5 mb-1">
+                <svg class="w-3.5 h-3.5 text-rose-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+                <p class="text-[10px] font-bold uppercase tracking-wider text-rose-600">Conventional Vendor</p>
+              </div>
+              <p class="text-xs text-slate-700 leading-relaxed text-justify hyphens-auto [text-align-last:left]">{row.typical}</p>
+            </div>
+            <div class="rounded-xl bg-sky-50 border border-sky-200 p-3">
+              <div class="flex items-center gap-1.5 mb-1">
+                <svg class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                </svg>
+                <p class="text-[10px] font-bold uppercase tracking-wider text-brand-600">NK Digital Tech</p>
+              </div>
+              <p class="text-xs text-slate-900 font-semibold leading-relaxed text-justify hyphens-auto [text-align-last:left]">{row.nk}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 6: OUR CLIENTS (DARK INDIGO CONTRAST SECTION BELOW WHY US)
+  ===================================================================== -->
+  <section id="clients" class="relative surface-indigo scroll-mt-20 py-11 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-14 text-left sm:text-center">
+        <div class="badge-dark mb-3">Gurugram Brands Cited on AI</div>
+        <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-white tracking-tight leading-snug sm:leading-tight mb-3 sm:mb-4">
+          Gurgaon Commercial Leaders Recommended on ChatGPT &amp; Gemini
+        </h2>
+        <p class="text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          From Grade A office leasing consultants on Golf Course Road and developers on Dwarka Expressway to quaternary eye hospitals in Sector 38 and couture studios on MG Road, leading Gurugram enterprises rely on our AI search execution.
+        </p>
+      </div>
+
+      <!-- 5 Column Responsive Client Grid (Balanced 2+2+1 Full Span on Mobile) -->
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-5">
+        {clients.map((client) => (
+          <div class="glass-card rounded-2xl p-3.5 sm:p-5 flex flex-col items-center text-center group sm:hover:-translate-y-1 last:col-span-2 sm:last:col-span-1">
+            <div class="w-full h-16 sm:h-20 rounded-xl bg-white border border-slate-200 flex items-center justify-center p-2.5 sm:p-4 mb-3 sm:mb-4 shadow-sm">
+              <img
+                src={client.logo}
+                alt={`${client.name} Logo`}
+                width="130"
+                height="48"
+                class="max-h-9 sm:max-h-12 w-auto object-contain"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <h3 class="font-display font-bold text-sm sm:text-base text-white mb-1">{client.name}</h3>
+            <p class="text-[11px] sm:text-xs text-slate-300 leading-snug mb-2.5 sm:mb-3 flex-grow">{client.sector}</p>
+            <span class="inline-flex items-center justify-center gap-1 text-[10px] sm:text-[11px] font-semibold text-brand-300 bg-brand-500/15 border border-brand-500/30 px-2 sm:px-2.5 py-1 rounded-md leading-tight max-w-full">
+              <svg class="w-3 h-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+              </svg>
+              <span>{client.region}</span>
+            </span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 7: INDUSTRIES (LIGHT SLATE CONTRAST SECTION - 3x2 GRID)
+  ===================================================================== -->
+  <section id="industries" class="relative surface-slate scroll-mt-20 py-11 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-16 text-left sm:text-center">
+        <div class="badge-light mb-3">Gurugram Vertical Prompt Playbooks</div>
+        <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-snug sm:leading-tight mb-3 sm:mb-4">
+          AI Citation Strategies Built for Gurgaon Enterprise Sectors
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          A global capability centre director in Cyber City asks completely different AI evaluation questions than an HNI homebuyer on Golf Course Road or an automotive buyer in Manesar. We build dedicated answer clusters for each Gurugram industry.
+        </p>
+      </div>
+
+      <!-- 3 Columns x 2 Rows Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-7">
+        {industries.map((ind) => (
+          <div class={`elevated-card rounded-2xl p-5 sm:p-7 border-t-4 ${ind.accentBorder} flex flex-col justify-between sm:hover:-translate-y-1`}>
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-4 sm:mb-5">
+                <div class={`w-10 h-10 sm:w-11 sm:h-11 rounded-xl border flex items-center justify-center flex-shrink-0 ${ind.iconBg}`}>
+                  <Fragment set:html={ind.icon} />
+                </div>
+                <span class="text-[11px] font-semibold text-slate-600 bg-slate-100 px-2.5 py-1 rounded-md">
+                  {ind.sector}
+                </span>
+              </div>
+
+              <h3 class="font-display font-bold text-[17px] sm:text-xl text-slate-900 mb-3 sm:mb-4 leading-snug">
+                {ind.title}
+              </h3>
+
+              <div class="mb-4 sm:mb-5">
+                <p class="text-[11px] font-bold uppercase tracking-wider text-brand-600 mb-1.5">
+                  Gurgaon Prompt Focus
+                </p>
+                <p class="text-slate-600 text-[13px] sm:text-sm leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+                  {ind.focus}
+                </p>
+              </div>
+            </div>
+
+            <div class="rounded-xl bg-emerald-50/70 border border-emerald-200/80 p-3.5 sm:p-4">
+              <p class="text-[11px] font-bold uppercase tracking-wider text-emerald-700 mb-1">
+                Commercial Result
+              </p>
+              <p class="text-slate-800 text-xs font-medium leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+                {ind.outcome}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 8: TESTIMONIALS (DEEP NAVY CONTRAST SECTION - 2x2 GRID)
+  ===================================================================== -->
+  <section id="testimonials" class="relative surface-dark scroll-mt-20 py-11 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="absolute inset-0 mesh-glow pointer-events-none opacity-60"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-16 text-left sm:text-center">
+        <div class="badge-dark mb-3">Verified Gurugram Client Outcomes</div>
+        <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-white tracking-tight leading-snug sm:leading-tight mb-3 sm:mb-4">
+          How AI Search Visibility Drives High Ticket Mandates in Gurgaon
+        </h2>
+        <p class="text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          Documented AI citation gains and inbound business growth shared by commercial property directors, corridor builders, medical heads and luxury retail founders in Gurgaon.
+        </p>
+      </div>
+
+      <!-- 2 Columns x 2 Rows Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-7">
+        {testimonials.map((t) => (
+          <div class="glass-card rounded-2xl p-5 sm:p-8 flex flex-col justify-between sm:hover:-translate-y-1">
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-4 sm:mb-5">
+                <div class="flex items-center gap-1">
+                  {[1, 2, 3, 4, 5].map(() => (
+                    <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                    </svg>
+                  ))}
+                </div>
+                <span class="text-[10px] sm:text-[11px] font-semibold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-1 rounded-md">
+                  Verified Gurgaon Client
+                </span>
+              </div>
+
+              <p class="text-slate-200 text-[13.5px] sm:text-base leading-relaxed italic mb-5 sm:mb-6 text-justify hyphens-auto [text-align-last:left]">
+                "{t.quote}"
+              </p>
+
+              <div class="rounded-xl bg-slate-900/90 border border-slate-700/80 p-3.5 sm:p-4 mb-5 sm:mb-6">
+                <p class="text-[11px] font-bold uppercase tracking-wider text-brand-400 mb-2 sm:mb-2.5">
+                  Measured Citation Impact
+                </p>
+                <ul class="space-y-2">
+                  {t.metrics.map((m) => (
+                    <li class="flex items-start gap-2 text-xs text-slate-300 font-medium leading-snug">
+                      <svg class="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                      </svg>
+                      <span>{m}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3.5 sm:gap-4 pt-3.5 sm:pt-4 border-t border-slate-800">
+              <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-white p-2 flex items-center justify-center flex-shrink-0 shadow-sm">
+                <img
+                  src={t.logo}
+                  alt={`${t.company} Logo`}
+                  width="48"
+                  height="48"
+                  class="max-h-8 sm:max-h-10 w-auto object-contain"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="min-w-0">
+                <h3 class="font-display font-bold text-white text-sm sm:text-base leading-snug">{t.name}</h3>
+                <p class="text-xs text-slate-300 leading-snug">
+                  {t.title}, <strong class="text-brand-400 font-semibold">{t.company}</strong>
+                </p>
+                <p class="text-[10.5px] sm:text-[11px] text-slate-400 mt-0.5 leading-snug">{t.sector}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 9: HOW WE WORK (CRISP WHITE CONTRAST SECTION - 4 STAGES)
+  ===================================================================== -->
+  <section class="relative surface-white py-11 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-16 text-left sm:text-center">
+        <div class="badge-light mb-3">Our 4 Stage Citation Process</div>
+        <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-snug sm:leading-tight mb-3 sm:mb-4">
+          How We Build Verified AI Search Citations Across Gurgaon
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          Our four stage execution clears enterprise firewall and rendering blocks first, structures concise executive answer blocks across your priority Gurugram pages and tracks live citations across Google AI Overviews, ChatGPT, Copilot, Gemini and Perplexity.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-7">
+        {stages.map((s) => (
+          <div class="elevated-card rounded-2xl p-5 sm:p-8 relative overflow-hidden group sm:hover:-translate-y-1">
+            <div class="flex items-center justify-between gap-4 mb-3.5 sm:mb-5">
+              <span class={`inline-flex items-center px-2.5 sm:px-3 py-1 rounded-lg text-xs font-bold uppercase tracking-wider text-white bg-gradient-to-r ${s.accent}`}>
+                {s.num}
+              </span>
+              <span class="font-display font-black text-3xl sm:text-4xl text-slate-200 group-hover:text-slate-300 transition-colors">
+                {s.step}
+              </span>
+            </div>
+            <h3 class="font-display font-bold text-[17px] sm:text-xl text-slate-900 mb-2.5 sm:mb-3 leading-snug">
+              {s.title}
+            </h3>
+            <p class="text-slate-600 text-[13px] sm:text-sm leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+              {s.body}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 10: PARTNER WITH THE AI SEO COMPANY IN GURGAON (CONCLUSION)
+  ===================================================================== -->
+  <section class="relative surface-indigo py-11 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-7 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns: Partner Paragraphs (Justified) -->
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-dark mb-3.5 sm:mb-4">Compounding Gurugram Brand Authority</div>
+          <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-white tracking-tight leading-snug sm:leading-tight mb-4 sm:mb-6">
+            Partner With a Trusted AI SEO Company in Gurgaon
+          </h2>
+          <div class="space-y-4 sm:space-y-5 text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            <p>
+              Enterprise discovery across DLF Cyber City, Golf Course Road, Sohna Road, Udyog Vihar and Dwarka Expressway now begins inside conversational AI assistants. When founders, CFOs, HNI investors and international patients ask ChatGPT, Copilot, Gemini or Google AI Overviews who to hire in Gurugram, only two or three verified brands earn the recommendation.
+            </p>
+            <p>
+              When you engage NK Digital Tech as your <strong>AI SEO Company in Gurgaon</strong>, our senior strategists and developers combine fast server rendered HTML, 40 to 60 word executive answer passages, nested JSON LD entity graphs, llms.txt maps and authoritative press signals into measurable pipeline growth. Claim your free Gurgaon AI citation audit today.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Unique Gurgaon AI Citation Growth Image -->
+        <div class="lg:col-span-5 min-w-0">
+          <div class="rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-700/80 shadow-2xl bg-slate-900">
+            <img
+              src="/images/ai-seo-gurgaon/ai-citation-growth-gurgaon.webp"
+              alt="AI SEO Company in Gurgaon Reviewing Verified ChatGPT Copilot and Google AI Overview Lead Growth"
+              width="800"
+              height="450"
+              class="w-full aspect-[16/10] sm:aspect-auto sm:h-64 lg:h-72 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 11: FAQ (LIGHT COOL SLATE CONTRAST SECTION)
+  ===================================================================== -->
+  <section id="faq" class="relative surface-cool scroll-mt-20 py-11 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-left sm:text-center mb-9 sm:mb-14">
+        <div class="badge-light mb-3">Executive AI Search Answers</div>
+        <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-snug sm:leading-tight mb-3 sm:mb-4">
+          Frequently Asked Questions About Hiring an AI SEO Company in Gurgaon
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          Direct, self contained answers to the questions Gurugram founders, CMOs, real estate directors and hospital leaders ask before selecting an AI search partner.
+        </p>
+      </div>
+
+      <div class="space-y-3 sm:space-y-4">
+        {faqs.map((f, i) => (
+          <details class="elevated-card rounded-2xl group overflow-hidden" open={i === 0}>
+            <summary class="flex items-start sm:items-center justify-between gap-3 sm:gap-4 px-4 sm:px-6 py-4 sm:py-5 min-h-[54px] select-none">
+              <div class="flex items-start sm:items-center gap-2.5 sm:gap-3.5 text-left min-w-0">
+                <span class="w-6 h-6 sm:w-7 sm:h-7 rounded-lg bg-sky-50 border border-sky-200 text-brand-600 font-display font-bold text-xs flex items-center justify-center flex-shrink-0 mt-0.5 sm:mt-0">
+                  0{i + 1}
+                </span>
+                <span class="font-display font-bold text-slate-900 text-[14px] sm:text-base md:text-lg leading-snug">
+                  {f.q}
+                </span>
+              </div>
+              <span class="faq-icon w-7 h-7 sm:w-8 sm:h-8 rounded-full border border-slate-200 text-slate-600 flex items-center justify-center flex-shrink-0 mt-0.5 sm:mt-0">
+                <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                </svg>
+              </span>
+            </summary>
+            <div class="px-4 sm:px-6 pb-5 sm:pb-6 pt-3 text-slate-600 text-[13px] sm:text-sm md:text-base leading-relaxed border-t border-slate-100 text-justify hyphens-auto [text-align-last:left]">
+              {f.a}
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 12: SHORT 2 TO 3 LINE CALL TO ACTION BANNER (LAST SECTION)
+  ===================================================================== -->
+  <section id="contact" class="relative surface-dark scroll-mt-20 py-11 sm:py-16 lg:py-20 px-4 sm:px-6 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-5xl mx-auto">
+      <div class="rounded-2xl sm:rounded-3xl bg-gradient-to-r from-brand-600 via-brand-700 to-accent-700 p-5 sm:p-10 md:p-12 text-center text-white shadow-2xl border border-white/15 relative overflow-hidden">
+        <div class="relative z-10 max-w-2xl mx-auto">
+          <h2 class="font-display font-black text-[1.45rem] sm:text-3xl md:text-4xl text-white tracking-tight leading-snug mb-3 sm:mb-4">
+            Ready to Get Your Gurgaon Enterprise Cited on ChatGPT &amp; AI Overviews?
+          </h2>
+
+          <p class="text-sky-50 text-[13px] sm:text-sm md:text-base leading-relaxed mb-6 sm:mb-8 text-justify sm:text-center hyphens-auto [text-align-last:left] sm:[text-align-last:center]">
+            Request a free live AI citation audit from our senior strategists covering your prompt share across Cyber City, Golf Course Road, Sohna Road and Dwarka Expressway.
+          </p>
+
+          <a
+            href="mailto:connect@nkdigitaltech.com"
+            class="inline-flex w-full sm:w-auto min-h-[48px] items-center justify-center gap-2 sm:gap-3 px-5 sm:px-8 py-3.5 sm:py-4 rounded-xl bg-white text-slate-950 hover:bg-sky-50 font-display font-bold text-sm sm:text-base shadow-xl transition-all duration-300 active:scale-95 text-center leading-snug"
+          >
+            <span>Claim Your Free Gurgaon AI Citation Audit</span>
+            <svg class="w-4 h-4 sm:w-5 sm:h-5 text-brand-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mobile Sticky Bottom Quick Action Bar -->
+  <div class="sm:hidden fixed bottom-0 inset-x-0 z-40 bg-[#050a14]/95 backdrop-blur-xl border-t border-slate-800 px-3.5 pt-2.5 pb-[max(0.625rem,env(safe-area-inset-bottom))] shadow-[0_-8px_24px_rgba(0,0,0,0.45)]">
+    <div class="flex items-center gap-2.5">
+      <a
+        href="mailto:connect@nkdigitaltech.com"
+        class="btn-primary flex-1 min-h-[44px] py-2.5 px-4 text-xs font-bold rounded-xl"
+      >
+        <span>Claim Free Gurgaon AI Audit</span>
+        <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+        </svg>
+      </a>
+      <a
+        href="#services"
+        class="btn-secondary-dark min-h-[44px] py-2.5 px-3.5 text-xs font-semibold rounded-xl flex-shrink-0"
+      >
+        <span>Services</span>
+      </a>
+    </div>
+  </div>
+
+</Layout>

@@ -1,0 +1,1150 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '../styles/global.css';
+
+const pageTitle = 'AI SEO Company in Lucknow for Citations | NK Digital Tech';
+const pageDescription = 'Partner with NK Digital Tech, an AI SEO Company in Lucknow helping Gomti Nagar and Hazratganj businesses get cited on Google AI Overviews, ChatGPT and Gemini.';
+const pageCanonical = 'https://www.nkdigitaltech.net/ai-seo-company-in-lucknow/';
+
+const clients = [
+  {
+    name: 'VP Infra',
+    sector: 'RERA Townships, Villas & Plotted Developments',
+    region: 'Gomti Nagar Ext & Shaheed Path',
+    logo: '/images/clients/vp-infra.webp',
+  },
+  {
+    name: 'Vision',
+    sector: 'Super Speciality Eye Hospital & Diagnostics',
+    region: 'Gomti Nagar & Aliganj, Lucknow',
+    logo: '/images/clients/vision.webp',
+  },
+  {
+    name: 'Creative Academy',
+    sector: 'Civil Services, NEET & Judicial Coaching',
+    region: 'Kapoorthala, Aliganj & Hazratganj',
+    logo: '/images/clients/creative-academy.webp',
+  },
+  {
+    name: 'Aangan',
+    sector: 'Heritage Bridal Couture & Chikankari Flagship',
+    region: 'Hazratganj & Vibhuti Khand',
+    logo: '/images/clients/aangan.webp',
+  },
+  {
+    name: 'Propertyways',
+    sector: 'Commercial Retail & Corporate Space Advisory',
+    region: 'Vibhuti Khand & Sushant Golf City',
+    logo: '/images/clients/propertyways.webp',
+  },
+];
+
+const services = [
+  {
+    num: '01',
+    category: 'Google AI Overviews',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>`,
+    iconStyle: 'bg-sky-50 border-sky-200 text-brand-600',
+    impactStyle: 'bg-sky-50/80 border-sky-200/80 text-slate-800',
+    badgeColor: 'text-brand-600 bg-sky-100/80',
+    title: 'Google AI Overview Optimisation in Lucknow',
+    body: 'Our Google AI Overview optimisation in Lucknow equips your service and project pages with concise 40 to 60 word answers and comparison charts quoted above standard links.',
+    impact: 'Primary source placement at the top of Google across Lucknow and central UP.',
+    cta: 'Audit Your Lucknow AI Overview Share',
+    href: '#contact',
+  },
+  {
+    num: '02',
+    category: 'OpenAI & ChatGPT Search',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>`,
+    iconStyle: 'bg-violet-50 border-violet-200 text-accent-600',
+    impactStyle: 'bg-violet-50/80 border-violet-200/80 text-slate-800',
+    badgeColor: 'text-accent-600 bg-violet-100/80',
+    title: 'ChatGPT SEO Services in Lucknow',
+    body: 'Through practical ChatGPT SEO services in Lucknow, we research local buyer questions, unblock GPTBot access and publish clear credentials so OpenAI recommends your business.',
+    impact: 'Named brand citations when Lucknow families and investors ask ChatGPT who to call.',
+    cta: 'Check Your ChatGPT Brand Mentions',
+    href: '#contact',
+  },
+  {
+    num: '03',
+    category: 'Gemini & Local Voice Search',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>`,
+    iconStyle: 'bg-emerald-50 border-emerald-200 text-emerald-600',
+    impactStyle: 'bg-emerald-50/80 border-emerald-200/80 text-slate-800',
+    badgeColor: 'text-emerald-700 bg-emerald-100/80',
+    title: 'Google Gemini & Lucknow Entity Graph',
+    body: 'We connect your LocalBusiness markup, Google Business Profile locations and verified patient or buyer reviews across Gomti Nagar, Hazratganj and Aliganj for Gemini trust.',
+    impact: 'Stronger local recommendations across Android voice assistants, Gemini and Maps.',
+    cta: 'Build Your Lucknow Entity Graph',
+    href: '#contact',
+  },
+  {
+    num: '04',
+    category: 'Instant Question Capture',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>`,
+    iconStyle: 'bg-amber-50 border-amber-200 text-amber-600',
+    impactStyle: 'bg-amber-50/80 border-amber-200/80 text-slate-800',
+    badgeColor: 'text-amber-700 bg-amber-100/80',
+    title: 'Answer Engine Optimisation Services',
+    body: 'Our Answer Engine Optimisation services organise service pages with natural buyer questions, crisp 50 word explanations and FAQPage schema that Perplexity extracts cleanly.',
+    impact: 'Featured answer visibility for high trust medical, property and admission queries.',
+    cta: 'Win Instant Buyer Answer Boxes',
+    href: '#contact',
+  },
+  {
+    num: '05',
+    category: 'Regional Trust Signals',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>`,
+    iconStyle: 'bg-indigo-50 border-indigo-200 text-indigo-600',
+    impactStyle: 'bg-indigo-50/80 border-indigo-200/80 text-slate-800',
+    badgeColor: 'text-indigo-700 bg-indigo-100/80',
+    title: 'Generative Engine Optimisation Agency',
+    body: 'Working as your Generative Engine Optimisation agency, we build consistent brand proof across UP RERA listings, medical portals, regional media and trusted Indian directories.',
+    impact: 'Verified external citations that give ChatGPT and Gemini reason to recommend you first.',
+    cta: 'Build Regional Brand Consensus',
+    href: '#contact',
+  },
+  {
+    num: '06',
+    category: 'Fast Semantic Code',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>`,
+    iconStyle: 'bg-cyan-50 border-cyan-200 text-cyan-700',
+    impactStyle: 'bg-cyan-50/80 border-cyan-200/80 text-slate-800',
+    badgeColor: 'text-cyan-700 bg-cyan-100/80',
+    title: 'Technical LLM SEO Services & llms.txt',
+    body: 'Our technical LLM SEO services deliver lightweight static HTML, custom llms.txt files and nested JSON LD schema so AI crawlers read every Lucknow branch and service accurately.',
+    impact: 'Error free indexing across GPTBot, OAI SearchBot, PerplexityBot and Google Extended.',
+    cta: 'Deploy Technical AI Readiness',
+    href: '#contact',
+  },
+];
+
+const comparison = [
+  {
+    metric: 'How Lucknow Buyer Prompts Are Researched',
+    typical: 'Targets broad two word phrases while ignoring voice and conversational questions',
+    nk: 'Maps real 12 to 25 word Lucknow buyer questions on ChatGPT, Gemini and Google AI Overviews',
+  },
+  {
+    metric: 'Clarity & Proof on Service Pages',
+    typical: 'Fills pages with generic promotional claims and zero verifiable comparison tables',
+    nk: 'Publishes 40 to 60 word factual answers, UP RERA or clinical tables and clear FAQs',
+  },
+  {
+    metric: 'Mobile Speed & AI Bot Access',
+    typical: 'Uses slow page builders or security plugins that block GPTBot and PerplexityBot',
+    nk: 'Ships fast static HTML, root llms.txt directories and verified AI crawler permissions',
+  },
+  {
+    metric: 'Lucknow Branch & Entity Signals',
+    typical: 'Leaves Gomti Nagar, Hazratganj or Aliganj addresses inconsistent across directories',
+    nk: 'Unifies LocalBusiness and Organization schema across Google Maps and Indian portals',
+  },
+  {
+    metric: 'Citation & Call Measurement',
+    typical: 'Shares monthly rank spreadsheets without checking if AI tools ever mention your name',
+    nk: 'Monitors live mentions on ChatGPT, Gemini and AI Overviews plus phone and WhatsApp calls',
+  },
+  {
+    metric: 'Senior Guidance & Full Ownership',
+    typical: 'Assigns inexperienced trainees while keeping website and analytics logins locked',
+    nk: 'Led by senior AI SEO consultants in Lucknow with 100% client ownership of every asset',
+  },
+];
+
+const industries = [
+  {
+    sector: 'Townships & Real Estate',
+    title: 'UP RERA Builders, Plotted Townships & Commercial Hubs',
+    focus: 'Homebuyers across Uttar Pradesh and NRI families ask ChatGPT and Gemini to compare UP RERA approved townships, villa projects and plots along Amar Shaheed Path, Gomti Nagar Extension, Sushant Golf City and Sultanpur Road. We publish verified project tables and builder entity schema.',
+    outcome: 'First choice AI property citations converting buyer research into direct site visit calls.',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>`,
+    accentBorder: 'border-t-brand-500',
+    iconBg: 'bg-sky-50 text-brand-600 border-sky-200',
+  },
+  {
+    sector: 'Hospitals & Speciality Care',
+    title: 'Super Speciality Hospitals, IVF, Eye & Cardiac Centres',
+    focus: 'Patients travelling into Lucknow from across Awadh and Purvanchal ask Google AI Overviews and Gemini about specialist doctors, cashless panels and surgical safety in Gomti Nagar, Aliganj, Sitapur Road and Kanpur Road. We build doctor reviewed clinical answers and MedicalClinic schema.',
+    outcome: 'Trusted medical citations turning regional patient searches into daily OPD appointments.',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>`,
+    accentBorder: 'border-t-rose-500',
+    iconBg: 'bg-rose-50 text-rose-600 border-rose-200',
+  },
+  {
+    sector: 'Education & Exam Coaching',
+    title: 'UPSC, PCS, NEET, JEE, Judicial & Private Universities',
+    focus: 'Students and parents across UP ask ChatGPT and Gemini which academy in Kapoorthala, Aliganj, Indira Nagar or Hazratganj has the strongest selection record, hostel support and faculty guidance. We format batch structures, Course schema and verified selection data.',
+    outcome: 'Prominent AI recommendations lifting direct admission counselling calls and walk ins.',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"/></svg>`,
+    accentBorder: 'border-t-cyan-500',
+    iconBg: 'bg-cyan-50 text-cyan-700 border-cyan-200',
+  },
+  {
+    sector: 'Couture, Chikankari & Retail',
+    title: 'Heritage Chikankari Houses, Bridal Jewellery & Showrooms',
+    focus: 'Wedding families and global shoppers ask ChatGPT Shopping and Gemini where to buy authentic hand embroidered Chikankari, fine bridal jewellery and designer wear in Hazratganj, Aminabad and Gomti Nagar. We deploy rich Product schema, craft details and store entity signals.',
+    outcome: 'Direct showroom and ecommerce citations driving global orders and bridal store visits.',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>`,
+    accentBorder: 'border-t-amber-500',
+    iconBg: 'bg-amber-50 text-amber-600 border-amber-200',
+  },
+  {
+    sector: 'Manufacturing & Trade',
+    title: 'Industrial Suppliers, Cold Chain, Solar & Distributors',
+    focus: 'Institutional buyers and contractors across Uttar Pradesh use Perplexity and Google AI Overviews to shortlist solar EPC firms, food processing units, packaging factories and wholesale distributors in Chinhat Industrial Area, Amausi and Transport Nagar. We structure spec tables and certifications.',
+    outcome: 'Inclusion on AI generated UP supplier lists delivering commercial tenders and bulk orders.',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>`,
+    accentBorder: 'border-t-emerald-500',
+    iconBg: 'bg-emerald-50 text-emerald-600 border-emerald-200',
+  },
+  {
+    sector: 'Hospitality, IT & Advisory',
+    title: 'Banquet Resorts, Vibhuti Khand IT Firms & CA Practices',
+    focus: 'Families planning destination weddings on Shaheed Path and business owners in Vibhuti Khand ask AI assistants to recommend luxury banquet venues, software partners and chartered accountants. We publish capacity tables, service credentials and verified LocalBusiness schema.',
+    outcome: 'Consistent AI recommendations generating venue bookings and corporate retainers.',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>`,
+    accentBorder: 'border-t-accent-500',
+    iconBg: 'bg-violet-50 text-accent-600 border-violet-200',
+  },
+];
+
+const testimonials = [
+  {
+    name: 'Vikramaditya Singh',
+    title: 'Director of Projects',
+    company: 'VP Infra',
+    sector: 'UP RERA Townships & Residential Plots, Shaheed Path & Gomti Nagar Ext',
+    metrics: [
+      'Cited first in ChatGPT and Gemini Lucknow township prompts',
+      'Featured inside Google AI Overviews for UP RERA plot searches',
+      '3.7x growth in direct family and NRI site visit calls',
+    ],
+    quote: 'Buyers across Lucknow and NRIs from Uttar Pradesh now ask ChatGPT which UP RERA registered developer on Shaheed Path and Gomti Nagar Extension has clean registry records before booking a visit. NK Digital Tech structured our project tables, LocalBusiness schema and llms.txt directory so AI assistants name VP Infra consistently.',
+    logo: '/images/clients/vp-infra.webp',
+  },
+  {
+    name: 'Dr. Sonali Kapoor',
+    title: 'Medical Director',
+    company: 'Vision',
+    sector: 'Super Speciality Eye Hospital, Gomti Nagar & Aliganj, Lucknow',
+    metrics: [
+      'Quoted as a primary clinical source in Google AI Overviews',
+      'Recommended on Gemini for Lucknow cataract and retina queries',
+      '265% increase in direct patient phone bookings across central UP',
+    ],
+    quote: 'Families coming into Lucknow from nearby districts use Google voice search and Gemini to check surgeon credentials and painless cataract options. NK Digital Tech built doctor verified 50 word clinical answers and hospital schema on our Lucknow pages, bringing steady daily OPD calls.',
+    logo: '/images/clients/vision.webp',
+  },
+  {
+    name: 'Ashish Khandelwal',
+    title: 'Academic Director',
+    company: 'Creative Academy',
+    sector: 'Civil Services & NEET Coaching, Kapoorthala & Hazratganj',
+    metrics: [
+      'Shortlisted in ChatGPT and Perplexity Lucknow coaching comparisons',
+      'Won direct answer snippets across 35+ UP student prompts',
+      '225% jump in direct admission counselling visits',
+    ],
+    quote: 'Students moving to Kapoorthala and Aliganj ask ChatGPT to compare UPPSC and NEET coaching results, batch mentoring and faculty experience before visiting any institute. NK Digital Tech formatted our batch tables and FAQPage schema cleanly, lifting our organic admissions sharply.',
+    logo: '/images/clients/creative-academy.webp',
+  },
+  {
+    name: 'Meenakshi Malhotra',
+    title: 'Creative Head',
+    company: 'Aangan',
+    sector: 'Bridal Couture & Heritage Chikankari Flagship, Hazratganj',
+    metrics: [
+      'Recommended in ChatGPT Shopping and Gemini Hazratganj prompts',
+      'Strong entity recognition for authentic Lucknow bridal couture',
+      '2.9x growth in showroom appointments and NRI video consultations',
+    ],
+    quote: 'Brides across North India and overseas shoppers ask ChatGPT where to buy authentic handcrafted Chikankari and bridal couture in Hazratganj. NK Digital Tech unified our craft specifications, Product schema and store entity profiles, turning AI answers into booked trials every week.',
+    logo: '/images/clients/aangan.webp',
+  },
+];
+
+const stages = [
+  {
+    num: 'Stage 01',
+    step: '01',
+    title: 'Lucknow Prompt Benchmark & Technical Bot Check',
+    body: 'We test 50+ commercial buyer and voice search prompts across Google AI Overviews, ChatGPT, Gemini and Perplexity to see how AI models treat your Lucknow business today. Simultaneously, we inspect hosting rules, mobile page speed and schema gaps blocking GPTBot or PerplexityBot.',
+    accent: 'from-brand-600 to-sky-500',
+  },
+  {
+    num: 'Stage 02',
+    step: '02',
+    title: 'Corridor Question Mapping & Local Entity Plan',
+    body: 'You receive a clear action schedule organised into fortnightly deliverables. We map real buyer questions across Gomti Nagar, Hazratganj, Aliganj, Indira Nagar and Shaheed Path, connect your LocalBusiness knowledge graph and blueprint every commercial answer page.',
+    accent: 'from-accent-600 to-violet-500',
+  },
+  {
+    num: 'Stage 03',
+    step: '03',
+    title: 'Factual Answer Blocks, Schema & llms.txt Publishing',
+    body: 'Our writers and developers replace generic website text with 40 to 60 word direct answers, comparison charts and verified FAQs. We add nested JSON LD structured data, publish root llms.txt discovery files and standardise your citations across UP and national business portals.',
+    accent: 'from-cyan-600 to-teal-500',
+  },
+  {
+    num: 'Stage 04',
+    step: '04',
+    title: 'Fortnightly Citation Verification & Call Tracking',
+    body: 'Every two weeks we check live brand mentions inside Google AI Overviews, ChatGPT, Gemini and Perplexity alongside referral visits, Google Business Profile calls and WhatsApp enquiries, expanding the Lucknow pages bringing the highest return.',
+    accent: 'from-emerald-600 to-green-500',
+  },
+];
+
+const faqs = [
+  {
+    q: 'Which is the best AI SEO company in Lucknow to get cited on Google AI Overviews, ChatGPT and Gemini?',
+    a: 'NK Digital Tech is a trusted AI SEO Company in Lucknow helping UP RERA developers, super speciality hospitals, coaching academies, heritage retail brands and industrial suppliers earn verifiable citations across Google AI Overviews, ChatGPT, Gemini and Perplexity.',
+  },
+  {
+    q: 'Are buyers in Lucknow really using ChatGPT, Gemini and AI Overviews to find local businesses?',
+    a: 'Yes. Across Gomti Nagar, Hazratganj, Aliganj and Indira Nagar, homebuyers, patients and students increasingly use Android Gemini voice prompts, Google AI Overviews and ChatGPT to compare hospital doctors, UP RERA builders and coaching results before making a call.',
+  },
+  {
+    q: 'Why does our Lucknow website appear in Google Search but never get named by ChatGPT or Gemini?',
+    a: 'Traditional search rankings alone do not secure AI citations. Many Lucknow websites get skipped because slow page builders or security plugins block GPTBot and PerplexityBot, pages bury plain facts under long introductions, structured JSON LD schema is missing or directory listings show mismatched branch phone numbers.',
+  },
+  {
+    q: 'How is AI search optimisation different from regular SEO for Lucknow businesses?',
+    a: 'Regular SEO aims to rank web pages in standard blue link lists. Answer Engine Optimisation structures pages with buyer question headings, 40 to 60 word answers and FAQPage schema for instant answer capture. Generative Engine Optimisation connects your LocalBusiness entity graph, comparison tables and external directory proof so AI assistants recommend your company.',
+  },
+  {
+    q: 'Why do you add an llms.txt file to our business website?',
+    a: 'An llms.txt file is a clean markdown index placed at your domain root that points large language models directly to your core services, Lucknow branch addresses, UP RERA or clinical credentials and verified FAQs without template clutter, helping AI tools quote your business accurately.',
+  },
+  {
+    q: 'How soon do AI SEO services in Lucknow start producing AI citations and enquiries?',
+    a: 'Because far fewer competitors in Lucknow have implemented clean static HTML, 40 to 60 word answer blocks, nested JSON LD schema and llms.txt files, early movers frequently begin earning citations in Perplexity, ChatGPT Search and Google AI Overviews within four to seven weeks, with category wide authority growing steadily over three to six months.',
+  },
+  {
+    q: 'How do you track phone calls, WhatsApp leads and brand mentions from AI platforms?',
+    a: 'We measure results across three clear layers. First, we run fortnightly prompt checks across Google AI Overviews, ChatGPT, Gemini and Perplexity to record your live citation share. Second, we track referral clicks from chatgpt.com, perplexity.ai and gemini.google.com. Third, we log direct phone calls, Google Map actions and WhatsApp enquiries.',
+  },
+  {
+    q: 'Which commercial areas in Lucknow do your local AI entity strategies cover?',
+    a: 'We build location specific entity signals, corridor pages and Google Business Profile connections across Gomti Nagar, Vibhuti Khand, Gomti Nagar Extension, Hazratganj, Aliganj, Kapoorthala, Indira Nagar, Mahanagar, Amar Shaheed Path, Sushant Golf City, Ashiyana, Kanpur Road and Chinhat Industrial Area.',
+  },
+];
+
+const trustStrip = [
+  'Google AI Overview Citations',
+  'ChatGPT & OpenAI Visibility',
+  'Gemini & Voice Search SEO',
+  'Perplexity Direct Answers',
+  'AEO & GEO Frameworks',
+  'llms.txt & JSON LD Schema',
+  'Gomti Nagar to Hazratganj',
+  '100% Client Asset Ownership',
+];
+
+const aiSeoLucknowSchemaLocalBusiness = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "NK Digital Tech AI SEO Company in Lucknow",
+  "url": "https://www.nkdigitaltech.net/ai-seo-company-in-lucknow/",
+  "logo": "https://www.nkdigitaltech.net/images/ai-seo-lucknow/hero-ai-seo-company-lucknow.webp",
+  "image": "https://www.nkdigitaltech.net/images/ai-seo-lucknow/hero-ai-seo-company-lucknow.webp",
+  "description": "Partner with NK Digital Tech, an AI SEO Company in Lucknow helping Gomti Nagar and Hazratganj businesses get cited on Google AI Overviews, ChatGPT and Gemini.",
+  "email": "connect@nkdigitaltech.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Lucknow",
+    "addressRegion": "Uttar Pradesh",
+    "addressCountry": "IN"
+  },
+  "areaServed": [
+    "Lucknow",
+    "Gomti Nagar",
+    "Vibhuti Khand",
+    "Gomti Nagar Extension",
+    "Hazratganj",
+    "Aliganj",
+    "Indira Nagar Lucknow",
+    "Amar Shaheed Path",
+    "Sushant Golf City",
+    "Chinhat Industrial Area"
+  ],
+  "serviceType": [
+    "AI SEO Services in Lucknow",
+    "Google AI Overview Optimisation",
+    "ChatGPT SEO Services",
+    "Google Gemini Entity SEO",
+    "Answer Engine Optimisation (AEO)",
+    "Generative Engine Optimisation (GEO)",
+    "LLM SEO Services & llms.txt Implementation"
+  ]
+});
+
+const aiSeoLucknowSchemaFAQ = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map((item) => ({
+    "@type": "Question",
+    "name": item.q,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": item.a
+    }
+  }))
+});
+---
+
+<Layout
+  title={pageTitle}
+  description={pageDescription}
+  canonical={pageCanonical}
+  ogImage="https://www.nkdigitaltech.net/images/ai-seo-lucknow/hero-ai-seo-company-lucknow.webp"
+  preloadImage="/images/ai-seo-lucknow/hero-ai-seo-company-lucknow.webp"
+  customSchemaLocalBusiness={aiSeoLucknowSchemaLocalBusiness}
+  customSchemaFAQ={aiSeoLucknowSchemaFAQ}
+  utilityTagline="AI SEO Company in Lucknow • Citations on Google AI Overviews, ChatGPT & Gemini"
+  brandSubtitle="Lucknow AI SEO, AEO & GEO"
+  footerBio="AI SEO Company in Lucknow helping township developers, hospitals, coaching institutes, heritage retailers and industrial firms earn direct citations on Google AI Overviews, ChatGPT, Gemini and Perplexity."
+  footerTagline="AI SEO Company in Lucknow • Uttar Pradesh Conversational Search Specialists"
+  hideLocationsNav={true}
+>
+
+  <!-- =====================================================================
+       SECTION 1: HERO (DARK SURFACE WITH UNIQUE LUCKNOW AI SEO HERO IMAGE)
+  ===================================================================== -->
+  <section class="relative surface-dark overflow-hidden pt-7 pb-10 sm:pt-14 sm:pb-16 lg:pt-16 lg:pb-20 border-b border-slate-800/80">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="absolute inset-0 mesh-glow pointer-events-none"></div>
+    <div class="absolute -top-36 -left-36 w-96 h-96 bg-brand-500/20 rounded-full blur-[130px] pointer-events-none"></div>
+    <div class="absolute top-1/4 -right-36 w-96 h-96 bg-accent-500/20 rounded-full blur-[130px] pointer-events-none"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-7 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns: Headline & CTA -->
+        <div class="lg:col-span-7 text-left min-w-0">
+          <div class="badge-dark mb-4 sm:mb-5">
+            <span class="w-2 h-2 rounded-full bg-brand-400 animate-ping flex-shrink-0"></span>
+            <span class="min-w-0">Google AI Overviews &bull; ChatGPT &bull; Gemini &bull; Perplexity</span>
+          </div>
+
+          <h1 class="font-display text-[1.95rem] sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-[1.15] sm:leading-[1.1] mb-4 sm:mb-5 text-glow">
+            AI SEO Company <br />
+            <span class="gradient-text-light">in Lucknow</span>
+          </h1>
+
+          <p class="text-[13.5px] sm:text-base md:text-lg text-slate-300 leading-relaxed mb-5 sm:mb-7 font-normal text-justify hyphens-auto [text-align-last:left]">
+            NK Digital Tech is an <strong class="text-white font-semibold">AI SEO Company in Lucknow</strong> helping township builders, hospitals, coaching academies, retail showrooms and B2B suppliers get directly cited on Google AI Overviews, ChatGPT, Gemini and Perplexity. We turn conversational and voice searches into daily phone calls and walk in enquiries across Gomti Nagar, Hazratganj, Aliganj, Indira Nagar and Shaheed Path.
+          </p>
+
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 mb-6 sm:mb-8">
+            <a href="#contact" class="btn-primary w-full sm:w-auto min-h-[48px] text-sm sm:text-base px-5 sm:px-8 py-3.5 sm:py-4">
+              <span>Claim Your Free Lucknow AI Citation Audit</span>
+              <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+              </svg>
+            </a>
+            <a href="#services" class="btn-secondary-dark w-full sm:w-auto min-h-[48px] text-sm sm:text-base px-5 sm:px-7 py-3.5 sm:py-4">
+              <span>Explore Our Six AI SEO Pillars</span>
+            </a>
+          </div>
+
+          <!-- Trust Verification Strip (2x4 Grid on Mobile, Flex Pills on Desktop) -->
+          <div class="pt-4 sm:pt-5 border-t border-slate-800/80">
+            <div class="grid grid-cols-2 sm:flex sm:flex-wrap items-stretch sm:items-center gap-2">
+              {trustStrip.map((item) => (
+                <span class="px-2.5 sm:px-3 py-2 sm:py-1.5 rounded-lg bg-slate-900/90 border border-slate-800 text-[11px] sm:text-xs text-slate-300 font-medium flex items-center justify-center sm:justify-start text-center sm:text-left leading-tight">
+                  {item}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Unique Lucknow AI SEO Hero Image -->
+        <div class="lg:col-span-5 min-w-0">
+          <div class="relative rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-700/80 shadow-2xl shadow-brand-500/15 bg-slate-900 group">
+            <div class="relative">
+              <img
+                src="/images/ai-seo-lucknow/hero-ai-seo-company-lucknow.webp"
+                alt="AI SEO Company in Lucknow Strategists Reviewing ChatGPT Gemini and Google AI Overview Citations"
+                width="960"
+                height="540"
+                fetchpriority="high"
+                decoding="async"
+                class="w-full aspect-[16/10] sm:aspect-auto sm:h-64 md:h-[330px] lg:h-[350px] object-cover object-center group-hover:scale-105 transition-transform duration-500"
+              />
+              <div class="hidden sm:block absolute inset-0 bg-gradient-to-t from-[#050a14] via-transparent to-transparent opacity-80"></div>
+            </div>
+            <div class="relative sm:absolute sm:bottom-4 sm:left-4 sm:right-4 glass-card border-t sm:border border-slate-800 sm:rounded-2xl p-3.5 sm:p-4">
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-1">
+                <span class="text-xs font-bold text-white">Lucknow &amp; Central UP Citation System</span>
+                <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-400">
+                  <span class="w-2 h-2 rounded-full bg-emerald-400 flex-shrink-0"></span>
+                  Live LLM Discovery
+                </span>
+              </div>
+              <p class="text-[11px] sm:text-xs text-slate-300 text-justify hyphens-auto [text-align-last:left] leading-relaxed">
+                Built so Google AI Overviews, ChatGPT, Gemini and voice search recommend your Lucknow brand first.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 2: INTRODUCTION (CRISP WHITE CONTRAST SECTION + LUCKNOW TEAM IMAGE)
+  ===================================================================== -->
+  <section class="relative surface-white py-10 sm:py-16 lg:py-20 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-7 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns: Concise Unique Lucknow AI SEO Copy -->
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-light mb-3 sm:mb-3.5">Lucknow AEO, GEO &amp; First Mover Advantage</div>
+          <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-snug sm:leading-tight mb-3.5 sm:mb-5">
+            How Our AI SEO Company in Lucknow <span class="gradient-text-dark">Makes Your Business the First Choice on AI</span>
+          </h2>
+          <div class="space-y-3.5 sm:space-y-4 text-slate-700 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            <p>
+              As an <strong>AI SEO Company in Lucknow</strong>, we help forward looking regional brands capture direct citations and clickable source links inside Google AI Overviews, ChatGPT, Gemini and Perplexity. Families, students and property buyers across Gomti Nagar, Hazratganj, Aliganj, Sushant Golf City and nearby UP districts now ask AI tools who to trust before calling any office.
+            </p>
+            <p>
+              Because very few companies in Uttar Pradesh have structured their websites for large language models yet, early movers gain an immediate advantage. Working with our <strong>AI SEO agency in Lucknow</strong> secures top placement inside conversational answers and converts local buyer trust into daily phone enquiries.
+            </p>
+          </div>
+          <div class="mt-5 sm:mt-7 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
+            <a href="#contact" class="btn-primary w-full sm:w-auto min-h-[48px]">
+              <span>Speak With Our Lucknow AI SEO Consultants</span>
+              <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+              </svg>
+            </a>
+            <a href="#why-us" class="btn-secondary-light w-full sm:w-auto min-h-[48px]">
+              <span>Compare AI Citation Standards</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Unique Lucknow AI SEO Team Image + Stats -->
+        <div class="lg:col-span-5 space-y-3.5 sm:space-y-4 min-w-0">
+          <div class="rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-200 shadow-lg bg-slate-100">
+            <img
+              src="/images/ai-seo-lucknow/ai-seo-agency-team-lucknow.webp"
+              alt="AI SEO Consultants in Lucknow Planning Local Entity Schema and Conversational Prompts"
+              width="800"
+              height="533"
+              class="w-full aspect-[16/10] sm:aspect-auto sm:h-56 lg:h-60 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="grid grid-cols-2 gap-3 sm:gap-3.5">
+            {[
+              { val: '4+ Models', label: 'AI Overview, ChatGPT, Gemini', sub: 'Plus Perplexity & Voice' },
+              { val: '40 to 60', label: 'Word Direct Answers', sub: 'Built for instant AI quoting' },
+              { val: 'UP Capital', label: 'Gomti Nagar to Shaheed Path', sub: 'Plus wider Awadh reach' },
+              { val: '100%', label: 'Code & Schema Ownership', sub: 'Full client admin control' },
+            ].map((stat) => (
+              <div class="elevated-card rounded-xl sm:rounded-2xl p-3 sm:p-3.5 min-w-0">
+                <div class="font-display font-black text-xl sm:text-2xl text-brand-600 mb-0.5">{stat.val}</div>
+                <div class="text-[11px] sm:text-xs font-bold text-slate-900 leading-snug">{stat.label}</div>
+                <div class="text-[10.5px] sm:text-[11px] text-slate-500 leading-snug mt-0.5">{stat.sub}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 3: PROBLEM STATEMENT (DEEP INDIGO DARK CONTRAST SECTION)
+  ===================================================================== -->
+  <section class="relative surface-indigo py-11 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="max-w-7xl mx-auto relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns: Concise Problem Statement Copy -->
+        <div class="lg:col-span-7 min-w-0">
+          <div class="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-3.5 py-1 sm:py-1.5 rounded-full text-[10px] sm:text-xs font-bold uppercase tracking-wider sm:tracking-widest bg-amber-500/10 border border-amber-500/30 text-amber-300 max-w-full leading-snug mb-4 sm:mb-5">
+            <svg class="w-4 h-4 text-amber-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+            </svg>
+            <span>Why Reputed Lucknow Brands Get Skipped</span>
+          </div>
+
+          <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-white tracking-tight leading-snug sm:leading-tight mb-4 sm:mb-6">
+            Why Respected Lucknow Businesses Stay Missing From ChatGPT, Gemini and AI Overviews
+          </h2>
+
+          <div class="space-y-3.5 sm:space-y-4 text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            <p>
+              Many trusted hospitals, builders and institutes in Gomti Nagar, Hazratganj and Aliganj never get mentioned by ChatGPT or Google AI Overviews because heavy WordPress plugins block AI crawlers, brochures sit locked inside unindexed PDFs or web pages lack clear factual answers and structured schema.
+            </p>
+            <p>
+              Conversational search engines verify credentials across clean HTML tables, LocalBusiness schema and consistent Indian business listings before naming any provider. Partnering with a dedicated <strong>AI search optimisation company in Lucknow</strong> fixes those gaps and turns your website into the trusted local authority AI models cite first.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Diagnostic Comparison Cards -->
+        <div class="lg:col-span-5 space-y-3.5 sm:space-y-4 min-w-0">
+          <div class="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6 border-l-4 border-l-rose-500">
+            <div class="flex flex-wrap items-center justify-between gap-1.5 mb-2">
+              <span class="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-rose-400">Why AI Skips Lucknow Sites</span>
+              <span class="text-[11px] sm:text-xs text-slate-400">Zero AI Citations</span>
+            </div>
+            <h3 class="font-display font-bold text-[15px] sm:text-base text-white mb-2 leading-snug">PDF Brochures, Slow Templates &amp; Missing Schema</h3>
+            <p class="text-xs text-slate-300 leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+              Locked PDF floor plans, blocked AI crawlers and inconsistent branch listings prevent ChatGPT, Gemini and Google AI Overviews from quoting your Lucknow business.
+            </p>
+          </div>
+
+          <div class="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6 border-l-4 border-l-emerald-400">
+            <div class="flex flex-wrap items-center justify-between gap-1.5 mb-2">
+              <span class="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-emerald-400">NK Digital Tech Citation System</span>
+              <span class="text-[11px] sm:text-xs text-brand-300">Top Lucknow Authority</span>
+            </div>
+            <h3 class="font-display font-bold text-[15px] sm:text-base text-white mb-2 leading-snug">Clean HTML Answers, Local Entities &amp; llms.txt</h3>
+            <p class="text-xs text-slate-300 leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+              Delivers lightweight static HTML, 40 to 60 word direct answers, nested LocalBusiness schema and verified UP directory signals so AI tools recommend you first.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 4: SERVICES (LIGHT COOL ALABASTER CONTRAST + LUCKNOW AI SEO IMAGE)
+  ===================================================================== -->
+  <section id="services" class="relative surface-cool scroll-mt-20 py-11 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <!-- Services Header with Unique Lucknow AI SEO Services Image -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 items-center mb-9 sm:mb-16">
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-light mb-3">Six Conversational Search Pillars</div>
+          <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-snug sm:leading-tight mb-3 sm:mb-4">
+            Specialised AI SEO Services in Lucknow
+          </h2>
+          <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            Our <strong>AI SEO services in Lucknow</strong> unite Google AI Overview capture, ChatGPT prompt research, Gemini local entity graphs, AEO, GEO and clean llms.txt setup to turn regional searches into steady enquiries.
+          </p>
+        </div>
+        <div class="lg:col-span-5 min-w-0">
+          <div class="rounded-2xl overflow-hidden border border-slate-200 shadow-md bg-white">
+            <img
+              src="/images/ai-seo-lucknow/chatgpt-gemini-ai-seo-lucknow.webp"
+              alt="AI SEO Services in Lucknow Specialist Structuring Local Entity Schema and ChatGPT Citations"
+              width="800"
+              height="450"
+              class="w-full aspect-[16/9] sm:aspect-auto sm:h-56 lg:h-64 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- 3 Columns x 2 Rows Grid Layout -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-7">
+        {services.map((s) => (
+          <div class="elevated-card rounded-2xl p-5 sm:p-7 flex flex-col justify-between group sm:hover:-translate-y-1">
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-4 sm:mb-6">
+                <div class={`w-11 h-11 sm:w-12 sm:h-12 rounded-xl border flex items-center justify-center flex-shrink-0 ${s.iconStyle}`}>
+                  <Fragment set:html={s.icon} />
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class={`text-[10.5px] sm:text-[11px] font-semibold px-2.5 py-1 rounded-md ${s.badgeColor}`}>
+                    {s.category}
+                  </span>
+                  <span class="font-display font-black text-base sm:text-lg text-slate-300">{s.num}</span>
+                </div>
+              </div>
+
+              <h3 class="font-display font-bold text-[17px] sm:text-xl text-slate-900 mb-2.5 sm:mb-3 leading-snug group-hover:text-brand-600 transition-colors">
+                {s.title}
+              </h3>
+
+              <p class="text-slate-600 text-[13px] sm:text-sm leading-relaxed mb-4 sm:mb-6 text-justify hyphens-auto [text-align-last:left]">
+                {s.body}
+              </p>
+            </div>
+
+            <div>
+              <div class={`rounded-xl border p-3.5 sm:p-4 mb-3.5 sm:mb-5 ${s.impactStyle}`}>
+                <div class="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-slate-900 mb-1">
+                  <svg class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                  </svg>
+                  <span>Citation Impact</span>
+                </div>
+                <p class="text-xs text-slate-700 leading-relaxed font-medium text-justify hyphens-auto [text-align-last:left]">
+                  {s.impact}
+                </p>
+              </div>
+
+              <a href={s.href} class="inline-flex items-center gap-2 py-2.5 min-h-[44px] text-xs font-bold text-brand-600 hover:text-brand-700 group-hover:gap-3 transition-all">
+                <span>{s.cta}</span>
+                <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 5: WHY NK DIGITAL TECH (CRISP WHITE CONTRAST SECTION)
+  ===================================================================== -->
+  <section id="why-us" class="relative surface-white scroll-mt-20 py-11 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-14 text-left sm:text-center">
+        <div class="badge-light mb-3">Why Lucknow Businesses Choose Us</div>
+        <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-snug sm:leading-tight mb-3 sm:mb-4">
+          Why NK Digital Tech Leads as an AI SEO Company in Lucknow
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed mb-4 text-justify hyphens-auto [text-align-last:left]">
+          Most local vendors in Lucknow still rely on directory spam and repetitive articles that modern AI models filter out. Organisations searching for the <strong>best AI SEO company in Lucknow</strong> work directly with our <strong>AI SEO consultants in Lucknow</strong> to publish structured answer tables, verified branch schema and tracked citations across Google AI Overviews, ChatGPT and Gemini.
+        </p>
+        <p class="text-slate-700 font-semibold text-xs sm:text-sm">
+          Compare a conventional keyword vendor with our Lucknow AI citation methodology:
+        </p>
+      </div>
+
+      <!-- Desktop Comparison Matrix -->
+      <div class="hidden md:block overflow-hidden rounded-2xl border border-slate-200 shadow-lg">
+        <table class="w-full text-left border-collapse">
+          <thead>
+            <tr class="bg-slate-900 text-white">
+              <th class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-slate-300 w-1/4">
+                Evaluation Benchmark
+              </th>
+              <th class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-rose-300 w-[37.5%] border-l border-slate-800">
+                Conventional Keyword Vendor
+              </th>
+              <th class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-brand-300 w-[37.5%] border-l border-slate-800 bg-slate-950">
+                NK Digital Tech (Lucknow AI Citation System)
+              </th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200 text-sm">
+            {comparison.map((row, idx) => (
+              <tr class={idx % 2 === 0 ? 'bg-white' : 'bg-slate-50/80'}>
+                <td class="py-5 px-6 font-display font-bold text-slate-900">
+                  {row.metric}
+                </td>
+                <td class="py-5 px-6 text-slate-600 border-l border-slate-200">
+                  <div class="flex items-start gap-2.5">
+                    <svg class="w-4 h-4 text-rose-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                    <span>{row.typical}</span>
+                  </div>
+                </td>
+                <td class="py-5 px-6 text-slate-900 font-medium border-l border-slate-200 bg-sky-50/40">
+                  <div class="flex items-start gap-2.5">
+                    <svg class="w-4 h-4 text-emerald-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span>{row.nk}</span>
+                  </div>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Mobile Comparison Cards -->
+      <div class="md:hidden space-y-3.5">
+        {comparison.map((row) => (
+          <div class="elevated-card rounded-2xl p-4 space-y-2.5">
+            <h3 class="font-display font-bold text-slate-900 text-[15px] leading-snug">{row.metric}</h3>
+            <div class="rounded-xl bg-rose-50 border border-rose-100 p-3">
+              <div class="flex items-center gap-1.5 mb-1">
+                <svg class="w-3.5 h-3.5 text-rose-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+                <p class="text-[10px] font-bold uppercase tracking-wider text-rose-600">Conventional Vendor</p>
+              </div>
+              <p class="text-xs text-slate-700 leading-relaxed text-justify hyphens-auto [text-align-last:left]">{row.typical}</p>
+            </div>
+            <div class="rounded-xl bg-sky-50 border border-sky-200 p-3">
+              <div class="flex items-center gap-1.5 mb-1">
+                <svg class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                </svg>
+                <p class="text-[10px] font-bold uppercase tracking-wider text-brand-600">NK Digital Tech</p>
+              </div>
+              <p class="text-xs text-slate-900 font-semibold leading-relaxed text-justify hyphens-auto [text-align-last:left]">{row.nk}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 6: OUR CLIENTS (DARK INDIGO CONTRAST SECTION BELOW WHY US)
+  ===================================================================== -->
+  <section id="clients" class="relative surface-indigo scroll-mt-20 py-11 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-14 text-left sm:text-center">
+        <div class="badge-dark mb-3">Lucknow Brands Cited on AI</div>
+        <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-white tracking-tight leading-snug sm:leading-tight mb-3 sm:mb-4">
+          Lucknow Market Leaders Recommended on ChatGPT &amp; Gemini
+        </h2>
+        <p class="text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          From UP RERA township builders along Shaheed Path and eye hospitals in Gomti Nagar to civil services academies in Kapoorthala and bridal showrooms in Hazratganj, respected Lucknow institutions rely on our AI citation systems.
+        </p>
+      </div>
+
+      <!-- 5 Column Responsive Client Grid (Balanced 2+2+1 Full Span on Mobile) -->
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-5">
+        {clients.map((client) => (
+          <div class="glass-card rounded-2xl p-3.5 sm:p-5 flex flex-col items-center text-center group sm:hover:-translate-y-1 last:col-span-2 sm:last:col-span-1">
+            <div class="w-full h-16 sm:h-20 rounded-xl bg-white border border-slate-200 flex items-center justify-center p-2.5 sm:p-4 mb-3 sm:mb-4 shadow-sm">
+              <img
+                src={client.logo}
+                alt={`${client.name} Logo`}
+                width="130"
+                height="48"
+                class="max-h-9 sm:max-h-12 w-auto object-contain"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <h3 class="font-display font-bold text-sm sm:text-base text-white mb-1">{client.name}</h3>
+            <p class="text-[11px] sm:text-xs text-slate-300 leading-snug mb-2.5 sm:mb-3 flex-grow">{client.sector}</p>
+            <span class="inline-flex items-center justify-center gap-1 text-[10px] sm:text-[11px] font-semibold text-brand-300 bg-brand-500/15 border border-brand-500/30 px-2 sm:px-2.5 py-1 rounded-md leading-tight max-w-full">
+              <svg class="w-3 h-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+              </svg>
+              <span>{client.region}</span>
+            </span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 7: INDUSTRIES (LIGHT SLATE CONTRAST SECTION - 3x2 GRID)
+  ===================================================================== -->
+  <section id="industries" class="relative surface-slate scroll-mt-20 py-11 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-16 text-left sm:text-center">
+        <div class="badge-light mb-3">Lucknow &amp; UP Prompt Playbooks</div>
+        <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-snug sm:leading-tight mb-3 sm:mb-4">
+          AI Citation Roadmaps Built for Lucknow Commercial Sectors
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          A family comparing UP RERA plots on Shaheed Path asks very different AI questions than a student choosing a Kapoorthala coaching batch or a patient seeking surgery in Gomti Nagar. We tailor your structured answers to real local intent.
+        </p>
+      </div>
+
+      <!-- 3 Columns x 2 Rows Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-7">
+        {industries.map((ind) => (
+          <div class={`elevated-card rounded-2xl p-5 sm:p-7 border-t-4 ${ind.accentBorder} flex flex-col justify-between sm:hover:-translate-y-1`}>
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-4 sm:mb-5">
+                <div class={`w-10 h-10 sm:w-11 sm:h-11 rounded-xl border flex items-center justify-center flex-shrink-0 ${ind.iconBg}`}>
+                  <Fragment set:html={ind.icon} />
+                </div>
+                <span class="text-[11px] font-semibold text-slate-600 bg-slate-100 px-2.5 py-1 rounded-md">
+                  {ind.sector}
+                </span>
+              </div>
+
+              <h3 class="font-display font-bold text-[17px] sm:text-xl text-slate-900 mb-3 sm:mb-4 leading-snug">
+                {ind.title}
+              </h3>
+
+              <div class="mb-4 sm:mb-5">
+                <p class="text-[11px] font-bold uppercase tracking-wider text-brand-600 mb-1.5">
+                  Lucknow Prompt Focus
+                </p>
+                <p class="text-slate-600 text-[13px] sm:text-sm leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+                  {ind.focus}
+                </p>
+              </div>
+            </div>
+
+            <div class="rounded-xl bg-emerald-50/70 border border-emerald-200/80 p-3.5 sm:p-4">
+              <p class="text-[11px] font-bold uppercase tracking-wider text-emerald-700 mb-1">
+                Commercial Result
+              </p>
+              <p class="text-slate-800 text-xs font-medium leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+                {ind.outcome}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 8: TESTIMONIALS (DEEP NAVY CONTRAST SECTION - 2x2 GRID)
+  ===================================================================== -->
+  <section id="testimonials" class="relative surface-dark scroll-mt-20 py-11 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="absolute inset-0 mesh-glow pointer-events-none opacity-60"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-16 text-left sm:text-center">
+        <div class="badge-dark mb-3">Verified Lucknow Client Outcomes</div>
+        <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-white tracking-tight leading-snug sm:leading-tight mb-3 sm:mb-4">
+          How AI Search Citations Deliver Daily Enquiries Across Lucknow
+        </h2>
+        <p class="text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          Measured AI citation wins and direct phone lead growth reported by township builders, hospital directors, coaching founders and heritage retail houses in Lucknow.
+        </p>
+      </div>
+
+      <!-- 2 Columns x 2 Rows Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-7">
+        {testimonials.map((t) => (
+          <div class="glass-card rounded-2xl p-5 sm:p-8 flex flex-col justify-between sm:hover:-translate-y-1">
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-4 sm:mb-5">
+                <div class="flex items-center gap-1">
+                  {[1, 2, 3, 4, 5].map(() => (
+                    <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                    </svg>
+                  ))}
+                </div>
+                <span class="text-[10px] sm:text-[11px] font-semibold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-1 rounded-md">
+                  Verified Lucknow Client
+                </span>
+              </div>
+
+              <p class="text-slate-200 text-[13.5px] sm:text-base leading-relaxed italic mb-5 sm:mb-6 text-justify hyphens-auto [text-align-last:left]">
+                "{t.quote}"
+              </p>
+
+              <div class="rounded-xl bg-slate-900/90 border border-slate-700/80 p-3.5 sm:p-4 mb-5 sm:mb-6">
+                <p class="text-[11px] font-bold uppercase tracking-wider text-brand-400 mb-2 sm:mb-2.5">
+                  Measured Citation Impact
+                </p>
+                <ul class="space-y-2">
+                  {t.metrics.map((m) => (
+                    <li class="flex items-start gap-2 text-xs text-slate-300 font-medium leading-snug">
+                      <svg class="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                      </svg>
+                      <span>{m}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3.5 sm:gap-4 pt-3.5 sm:pt-4 border-t border-slate-800">
+              <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-white p-2 flex items-center justify-center flex-shrink-0 shadow-sm">
+                <img
+                  src={t.logo}
+                  alt={`${t.company} Logo`}
+                  width="48"
+                  height="48"
+                  class="max-h-8 sm:max-h-10 w-auto object-contain"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="min-w-0">
+                <h3 class="font-display font-bold text-white text-sm sm:text-base leading-snug">{t.name}</h3>
+                <p class="text-xs text-slate-300 leading-snug">
+                  {t.title}, <strong class="text-brand-400 font-semibold">{t.company}</strong>
+                </p>
+                <p class="text-[10.5px] sm:text-[11px] text-slate-400 mt-0.5 leading-snug">{t.sector}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 9: HOW WE WORK (CRISP WHITE CONTRAST SECTION - 4 STAGES)
+  ===================================================================== -->
+  <section class="relative surface-white py-11 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-16 text-left sm:text-center">
+        <div class="badge-light mb-3">Our 4 Stage Citation Process</div>
+        <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-snug sm:leading-tight mb-3 sm:mb-4">
+          How We Build Verified AI Search Citations Across Lucknow
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          Our four stage process fixes technical bot blocks and slow page builders first, publishes crisp 40 to 60 word answers across your key Lucknow pages and verifies live citations across Google AI Overviews, ChatGPT, Gemini and Perplexity.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-7">
+        {stages.map((s) => (
+          <div class="elevated-card rounded-2xl p-5 sm:p-8 relative overflow-hidden group sm:hover:-translate-y-1">
+            <div class="flex items-center justify-between gap-4 mb-3.5 sm:mb-5">
+              <span class={`inline-flex items-center px-2.5 sm:px-3 py-1 rounded-lg text-xs font-bold uppercase tracking-wider text-white bg-gradient-to-r ${s.accent}`}>
+                {s.num}
+              </span>
+              <span class="font-display font-black text-3xl sm:text-4xl text-slate-200 group-hover:text-slate-300 transition-colors">
+                {s.step}
+              </span>
+            </div>
+            <h3 class="font-display font-bold text-[17px] sm:text-xl text-slate-900 mb-2.5 sm:mb-3 leading-snug">
+              {s.title}
+            </h3>
+            <p class="text-slate-600 text-[13px] sm:text-sm leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+              {s.body}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 10: PARTNER WITH THE AI SEO COMPANY IN LUCKNOW (CONCLUSION)
+  ===================================================================== -->
+  <section class="relative surface-indigo py-11 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-7 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns: Partner Paragraphs (Justified) -->
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-dark mb-3.5 sm:mb-4">Compounding Lucknow &amp; UP Search Authority</div>
+          <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-white tracking-tight leading-snug sm:leading-tight mb-4 sm:mb-6">
+            Partner With a Trusted AI SEO Company in Lucknow
+          </h2>
+          <div class="space-y-4 sm:space-y-5 text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            <p>
+              Across Gomti Nagar, Hazratganj, Aliganj, Indira Nagar and Amar Shaheed Path, customers now ask Google AI Overviews, Gemini voice assistants and ChatGPT to recommend the most reliable hospital, UP RERA builder, coaching institute or showroom before visiting in person.
+            </p>
+            <p>
+              When you partner with NK Digital Tech as your <strong>AI SEO Company in Lucknow</strong>, our senior strategists and developers unite lightweight static HTML, 40 to 60 word direct answers, nested LocalBusiness schema, llms.txt indexes and verified UP directory signals into daily phone calls and site visits. Claim your free Lucknow AI citation audit today.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Unique Lucknow AI Citation Growth Image -->
+        <div class="lg:col-span-5 min-w-0">
+          <div class="rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-700/80 shadow-2xl bg-slate-900">
+            <img
+              src="/images/ai-seo-lucknow/ai-citation-growth-lucknow.webp"
+              alt="AI SEO Company in Lucknow Reviewing Verified ChatGPT Gemini and Google AI Overview Lead Growth"
+              width="800"
+              height="450"
+              class="w-full aspect-[16/10] sm:aspect-auto sm:h-64 lg:h-72 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 11: FAQ (LIGHT COOL SLATE CONTRAST SECTION)
+  ===================================================================== -->
+  <section id="faq" class="relative surface-cool scroll-mt-20 py-11 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-left sm:text-center mb-9 sm:mb-14">
+        <div class="badge-light mb-3">Lucknow Buyer &amp; AI Search Answers</div>
+        <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-snug sm:leading-tight mb-3 sm:mb-4">
+          Frequently Asked Questions About Hiring an AI SEO Company in Lucknow
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          Clear, self contained answers to the questions Lucknow builders, medical directors, coaching founders and retail owners ask before choosing an AI search partner.
+        </p>
+      </div>
+
+      <div class="space-y-3 sm:space-y-4">
+        {faqs.map((f, i) => (
+          <details class="elevated-card rounded-2xl group overflow-hidden" open={i === 0}>
+            <summary class="flex items-start sm:items-center justify-between gap-3 sm:gap-4 px-4 sm:px-6 py-4 sm:py-5 min-h-[54px] select-none">
+              <div class="flex items-start sm:items-center gap-2.5 sm:gap-3.5 text-left min-w-0">
+                <span class="w-6 h-6 sm:w-7 sm:h-7 rounded-lg bg-sky-50 border border-sky-200 text-brand-600 font-display font-bold text-xs flex items-center justify-center flex-shrink-0 mt-0.5 sm:mt-0">
+                  0{i + 1}
+                </span>
+                <span class="font-display font-bold text-slate-900 text-[14px] sm:text-base md:text-lg leading-snug">
+                  {f.q}
+                </span>
+              </div>
+              <span class="faq-icon w-7 h-7 sm:w-8 sm:h-8 rounded-full border border-slate-200 text-slate-600 flex items-center justify-center flex-shrink-0 mt-0.5 sm:mt-0">
+                <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                </svg>
+              </span>
+            </summary>
+            <div class="px-4 sm:px-6 pb-5 sm:pb-6 pt-3 text-slate-600 text-[13px] sm:text-sm md:text-base leading-relaxed border-t border-slate-100 text-justify hyphens-auto [text-align-last:left]">
+              {f.a}
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 12: SHORT 2 TO 3 LINE CALL TO ACTION BANNER (LAST SECTION)
+  ===================================================================== -->
+  <section id="contact" class="relative surface-dark scroll-mt-20 py-11 sm:py-16 lg:py-20 px-4 sm:px-6 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-5xl mx-auto">
+      <div class="rounded-2xl sm:rounded-3xl bg-gradient-to-r from-brand-600 via-brand-700 to-accent-700 p-5 sm:p-10 md:p-12 text-center text-white shadow-2xl border border-white/15 relative overflow-hidden">
+        <div class="relative z-10 max-w-2xl mx-auto">
+          <h2 class="font-display font-black text-[1.45rem] sm:text-3xl md:text-4xl text-white tracking-tight leading-snug mb-3 sm:mb-4">
+            Ready to Get Your Lucknow Business Cited on ChatGPT &amp; AI Overviews?
+          </h2>
+
+          <p class="text-sky-50 text-[13px] sm:text-sm md:text-base leading-relaxed mb-6 sm:mb-8 text-justify sm:text-center hyphens-auto [text-align-last:left] sm:[text-align-last:center]">
+            Request a free live AI citation audit from our senior strategists covering your visibility across Gomti Nagar, Hazratganj, Aliganj, Indira Nagar and Shaheed Path.
+          </p>
+
+          <a
+            href="mailto:connect@nkdigitaltech.com"
+            class="inline-flex w-full sm:w-auto min-h-[48px] items-center justify-center gap-2 sm:gap-3 px-5 sm:px-8 py-3.5 sm:py-4 rounded-xl bg-white text-slate-950 hover:bg-sky-50 font-display font-bold text-sm sm:text-base shadow-xl transition-all duration-300 active:scale-95 text-center leading-snug"
+          >
+            <span>Claim Your Free Lucknow AI Citation Audit</span>
+            <svg class="w-4 h-4 sm:w-5 sm:h-5 text-brand-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mobile Sticky Bottom Quick Action Bar -->
+  <div class="sm:hidden fixed bottom-0 inset-x-0 z-40 bg-[#050a14]/95 backdrop-blur-xl border-t border-slate-800 px-3.5 pt-2.5 pb-[max(0.625rem,env(safe-area-inset-bottom))] shadow-[0_-8px_24px_rgba(0,0,0,0.45)]">
+    <div class="flex items-center gap-2.5">
+      <a
+        href="mailto:connect@nkdigitaltech.com"
+        class="btn-primary flex-1 min-h-[44px] py-2.5 px-4 text-xs font-bold rounded-xl"
+      >
+        <span>Claim Free Lucknow AI Audit</span>
+        <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+        </svg>
+      </a>
+      <a
+        href="#services"
+        class="btn-secondary-dark min-h-[44px] py-2.5 px-3.5 text-xs font-semibold rounded-xl flex-shrink-0"
+      >
+        <span>Services</span>
+      </a>
+    </div>
+  </div>
+
+</Layout>

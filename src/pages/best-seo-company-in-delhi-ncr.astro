@@ -710,7 +710,11 @@ const seoDelhiNcrSchemaFAQ = JSON.stringify({
               </div>
 
               <h3 class="font-display font-bold text-[17px] sm:text-xl text-slate-900 mb-2.5 sm:mb-3 leading-snug group-hover:text-brand-600 transition-colors">
-                {s.title}
+                {s.href.startsWith('/') ? (
+                  <a href={s.href} class="hover:underline">{s.title}</a>
+                ) : (
+                  s.title
+                )}
               </h3>
 
               <p class="text-slate-600 text-[13px] sm:text-sm leading-relaxed mb-4 sm:mb-6 text-justify hyphens-auto [text-align-last:left]">

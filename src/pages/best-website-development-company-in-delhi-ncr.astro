@@ -1,0 +1,1898 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '../styles/global.css';
+
+const pageTitle = 'Best Website Development Company in Delhi NCR | NK Digital Tech';
+const pageDescription = 'NK Digital Tech is the Best Website Development Company in Delhi NCR. We build fast SEO, AEO and GEO optimised websites that get leads on Google and AI models.';
+const pageCanonical = 'https://www.nkdigitaltech.net/best-website-development-company-in-delhi-ncr/';
+
+const webDevFooterDisciplines = [
+  { label: 'Website Design and Development', href: '/best-website-development-company-in-delhi-ncr/' },
+  { label: 'Search Engine Optimisation (SEO)', href: '/best-seo-company-in-delhi-ncr/' },
+  { label: 'Answer Engine Optimisation (AEO)', href: '/aeo-services-in-delhi-ncr/' },
+  { label: 'Generative Engine Optimisation (GEO)', href: '/geo-services-in-delhi-ncr/' },
+  { label: 'AI SEO & Conversational Search', href: '/ai-seo-company-in-delhi-ncr/' },
+  { label: 'Local SEO & Google Business Profile', href: '/local-seo-services-in-delhi-ncr/' },
+];
+
+const clients = [
+  {
+    name: 'Vision',
+    sector: 'Optical Retail & Multi Store Portal',
+    region: 'Delhi NCR & UP',
+    logo: '/images/clients/vision.webp',
+  },
+  {
+    name: 'Aangan',
+    sector: 'Bridal Couture & Catalogue Website',
+    region: 'Delhi & Lucknow',
+    logo: '/images/clients/aangan.webp',
+  },
+  {
+    name: 'Propertyways',
+    sector: 'Commercial Leasing & Property Portal',
+    region: 'Gurgaon & Noida',
+    logo: '/images/clients/propertyways.webp',
+  },
+  {
+    name: 'Creative Academy',
+    sector: 'Student Admissions & Course Portal',
+    region: 'Delhi & Noida',
+    logo: '/images/clients/creative-academy.webp',
+  },
+  {
+    name: 'VP Infra',
+    sector: 'Township Microsites & Civil Projects',
+    region: 'Noida & Lucknow',
+    logo: '/images/clients/vp-infra.webp',
+  },
+];
+
+const services = [
+  {
+    num: '01',
+    category: 'Custom & Corporate',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>`,
+    iconStyle: 'bg-sky-50 border-sky-200 text-brand-600',
+    impactStyle: 'bg-sky-50/80 border-sky-200/80 text-slate-800',
+    badgeColor: 'text-brand-600 bg-sky-100/80',
+    title: 'Corporate & Custom Website Development',
+    body: 'As a trusted corporate website designing company, we build fast websites on Astro, Next.js and React with clean HTML code, sharp WebP visuals and instant page loads.',
+    impact: 'Gives buyers instant trust and passes Google Core Web Vitals on day one.',
+    cta: 'Plan Your Custom Website',
+    href: '#contact',
+  },
+  {
+    num: '02',
+    category: 'SEO, AEO & GEO Ready',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>`,
+    iconStyle: 'bg-emerald-50 border-emerald-200 text-emerald-600',
+    impactStyle: 'bg-emerald-50/80 border-emerald-200/80 text-slate-800',
+    badgeColor: 'text-emerald-700 bg-emerald-100/80',
+    title: 'SEO, AEO & GEO Optimised Web Architecture',
+    body: 'Every build follows strict SEO friendly website design with clear H1 to H3 headings, short answer blocks, HTML fact tables, llms.txt files and clean JSON LD schema.',
+    impact: 'Helps your pages rank on Google and get cited in ChatGPT, Gemini and Perplexity.',
+    cta: 'See Our Search Ready Setup',
+    href: '#contact',
+  },
+  {
+    num: '03',
+    category: 'WordPress & CMS',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>`,
+    iconStyle: 'bg-violet-50 border-violet-200 text-accent-600',
+    impactStyle: 'bg-violet-50/80 border-violet-200/80 text-slate-800',
+    badgeColor: 'text-accent-600 bg-violet-100/80',
+    title: 'Fast WordPress & Easy CMS Website Design',
+    body: 'Through our WordPress website development in Delhi NCR, we create lightweight, custom coded themes without heavy page builders so your team can edit text and blogs with ease.',
+    impact: 'Lets your staff publish pages in minutes without slowing down mobile speed.',
+    cta: 'Build a Fast WordPress Site',
+    href: '#contact',
+  },
+  {
+    num: '04',
+    category: 'Online Stores',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>`,
+    iconStyle: 'bg-amber-50 border-amber-200 text-amber-600',
+    impactStyle: 'bg-amber-50/80 border-amber-200/80 text-slate-800',
+    badgeColor: 'text-amber-700 bg-amber-100/80',
+    title: 'Ecommerce & Shopify Store Development',
+    body: 'Our ecommerce website development in Delhi NCR delivers fast Shopify and WooCommerce stores with Razorpay, UPI, Shiprocket, clean Product schema and AI ready spec tables.',
+    impact: 'Brings product discovery on Google Shopping and AI search with smooth checkout.',
+    cta: 'Launch Your Online Store',
+    href: '#contact',
+  },
+  {
+    num: '05',
+    category: 'Lead Conversion',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>`,
+    iconStyle: 'bg-indigo-50 border-indigo-200 text-indigo-600',
+    impactStyle: 'bg-indigo-50/80 border-indigo-200/80 text-slate-800',
+    badgeColor: 'text-indigo-700 bg-indigo-100/80',
+    title: 'High Converting B2B & Lead Landing Pages',
+    body: 'Our responsive website design services put sticky phone and WhatsApp buttons, clear proof blocks and quick enquiry forms right where mobile visitors tap first.',
+    impact: 'Turns more Google clicks and AI referrals into direct calls and form leads.',
+    cta: 'Boost Your Website Leads',
+    href: '#contact',
+  },
+  {
+    num: '06',
+    category: 'Website Revamp',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>`,
+    iconStyle: 'bg-cyan-50 border-cyan-200 text-cyan-700',
+    impactStyle: 'bg-cyan-50/80 border-cyan-200/80 text-slate-800',
+    badgeColor: 'text-cyan-700 bg-cyan-100/80',
+    title: 'Old Website Redesign, Speed & AI Upgrade',
+    body: 'With our B2B website development services, we rebuild outdated, slow websites with safe 301 URL redirects, fresh mobile layouts, llms.txt guides and structured answer sections.',
+    impact: 'Protects your current Google rankings while opening new leads from AI tools.',
+    cta: 'Upgrade Your Old Website',
+    href: '#contact',
+  },
+];
+
+const cities = [
+  {
+    hub: 'Hub 01',
+    city: 'Delhi',
+    keyword: 'Website Development in Delhi',
+    desc: 'We build fast SEO, AEO and GEO ready websites for real estate firms, interior studios, law chambers, CA practices, coaching institutes and factories across Connaught Place, South Delhi, Nehru Place and Okhla.',
+    cta: 'Plan Your Delhi Website',
+    href: '#contact',
+    accent: 'from-brand-500 to-sky-400',
+  },
+  {
+    hub: 'Hub 02',
+    city: 'Noida',
+    keyword: 'Website Development in Noida',
+    desc: 'We design clean SaaS portals, IT service sites, builder project hubs and industrial product catalogues across Sector 62, Sector 18, Noida Expressway and Greater Noida that win Google and AI leads.',
+    cta: 'Plan Your Noida Website',
+    href: '#contact',
+    accent: 'from-accent-500 to-violet-400',
+  },
+  {
+    hub: 'Hub 03',
+    city: 'Gurgaon',
+    keyword: 'Website Development in Gurgaon',
+    desc: 'We code rapid corporate websites, B2B software pages, commercial leasing portals and advisory sites across DLF Cyber City, Golf Course Road, Sohna Road and Udyog Vihar built for buyer shortlists.',
+    cta: 'Plan Your Gurgaon Website',
+    href: '#contact',
+    accent: 'from-cyan-500 to-teal-400',
+  },
+  {
+    hub: 'Hub 04',
+    city: 'Lucknow',
+    keyword: 'Website Development in Lucknow',
+    desc: 'We launch mobile friendly websites for township developers, coaching academies, retail showrooms, interior firms and civil contractors across Gomti Nagar, Hazratganj, Aliganj and Shaheed Path.',
+    cta: 'Plan Your Lucknow Website',
+    href: '#contact',
+    accent: 'from-emerald-500 to-green-400',
+  },
+];
+
+const comparison = [
+  {
+    metric: 'Main Purpose of the Website',
+    typical: 'Delivers a digital brochure that looks nice in a meeting but brings almost zero calls or enquiries',
+    nk: 'Builds a 24 hour sales engine designed to rank on Google, get cited by AI models and generate daily leads',
+  },
+  {
+    metric: 'Google SEO, AEO & GEO Readiness',
+    typical: 'Leaves out proper heading order, answer blocks and schema, then asks you to pay extra later to fix SEO',
+    nk: 'Bakes SEO, AEO answer snapshots and GEO fact tables right into every page before your site goes live',
+  },
+  {
+    metric: 'Mobile Speed & Core Web Vitals',
+    typical: 'Installs heavy multipurpose themes and 25 plugins that take six seconds to load on mobile data',
+    nk: 'Writes clean lightweight code with compressed WebP images that open in under a second on Indian phones',
+  },
+  {
+    metric: 'AI Bot Access, llms.txt & Schema',
+    typical: 'Hides key facts inside PDF brochures or heavy scripts with zero llms.txt or JSON LD structured data',
+    nk: 'Publishes llms.txt, open AI bot rules and clean Organization, Service and FAQPage JSON LD code',
+  },
+  {
+    metric: 'Lead Forms, WhatsApp & Call Flow',
+    typical: 'Buries a long ten field form on a quiet Contact Us page that mobile visitors rarely reach',
+    nk: 'Places sticky call and WhatsApp buttons, clear trust proof and short three field forms on key pages',
+  },
+  {
+    metric: 'Domain, Hosting & Code Ownership',
+    typical: 'Registers your domain or hosting in the agency account and locks you into unfair renewal charges',
+    nk: 'Registers domain, hosting, analytics and full source code 100% in your company name from day one',
+  },
+];
+
+const industries = [
+  {
+    sector: 'Project Portals',
+    title: 'Real Estate & Property',
+    focus: 'We build fast project microsites and builder portals with RERA facts, floor plan tables, corridor guides and instant WhatsApp site visit buttons.',
+    outcome: 'Higher Google rankings, AI project citations and weekend site visit bookings.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>`,
+    accentBorder: 'border-t-brand-500',
+    iconBg: 'bg-sky-50 text-brand-600 border-sky-200',
+  },
+  {
+    sector: 'Studio Portfolios',
+    title: 'Interior Designers',
+    focus: 'We create visual portfolio websites using fast WebP galleries, clear scope tables and budget guides that load fast without hurting page speed.',
+    outcome: 'Steady studio consultation calls from homeowners and commercial offices.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"/></svg>`,
+    accentBorder: 'border-t-amber-500',
+    iconBg: 'bg-amber-50 text-amber-600 border-amber-200',
+  },
+  {
+    sector: 'B2B Spec Catalogues',
+    title: 'Manufacturing Businesses',
+    focus: 'We replace buried PDF catalogues with searchable HTML product spec tables, ISO proof and quick RFQ forms that Google and Perplexity index cleanly.',
+    outcome: 'Direct bulk order enquiries from purchase heads and national distributors.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>`,
+    accentBorder: 'border-t-emerald-500',
+    iconBg: 'bg-emerald-50 text-emerald-600 border-emerald-200',
+  },
+  {
+    sector: 'Admission Portals',
+    title: 'Education & Coaching Institutes',
+    focus: 'We build admission portals with clear course pages, batch schedules, faculty profiles, Course schema and mobile counselling callback forms.',
+    outcome: 'More direct student enquiries and walk ins without paying lead brokers.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"/></svg>`,
+    accentBorder: 'border-t-cyan-500',
+    iconBg: 'bg-cyan-50 text-cyan-700 border-cyan-200',
+  },
+  {
+    sector: 'Product & Demo Sites',
+    title: 'SaaS & Technology Companies',
+    focus: 'We engineer crisp Astro and Next.js product sites with feature comparison tables, integration docs, llms.txt files and friction free demo booking.',
+    outcome: 'Stronger citations in ChatGPT and Perplexity plus qualified B2B demos.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>`,
+    accentBorder: 'border-t-indigo-500',
+    iconBg: 'bg-indigo-50 text-indigo-600 border-indigo-200',
+  },
+  {
+    sector: 'EPC & Civil Websites',
+    title: 'Construction',
+    focus: 'We design credible EPC and civil contracting websites displaying completed project galleries, safety records, equipment lists and tender contact desks.',
+    outcome: 'Higher commercial buyer confidence and direct turnkey project enquiries.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 21h18M5 21V7l8-4v18M19 21V11l-6-4M9 9v.01M9 12v.01M9 15v.01M9 18v.01"/></svg>`,
+    accentBorder: 'border-t-orange-500',
+    iconBg: 'bg-orange-50 text-orange-600 border-orange-200',
+  },
+  {
+    sector: 'Advisory Websites',
+    title: 'Professional & Business Services',
+    focus: 'We structure authority websites with clear service pages, client case numbers, partner bios and direct calendar booking for advisory firms.',
+    outcome: 'Consistent discovery calls from founders and corporate decision makers.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>`,
+    accentBorder: 'border-t-teal-500',
+    iconBg: 'bg-teal-50 text-teal-700 border-teal-200',
+  },
+  {
+    sector: 'CA & Tax Portals',
+    title: 'Accounting & Financial Services',
+    focus: 'We build clean websites for CA firms and financial advisors with plain compliance guides, partner credentials and answer blocks that AI tools cite.',
+    outcome: 'Steady GST, audit, company setup and retainer enquiries every month.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>`,
+    accentBorder: 'border-t-rose-500',
+    iconBg: 'bg-rose-50 text-rose-600 border-rose-200',
+  },
+  {
+    sector: 'Advocate Chambers',
+    title: 'Legal Services',
+    focus: 'We craft dignified Bar Council compliant chamber websites with clear practice area guides, advocate profiles and LegalService JSON LD schema.',
+    outcome: 'Trusted search visibility and qualified corporate consultation requests.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"/></svg>`,
+    accentBorder: 'border-t-accent-500',
+    iconBg: 'bg-violet-50 text-accent-600 border-violet-200',
+  },
+];
+
+const testimonials = [
+  {
+    name: 'Anirudh Malhotra',
+    initials: 'AM',
+    avatarGradient: 'from-brand-500 to-sky-400',
+    title: 'Founder & Director',
+    company: 'Oakridge Spaces',
+    sector: 'Commercial & Residential Advisory, Gurgaon',
+    impact: '98 Mobile PageSpeed score & 3.2x jump in organic project leads',
+    quote: 'Our previous WordPress site took seven seconds to open and never brought a single enquiry. NK Digital Tech rebuilt our website with SEO, AEO and GEO structure baked in, and within weeks we started getting calls from both Google and ChatGPT.',
+  },
+  {
+    name: 'Ritika Bhardwaj',
+    initials: 'RB',
+    avatarGradient: 'from-amber-500 to-orange-400',
+    title: 'Principal Architect',
+    company: 'Studio Prana Interiors',
+    sector: 'Turnkey Home & Office Interiors, South Delhi',
+    impact: 'Cited in Google AI Overviews & 2.7x studio consultation bookings',
+    quote: 'Most web designers wanted to hide our project details behind heavy animations. NK Digital Tech built a fast, clean portfolio with simple scope tables and schema, and homeowners now find us on Google and Gemini every week.',
+  },
+  {
+    name: 'Harshvardhan Goel',
+    initials: 'HG',
+    avatarGradient: 'from-emerald-500 to-teal-400',
+    title: 'Managing Director',
+    company: 'Kaveri Precision Components',
+    sector: 'Industrial Manufacturing, Okhla & Noida',
+    impact: 'HTML spec tables indexed on Google & steady B2B RFQ enquiries',
+    quote: 'Moving 140 product specs out of slow PDF files into clean, fast HTML pages changed everything for our factory. Purchase managers searching on Google and Perplexity now land directly on our spec pages and send bulk enquiries.',
+  },
+  {
+    name: 'Siddharth Khanna',
+    initials: 'SK',
+    avatarGradient: 'from-cyan-500 to-sky-400',
+    title: 'Co Founder',
+    company: 'CloudStack Ops',
+    sector: 'B2B SaaS Platform, Noida Sector 62',
+    impact: 'Sub second load times & 2.9x increase in qualified software demos',
+    quote: 'We needed a sharp B2B website that both human CTOs and AI models could read clearly. Their team delivered an Astro build with comparison matrices, llms.txt and clean schema on schedule, and demo bookings jumped fast.',
+  },
+  {
+    name: 'CA Nitin Agarwal',
+    initials: 'NA',
+    avatarGradient: 'from-rose-500 to-pink-400',
+    title: 'Senior Partner',
+    company: 'Agarwal Bansal & Co.',
+    sector: 'Chartered Accountants, Connaught Place',
+    impact: 'Page one rankings & steady corporate GST and audit enquiries',
+    quote: 'We had full clarity on pricing, timelines and domain ownership from day one. Our new website answers real founder questions in plain English, ranks on Google page one and brings regular advisory calls.',
+  },
+  {
+    name: 'Pankaj Srivastava',
+    initials: 'PS',
+    avatarGradient: 'from-accent-500 to-violet-400',
+    title: 'Academic Director',
+    company: 'Shikhar Target Institute',
+    sector: 'Competitive Exam Coaching, Delhi & Lucknow',
+    impact: '2.4x rise in mobile admission callbacks during intake season',
+    quote: 'Over eighty percent of students check our courses on budget phones. The new mobile layout with Course schema, clear fee tables and sticky WhatsApp buttons doubled our direct admission calls.',
+  },
+];
+
+const stages = [
+  {
+    num: 'Stage 01',
+    step: '01',
+    title: 'Buyer Search Research & Page Blueprint',
+    body: 'Before touching colours or code, we map the exact keywords and questions your buyers type into Google, ChatGPT, Gemini and Perplexity. Then we plan every service page, city page and FAQ block around real buyer intent.',
+    accent: 'from-brand-600 to-sky-500',
+  },
+  {
+    num: 'Stage 02',
+    step: '02',
+    title: 'Simple Copywriting & Mobile First Design',
+    body: 'We design clean, modern layouts built for Indian mobile screens first and write clear, human copy with short answer blocks, comparison tables, real proof points and easy call or WhatsApp buttons.',
+    accent: 'from-accent-600 to-violet-500',
+  },
+  {
+    num: 'Stage 03',
+    step: '03',
+    title: 'Clean Coding With SEO, AEO & GEO Setup',
+    body: 'Our developers build your site on Astro, Next.js, WordPress or Shopify with compressed WebP images, clean semantic HTML, XML sitemaps, llms.txt files, open AI bot rules and verified JSON LD schema.',
+    accent: 'from-cyan-600 to-teal-500',
+  },
+  {
+    num: 'Stage 04',
+    step: '04',
+    title: 'Speed Testing, Go Live & Full Handover',
+    body: 'We check 95 plus PageSpeed scores, test every form and WhatsApp trigger, set up Google Search Console and Analytics, launch smoothly and hand over 100% domain, hosting and admin ownership to your team.',
+    accent: 'from-emerald-600 to-green-500',
+  },
+];
+
+const faqs = [
+  {
+    q: 'Which is the Best Website Development Company in Delhi NCR for getting leads from Google and AI models?',
+    a: 'NK Digital Tech is the Best Website Development Company in Delhi NCR for businesses that want real sales enquiries rather than just a digital brochure. Every website we build comes with SEO, AEO and GEO baked into the code, copy and schema so your business ranks on Google and gets recommended on ChatGPT, Gemini, Perplexity and Google AI Overviews.',
+  },
+  {
+    q: 'What makes an SEO, AEO and GEO optimised website different from a normal business website?',
+    a: 'A normal website only focuses on visual design and often hides information inside slow sliders or PDF files. An SEO, AEO and GEO optimised website loads in under a second on mobile, uses clean H1 to H3 headings for Google rankings, adds 40 to 60 word direct answer blocks and FAQ schema for answer snippets, and includes llms.txt files, fact tables and Organization JSON LD schema so AI models cite your brand.',
+  },
+  {
+    q: 'How much does website development cost in Delhi NCR?',
+    a: 'Website pricing in Delhi NCR depends on page count, platform and custom features. A fast, search ready corporate or service website on WordPress or Astro typically ranges from ₹25,000 to ₹65,000. A full Shopify or WooCommerce online store with payment and shipping integration ranges from ₹45,000 to ₹1.5 lakh, while custom Next.js or React web applications start from ₹75,000 upwards with clear milestone billing.',
+  },
+  {
+    q: 'How long does it take to design, code and launch a business website?',
+    a: 'A standard 8 to 15 page corporate or service website with full SEO, AEO and GEO setup takes two to four weeks from kickoff to launch. An ecommerce store with product categories, Razorpay or UPI checkout and shipping setup takes four to six weeks, while larger custom B2B portals take six to ten weeks.',
+  },
+  {
+    q: 'Should we choose WordPress, Shopify, Astro or Next.js for our company website?',
+    a: 'Each stack fits a clear business goal. Astro and Next.js deliver the fastest sub second load times and highest Core Web Vitals scores for corporate, B2B and lead generation websites. Custom lightweight WordPress is ideal when your in house team wants to edit pages and blogs daily without touching code. Shopify is best for retail and D2C product brands that want secure, maintenance free checkout.',
+  },
+  {
+    q: 'Can you redesign our old slow website without losing our current Google rankings?',
+    a: 'Yes. Before replacing your old site, we crawl every existing URL, preserve ranking pages, map clean 301 redirects so no traffic or backlink authority is lost, upgrade slow images to WebP and add fresh answer blocks, llms.txt and JSON LD schema. Most clients see both faster speed and stronger rankings within weeks of relaunch.',
+  },
+  {
+    q: 'Who owns the domain name, hosting account and website source code after launch?',
+    a: 'Your company owns 100% of everything from day one. Unlike vendors that lock your domain or admin login inside their own accounts, we register your domain, cloud hosting, Google Analytics, Search Console and full website code directly under your company email and hand over complete admin credentials at launch.',
+  },
+  {
+    q: 'Do you provide website maintenance, security updates and SEO or AI growth support after launch?',
+    a: 'Yes. Every website includes thirty days of free post launch support to ensure smooth performance across all browsers and phones. After that, you can manage the site with your own team using our simple training videos or opt for an affordable support plan covering backups, security updates and ongoing SEO, AEO and GEO growth.',
+  },
+];
+
+const trustStrip = [
+  'SEO, AEO & GEO Ready',
+  'Sub Second Mobile Load',
+  '95+ Core Web Vitals',
+  'llms.txt & JSON LD Code',
+  'Astro, WP & Shopify',
+  'WhatsApp & Call Ready',
+  'Delhi NCR & Lucknow',
+  '100% Code Ownership',
+];
+
+const webDevSchemaLocalBusiness = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'ProfessionalService',
+  name: 'NK Digital Tech Best Website Development Company in Delhi NCR',
+  url: 'https://www.nkdigitaltech.net/best-website-development-company-in-delhi-ncr/',
+  logo: 'https://www.nkdigitaltech.net/images/web-dev-delhi-ncr/hero-website-development-delhi-ncr.webp',
+  image: 'https://www.nkdigitaltech.net/images/web-dev-delhi-ncr/hero-website-development-delhi-ncr.webp',
+  description: 'NK Digital Tech is the Best Website Development Company in Delhi NCR building fast SEO, AEO and GEO optimised websites that generate leads from Google, Google AI Overviews, ChatGPT, Gemini and Perplexity.',
+  email: 'connect@nkdigitaltech.com',
+  priceRange: '₹25,000 to ₹2,50,000',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'New Delhi',
+    addressRegion: 'Delhi NCR',
+    addressCountry: 'IN',
+  },
+  areaServed: [
+    'Delhi NCR',
+    'New Delhi',
+    'Noida',
+    'Greater Noida',
+    'Gurgaon',
+    'Gurugram',
+    'Lucknow',
+    'Faridabad',
+    'Ghaziabad',
+  ],
+  serviceType: [
+    'Best Website Development Company in Delhi NCR',
+    'SEO, AEO and GEO Optimised Website Development',
+    'Corporate Website Design and Development',
+    'WordPress Website Development in Delhi NCR',
+    'Ecommerce Website Development in Delhi NCR',
+    'Custom Astro and Next.js Web Development',
+  ],
+});
+
+const webDevSchemaFAQ = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((item) => ({
+    '@type': 'Question',
+    name: item.q,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.a,
+    },
+  })),
+});
+---
+
+<Layout
+  title={pageTitle}
+  description={pageDescription}
+  canonical={pageCanonical}
+  ogImage="https://www.nkdigitaltech.net/images/web-dev-delhi-ncr/hero-website-development-delhi-ncr.webp"
+  preloadImage="/images/web-dev-delhi-ncr/hero-website-development-delhi-ncr.webp"
+  customSchemaLocalBusiness={webDevSchemaLocalBusiness}
+  customSchemaFAQ={webDevSchemaFAQ}
+  utilityTagline="SEO, AEO & GEO Ready Websites • Serving Delhi, Noida, Gurgaon & Lucknow"
+  brandSubtitle="SEO, AEO & GEO Websites"
+  footerBio="Best Website Development Company in Delhi NCR building fast, mobile first SEO, AEO and GEO optimised websites that bring qualified leads from Google, ChatGPT, Gemini and Perplexity."
+  footerCoreDisciplines={webDevFooterDisciplines}
+  footerTagline="Best Website Development Company in Delhi NCR"
+>
+  <!-- =====================================================================
+       SECTION 1: HERO (DARK SURFACE WITH UNIQUE WEB DEV HERO IMAGE)
+  ===================================================================== -->
+  <section
+    class="relative surface-dark overflow-hidden pt-4 pb-8 sm:pt-14 sm:pb-16 lg:pt-16 lg:pb-20 border-b border-slate-800/80"
+  >
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="absolute inset-0 mesh-glow pointer-events-none"></div>
+    <div
+      class="absolute -top-24 -left-24 sm:-top-36 sm:-left-36 w-56 h-56 sm:w-96 sm:h-96 bg-brand-500/20 rounded-full blur-[80px] sm:blur-[130px] pointer-events-none"
+    >
+    </div>
+    <div
+      class="absolute top-1/4 -right-24 sm:-right-36 w-56 h-56 sm:w-96 sm:h-96 bg-accent-500/20 rounded-full blur-[80px] sm:blur-[130px] pointer-events-none"
+    >
+    </div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
+      <div
+        class="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-10 lg:gap-12 items-center"
+      >
+        <!-- Left 7 Columns: Headline & CTA -->
+        <div class="lg:col-span-7 text-left min-w-0">
+          <div
+            class="badge-dark mb-3 sm:mb-5 text-[10px] sm:text-xs py-1.5 px-2.5 sm:px-3.5"
+          >
+            <span
+              class="w-2 h-2 rounded-full bg-brand-400 animate-ping flex-shrink-0"
+            ></span>
+            <span class="min-w-0 break-words"
+              >SEO, AEO &amp; GEO Websites &bull; Google &amp; AI Leads</span
+            >
+          </div>
+
+          <h1
+            class="font-display text-[clamp(1.6rem,6.6vw,2.3rem)] sm:text-5xl lg:text-[3.35rem] font-black tracking-tight text-white leading-[1.16] sm:leading-[1.1] mb-3 sm:mb-5 text-glow"
+          >
+            Best Website Development Company <span class="gradient-text-light"
+              >in Delhi NCR</span
+            >
+          </h1>
+
+          <p
+            class="text-[14px] sm:text-base md:text-lg text-slate-300 leading-[1.68] sm:leading-relaxed mb-4 sm:mb-7 font-normal text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]"
+          >
+            NK Digital Tech is the <strong class="text-white font-semibold"
+              >Best Website Development Company in Delhi NCR</strong
+            > for business owners who want steady sales leads instead of just a pretty
+            online brochure. We design and code fast, mobile friendly websites that
+            come fully SEO, AEO and GEO optimised from day one so your business ranks
+            high on Google and gets recommended inside Google AI Overviews, ChatGPT,
+            Gemini and Perplexity.
+          </p>
+
+          <div
+            class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-4 mb-5 sm:mb-8"
+          >
+            <a
+              href="#contact"
+              class="btn-primary w-full sm:w-auto min-h-[50px] text-[13.5px] sm:text-base px-4 sm:px-8 py-3.5 sm:py-4"
+            >
+              <span>Claim Free Website &amp; AI Audit</span>
+              <svg
+                class="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M14 5l7 7-7 7M3 12h18"></path>
+              </svg>
+            </a>
+            <a
+              href="#services"
+              class="btn-secondary-dark w-full sm:w-auto min-h-[48px] text-[13.5px] sm:text-base px-4 sm:px-7 py-3.5 sm:py-4"
+            >
+              <span>Explore Our 6 Web Services</span>
+            </a>
+          </div>
+
+          <!-- Trust Verification Strip (2x4 Grid on Mobile, Flex Pills on Desktop) -->
+          <div class="pt-3.5 sm:pt-5 border-t border-slate-800/80">
+            <div
+              class="grid grid-cols-2 sm:flex sm:flex-wrap items-stretch sm:items-center gap-2"
+            >
+              {
+                trustStrip.map((item) => (
+                  <span class="px-2.5 sm:px-3 py-2 sm:py-1.5 min-h-[42px] sm:min-h-0 rounded-lg bg-slate-900/90 border border-slate-800 text-[11px] sm:text-xs text-slate-300 font-medium flex items-center justify-center sm:justify-start text-center sm:text-left leading-tight sm:leading-snug break-words">
+                    {item}
+                  </span>
+                ))
+              }
+            </div>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Unique Web Dev Hero Image -->
+        <div class="lg:col-span-5 min-w-0">
+          <div
+            class="relative rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-700/80 shadow-2xl shadow-brand-500/15 bg-slate-900 group"
+          >
+            <div class="relative">
+              <img
+                src="/images/web-dev-delhi-ncr/hero-website-development-delhi-ncr.webp"
+                alt="Best Website Development Company in Delhi NCR Engineers Designing Fast SEO AEO and GEO Ready Websites"
+                width="960"
+                height="540"
+                sizes="(max-width: 1024px) 100vw, 42vw"
+                fetchpriority="high"
+                decoding="async"
+                class="w-full aspect-[16/9] sm:aspect-auto sm:h-64 md:h-[330px] lg:h-[350px] object-cover object-center sm:group-hover:scale-105 transition-transform duration-500"
+              />
+              <div
+                class="hidden sm:block absolute inset-0 bg-gradient-to-t from-[#050a14] via-transparent to-transparent opacity-80"
+              >
+              </div>
+            </div>
+            <div
+              class="relative sm:absolute sm:bottom-4 sm:left-4 sm:right-4 glass-card border-t sm:border border-slate-800 sm:rounded-2xl p-3.5 sm:p-4"
+            >
+              <div
+                class="flex flex-wrap items-center justify-between gap-1.5 mb-1"
+              >
+                <span class="text-xs font-bold text-white"
+                  >SEO + AEO + GEO Website Engine</span
+                >
+                <span
+                  class="inline-flex items-center gap-1 text-[10.5px] sm:text-xs font-semibold text-emerald-400"
+                >
+                  <span
+                    class="w-2 h-2 rounded-full bg-emerald-400 flex-shrink-0"
+                  ></span>
+                  95+ Core Web Vitals
+                </span>
+              </div>
+              <p
+                class="text-[12px] sm:text-xs text-slate-300 text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left] leading-relaxed"
+              >
+                Built with clean HTML, llms.txt, JSON LD schema and fast mobile
+                layouts that turn Google and AI visitors into real calls.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 2: INTRODUCTION (CRISP WHITE CONTRAST SECTION + TEAM IMAGE)
+  ===================================================================== -->
+  <section
+    class="relative surface-white overflow-hidden py-10 sm:py-16 lg:py-20 px-4 sm:px-6 border-b border-slate-200"
+  >
+    <div class="max-w-7xl mx-auto">
+      <div
+        class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 lg:gap-12 items-center"
+      >
+        <!-- Left 7 Columns: Simple Direct Introduction -->
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-light mb-3 sm:mb-3.5">
+            Search &amp; AI Ready Web Engineering
+          </div>
+          <h2
+            class="font-display font-extrabold text-[clamp(1.32rem,5.2vw,1.72rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3.5 sm:mb-5"
+          >
+            Why Businesses Hire the Best Website Development Company in Delhi
+            NCR <span class="gradient-text-dark">for Google and AI Leads</span>
+          </h2>
+          <div
+            class="space-y-3.5 sm:space-y-4 text-slate-700 text-[14px] sm:text-base leading-[1.7] sm:leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]"
+          >
+            <p>
+              As the <strong
+                >Best Website Development Company in Delhi NCR</strong
+              >, NK Digital Tech builds fast business websites that bring you
+              enquiries from both Google search and modern AI tools like
+              ChatGPT, Gemini, Perplexity and Google AI Overviews. Today, buyers
+              do not just look at pretty colours on a screen. Half of them search
+              on Google from their phones, and the other half ask AI tools which
+              vendor is reliable, what a service costs and who has proven local
+              results.
+            </p>
+            <p>
+              Most developers only think about visual design and leave out the
+              structure that search engines and AI models need to read your
+              business. Working with our <strong
+                >web designing company in Delhi NCR</strong
+              > means every page is built from scratch with clean organic architecture
+              from our <a
+                href="/best-seo-company-in-delhi-ncr/"
+                class="text-brand-600 hover:text-sky-700 active:opacity-80 font-semibold transition-colors"
+                >Best SEO Company in Delhi NCR</a
+              > and direct answer blocks from our <a
+                href="/aeo-services-in-delhi-ncr/"
+                class="text-brand-600 hover:text-sky-700 active:opacity-80 font-semibold transition-colors"
+                >AEO Services in Delhi NCR</a
+              > so your website ranks faster, gets quoted by AI assistants and turns
+              visitors into phone calls.
+            </p>
+          </div>
+          <div
+            class="mt-5 sm:mt-7 flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-4"
+          >
+            <a
+              href="#contact"
+              class="btn-primary w-full sm:w-auto min-h-[48px]"
+            >
+              <span>Discuss Your Website Project</span>
+              <svg
+                class="w-4 h-4 flex-shrink-0"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M14 5l7 7-7 7M3 12h18"></path>
+              </svg>
+            </a>
+            <a
+              href="#why-us"
+              class="btn-secondary-light w-full sm:w-auto min-h-[48px]"
+            >
+              <span>Compare With Normal Vendors</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Unique Team Image + Stats -->
+        <div class="lg:col-span-5 space-y-3.5 sm:space-y-4 min-w-0">
+          <div
+            class="rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-200 shadow-lg bg-slate-100"
+          >
+            <img
+              src="/images/web-dev-delhi-ncr/web-development-team-delhi-ncr.webp"
+              alt="Web Designing Company in Delhi NCR Team Planning Mobile First SEO AEO and GEO Websites"
+              width="800"
+              height="533"
+              sizes="(max-width: 1024px) 100vw, 42vw"
+              class="w-full aspect-[16/9] sm:aspect-auto sm:h-56 lg:h-60 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="grid grid-cols-2 gap-2.5 sm:gap-3.5">
+            {
+              [
+                {
+                  val: '< 1 Sec',
+                  label: 'Mobile Load Speed',
+                  sub: 'Built for 95+ PageSpeed scores',
+                },
+                {
+                  val: '3 in 1',
+                  label: 'SEO + AEO + GEO',
+                  sub: 'Built into every page at launch',
+                },
+                {
+                  val: 'llms.txt',
+                  label: 'AI Crawler Ready',
+                  sub: 'Clean JSON LD & bot access',
+                },
+                {
+                  val: '100%',
+                  label: 'Client Ownership',
+                  sub: 'Your domain, hosting & code',
+                },
+              ].map((stat) => (
+                <div class="elevated-card rounded-xl sm:rounded-2xl p-3 sm:p-3.5 min-w-0 flex flex-col justify-between">
+                  <div class="font-display font-black text-[1.05rem] sm:text-2xl text-brand-600 mb-0.5 leading-tight sm:whitespace-nowrap break-words">
+                    {stat.val}
+                  </div>
+                  <div>
+                    <div class="text-[11.5px] sm:text-xs font-bold text-slate-900 leading-snug">
+                      {stat.label}
+                    </div>
+                    <div class="text-[10.5px] sm:text-[11px] text-slate-500 leading-snug mt-0.5">
+                      {stat.sub}
+                    </div>
+                  </div>
+                </div>
+              ))
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 3: PROBLEM STATEMENT (DEEP INDIGO DARK CONTRAST SECTION)
+  ===================================================================== -->
+  <section
+    class="relative surface-indigo py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden"
+  >
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="max-w-7xl mx-auto relative z-10">
+      <div
+        class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 lg:gap-12 items-center"
+      >
+        <!-- Left 7 Columns: Problem Statement Copy -->
+        <div class="lg:col-span-7 min-w-0">
+          <div
+            class="inline-flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3.5 py-1.5 rounded-xl sm:rounded-full text-[10px] sm:text-xs font-bold uppercase tracking-normal sm:tracking-widest bg-amber-500/10 border border-amber-500/30 text-amber-300 max-w-full leading-snug mb-4 sm:mb-5"
+          >
+            <svg
+              class="w-4 h-4 text-amber-400 flex-shrink-0"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
+              ></path>
+            </svg>
+            <span class="min-w-0 break-words"
+              >Why Pretty Websites Fail to Bring Sales</span
+            >
+          </div>
+
+          <h2
+            class="font-display font-extrabold text-[clamp(1.32rem,5.2vw,1.72rem)] sm:text-3xl lg:text-4xl text-white tracking-tight leading-[1.22] sm:leading-tight mb-4 sm:mb-6"
+          >
+            Why Most Good Looking Business Websites in Delhi NCR Get Zero Calls
+            From Google or ChatGPT
+          </h2>
+
+          <div
+            class="space-y-3.5 sm:space-y-4 text-slate-300 text-[14px] sm:text-base leading-[1.7] sm:leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]"
+          >
+            <p>
+              Every month we meet founders who spent good money on a new website
+              that looks fine on a laptop yet brings zero enquiries. When we
+              check under the hood, the problem is clear. Typical web vendors
+              install a heavy, pre made template, load twenty unnecessary
+              plugins, skip heading structure, hide product specs inside PDF
+              files and add zero JSON LD schema or llms.txt guides. Mobile pages
+              take six seconds to open, so impatient buyers tap the back button.
+            </p>
+            <p>
+              Even worse, ChatGPT, Gemini, Perplexity and Google AI Overviews
+              cannot extract a single clear fact from messy code or vague sales
+              lines, so they recommend your competitor instead. Partnering with
+              an experienced <strong
+                >website development company in Delhi NCR</strong
+              > powered by our <a
+                href="/geo-services-in-delhi-ncr/"
+                class="text-brand-300 hover:text-white active:opacity-80 font-semibold transition-colors"
+                >GEO Services in Delhi NCR</a
+              > solves this from the root by coding fast, machine readable pages that
+              both Google and AI engines trust.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Diagnostic Comparison Cards -->
+        <div class="lg:col-span-5 space-y-3.5 sm:space-y-4 min-w-0">
+          <div
+            class="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6 border-l-4 border-l-rose-500 min-w-0"
+          >
+            <div
+              class="flex flex-wrap items-center justify-between gap-1.5 mb-2"
+            >
+              <span
+                class="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-rose-400"
+                >Typical Template Agency Build</span
+              >
+              <span class="text-[11px] sm:text-xs text-slate-400"
+                >Zero Search Leads</span
+              >
+            </div>
+            <h3
+              class="font-display font-bold text-[15px] sm:text-base text-white mb-2 leading-snug"
+            >
+              Slow Templates, Missing Schema &amp; Blocked AI Bots
+            </h3>
+            <p
+              class="text-[12.5px] sm:text-xs text-slate-300 leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]"
+            >
+              Heavy sliders, five second mobile load times, missing H1 to H3
+              order, no llms.txt file and buried contact forms keep your site
+              invisible on Google and AI search.
+            </p>
+          </div>
+
+          <div
+            class="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6 border-l-4 border-l-emerald-400 min-w-0"
+          >
+            <div
+              class="flex flex-wrap items-center justify-between gap-1.5 mb-2"
+            >
+              <span
+                class="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-emerald-400"
+                >NK Digital Tech Web System</span
+              >
+              <span class="text-[11px] sm:text-xs text-brand-300"
+                >Google + AI Ready</span
+              >
+            </div>
+            <h3
+              class="font-display font-bold text-[15px] sm:text-base text-white mb-2 leading-snug"
+            >
+              Fast Code, Clean Answers &amp; AI Ready Web Setup
+            </h3>
+            <p
+              class="text-[12.5px] sm:text-xs text-slate-300 leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]"
+            >
+              Sub second mobile speed, SEO topic structure, AEO answer blocks,
+              GEO comparison tables, llms.txt and JSON LD schema built to bring
+              daily enquiries.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 4: SERVICES (LIGHT COOL ALABASTER CONTRAST + ARCHITECTURE IMAGE)
+  ===================================================================== -->
+  <section
+    id="services"
+    class="relative surface-cool overflow-hidden scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200"
+  >
+    <div class="max-w-7xl mx-auto">
+      <!-- Services Header with Unique Web Architecture Image -->
+      <div
+        class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 items-center mb-7 sm:mb-16"
+      >
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-light mb-3">Six Search Ready Web Capabilities</div>
+          <h2
+            class="font-display font-extrabold text-[clamp(1.32rem,5.2vw,1.72rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4"
+          >
+            Six Website Engineering Services Built for Google Rankings and AI
+            Recommendations
+          </h2>
+          <p
+            class="text-slate-600 text-[14px] sm:text-base leading-[1.7] sm:leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]"
+          >
+            Our <strong>website design services in Delhi NCR</strong> cover custom
+            corporate sites, WordPress builds, online stores and B2B landing pages.
+            Every project combines clean code, fast mobile speed and built in SEO,
+            AEO and GEO structure so both human buyers and AI models understand what
+            you sell and why they should choose you.
+          </p>
+        </div>
+        <div class="lg:col-span-5 min-w-0">
+          <div
+            class="rounded-2xl overflow-hidden border border-slate-200 shadow-md bg-white"
+          >
+            <img
+              src="/images/web-dev-delhi-ncr/seo-aeo-geo-website-architecture-delhi-ncr.webp"
+              alt="Full Stack Web Developer Coding SEO AEO and GEO Optimised Website Architecture in Delhi NCR"
+              width="800"
+              height="450"
+              sizes="(max-width: 1024px) 100vw, 42vw"
+              class="w-full aspect-[16/9] sm:aspect-auto sm:h-56 lg:h-64 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- 3 Columns x 2 Rows Grid Layout -->
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-7"
+      >
+        {
+          services.map((s) => (
+            <div class="elevated-card rounded-2xl p-4 sm:p-7 flex flex-col justify-between group sm:hover:-translate-y-1 min-w-0">
+              <div>
+                <div class="flex flex-wrap items-center justify-between gap-2 mb-3.5 sm:mb-6">
+                  <div
+                    class={`w-10 h-10 sm:w-12 sm:h-12 rounded-xl border flex items-center justify-center flex-shrink-0 ${s.iconStyle}`}
+                  >
+                    <Fragment set:html={s.icon} />
+                  </div>
+                  <div class="flex items-center gap-1.5 sm:gap-2 min-w-0 max-w-full">
+                    <span
+                      class={`text-[10.5px] sm:text-[11px] font-semibold px-2 sm:px-2.5 py-1 rounded-md leading-tight break-words ${s.badgeColor}`}
+                    >
+                      {s.category}
+                    </span>
+                    <span class="font-display font-black text-sm sm:text-lg text-slate-300 flex-shrink-0">
+                      {s.num}
+                    </span>
+                  </div>
+                </div>
+
+                <h3 class="font-display font-bold text-[16.5px] sm:text-xl text-slate-900 mb-2.5 sm:mb-3 leading-snug group-hover:text-brand-600 transition-colors">
+                  {s.title}
+                </h3>
+
+                <p class="text-slate-600 text-[13.5px] sm:text-sm leading-[1.68] sm:leading-relaxed mb-4 sm:mb-6 text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+                  {s.body}
+                </p>
+              </div>
+
+              <div>
+                <div
+                  class={`rounded-xl border p-3.5 sm:p-4 mb-3.5 sm:mb-5 ${s.impactStyle}`}
+                >
+                  <div class="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-slate-900 mb-1">
+                    <svg
+                      class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2.5"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                    <span>Business Lead Impact</span>
+                  </div>
+                  <p class="text-[12.5px] sm:text-xs text-slate-700 leading-relaxed font-medium text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+                    {s.impact}
+                  </p>
+                </div>
+
+                <a
+                  href={s.href}
+                  class="w-full sm:w-auto inline-flex items-center justify-between sm:justify-start gap-2 rounded-xl sm:rounded-none bg-slate-50 active:bg-sky-50 sm:bg-transparent border border-slate-200/80 sm:border-0 px-3.5 sm:px-0 py-2.5 min-h-[48px] sm:min-h-0 text-xs font-bold text-brand-600 hover:text-sky-700 group-hover:gap-3 transition-all"
+                >
+                  <span class="text-left leading-snug">{s.cta}</span>
+                  <svg
+                    class="w-4 h-4 flex-shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M14 5l7 7-7 7M3 12h18"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 5: REGIONAL LOCATIONS (DARK NAVY + MULTI CITY WEB DEV IMAGE)
+  ===================================================================== -->
+  <section
+    id="locations"
+    class="relative surface-navy scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden"
+  >
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <!-- Regional Header with Unique Multi City Web Dev Image -->
+      <div
+        class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 items-center mb-7 sm:mb-16"
+      >
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-dark mb-3">Four Regional Web Engineering Hubs</div>
+          <h2
+            class="font-display font-extrabold text-[clamp(1.32rem,5.2vw,1.72rem)] sm:text-3xl lg:text-4xl text-white tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4"
+          >
+            SEO, AEO and GEO Website Development Across Delhi, Noida, Gurgaon
+            and Lucknow
+          </h2>
+          <p
+            class="text-slate-300 text-[14px] sm:text-base leading-[1.7] sm:leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]"
+          >
+            A generic single page website rarely ranks across multiple cities.
+            Buyers in Connaught Place, Noida Sector 62, Golf Course Road in
+            Gurgaon and Gomti Nagar in Lucknow search with exact city names on
+            both Google and ChatGPT. We build dedicated city landing pages on
+            your website connected with map signals from our <a
+              href="/local-seo-services-in-delhi-ncr/"
+              class="text-brand-300 hover:text-white active:opacity-80 font-semibold transition-colors"
+              >Local SEO Services in Delhi NCR</a
+            > and entity setup from our <a
+              href="/ai-seo-company-in-delhi-ncr/"
+              class="text-brand-300 hover:text-white active:opacity-80 font-semibold transition-colors"
+              >AI SEO Company in Delhi NCR</a
+            > so your brand wins local enquiries across every hub you serve.
+          </p>
+        </div>
+        <div class="lg:col-span-5 min-w-0">
+          <div
+            class="rounded-2xl overflow-hidden border border-slate-700/80 shadow-xl bg-slate-900"
+          >
+            <img
+              src="/images/web-dev-delhi-ncr/web-development-delhi-noida-gurgaon-lucknow.webp"
+              alt="Website Development Company in Delhi NCR Serving Enterprises in Delhi Noida Gurgaon and Lucknow"
+              width="800"
+              height="450"
+              sizes="(max-width: 1024px) 100vw, 42vw"
+              class="w-full aspect-[16/9] sm:aspect-auto sm:h-56 lg:h-64 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- 1 Row x 4 Columns Responsive Grid -->
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5 sm:gap-6"
+      >
+        {
+          cities.map((c) => (
+            <div class="glass-card rounded-2xl p-4 sm:p-6 flex flex-col justify-between group sm:hover:-translate-y-1 min-w-0">
+              <div>
+                <div
+                  class={`h-1 w-full bg-gradient-to-r ${c.accent} rounded-full mb-3.5 sm:mb-5`}
+                />
+
+                <div class="flex items-center justify-between gap-2 mb-3 sm:mb-4">
+                  <span class="px-2.5 py-1 rounded-md bg-slate-800 border border-slate-700 text-[11px] font-bold uppercase tracking-wider text-brand-300">
+                    {c.hub}
+                  </span>
+                  <span class="text-xs font-semibold text-slate-400">
+                    {c.city}
+                  </span>
+                </div>
+
+                <h3 class="font-display font-bold text-[16.5px] sm:text-lg text-white mb-2 sm:mb-3 leading-snug">
+                  <a
+                    href={c.href}
+                    class="inline-flex items-center min-h-[44px] sm:min-h-0 py-1 sm:py-0.5 text-white hover:text-brand-300 transition-colors"
+                  >
+                    {c.keyword}
+                  </a>
+                </h3>
+
+                <p class="text-slate-300 text-[13.5px] sm:text-sm leading-[1.68] sm:leading-relaxed mb-4 sm:mb-5 text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+                  {c.desc}
+                </p>
+              </div>
+
+              <div class="pt-0 sm:pt-4 border-t-0 sm:border-t border-slate-800">
+                <a
+                  href={c.href}
+                  class="w-full sm:w-auto inline-flex items-center justify-between sm:justify-start gap-2 rounded-xl sm:rounded-none bg-slate-900/90 active:bg-slate-800 sm:bg-transparent border border-slate-700/80 sm:border-0 px-3.5 sm:px-0 py-2.5 min-h-[48px] sm:min-h-0 text-xs font-bold text-brand-400 hover:text-brand-300 group-hover:gap-2.5 transition-all"
+                >
+                  <span class="text-left leading-snug">{c.cta}</span>
+                  <svg
+                    class="w-3.5 h-3.5 flex-shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M14 5l7 7-7 7M3 12h18"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 6: WHY NK DIGITAL TECH (CRISP WHITE CONTRAST SECTION)
+  ===================================================================== -->
+  <section
+    id="why-us"
+    class="relative surface-white overflow-hidden scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200"
+  >
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-7 sm:mb-14 text-left sm:text-center">
+        <div class="badge-light mb-3">Why Delhi NCR Founders Pick Us</div>
+        <h2
+          class="font-display font-extrabold text-[clamp(1.32rem,5.2vw,1.72rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4"
+        >
+          How NK Digital Tech Builds Websites Compared to a Normal Web Vendor
+        </h2>
+        <p
+          class="text-slate-600 text-[14px] sm:text-base leading-[1.7] sm:leading-relaxed mb-3.5 text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]"
+        >
+          Most business owners hire a web vendor once, get stuck with a slow
+          template and then have to hire a second agency six months later to fix
+          speed, headings and schema. Choosing the right <strong
+            >website development company in Delhi NCR</strong
+          > saves you that double expense.
+        </p>
+        <p
+          class="text-slate-600 text-[14px] sm:text-base leading-[1.7] sm:leading-relaxed mb-4 text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]"
+        >
+          When you work with our <strong
+            >custom web development company in Delhi NCR</strong
+          >, our web engineers and search strategists sit together from day one
+          so speed, copy, schema, llms.txt and conversion buttons are built
+          cleanly the very first time.
+        </p>
+        <p class="text-slate-700 font-semibold text-xs sm:text-sm">
+          See how our SEO, AEO and GEO Website System compares with a normal web
+          design shop:
+        </p>
+      </div>
+
+      <!-- Desktop Comparison Matrix -->
+      <div
+        class="hidden md:block overflow-hidden rounded-2xl border border-slate-200 shadow-lg"
+      >
+        <table class="w-full text-left border-collapse">
+          <thead>
+            <tr class="bg-slate-900 text-white">
+              <th
+                class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-slate-300 w-1/4"
+              >
+                What Matters Most
+              </th>
+              <th
+                class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-rose-300 w-[37.5%] border-l border-slate-800"
+              >
+                Normal Web Design Shop
+              </th>
+              <th
+                class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-brand-300 w-[37.5%] border-l border-slate-800 bg-slate-950"
+              >
+                NK Digital Tech (SEO + AEO + GEO Website)
+              </th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200 text-sm">
+            {
+              comparison.map((row, idx) => (
+                <tr class={idx % 2 === 0 ? 'bg-white' : 'bg-slate-50/80'}>
+                  <td class="py-5 px-6 font-display font-bold text-slate-900">
+                    {row.metric}
+                  </td>
+                  <td class="py-5 px-6 text-slate-600 border-l border-slate-200">
+                    <div class="flex items-start gap-2.5">
+                      <svg
+                        class="w-4 h-4 text-rose-500 mt-0.5 flex-shrink-0"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M6 18L18 6M6 6l12 12"
+                        />
+                      </svg>
+                      <span>{row.typical}</span>
+                    </div>
+                  </td>
+                  <td class="py-5 px-6 text-slate-900 font-medium border-l border-slate-200 bg-sky-50/40">
+                    <div class="flex items-start gap-2.5">
+                      <svg
+                        class="w-4 h-4 text-emerald-600 mt-0.5 flex-shrink-0"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2.5"
+                          d="M5 13l4 4L19 7"
+                        />
+                      </svg>
+                      <span>{row.nk}</span>
+                    </div>
+                  </td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Mobile Comparison Cards -->
+      <div class="md:hidden space-y-3.5">
+        {
+          comparison.map((row) => (
+            <div class="elevated-card rounded-2xl p-4 space-y-2.5 min-w-0">
+              <h3 class="font-display font-bold text-slate-900 text-[15px] leading-snug pb-2 border-b border-slate-100">
+                {row.metric}
+              </h3>
+              <div class="rounded-xl bg-rose-50 border border-rose-100 p-3">
+                <div class="flex items-center gap-1.5 mb-1">
+                  <svg
+                    class="w-3.5 h-3.5 text-rose-500 flex-shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M6 18L18 6M6 6l12 12"
+                    />
+                  </svg>
+                  <p class="text-[10.5px] font-bold uppercase tracking-wider text-rose-600">
+                    Normal Web Design Shop
+                  </p>
+                </div>
+                <p class="text-[13px] text-slate-700 leading-[1.6] text-left">
+                  {row.typical}
+                </p>
+              </div>
+              <div class="rounded-xl bg-sky-50 border border-sky-200 p-3">
+                <div class="flex items-center gap-1.5 mb-1">
+                  <svg
+                    class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2.5"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  <p class="text-[10.5px] font-bold uppercase tracking-wider text-brand-600">
+                    NK Digital Tech
+                  </p>
+                </div>
+                <p class="text-[13px] text-slate-900 font-semibold leading-[1.6] text-left">
+                  {row.nk}
+                </p>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 7: OUR CLIENTS (DARK INDIGO CONTRAST SECTION BELOW WHY US)
+  ===================================================================== -->
+  <section
+    id="clients"
+    class="relative surface-indigo scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden"
+  >
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-7 sm:mb-14 text-left sm:text-center">
+        <div class="badge-dark mb-3">Brands Growing With Us</div>
+        <h2
+          class="font-display font-extrabold text-[clamp(1.32rem,5.2vw,1.72rem)] sm:text-3xl lg:text-4xl text-white tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4"
+        >
+          Trusted Regional Brands Growing With Fast Search Ready Websites
+        </h2>
+        <p
+          class="text-slate-300 text-[14px] sm:text-base leading-[1.7] sm:leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]"
+        >
+          Optical retail chains, bridal showrooms, commercial property advisors,
+          coaching academies and township builders across Delhi, Noida, Gurgaon
+          and Lucknow rely on NK Digital Tech for high converting web assets and
+          daily search enquiries.
+        </p>
+      </div>
+
+      <!-- 5 Column Responsive Client Grid (Balanced 2+2+1 Full Span on Mobile) -->
+      <div
+        class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2.5 sm:gap-5"
+      >
+        {
+          clients.map((client) => (
+            <div class="glass-card rounded-2xl p-3 sm:p-5 flex flex-col items-center text-center group sm:hover:-translate-y-1 last:col-span-2 sm:last:col-span-1 min-w-0">
+              <div class="w-full max-w-[200px] sm:max-w-none mx-auto h-14 sm:h-20 rounded-xl bg-white border border-slate-200 flex items-center justify-center p-2.5 sm:p-4 mb-2.5 sm:mb-4 shadow-sm">
+                <img
+                  src={client.logo}
+                  alt={`${client.name} Logo`}
+                  width="130"
+                  height="48"
+                  class="max-h-9 sm:max-h-12 w-auto object-contain"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <h3 class="font-display font-bold text-[13.5px] sm:text-base text-white mb-1 leading-snug">
+                {client.name}
+              </h3>
+              <p class="text-[11px] sm:text-xs text-slate-300 leading-snug mb-2.5 sm:mb-3 flex-grow">
+                {client.sector}
+              </p>
+              <span class="w-full sm:w-auto inline-flex items-center justify-center gap-1 text-[10px] sm:text-[11px] font-semibold text-brand-300 bg-brand-500/15 border border-brand-500/30 px-2 sm:px-2.5 py-1.5 sm:py-1 rounded-md leading-tight max-w-full">
+                <svg
+                  class="w-2.5 h-2.5 sm:w-3 sm:h-3 flex-shrink-0"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                  />
+                </svg>
+                <span class="text-center leading-tight break-words">
+                  {client.region}
+                </span>
+              </span>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 8: INDUSTRIES (LIGHT SLATE CONTRAST SECTION - 3x3 GRID)
+  ===================================================================== -->
+  <section
+    id="industries"
+    class="relative surface-slate overflow-hidden scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200"
+  >
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-7 sm:mb-14 text-left sm:text-center">
+        <div class="badge-light mb-3">Industry Specific Web Architecture</div>
+        <h2
+          class="font-display font-extrabold text-[clamp(1.32rem,5.2vw,1.72rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4"
+        >
+          Custom SEO, AEO and GEO Websites for Nine Commercial Sectors
+        </h2>
+        <p
+          class="text-slate-600 text-[14px] sm:text-base leading-[1.7] sm:leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]"
+        >
+          A property buyer comparing RERA flats in Noida needs very different
+          website information than a purchase manager sourcing metal parts in
+          Okhla, a CTO booking a SaaS demo in Gurgaon or a parent checking
+          coaching batches in Delhi. We design custom page layouts, schema and
+          lead flows for nine commercial sectors.
+        </p>
+      </div>
+
+      <!-- 3 Columns x 3 Rows Grid -->
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3.5 sm:gap-6"
+      >
+        {
+          industries.map((ind) => (
+            <div
+              class={`elevated-card rounded-2xl p-4 sm:p-6 border-t-4 ${ind.accentBorder} flex flex-col justify-between sm:hover:-translate-y-1 md:last:col-span-2 lg:last:col-span-1 min-w-0`}
+            >
+              <div>
+                <div class="flex flex-wrap items-center justify-between gap-2 mb-3 sm:mb-4">
+                  <div
+                    class={`w-10 h-10 sm:w-11 sm:h-11 rounded-xl border flex items-center justify-center flex-shrink-0 ${ind.iconBg}`}
+                  >
+                    <Fragment set:html={ind.icon} />
+                  </div>
+                  <span class="text-[10.5px] sm:text-[11px] font-semibold text-slate-600 bg-slate-100 px-2.5 py-1 rounded-md leading-tight break-words max-w-full">
+                    {ind.sector}
+                  </span>
+                </div>
+
+                <h3 class="font-display font-bold text-[16.5px] sm:text-lg text-slate-900 mb-2 leading-snug">
+                  {ind.title}
+                </h3>
+
+                <p class="text-slate-600 text-[13.5px] sm:text-sm leading-[1.68] sm:leading-relaxed mb-3.5 sm:mb-4 text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+                  {ind.focus}
+                </p>
+              </div>
+
+              <div class="rounded-xl bg-emerald-50/70 border border-emerald-200/80 p-3 sm:p-3.5">
+                <div class="flex items-center gap-1.5 text-[10.5px] font-bold uppercase tracking-wider text-emerald-700 mb-0.5">
+                  <svg
+                    class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2.5"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  <span>Business Result</span>
+                </div>
+                <p class="text-slate-800 text-[12.5px] sm:text-xs font-medium leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+                  {ind.outcome}
+                </p>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 9: TESTIMONIALS (DEEP NAVY CONTRAST SECTION - 3x2 GRID)
+  ===================================================================== -->
+  <section
+    id="testimonials"
+    class="relative surface-dark scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden"
+  >
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="absolute inset-0 mesh-glow pointer-events-none opacity-60">
+    </div>
+
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-7 sm:mb-14 text-left sm:text-center">
+        <div class="badge-dark mb-3">Verified Website Launch Results</div>
+        <h2
+          class="font-display font-extrabold text-[clamp(1.32rem,5.2vw,1.72rem)] sm:text-3xl lg:text-4xl text-white tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4"
+        >
+          What Business Owners Say After Launching Their New Website With Us
+        </h2>
+        <p
+          class="text-slate-300 text-[14px] sm:text-base leading-[1.7] sm:leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]"
+        >
+          Real feedback from real estate directors, interior architects, factory
+          owners, SaaS founders, CA partners and coaching directors across
+          Delhi, Noida, Gurgaon and Lucknow.
+        </p>
+      </div>
+
+      <!-- 3 Columns x 2 Rows Grid -->
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6"
+      >
+        {
+          testimonials.map((t) => (
+            <div class="glass-card rounded-2xl p-4 sm:p-6 flex flex-col justify-between sm:hover:-translate-y-1 min-w-0">
+              <div>
+                <div class="flex flex-wrap items-center justify-between gap-2 mb-3.5 sm:mb-4">
+                  <div class="flex items-center gap-0.5 sm:gap-1 flex-shrink-0">
+                    {[1, 2, 3, 4, 5].map(() => (
+                      <svg
+                        class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-amber-400"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                      </svg>
+                    ))}
+                  </div>
+                  <span class="text-[10px] sm:text-[11px] font-semibold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-md">
+                    Verified Client Result
+                  </span>
+                </div>
+
+                <p class="text-slate-200 text-[13.5px] sm:text-sm leading-[1.68] sm:leading-relaxed italic mb-4 text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+                  "{t.quote}"
+                </p>
+
+                <div class="rounded-xl bg-slate-900/90 border border-slate-700/80 px-3 py-2.5 mb-4 flex items-start sm:items-center gap-2">
+                  <svg
+                    class="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5 sm:mt-0"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2.5"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  <span class="text-[12.5px] sm:text-xs text-slate-200 font-semibold leading-snug break-words">
+                    {t.impact}
+                  </span>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-3 pt-3.5 border-t border-slate-800">
+                <div
+                  class={`w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-gradient-to-br ${t.avatarGradient} flex items-center justify-center flex-shrink-0 shadow-md`}
+                >
+                  <span class="font-display font-bold text-xs sm:text-sm text-white tracking-wide">
+                    {t.initials}
+                  </span>
+                </div>
+                <div class="min-w-0">
+                  <h3 class="font-display font-bold text-white text-sm leading-snug break-words">
+                    {t.name}
+                  </h3>
+                  <p class="text-xs text-slate-300 leading-snug break-words">
+                    {t.title},{' '}
+                    <strong class="text-brand-400 font-semibold">
+                      {t.company}
+                    </strong>
+                  </p>
+                  <p class="text-[11px] text-slate-400 mt-0.5 leading-snug break-words">
+                    {t.sector}
+                  </p>
+                </div>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 10: HOW WE WORK (CRISP WHITE CONTRAST SECTION - 4 STAGES)
+  ===================================================================== -->
+  <section
+    id="process"
+    class="relative surface-white overflow-hidden scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200"
+  >
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-7 sm:mb-16 text-left sm:text-center">
+        <div class="badge-light mb-3">Our Clear 4 Step Build Process</div>
+        <h2
+          class="font-display font-extrabold text-[clamp(1.32rem,5.2vw,1.72rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4"
+        >
+          Our Simple Four Step Process to Build and Launch Your Website
+        </h2>
+        <p
+          class="text-slate-600 text-[14px] sm:text-base leading-[1.7] sm:leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]"
+        >
+          No endless delays or confusing technical talk. We follow four clear
+          milestones so you see exact progress every week, review live staging
+          links on your phone and launch on time.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-7">
+        {
+          stages.map((s) => (
+            <div class="elevated-card rounded-2xl p-4 sm:p-8 relative overflow-hidden group sm:hover:-translate-y-1 min-w-0">
+              <div class="flex items-center justify-between gap-4 mb-3.5 sm:mb-5">
+                <span
+                  class={`inline-flex items-center px-2.5 sm:px-3 py-1 rounded-lg text-xs font-bold uppercase tracking-wider text-white bg-gradient-to-r ${s.accent}`}
+                >
+                  {s.num}
+                </span>
+                <span class="font-display font-black text-2xl sm:text-4xl text-slate-200 group-hover:text-slate-300 transition-colors">
+                  {s.step}
+                </span>
+              </div>
+              <h3 class="font-display font-bold text-[16.5px] sm:text-xl text-slate-900 mb-2.5 sm:mb-3 leading-snug">
+                {s.title}
+              </h3>
+              <p class="text-slate-600 text-[13.5px] sm:text-sm leading-[1.68] sm:leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+                {s.body}
+              </p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 11: PARTNER WITH NK DIGITAL TECH (CONCLUSION)
+  ===================================================================== -->
+  <section
+    class="relative surface-indigo py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden"
+  >
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <div
+        class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 lg:gap-12 items-center"
+      >
+        <!-- Left 7 Columns: Partner Paragraphs (Conclusion) -->
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-dark mb-3 sm:mb-4">
+            Built for Google &amp; AI Leads
+          </div>
+          <h2
+            class="font-display font-extrabold text-[clamp(1.32rem,5.2vw,1.72rem)] sm:text-3xl lg:text-4xl text-white tracking-tight leading-[1.22] sm:leading-tight mb-4 sm:mb-6"
+          >
+            Turn Your Business Website Into a Daily Lead Engine on Google and AI
+          </h2>
+          <div
+            class="space-y-3.5 sm:space-y-5 text-slate-300 text-[14px] sm:text-base leading-[1.7] sm:leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]"
+          >
+            <p>
+              Your website is the single place where every Google search, Google
+              AI Overview link, ChatGPT recommendation and WhatsApp referral
+              finally lands to judge your business. If it loads slowly, reads
+              like vague filler or lacks clear schema and answer blocks, buyers
+              quietly move on to a rival across Delhi, Noida, Gurgaon or
+              Lucknow.
+            </p>
+            <p>
+              When you hire NK Digital Tech as the <strong
+                >Best Website Development Company in Delhi NCR</strong
+              >, you get a fast, mobile friendly website engineered with SEO,
+              AEO and GEO from the ground up, while keeping 100% ownership of
+              your domain, hosting and source code. Book your free Website and
+              AI Readiness Audit today and let our team show you the exact
+              blueprint to win steady leads from Google and AI search.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Unique Website Leads Image -->
+        <div class="lg:col-span-5 min-w-0">
+          <div
+            class="rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-700/80 shadow-2xl bg-slate-900"
+          >
+            <img
+              src="/images/web-dev-delhi-ncr/website-leads-growth-delhi-ncr.webp"
+              alt="Best Website Development Company in Delhi NCR Delivering Qualified Google and AI Search Leads"
+              width="800"
+              height="450"
+              sizes="(max-width: 1024px) 100vw, 42vw"
+              class="w-full aspect-[16/9] sm:aspect-auto sm:h-64 lg:h-72 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 12: FAQ (LIGHT COOL SLATE CONTRAST SECTION)
+  ===================================================================== -->
+  <section
+    id="faq"
+    class="relative surface-cool overflow-hidden scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200"
+  >
+    <div class="max-w-4xl mx-auto">
+      <div class="text-left sm:text-center mb-7 sm:mb-14">
+        <div class="badge-light mb-3">
+          Plain Answers on Cost, Stack &amp; AI Readiness
+        </div>
+        <h2
+          class="font-display font-extrabold text-[clamp(1.32rem,5.2vw,1.72rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4"
+        >
+          Frequently Asked Questions About Hiring the Best Website Development
+          Company in Delhi NCR
+        </h2>
+        <p
+          class="text-slate-600 text-[14px] sm:text-base leading-[1.7] sm:leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]"
+        >
+          Clear, honest answers to the exact questions founders and marketing
+          heads ask on ChatGPT, Gemini and Google before starting a website
+          project in Delhi NCR.
+        </p>
+      </div>
+
+      <div class="space-y-3 sm:space-y-4">
+        {
+          faqs.map((f, i) => (
+            <details
+              class="elevated-card rounded-2xl group overflow-hidden"
+              open={i === 0}
+            >
+              <summary class="flex items-start sm:items-center justify-between gap-2.5 sm:gap-4 px-3.5 sm:px-6 py-4 sm:py-5 min-h-[56px] active:bg-sky-50/60 transition-colors select-none">
+                <div class="flex items-start sm:items-center gap-2.5 sm:gap-3.5 text-left min-w-0">
+                  <span class="w-6 h-6 sm:w-7 sm:h-7 rounded-lg bg-sky-50 border border-sky-200 text-brand-600 font-display font-bold text-xs flex items-center justify-center flex-shrink-0 mt-0.5 sm:mt-0">
+                    0{i + 1}
+                  </span>
+                  <span class="font-display font-bold text-slate-900 text-[14px] sm:text-base md:text-lg leading-[1.4] sm:leading-snug break-words">
+                    {f.q}
+                  </span>
+                </div>
+                <span class="faq-icon w-7 h-7 sm:w-8 sm:h-8 rounded-full border border-slate-200 text-slate-600 flex items-center justify-center flex-shrink-0 mt-0.5 sm:mt-0">
+                  <svg
+                    class="w-3.5 h-3.5 sm:w-4 sm:h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 4v16m8-8H4"
+                    />
+                  </svg>
+                </span>
+              </summary>
+              <div class="px-3.5 sm:px-6 pb-4 sm:pb-6 pt-3 text-slate-600 text-[13.5px] sm:text-sm md:text-base leading-[1.7] sm:leading-relaxed border-t border-slate-100 text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+                {f.a}
+              </div>
+            </details>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 13: SHORT 2 TO 3 LINE CALL TO ACTION BANNER (LAST SECTION)
+  ===================================================================== -->
+  <section
+    id="contact"
+    class="relative surface-dark scroll-mt-16 sm:scroll-mt-20 pt-10 pb-12 sm:py-16 lg:py-20 px-4 sm:px-6 overflow-hidden"
+  >
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-5xl mx-auto">
+      <div
+        class="rounded-2xl sm:rounded-3xl bg-gradient-to-r from-brand-600 via-brand-500 to-accent-600 p-5 sm:p-10 md:p-12 text-center text-white shadow-2xl border border-white/15 relative overflow-hidden"
+      >
+        <div class="relative z-10 max-w-2xl mx-auto">
+          <h2
+            class="font-display font-black text-[clamp(1.32rem,5.2vw,1.72rem)] sm:text-3xl md:text-4xl text-white tracking-tight leading-[1.22] sm:leading-snug mb-3 sm:mb-4"
+          >
+            Ready to Launch an SEO, AEO and GEO Optimised Website That Wins
+            Leads?
+          </h2>
+
+          <p
+            class="text-sky-50 text-[13.5px] sm:text-sm md:text-base leading-relaxed mb-5 sm:mb-8 text-center"
+          >
+            Request a free website speed, schema and AI search readiness audit
+            from our senior web development team across Delhi NCR and Lucknow.
+          </p>
+
+          <a
+            href="mailto:connect@nkdigitaltech.com"
+            class="inline-flex w-full sm:w-auto min-h-[52px] items-center justify-center gap-2 sm:gap-3 px-4 sm:px-8 py-3.5 sm:py-4 rounded-xl bg-white text-slate-950 hover:bg-sky-50 font-display font-bold text-[14px] sm:text-base shadow-xl transition-all duration-300 active:scale-[0.98] select-none text-center leading-snug"
+          >
+            <span>Claim Your Free Website &amp; AI Audit</span>
+            <svg
+              class="w-4 h-4 sm:w-5 sm:h-5 text-brand-600 flex-shrink-0"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M14 5l7 7-7 7M3 12h18"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mobile Sticky Bottom Quick Action Bar -->
+  <div
+    class="mobile-sticky-cta sm:hidden fixed bottom-0 inset-x-0 z-40 bg-[#050a14]/95 backdrop-blur-xl border-t border-slate-800 px-3 pt-2.5 pb-[max(0.7rem,env(safe-area-inset-bottom))] shadow-[0_-8px_24px_rgba(0,0,0,0.45)] transition-all duration-200"
+  >
+    <div class="flex items-center gap-2.5">
+      <a
+        href="mailto:connect@nkdigitaltech.com"
+        class="btn-primary flex-1 min-h-[48px] py-2.5 px-3 text-[12.5px] font-bold rounded-xl whitespace-nowrap"
+      >
+        <span>Free Website Audit</span>
+        <svg
+          class="w-3.5 h-3.5 flex-shrink-0"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M14 5l7 7-7 7M3 12h18"></path>
+        </svg>
+      </a>
+      <a
+        href="#services"
+        class="btn-secondary-dark min-h-[48px] py-2.5 px-4 text-[12.5px] font-semibold rounded-xl flex-shrink-0 whitespace-nowrap"
+      >
+        <span>Services</span>
+      </a>
+    </div>
+  </div>
+
+  <style>
+    @media (max-width: 639px) {
+      .glass-card {
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+      }
+      #why-us,
+      #clients,
+      #industries,
+      #testimonials,
+      #process,
+      #faq {
+        content-visibility: auto;
+        contain-intrinsic-size: auto 720px;
+      }
+    }
+  </style>
+</Layout>

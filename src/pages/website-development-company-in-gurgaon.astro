@@ -1856,6 +1856,7 @@ const webDevGurgaonSchemaFAQ = JSON.stringify({
         backdrop-filter: blur(8px);
         -webkit-backdrop-filter: blur(8px);
       }
+      #locations,
       #why-us,
       #clients,
       #industries,
@@ -1864,6 +1865,12 @@ const webDevGurgaonSchemaFAQ = JSON.stringify({
       #faq {
         content-visibility: auto;
         contain-intrinsic-size: auto 720px;
+      }
+      a,
+      button,
+      summary {
+        touch-action: manipulation;
+        -webkit-tap-highlight-color: transparent;
       }
     }
   </style>

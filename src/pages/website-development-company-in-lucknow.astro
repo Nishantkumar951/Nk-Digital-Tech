@@ -1,0 +1,1864 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '../styles/global.css';
+
+const pageTitle = 'Top Website Development Company in Lucknow | NK Digital Tech';
+const pageDescription = 'Work with a top Website Development Company in Lucknow. NK Digital Tech builds fast SEO, AEO and GEO optimised websites that get leads on Google and AI models.';
+const pageCanonical = 'https://www.nkdigitaltech.net/website-development-company-in-lucknow/';
+
+const webDevLucknowFooterDisciplines = [
+  { label: 'Website Design and Development', href: '/website-development-company-in-lucknow/' },
+  { label: 'Search Engine Optimisation (SEO)', href: '/best-seo-company-in-lucknow/' },
+  { label: 'Answer Engine Optimisation (AEO)', href: '/aeo-services-in-lucknow/' },
+  { label: 'Generative Engine Optimisation (GEO)', href: '/geo-services-in-lucknow/' },
+  { label: 'AI SEO & Conversational Search', href: '/ai-seo-company-in-lucknow/' },
+  { label: 'Local SEO & Google Business Profile', href: '/local-seo-services-in-lucknow/' },
+];
+
+const clients = [
+  {
+    name: 'Aangan',
+    sector: 'Chikankari Couture & Bridal Storefront',
+    region: 'Hazratganj & Vibhuti Khand',
+    logo: '/images/clients/aangan.webp',
+  },
+  {
+    name: 'Propertyways',
+    sector: 'LDA & RERA Township Plot Portal',
+    region: 'Shaheed Path & Sultanpur Rd',
+    logo: '/images/clients/propertyways.webp',
+  },
+  {
+    name: 'Creative Academy',
+    sector: 'Civil Services & NEET Admission Hub',
+    region: 'Kapoorthala & Aliganj',
+    logo: '/images/clients/creative-academy.webp',
+  },
+  {
+    name: 'VP Infra',
+    sector: 'Turnkey Civil & Interior Portfolio',
+    region: 'Gomti Nagar & Golf City',
+    logo: '/images/clients/vp-infra.webp',
+  },
+  {
+    name: 'Vision',
+    sector: 'Multi Branch Optical Retail Site',
+    region: 'Hazratganj & Indira Nagar',
+    logo: '/images/clients/vision.webp',
+  },
+];
+
+const services = [
+  {
+    num: '01',
+    category: 'Corporate & Business Web',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>`,
+    iconStyle: 'bg-sky-50 border-sky-200 text-brand-600',
+    impactStyle: 'bg-sky-50/80 border-sky-200/80 text-slate-800',
+    badgeColor: 'text-brand-600 bg-sky-100/80',
+    title: 'Custom Corporate & Business Website Engineering',
+    body: 'As a trusted corporate website designing company in Lucknow, we build clean, modern websites on Astro, Next.js and React with crisp layouts, compressed WebP photos and sub second load speed on 4G and 5G phones.',
+    impact: 'Builds instant credibility with Lucknow families, founders and institutional buyers.',
+    cta: 'Plan Your Corporate Website',
+    href: '#contact',
+  },
+  {
+    num: '02',
+    category: 'SEO, AEO & GEO Ready',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>`,
+    iconStyle: 'bg-emerald-50 border-emerald-200 text-emerald-600',
+    impactStyle: 'bg-emerald-50/80 border-emerald-200/80 text-slate-800',
+    badgeColor: 'text-emerald-700 bg-emerald-100/80',
+    title: 'SEO Friendly Website Design With AI Schema',
+    body: 'Every build ships with SEO friendly website design, logical H1 to H3 headings, 50 word AEO direct answers, GEO comparison tables, an llms.txt directory and clean LocalBusiness, Service and FAQPage JSON LD schema.',
+    impact: 'Earns top Google positions and brand citations in ChatGPT, Gemini and AI Overviews.',
+    cta: 'Check Search & AI Architecture',
+    href: '#contact',
+  },
+  {
+    num: '03',
+    category: 'D2C & Retail Stores',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>`,
+    iconStyle: 'bg-violet-50 border-violet-200 text-accent-600',
+    impactStyle: 'bg-violet-50/80 border-violet-200/80 text-slate-800',
+    badgeColor: 'text-accent-600 bg-violet-100/80',
+    title: 'Ecommerce Stores With UPI, GST & Shipping Sync',
+    body: 'Through our ecommerce website development in Lucknow, we build fast Shopify, WooCommerce and custom online stores for Chikankari labels, jewellers and regional D2C brands with Razorpay UPI, Shiprocket and Product schema.',
+    impact: 'Lifts mobile checkout completion and wins free organic Google Shopping traffic.',
+    cta: 'Launch Your Online Store',
+    href: '#contact',
+  },
+  {
+    num: '04',
+    category: 'Lean WordPress CMS',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>`,
+    iconStyle: 'bg-amber-50 border-amber-200 text-amber-600',
+    impactStyle: 'bg-amber-50/80 border-amber-200/80 text-slate-800',
+    badgeColor: 'text-amber-700 bg-amber-100/80',
+    title: 'Fast WordPress & Custom Editable CMS Portals',
+    body: 'For institutes, builders and firms seeking WordPress website development in Lucknow without heavy drag and drop bloat, we code lightweight custom themes where your staff can publish batches, plots or articles in minutes.',
+    impact: 'Easy in house editing paired with 95+ Google PageSpeed scores and solid security.',
+    cta: 'Explore Custom WordPress Builds',
+    href: '#contact',
+  },
+  {
+    num: '05',
+    category: 'Website Redesign',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>`,
+    iconStyle: 'bg-indigo-50 border-indigo-200 text-indigo-600',
+    impactStyle: 'bg-indigo-50/80 border-indigo-200/80 text-slate-800',
+    badgeColor: 'text-indigo-700 bg-indigo-100/80',
+    title: 'Zero Traffic Loss Website Redesign & Speed Upgrade',
+    body: 'Using our website redesign services in Lucknow, we replace outdated, slow PHP or builder sites with modern code, clean 301 URL redirects, HTML spec tables instead of locked PDFs and full Core Web Vitals tuning.',
+    impact: 'Protects your hard earned rankings while doubling mobile speed and enquiry rates.',
+    cta: 'Upgrade Your Old Website',
+    href: '#contact',
+  },
+  {
+    num: '06',
+    category: 'Mobile UX & Lead Capture',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>`,
+    iconStyle: 'bg-rose-50 border-rose-200 text-rose-600',
+    impactStyle: 'bg-rose-50/80 border-rose-200/80 text-slate-800',
+    badgeColor: 'text-rose-700 bg-rose-100/80',
+    title: 'Thumb Friendly Mobile UX, WhatsApp & CRM Routing',
+    body: 'Our responsive website design services combine comfortable tap buttons, sticky call bars, instant WhatsApp click to chat triggers and automatic Zoho, HubSpot or LeadSquared lead sync with GA4 conversion tracking.',
+    impact: 'Turns smartphone visitors across Uttar Pradesh into tracked phone and WhatsApp leads.',
+    cta: 'Boost Your Mobile Leads',
+    href: '#contact',
+  },
+];
+
+const zones = [
+  {
+    hub: 'Corporate & IT',
+    area: 'Gomti Nagar & Vibhuti Khand',
+    accent: 'from-brand-500 to-sky-400',
+    keyword: 'Corporate, Legal & Advisory Websites',
+    href: '#contact',
+    desc: 'We build authoritative, fast loading websites for corporate offices, CA firms, High Court legal chambers and consultancies around Vibhuti Khand, Summit Building and Gomti Nagar Extension.',
+    cta: 'Grow in Gomti Nagar',
+  },
+  {
+    hub: 'Heritage & Retail',
+    area: 'Hazratganj & Ashok Marg',
+    accent: 'from-accent-500 to-indigo-400',
+    keyword: 'Chikankari, Bridal & Flagship Retail Stores',
+    href: '#contact',
+    desc: 'For heritage Chikankari houses, fine jewellers, optical chains and flagship showrooms in Hazratganj, Ashok Marg and Aminabad, we code rich ecommerce stores that ship across India and abroad.',
+    cta: 'Scale in Hazratganj',
+  },
+  {
+    hub: 'Townships & Infra',
+    area: 'Amar Shaheed Path & Sushant Golf City',
+    accent: 'from-emerald-500 to-teal-400',
+    keyword: 'Real Estate, Township & Turnkey Infra Portals',
+    href: '#contact',
+    desc: 'Developers, villa builders and interior firms along Amar Shaheed Path, Sushant Golf City and Sultanpur Road rely on our RERA compliant project portals to capture site visit bookings.',
+    cta: 'Win Shaheed Path Buyers',
+  },
+  {
+    hub: 'Coaching & Industry',
+    area: 'Aliganj, Indira Nagar & Amausi',
+    accent: 'from-amber-500 to-orange-400',
+    keyword: 'Coaching Admission & Industrial B2B Websites',
+    href: '#contact',
+    desc: 'From UPSC and NEET academies in Kapoorthala, Aliganj and Indira Nagar to manufacturing plants in Amausi, Talkatora and Chinhat, we replace static PDFs with crawlable HTML pages that bring daily enquiries.',
+    cta: 'Expand Across Lucknow',
+  },
+];
+
+const comparison = [
+  {
+    metric: 'Primary Build Philosophy',
+    typical: 'Cheap ₹8,000 templates copied across dozens of local shops with zero search or conversion planning',
+    nk: 'Custom engineered websites built specifically to generate phone, WhatsApp and form leads from Google and AI',
+  },
+  {
+    metric: 'Mobile PageSpeed & Core Web Vitals',
+    typical: 'Heavy uncompressed sliders and bloated plugins that take 6 to 10 seconds to open on mobile networks',
+    nk: 'Clean Astro, Next.js or lean WordPress code scoring 95+ on Google Lighthouse and opening under 1 second',
+  },
+  {
+    metric: 'AI Model Readiness (AEO & GEO)',
+    typical: 'No FAQ schema, no llms.txt file and brochures locked inside unreadable PDF downloads',
+    nk: '50 word AEO snippet blocks, HTML comparison tables, llms.txt and verified JSON LD schema built in',
+  },
+  {
+    metric: 'WhatsApp, Call & CRM Lead Capture',
+    typical: 'Basic contact forms that often land in spam folders with zero tracking of which page brought the buyer',
+    nk: 'Sticky mobile call and WhatsApp buttons, instant CRM webhooks and full GA4 plus Search Console tracking',
+  },
+  {
+    metric: 'Domain, Hosting & Code Ownership',
+    typical: 'Domain and cPanel held hostage by the freelancer with surprise renewal markups every year',
+    nk: '100% client owned domain, cloud server, Git repository and admin credentials from day one',
+  },
+  {
+    metric: 'In House Staff Editing & Support',
+    typical: 'Simple text or price edits require paying the developer every month and waiting days for updates',
+    nk: 'Easy CMS dashboard with Hindi and English walkthrough videos plus 30 days of free launch support',
+  },
+];
+
+const industries = [
+  {
+    sector: 'Shaheed Path & Sultanpur Rd',
+    title: 'Township Plots, Villas & Commercial Realty',
+    accentBorder: 'border-t-sky-500',
+    iconBg: 'bg-sky-50 text-brand-600 border-sky-200',
+    icon: `<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>`,
+    focus: 'We build high speed project microsites and property portals featuring LDA and RERA details, interactive plot tables, floor plans and instant WhatsApp site visit scheduling.',
+    outcome: 'Attracts genuine end users and NRI investors without burning lakhs on portal lead brokers.',
+  },
+  {
+    sector: 'Hazratganj, Aminabad & Chowk',
+    title: 'Chikankari Couture, Bridal & Jewellery Retail',
+    accentBorder: 'border-t-rose-500',
+    iconBg: 'bg-rose-50 text-rose-600 border-rose-200',
+    icon: `<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>`,
+    focus: 'We craft fast Shopify and WooCommerce storefronts with zoomable WebP craft photography, size charts, UPI plus international card checkout and Product schema for AI shopping queries.',
+    outcome: 'Turns heritage Lucknow craftsmanship into nationwide D2C orders and NRI bridal bookings.',
+  },
+  {
+    sector: 'Kapoorthala, Aliganj & Indira Nagar',
+    title: 'Civil Services, NEET & Competitive Coaching',
+    accentBorder: 'border-t-indigo-500',
+    iconBg: 'bg-indigo-50 text-indigo-600 border-indigo-200',
+    icon: `<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/></svg>`,
+    focus: 'We build student friendly admission websites with HTML fee structures, batch timetables, verified topper lists, scholarship test forms and Course schema markup.',
+    outcome: 'Drives direct parent and student counselling calls across central and eastern Uttar Pradesh.',
+  },
+  {
+    sector: 'Amausi, Talkatora & Chinhat',
+    title: 'Manufacturing, Food Processing & Packaging',
+    accentBorder: 'border-t-amber-500',
+    iconBg: 'bg-amber-50 text-amber-600 border-amber-200',
+    icon: `<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>`,
+    focus: 'We convert offline catalogues into searchable HTML specification tables covering grades, MOQs, FSSAI or ISO certificates and distributor enquiry forms.',
+    outcome: 'Generates wholesale distributor and institutional procurement RFQs across North India.',
+  },
+  {
+    sector: 'Gomti Nagar Bench & Hazratganj',
+    title: 'High Court Legal Chambers & Law Practices',
+    accentBorder: 'border-t-slate-600',
+    iconBg: 'bg-slate-100 text-slate-700 border-slate-300',
+    icon: `<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"/></svg>`,
+    focus: 'We design dignified, Bar Council compliant chamber websites with practice area explainers, advocate bios and structured Q&A articles that AI engines trust and cite.',
+    outcome: 'Builds reputable digital presence and brings qualified corporate and civil consultation requests.',
+  },
+  {
+    sector: 'Vibhuti Khand & Ashok Marg',
+    title: 'CA Practices, GST, Audit & MSME Advisory',
+    accentBorder: 'border-t-emerald-500',
+    iconBg: 'bg-emerald-50 text-emerald-600 border-emerald-200',
+    icon: `<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>`,
+    focus: 'We build clear advisory websites featuring company registration checklists, MSME subsidy guides, GST compliance calendars and instant callback scheduling.',
+    outcome: 'Wins recurring audit, tax and company setup retainers from growing UP businesses.',
+  },
+  {
+    sector: 'Gomti Nagar Ext & Mahanagar',
+    title: 'Architecture Studios & Luxury Home Interiors',
+    accentBorder: 'border-t-violet-500',
+    iconBg: 'bg-violet-50 text-accent-600 border-violet-200',
+    icon: `<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"/></svg>`,
+    focus: 'We showcase residential kothi, villa and showroom interiors with fast loading WebP galleries, per sq ft scope breakdowns and turnkey project calculators.',
+    outcome: 'Converts bungalow and apartment owners researching interiors on Google and Gemini.',
+  },
+  {
+    sector: 'Shaheed Path & Transport Nagar',
+    title: 'Turnkey Civil, Solar EPC & Warehousing Firms',
+    accentBorder: 'border-t-cyan-500',
+    iconBg: 'bg-cyan-50 text-cyan-600 border-cyan-200',
+    icon: `<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>`,
+    focus: 'We create project heavy contractor and rooftop solar EPC websites with kW savings calculators, completed site galleries, client credentials and tender ready profiles.',
+    outcome: 'Captures commercial rooftop solar, cold storage and civil construction enquiries.',
+  },
+  {
+    sector: 'IT City & Vibhuti Khand',
+    title: 'IT Services, SaaS & Regional EdTech Startups',
+    accentBorder: 'border-t-teal-500',
+    iconBg: 'bg-teal-50 text-teal-600 border-teal-200',
+    icon: `<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>`,
+    focus: 'We engineer crisp Next.js and Astro product websites with SoftwareApplication schema, feature comparison matrices, live demo booking flows and llms.txt documentation.',
+    outcome: 'Positions Lucknow technology companies to win national and global client contracts.',
+  },
+];
+
+const testimonials = [
+  {
+    name: 'Anurag Srivastava',
+    initials: 'AS',
+    avatarGradient: 'from-brand-500 to-sky-400',
+    title: 'Managing Director',
+    company: 'Awadh Greens Realty',
+    sector: 'RERA Plotted Townships, Amar Shaheed Path',
+    impact: '97 Mobile Speed & 3.1x jump in weekend site visit bookings',
+    quote: 'Earlier we depended completely on expensive property portal leads. NK Digital Tech built a fast project website with LDA and RERA tables plus WhatsApp booking, and buyers now find us directly on Google and ChatGPT.',
+  },
+  {
+    name: 'Farah Kidwai',
+    initials: 'FK',
+    avatarGradient: 'from-rose-500 to-pink-400',
+    title: 'Creative Founder',
+    company: 'Zari & Thread House',
+    sector: 'Handcrafted Chikankari D2C, Hazratganj',
+    impact: '2.8x higher mobile checkout rate & daily NRI bridal orders',
+    quote: 'Our old WooCommerce site took eight seconds to open and shoppers dropped at checkout. NK Digital Tech rebuilt our store with crisp WebP craft photos, Razorpay UPI and Product schema, doubling online sales.',
+  },
+  {
+    name: 'Dr. Pradeep Tiwari',
+    initials: 'PT',
+    avatarGradient: 'from-indigo-500 to-violet-400',
+    title: 'Academic Director',
+    company: 'Sankalp IAS & Foundation',
+    sector: 'Civil Services Coaching, Kapoorthala Aliganj',
+    impact: 'Cited in Google AI Overviews & 2.6x direct admission calls',
+    quote: 'Parents and aspirants now ask Gemini and ChatGPT about fee structures and batch timings before visiting Aliganj. Putting our schedules and topper records in clean HTML tables brought steady counselling walk ins.',
+  },
+  {
+    name: 'Rajeev Agarwal',
+    initials: 'RA',
+    avatarGradient: 'from-amber-500 to-orange-400',
+    title: 'Partner',
+    company: 'Awadh Polypack Industries',
+    sector: 'Food Grade Packaging Plant, Amausi Industrial Area',
+    impact: '95 HTML spec pages indexed & recurring North India B2B orders',
+    quote: 'Replacing our heavy PDF brochure with searchable HTML specification tables and FAQ schema helped FMCG and dairy buyers across UP and Bihar discover our Amausi plant directly on Google.',
+  },
+  {
+    name: 'Ar. Kritika Mishra',
+    initials: 'KM',
+    avatarGradient: 'from-emerald-500 to-teal-400',
+    title: 'Principal Architect',
+    company: 'Kothi & Courtyard Studio',
+    sector: 'Residential Architecture & Interiors, Gomti Nagar',
+    impact: 'Featured on ChatGPT & steady villa turnkey enquiries',
+    quote: 'Homeowners building villas in Gomti Nagar Extension and Sushant Golf City want transparent per sq ft scope, not slow flash galleries. Our new website loads under one second and brings warm leads every week.',
+  },
+  {
+    name: 'CA Vivek Rastogi',
+    initials: 'VR',
+    avatarGradient: 'from-cyan-500 to-sky-400',
+    title: 'Senior Partner',
+    company: 'Rastogi & Co. Advisory',
+    sector: 'Audit, GST & MSME Subsidies, Vibhuti Khand',
+    impact: 'Page one Google rankings & consistent MSME retainer leads',
+    quote: 'Transparent milestone billing, full ownership of our domain and hosting, and clear guides on UP MSME subsidies put our Vibhuti Khand firm at the top of Google and AI search answers.',
+  },
+];
+
+const stages = [
+  {
+    step: '01',
+    num: 'Stage 01',
+    title: 'Lucknow Buyer, Keyword & AI Prompt Blueprint',
+    accent: 'from-brand-600 to-sky-500',
+    body: 'We start by studying the top ranking competitors in Lucknow alongside the exact questions local families, students and business owners ask on Google, ChatGPT, Gemini and Perplexity. You receive a clear sitemap and keyword blueprint before design begins.',
+  },
+  {
+    step: '02',
+    num: 'Stage 02',
+    title: 'Mobile First Wireframes, Brand UI & Direct Copy',
+    accent: 'from-accent-600 to-indigo-500',
+    body: 'Our designers create a clean, trustworthy interface in Figma while our writers draft simple, factual copy featuring 50 word AEO answer blocks, HTML comparison tables and clear WhatsApp and call buttons.',
+  },
+  {
+    step: '03',
+    num: 'Stage 03',
+    title: 'Clean Coding, WebP Media, Schema & llms.txt Setup',
+    accent: 'from-emerald-600 to-teal-500',
+    body: 'We code your website on Astro, Next.js, custom WordPress or Shopify with < 100 KB WebP visuals, semantic headings, LocalBusiness, Service and FAQPage JSON LD schema, an llms.txt file and instant CRM or WhatsApp hooks.',
+  },
+  {
+    step: '04',
+    num: 'Stage 04',
+    title: '95+ Speed Testing, Search Indexing & Full Handover',
+    accent: 'from-amber-500 to-orange-500',
+    body: 'Before launch, we verify 95+ Google Lighthouse scores, mobile tap comfort, SSL security, GA4 conversion events and Google Search Console indexing, then hand over 100% server, domain and CMS ownership with team training.',
+  },
+];
+
+const faqs = [
+  {
+    q: 'How much does a Website Development Company in Lucknow charge?',
+    a: 'A professional Website Development Company in Lucknow typically charges between ₹15,000 and ₹55,000 for a fast 6 to 15 page SEO, AEO and GEO optimised business or institute website. Full ecommerce stores with UPI and courier integration range from ₹35,000 to ₹1.25 lakh, while custom web portals start from ₹65,000 based on features.',
+  },
+  {
+    q: 'How does an SEO, AEO and GEO optimised website bring leads from Google and AI models?',
+    a: 'Traditional websites only look good to visitors who already know your name. We build semantic H1 to H3 headings and sub second speed for Google rankings (SEO), 50 word direct answer blocks and FAQ schema for featured snippets and voice search (AEO), plus HTML comparison tables and an llms.txt directory so ChatGPT, Gemini, Perplexity and Google AI Overviews cite and recommend your Lucknow business (GEO).',
+  },
+  {
+    q: 'How many weeks does it take to design and launch a business website in Lucknow?',
+    a: 'A custom corporate, real estate or coaching website takes 2 to 4 weeks from kickoff to live launch. Ecommerce storefronts with product variants, Razorpay UPI and Shiprocket shipping take 3 to 5 weeks, with weekly live staging links shared on your phone.',
+  },
+  {
+    q: 'Which tech stack is best for my Lucknow company: Astro, Next.js, WordPress or Shopify?',
+    a: 'For corporate firms, builders, clinics, advocates and coaching institutes, Astro, Next.js or a custom lightweight WordPress theme delivers 95+ speed and top Google plus AI visibility. For Chikankari, jewellery and retail brands selling across India, Shopify or tuned WooCommerce offers the easiest inventory, GST billing and UPI checkout flow.',
+  },
+  {
+    q: 'Can you redesign our existing slow website without losing current Google rankings?',
+    a: 'Yes. We crawl every existing URL on your current site, preserve proven search keywords, set up exact 301 permanent redirects so zero link equity is lost, convert locked PDF brochures into crawlable HTML pages and add fresh JSON LD schema.',
+  },
+  {
+    q: 'Will our new website include WhatsApp chat, click to call and CRM integration?',
+    a: 'Yes. Since most buyers in Lucknow and Uttar Pradesh browse on smartphones, every website includes sticky mobile call and WhatsApp buttons, fast enquiry forms with spam protection, automatic Zoho, HubSpot or Google Sheet lead routing and GA4 tracking.',
+  },
+  {
+    q: 'Will we get 100% ownership of our domain, hosting server and website source code?',
+    a: 'Yes. Unlike local vendors who lock your domain or hosting inside their personal account, you retain 100% ownership of your domain registrar, cloud hosting, Git code repository and CMS admin logins from day one.',
+  },
+  {
+    q: 'Can our Lucknow office staff update batches, prices, blogs or photos on their own?',
+    a: 'Yes. We provide a clean, intuitive dashboard along with recorded Hindi and English walkthrough videos so your in house team can add new batches, plot availability, products or articles in minutes without touching code.',
+  },
+];
+
+const trustStrip = [
+  '95+ Google PageSpeed',
+  'SEO + AEO + GEO Native',
+  'llms.txt & JSON LD Ready',
+  '100% Code & Domain Ownership',
+];
+
+const webDevLucknowSchemaLocalBusiness = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'ProfessionalService',
+  name: 'NK Digital Tech Website Development Company in Lucknow',
+  url: 'https://www.nkdigitaltech.net/website-development-company-in-lucknow/',
+  logo: 'https://www.nkdigitaltech.net/images/web-dev-lucknow/hero-website-development-lucknow.webp',
+  image: 'https://www.nkdigitaltech.net/images/web-dev-lucknow/hero-website-development-lucknow.webp',
+  description: 'NK Digital Tech is a top Website Development Company in Lucknow building fast SEO, AEO and GEO optimised websites that generate qualified leads from Google, Google AI Overviews, ChatGPT, Gemini and Perplexity.',
+  email: 'connect@nkdigitaltech.com',
+  priceRange: '₹15,000 to ₹1,50,000',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Lucknow',
+    addressRegion: 'Uttar Pradesh',
+    addressCountry: 'IN',
+  },
+  areaServed: [
+    'Lucknow',
+    'Gomti Nagar',
+    'Vibhuti Khand',
+    'Hazratganj',
+    'Amar Shaheed Path',
+    'Sushant Golf City',
+    'Aliganj',
+    'Indira Nagar',
+    'Amausi',
+    'Mahanagar',
+  ],
+  serviceType: [
+    'Website Development Company in Lucknow',
+    'SEO, AEO and GEO Optimised Website Development',
+    'Corporate Website Designing Company in Lucknow',
+    'WordPress Website Development in Lucknow',
+    'Ecommerce Website Development in Lucknow',
+    'Website Redesign Services in Lucknow',
+  ],
+});
+
+const webDevLucknowSchemaFAQ = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((item) => ({
+    '@type': 'Question',
+    name: item.q,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.a,
+    },
+  })),
+});
+---
+
+<Layout
+  title={pageTitle}
+  description={pageDescription}
+  canonical={pageCanonical}
+  ogImage="https://www.nkdigitaltech.net/images/web-dev-lucknow/hero-website-development-lucknow.webp"
+  preloadImage="/images/web-dev-lucknow/hero-website-development-lucknow.webp"
+  customSchemaLocalBusiness={webDevLucknowSchemaLocalBusiness}
+  customSchemaFAQ={webDevLucknowSchemaFAQ}
+  utilityTagline="Website Development Company in Lucknow • SEO, AEO & GEO Ready Websites"
+  brandSubtitle="SEO, AEO & GEO Websites"
+  footerBio="Top Website Development Company in Lucknow building fast, mobile first SEO, AEO and GEO optimised websites for real estate builders, Chikankari D2C stores, coaching institutes and growing UP enterprises."
+  footerCoreDisciplines={webDevLucknowFooterDisciplines}
+  footerTagline="Website Development Company in Lucknow"
+>
+  <!-- =====================================================================
+       SECTION 1: HERO (DARK SURFACE WITH UNIQUE LUCKNOW WEB DEV HERO IMAGE)
+  ===================================================================== -->
+  <section
+    class="relative surface-dark overflow-hidden pt-4 pb-8 sm:pt-14 sm:pb-16 lg:pt-16 lg:pb-20 border-b border-slate-800/80"
+  >
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="absolute inset-0 mesh-glow pointer-events-none"></div>
+    <div
+      class="absolute -top-24 -left-24 sm:-top-36 sm:-left-36 w-56 h-56 sm:w-96 sm:h-96 bg-brand-500/20 rounded-full blur-[80px] sm:blur-[130px] pointer-events-none"
+    >
+    </div>
+    <div
+      class="absolute top-1/4 -right-24 sm:-right-36 w-56 h-56 sm:w-96 sm:h-96 bg-accent-500/20 rounded-full blur-[80px] sm:blur-[130px] pointer-events-none"
+    >
+    </div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
+      <div
+        class="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-10 lg:gap-12 items-center"
+      >
+        <div class="lg:col-span-7 text-left min-w-0">
+          <div
+            class="badge-dark mb-3 sm:mb-5 text-[10px] sm:text-xs py-1.5 px-2.5 sm:px-3.5"
+          >
+            <span
+              class="w-2 h-2 rounded-full bg-brand-400 animate-ping flex-shrink-0"
+            ></span>
+            <span class="min-w-0 break-words"
+              >SEO, AEO &amp; GEO Websites &bull; Google &amp; AI Leads</span
+            >
+          </div>
+
+          <h1
+            class="font-display text-[clamp(1.62rem,6.6vw,2.35rem)] sm:text-5xl lg:text-[3.4rem] font-black tracking-tight text-white leading-[1.15] sm:leading-[1.1] mb-3 sm:mb-5 text-glow"
+          >
+            Website Development Company <span class="gradient-text-light"
+              >in Lucknow</span
+            >
+          </h1>
+
+          <p
+            class="text-[14px] sm:text-base md:text-lg text-slate-300 leading-[1.68] sm:leading-relaxed mb-4 sm:mb-7 font-normal text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]"
+          >
+            NK Digital Tech is a results focused <strong class="text-white font-semibold"
+              >Website Development Company in Lucknow</strong
+            > that builds fast, modern and conversion ready websites engineered to
+            bring steady customer enquiries. Every website we deliver is natively
+            SEO, AEO and GEO optimised so your Lucknow business ranks high on
+            Google and gets recommended inside Google AI Overviews, ChatGPT, Gemini
+            and Perplexity.
+          </p>
+
+          <div
+            class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-4 mb-5 sm:mb-8"
+          >
+            <a
+              href="#contact"
+              class="btn-primary w-full sm:w-auto min-h-[50px] text-[13.5px] sm:text-base px-4 sm:px-8 py-3.5 sm:py-4"
+            >
+              <span>Claim Free Lucknow Website Audit</span>
+              <svg
+                class="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M14 5l7 7-7 7M3 12h18"></path>
+              </svg>
+            </a>
+            <a
+              href="#services"
+              class="btn-secondary-dark w-full sm:w-auto min-h-[48px] text-[13.5px] sm:text-base px-4 sm:px-7 py-3.5 sm:py-4"
+            >
+              <span>Explore Our 6 Web Services</span>
+            </a>
+          </div>
+
+          <div class="pt-3.5 sm:pt-5 border-t border-slate-800/80">
+            <div
+              class="grid grid-cols-2 sm:flex sm:flex-wrap items-stretch sm:items-center gap-2"
+            >
+              {
+                trustStrip.map((item) => (
+                  <span class="px-2.5 sm:px-3 py-2 sm:py-1.5 min-h-[42px] sm:min-h-0 rounded-lg bg-slate-900/90 border border-slate-800 text-[11px] sm:text-xs text-slate-300 font-medium flex items-center justify-center sm:justify-start text-center sm:text-left leading-tight sm:leading-snug break-words">
+                    {item}
+                  </span>
+                ))
+              }
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 min-w-0">
+          <div
+            class="relative rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-700/80 shadow-2xl shadow-brand-500/15 bg-slate-900 group"
+          >
+            <div class="relative">
+              <img
+                src="/images/web-dev-lucknow/hero-website-development-lucknow.webp"
+                alt="Website Development Company in Lucknow Engineers Building Fast SEO AEO and GEO Ready Websites"
+                width="960"
+                height="540"
+                sizes="(max-width: 1024px) 100vw, 42vw"
+                fetchpriority="high"
+                decoding="async"
+                class="w-full aspect-[16/9] sm:aspect-auto sm:h-64 md:h-[330px] lg:h-[350px] object-cover object-center sm:group-hover:scale-105 transition-transform duration-500"
+              />
+              <div
+                class="hidden sm:block absolute inset-0 bg-gradient-to-t from-[#050a14] via-transparent to-transparent opacity-80"
+              >
+              </div>
+            </div>
+            <div
+              class="relative sm:absolute sm:bottom-4 sm:left-4 sm:right-4 glass-card border-t sm:border border-slate-800 sm:rounded-2xl p-3.5 sm:p-4"
+            >
+              <div
+                class="flex flex-wrap items-center justify-between gap-1.5 mb-1"
+              >
+                <span class="text-xs font-bold text-white"
+                  >Lucknow Search + AI Web Architecture</span
+                >
+                <span
+                  class="inline-flex items-center gap-1 text-[10.5px] sm:text-xs font-semibold text-emerald-400"
+                >
+                  <span
+                    class="w-2 h-2 rounded-full bg-emerald-400 flex-shrink-0"
+                  ></span>
+                  95+ Lighthouse Speed
+                </span>
+              </div>
+              <p
+                class="text-[12px] sm:text-xs text-slate-300 text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left] leading-relaxed"
+              >
+                Coded with sub second speed, llms.txt, JSON LD schema and instant
+                WhatsApp lead capture so Google and AI models send buyers to you.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 2: INTRODUCTION (CRISP WHITE CONTRAST SECTION + LUCKNOW TEAM IMAGE)
+  ===================================================================== -->
+  <section
+    class="relative surface-white overflow-hidden py-10 sm:py-16 lg:py-20 px-4 sm:px-6 border-b border-slate-200"
+  >
+    <div class="max-w-7xl mx-auto">
+      <div
+        class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 lg:gap-12 items-center"
+      >
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-light mb-3 sm:mb-3.5">
+            Modern Web Engineering for Growing Lucknow Brands
+          </div>
+          <h2
+            class="font-display font-extrabold text-[clamp(1.32rem,5.2vw,1.72rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3.5 sm:mb-5"
+          >
+            Why Choosing the Right Website Development Company in Lucknow <span
+              class="gradient-text-dark"
+              >Shapes Your Google and AI Enquiries</span
+            >
+          </h2>
+          <div
+            class="space-y-3.5 sm:space-y-4 text-slate-700 text-[14px] sm:text-base leading-[1.7] sm:leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]"
+          >
+            <p>
+              Across Lucknow and central Uttar Pradesh, how customers choose a
+              business has shifted rapidly. Whether a family is comparing RERA
+              approved plots, a bride abroad is ordering authentic Chikankari, a
+              parent is checking civil services coaching fees or a distributor is
+              sourcing packaged goods, buyers now check Google and ask ChatGPT,
+              Gemini and Perplexity before making a phone call. Hiring our <strong
+                >Website Development Company in Lucknow</strong
+              > makes sure your website speaks clearly to both human buyers and
+              AI search engines.
+            </p>
+            <p>
+              Unlike template vendors that hand over slow, generic pages, our
+              <strong>web designing company in Lucknow</strong> builds every site
+              on technical search standards from our <a
+                href="/best-seo-company-in-lucknow/"
+                class="text-brand-600 hover:text-sky-700 active:opacity-80 font-semibold transition-colors"
+                >Best SEO Company in Lucknow</a
+              > and clear 50 word answer blocks from our <a
+                href="/aeo-services-in-lucknow/"
+                class="text-brand-600 hover:text-sky-700 active:opacity-80 font-semibold transition-colors"
+                >AEO Services in Lucknow</a
+              > so your pages load in under a second, earn top rankings and turn
+              daily visitors into calls and WhatsApp messages.
+            </p>
+          </div>
+          <div
+            class="mt-5 sm:mt-7 flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-4"
+          >
+            <a
+              href="#contact"
+              class="btn-primary w-full sm:w-auto min-h-[48px]"
+            >
+              <span>Speak With Our Lucknow Web Team</span>
+              <svg
+                class="w-4 h-4 flex-shrink-0"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M14 5l7 7-7 7M3 12h18"></path>
+              </svg>
+            </a>
+            <a
+              href="#why-us"
+              class="btn-secondary-light w-full sm:w-auto min-h-[48px]"
+            >
+              <span>Compare Typical Vendors vs Us</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 space-y-3.5 sm:space-y-4 min-w-0">
+          <div
+            class="rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-200 shadow-lg bg-slate-100"
+          >
+            <img
+              src="/images/web-dev-lucknow/web-development-team-lucknow.webp"
+              alt="Web Designing Company in Lucknow Strategists Planning Fast SEO AEO and GEO Websites"
+              width="800"
+              height="533"
+              sizes="(max-width: 1024px) 100vw, 42vw"
+              class="w-full aspect-[16/9] sm:aspect-auto sm:h-56 lg:h-60 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="grid grid-cols-2 gap-2.5 sm:gap-3.5">
+            {
+              [
+                {
+                  val: '< 1 Sec',
+                  label: 'Mobile Speed',
+                  sub: '95+ Google Lighthouse scores',
+                },
+                {
+                  val: '3 in 1',
+                  label: 'SEO + AEO + GEO',
+                  sub: 'Built into every web page',
+                },
+                {
+                  val: 'llms.txt',
+                  label: 'AI Bot Ready',
+                  sub: 'Clean JSON LD & open crawl',
+                },
+                {
+                  val: '100%',
+                  label: 'Full Ownership',
+                  sub: 'Your domain, server & code',
+                },
+              ].map((stat) => (
+                <div class="elevated-card rounded-xl sm:rounded-2xl p-3 sm:p-3.5 min-w-0 flex flex-col justify-between">
+                  <div class="font-display font-black text-[1.05rem] sm:text-2xl text-brand-600 mb-0.5 leading-tight sm:whitespace-nowrap break-words">
+                    {stat.val}
+                  </div>
+                  <div>
+                    <div class="text-[11.5px] sm:text-xs font-bold text-slate-900 leading-snug">
+                      {stat.label}
+                    </div>
+                    <div class="text-[10.5px] sm:text-[11px] text-slate-500 leading-snug mt-0.5">
+                      {stat.sub}
+                    </div>
+                  </div>
+                </div>
+              ))
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 3: PROBLEM STATEMENT (DEEP INDIGO DARK CONTRAST SECTION)
+  ===================================================================== -->
+  <section
+    class="relative surface-indigo py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden"
+  >
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="max-w-7xl mx-auto relative z-10">
+      <div
+        class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 lg:gap-12 items-center"
+      >
+        <div class="lg:col-span-7 min-w-0">
+          <div
+            class="inline-flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3.5 py-1.5 rounded-xl sm:rounded-full text-[10px] sm:text-xs font-bold uppercase tracking-normal sm:tracking-widest bg-amber-500/10 border border-amber-500/30 text-amber-300 max-w-full leading-snug mb-4 sm:mb-5"
+          >
+            <svg
+              class="w-4 h-4 text-amber-400 flex-shrink-0"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77-1.333.192 3 1.732 3z"
+              ></path>
+            </svg>
+            <span class="min-w-0 break-words"
+              >Why Most Local Websites Fail to Bring Calls</span
+            >
+          </div>
+
+          <h2
+            class="font-display font-extrabold text-[clamp(1.32rem,5.2vw,1.72rem)] sm:text-3xl lg:text-4xl text-white tracking-tight leading-[1.22] sm:leading-tight mb-4 sm:mb-6"
+          >
+            Why Template Websites in Lucknow Stay Invisible on Google and AI Search
+          </h2>
+
+          <div
+            class="space-y-3.5 sm:space-y-4 text-slate-300 text-[14px] sm:text-base leading-[1.7] sm:leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]"
+          >
+            <p>
+              Most business owners across Gomti Nagar, Hazratganj, Aliganj and
+              Amar Shaheed Path have experienced the frustration of paying a
+              vendor for a website that brings zero enquiries. Typical local
+              builders install pirated WordPress themes packed with heavy image
+              sliders, broken mobile menus, duplicate headings and downloadable
+              PDF pamphlets. Nearly eighty percent of buyers in Uttar Pradesh
+              search on mobile data, and when a page stalls for six seconds they
+              leave immediately.
+            </p>
+            <p>
+              Even worse, ChatGPT, Gemini, Perplexity and Google AI Overviews
+              skip websites that hide fees, plot details or product specs inside
+              images and PDFs instead of clean HTML and schema markup. Choosing
+              the <strong>best website development company in Lucknow</strong>
+              backed by our <a
+                href="/geo-services-in-lucknow/"
+                class="text-brand-300 hover:text-white active:opacity-80 font-semibold transition-colors"
+                >GEO Services in Lucknow</a
+              > ensures your website loads fast on every phone and gives AI
+              models clear, factual proof to recommend your brand first.
+            </p>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 space-y-3.5 sm:space-y-4 min-w-0">
+          <div
+            class="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6 border-l-4 border-l-rose-500 min-w-0"
+          >
+            <div
+              class="flex flex-wrap items-center justify-between gap-1.5 mb-2"
+            >
+              <span
+                class="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-rose-400"
+                >Typical Local Template Vendor</span
+              >
+              <span class="text-[11px] sm:text-xs text-slate-400"
+                >Skipped by Google &amp; AI</span
+              >
+            </div>
+            <h3
+              class="font-display font-bold text-[15px] sm:text-base text-white mb-2 leading-snug"
+            >
+              Heavy Sliders, PDF Pamphlets &amp; Zero Schema Code
+            </h3>
+            <p
+              class="text-[12.5px] sm:text-xs text-slate-300 leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]"
+            >
+              6 second mobile delays, broken forms, missing JSON LD markup and
+              locked PDFs keep your Lucknow business hidden from search and AI
+              buyers.
+            </p>
+          </div>
+
+          <div
+            class="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6 border-l-4 border-l-emerald-400 min-w-0"
+          >
+            <div
+              class="flex flex-wrap items-center justify-between gap-1.5 mb-2"
+            >
+              <span
+                class="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-emerald-400"
+                >NK Digital Tech Lucknow Build</span
+              >
+              <span class="text-[11px] sm:text-xs text-brand-300"
+                >Google + AI Ready</span
+              >
+            </div>
+            <h3
+              class="font-display font-bold text-[15px] sm:text-base text-white mb-2 leading-snug"
+            >
+              Sub Second Code, Structured Facts &amp; WhatsApp Leads
+            </h3>
+            <p
+              class="text-[12.5px] sm:text-xs text-slate-300 leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]"
+            >
+              95+ Lighthouse speed, 50 word AEO answers, HTML comparison tables,
+              llms.txt and one tap call plus WhatsApp lead routing built in.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 4: SERVICES (LIGHT COOL ALABASTER CONTRAST + ARCHITECTURE IMAGE)
+  ===================================================================== -->
+  <section
+    id="services"
+    class="relative surface-cool overflow-hidden scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200"
+  >
+    <div class="max-w-7xl mx-auto">
+      <div
+        class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 items-center mb-7 sm:mb-16"
+      >
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-light mb-3">Six Complete Lucknow Web Solutions</div>
+          <h2
+            class="font-display font-extrabold text-[clamp(1.32rem,5.2vw,1.72rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4"
+          >
+            End to End Website Design and Development Services in Lucknow
+          </h2>
+          <p
+            class="text-slate-600 text-[14px] sm:text-base leading-[1.7] sm:leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]"
+          >
+            Our <strong>website design services in Lucknow</strong> cover custom
+            corporate sites, lean WordPress portals, Chikankari and retail
+            ecommerce stores, and full speed redesigns. Every project combines
+            clean Indian buyer usability with SEO, AEO and GEO engineering that
+            generates organic enquiries month after month.
+          </p>
+        </div>
+        <div class="lg:col-span-5 min-w-0">
+          <div
+            class="rounded-2xl overflow-hidden border border-slate-200 shadow-md bg-white"
+          >
+            <img
+              src="/images/web-dev-lucknow/seo-aeo-geo-website-lucknow.webp"
+              alt="Custom Web Development Company in Lucknow Developers Coding SEO AEO and GEO Websites"
+              width="800"
+              height="450"
+              sizes="(max-width: 1024px) 100vw, 42vw"
+              class="w-full aspect-[16/9] sm:aspect-auto sm:h-56 lg:h-64 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-7"
+      >
+        {
+          services.map((s) => (
+            <div class="elevated-card rounded-2xl p-4 sm:p-7 flex flex-col justify-between group sm:hover:-translate-y-1 min-w-0">
+              <div>
+                <div class="flex flex-wrap items-center justify-between gap-2 mb-3.5 sm:mb-6">
+                  <div
+                    class={`w-10 h-10 sm:w-12 sm:h-12 rounded-xl border flex items-center justify-center flex-shrink-0 ${s.iconStyle}`}
+                  >
+                    <Fragment set:html={s.icon} />
+                  </div>
+                  <div class="flex items-center gap-1.5 sm:gap-2 min-w-0 max-w-full">
+                    <span
+                      class={`text-[10.5px] sm:text-[11px] font-semibold px-2 sm:px-2.5 py-1 rounded-md leading-tight break-words ${s.badgeColor}`}
+                    >
+                      {s.category}
+                    </span>
+                    <span class="font-display font-black text-sm sm:text-lg text-slate-300 flex-shrink-0">
+                      {s.num}
+                    </span>
+                  </div>
+                </div>
+
+                <h3 class="font-display font-bold text-[16.5px] sm:text-xl text-slate-900 mb-2.5 sm:mb-3 leading-snug group-hover:text-brand-600 transition-colors">
+                  {s.title}
+                </h3>
+
+                <p class="text-slate-600 text-[13.5px] sm:text-sm leading-[1.68] sm:leading-relaxed mb-4 sm:mb-6 text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+                  {s.body}
+                </p>
+              </div>
+
+              <div>
+                <div
+                  class={`rounded-xl border p-3.5 sm:p-4 mb-3.5 sm:mb-5 ${s.impactStyle}`}
+                >
+                  <div class="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-slate-900 mb-1">
+                    <svg
+                      class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2.5"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                    <span>Business Lead Impact</span>
+                  </div>
+                  <p class="text-[12.5px] sm:text-xs text-slate-700 leading-relaxed font-medium text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+                    {s.impact}
+                  </p>
+                </div>
+
+                <a
+                  href={s.href}
+                  class="w-full sm:w-auto inline-flex items-center justify-between sm:justify-start gap-2 rounded-xl sm:rounded-none bg-slate-50 active:bg-sky-50 sm:bg-transparent border border-slate-200/80 sm:border-0 px-3.5 sm:px-0 py-2.5 min-h-[48px] sm:min-h-0 text-xs font-bold text-brand-600 hover:text-sky-700 group-hover:gap-3 transition-all"
+                >
+                  <span class="text-left leading-snug">{s.cta}</span>
+                  <svg
+                    class="w-4 h-4 flex-shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M14 5l7 7-7 7M3 12h18"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 5: LUCKNOW COMMERCIAL ZONES (DARK NAVY + LUCKNOW CORRIDORS IMAGE)
+  ===================================================================== -->
+  <section
+    id="locations"
+    class="relative surface-navy scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden"
+  >
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <div
+        class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 items-center mb-7 sm:mb-16"
+      >
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-dark mb-3">Four Major Lucknow Business Belts</div>
+          <h2
+            class="font-display font-extrabold text-[clamp(1.32rem,5.2vw,1.72rem)] sm:text-3xl lg:text-4xl text-white tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4"
+          >
+            Websites Built for Gomti Nagar, Hazratganj, Shaheed Path and Aliganj
+          </h2>
+          <p
+            class="text-slate-300 text-[14px] sm:text-base leading-[1.7] sm:leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]"
+          >
+            Customer searches in Lucknow carry strong neighbourhood intent.
+            Whether someone asks ChatGPT for a consultant in Vibhuti Khand,
+            searches Google for Chikankari couture in Hazratganj, compares plots
+            along Amar Shaheed Path or looks for UPSC coaching in Aliganj, we
+            pair neighbourhood visibility from our <a
+              href="/local-seo-services-in-lucknow/"
+              class="text-brand-300 hover:text-white active:opacity-80 font-semibold transition-colors"
+              >Local SEO Services in Lucknow</a
+            > with the engineering standards of our <a
+              href="/best-website-development-company-in-delhi-ncr/"
+              class="text-brand-300 hover:text-white active:opacity-80 font-semibold transition-colors"
+              >Best Website Development Company in Delhi NCR</a
+            > hub so your brand captures high intent local and regional buyers.
+          </p>
+        </div>
+        <div class="lg:col-span-5 min-w-0">
+          <div
+            class="rounded-2xl overflow-hidden border border-slate-700/80 shadow-xl bg-slate-900"
+          >
+            <img
+              src="/images/web-dev-lucknow/web-corridors-lucknow.webp"
+              alt="Website Development Company in Lucknow Serving Gomti Nagar Hazratganj Shaheed Path and Aliganj"
+              width="800"
+              height="450"
+              sizes="(max-width: 1024px) 100vw, 42vw"
+              class="w-full aspect-[16/9] sm:aspect-auto sm:h-56 lg:h-64 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5 sm:gap-6"
+      >
+        {
+          zones.map((z) => (
+            <div class="glass-card rounded-2xl p-4 sm:p-6 flex flex-col justify-between group sm:hover:-translate-y-1 min-w-0">
+              <div>
+                <div
+                  class={`h-1 w-full bg-gradient-to-r ${z.accent} rounded-full mb-3.5 sm:mb-5`}
+                />
+
+                <div class="flex flex-wrap items-center justify-between gap-1.5 sm:gap-2 mb-3 sm:mb-4">
+                  <span class="px-2.5 py-1 rounded-md bg-slate-800 border border-slate-700 text-[10.5px] sm:text-[11px] font-bold uppercase tracking-wider text-brand-300 flex-shrink-0">
+                    {z.hub}
+                  </span>
+                  <span class="text-[11px] sm:text-xs font-semibold text-slate-400 leading-snug break-words">
+                    {z.area}
+                  </span>
+                </div>
+
+                <h3 class="font-display font-bold text-[16.5px] sm:text-lg text-white mb-2 sm:mb-3 leading-snug">
+                  <a
+                    href={z.href}
+                    class="inline-flex items-center min-h-[44px] sm:min-h-0 py-1 sm:py-0.5 text-white hover:text-brand-300 transition-colors"
+                  >
+                    {z.keyword}
+                  </a>
+                </h3>
+
+                <p class="text-slate-300 text-[13.5px] sm:text-sm leading-[1.68] sm:leading-relaxed mb-4 sm:mb-5 text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+                  {z.desc}
+                </p>
+              </div>
+
+              <div class="pt-0 sm:pt-4 border-t-0 sm:border-t border-slate-800">
+                <a
+                  href={z.href}
+                  class="w-full sm:w-auto inline-flex items-center justify-between sm:justify-start gap-2 rounded-xl sm:rounded-none bg-slate-900/90 active:bg-slate-800 sm:bg-transparent border border-slate-700/80 sm:border-0 px-3.5 sm:px-0 py-2.5 min-h-[48px] sm:min-h-0 text-xs font-bold text-brand-400 hover:text-brand-300 group-hover:gap-2.5 transition-all"
+                >
+                  <span class="text-left leading-snug">{z.cta}</span>
+                  <svg
+                    class="w-3.5 h-3.5 flex-shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M14 5l7 7-7 7M3 12h18"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 6: WHY NK DIGITAL TECH (CRISP WHITE CONTRAST SECTION)
+  ===================================================================== -->
+  <section
+    id="why-us"
+    class="relative surface-white overflow-hidden scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200"
+  >
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-7 sm:mb-14 text-left sm:text-center">
+        <div class="badge-light mb-3">Why Lucknow Founders Choose Us</div>
+        <h2
+          class="font-display font-extrabold text-[clamp(1.32rem,5.2vw,1.72rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4"
+        >
+          Why Growing Lucknow Businesses Prefer NK Digital Tech Over Template Vendors
+        </h2>
+        <p
+          class="text-slate-600 text-[14px] sm:text-base leading-[1.7] sm:leading-relaxed mb-3.5 text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]"
+        >
+          Many Lucknow companies waste time and money either on low cost
+          template installers whose sites crash within months or on pure graphic
+          studios that know nothing about Google rankings and AI search. Hiring a
+          performance driven <strong>Website Development Company in Lucknow</strong
+          > gives you clean design and daily customer enquiries under one roof.
+        </p>
+        <p
+          class="text-slate-600 text-[14px] sm:text-base leading-[1.7] sm:leading-relaxed mb-4 text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]"
+        >
+          At our <strong>custom web development company in Lucknow</strong>, web
+          engineers and search specialists collaborate on every page so 95+
+          speed, AEO snippets, GEO tables, llms.txt and WhatsApp lead routing
+          are active from launch day.
+        </p>
+        <p class="text-slate-700 font-semibold text-xs sm:text-sm">
+          Compare a typical local template vendor with our SEO, AEO and GEO Website System:
+        </p>
+      </div>
+
+      <div
+        class="hidden md:block overflow-hidden rounded-2xl border border-slate-200 shadow-lg"
+      >
+        <table class="w-full text-left border-collapse">
+          <thead>
+            <tr class="bg-slate-900 text-white">
+              <th
+                class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-slate-300 w-1/4"
+              >
+                Decision Metric
+              </th>
+              <th
+                class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-rose-300 w-[37.5%] border-l border-slate-800"
+              >
+                Typical Lucknow Vendor
+              </th>
+              <th
+                class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-brand-300 w-[37.5%] border-l border-slate-800 bg-slate-950"
+              >
+                NK Digital Tech (Lucknow Search + AI Web)
+              </th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200 text-sm">
+            {
+              comparison.map((row, idx) => (
+                <tr class={idx % 2 === 0 ? 'bg-white' : 'bg-slate-50/80'}>
+                  <td class="py-5 px-6 font-display font-bold text-slate-900">
+                    {row.metric}
+                  </td>
+                  <td class="py-5 px-6 text-slate-600 border-l border-slate-200">
+                    <div class="flex items-start gap-2.5">
+                      <svg
+                        class="w-4 h-4 text-rose-500 mt-0.5 flex-shrink-0"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M6 18L18 6M6 6l12 12"
+                        />
+                      </svg>
+                      <span>{row.typical}</span>
+                    </div>
+                  </td>
+                  <td class="py-5 px-6 text-slate-900 font-medium border-l border-slate-200 bg-sky-50/40">
+                    <div class="flex items-start gap-2.5">
+                      <svg
+                        class="w-4 h-4 text-emerald-600 mt-0.5 flex-shrink-0"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2.5"
+                          d="M5 13l4 4L19 7"
+                        />
+                      </svg>
+                      <span>{row.nk}</span>
+                    </div>
+                  </td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+
+      <div class="md:hidden space-y-3.5">
+        {
+          comparison.map((row) => (
+            <div class="elevated-card rounded-2xl p-4 space-y-2.5 min-w-0">
+              <h3 class="font-display font-bold text-slate-900 text-[15px] leading-snug pb-2 border-b border-slate-100">
+                {row.metric}
+              </h3>
+              <div class="rounded-xl bg-rose-50 border border-rose-100 p-3">
+                <div class="flex items-center gap-1.5 mb-1">
+                  <svg
+                    class="w-3.5 h-3.5 text-rose-500 flex-shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M6 18L18 6M6 6l12 12"
+                    />
+                  </svg>
+                  <p class="text-[10.5px] font-bold uppercase tracking-wider text-rose-600">
+                    Typical Lucknow Vendor
+                  </p>
+                </div>
+                <p class="text-[13px] text-slate-700 leading-[1.6] text-left">
+                  {row.typical}
+                </p>
+              </div>
+              <div class="rounded-xl bg-sky-50 border border-sky-200 p-3">
+                <div class="flex items-center gap-1.5 mb-1">
+                  <svg
+                    class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2.5"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  <p class="text-[10.5px] font-bold uppercase tracking-wider text-brand-600">
+                    NK Digital Tech
+                  </p>
+                </div>
+                <p class="text-[13px] text-slate-900 font-semibold leading-[1.6] text-left">
+                  {row.nk}
+                </p>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 7: OUR CLIENTS (DARK INDIGO CONTRAST SECTION)
+  ===================================================================== -->
+  <section
+    id="clients"
+    class="relative surface-indigo scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden"
+  >
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-7 sm:mb-14 text-left sm:text-center">
+        <div class="badge-dark mb-3">Trusted by Lucknow &amp; UP Brands</div>
+        <h2
+          class="font-display font-extrabold text-[clamp(1.32rem,5.2vw,1.72rem)] sm:text-3xl lg:text-4xl text-white tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4"
+        >
+          Businesses Across Lucknow Growing Online With Our Fast Websites
+        </h2>
+        <p
+          class="text-slate-300 text-[14px] sm:text-base leading-[1.7] sm:leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]"
+        >
+          Chikankari couture houses, township developers, competitive exam
+          academies, turnkey contractors and optical showrooms across Lucknow
+          partner with NK Digital Tech for reliable, search ready websites.
+        </p>
+      </div>
+
+      <div
+        class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2.5 sm:gap-5"
+      >
+        {
+          clients.map((client) => (
+            <div class="glass-card rounded-2xl p-3 sm:p-5 flex flex-col items-center text-center group sm:hover:-translate-y-1 last:col-span-2 sm:last:col-span-1 min-w-0">
+              <div class="w-full max-w-[200px] sm:max-w-none mx-auto h-14 sm:h-20 rounded-xl bg-white border border-slate-200 flex items-center justify-center p-2.5 sm:p-4 mb-2.5 sm:mb-4 shadow-sm">
+                <img
+                  src={client.logo}
+                  alt={`${client.name} Logo`}
+                  width="130"
+                  height="48"
+                  class="max-h-9 sm:max-h-12 w-auto object-contain"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <h3 class="font-display font-bold text-[13.5px] sm:text-base text-white mb-1 leading-snug">
+                {client.name}
+              </h3>
+              <p class="text-[11px] sm:text-xs text-slate-300 leading-snug mb-2.5 sm:mb-3 flex-grow">
+                {client.sector}
+              </p>
+              <span class="w-full sm:w-auto inline-flex items-center justify-center gap-1 text-[10px] sm:text-[11px] font-semibold text-brand-300 bg-brand-500/15 border border-brand-500/30 px-2 sm:px-2.5 py-1.5 sm:py-1 rounded-md leading-tight max-w-full">
+                <svg
+                  class="w-2.5 h-2.5 sm:w-3 sm:h-3 flex-shrink-0"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                  />
+                </svg>
+                <span class="text-center leading-tight break-words">
+                  {client.region}
+                </span>
+              </span>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 8: INDUSTRIES (LIGHT SLATE CONTRAST SECTION - 3x3 GRID)
+  ===================================================================== -->
+  <section
+    id="industries"
+    class="relative surface-slate overflow-hidden scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200"
+  >
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-7 sm:mb-14 text-left sm:text-center">
+        <div class="badge-light mb-3">Sector Specific Lucknow Web Systems</div>
+        <h2
+          class="font-display font-extrabold text-[clamp(1.32rem,5.2vw,1.72rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4"
+        >
+          Custom SEO, AEO and GEO Websites Built for Nine Lucknow Sectors
+        </h2>
+        <p
+          class="text-slate-600 text-[14px] sm:text-base leading-[1.7] sm:leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]"
+        >
+          A family verifying LDA plot approvals on Amar Shaheed Path needs very
+          different page details than a shopper buying Hazratganj Chikankari or
+          a parent comparing NEET coaching in Aliganj. We structure layouts,
+          schema and lead flows around nine core Lucknow industries.
+        </p>
+      </div>
+
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3.5 sm:gap-6"
+      >
+        {
+          industries.map((ind) => (
+            <div
+              class={`elevated-card rounded-2xl p-4 sm:p-6 border-t-4 ${ind.accentBorder} flex flex-col justify-between sm:hover:-translate-y-1 md:last:col-span-2 lg:last:col-span-1 min-w-0`}
+            >
+              <div>
+                <div class="flex flex-wrap items-center justify-between gap-2 mb-3 sm:mb-4">
+                  <div
+                    class={`w-10 h-10 sm:w-11 sm:h-11 rounded-xl border flex items-center justify-center flex-shrink-0 ${ind.iconBg}`}
+                  >
+                    <Fragment set:html={ind.icon} />
+                  </div>
+                  <span class="text-[10.5px] sm:text-[11px] font-semibold text-slate-600 bg-slate-100 px-2.5 py-1 rounded-md leading-tight break-words max-w-full">
+                    {ind.sector}
+                  </span>
+                </div>
+
+                <h3 class="font-display font-bold text-[16.5px] sm:text-lg text-slate-900 mb-2 leading-snug">
+                  {ind.title}
+                </h3>
+
+                <p class="text-slate-600 text-[13.5px] sm:text-sm leading-[1.68] sm:leading-relaxed mb-3.5 sm:mb-4 text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+                  {ind.focus}
+                </p>
+              </div>
+
+              <div class="rounded-xl bg-emerald-50/70 border border-emerald-200/80 p-3 sm:p-3.5">
+                <div class="flex items-center gap-1.5 text-[10.5px] font-bold uppercase tracking-wider text-emerald-700 mb-0.5">
+                  <svg
+                    class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2.5"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  <span>Business Result</span>
+                </div>
+                <p class="text-slate-800 text-[12.5px] sm:text-xs font-medium leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+                  {ind.outcome}
+                </p>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 9: TESTIMONIALS (DEEP NAVY CONTRAST SECTION - 3x2 GRID)
+  ===================================================================== -->
+  <section
+    id="testimonials"
+    class="relative surface-dark scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden"
+  >
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="absolute inset-0 mesh-glow pointer-events-none opacity-60">
+    </div>
+
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-7 sm:mb-14 text-left sm:text-center">
+        <div class="badge-dark mb-3">Verified Lucknow Client Stories</div>
+        <h2
+          class="font-display font-extrabold text-[clamp(1.32rem,5.2vw,1.72rem)] sm:text-3xl lg:text-4xl text-white tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4"
+        >
+          What Lucknow Founders Say After Launching Their Website With Us
+        </h2>
+        <p
+          class="text-slate-300 text-[14px] sm:text-base leading-[1.7] sm:leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]"
+        >
+          Real outcomes from Amar Shaheed Path developers, Hazratganj
+          Chikankari founders, Aliganj coaching directors, Amausi manufacturers,
+          Gomti Nagar architects and Vibhuti Khand CA partners.
+        </p>
+      </div>
+
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6"
+      >
+        {
+          testimonials.map((t) => (
+            <div class="glass-card rounded-2xl p-4 sm:p-6 flex flex-col justify-between sm:hover:-translate-y-1 min-w-0">
+              <div>
+                <div class="flex flex-wrap items-center justify-between gap-2 mb-3.5 sm:mb-4">
+                  <div class="flex items-center gap-0.5 sm:gap-1 flex-shrink-0">
+                    {[1, 2, 3, 4, 5].map(() => (
+                      <svg
+                        class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-amber-400"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                      </svg>
+                    ))}
+                  </div>
+                  <span class="text-[10px] sm:text-[11px] font-semibold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-md">
+                    Verified Client Result
+                  </span>
+                </div>
+
+                <p class="text-slate-200 text-[13.5px] sm:text-sm leading-[1.68] sm:leading-relaxed italic mb-4 text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+                  "{t.quote}"
+                </p>
+
+                <div class="rounded-xl bg-slate-900/90 border border-slate-700/80 px-3 py-2.5 mb-4 flex items-start sm:items-center gap-2">
+                  <svg
+                    class="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5 sm:mt-0"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2.5"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  <span class="text-[12.5px] sm:text-xs text-slate-200 font-semibold leading-snug break-words">
+                    {t.impact}
+                  </span>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-3 pt-3.5 border-t border-slate-800">
+                <div
+                  class={`w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-gradient-to-br ${t.avatarGradient} flex items-center justify-center flex-shrink-0 shadow-md`}
+                >
+                  <span class="font-display font-bold text-xs sm:text-sm text-white tracking-wide">
+                    {t.initials}
+                  </span>
+                </div>
+                <div class="min-w-0">
+                  <h3 class="font-display font-bold text-white text-sm leading-snug break-words">
+                    {t.name}
+                  </h3>
+                  <p class="text-xs text-slate-300 leading-snug break-words">
+                    {t.title},{' '}
+                    <strong class="text-brand-400 font-semibold">
+                      {t.company}
+                    </strong>
+                  </p>
+                  <p class="text-[11px] text-slate-400 mt-0.5 leading-snug break-words">
+                    {t.sector}
+                  </p>
+                </div>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 10: HOW WE WORK (CRISP WHITE CONTRAST SECTION - 4 STAGES)
+  ===================================================================== -->
+  <section
+    id="process"
+    class="relative surface-white overflow-hidden scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200"
+  >
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-7 sm:mb-16 text-left sm:text-center">
+        <div class="badge-light mb-3">Our 4 Stage Lucknow Build Process</div>
+        <h2
+          class="font-display font-extrabold text-[clamp(1.32rem,5.2vw,1.72rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4"
+        >
+          How We Plan, Code and Launch Your Lucknow Website Smoothly
+        </h2>
+        <p
+          class="text-slate-600 text-[14px] sm:text-base leading-[1.7] sm:leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]"
+        >
+          Clear weekly milestones, live mobile preview links on WhatsApp and
+          direct communication with our developers from day one to launch.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-7">
+        {
+          stages.map((s) => (
+            <div class="elevated-card rounded-2xl p-4 sm:p-8 relative overflow-hidden group sm:hover:-translate-y-1 min-w-0">
+              <div class="flex items-center justify-between gap-4 mb-3.5 sm:mb-5">
+                <span
+                  class={`inline-flex items-center px-2.5 sm:px-3 py-1 rounded-lg text-xs font-bold uppercase tracking-wider text-white bg-gradient-to-r ${s.accent}`}
+                >
+                  {s.num}
+                </span>
+                <span class="font-display font-black text-2xl sm:text-4xl text-slate-200 group-hover:text-slate-300 transition-colors">
+                  {s.step}
+                </span>
+              </div>
+              <h3 class="font-display font-bold text-[16.5px] sm:text-xl text-slate-900 mb-2.5 sm:mb-3 leading-snug">
+                {s.title}
+              </h3>
+              <p class="text-slate-600 text-[13.5px] sm:text-sm leading-[1.68] sm:leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+                {s.body}
+              </p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 11: PARTNER WITH NK DIGITAL TECH (CONCLUSION)
+  ===================================================================== -->
+  <section
+    class="relative surface-indigo py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden"
+  >
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <div
+        class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 lg:gap-12 items-center"
+      >
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-dark mb-3 sm:mb-4">
+            Built for Long Term Growth in Uttar Pradesh
+          </div>
+          <h2
+            class="font-display font-extrabold text-[clamp(1.32rem,5.2vw,1.72rem)] sm:text-3xl lg:text-4xl text-white tracking-tight leading-[1.22] sm:leading-tight mb-4 sm:mb-6"
+          >
+            Make Your Lucknow Website Your Strongest Source of Google and AI Leads
+          </h2>
+          <div
+            class="space-y-3.5 sm:space-y-5 text-slate-300 text-[14px] sm:text-base leading-[1.7] sm:leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]"
+          >
+            <p>
+              Across Lucknow and Uttar Pradesh, every Google search, Google AI
+              Overview link and ChatGPT business recommendation depends on how
+              quickly your website loads and how clearly it answers buyer
+              questions. If your site drags on mobile data, hides prices and
+              facts inside PDFs or lacks clean call and WhatsApp actions, ready
+              buyers simply contact a better prepared competitor.
+            </p>
+            <p>
+              When you partner with NK Digital Tech as your <strong
+                >Website Development Company in Lucknow</strong
+              >, you receive a fast, mobile first website engineered with SEO,
+              AEO and GEO from day one along with 100% ownership of your domain,
+              server and code. Book your free Lucknow Website and AI Readiness
+              Audit today and let our team turn your website into a dependable
+              daily lead engine.
+            </p>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 min-w-0">
+          <div
+            class="rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-700/80 shadow-2xl bg-slate-900"
+          >
+            <img
+              src="/images/web-dev-lucknow/website-leads-lucknow.webp"
+              alt="Website Development Company in Lucknow Generating Daily Customer Leads From Google and AI Models"
+              width="800"
+              height="450"
+              sizes="(max-width: 1024px) 100vw, 42vw"
+              class="w-full aspect-[16/9] sm:aspect-auto sm:h-64 lg:h-72 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 12: FAQ (LIGHT COOL SLATE CONTRAST SECTION)
+  ===================================================================== -->
+  <section
+    id="faq"
+    class="relative surface-cool overflow-hidden scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200"
+  >
+    <div class="max-w-4xl mx-auto">
+      <div class="text-left sm:text-center mb-7 sm:mb-14">
+        <div class="badge-light mb-3">
+          Lucknow Website Pricing, Speed &amp; AI FAQs
+        </div>
+        <h2
+          class="font-display font-extrabold text-[clamp(1.32rem,5.2vw,1.72rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4"
+        >
+          Common Questions About Hiring a Website Development Company in Lucknow
+        </h2>
+        <p
+          class="text-slate-600 text-[14px] sm:text-base leading-[1.7] sm:leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]"
+        >
+          Straight answers on Lucknow website pricing, timelines, mobile speed
+          and how SEO, AEO and GEO help your pages win leads on Google and AI.
+        </p>
+      </div>
+
+      <div class="space-y-3 sm:space-y-4">
+        {
+          faqs.map((f, i) => (
+            <details
+              class="elevated-card rounded-2xl group overflow-hidden"
+              open={i === 0}
+            >
+              <summary class="flex items-start sm:items-center justify-between gap-2.5 sm:gap-4 px-3.5 sm:px-6 py-4 sm:py-5 min-h-[56px] active:bg-sky-50/60 transition-colors select-none">
+                <div class="flex items-start sm:items-center gap-2.5 sm:gap-3.5 text-left min-w-0">
+                  <span class="w-6 h-6 sm:w-7 sm:h-7 rounded-lg bg-sky-50 border border-sky-200 text-brand-600 font-display font-bold text-xs flex items-center justify-center flex-shrink-0 mt-0.5 sm:mt-0">
+                    0{i + 1}
+                  </span>
+                  <span class="font-display font-bold text-slate-900 text-[14px] sm:text-base md:text-lg leading-[1.4] sm:leading-snug break-words">
+                    {f.q}
+                  </span>
+                </div>
+                <span class="faq-icon w-7 h-7 sm:w-8 sm:h-8 rounded-full border border-slate-200 text-slate-600 flex items-center justify-center flex-shrink-0 mt-0.5 sm:mt-0">
+                  <svg
+                    class="w-3.5 h-3.5 sm:w-4 sm:h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 4v16m8-8H4"
+                    />
+                  </svg>
+                </span>
+              </summary>
+              <div class="px-3.5 sm:px-6 pb-4 sm:pb-6 pt-3 text-slate-600 text-[13.5px] sm:text-sm md:text-base leading-[1.7] sm:leading-relaxed border-t border-slate-100 text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+                {f.a}
+              </div>
+            </details>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 13: CALL TO ACTION BANNER (LAST SECTION - CITY ONLY, NO AREAS)
+  ===================================================================== -->
+  <section
+    id="contact"
+    class="relative surface-dark scroll-mt-16 sm:scroll-mt-20 pt-10 pb-12 sm:py-16 lg:py-20 px-4 sm:px-6 overflow-hidden"
+  >
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-5xl mx-auto">
+      <div
+        class="rounded-2xl sm:rounded-3xl bg-gradient-to-r from-brand-600 via-brand-500 to-accent-600 p-5 sm:p-10 md:p-12 text-center text-white shadow-2xl border border-white/15 relative overflow-hidden"
+      >
+        <div class="relative z-10 max-w-2xl mx-auto">
+          <h2
+            class="font-display font-black text-[clamp(1.32rem,5.2vw,1.72rem)] sm:text-3xl md:text-4xl text-white tracking-tight leading-[1.22] sm:leading-snug mb-3 sm:mb-4"
+          >
+            Ready to Launch an SEO, AEO and GEO Optimised Website in Lucknow?
+          </h2>
+
+          <p
+            class="text-sky-50 text-[13.5px] sm:text-sm md:text-base leading-relaxed mb-5 sm:mb-8 text-center"
+          >
+            Request a free mobile speed, schema and AI search visibility audit
+            from our web development specialists serving businesses across Lucknow.
+          </p>
+
+          <a
+            href="mailto:connect@nkdigitaltech.com"
+            class="inline-flex w-full sm:w-auto min-h-[52px] items-center justify-center gap-2 sm:gap-3 px-4 sm:px-8 py-3.5 sm:py-4 rounded-xl bg-white text-slate-950 hover:bg-sky-50 font-display font-bold text-[14px] sm:text-base shadow-xl transition-all duration-300 active:scale-[0.98] select-none text-center leading-snug"
+          >
+            <span>Claim Your Free Lucknow Website Audit</span>
+            <svg
+              class="w-4 h-4 sm:w-5 sm:h-5 text-brand-600 flex-shrink-0"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M14 5l7 7-7 7M3 12h18"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mobile Sticky Bottom Quick Action Bar -->
+  <div
+    class="mobile-sticky-cta sm:hidden fixed bottom-0 inset-x-0 z-40 bg-[#050a14]/95 backdrop-blur-xl border-t border-slate-800 px-3 pt-2.5 pb-[max(0.7rem,env(safe-area-inset-bottom))] shadow-[0_-8px_24px_rgba(0,0,0,0.45)] transition-all duration-200"
+  >
+    <div class="flex items-center gap-2.5">
+      <a
+        href="mailto:connect@nkdigitaltech.com"
+        class="btn-primary flex-1 min-h-[48px] py-2.5 px-3 text-[12.5px] font-bold rounded-xl whitespace-nowrap"
+      >
+        <span>Free Website Audit</span>
+        <svg
+          class="w-3.5 h-3.5 flex-shrink-0"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M14 5l7 7-7 7M3 12h18"></path>
+        </svg>
+      </a>
+      <a
+        href="#services"
+        class="btn-secondary-dark min-h-[48px] py-2.5 px-4 text-[12.5px] font-semibold rounded-xl flex-shrink-0 whitespace-nowrap"
+      >
+        <span>Services</span>
+      </a>
+    </div>
+  </div>
+
+  <style>
+    @media (max-width: 639px) {
+      .glass-card {
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+      }
+      #why-us,
+      #clients,
+      #industries,
+      #testimonials,
+      #process,
+      #faq {
+        content-visibility: auto;
+        contain-intrinsic-size: auto 720px;
+      }
+    }
+  </style>
+</Layout>

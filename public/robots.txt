@@ -116,10 +116,10 @@ Disallow: /
 # -----------------------------------------------
 User-agent: *
 Allow: /
+Allow: /_astro/
 
-# Disallow utility, private and compiled asset paths
+# Disallow utility and error paths
 Disallow: /api/
-Disallow: /_astro/
 Disallow: /404
 Disallow: /500
 

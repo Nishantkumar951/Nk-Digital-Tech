@@ -1,0 +1,1369 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '../styles/global.css';
+
+const pageTitle = 'Best SEO Company in Krishna Nagar Delhi | NK Digital Tech';
+const pageDescription = 'NK Digital Tech is the Best SEO Company in Krishna Nagar Delhi. We help Lal Quarter showrooms, jewellers, optical stores and clinics get daily customer calls.';
+const pageCanonical = 'https://www.nkdigitaltech.net/seo-company-in-krishna-nagar/';
+
+const clients = [
+  {
+    name: 'Aangan',
+    sector: 'Bridal Lehenga & Saree Showroom',
+    region: 'Lal Quarter Main Market',
+    logo: '/images/clients/aangan.webp',
+  },
+  {
+    name: 'Vision',
+    sector: 'Eye Care & Designer Optical Store',
+    region: 'Krishna Nagar Metro & Mandir Marg',
+    logo: '/images/clients/vision.webp',
+  },
+  {
+    name: 'Creative Academy',
+    sector: 'CBSE, CUET & Spoken English Wing',
+    region: 'Block F & Ghondli Chowk Link',
+    logo: '/images/clients/creative-academy.webp',
+  },
+  {
+    name: 'VP Infra',
+    sector: 'Builder Floors & Kothi Advisory',
+    region: 'Blocks A to K & Azad Nagar',
+    logo: '/images/clients/vp-infra.webp',
+  },
+  {
+    name: 'Propertyways',
+    sector: 'Lal Quarter Shop & Showroom Leasing',
+    region: 'Main Bazar & Chachi Building Belt',
+    logo: '/images/clients/propertyways.webp',
+  },
+];
+
+const services = [
+  {
+    num: '01',
+    category: 'Lal Quarter Page One',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>`,
+    iconStyle: 'bg-sky-50 border-sky-200 text-brand-600',
+    impactStyle: 'bg-sky-50/80 border-sky-200/80 text-slate-800',
+    badgeColor: 'text-brand-600 bg-sky-100/80',
+    title: 'Lal Quarter Retail & Store SEO in Krishna Nagar',
+    body: 'We deliver focused Lal Quarter retail SEO and store SEO in Krishna Nagar by creating fast mobile lookbooks for bridal boutiques, jewellery stores, footwear shops and sweet outlets so evening shoppers find your showroom on Google page one.',
+    impact: 'Daily store walk ins and WhatsApp video shopping bookings from families across Pin 110051.',
+    cta: 'Website Development Company in Delhi',
+    href: '/website-development-company-in-delhi/',
+  },
+  {
+    num: '02',
+    category: 'AI Shopping Prompts',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>`,
+    iconStyle: 'bg-violet-50 border-violet-200 text-accent-600',
+    impactStyle: 'bg-violet-50/80 border-violet-200/80 text-slate-800',
+    badgeColor: 'text-accent-600 bg-violet-100/80',
+    title: 'ChatGPT, Gemini & AI Overview Mentions',
+    body: 'Shoppers and parents in Krishna Nagar now ask AI tools which jewellery store, optical clinic, dentist or bridal studio in Lal Quarter is reliable. We add price range tables, doctor profiles and JSON LD schema so AI tools recommend your name.',
+    impact: 'Direct brand mentions when families ask ChatGPT or Gemini where to shop or book a doctor.',
+    cta: 'AI SEO Company in Delhi',
+    href: '/ai-seo-company-in-delhi/',
+  },
+  {
+    num: '03',
+    category: 'Lal Quarter Map Top 3',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>`,
+    iconStyle: 'bg-emerald-50 border-emerald-200 text-emerald-600',
+    impactStyle: 'bg-emerald-50/80 border-emerald-200/80 text-slate-800',
+    badgeColor: 'text-emerald-700 bg-emerald-100/80',
+    title: 'Google Map Ranking Krishna Nagar & Local Pack',
+    body: 'Working as a hands on local SEO agency Krishna Nagar shopkeepers trust, we boost your Google Map ranking Krishna Nagar by fixing your Google Business Profile, matching Pin 110051 address details and growing real buyer reviews.',
+    impact: 'Steady direction taps and phone calls from Krishna Nagar Pink Line Metro and Mandir Marg.',
+    cta: 'Local SEO Services in Delhi',
+    href: '/local-seo-services-in-delhi/',
+  },
+  {
+    num: '04',
+    category: 'Price & Timing Answers',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>`,
+    iconStyle: 'bg-amber-50 border-amber-200 text-amber-600',
+    impactStyle: 'bg-amber-50/80 border-amber-200/80 text-slate-800',
+    badgeColor: 'text-amber-700 bg-amber-100/80',
+    title: 'Quick Answer Boxes & Voice Search Setup',
+    body: 'We write clear 40 to 60 word answers right below customer questions about gold making charges, progressive lens rates, root canal fees or evening market timings, backed by clean FAQPage schema.',
+    impact: 'Instant trust when mobile users check rates, parking spots and appointment slots before visiting.',
+    cta: 'AEO Services in Delhi',
+    href: '/aeo-services-in-delhi/',
+  },
+  {
+    num: '05',
+    category: 'Optical & Clinic Trust',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>`,
+    iconStyle: 'bg-indigo-50 border-indigo-200 text-indigo-600',
+    impactStyle: 'bg-indigo-50/80 border-indigo-200/80 text-slate-800',
+    badgeColor: 'text-indigo-700 bg-indigo-100/80',
+    title: 'Optical Showroom & Clinic SEO in Krishna Nagar',
+    body: 'Combining optical showroom SEO Krishna Nagar and clinic SEO in Krishna Nagar, we add optometrist and doctor qualifications, BIS hallmark details, llms.txt files and clean Indian directory citations.',
+    impact: 'Higher visibility when families compare eye clinics, dentists, labs and jewellers in Krishna Nagar.',
+    cta: 'GEO Services in Delhi',
+    href: '/geo-services-in-delhi/',
+  },
+  {
+    num: '06',
+    category: 'East Delhi Retail Growth',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>`,
+    iconStyle: 'bg-cyan-50 border-cyan-200 text-cyan-700',
+    impactStyle: 'bg-cyan-50/80 border-cyan-200/80 text-slate-800',
+    badgeColor: 'text-cyan-700 bg-cyan-100/80',
+    title: 'Retail Business SEO East Delhi & Online Catalogues',
+    body: 'Through practical retail business SEO East Delhi shopkeepers rely on, we build festive lookbook pages, WhatsApp order buttons and Product schema so your Lal Quarter store wins both walk ins and courier orders.',
+    impact: 'Strong weekend store footfall plus direct WhatsApp orders from across Delhi NCR.',
+    cta: 'Best SEO Company in East Delhi',
+    href: '/best-seo-company-in-east-delhi/',
+  },
+];
+
+const comparison = [
+  {
+    metric: 'Lal Quarter & Block Focus',
+    typical: 'General citywide pages that miss shoppers walking down Lal Quarter or Mandir Marg',
+    nk: 'Tailored bazar pages built for Lal Quarter Main Market, Blocks A to K, Mandir Marg and Azad Nagar',
+  },
+  {
+    metric: 'Team Handling Your Campaign',
+    typical: 'Junior interns email monthly spreadsheets while your slow product galleries and map pin remain broken',
+    nk: 'Experienced search specialists and writers fix your mobile speed, showroom photos and map listing directly',
+  },
+  {
+    metric: 'AI Shopping & Clinic Mentions',
+    typical: 'Long blog posts without clear rates or doctor degrees that ChatGPT and Gemini ignore',
+    nk: 'Concise 50 word answers, transparent rate tables, Product and Physician schema and an llms.txt file',
+  },
+  {
+    metric: 'Evening Bazar Mobile Speed',
+    typical: 'Uncompressed lookbook images taking seven seconds to load on crowded market mobile networks',
+    nk: 'Crisp WebP bridal and optical galleries opening in 1.6 seconds across every Krishna Nagar street',
+  },
+  {
+    metric: 'Pin 110051 Directory Trust',
+    typical: 'Spammy backlink packages that hurt your Google visibility before peak wedding and festive weeks',
+    nk: 'Clean citations across Indian shopping, optical and healthcare directories matching Pin 110051',
+  },
+  {
+    metric: 'Full Ownership of Assets',
+    typical: 'Vendor locks your domain, website admin panel or Google Business Profile inside their own email',
+    nk: 'You keep 100 percent primary owner access to all code, lookbook photos, analytics and map profiles',
+  },
+];
+
+const krishnaNagarCorridors = [
+  {
+    hub: 'Market 01',
+    area: 'Lal Quarter Main Shopping Bazar',
+    focus: 'Lal Quarter Retail SEO',
+    pincode: 'Pin 110051',
+    desc: 'High footfall evening shopping market packed with bridal lehenga studios, saree showrooms, gold jewellers, footwear stores and sweet shops.',
+    cta: 'Audit Your Showroom Rank',
+    href: '#contact',
+    accent: 'from-brand-500 to-sky-400',
+  },
+  {
+    hub: 'Market 02',
+    area: 'Mandir Marg & Chachi Building Belt',
+    focus: 'Optical Showroom SEO Krishna Nagar',
+    pincode: 'Pin 110051',
+    desc: 'Busy commercial lane known for optical showrooms, eye testing clinics, watch dealers, electronics shops and pathology collection labs.',
+    cta: 'Audit Your Optical Map Pin',
+    href: '#contact',
+    accent: 'from-accent-500 to-violet-400',
+  },
+  {
+    hub: 'Market 03',
+    area: 'Krishna Nagar Pink Line Metro Axis',
+    focus: 'Google Map Ranking Krishna Nagar',
+    pincode: 'Pin 110051',
+    desc: 'Metro station corridor connecting commuters to coaching centres, family restaurants, bakeries, gyms, salons and diagnostic centres.',
+    cta: 'Audit Your Metro Hub Calls',
+    href: '#contact',
+    accent: 'from-cyan-500 to-teal-400',
+  },
+  {
+    hub: 'Market 04',
+    area: 'Krishna Nagar Blocks A to K Lanes',
+    focus: 'Clinic SEO in Krishna Nagar',
+    pincode: 'Pin 110051',
+    desc: 'Established residential blocks with daily searches for dental implant clinics, child specialists, skin doctors, play schools and builder floors.',
+    cta: 'Audit Your Clinic Visibility',
+    href: '#contact',
+    accent: 'from-emerald-500 to-green-400',
+  },
+  {
+    hub: 'Market 05',
+    area: 'Kanti Nagar & Azad Nagar Link',
+    focus: 'Store SEO in Krishna Nagar',
+    pincode: 'Pin 110051',
+    desc: 'Dense neighbourhood markets with strong mobile demand for hardware dealers, modular kitchen studios, pharmacies and tuition academies.',
+    cta: 'Audit Your Store Rankings',
+    href: '#contact',
+    accent: 'from-indigo-500 to-blue-400',
+  },
+  {
+    hub: 'Market 06',
+    area: 'Ghondli Chowk & Som Bazar Road',
+    focus: 'Retail Business SEO East Delhi',
+    pincode: 'Pin 110051',
+    desc: 'Active local shopping belt hosting furniture showrooms, garment stores, gift galleries, sweet outlets and home appliance dealers.',
+    cta: 'Audit Your Local Footfall',
+    href: '#contact',
+    accent: 'from-violet-500 to-purple-400',
+  },
+  {
+    hub: 'Market 07',
+    area: 'Swarn Cinema Road & East Azad Nagar',
+    focus: 'Banquet, Dining & Salon SEO',
+    pincode: 'Pin 110051',
+    desc: 'Arterial road featuring wedding banquet halls, bridal makeup studios, family cafes, car accessories shops and fitness clubs.',
+    cta: 'Audit Your Venue Bookings',
+    href: '#contact',
+    accent: 'from-amber-500 to-orange-400',
+  },
+  {
+    hub: 'Market 08',
+    area: 'Rama Park & Arjun Nagar Border',
+    focus: 'Property, CA & Advisory SEO',
+    pincode: 'Pin 110051',
+    desc: 'Connecting pocket between Krishna Nagar and Jagatpuri where families search for property dealers, CA tax offices and pathology labs.',
+    cta: 'Audit Your Border Reach',
+    href: '#contact',
+    accent: 'from-teal-500 to-emerald-400',
+  },
+];
+
+const industries = [
+  {
+    sector: 'Lal Quarter Bridal & Sarees',
+    title: 'Lehenga, Saree & Suit Showrooms',
+    focus: 'Through targeted Lal Quarter retail SEO and store SEO in Krishna Nagar, we rank bridal lehenga lookbooks, silk saree collections and custom fitting pages so wedding families visit your store first.',
+    outcome: 'Packed weekend trial rooms and daily WhatsApp video shopping inquiries.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>`,
+    accentBorder: 'border-t-pink-500',
+    iconBg: 'bg-pink-50 text-pink-600 border-pink-200',
+  },
+  {
+    sector: 'Optical & Eye Care SEO',
+    title: 'Optical Showrooms & Eye Clinics',
+    focus: 'Our optical showroom SEO Krishna Nagar playbook ranks progressive lenses, blue cut computer glasses, contact lenses and computerized eye testing pages in the top three Google Map spots.',
+    outcome: 'Steady daily walk in eye checkups and frame sales near Lal Quarter.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>`,
+    accentBorder: 'border-t-brand-500',
+    iconBg: 'bg-sky-50 text-brand-600 border-sky-200',
+  },
+  {
+    sector: 'Gold & Diamond Jewellers',
+    title: 'Hallmark Jewellery & Silver Stores',
+    focus: 'Families across East Delhi visit Lal Quarter for wedding gold sets, diamond rings and festive silver gifts. We rank your hallmark collections with Product schema and verified reviews.',
+    outcome: 'High ticket bridal and festive jewellery walk ins across Pin 110051.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>`,
+    accentBorder: 'border-t-amber-500',
+    iconBg: 'bg-amber-50 text-amber-600 border-amber-200',
+  },
+  {
+    sector: 'Dental, Skin & Child Clinics',
+    title: 'Dentists, Dermatologists & Doctors',
+    focus: 'Using clean clinic SEO in Krishna Nagar, we publish doctor verified pages for painless root canals, dental implants, laser skin treatments and child vaccination schedules.',
+    outcome: 'Daily morning and evening OPD phone bookings from Blocks A to K.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>`,
+    accentBorder: 'border-t-red-500',
+    iconBg: 'bg-red-50 text-red-600 border-red-200',
+  },
+  {
+    sector: 'Footwear, Bags & Accessories',
+    title: 'Bridal Footwear & Handbag Outlets',
+    focus: 'With retail business SEO East Delhi shoppers respond to, we optimise your store map listing, collection photos and local keywords so evening bazar visitors step into your shop.',
+    outcome: 'More store direction taps and repeat festive shopping visits.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>`,
+    accentBorder: 'border-t-purple-500',
+    iconBg: 'bg-purple-50 text-purple-600 border-purple-200',
+  },
+  {
+    sector: 'Pathology & Ultrasound Labs',
+    title: 'Blood Test & Diagnostic Centres',
+    focus: 'Residents in Krishna Nagar and Azad Nagar search mobile maps for full body health packages, pregnancy scans, X rays and 7 AM home blood sample collection.',
+    outcome: 'Consistent morning home collection calls and walk in scan bookings.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>`,
+    accentBorder: 'border-t-emerald-500',
+    iconBg: 'bg-emerald-50 text-emerald-600 border-emerald-200',
+  },
+  {
+    sector: 'Salons & Bridal Makeup',
+    title: 'Luxury Makeup Studios & Nail Bars',
+    focus: 'Brides shopping in Lal Quarter also book HD airbrush makeup, pre bridal skin packages and nail extensions nearby. We rank your bridal lookbook and price menu on page one.',
+    outcome: 'Full wedding season makeup bookings and weekday salon walk ins.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>`,
+    accentBorder: 'border-t-rose-500',
+    iconBg: 'bg-rose-50 text-rose-600 border-rose-200',
+  },
+  {
+    sector: 'Sweets, Bakeries & Cafes',
+    title: 'Mithai Shops, Cake Studios & Dining',
+    focus: 'We boost your Google Map ranking Krishna Nagar for wedding bhaji boxes, custom birthday cakes, chaat counters and family dinner restaurants near Lal Quarter.',
+    outcome: 'Higher evening family footfall and bulk festive gift box orders.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 21h18M5 21V7l8-4v18M19 21V11l-6-4M9 9v.01M9 12v.01M9 15v.01M9 18v.01"/></svg>`,
+    accentBorder: 'border-t-orange-500',
+    iconBg: 'bg-orange-50 text-orange-600 border-orange-200',
+  },
+  {
+    sector: 'CBSE, CUET & IELTS Coaching',
+    title: 'Tuition Centres & Language Academies',
+    focus: 'Parents and students near Krishna Nagar Metro search for Class 9 to 12 commerce and science tuitions, CUET preparation and IELTS batches. We rank your course pages.',
+    outcome: 'Daily student demo bookings and higher new batch admissions.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"/></svg>`,
+    accentBorder: 'border-t-indigo-500',
+    iconBg: 'bg-indigo-50 text-indigo-600 border-indigo-200',
+  },
+  {
+    sector: 'Builder Floors & Shop Brokers',
+    title: 'Residential & Main Bazar Property',
+    focus: 'We build block wise floor plan pages for 3 BHK and 4 BHK builder floors in Blocks A to K along with high street shop leasing pages in Lal Quarter.',
+    outcome: 'Direct buyer site visits and retail shop lease closures without portal fees.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>`,
+    accentBorder: 'border-t-cyan-500',
+    iconBg: 'bg-cyan-50 text-cyan-700 border-cyan-200',
+  },
+  {
+    sector: 'Home Decor & Modular Kitchens',
+    title: 'Curtain, Mattress & Interior Stores',
+    focus: 'Families renovating homes in Krishna Nagar and Kanti Nagar search for wallpaper, curtains, orthopedic mattresses and modular kitchen dealers. We rank your showroom.',
+    outcome: 'Steady home measurement visits and turnkey furnishing orders.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"/></svg>`,
+    accentBorder: 'border-t-teal-500',
+    iconBg: 'bg-teal-50 text-teal-700 border-teal-200',
+  },
+  {
+    sector: 'CA, Tax & Retail Accounting',
+    title: 'GST, ITR & Shop License Consultants',
+    focus: 'Showroom owners in Lal Quarter need GST filing, shop establishment licenses, trademark protection and business loans. We rank your CA chamber on Google page one.',
+    outcome: 'Long term retail accounting retainers across Pin 110051.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>`,
+    accentBorder: 'border-t-accent-500',
+    iconBg: 'bg-violet-50 text-accent-600 border-violet-200',
+  },
+];
+
+const testimonials = [
+  {
+    name: 'Ritu Malhotra',
+    title: 'Showroom Director',
+    company: 'Aangan',
+    sector: 'Bridal Lehenga & Saree Studio, Lal Quarter Krishna Nagar',
+    metrics: [
+      '310% jump in weekend bridal trial calls and direction clicks',
+      'Top 3 Google Map Pack placement in Lal Quarter Main Bazar',
+      'Named on ChatGPT for East Delhi bridal shopping in Krishna Nagar',
+    ],
+    quote: 'Shoppers coming to Lal Quarter check Google Maps and reviews on their phones before choosing which bridal store to enter. NK Digital Tech made our mobile lookbook fast, added price range tables and fixed our map listing. Our evening and weekend walk ins grew three times inside four months.',
+    logo: '/images/clients/aangan.webp',
+  },
+  {
+    name: 'Dr. Sumit Arora',
+    title: 'Lead Optometrist',
+    company: 'Vision',
+    sector: 'Eye Testing & Designer Optical Showroom, Mandir Marg Krishna Nagar',
+    metrics: [
+      '285% growth in daily eye testing and progressive lens bookings',
+      'Page one Google positions for 36 Krishna Nagar optical keywords',
+      'Featured in Google AI Overviews for local eye clinic searches',
+    ],
+    quote: 'Mandir Marg has many optical shops, and our store was buried on page two of Google Maps. NK Digital Tech ran focused optical showroom SEO Krishna Nagar campaigns, cleaned up our Pin 110051 citations and added medical schema. Now families book eye tests with us every day.',
+    logo: '/images/clients/vision.webp',
+  },
+  {
+    name: 'Vikas Khanna',
+    title: 'Academic Director',
+    company: 'Creative Academy',
+    sector: 'CBSE & CUET Coaching Centre, Near Krishna Nagar Metro',
+    metrics: [
+      '96% batch occupancy for Class 12 commerce and CUET courses',
+      'Top three map visibility around Krishna Nagar Pink Line station',
+      'Steady parent calls from Blocks A to K and Azad Nagar',
+    ],
+    quote: 'Parents in Krishna Nagar compare coaching results, batch timings and fees on Google before visiting. NK Digital Tech structured our syllabus pages and fee tables clearly, lifting us to page one right before the new school session.',
+    logo: '/images/clients/creative-academy.webp',
+  },
+  {
+    name: 'Neeraj Chawla',
+    title: 'Managing Partner',
+    company: 'VP Infra',
+    sector: 'Builder Floors & Commercial Property, Krishna Nagar Blocks A to K',
+    metrics: [
+      '2.9x increase in weekend 3 BHK and 4 BHK builder floor visits',
+      'First page rankings for Krishna Nagar residential and shop keywords',
+      'Zero paid property portal dependency for direct family buyers',
+    ],
+    quote: 'Families upgrading to bigger builder floors in Krishna Nagar search Google by block names. NK Digital Tech wrote clear block wise property guides that bring us direct buyer calls every week without broker middlemen.',
+    logo: '/images/clients/vp-infra.webp',
+  },
+];
+
+const stages = [
+  {
+    num: 'Phase 01',
+    step: '01',
+    title: 'Lookbook Speed Test & Lal Quarter Market Audit',
+    body: 'We start by checking your mobile gallery speed, image weights and Google Business Profile while mapping which bridal stores, jewellers, optical shops and clinics hold top spots across Lal Quarter and Mandir Marg.',
+    accent: 'from-brand-600 to-sky-500',
+  },
+  {
+    num: 'Phase 02',
+    step: '02',
+    title: 'Showroom, Optical & Clinic Content Plan',
+    body: 'We map a clear 90 day schedule across six fortnightly sprints covering Lal Quarter shopping terms, optical and dental pages, 50 word rate answers and Product or MedicalClinic schema.',
+    accent: 'from-accent-600 to-violet-500',
+  },
+  {
+    num: 'Phase 03',
+    step: '03',
+    title: 'WebP Gallery Upgrades & Pin 110051 Map Signals',
+    body: 'Our developers and writers convert heavy showroom photos to WebP, publish simple buyer guides, add JSON LD schema, deploy llms.txt and align your Pin 110051 address across Indian directories.',
+    accent: 'from-cyan-600 to-teal-500',
+  },
+  {
+    num: 'Phase 04',
+    step: '04',
+    title: 'Fortnightly Footfall Tracking & AI Overview Checks',
+    body: 'Every fourteen days we share clear reports on Google Map direction clicks, phone calls, WhatsApp video shopping requests and brand mentions on ChatGPT, Gemini and Google AI Overviews.',
+    accent: 'from-emerald-600 to-green-500',
+  },
+];
+
+const faqs = [
+  {
+    q: 'Why do Lal Quarter shopkeepers and doctors choose NK Digital Tech as their SEO Company in Krishna Nagar Delhi?',
+    a: 'Store owners and clinic directors choose NK Digital Tech as their SEO Company in Krishna Nagar Delhi because we focus on daily store walk ins, map calls and WhatsApp inquiries. Our senior specialists manage technical speed, Google Map Pack rankings, AEO and GEO across Lal Quarter, Mandir Marg, Azad Nagar and Blocks A to K.',
+  },
+  {
+    q: 'How much do monthly SEO services in Krishna Nagar cost for a showroom or clinic?',
+    a: 'Monthly retainers for SEO services in Krishna Nagar typically run from ₹15,000 to ₹40,000 depending on your catalog size, treatment pages and local bazar competition. Optical shops, dental clinics and coaching centres often start with a focused local plan, while large bridal and jewellery showrooms pick wider East Delhi campaigns.',
+  },
+  {
+    q: 'How do Lal Quarter retail SEO and store SEO in Krishna Nagar increase weekend footfall?',
+    a: 'Shoppers heading to Lal Quarter check Google Maps and mobile lookbooks for bridal lehengas, BIS hallmarked gold, progressive spectacles and festive sweets before leaving home. We build fast collection pages and rank your Google Business Profile in the top three map spots so families visit your counter first.',
+  },
+  {
+    q: 'How long does it take to boost our Google Map ranking Krishna Nagar?',
+    a: 'Most showrooms on Mandir Marg and Lal Quarter see higher direction taps and phone calls from improved Google Map ranking Krishna Nagar within 30 to 55 days. Competitive page one website rankings and AI citations build steadily over 75 to 120 days.',
+  },
+  {
+    q: 'Why does organic search work better than pamphlets for digital marketing Krishna Nagar?',
+    a: 'Smart digital marketing Krishna Nagar connects your shop or clinic with families at the exact moment they search Google for a product or doctor. Paper flyers are thrown away at metro gates, while page one rankings and top three map pins bring callers every single day.',
+  },
+  {
+    q: 'How can our optical store, boutique or clinic appear on ChatGPT and Gemini?',
+    a: 'ChatGPT, Gemini and Google AI Overviews cite Krishna Nagar businesses that load in under two seconds, answer buyer price and timing questions in 40 to 60 words, show doctor or hallmark credentials, include JSON LD schema and host an llms.txt file.',
+  },
+  {
+    q: 'Do your campaigns also cover Mandir Marg, East Azad Nagar, Kanti Nagar and Ghondli?',
+    a: 'Yes. Working as a hands on local SEO agency Krishna Nagar founders trust, we rank businesses across Lal Quarter Main Bazar, Mandir Marg, Blocks A to K, East Azad Nagar, Kanti Nagar and Ghondli Chowk.',
+  },
+  {
+    q: 'Will we retain 100% admin control of our website, photos and Google Business Profile?',
+    a: 'Yes, always. Your domain name, website code, lookbook photography, Search Console property and Google Business Profile stay inside your own primary admin account with zero lock in.',
+  },
+];
+
+const trustStrip = [
+  'Lal Quarter & Mandir Marg Focus',
+  'Page One Google Rankings',
+  'Krishna Nagar Map Pack Top 3',
+  'Cited on ChatGPT & Gemini',
+  'Showroom & Clinic Schema Setup',
+  'Simple Price & Timing Answers',
+  'Under Two Second Mobile Load',
+  '100% Client Admin Ownership',
+];
+
+const seoKrishnaNagarSchemaLocalBusiness = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "NK Digital Tech Best SEO Company in Krishna Nagar Delhi",
+  "url": "https://www.nkdigitaltech.net/seo-company-in-krishna-nagar/",
+  "logo": "https://www.nkdigitaltech.net/images/seo-krishna-nagar/hero-seo-company-krishna-nagar.webp",
+  "image": "https://www.nkdigitaltech.net/images/seo-krishna-nagar/hero-seo-company-krishna-nagar.webp",
+  "description": "NK Digital Tech is the Best SEO Company in Krishna Nagar Delhi delivering Lal Quarter retail SEO, optical showroom rankings, clinic SEO, Google Map Pack visibility, AEO and GEO across Pin 110051.",
+  "email": "connect@nkdigitaltech.com",
+  "priceRange": "₹15,000 to ₹40,000+",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Krishna Nagar",
+    "addressRegion": "Delhi",
+    "postalCode": "110051",
+    "addressCountry": "IN"
+  },
+  "areaServed": [
+    "Krishna Nagar",
+    "Lal Quarter Krishna Nagar",
+    "Mandir Marg Krishna Nagar",
+    "East Azad Nagar",
+    "Kanti Nagar",
+    "Ghondli",
+    "East Delhi"
+  ],
+  "serviceType": [
+    "SEO Services in Krishna Nagar",
+    "Lal Quarter Retail SEO",
+    "Store SEO in Krishna Nagar",
+    "Optical Showroom SEO Krishna Nagar",
+    "Clinic SEO in Krishna Nagar",
+    "Local SEO Agency Krishna Nagar"
+  ]
+});
+
+const seoKrishnaNagarSchemaFAQ = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map((item) => ({
+    "@type": "Question",
+    "name": item.q,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": item.a
+    }
+  }))
+});
+---
+
+<Layout
+  title={pageTitle}
+  description={pageDescription}
+  canonical={pageCanonical}
+  ogImage="https://www.nkdigitaltech.net/images/seo-krishna-nagar/hero-seo-company-krishna-nagar.webp"
+  preloadImage="/images/seo-krishna-nagar/hero-seo-company-krishna-nagar.webp"
+  hideLocationsNav={false}
+  customSchemaLocalBusiness={seoKrishnaNagarSchemaLocalBusiness}
+  customSchemaFAQ={seoKrishnaNagarSchemaFAQ}
+  utilityTagline="Best SEO Company in Krishna Nagar Delhi • Lal Quarter, Mandir Marg & Pink Line Hub"
+  brandSubtitle="Krishna Nagar • Retail & Clinic Search"
+  footerBio="Premier SEO Company in Krishna Nagar Delhi helping Lal Quarter bridal showrooms, jewellers, optical stores, dental clinics and coaching centres win page one Google rankings, map calls and AI citations."
+  footerCoreDisciplines={[
+    { label: 'Best SEO Company in East Delhi', href: '/best-seo-company-in-east-delhi/' },
+    { label: 'Best SEO Company in Delhi', href: '/best-seo-company-in-delhi/' },
+    { label: 'Local SEO Services in Delhi', href: '/local-seo-services-in-delhi/' },
+    { label: 'AI SEO Company in Delhi', href: '/ai-seo-company-in-delhi/' },
+    { label: 'AEO Services in Delhi', href: '/aeo-services-in-delhi/' },
+    { label: 'GEO Services in Delhi', href: '/geo-services-in-delhi/' },
+    { label: 'Website Development Company in Delhi', href: '/website-development-company-in-delhi/' },
+  ]}
+  footerTagline="Best SEO Company in Krishna Nagar Delhi • Pin 110051 Lal Quarter & Retail Growth"
+>
+
+  <!-- =====================================================================
+       SECTION 1: HERO (DARK SURFACE WITH UNIQUE KRISHNA NAGAR SEO HERO IMAGE)
+  ===================================================================== -->
+  <section class="relative surface-dark overflow-hidden pt-5 pb-9 sm:pt-16 sm:pb-20 lg:pt-20 lg:pb-24 border-b border-slate-800/80">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="absolute inset-0 mesh-glow pointer-events-none"></div>
+    <div class="absolute -top-24 -left-24 sm:-top-36 sm:-left-36 w-56 h-56 sm:w-96 sm:h-96 bg-brand-500/20 rounded-full blur-[80px] sm:blur-[130px] pointer-events-none"></div>
+    <div class="absolute top-1/4 -right-24 sm:-right-36 w-56 h-56 sm:w-96 sm:h-96 bg-accent-500/20 rounded-full blur-[80px] sm:blur-[130px] pointer-events-none"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns: Headline & CTA -->
+        <div class="lg:col-span-7 text-left min-w-0">
+          <div class="badge-dark mb-3 sm:mb-6 py-1.5 px-2.5 sm:px-3.5">
+            <span class="w-2 h-2 rounded-full bg-brand-400 animate-ping flex-shrink-0"></span>
+            <span class="min-w-0 break-words">Lal Quarter &bull; Mandir Marg &bull; Blocks A to K &bull; Azad Nagar</span>
+          </div>
+
+          <h1 class="font-display text-[clamp(1.75rem,7vw,2.4rem)] sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-[1.14] sm:leading-[1.1] mb-3.5 sm:mb-6 text-glow">
+            Best SEO Company in <br class="hidden sm:inline" />
+            <span class="gradient-text-light">Krishna Nagar Delhi</span>
+          </h1>
+
+          <p class="text-[13.5px] sm:text-base md:text-lg text-slate-300 leading-[1.68] sm:leading-relaxed mb-5 sm:mb-8 font-normal text-justify hyphens-auto [text-align-last:left]">
+            Partnering with a trusted <strong class="text-white font-semibold">SEO Company in Krishna Nagar Delhi</strong> helps Lal Quarter bridal showrooms, jewellers, optical stores, dental clinics and academies get daily walk ins and phone calls. NK Digital Tech builds fast mobile pages, top three Google Map pins and direct mentions on ChatGPT, Gemini and Google AI Overviews.
+          </p>
+
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-4 mb-5 sm:mb-10">
+            <a href="#contact" class="btn-primary w-full sm:w-auto min-h-[50px] text-[13.5px] sm:text-base px-4 sm:px-8 py-3.5 sm:py-4">
+              <span>Get Your Free Krishna Nagar SEO Audit</span>
+              <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+              </svg>
+            </a>
+            <a href="#services" class="btn-secondary-dark w-full sm:w-auto min-h-[48px] text-[13.5px] sm:text-base px-4 sm:px-7 py-3.5 sm:py-4">
+              <span>View Krishna Nagar SEO Services</span>
+            </a>
+          </div>
+
+          <!-- Trust Verification Strip -->
+          <div class="pt-4 sm:pt-6 border-t border-slate-800/80">
+            <div class="grid grid-cols-2 sm:flex sm:flex-wrap items-stretch sm:items-center gap-2">
+              {trustStrip.map((item) => (
+                <span class="px-2.5 sm:px-3 py-2 sm:py-1.5 min-h-[42px] sm:min-h-0 rounded-lg bg-slate-900/90 border border-slate-800 text-[11px] sm:text-xs text-slate-300 font-medium flex items-center justify-center sm:justify-start text-center sm:text-left leading-tight break-words">
+                  {item}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Unique Krishna Nagar SEO Hero Image -->
+        <div class="lg:col-span-5 min-w-0">
+          <div class="relative rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-700/80 shadow-2xl shadow-brand-500/15 bg-slate-900 group">
+            <div class="relative">
+              <img
+                src="/images/seo-krishna-nagar/hero-seo-company-krishna-nagar.webp"
+                alt="Best SEO Company in Krishna Nagar Delhi Consultant Reviewing Lal Quarter Map Rankings"
+                width="960"
+                height="540"
+                sizes="(max-width: 1024px) 100vw, 42vw"
+                fetchpriority="high"
+                decoding="async"
+                class="w-full aspect-[16/9] sm:aspect-auto sm:h-72 md:h-[380px] lg:h-[400px] object-cover object-center sm:group-hover:scale-105 transition-transform duration-500"
+              />
+              <div class="hidden sm:block absolute inset-0 bg-gradient-to-t from-[#050a14] via-transparent to-transparent opacity-80"></div>
+            </div>
+            <div class="relative sm:absolute sm:bottom-4 sm:left-4 sm:right-4 glass-card border-t sm:border border-slate-800 sm:rounded-2xl p-3.5 sm:p-4">
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-1">
+                <span class="text-xs font-bold text-white">Lal Quarter &amp; Mandir Marg SEO</span>
+                <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-400">
+                  <span class="w-2 h-2 rounded-full bg-emerald-400 flex-shrink-0"></span>
+                  Verified Daily Walk Ins
+                </span>
+              </div>
+              <p class="text-[11px] sm:text-xs text-slate-300 text-justify hyphens-auto [text-align-last:left] leading-relaxed">
+                Helping Krishna Nagar bridal stores, jewellers, optical shops and clinics win map calls and AI mentions.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 2: INTRODUCTION (CRISP WHITE CONTRAST SECTION + TEAM IMAGE)
+  ===================================================================== -->
+  <section class="relative surface-white overflow-hidden py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns -->
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-light mb-3.5 sm:mb-4">Pin 110051 High Street &amp; Clinic Hub</div>
+          <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-4 sm:mb-6">
+            Why Store Owners Pick the Best SEO Company in Krishna Nagar Delhi <span class="gradient-text-dark">for Daily Footfall</span>
+          </h2>
+          <div class="space-y-4 sm:space-y-5 text-slate-700 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            <p>
+              NK Digital Tech works as the <strong>Best SEO Company in Krishna Nagar Delhi</strong> for Lal Quarter bridal showrooms, jewellery stores, Mandir Marg optical shops, dental clinics and academies across Blocks A to K. We combine fast mobile lookbooks, verified map pins and clear price answers so shoppers visit your store first.
+            </p>
+            <p>
+              Instead of wasting budget on cheap link sellers, your business gets direct support from our regional hub as the <a href="/best-seo-company-in-east-delhi/" class="text-brand-600 font-semibold hover:underline">Best SEO Company in East Delhi</a> paired with our NCR specialists at the <a href="/best-seo-company-in-delhi/" class="text-brand-600 font-semibold hover:underline">Best SEO Company in Delhi</a> and <a href="/local-seo-services-in-delhi/" class="text-brand-600 font-semibold hover:underline">Local SEO Services in Delhi</a> for steady daily calls.
+            </p>
+          </div>
+          <div class="mt-6 sm:mt-8 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
+            <a href="#contact" class="btn-primary w-full sm:w-auto min-h-[48px]">
+              <span>Talk to a Krishna Nagar SEO Expert</span>
+              <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+              </svg>
+            </a>
+            <a href="#why-us" class="btn-secondary-light w-full sm:w-auto min-h-[48px]">
+              <span>See How We Differ</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Unique Krishna Nagar SEO Team Image + Stats -->
+        <div class="lg:col-span-5 space-y-4 sm:space-y-5 min-w-0">
+          <div class="rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-200 shadow-lg bg-slate-100">
+            <img
+              src="/images/seo-krishna-nagar/seo-agency-team-krishna-nagar.webp"
+              alt="Local SEO Agency Krishna Nagar Team Planning Lal Quarter Retail and Clinic Campaigns"
+              width="800"
+              height="533"
+              sizes="(max-width: 1024px) 100vw, 42vw"
+              class="w-full aspect-[16/9] sm:aspect-auto sm:h-64 lg:h-72 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="grid grid-cols-2 gap-2.5 sm:gap-4">
+            {[
+              { val: '310%', label: 'Walk In & Call Lift', sub: 'Across Lal Quarter & Mandir Marg' },
+              { val: '6 Sprints', label: '90 Day Work Plan', sub: 'Reviewed every fourteen days' },
+              { val: 'Top 3', label: 'Bazar Map Focus', sub: 'Pin 110051 & Blocks A to K' },
+              { val: '100%', label: 'Client Ownership', sub: 'Your code, photos & data' },
+            ].map((stat) => (
+              <div class="elevated-card rounded-xl sm:rounded-2xl p-3 sm:p-4 min-w-0 flex flex-col justify-between">
+                <div class="font-display font-black text-[1.1rem] sm:text-2xl text-brand-600 mb-0.5 leading-tight break-words">{stat.val}</div>
+                <div class="text-[11px] sm:text-xs font-bold text-slate-900 leading-snug">{stat.label}</div>
+                <div class="text-[10.5px] sm:text-[11px] text-slate-500 leading-snug mt-0.5">{stat.sub}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 3: PROBLEM STATEMENT (DEEP INDIGO DARK CONTRAST SECTION)
+  ===================================================================== -->
+  <section class="relative surface-indigo py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="max-w-7xl mx-auto relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns -->
+        <div class="lg:col-span-7 min-w-0">
+          <div class="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-3.5 py-1 sm:py-1.5 rounded-full text-[10px] sm:text-xs font-bold uppercase tracking-wider sm:tracking-widest bg-amber-500/10 border border-amber-500/30 text-amber-300 max-w-full leading-snug mb-4 sm:mb-5">
+            <svg class="w-4 h-4 text-amber-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+            </svg>
+            <span>Why Showrooms &amp; Clinics Miss Buyers</span>
+          </div>
+
+          <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-white tracking-tight leading-[1.22] sm:leading-tight mb-4 sm:mb-6">
+            Why Famous Lal Quarter Stores &amp; Clinics Lose Evening Shoppers Online
+          </h2>
+
+          <div class="space-y-4 sm:space-y-5 text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            <p>
+              Across Lal Quarter, Mandir Marg and Blocks A to K, many well known bridal showrooms, jewellers, optical shops and clinics rely only on walk by street traffic. Because their websites load slowly on mobile data and their Google Business Profiles lack fresh photos or reviews, shoppers getting off at Krishna Nagar Metro tap on competing stores first.
+            </p>
+            <p>
+              Using our <a href="/ai-seo-company-in-delhi/" class="text-sky-300 font-semibold hover:underline">AI SEO Company in Delhi</a> and <a href="/aeo-services-in-delhi/" class="text-sky-300 font-semibold hover:underline">AEO Services in Delhi</a> methods, we compress your mobile lookbooks, add Product and LocalBusiness schema and publish clear price answers so families visit your door first.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Diagnostic Comparison Cards -->
+        <div class="lg:col-span-5 space-y-3.5 sm:space-y-4 min-w-0">
+          <div class="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6 border-l-4 border-l-rose-500">
+            <div class="flex flex-wrap items-center justify-between gap-1.5 mb-2">
+              <span class="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-rose-400">Typical Local Vendor</span>
+              <span class="text-[11px] sm:text-xs text-slate-400">Missed Bazar Footfall</span>
+            </div>
+            <h3 class="font-display font-bold text-[15px] sm:text-base text-white mb-2 leading-snug">Slow Photo Pages, Missing Rates &amp; Weak Map Pins</h3>
+            <p class="text-xs text-slate-300 leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+              Never shows up when a family in Lal Quarter or Azad Nagar checks Google Maps or asks ChatGPT for the best store or clinic.
+            </p>
+          </div>
+
+          <div class="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6 border-l-4 border-l-emerald-400">
+            <div class="flex flex-wrap items-center justify-between gap-1.5 mb-2">
+              <span class="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-emerald-400">NK Digital Tech System</span>
+              <span class="text-[11px] sm:text-xs text-brand-300">Daily Store Walk Ins</span>
+            </div>
+            <h3 class="font-display font-bold text-[15px] sm:text-base text-white mb-2 leading-snug">Fast WebP Lookbooks, Clear Price Tables &amp; Top 3 Maps</h3>
+            <p class="text-xs text-slate-300 leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+              Combines fast mobile code, verified Pin 110051 citations, Product schema and 50 word answers that drive daily walk ins.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 4: SERVICES (LIGHT COOL ALABASTER CONTRAST + TECHNICAL IMAGE)
+  ===================================================================== -->
+  <section id="services" class="relative surface-cool overflow-hidden scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 items-center mb-9 sm:mb-16">
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-light mb-3">Six High Street &amp; Clinic Pillars</div>
+          <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+            Complete SEO Services in Krishna Nagar
+          </h2>
+          <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            Our <strong>SEO services in Krishna Nagar</strong> bring together fast mobile lookbooks, Google Business Profile updates, simple answer blocks and <a href="/geo-services-in-delhi/" class="text-brand-600 font-semibold hover:underline">GEO Services in Delhi</a> in one clear schedule. Every task pushes your pages higher on Google while earning mentions on ChatGPT, Gemini and AI Overviews.
+          </p>
+        </div>
+        <div class="lg:col-span-5 min-w-0">
+          <div class="rounded-2xl overflow-hidden border border-slate-200 shadow-md bg-white">
+            <img
+              src="/images/seo-krishna-nagar/technical-ai-seo-services-krishna-nagar.webp"
+              alt="SEO Services in Krishna Nagar Engineers Auditing Mobile Speed and LocalBusiness Schema"
+              width="800"
+              height="450"
+              sizes="(max-width: 1024px) 100vw, 42vw"
+              class="w-full aspect-[16/9] sm:aspect-auto sm:h-56 lg:h-64 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- 3 Columns x 2 Rows Grid Layout -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-7">
+        {services.map((s) => (
+          <div class="elevated-card rounded-2xl p-4 sm:p-7 flex flex-col justify-between group sm:hover:-translate-y-1 min-w-0">
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-4 sm:mb-6">
+                <div class={`w-11 h-11 sm:w-12 sm:h-12 rounded-xl border flex items-center justify-center flex-shrink-0 ${s.iconStyle}`}>
+                  <Fragment set:html={s.icon} />
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class={`text-[10.5px] sm:text-[11px] font-semibold px-2.5 py-1 rounded-md ${s.badgeColor}`}>
+                    {s.category}
+                  </span>
+                  <span class="font-display font-black text-base sm:text-lg text-slate-300">{s.num}</span>
+                </div>
+              </div>
+
+              <h3 class="font-display font-bold text-[17px] sm:text-xl text-slate-900 mb-2.5 sm:mb-3 leading-snug group-hover:text-brand-600 transition-colors">
+                {s.title}
+              </h3>
+
+              <p class="text-slate-600 text-[13px] sm:text-sm leading-relaxed mb-4 sm:mb-6 text-justify hyphens-auto [text-align-last:left]">
+                {s.body}
+              </p>
+            </div>
+
+            <div>
+              <div class={`rounded-xl border p-3.5 sm:p-4 mb-3.5 sm:mb-5 ${s.impactStyle}`}>
+                <div class="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-slate-900 mb-1">
+                  <svg class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                  </svg>
+                  <span>Krishna Nagar Impact</span>
+                </div>
+                <p class="text-xs text-slate-700 leading-relaxed font-medium text-justify hyphens-auto [text-align-last:left]">
+                  {s.impact}
+                </p>
+              </div>
+
+              <a href={s.href} class="w-full sm:w-auto inline-flex items-center justify-between sm:justify-start gap-2 rounded-xl sm:rounded-none bg-slate-50 active:bg-sky-50 sm:bg-transparent border border-slate-200/80 sm:border-0 px-3.5 sm:px-0 py-2.5 min-h-[46px] sm:min-h-0 text-xs font-bold text-brand-600 hover:text-brand-700 group-hover:gap-3 transition-all">
+                <span>{s.cta}</span>
+                <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 5: WHY NK DIGITAL TECH (CRISP WHITE CONTRAST SECTION)
+  ===================================================================== -->
+  <section id="why-us" class="relative surface-white overflow-hidden scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-14 text-left sm:text-center">
+        <div class="badge-light mb-3">Honest High Street Work</div>
+        <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+          Why the Best SEO Company in Krishna Nagar Beats Generic Vendors
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed mb-4 text-justify hyphens-auto [text-align-last:left]">
+          Choosing the <strong>best SEO company in Krishna Nagar</strong> comes down to bazar level accuracy and fast execution. At NK Digital Tech, senior engineers and writers update your lookbooks, clinic pages and map profile directly while you keep full control of your accounts.
+        </p>
+        <p class="text-slate-700 font-semibold text-xs sm:text-sm">
+          Side by side look at how we work in Krishna Nagar:
+        </p>
+      </div>
+
+      <!-- Desktop Comparison Matrix -->
+      <div class="hidden md:block overflow-hidden rounded-2xl border border-slate-200 shadow-lg">
+        <table class="w-full text-left border-collapse">
+          <thead>
+            <tr class="bg-slate-900 text-white">
+              <th class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-slate-300 w-1/4">
+                Comparison Factor
+              </th>
+              <th class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-rose-300 w-[37.5%] border-l border-slate-800">
+                Typical Local Vendor
+              </th>
+              <th class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-brand-300 w-[37.5%] border-l border-slate-800 bg-slate-950">
+                NK Digital Tech Krishna Nagar
+              </th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200 text-sm">
+            {comparison.map((row, idx) => (
+              <tr class={idx % 2 === 0 ? 'bg-white' : 'bg-slate-50/80'}>
+                <td class="py-5 px-6 font-display font-bold text-slate-900">
+                  {row.metric}
+                </td>
+                <td class="py-5 px-6 text-slate-600 border-l border-slate-200">
+                  <div class="flex items-start gap-2.5">
+                    <svg class="w-4 h-4 text-rose-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                    <span>{row.typical}</span>
+                  </div>
+                </td>
+                <td class="py-5 px-6 text-slate-900 font-medium border-l border-slate-200 bg-sky-50/40">
+                  <div class="flex items-start gap-2.5">
+                    <svg class="w-4 h-4 text-emerald-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span>{row.nk}</span>
+                  </div>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Mobile Comparison Cards -->
+      <div class="md:hidden space-y-3.5">
+        {comparison.map((row) => (
+          <div class="elevated-card rounded-2xl p-4 space-y-2.5 min-w-0">
+            <h3 class="font-display font-bold text-slate-900 text-[15px] leading-snug pb-2 border-b border-slate-100">{row.metric}</h3>
+            <div class="rounded-xl bg-rose-50 border border-rose-100 p-3">
+              <div class="flex items-center gap-1.5 mb-1">
+                <svg class="w-3.5 h-3.5 text-rose-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+                <p class="text-[10px] font-bold uppercase tracking-wider text-rose-600">Typical Local Vendor</p>
+              </div>
+              <p class="text-xs text-slate-700 leading-relaxed">{row.typical}</p>
+            </div>
+            <div class="rounded-xl bg-sky-50 border border-sky-200 p-3">
+              <div class="flex items-center gap-1.5 mb-1">
+                <svg class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                </svg>
+                <p class="text-[10px] font-bold uppercase tracking-wider text-brand-600">NK Digital Tech Krishna Nagar</p>
+              </div>
+              <p class="text-xs text-slate-900 font-semibold leading-relaxed">{row.nk}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 6: KRISHNA NAGAR MARKETS & BLOCKS COVERAGE
+  ===================================================================== -->
+  <section id="locations" class="relative surface-cool overflow-hidden scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-14 text-left sm:text-center">
+        <div class="badge-light mb-3">Bazar &amp; Block Coverage</div>
+        <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+          Krishna Nagar Markets, Roads &amp; Blocks We Rank
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          Shoppers and patients search by exact market, metro gate and block names. We build targeted pages for every retail and residential pocket in Krishna Nagar.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
+        {krishnaNagarCorridors.map((c) => (
+          <div class="elevated-card rounded-2xl p-4 sm:p-5 flex flex-col justify-between min-w-0">
+            <div>
+              <div class={`h-1 w-full bg-gradient-to-r ${c.accent} rounded-full mb-3.5`}></div>
+              <div class="flex items-center justify-between gap-2 mb-2.5">
+                <span class="px-2 py-0.5 rounded-md bg-sky-50 border border-sky-200 text-[11px] font-bold uppercase tracking-wider text-brand-600">
+                  {c.hub}
+                </span>
+                <span class="text-[11px] font-semibold text-slate-500">
+                  {c.pincode}
+                </span>
+              </div>
+              <h3 class="font-display font-bold text-base sm:text-lg text-slate-900 mb-1 leading-snug">
+                {c.area}
+              </h3>
+              <p class="text-xs font-bold text-brand-600 mb-2">{c.focus}</p>
+              <p class="text-slate-600 text-[13px] leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+                {c.desc}
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
+              <a href={c.href} class="text-xs font-bold text-brand-600 hover:text-brand-700 inline-flex items-center gap-1 group/link">
+                <span>{c.cta}</span>
+                <svg class="w-3.5 h-3.5 transition-transform group-hover/link:translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 7: OUR CLIENTS (DARK INDIGO CONTRAST SECTION)
+  ===================================================================== -->
+  <section id="clients" class="relative surface-indigo scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-14 text-left sm:text-center">
+        <div class="badge-dark mb-3">Lal Quarter Track Record</div>
+        <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-white tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+          Krishna Nagar Stores &amp; Clinics Growing With Organic Search
+        </h2>
+        <p class="text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          From bridal lehenga showrooms in Lal Quarter and optical clinics on Mandir Marg to CUET coaching centres and builder floor advisors in Blocks A to K, local founders count on our search work.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2.5 sm:gap-5">
+        {clients.map((client) => (
+          <div class="glass-card rounded-2xl p-3 sm:p-5 flex flex-col items-center text-center group sm:hover:-translate-y-1 last:col-span-2 sm:last:col-span-1 min-w-0">
+            <div class="w-full max-w-[200px] sm:max-w-none mx-auto h-14 sm:h-20 rounded-xl bg-white border border-slate-200 flex items-center justify-center p-2.5 sm:p-4 mb-2.5 sm:mb-4 shadow-sm">
+              <img
+                src={client.logo}
+                alt={`${client.name} Logo`}
+                width="130"
+                height="48"
+                class="max-h-9 sm:max-h-12 w-auto object-contain"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <h3 class="font-display font-bold text-sm sm:text-base text-white mb-1">{client.name}</h3>
+            <p class="text-[11px] sm:text-xs text-slate-300 leading-snug mb-2.5 sm:mb-3 flex-grow">{client.sector}</p>
+            <span class="w-full sm:w-auto inline-flex items-center justify-center gap-1 text-[10px] sm:text-[11px] font-semibold text-brand-300 bg-brand-500/15 border border-brand-500/30 px-2 sm:px-2.5 py-1.5 sm:py-1 rounded-md leading-tight max-w-full">
+              <svg class="w-2.5 h-2.5 sm:w-3 sm:h-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+              </svg>
+              <span class="text-center leading-tight break-words">{client.region}</span>
+            </span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 8: INDUSTRIES (LIGHT SLATE CONTRAST SECTION - 12 SECTORS)
+  ===================================================================== -->
+  <section id="industries" class="relative surface-slate overflow-hidden scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-16 text-left sm:text-center">
+        <div class="badge-light mb-3">Sector Specific Plans</div>
+        <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+          Twelve Krishna Nagar Retail &amp; Service Sectors We Rank
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          A bridal showroom in Lal Quarter needs very different pages than an optical clinic on Mandir Marg or a dental practice in Block F. We build custom plans across twelve active Krishna Nagar categories.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-7">
+        {industries.map((ind) => (
+          <div class={`elevated-card rounded-2xl p-4 sm:p-7 border-t-4 ${ind.accentBorder} flex flex-col justify-between sm:hover:-translate-y-1 min-w-0`}>
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-4 sm:mb-5">
+                <div class={`w-10 h-10 sm:w-11 sm:h-11 rounded-xl border flex items-center justify-center flex-shrink-0 ${ind.iconBg}`}>
+                  <Fragment set:html={ind.icon} />
+                </div>
+                <span class="text-[11px] font-semibold text-slate-600 bg-slate-100 px-2.5 py-1 rounded-md">
+                  {ind.sector}
+                </span>
+              </div>
+
+              <h3 class="font-display font-bold text-[17px] sm:text-xl text-slate-900 mb-3 sm:mb-4 leading-snug">
+                {ind.title}
+              </h3>
+
+              <div class="mb-4 sm:mb-5">
+                <p class="text-[11px] font-bold uppercase tracking-wider text-brand-600 mb-1.5">
+                  Campaign Priority
+                </p>
+                <p class="text-slate-600 text-[13px] sm:text-sm leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+                  {ind.focus}
+                </p>
+              </div>
+            </div>
+
+            <div class="rounded-xl bg-emerald-50/70 border border-emerald-200/80 p-3.5 sm:p-4">
+              <p class="text-[11px] font-bold uppercase tracking-wider text-emerald-700 mb-1">
+                Business Outcome
+              </p>
+              <p class="text-slate-800 text-xs font-medium leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+                {ind.outcome}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 9: TESTIMONIALS (DEEP NAVY CONTRAST SECTION - 2x2 GRID)
+  ===================================================================== -->
+  <section id="testimonials" class="relative surface-dark scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="absolute inset-0 mesh-glow pointer-events-none opacity-60"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-16 text-left sm:text-center">
+        <div class="badge-dark mb-3">Verified Local Results</div>
+        <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-white tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+          What Krishna Nagar Showrooms, Clinics &amp; Academies Say
+        </h2>
+        <p class="text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          Real walk in growth, top three map rankings and AI mentions shared by business owners across Lal Quarter, Mandir Marg and Blocks A to K.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-7">
+        {testimonials.map((t) => (
+          <div class="glass-card rounded-2xl p-4 sm:p-8 flex flex-col justify-between sm:hover:-translate-y-1 min-w-0">
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-4 sm:mb-5">
+                <div class="flex items-center gap-1">
+                  {[1, 2, 3, 4, 5].map(() => (
+                    <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                    </svg>
+                  ))}
+                </div>
+                <span class="text-[10px] sm:text-[11px] font-semibold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-1 rounded-md">
+                  Krishna Nagar Partner
+                </span>
+              </div>
+
+              <p class="text-slate-200 text-[13.5px] sm:text-base leading-relaxed italic mb-5 sm:mb-6 text-justify hyphens-auto [text-align-last:left]">
+                "{t.quote}"
+              </p>
+
+              <div class="rounded-xl bg-slate-900/90 border border-slate-700/80 p-3.5 sm:p-4 mb-5 sm:mb-6">
+                <p class="text-[11px] font-bold uppercase tracking-wider text-brand-400 mb-2 sm:mb-2.5">
+                  Recorded Results
+                </p>
+                <ul class="space-y-2">
+                  {t.metrics.map((m) => (
+                    <li class="flex items-start gap-2 text-xs text-slate-300 font-medium leading-snug">
+                      <svg class="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                      </svg>
+                      <span>{m}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3.5 sm:gap-4 pt-3.5 sm:pt-4 border-t border-slate-800">
+              <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-white p-2 flex items-center justify-center flex-shrink-0 shadow-sm">
+                <img
+                  src={t.logo}
+                  alt={`${t.company} Logo`}
+                  width="48"
+                  height="48"
+                  class="max-h-8 sm:max-h-10 w-auto object-contain"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="min-w-0">
+                <h3 class="font-display font-bold text-white text-sm sm:text-base leading-snug">{t.name}</h3>
+                <p class="text-xs text-slate-300 leading-snug">
+                  {t.title}, <strong class="text-brand-400 font-semibold">{t.company}</strong>
+                </p>
+                <p class="text-[10.5px] sm:text-[11px] text-slate-400 mt-0.5 leading-snug">{t.sector}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 10: HOW WE WORK (CRISP WHITE CONTRAST SECTION - 4 STAGES)
+  ===================================================================== -->
+  <section id="process" class="relative surface-white overflow-hidden scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-16 text-left sm:text-center">
+        <div class="badge-light mb-3">Four Phase Sprint Plan</div>
+        <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+          Our Step by Step Process for Ranking Krishna Nagar Websites
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          We start by speeding up your mobile lookbooks and fixing broken links, win top three Google Map spots in Lal Quarter and Mandir Marg, and build lasting mentions on ChatGPT and Gemini.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-7">
+        {stages.map((s) => (
+          <div class="elevated-card rounded-2xl p-4 sm:p-8 relative overflow-hidden group sm:hover:-translate-y-1 min-w-0">
+            <div class="flex items-center justify-between gap-4 mb-3.5 sm:mb-5">
+              <span class={`inline-flex items-center px-2.5 sm:px-3 py-1 rounded-lg text-xs font-bold uppercase tracking-wider text-white bg-gradient-to-r ${s.accent}`}>
+                {s.num}
+              </span>
+              <span class="font-display font-black text-3xl sm:text-4xl text-slate-200 group-hover:text-slate-300 transition-colors">
+                {s.step}
+              </span>
+            </div>
+            <h3 class="font-display font-bold text-[17px] sm:text-xl text-slate-900 mb-2.5 sm:mb-3 leading-snug">
+              {s.title}
+            </h3>
+            <p class="text-slate-600 text-[13px] sm:text-sm leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+              {s.body}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 11: PARTNER WITH THE SEO COMPANY IN KRISHNA NAGAR DELHI (CONCLUSION)
+  ===================================================================== -->
+  <section class="relative surface-indigo py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-7 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns -->
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-dark mb-3.5 sm:mb-4">Steady Showroom &amp; Clinic Walk Ins</div>
+          <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-white tracking-tight leading-[1.22] sm:leading-tight mb-4 sm:mb-6">
+            Grow Daily Walk Ins With the Best SEO Company in Krishna Nagar Delhi
+          </h2>
+          <div class="space-y-4 sm:space-y-5 text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            <p>
+              Winning steady shoppers and patients across Pin 110051 takes more than market banners or boosted posts that stop working the day you pause spending. Every day, wedding families, metro commuters and residents in Blocks A to K check Google Maps and AI answers before stepping into a Lal Quarter showroom or clinic.
+            </p>
+            <p>
+              When you hire NK Digital Tech as your <strong>SEO Company in Krishna Nagar Delhi</strong>, our senior search team and <a href="/website-development-company-in-delhi/" class="text-sky-300 font-semibold hover:underline">Website Development Company in Delhi</a> developers speed up your mobile galleries, build collection and treatment pages, clean up directory records and add schema markup directly. Request your free Krishna Nagar audit today for a clear 90 day plan.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Unique Krishna Nagar Growth Image -->
+        <div class="lg:col-span-5 min-w-0">
+          <div class="rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-700/80 shadow-2xl bg-slate-900">
+            <img
+              src="/images/seo-krishna-nagar/organic-search-growth-krishna-nagar.webp"
+              alt="SEO Company in Krishna Nagar Delhi Partnering With Lal Quarter Retail and Optical Founders"
+              width="800"
+              height="450"
+              sizes="(max-width: 1024px) 100vw, 42vw"
+              class="w-full aspect-[16/9] sm:aspect-auto sm:h-64 lg:h-72 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 12: FAQ (LIGHT COOL SLATE CONTRAST SECTION)
+  ===================================================================== -->
+  <section id="faq" class="relative surface-cool overflow-hidden scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-left sm:text-center mb-9 sm:mb-14">
+        <div class="badge-light mb-3">Krishna Nagar Buyer Questions</div>
+        <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+          Common Questions About Hiring an SEO Partner in Krishna Nagar
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          Simple answers about monthly retainers, ranking timelines, Lal Quarter retail and optical SEO, and ChatGPT visibility across Krishna Nagar.
+        </p>
+      </div>
+
+      <div class="space-y-3 sm:space-y-4">
+        {faqs.map((f, i) => (
+          <details class="elevated-card rounded-2xl group overflow-hidden" open={i === 0}>
+            <summary class="flex items-start sm:items-center justify-between gap-2.5 sm:gap-4 px-3.5 sm:px-6 py-4 sm:py-5 min-h-[56px] active:bg-sky-50/60 transition-colors select-none">
+              <div class="flex items-start sm:items-center gap-2.5 sm:gap-3.5 text-left min-w-0">
+                <span class="w-6 h-6 sm:w-7 sm:h-7 rounded-lg bg-sky-50 border border-sky-200 text-brand-600 font-display font-bold text-xs flex items-center justify-center flex-shrink-0 mt-0.5 sm:mt-0">
+                  0{i + 1}
+                </span>
+                <span class="font-display font-bold text-slate-900 text-[14px] sm:text-base md:text-lg leading-[1.4] sm:leading-snug break-words">
+                  {f.q}
+                </span>
+              </div>
+              <span class="faq-icon w-7 h-7 sm:w-8 sm:h-8 rounded-full border border-slate-200 text-slate-600 flex items-center justify-center flex-shrink-0 mt-0.5 sm:mt-0">
+                <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                </svg>
+              </span>
+            </summary>
+            <div class="px-3.5 sm:px-6 pb-4 sm:pb-6 pt-3 text-slate-600 text-[13.5px] sm:text-sm md:text-base leading-[1.68] sm:leading-relaxed border-t border-slate-100 text-justify hyphens-auto [text-align-last:left]">
+              {f.a}
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 13: CALL TO ACTION BANNER (LAST SECTION)
+  ===================================================================== -->
+  <section id="contact" class="relative surface-dark scroll-mt-16 sm:scroll-mt-20 pt-10 pb-12 sm:py-16 lg:py-20 px-4 sm:px-6 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-5xl mx-auto">
+      <div class="rounded-2xl sm:rounded-3xl bg-gradient-to-r from-brand-600 via-brand-700 to-accent-700 p-6 sm:p-10 md:p-12 text-center text-white shadow-2xl border border-white/15 relative overflow-hidden">
+        <div class="relative z-10 max-w-2xl mx-auto">
+          <h2 class="font-display font-black text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl md:text-4xl text-white tracking-tight leading-[1.22] sm:leading-snug mb-3 sm:mb-4">
+            Book Your Free Audit With the Best SEO Company in Krishna Nagar Delhi
+          </h2>
+
+          <p class="text-sky-50 text-[13px] sm:text-sm md:text-base leading-relaxed mb-6 sm:mb-8">
+            Get a simple, clear review of your mobile speed, Google Map Pack rankings and ChatGPT mentions across Lal Quarter, Mandir Marg, Blocks A to K and Azad Nagar.
+          </p>
+
+          <a
+            href="mailto:connect@nkdigitaltech.com"
+            class="inline-flex w-full sm:w-auto min-h-[48px] items-center justify-center gap-2 sm:gap-3 px-5 sm:px-8 py-3.5 sm:py-4 rounded-xl bg-white text-slate-950 hover:bg-sky-50 font-display font-bold text-sm sm:text-base shadow-xl transition-all duration-300 active:scale-95 text-center leading-snug"
+          >
+            <span>Request Krishna Nagar Website Audit</span>
+            <svg class="w-4 h-4 sm:w-5 sm:h-5 text-brand-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mobile Sticky Bottom Quick Action Bar -->
+  <div class="mobile-sticky-cta sm:hidden fixed bottom-0 inset-x-0 z-40 bg-[#050a14]/95 backdrop-blur-xl border-t border-slate-800 px-3 pt-2.5 pb-[max(0.7rem,env(safe-area-inset-bottom))] shadow-[0_-8px_24px_rgba(0,0,0,0.45)] transition-all duration-200">
+    <div class="flex items-center gap-2.5">
+      <a
+        href="mailto:connect@nkdigitaltech.com"
+        class="btn-primary flex-1 min-w-0 min-h-[48px] py-2.5 px-3 text-[12.5px] font-bold rounded-xl whitespace-nowrap"
+      >
+        <span class="truncate">Free Krishna Nagar SEO Audit</span>
+        <svg class="w-3.5 h-3.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+        </svg>
+      </a>
+      <a
+        href="#services"
+        class="btn-secondary-dark min-h-[48px] py-2.5 px-4 text-[12.5px] font-semibold rounded-xl flex-shrink-0 whitespace-nowrap"
+      >
+        <span>Services</span>
+      </a>
+    </div>
+  </div>
+
+  <style>
+    @media (max-width: 639px) {
+      .glass-card {
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+      }
+      #locations,
+      #why-us,
+      #clients,
+      #industries,
+      #testimonials,
+      #process,
+      #faq {
+        content-visibility: auto;
+        contain-intrinsic-size: auto 720px;
+      }
+      a,
+      button,
+      summary {
+        touch-action: manipulation;
+        -webkit-tap-highlight-color: transparent;
+      }
+    }
+  </style>
+
+</Layout>

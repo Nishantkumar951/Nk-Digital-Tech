@@ -1,0 +1,1473 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '../styles/global.css';
+
+const pageTitle = 'Best SEO Company in Green Park Delhi | NK Digital Tech';
+const pageDescription = 'NK Digital Tech is the Best SEO Company in Green Park Delhi. We help corporate consultancies, architectural studios and CA firms on Aurobindo Marg scale.';
+const pageCanonical = 'https://www.nkdigitaltech.net/seo-company-in-green-park/';
+
+const clients = [
+  {
+    "name": "Vision Associates",
+    "sector": "Corporate Audit, International Taxation, FEMA & Valuation CAs",
+    "region": "Green Park Extension & Yusuf Sarai Commercial Complex Pin 110016",
+    "logo": "/images/clients/vision.webp"
+  },
+  {
+    "name": "Aangan",
+    "sector": "Principal Architecture, Sustainable Design & Turnkey Kothi Interiors",
+    "region": "Green Park Main, Gulmohar Park & SDA",
+    "logo": "/images/clients/aangan.webp"
+  },
+  {
+    "name": "PropertyWays",
+    "sector": "Park Facing Builder Floors, Bungalow Advisory & Joint Ventures",
+    "region": "Green Park, Safdarjung Enclave & Gulmohar Park",
+    "logo": "/images/clients/propertyways.webp"
+  },
+  {
+    "name": "VP Infra",
+    "sector": "Turnkey Structural Redevelopment, Civil Engineering & MEP Consulting",
+    "region": "Aurobindo Marg Corridor & Green Park Extension",
+    "logo": "/images/clients/vp-infra.webp"
+  },
+  {
+    "name": "Creative Academy",
+    "sector": "UPSC/Gate Mentorship, Foreign Languages & Executive Skill Programs",
+    "region": "Green Park Metro Corridor & Yusuf Sarai",
+    "logo": "/images/clients/creative-academy.webp"
+  }
+];
+
+const services = [
+  {
+    "num": "01",
+    "category": "Practice Hub Engineering",
+    "icon": "<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z\"/></svg>",
+    "iconStyle": "bg-sky-50 border-sky-200 text-brand-600",
+    "impactStyle": "bg-sky-50/80 border-sky-200/80 text-slate-800",
+    "badgeColor": "text-brand-600 bg-sky-100/80",
+    "title": "Advisory, Architectural & Real Estate Hub Architecture",
+    "body": "Serving as your technical SEO company in Green Park, we build sub second WebP practice hubs and project portfolios fortified with AccountingService, LegalService, RealEstateAgent and Person JSON LD.",
+    "impact": "First page Google rankings for South Delhi corporate advisory, architectural and property queries.",
+    "cta": "Website Development Company in Delhi",
+    "href": "/website-development-company-in-delhi/"
+  },
+  {
+    "num": "02",
+    "category": "AI Due Diligence Citations",
+    "icon": "<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z\"/></svg>",
+    "iconStyle": "bg-violet-50 border-violet-200 text-accent-600",
+    "impactStyle": "bg-violet-50/80 border-violet-200/80 text-slate-800",
+    "badgeColor": "text-accent-600 bg-violet-100/80",
+    "title": "ChatGPT, Perplexity & Gemini Practice Recommendations",
+    "body": "CFOs, general counsels and HNI homeowners increasingly prompt AI engines to shortlist reputable CAs, law chambers, architects and builders in Green Park and Gulmohar Park. We structure your entity credentials so LLMs cite your firm.",
+    "impact": "Verified brand inclusion inside AI generated advisory and design shortlists.",
+    "cta": "AI SEO Company in Delhi",
+    "href": "/ai-seo-company-in-delhi/"
+  },
+  {
+    "num": "03",
+    "category": "Pin 110016 Map Authority",
+    "icon": "<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z\"/><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M15 11a3 3 0 11-6 0 3 3 0 016 0z\"/></svg>",
+    "iconStyle": "bg-emerald-50 border-emerald-200 text-emerald-600",
+    "impactStyle": "bg-emerald-50/80 border-emerald-200/80 text-slate-800",
+    "badgeColor": "text-emerald-700 bg-emerald-100/80",
+    "title": "Green Park, Yusuf Sarai & Gulmohar Park GBP Dominance",
+    "body": "Through precision local SEO services in Green Park, we resolve building pin conflicts in Yusuf Sarai Commercial Complex and Green Park Main Market while verifying suites across Extension and Safdarjung Enclave.",
+    "impact": "Direct phone calls and consultation bookings from corporate and HNI decision makers.",
+    "cta": "Local SEO Services in Delhi",
+    "href": "/local-seo-services-in-delhi/"
+  },
+  {
+    "num": "04",
+    "category": "Regulatory & Design Snippets",
+    "icon": "<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z\"/></svg>",
+    "iconStyle": "bg-amber-50 border-amber-200 text-amber-600",
+    "impactStyle": "bg-amber-50/80 border-amber-200/80 text-slate-800",
+    "badgeColor": "text-amber-700 bg-amber-100/80",
+    "title": "Answer Engine Optimization for Statutory & Building FAQs",
+    "body": "We author concise 45 word regulatory summaries covering ROC/FEMA compliance, MCD stilt plus four FAR norms, arbitration clauses and FAQPage schema to capture Google Featured Snippets.",
+    "impact": "Immediate authority when directors and property owners research statutory rules.",
+    "cta": "AEO Services in Delhi",
+    "href": "/aeo-services-in-delhi/"
+  },
+  {
+    "num": "05",
+    "category": "Partner Credential Graphs",
+    "icon": "<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M13 10V3L4 14h7v7l9-11h-7z\"/></svg>",
+    "iconStyle": "bg-indigo-50 border-indigo-200 text-indigo-600",
+    "impactStyle": "bg-indigo-50/80 border-indigo-200/80 text-slate-800",
+    "badgeColor": "text-indigo-700 bg-indigo-100/80",
+    "title": "Generative Engine Optimization & Credential PR",
+    "body": "We reinforce your partners digital authority by linking ICAI fellowships, Bar Council registrations, COA licenses, RERA credentials and llms.txt files with authoritative business and legal directories.",
+    "impact": "Superior E E A T trust scores across Google Knowledge Graph and generative AI engines.",
+    "cta": "GEO Services in Delhi",
+    "href": "/geo-services-in-delhi/"
+  },
+  {
+    "num": "06",
+    "category": "Executive Briefing Funnels",
+    "icon": "<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4\"/></svg>",
+    "iconStyle": "bg-cyan-50 border-cyan-200 text-cyan-700",
+    "impactStyle": "bg-cyan-50/80 border-cyan-200/80 text-slate-800",
+    "badgeColor": "text-cyan-700 bg-cyan-100/80",
+    "title": "Consultation Scheduling & Project Scope Portals",
+    "body": "Operating as your dedicated growth partner in Green Park, we build streamlined partner briefing calendars, architectural scope calculators and direct executive WhatsApp channels.",
+    "impact": "Higher conversion of organic visitors into retained corporate and HNI engagements.",
+    "cta": "Best SEO Company in South Delhi",
+    "href": "/best-seo-company-in-south-delhi/"
+  }
+];
+
+const comparison = [
+  {
+    "metric": "Editorial & Regulatory Precision",
+    "typical": "Publishes shallow, generic blog posts that fail ICAI, BCI or COA professional standards",
+    "nk": "Engineers Partner reviewed regulatory commentaries and architectural case hubs for Pin 110016"
+  },
+  {
+    "metric": "Primary Success Metric",
+    "typical": "Focuses on broad informational impressions with zero attribution to retained mandates",
+    "nk": "Measures verified partner consultations, architectural commissions and property inquiries"
+  },
+  {
+    "metric": "Portfolio & Mobile Velocity",
+    "typical": "Slow 20MB PDF lookbooks and unoptimized templates that stall on mobile networks",
+    "nk": "Sub second WebP architectural galleries and structured service hubs passing Core Web Vitals"
+  },
+  {
+    "metric": "AI Due Diligence Visibility",
+    "typical": "Lacks structured entity schema or llms.txt, leaving your practice uncited by ChatGPT",
+    "nk": "45 word statutory definitions, verified partner Person schema and custom llms.txt indexing"
+  },
+  {
+    "metric": "Aurobindo Marg & Complex GBP",
+    "typical": "Suppressed map pins inside Yusuf Sarai Commercial Complex or Green Park Main Market",
+    "nk": "Suite level NAP disambiguation and authoritative citations across professional registries"
+  },
+  {
+    "metric": "Code & Data Governance",
+    "typical": "Locks your practice content or analytics inside a proprietary third party agency system",
+    "nk": "100% permanent client ownership of all repository code, schema graphs and analytics data"
+  }
+];
+
+const southCorridors = [
+  {
+    "hub": "Area 01",
+    "area": "Nehru Place",
+    "focus": "SEO Company in Nehru Place",
+    "pincode": "Pin 110019",
+    "desc": "Across Nehru Place towers, we rank B2B software firms, IT hardware distributors, CA practices and consultancies.",
+    "cta": "View Dedicated Nehru Place Page",
+    "href": "/seo-company-in-nehru-place/",
+    "accent": "from-brand-500 to-sky-400"
+  },
+  {
+    "hub": "Area 02",
+    "area": "Okhla Industrial Area",
+    "focus": "SEO Company in Okhla",
+    "pincode": "Pin 110020",
+    "desc": "Across Okhla Phases 1 to 3, we rank manufacturing units, export houses, print presses and corporate offices.",
+    "cta": "View Dedicated Okhla Page",
+    "href": "/seo-company-in-okhla/",
+    "accent": "from-accent-500 to-violet-400"
+  },
+  {
+    "hub": "Area 03",
+    "area": "Saket",
+    "focus": "SEO Company in Saket",
+    "pincode": "Pin 110017",
+    "desc": "Around Saket District Centre and District Courts, we rank law chambers, corporate suites and consultancies.",
+    "cta": "View Dedicated Saket Page",
+    "href": "/seo-company-in-saket/",
+    "accent": "from-cyan-500 to-teal-400"
+  },
+  {
+    "hub": "Area 04",
+    "area": "Greater Kailash",
+    "focus": "SEO Company in Greater Kailash",
+    "pincode": "Pin 110048",
+    "desc": "Spanning GK 1 and GK 2, we rank luxury builder floor developers, wealth advisors, CA firms and interior studios.",
+    "cta": "View Dedicated GK Page",
+    "href": "/seo-company-in-greater-kailash/",
+    "accent": "from-emerald-500 to-green-400"
+  },
+  {
+    "hub": "Area 05",
+    "area": "Hauz Khas",
+    "focus": "SEO Company in Hauz Khas",
+    "pincode": "Pin 110016",
+    "desc": "Across Hauz Khas and Kalu Sarai, we rank engineering coaching academies, architecture studios and B2B tech firms.",
+    "cta": "View Dedicated Hauz Khas Page",
+    "href": "/seo-company-in-hauz-khas/",
+    "accent": "from-indigo-500 to-blue-400"
+  },
+  {
+    "hub": "Area 06",
+    "area": "Defence Colony",
+    "focus": "SEO Company in Defence Colony",
+    "pincode": "Pin 110024",
+    "desc": "We rank Supreme Court and High Court litigation chambers, custom home builders and family office advisors.",
+    "cta": "View Dedicated Defence Colony Page",
+    "href": "/seo-company-in-defence-colony/",
+    "accent": "from-violet-500 to-purple-400"
+  },
+  {
+    "hub": "Area 07",
+    "area": "Lajpat Nagar",
+    "focus": "SEO Company in Lajpat Nagar",
+    "pincode": "Pin 110024",
+    "desc": "Across Lajpat Nagar Phases 1 to 4, we rank CA chambers, visa consultants, interior firms and B2B traders.",
+    "cta": "View Dedicated Lajpat Nagar Page",
+    "href": "/seo-company-in-lajpat-nagar/",
+    "accent": "from-amber-500 to-orange-400"
+  },
+  {
+    "hub": "Area 08",
+    "area": "Vasant Vihar",
+    "focus": "SEO Company in Vasant Vihar",
+    "pincode": "Pin 110057",
+    "desc": "In Vasant Vihar and Basant Lok, we rank diplomatic leasing advisors, luxury estate builders and wealth offices.",
+    "cta": "View Dedicated Vasant Vihar Page",
+    "href": "/seo-company-in-vasant-vihar/",
+    "accent": "from-teal-500 to-emerald-400"
+  },
+  {
+    "hub": "Area 09",
+    "area": "Jasola",
+    "focus": "SEO Company in Jasola",
+    "pincode": "Pin 110025",
+    "desc": "In Jasola District Centre and Mohan Estate, we rank Grade A corporate towers, EPC firms and B2B offices.",
+    "cta": "View Dedicated Jasola Page",
+    "href": "/seo-company-in-jasola/",
+    "accent": "from-rose-500 to-pink-400"
+  },
+  {
+    "hub": "Area 10",
+    "area": "Malviya Nagar",
+    "focus": "SEO Company in Malviya Nagar",
+    "pincode": "Pin 110017",
+    "desc": "Across Malviya Nagar and Shivalik, we rank real estate developers, coaching academies, IT firms and consultants.",
+    "cta": "View Dedicated Malviya Nagar Page",
+    "href": "/seo-company-in-malviya-nagar/",
+    "accent": "from-sky-500 to-cyan-400"
+  },
+  {
+    "hub": "Area 11",
+    "area": "Green Park",
+    "focus": "SEO Company in Green Park",
+    "pincode": "Pin 110016",
+    "desc": "Around Green Park Main and Yusuf Sarai, we rank corporate consultancies, architectural firms and academies.",
+    "cta": "View Dedicated Green Park Page",
+    "href": "/seo-company-in-green-park/",
+    "accent": "from-blue-500 to-indigo-400"
+  },
+  {
+    "hub": "Area 12",
+    "area": "Chhatarpur",
+    "focus": "SEO Company in Chhatarpur",
+    "pincode": "Pin 110074",
+    "desc": "Along MG Road and Chhatarpur, we rank turnkey interior studios, farmhouse developers and luxury event venues.",
+    "cta": "View Dedicated Chhatarpur Page",
+    "href": "/seo-company-in-chhatarpur/",
+    "accent": "from-fuchsia-500 to-rose-400"
+  }
+];
+
+const industries = [
+  {
+    "sector": "Park Facing Builder Floor & Estate SEO",
+    "title": "Real Estate & Property",
+    "focus": "Ranking luxury builder floor developers, Deer Park facing kothi advisors and plot collaboration consultants across Green Park Main, Green Park Extension, Gulmohar Park and Safdarjung Enclave.",
+    "outcome": "Direct HNI and NRI buyer inquiries and 300 to 800 sq yd plot redevelopment joint ventures.",
+    "accentBorder": "border-t-brand-500",
+    "iconBg": "bg-sky-50 text-brand-600 border-sky-200",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4\"/></svg>"
+  },
+  {
+    "sector": "Principal Architecture & Turnkey Interior SEO",
+    "title": "Interior Design & Architecture",
+    "focus": "Positioning COA registered architectural firms, urban conservation studios, structural engineering consultants and luxury turnkey interior practices in Green Park, Gulmohar Park and SDA.",
+    "outcome": "Custom residence architecture commissions and corporate studio fit out contracts.",
+    "accentBorder": "border-t-amber-500",
+    "iconBg": "bg-amber-50 text-amber-600 border-amber-200",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z\"/></svg>"
+  },
+  {
+    "sector": "GATE/UPSC, Foreign Language & Professional Coaching SEO",
+    "title": "Education & Coaching Institutes",
+    "focus": "Structuring Course schema and enrollment funnels for GATE/IES engineering academies, UPSC mentorship centers, foreign language institutes and executive upskilling hubs along Aurobindo Marg and Yusuf Sarai.",
+    "outcome": "Consistent batch enrollments and institutional training partnerships.",
+    "accentBorder": "border-t-cyan-500",
+    "iconBg": "bg-cyan-50 text-cyan-700 border-cyan-200",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222\"/></svg>"
+  },
+  {
+    "sector": "Scientific Instrument, Cleanroom & Engineering Office SEO",
+    "title": "Manufacturing & Industrial Businesses",
+    "focus": "Building specification rich B2B portals for research laboratory instrument suppliers, acoustic/cleanroom engineering firms and industrial component head offices near IIT/AIIMS corridor.",
+    "outcome": "Institutional tender qualifications, R&D procurement orders and pan India distributor leads.",
+    "accentBorder": "border-t-emerald-500",
+    "iconBg": "bg-emerald-50 text-emerald-600 border-emerald-200",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z\"/><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M15 12a3 3 0 11-6 0 3 3 0 016 0z\"/></svg>"
+  },
+  {
+    "sector": "B2B SaaS, Data Analytics & GovTech Advisory SEO",
+    "title": "SaaS & Technology Companies",
+    "focus": "Scaling organic B2B discovery for data science consultancies, enterprise software studios, GIS/mapping tech firms and digital transformation agencies in Green Park and Yusuf Sarai.",
+    "outcome": "Inbound enterprise technology retainers and institutional software demos.",
+    "accentBorder": "border-t-indigo-500",
+    "iconBg": "bg-indigo-50 text-indigo-600 border-indigo-200",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4\"/></svg>"
+  },
+  {
+    "sector": "Chartered Accountancy, Audit & Valuation SEO",
+    "title": "Accounting & Financial Services",
+    "focus": "Ranking Chartered Accountancy practices, IBBI registered valuers, FEMA/RBI compliance consultants and family wealth offices in Green Park Extension and Yusuf Sarai Commercial Complex.",
+    "outcome": "Retained statutory audits, corporate valuation mandates and NRI tax advisory briefs.",
+    "accentBorder": "border-t-rose-500",
+    "iconBg": "bg-rose-50 text-rose-600 border-rose-200",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z\"/></svg>"
+  },
+  {
+    "sector": "Supreme Court, High Court & Corporate Law SEO",
+    "title": "Legal Services & Law Firms",
+    "focus": "Engineering BCI compliant legal hubs for Senior Advocates, arbitration and constitutional counsels, intellectual property chambers and estate litigation lawyers in Gulmohar Park and Green Park.",
+    "outcome": "Direct corporate litigation retainers, IP registration portfolios and arbitration briefs.",
+    "accentBorder": "border-t-accent-500",
+    "iconBg": "bg-violet-50 text-accent-600 border-violet-200",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3\"/></svg>"
+  },
+  {
+    "sector": "Executive Guest Suites & Diplomatic Catering SEO",
+    "title": "Hospitality, Banquets & Catering",
+    "focus": "Optimizing executive serviced residences, corporate business transit suites and institutional conference catering services operating across Green Park and Safdarjung Enclave.",
+    "outcome": "Direct corporate guest house contracts and diplomatic/institutional event bookings.",
+    "accentBorder": "border-t-amber-500",
+    "iconBg": "bg-amber-50 text-amber-600 border-amber-200",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z\"/></svg>"
+  },
+  {
+    "sector": "Cold Chain, Research Specimen & Secure Logistics SEO",
+    "title": "Logistics, Warehousing & Transport",
+    "focus": "Ranking temperature controlled logistics operators, fine art and archive movers, and corporate fleet management services along the Aurobindo Marg and Ring Road junction.",
+    "outcome": "Recurring institutional logistics contracts and specialized transport retainers.",
+    "accentBorder": "border-t-teal-500",
+    "iconBg": "bg-teal-50 text-teal-600 border-teal-200",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z\"/><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0\"/></svg>"
+  },
+  {
+    "sector": "Management Consulting, CSR & Executive Search SEO",
+    "title": "HR, Staffing & Corporate Services",
+    "focus": "Positioning public policy and CSR advisory firms, board level executive search consultants and managed office operators in Green Park Main and Yusuf Sarai.",
+    "outcome": "Retained C suite talent searches, CSR impact assessments and corporate advisory projects.",
+    "accentBorder": "border-t-sky-500",
+    "iconBg": "bg-sky-50 text-sky-600 border-sky-200",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z\"/></svg>"
+  },
+  {
+    "sector": "Architectural Solar, Heat Pump & Clean Air Engineering SEO",
+    "title": "Solar, Green Energy & EV Infrastructure",
+    "focus": "Ranking aesthetic rooftop solar EPC integrators, central heat pump water systems, commercial EV chargers and central air purification engineers serving Green Park and Gulmohar Park.",
+    "outcome": "Turnkey bungalow and office building green energy and HVAC modernization contracts.",
+    "accentBorder": "border-t-lime-500",
+    "iconBg": "bg-lime-50 text-lime-600 border-lime-200",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M13 10V3L4 14h7v7l9-11h-7z\"/></svg>"
+  },
+  {
+    "sector": "Specialty Chemical, Agro & Engineering Export House SEO",
+    "title": "B2B Wholesale & Industrial Exporters",
+    "focus": "Structuring international B2B trade portals for merchant exporters, specialty chemical indenting agents and engineering sourcing houses headquartered in Green Park.",
+    "outcome": "Verified international buyer inquiries and global distribution partnerships.",
+    "accentBorder": "border-t-orange-500",
+    "iconBg": "bg-orange-50 text-orange-600 border-orange-200",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4\"/></svg>"
+  }
+];
+
+const testimonials = [
+  {
+    "name": "CA Devendra Nath Bhargava",
+    "title": "Managing Partner",
+    "company": "Bhargava & Co. Chartered Accountants & Valuers",
+    "sector": "Statutory Audit, IBBI Valuation & FEMA Advisory, Green Park Extension",
+    "metrics": [
+      "315% increase in inbound corporate valuation, FEMA and statutory audit mandates",
+      "Ranked #1 on Google for IBBI registered valuer and FEMA consultant South Delhi",
+      "Cited by ChatGPT and Perplexity for corporate tax and audit firms in Green Park"
+    ],
+    "quote": "Our chamber in Green Park Extension serves listed companies and foreign subsidiaries, yet our old website had zero organic presence. NK Digital Tech structured our regulatory publications with AccountingService schema and 45 word AEO answers, bringing direct CFO inquiries every week.",
+    "logo": "/images/clients/vision.webp"
+  },
+  {
+    "name": "Ar. Meenakshi Sabharwal",
+    "title": "Principal Partner",
+    "company": "Atelier Sabharwal Architecture & Urban Design",
+    "sector": "Luxury Bungalow & Institutional Architecture, Gulmohar Park & Green Park",
+    "metrics": [
+      "3.5x growth in turnkey kothi architecture and corporate workspace commissions",
+      "Sub second mobile load velocity across 75 high resolution architectural projects",
+      "Top 3 Google Map Pack visibility across Green Park, Gulmohar Park and SDA"
+    ],
+    "quote": "Homeowners in Gulmohar Park, Green Park Extension and Safdarjung Enclave evaluate an architect portfolio depth online before scheduling a studio visit. NK Digital Tech rebuilt our heavy image galleries in fast WebP format with local schema, making organic search our strongest channel.",
+    "logo": "/images/clients/aangan.webp"
+  },
+  {
+    "name": "Adv. Raghavendra Pratap",
+    "title": "Founding Partner",
+    "company": "Pratap & Associates Law Chambers",
+    "sector": "Commercial Arbitration, IP & Estate Law, Gulmohar Park Pin 110016",
+    "metrics": [
+      "290% surge in corporate arbitration, trademark portfolio and estate advisory briefs",
+      "Captured 40+ position zero snippets for commercial arbitration and succession law",
+      "Featured in AI Overviews for corporate dispute chambers on Aurobindo Marg"
+    ],
+    "quote": "Situated in Gulmohar Park between the High Court and South Delhi commercial hubs, we needed a BCI compliant digital educational hub. NK Digital Tech structured our legal insights with LegalService and Person JSON LD, establishing top tier visibility across Google and AI search.",
+    "logo": "/images/clients/vp-infra.webp"
+  },
+  {
+    "name": "Rohit Chhabra",
+    "title": "Director",
+    "company": "Parkview Estates &Redevelopment",
+    "sector": "Deer Park Facing Builder Floors & Plot Collaborations, Green Park Main",
+    "metrics": [
+      "330% increase in direct HNI buyer site visits and plot collaboration inquiries",
+      "Ranked #1 on Google for luxury builder floors Green Park and Safdarjung Enclave",
+      "Shortlisted by Gemini and ChatGPT for RERA verified builders in Pin 110016"
+    ],
+    "quote": "Park facing plots and builder floors in Green Park Main and Extension command a high premium, and NRI buyers research extensively online. NK Digital Tech built enclave specific hubs and verified our GBP, connecting us directly with serious family buyers without broker chains.",
+    "logo": "/images/clients/propertyways.webp"
+  }
+];
+
+const stages = [
+  {
+    "num": "Stage 01",
+    "step": "01",
+    "title": "Practice Velocity, Complex GBP & Entity Audit",
+    "body": "We benchmark your Core Web Vitals, audit pin suppression in Yusuf Sarai Commercial Complex or Green Park Main, and map high intent advisory, architectural and property keywords.",
+    "accent": "from-brand-600 to-sky-500"
+  },
+  {
+    "num": "Stage 02",
+    "step": "02",
+    "title": "Practice Hub Architecture & Credential Schema",
+    "body": "Our strategists design a 90 day roadmap to publish practice area hubs, enclave property guides and partner profiles paired with AccountingService, LegalService or RealEstateAgent JSON LD.",
+    "accent": "from-accent-600 to-violet-500"
+  },
+  {
+    "num": "Stage 03",
+    "step": "03",
+    "title": "In Repo WebP Engineering & Pin 110016 Map Rank",
+    "body": "Working directly in your codebase, we deploy sub second WebP project showcases, 45 word regulatory AEO answers, briefing schedulers and verified citations across Aurobindo Marg.",
+    "accent": "from-cyan-600 to-teal-500"
+  },
+  {
+    "num": "Stage 04",
+    "step": "04",
+    "title": "Biweekly Mandate Attribution & AI Citation Scaling",
+    "body": "Every fourteen days, we review Search Console ranking climbs, verified partner consultation bookings and brand citations across ChatGPT, Perplexity and Google AI Overviews.",
+    "accent": "from-emerald-600 to-green-500"
+  }
+];
+
+const faqs = [
+  {
+    "q": "Why do corporate consultancies, architectural studios and CA chambers in Green Park need specialized SEO?",
+    "a": "Green Park Main, Green Park Extension, Yusuf Sarai Commercial Complex and Gulmohar Park host some of South Delhi most respected advisory practices, architectural studios and luxury developers. Corporate boards, PSU officials and HNI families evaluate your partner credentials, case studies and Google/AI visibility before making contact. Our specialized SEO engineers fast, credentialed digital hubs that win institutional trust."
+  },
+  {
+    "q": "What is the monthly retainer for SEO services in Green Park Delhi?",
+    "a": "Monthly SEO retainers in Green Park range from ₹18,000 to ₹45,000 depending on practice scope, portfolio complexity and local vs national/international targeting. A single chamber CA practice, legal office or architectural studio in Pin 110016 typically invests ₹18,000 to ₹25,000 per month, while multi vertical consultancies and luxury developers invest ₹30,000 to ₹45,000+."
+  },
+  {
+    "q": "How do you resolve Google Map pin conflicts in Yusuf Sarai Commercial Complex and Green Park Market?",
+    "a": "Yusuf Sarai Commercial Complex (Community Centre) and Green Park Main house dozens of CA offices, consultancies, coaching institutes and studios in closely spaced buildings, triggering Google proximity filtering. We solve this through suite level NAP disambiguation, exact primary category matching, geocoordinate verification and authoritative professional registry citations."
+  },
+  {
+    "q": "How long does it take to see qualified corporate and HNI inquiries in Pin 110016?",
+    "a": "Optimizing slow architectural portfolios or advisory sites for sub second Core Web Vitals, verifying your Pin 110016 Google Business Profile and deploying structured entity schema typically generates initial Map Pack calls and long tail inquiries within four to six weeks. First page dominance for competitive South Delhi advisory, architecture and builder floor keywords compounds over 60 to 120 days."
+  },
+  {
+    "q": "Can you help our Green Park practice get cited by ChatGPT, Perplexity and Gemini?",
+    "a": "Yes. Corporate executives, legal teams and HNI homeowners regularly prompt ChatGPT, Perplexity and Gemini to shortlist qualified CAs, arbitration lawyers, principal architects and builders along Aurobindo Marg. Through Generative Engine Optimization (GEO), we deploy 45 word statutory definitions, verified JSON LD schema and custom llms.txt files so AI models recommend your practice."
+  },
+  {
+    "q": "Do you cover Green Park Extension, Yusuf Sarai, Gulmohar Park, Safdarjung Enclave and SDA?",
+    "a": "Yes. Our Green Park SEO campaigns cover the entire Pin 110016 and Pin 110029 belt including Green Park Main, Green Park Extension, Yusuf Sarai Commercial Complex, Gulmohar Park, Safdarjung Enclave, Safdarjung Development Area (SDA), Arjun Nagar and the Aurobindo Marg Metro corridor."
+  },
+  {
+    "q": "How do you handle Bar Council (BCI) and ICAI compliance for legal and CA firm SEO in Green Park?",
+    "a": "We strictly adhere to BCI and ICAI professional guidelines by avoiding solicitous advertising language. Instead, we build educational knowledge hubs, statutory compliance checklists, partner credential graphs and LegalService/AccountingService JSON LD that attract organic searchers seeking authoritative expertise."
+  },
+  {
+    "q": "Does our firm retain 100% ownership of all website code, publications and analytics?",
+    "a": "Yes, 100%. Every practice hub, architectural gallery, JSON LD schema graph and analytics dashboard is built directly inside your own repository and domain. You retain permanent intellectual property ownership with transparent month to month retainers."
+  }
+];
+
+const trustStrip = [
+  "Green Park Main & Extension Hub",
+  "Yusuf Sarai Commercial Complex",
+  "Gulmohar Park & Safdarjung Enclave",
+  "Pin 110016 Map Pack Top 3",
+  "Cited on ChatGPT & Perplexity",
+  "CA, Legal & Architecture Schema",
+  "Sub Second Core Web Vitals",
+  "100% Client Asset Ownership"
+];
+
+const schemaLocalBusiness = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "NK Digital Tech Best SEO Company in Green Park",
+  "url": "https://www.nkdigitaltech.net/seo-company-in-green-park/",
+  "logo": "https://www.nkdigitaltech.net/images/seo-green-park/hero-seo-company-green-park.webp",
+  "image": "https://www.nkdigitaltech.net/images/seo-green-park/hero-seo-company-green-park.webp",
+  "description": "NK Digital Tech is the Best SEO Company in Green Park Delhi delivering corporate advisory SEO, architectural studio SEO, CA & legal chamber SEO, luxury builder floor SEO, Google Map Pack dominance and ChatGPT citations across Green Park Main, Extension, Yusuf Sarai and Gulmohar Park.",
+  "email": "connect@nkdigitaltech.com",
+  "priceRange": "₹18,000 to ₹45,000+",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Green Park",
+    "addressRegion": "Delhi",
+    "postalCode": "110016",
+    "addressCountry": "IN"
+  },
+  "areaServed": [
+    "Green Park Main",
+    "Green Park Extension",
+    "Yusuf Sarai",
+    "Gulmohar Park",
+    "Safdarjung Enclave",
+    "South Delhi"
+  ]
+});
+
+const schemaFAQ = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why do corporate consultancies, architectural studios and CA chambers in Green Park need specialized SEO?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Green Park Main, Green Park Extension, Yusuf Sarai Commercial Complex and Gulmohar Park host some of South Delhi most respected advisory practices, architectural studios and luxury developers. Corporate boards, PSU officials and HNI families evaluate your partner credentials, case studies and Google/AI visibility before making contact. Our specialized SEO engineers fast, credentialed digital hubs that win institutional trust."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the monthly retainer for SEO services in Green Park Delhi?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Monthly SEO retainers in Green Park range from ₹18,000 to ₹45,000 depending on practice scope, portfolio complexity and local vs national/international targeting. A single chamber CA practice, legal office or architectural studio in Pin 110016 typically invests ₹18,000 to ₹25,000 per month, while multi vertical consultancies and luxury developers invest ₹30,000 to ₹45,000+."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do you resolve Google Map pin conflicts in Yusuf Sarai Commercial Complex and Green Park Market?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yusuf Sarai Commercial Complex (Community Centre) and Green Park Main house dozens of CA offices, consultancies, coaching institutes and studios in closely spaced buildings, triggering Google proximity filtering. We solve this through suite level NAP disambiguation, exact primary category matching, geocoordinate verification and authoritative professional registry citations."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does it take to see qualified corporate and HNI inquiries in Pin 110016?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Optimizing slow architectural portfolios or advisory sites for sub second Core Web Vitals, verifying your Pin 110016 Google Business Profile and deploying structured entity schema typically generates initial Map Pack calls and long tail inquiries within four to six weeks. First page dominance for competitive South Delhi advisory, architecture and builder floor keywords compounds over 60 to 120 days."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you help our Green Park practice get cited by ChatGPT, Perplexity and Gemini?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Corporate executives, legal teams and HNI homeowners regularly prompt ChatGPT, Perplexity and Gemini to shortlist qualified CAs, arbitration lawyers, principal architects and builders along Aurobindo Marg. Through Generative Engine Optimization (GEO), we deploy 45 word statutory definitions, verified JSON LD schema and custom llms.txt files so AI models recommend your practice."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you cover Green Park Extension, Yusuf Sarai, Gulmohar Park, Safdarjung Enclave and SDA?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Our Green Park SEO campaigns cover the entire Pin 110016 and Pin 110029 belt including Green Park Main, Green Park Extension, Yusuf Sarai Commercial Complex, Gulmohar Park, Safdarjung Enclave, Safdarjung Development Area (SDA), Arjun Nagar and the Aurobindo Marg Metro corridor."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do you handle Bar Council (BCI) and ICAI compliance for legal and CA firm SEO in Green Park?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We strictly adhere to BCI and ICAI professional guidelines by avoiding solicitous advertising language. Instead, we build educational knowledge hubs, statutory compliance checklists, partner credential graphs and LegalService/AccountingService JSON LD that attract organic searchers seeking authoritative expertise."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does our firm retain 100% ownership of all website code, publications and analytics?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, 100%. Every practice hub, architectural gallery, JSON LD schema graph and analytics dashboard is built directly inside your own repository and domain. You retain permanent intellectual property ownership with transparent month to month retainers."
+      }
+    }
+  ]
+});
+---
+
+<Layout
+  title={pageTitle}
+  description={pageDescription}
+  canonical={pageCanonical}
+  ogImage="https://www.nkdigitaltech.net/images/seo-green-park/hero-seo-company-green-park.webp"
+  preloadImage="/images/seo-green-park/hero-seo-company-green-park.webp"
+  hideLocationsNav={false}
+  customSchemaLocalBusiness={schemaLocalBusiness}
+  customSchemaFAQ={schemaFAQ}
+  utilityTagline="Best SEO Company in Green Park Delhi • Green Park Main, Green Park Extension, Yusuf Sarai & Gulmohar Park"
+  brandSubtitle="Green Park • Corporate Advisory, Architecture & Legal SEO"
+  footerBio="Premier SEO Company in Green Park Delhi engineering authoritative B2B search architectures, Google Map Pack dominance and ChatGPT citations for corporate management consultancies, principal architectural studios, Chartered Accountancy chambers, legal practices and builder floor developers across Green Park Main, Green Park Extension, Yusuf Sarai Commercial Complex, Gulmohar Park and Safdarjung Enclave."
+  footerCoreDisciplines={[
+    { label: 'Best SEO Company in South Delhi', href: '/best-seo-company-in-south-delhi/' },
+    { label: 'Best SEO Company in Delhi', href: '/best-seo-company-in-delhi/' },
+    { label: 'Local SEO Services in Delhi', href: '/local-seo-services-in-delhi/' },
+    { label: 'AI SEO Company in Delhi', href: '/ai-seo-company-in-delhi/' },
+    { label: 'AEO Services in Delhi', href: '/aeo-services-in-delhi/' },
+    { label: 'GEO Services in Delhi', href: '/geo-services-in-delhi/' },
+    { label: 'Website Development Company in Delhi', href: '/website-development-company-in-delhi/' },
+  ]}
+  footerTagline="Best SEO Company in Green Park Delhi • Pin 110016 Advisory, Architecture & Corporate Search Authority"
+>
+
+  <!-- =====================================================================
+       SECTION 1: HERO
+  ===================================================================== -->
+  <section class="relative surface-dark overflow-hidden pt-5 pb-9 sm:pt-16 sm:pb-20 lg:pt-20 lg:pb-24 border-b border-slate-800/80">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="absolute inset-0 mesh-glow pointer-events-none"></div>
+    <div class="absolute -top-24 -left-24 sm:-top-36 sm:-left-36 w-56 h-56 sm:w-96 sm:h-96 bg-brand-500/20 rounded-full blur-[80px] sm:blur-[130px] pointer-events-none"></div>
+    <div class="absolute top-1/4 -right-24 sm:-right-36 w-56 h-56 sm:w-96 sm:h-96 bg-accent-500/20 rounded-full blur-[80px] sm:blur-[130px] pointer-events-none"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns: Headline & CTA -->
+        <div class="lg:col-span-7 text-left min-w-0">
+          <div class="badge-dark mb-3 sm:mb-6 py-1.5 px-2.5 sm:px-3.5">
+            <span class="w-2 h-2 rounded-full bg-brand-400 animate-ping flex-shrink-0"></span>
+            <span class="min-w-0 break-words">Green Park Main &bull; Yusuf Sarai &bull; Gulmohar Park &bull; Pin 110016</span>
+          </div>
+
+          <h1 class="font-display text-[clamp(1.75rem,7vw,2.4rem)] sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-[1.14] sm:leading-[1.1] mb-3.5 sm:mb-6 text-glow">
+            Best SEO Company in <br class="hidden sm:inline" /><span class="gradient-text-light">Green Park Delhi</span>
+          </h1>
+
+          <p class="text-[13.5px] sm:text-base md:text-lg text-slate-300 leading-[1.68] sm:leading-relaxed mb-5 sm:mb-8 font-normal text-justify hyphens-auto [text-align-last:left]">
+            NK Digital Tech is a trusted <strong class="text-white font-semibold">SEO Company in Green Park Delhi</strong> helping corporate consultancies, CA and law chambers, architects and builders win direct client enquiries. We build fast websites, secure top Google Map rankings and get your firm cited on ChatGPT and Gemini.
+          </p>
+
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-4 mb-5 sm:mb-10">
+            <a href="#contact" class="btn-primary w-full sm:w-auto min-h-[50px] text-[13.5px] sm:text-base px-4 sm:px-8 py-3.5 sm:py-4">
+              <span>Claim Free Green Park Audit</span>
+              <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+              </svg>
+            </a>
+            <a href="#services" class="btn-secondary-dark w-full sm:w-auto min-h-[48px] text-[13.5px] sm:text-base px-4 sm:px-7 py-3.5 sm:py-4">
+              <span>Explore Pin 110016 B2B SEO</span>
+            </a>
+          </div>
+
+          <!-- Trust Verification Strip -->
+          <div class="pt-4 sm:pt-6 border-t border-slate-800/80">
+            <div class="grid grid-cols-2 sm:flex sm:flex-wrap items-stretch sm:items-center gap-2">
+              {trustStrip.map((item) => (
+                <span class="px-2.5 sm:px-3 py-2 sm:py-1.5 min-h-[42px] sm:min-h-0 rounded-lg bg-slate-900/90 border border-slate-800 text-[11px] sm:text-xs text-slate-300 font-medium flex items-center justify-center sm:justify-start text-center sm:text-left leading-tight break-words">
+                  {item}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Hero Image -->
+        <div class="lg:col-span-5 min-w-0">
+          <div class="relative rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-700/80 shadow-2xl shadow-brand-500/15 bg-slate-900 group">
+            <div class="relative">
+              <img
+                src="/images/seo-green-park/hero-seo-company-green-park.webp"
+                alt="Best SEO Company in Green Park Delhi Strategists Reviewing Corporate Advisory and Architectural Search Growth"
+                width="960"
+                height="540"
+                sizes="(max-width: 1024px) 100vw, 42vw"
+                fetchpriority="high"
+                decoding="async"
+                class="w-full aspect-[16/9] sm:aspect-auto sm:h-72 md:h-[380px] lg:h-[400px] object-cover object-center sm:group-hover:scale-105 transition-transform duration-500"
+              />
+              <div class="hidden sm:block absolute inset-0 bg-gradient-to-t from-[#050a14] via-transparent to-transparent opacity-80"></div>
+            </div>
+            <div class="relative sm:absolute sm:bottom-4 sm:left-4 sm:right-4 glass-card border-t sm:border border-slate-800 sm:rounded-2xl p-3.5 sm:p-4">
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-1">
+                <span class="text-xs font-bold text-white">Pin 110016 Advisory & Project Leads</span>
+                <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-400">
+                  <span class="w-2 h-2 rounded-full bg-emerald-400 flex-shrink-0"></span>
+                  Aurobindo Marg Executive Intent
+                </span>
+              </div>
+              <p class="text-[11px] sm:text-xs text-slate-300 text-justify hyphens-auto [text-align-last:left] leading-relaxed">
+                Generating verified corporate retainers, architectural mandates and HNI property inquiries in Green Park.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 2: INTRODUCTION
+  ===================================================================== -->
+  <section class="relative surface-white overflow-hidden py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns -->
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-light mb-3.5 sm:mb-4">Pin 110016 Central South Delhi Advisory &amp; Studio Corridor</div>
+          <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-4 sm:mb-6">
+            How Green Park, Yusuf Sarai &amp; Gulmohar Park Practices Win <span class="gradient-text-dark">Corporate &amp; HNI Mandates</span>
+          </h2>
+          <div class="space-y-4 sm:space-y-5 text-slate-700 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            <p>
+              Positioned at the heart of Aurobindo Marg with immediate Yellow Line Metro connectivity to Central Secretariat and Connaught Place, Green Park (spanning Green Park Main, Green Park Extension, Yusuf Sarai Commercial Complex, Gulmohar Park, SDA and neighbouring Safdarjung Enclave) serves as a strategic base for corporate management consultancies, principal architectural practices, Chartered Accountancy and legal chambers, specialized coaching institutes and luxury builder floor developers. Acting as the dedicated <strong>Best SEO Company in Green Park Delhi</strong>, NK Digital Tech engineers high trust, technically rapid web ecosystems that convert executive searchers into retained clients.
+            </p>
+            <p>
+              Backed by our regional headquarters as the <a href="/best-seo-company-in-south-delhi/" class="text-brand-600 font-semibold hover:underline">Best SEO Company in South Delhi</a>, our strategists connect your Pin 110016 office with capital wide institutional queries through the <a href="/best-seo-company-in-delhi/" class="text-brand-600 font-semibold hover:underline">Best SEO Company in Delhi</a> and suite level Google Business Profile verification via <a href="/local-seo-services-in-delhi/" class="text-brand-600 font-semibold hover:underline">Local SEO Services in Delhi</a>.
+            </p>
+          </div>
+          <div class="mt-6 sm:mt-8 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
+            <a href="#contact" class="btn-primary w-full sm:w-auto min-h-[48px]">
+              <span>Consult a Green Park SEO Strategist</span>
+              <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+              </svg>
+            </a>
+            <a href="#why-us" class="btn-secondary-light w-full sm:w-auto min-h-[48px]">
+              <span>See How We Differ</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Team Image + Stats -->
+        <div class="lg:col-span-5 space-y-4 sm:space-y-5 min-w-0">
+          <div class="rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-200 shadow-lg bg-slate-100">
+            <img
+              src="/images/seo-green-park/seo-agency-team-green-park.webp"
+              alt="Local SEO Agency Green Park Team Auditing Yusuf Sarai and Gulmohar Park Practices"
+              width="800"
+              height="533"
+              sizes="(max-width: 1024px) 100vw, 42vw"
+              class="w-full aspect-[16/9] sm:aspect-auto sm:h-64 lg:h-72 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="grid grid-cols-2 gap-2.5 sm:gap-4">
+            {[
+  {
+    "val": "310%",
+    "label": "Inbound B2B Mandates",
+    "sub": "Across Green Park & Yusuf Sarai"
+  },
+  {
+    "val": "Biweekly",
+    "label": "Engineering Sprints",
+    "sub": "Core Web Vitals & entity schema"
+  },
+  {
+    "val": "Top 3",
+    "label": "Map Pack Authority",
+    "sub": "Green Park Main to Gulmohar Park"
+  },
+  {
+    "val": "100%",
+    "label": "Code & Asset Control",
+    "sub": "Complete domain & data ownership"
+  }
+].map((stat) => (
+              <div class="elevated-card rounded-xl sm:rounded-2xl p-3 sm:p-4 min-w-0 flex flex-col justify-between">
+                <div class="font-display font-black text-[1.1rem] sm:text-2xl text-brand-600 mb-0.5 leading-tight break-words">{stat.val}</div>
+                <div class="text-[11px] sm:text-xs font-bold text-slate-900 leading-snug">{stat.label}</div>
+                <div class="text-[10.5px] sm:text-[11px] text-slate-500 leading-snug mt-0.5">{stat.sub}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 3: PROBLEM STATEMENT
+  ===================================================================== -->
+  <section class="relative surface-indigo py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="max-w-7xl mx-auto relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns -->
+        <div class="lg:col-span-7 min-w-0">
+          <div class="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-3.5 py-1 sm:py-1.5 rounded-full text-[10px] sm:text-xs font-bold uppercase tracking-wider sm:tracking-widest bg-amber-500/10 border border-amber-500/30 text-amber-300 max-w-full leading-snug mb-4 sm:mb-5">
+            <svg class="w-4 h-4 text-amber-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+            </svg>
+            <span>Why Green Park Advisory Practices Miss Digital First Clients</span>
+          </div>
+
+          <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-white tracking-tight leading-[1.22] sm:leading-tight mb-4 sm:mb-6">
+            Why Established Green Park &amp; Yusuf Sarai Firms Lose Retainers to Search Savvy Rivals
+          </h2>
+
+          <div class="space-y-4 sm:space-y-5 text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            <p>
+              When corporate directors, PSU liaison officers or HNI plot owners ask Google, ChatGPT or Perplexity for a corporate tax and FEMA consultant near Green Park Metro, a luxury kothi architect in Gulmohar Park or an intellectual property chamber on Aurobindo Marg, practices with static five page websites fail to surface. Unverified Yusuf Sarai map pins and slow portfolio PDFs hand high value mandates to competing firms.
+            </p>
+            <p>
+              Uniting entity graph engineering from our <a href="/ai-seo-company-in-delhi/" class="text-sky-300 font-semibold hover:underline">AI SEO Company in Delhi</a> team with 45 word regulatory answer blocks crafted by our <a href="/aeo-services-in-delhi/" class="text-sky-300 font-semibold hover:underline">AEO Services in Delhi</a> specialists, we publish credentialed practice hubs, partner bio graphs and AccountingService, LegalService or RealEstateAgent JSON LD.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Comparison Cards -->
+        <div class="lg:col-span-5 space-y-3.5 sm:space-y-4 min-w-0">
+          <div class="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6 border-l-4 border-l-rose-500">
+            <div class="flex flex-wrap items-center justify-between gap-1.5 mb-2">
+              <span class="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-rose-400">Typical Local Vendor</span>
+              <span class="text-[11px] sm:text-xs text-slate-400">Dated Digital Presence</span>
+            </div>
+            <h3 class="font-display font-bold text-[15px] sm:text-base text-white mb-2 leading-snug">Static Brochure Pages, Suppressed Aurobindo Marg Pins & Zero AI Citations</h3>
+            <p class="text-xs text-slate-300 leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+              Leaves your senior partners and studio directors invisible when corporate boards and HNI families shortlist advisors online.
+            </p>
+          </div>
+
+          <div class="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6 border-l-4 border-l-emerald-400">
+            <div class="flex flex-wrap items-center justify-between gap-1.5 mb-2">
+              <span class="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-emerald-400">NK Digital Tech System</span>
+              <span class="text-[11px] sm:text-xs text-brand-300">Verified Practice Authority</span>
+            </div>
+            <h3 class="font-display font-bold text-[15px] sm:text-base text-white mb-2 leading-snug">Credentialed Service Hubs, Top 3 Pin 110016 GBP & LLM Citations</h3>
+            <p class="text-xs text-slate-300 leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+              Secures page one South Delhi rankings, top three Google Map Pack calls and authoritative citations on ChatGPT and Perplexity.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 4: SERVICES
+  ===================================================================== -->
+  <section id="services" class="relative surface-cool overflow-hidden scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 items-center mb-9 sm:mb-16">
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-light mb-3">Six Executive SEO Disciplines</div>
+          <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+            Advisory, Architecture, Real Estate &amp; Corporate SEO Services in Green Park
+          </h2>
+          <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            Our custom <strong>SEO services in Green Park</strong> combine sub second Core Web Vitals engineering, Yusuf Sarai and Green Park Map Pack dominance, zero click regulatory snippets and <a href="/geo-services-in-delhi/" class="text-brand-600 font-semibold hover:underline">GEO Services in Delhi</a> into a structured 90 day client acquisition system.
+          </p>
+        </div>
+        <div class="lg:col-span-5 min-w-0">
+          <div class="rounded-2xl overflow-hidden border border-slate-200 shadow-md bg-white">
+            <img
+              src="/images/seo-green-park/technical-ai-seo-services-green-park.webp"
+              alt="SEO Services in Green Park Engineers Deploying ProfessionalService and LegalService Schema"
+              width="800"
+              height="450"
+              sizes="(max-width: 1024px) 100vw, 42vw"
+              class="w-full aspect-[16/9] sm:aspect-auto sm:h-56 lg:h-64 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- 3 Columns x 2 Rows Grid Layout -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-7">
+        {services.map((s) => (
+          <div class="elevated-card rounded-2xl p-4 sm:p-7 flex flex-col justify-between group sm:hover:-translate-y-1 min-w-0">
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-4 sm:mb-6">
+                <div class={`w-11 h-11 sm:w-12 sm:h-12 rounded-xl border flex items-center justify-center flex-shrink-0 ${s.iconStyle}`}>
+                  <Fragment set:html={s.icon} />
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class={`text-[10.5px] sm:text-[11px] font-semibold px-2.5 py-1 rounded-md ${s.badgeColor}`}>
+                    {s.category}
+                  </span>
+                  <span class="font-display font-black text-base sm:text-lg text-slate-300">{s.num}</span>
+                </div>
+              </div>
+
+              <h3 class="font-display font-bold text-[17px] sm:text-xl text-slate-900 mb-2.5 sm:mb-3 leading-snug group-hover:text-brand-600 transition-colors">
+                {s.title}
+              </h3>
+
+              <p class="text-slate-600 text-[13px] sm:text-sm leading-relaxed mb-4 sm:mb-6 text-justify hyphens-auto [text-align-last:left]">
+                {s.body}
+              </p>
+            </div>
+
+            <div>
+              <div class={`rounded-xl border p-3.5 sm:p-4 mb-3.5 sm:mb-5 ${s.impactStyle}`}>
+                <div class="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-slate-900 mb-1">
+                  <svg class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                  </svg>
+                  <span>Green Park Practice Impact</span>
+                </div>
+                <p class="text-xs text-slate-700 leading-relaxed font-medium text-justify hyphens-auto [text-align-last:left]">
+                  {s.impact}
+                </p>
+              </div>
+
+              <a href={s.href} class="w-full sm:w-auto inline-flex items-center justify-between sm:justify-start gap-2 rounded-xl sm:rounded-none bg-slate-50 active:bg-sky-50 sm:bg-transparent border border-slate-200/80 sm:border-0 px-3.5 sm:px-0 py-2.5 min-h-[46px] sm:min-h-0 text-xs font-bold text-brand-600 hover:text-brand-700 group-hover:gap-3 transition-all">
+                <span>{s.cta}</span>
+                <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 5: WHY NK DIGITAL TECH
+  ===================================================================== -->
+  <section id="why-us" class="relative surface-white overflow-hidden scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-14 text-left sm:text-center">
+        <div class="badge-light mb-3">Senior Partner Accountability</div>
+        <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+          Why Partners &amp; Studio Heads in Green Park Choose NK Digital Tech
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed mb-4 text-justify hyphens-auto [text-align-last:left]">
+          Mass market digital vendors rely on generic AI blog templates that undermine the professional standing of a Green Park CA firm, legal chamber or architectural studio. Our senior engineers craft authoritative, technically rigorous digital assets.
+        </p>
+        <p class="text-slate-700 font-semibold text-xs sm:text-sm">
+          Review how our Green Park search engineering compares against typical digital marketing vendors:
+        </p>
+      </div>
+
+      <!-- Desktop Comparison Matrix -->
+      <div class="hidden md:block overflow-hidden rounded-2xl border border-slate-200 shadow-lg">
+        <table class="w-full text-left border-collapse">
+          <thead>
+            <tr class="bg-slate-900 text-white">
+              <th class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-slate-300 w-1/4">
+                Practice Standard
+              </th>
+              <th class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-rose-300 w-[37.5%] border-l border-slate-800">
+                Generic Digital Vendor
+              </th>
+              <th class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-brand-300 w-[37.5%] border-l border-slate-800 bg-slate-950">
+                NK Digital Tech Green Park
+              </th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200 text-sm">
+            {comparison.map((row, idx) => (
+              <tr class={idx % 2 === 0 ? 'bg-white' : 'bg-slate-50/80'}>
+                <td class="py-5 px-6 font-display font-bold text-slate-900">
+                  {row.metric}
+                </td>
+                <td class="py-5 px-6 text-slate-600 border-l border-slate-200">
+                  <div class="flex items-start gap-2.5">
+                    <svg class="w-4 h-4 text-rose-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                    <span>{row.typical}</span>
+                  </div>
+                </td>
+                <td class="py-5 px-6 text-slate-900 font-medium border-l border-slate-200 bg-sky-50/40">
+                  <div class="flex items-start gap-2.5">
+                    <svg class="w-4 h-4 text-emerald-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span>{row.nk}</span>
+                  </div>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Mobile Comparison Cards -->
+      <div class="md:hidden space-y-3.5">
+        {comparison.map((row) => (
+          <div class="elevated-card rounded-2xl p-4 space-y-2.5 min-w-0">
+            <h3 class="font-display font-bold text-slate-900 text-[15px] leading-snug pb-2 border-b border-slate-100">{row.metric}</h3>
+            <div class="rounded-xl bg-rose-50 border border-rose-100 p-3">
+              <div class="flex items-center gap-1.5 mb-1">
+                <svg class="w-3.5 h-3.5 text-rose-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+                <p class="text-[10px] font-bold uppercase tracking-wider text-rose-600">Generic Digital Vendor</p>
+              </div>
+              <p class="text-xs text-slate-700 leading-relaxed">{row.typical}</p>
+            </div>
+            <div class="rounded-xl bg-sky-50 border border-sky-200 p-3">
+              <div class="flex items-center gap-1.5 mb-1">
+                <svg class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                </svg>
+                <p class="text-[10px] font-bold uppercase tracking-wider text-brand-600">NK Digital Tech Green Park</p>
+              </div>
+              <p class="text-xs text-slate-900 font-semibold leading-relaxed">{row.nk}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 6: KEY BUSINESS DISTRICTS & COMMERCIAL HUBS WE COVER IN SOUTH DELHI
+  ===================================================================== -->
+  <section id="locations" class="relative surface-cool overflow-hidden scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-14 text-left sm:text-center">
+        <div class="badge-light mb-3">Twelve Corporate &amp; Industrial Corridors</div>
+        <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+          Key Business Districts &amp; Commercial Hubs We Cover in South Delhi
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          Connecting advisory practices and studios in Green Park and Yusuf Sarai with Hauz Khas, Vasant Vihar, Defence Colony, Saket and Malviya Nagar.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
+        {southCorridors.map((c) => (
+          <div class="elevated-card rounded-2xl p-4 sm:p-5 flex flex-col justify-between min-w-0">
+            <div>
+              <div class={`h-1 w-full bg-gradient-to-r ${c.accent} rounded-full mb-3.5`}></div>
+              <div class="flex items-center justify-between gap-2 mb-2.5">
+                <span class="px-2 py-0.5 rounded-md bg-sky-50 border border-sky-200 text-[11px] font-bold uppercase tracking-wider text-brand-600">
+                  {c.hub}
+                </span>
+                <span class="text-[11px] font-semibold text-slate-500">
+                  {c.pincode}
+                </span>
+              </div>
+              <h3 class="font-display font-bold text-base sm:text-lg text-slate-900 mb-1 leading-snug">
+                {c.area}
+              </h3>
+              <p class="text-xs font-bold text-brand-600 mb-2">{c.focus}</p>
+              <p class="text-slate-600 text-[13px] leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+                {c.desc}
+              </p>
+            </div>
+            <div class="mt-3.5 sm:mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
+              <a href={c.href} class="w-full sm:w-auto min-h-[44px] sm:min-h-0 inline-flex items-center justify-between sm:justify-start gap-1.5 text-xs font-bold text-brand-600 hover:text-brand-700 group/link">
+                <span>{c.cta}</span>
+                <svg class="w-3.5 h-3.5 flex-shrink-0 transition-transform group-hover/link:translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 7: OUR CLIENTS
+  ===================================================================== -->
+  <section id="clients" class="relative surface-indigo scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-14 text-left sm:text-center">
+        <div class="badge-dark mb-3">Pin 110016 Advisory &amp; Studio Roster</div>
+        <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-white tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+          Green Park, Yusuf Sarai &amp; Gulmohar Park Firms Scaling With Search
+        </h2>
+        <p class="text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          From principal architectural studios and builder floor developers in Green Park Extension and Gulmohar Park to CA chambers, legal counsels and institutes in Yusuf Sarai Commercial Complex, Pin 110016 leaders trust our search engineering.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2.5 sm:gap-5">
+        {clients.map((client) => (
+          <div class="glass-card rounded-2xl p-3 sm:p-5 flex flex-col items-center text-center group sm:hover:-translate-y-1 last:col-span-2 sm:last:col-span-1 min-w-0">
+            <div class="w-full max-w-[200px] sm:max-w-none mx-auto h-14 sm:h-20 rounded-xl bg-white border border-slate-200 flex items-center justify-center p-2.5 sm:p-4 mb-2.5 sm:mb-4 shadow-sm">
+              <img
+                src={client.logo}
+                alt={`${client.name} Logo`}
+                width="130"
+                height="48"
+                class="max-h-9 sm:max-h-12 w-auto object-contain"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <h3 class="font-display font-bold text-sm sm:text-base text-white mb-1">{client.name}</h3>
+            <p class="text-[11px] sm:text-xs text-slate-300 leading-snug mb-2.5 sm:mb-3 flex-grow">{client.sector}</p>
+            <span class="w-full sm:w-auto inline-flex items-center justify-center gap-1 text-[10px] sm:text-[11px] font-semibold text-brand-300 bg-brand-500/15 border border-brand-500/30 px-2 sm:px-2.5 py-1.5 sm:py-1 rounded-md leading-tight max-w-full">
+              <svg class="w-2.5 h-2.5 sm:w-3 sm:h-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+              </svg>
+              <span class="text-center leading-tight break-words">{client.region}</span>
+            </span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 8: INDUSTRIES (12 B2B & CORPORATE SECTORS)
+  ===================================================================== -->
+  <section id="industries" class="relative surface-slate overflow-hidden scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-16 text-left sm:text-center">
+        <div class="badge-light mb-3">Twelve Professional &amp; Commercial Verticals</div>
+        <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+          Twelve Advisory, Studio &amp; B2B Sectors We Rank in Green Park Delhi
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          A corporate law or Chartered Accountancy chamber in Green Park Extension requires a completely different compliance and entity authority framework than an architectural design studio in Gulmohar Park or a civil engineering consultancy in Yusuf Sarai. We engineer custom playbooks across twelve verticals.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-7">
+        {industries.map((ind) => (
+          <div class={`elevated-card rounded-2xl p-4 sm:p-7 border-t-4 ${ind.accentBorder} flex flex-col justify-between sm:hover:-translate-y-1 min-w-0`}>
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-4 sm:mb-5">
+                <div class={`w-10 h-10 sm:w-11 sm:h-11 rounded-xl border flex items-center justify-center flex-shrink-0 ${ind.iconBg}`}>
+                  <Fragment set:html={ind.icon} />
+                </div>
+                <span class="text-[11px] font-semibold text-slate-600 bg-slate-100 px-2.5 py-1 rounded-md">
+                  {ind.sector}
+                </span>
+              </div>
+
+              <h3 class="font-display font-bold text-[17px] sm:text-xl text-slate-900 mb-3 sm:mb-4 leading-snug">
+                {ind.title}
+              </h3>
+
+              <div class="mb-4 sm:mb-5">
+                <p class="text-[11px] font-bold uppercase tracking-wider text-brand-600 mb-1.5">
+                  Strategic Architecture
+                </p>
+                <p class="text-slate-600 text-[13px] sm:text-sm leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+                  {ind.focus}
+                </p>
+              </div>
+            </div>
+
+            <div class="rounded-xl bg-emerald-50/70 border border-emerald-200/80 p-3.5 sm:p-4">
+              <p class="text-[11px] font-bold uppercase tracking-wider text-emerald-700 mb-1">
+                Practice Outcome
+              </p>
+              <p class="text-slate-800 text-xs font-medium leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+                {ind.outcome}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 9: TESTIMONIALS
+  ===================================================================== -->
+  <section id="testimonials" class="relative surface-dark scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="absolute inset-0 mesh-glow pointer-events-none opacity-60"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-16 text-left sm:text-center">
+        <div class="badge-dark mb-3">Verified Green Park Endorsements</div>
+        <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-white tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+          What Green Park &amp; Gulmohar Park Principals Say About Our SEO Sprints
+        </h2>
+        <p class="text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          Audited gains in corporate advisory retainers, architectural design commissions, HNI builder floor inquiries and institutional enrollments across Pin 110016.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-7">
+        {testimonials.map((t) => (
+          <div class="glass-card rounded-2xl p-4 sm:p-8 flex flex-col justify-between sm:hover:-translate-y-1 min-w-0">
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-4 sm:mb-5">
+                <div class="flex items-center gap-1">
+                  {[1, 2, 3, 4, 5].map(() => (
+                    <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                    </svg>
+                  ))}
+                </div>
+                <span class="text-[10.5px] sm:text-[11px] font-semibold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-1 rounded-md">
+                  Green Park Partner
+                </span>
+              </div>
+
+              <p class="text-slate-200 text-[13.5px] sm:text-base leading-relaxed italic mb-5 sm:mb-6 text-justify hyphens-auto [text-align-last:left]">
+                "{t.quote}"
+              </p>
+
+              <div class="rounded-xl bg-slate-900/90 border border-slate-700/80 p-3.5 sm:p-4 mb-5 sm:mb-6">
+                <p class="text-[11px] font-bold uppercase tracking-wider text-brand-400 mb-2 sm:mb-2.5">
+                  Audited Practice Gains
+                </p>
+                <ul class="space-y-2">
+                  {t.metrics.map((m) => (
+                    <li class="flex items-start gap-2 text-xs text-slate-300 font-medium leading-snug">
+                      <svg class="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                      </svg>
+                      <span>{m}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3.5 sm:gap-4 pt-3.5 sm:pt-4 border-t border-slate-800">
+              <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-white p-2 flex items-center justify-center flex-shrink-0 shadow-sm">
+                <img
+                  src={t.logo}
+                  alt={`${t.company} Logo`}
+                  width="48"
+                  height="48"
+                  class="max-h-8 sm:max-h-10 w-auto object-contain"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="min-w-0">
+                <h3 class="font-display font-bold text-white text-sm sm:text-base leading-snug">{t.name}</h3>
+                <p class="text-xs text-slate-300 leading-snug">
+                  {t.title}, <strong class="text-brand-400 font-semibold">{t.company}</strong>
+                </p>
+                <p class="text-[10.5px] sm:text-[11px] text-slate-400 mt-0.5 leading-snug">{t.sector}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 10: HOW WE WORK (FOUR STAGES)
+  ===================================================================== -->
+  <section id="process" class="relative surface-white overflow-hidden scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-16 text-left sm:text-center">
+        <div class="badge-light mb-3">Four Sprint Advisory Methodology</div>
+        <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+          Our 90 Day Search Engineering Roadmap for Green Park Practices
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          We audit technical crawlability and Aurobindo Marg map visibility, architect credentialed service hubs, lock in top three Pin 110016 Map Pack rankings, and scale citations on ChatGPT and Perplexity.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-7">
+        {stages.map((s) => (
+          <div class="elevated-card rounded-2xl p-4 sm:p-8 relative overflow-hidden group sm:hover:-translate-y-1 min-w-0">
+            <div class="flex items-center justify-between gap-4 mb-3.5 sm:mb-5">
+              <span class={`inline-flex items-center px-2.5 sm:px-3 py-1 rounded-lg text-xs font-bold uppercase tracking-wider text-white bg-gradient-to-r ${s.accent}`}>
+                {s.num}
+              </span>
+              <span class="font-display font-black text-3xl sm:text-4xl text-slate-200 group-hover:text-slate-300 transition-colors">
+                {s.step}
+              </span>
+            </div>
+            <h3 class="font-display font-bold text-[17px] sm:text-xl text-slate-900 mb-2.5 sm:mb-3 leading-snug">
+              {s.title}
+            </h3>
+            <p class="text-slate-600 text-[13px] sm:text-sm leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+              {s.body}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 11: CONCLUSION / PARTNERSHIP
+  ===================================================================== -->
+  <section class="relative surface-indigo py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-7 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns -->
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-dark mb-3.5 sm:mb-4">Lasting Professional Authority</div>
+          <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-white tracking-tight leading-[1.22] sm:leading-tight mb-4 sm:mb-6">
+            Expand Your Practice Visibility With the Best SEO Company in Green Park Delhi
+          </h2>
+          <div class="space-y-4 sm:space-y-5 text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            <p>
+              Whether your partners advise corporate clients from Green Park Extension, lead an architectural studio near Deer Park, or operate from Yusuf Sarai Commercial Complex and Gulmohar Park, institutional decision makers and HNI families verify your credentials on Google and AI engines before scheduling a briefing.
+            </p>
+            <p>
+              Partnering with NK Digital Tech as your <strong>SEO Company in Green Park Delhi</strong> gives you direct access to senior search strategists and <a href="/website-development-company-in-delhi/" class="text-sky-300 font-semibold hover:underline">Website Development Company in Delhi</a> engineers who optimize your Core Web Vitals, build structured practice hubs and verify your Pin 110016 entity graph. Schedule your complimentary Green Park SEO audit today.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Growth Image -->
+        <div class="lg:col-span-5 min-w-0">
+          <div class="rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-700/80 shadow-2xl bg-slate-900">
+            <img
+              src="/images/seo-green-park/organic-search-growth-green-park.webp"
+              alt="SEO Company in Green Park Delhi Reviewing B2B Retainer Growth With Managing Partners"
+              width="800"
+              height="450"
+              sizes="(max-width: 1024px) 100vw, 42vw"
+              class="w-full aspect-[16/9] sm:aspect-auto sm:h-64 lg:h-72 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 12: FAQ
+  ===================================================================== -->
+  <section id="faq" class="relative surface-cool overflow-hidden scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-left sm:text-center mb-9 sm:mb-14">
+        <div class="badge-light mb-3">Green Park Practice SEO FAQ</div>
+        <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+          Frequently Asked Questions About SEO Services in Green Park Delhi
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          Clear answers covering Green Park advisory and studio SEO retainers, Yusuf Sarai Map Pack verification, AI search citations and ranking timelines in Pin 110016.
+        </p>
+      </div>
+
+      <div class="space-y-3 sm:space-y-4">
+        {faqs.map((f, i) => (
+          <details class="elevated-card rounded-2xl group overflow-hidden" open={i === 0}>
+            <summary class="flex items-start sm:items-center justify-between gap-2.5 sm:gap-4 px-3.5 sm:px-6 py-4 sm:py-5 min-h-[56px] active:bg-sky-50/60 transition-colors select-none">
+              <div class="flex items-start sm:items-center gap-2.5 sm:gap-3.5 text-left min-w-0">
+                <span class="w-6 h-6 sm:w-7 sm:h-7 rounded-lg bg-sky-50 border border-sky-200 text-brand-600 font-display font-bold text-xs flex items-center justify-center flex-shrink-0 mt-0.5 sm:mt-0">
+                  0{i + 1}
+                </span>
+                <span class="font-display font-bold text-slate-900 text-[14px] sm:text-base md:text-lg leading-[1.4] sm:leading-snug break-words">
+                  {f.q}
+                </span>
+              </div>
+              <span class="faq-icon w-7 h-7 sm:w-8 sm:h-8 rounded-full border border-slate-200 text-slate-600 flex items-center justify-center flex-shrink-0 mt-0.5 sm:mt-0">
+                <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                </svg>
+              </span>
+            </summary>
+            <div class="px-3.5 sm:px-6 pb-4 sm:pb-6 pt-3 text-slate-600 text-[13.5px] sm:text-sm md:text-base leading-[1.68] sm:leading-relaxed border-t border-slate-100 text-justify hyphens-auto [text-align-last:left]">
+              {f.a}
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 13: FINAL CTA / CONTACT
+  ===================================================================== -->
+  <section id="contact" class="relative surface-dark scroll-mt-16 sm:scroll-mt-20 pt-10 pb-12 sm:py-16 lg:py-20 px-4 sm:px-6 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-5xl mx-auto">
+      <div class="rounded-2xl sm:rounded-3xl bg-gradient-to-r from-brand-600 via-brand-700 to-accent-700 p-6 sm:p-10 md:p-12 text-center text-white shadow-2xl border border-white/15 relative overflow-hidden">
+        <div class="relative z-10 max-w-2xl mx-auto">
+          <h2 class="font-display font-black text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl md:text-4xl text-white tracking-tight leading-[1.22] sm:leading-snug mb-3 sm:mb-4">
+            Request Your Free Green Park Practice SEO Audit Today
+          </h2>
+
+          <p class="text-sky-50 text-[13px] sm:text-sm md:text-base leading-relaxed mb-6 sm:mb-8">
+            Receive a confidential technical speed audit, Pin 110016 Aurobindo Marg Map Pack review, schema credential check and ChatGPT visibility benchmark for your Green Park firm.
+          </p>
+
+          <a
+            href="mailto:connect@nkdigitaltech.com"
+            class="inline-flex w-full sm:w-auto min-h-[48px] items-center justify-center gap-2 sm:gap-3 px-5 sm:px-8 py-3.5 sm:py-4 rounded-xl bg-white text-slate-950 hover:bg-sky-50 font-display font-bold text-sm sm:text-base shadow-xl transition-all duration-300 active:scale-95 text-center leading-snug"
+          >
+            <span>Claim Free Green Park Audit</span>
+            <svg class="w-4 h-4 sm:w-5 sm:h-5 text-brand-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mobile Sticky Bottom Quick Action Bar -->
+  <div class="mobile-sticky-cta sm:hidden fixed bottom-0 inset-x-0 z-40 bg-[#050a14]/95 backdrop-blur-xl border-t border-slate-800 px-3 pt-2.5 pb-[max(0.7rem,env(safe-area-inset-bottom))] shadow-[0_-8px_24px_rgba(0,0,0,0.45)] transition-all duration-200">
+    <div class="flex items-center gap-2.5">
+      <a
+        href="mailto:connect@nkdigitaltech.com"
+        class="btn-primary flex-1 min-w-0 min-h-[48px] py-2.5 px-3 text-[12.5px] font-bold rounded-xl whitespace-nowrap"
+      >
+        <span class="truncate">Free Green Park Audit</span>
+        <svg class="w-3.5 h-3.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+        </svg>
+      </a>
+      <a
+        href="#services"
+        class="btn-secondary-dark min-h-[48px] py-2.5 px-4 text-[12.5px] font-semibold rounded-xl flex-shrink-0 whitespace-nowrap"
+      >
+        <span>Services</span>
+      </a>
+    </div>
+  </div>
+
+  <style>
+    @media (max-width: 639px) {
+      .glass-card {
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+      }
+      #locations,
+      #why-us,
+      #clients,
+      #industries,
+      #testimonials,
+      #process,
+      #faq {
+        content-visibility: auto;
+        contain-intrinsic-size: auto 720px;
+      }
+      a,
+      button,
+      summary {
+        touch-action: manipulation;
+        -webkit-tap-highlight-color: transparent;
+      }
+    }
+  </style>
+
+</Layout>

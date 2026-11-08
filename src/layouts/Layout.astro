@@ -7,6 +7,7 @@ export interface Props {
   gaMeasurementId?: string;
   customSchemaLocalBusiness?: string;
   customSchemaFAQ?: string;
+  customSchemaBreadcrumb?: string;
   utilityTagline?: string;
   brandSubtitle?: string;
   footerBio?: string;
@@ -25,6 +26,7 @@ const {
   gaMeasurementId = import.meta.env.PUBLIC_GA_MEASUREMENT_ID || 'G-8007L4K5V9',
   customSchemaLocalBusiness,
   customSchemaFAQ,
+  customSchemaBreadcrumb,
   utilityTagline = 'SEO • AI Search Visibility • AEO • GEO • Local SEO',
   brandSubtitle = 'Search & AI Growth Partners',
   footerBio = 'Best digital marketing company in Delhi NCR delivering Search Engine Optimisation, AI Search Visibility, AEO, GEO, Local SEO and high-performance web development across Delhi, Noida, Gurgaon and Lucknow.',
@@ -137,6 +139,109 @@ const schemaFAQ = JSON.stringify({
     }
   ]
 });
+
+// Automated BreadcrumbList Schema for Google SERP Trails
+let schemaBreadcrumb = '';
+if (customSchemaBreadcrumb) {
+  schemaBreadcrumb = customSchemaBreadcrumb;
+} else if (canonical && canonical !== 'https://www.nkdigitaltech.net/' && canonical !== 'https://www.nkdigitaltech.net') {
+  const pageName = title ? title.split('|')[0].trim() : 'Service';
+  const urlPath = canonical.replace('https://www.nkdigitaltech.net', '').replace(/^\/|\/$/g, '');
+
+  const items: { '@type': string; position: number; name: string; item: string }[] = [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.nkdigitaltech.net/"
+    }
+  ];
+
+  const southKeys = ['hauz-khas', 'saket', 'greater-kailash', 'vasant-vihar', 'defence-colony', 'lajpat-nagar', 'malviya-nagar', 'green-park', 'okhla', 'nehru-place', 'chhatarpur', 'jasola'];
+  const northKeys = ['rohini', 'pitampura', 'model-town', 'shalimar-bagh', 'ashok-vihar', 'civil-lines', 'mukherjee-nagar', 'azadpur', 'wazirpur', 'narela', 'bawana', 'netaji-subhash-place'];
+  const westKeys = ['janakpuri', 'rajouri-garden', 'punjabi-bagh', 'tilak-nagar', 'paschim-vihar', 'patel-nagar', 'vikaspuri', 'kirti-nagar', 'uttam-nagar', 'naraina', 'dwarka', 'mayapuri'];
+  const eastKeys = ['laxmi-nagar', 'mayur-vihar', 'preet-vihar', 'patparganj', 'vivek-vihar', 'shahdara', 'krishna-nagar', 'gandhi-nagar', 'shakarpur', 'ip-extension', 'karkardooma', 'nirman-vihar'];
+
+  if (southKeys.some(k => urlPath.includes(k))) {
+    items.push({
+      "@type": "ListItem",
+      "position": 2,
+      "name": "South Delhi SEO",
+      "item": "https://www.nkdigitaltech.net/best-seo-company-in-south-delhi/"
+    });
+    items.push({
+      "@type": "ListItem",
+      "position": 3,
+      "name": pageName,
+      "item": canonical
+    });
+  } else if (northKeys.some(k => urlPath.includes(k))) {
+    items.push({
+      "@type": "ListItem",
+      "position": 2,
+      "name": "North Delhi SEO",
+      "item": "https://www.nkdigitaltech.net/best-seo-company-in-north-delhi/"
+    });
+    items.push({
+      "@type": "ListItem",
+      "position": 3,
+      "name": pageName,
+      "item": canonical
+    });
+  } else if (westKeys.some(k => urlPath.includes(k))) {
+    items.push({
+      "@type": "ListItem",
+      "position": 2,
+      "name": "West Delhi SEO",
+      "item": "https://www.nkdigitaltech.net/best-seo-company-in-west-delhi/"
+    });
+    items.push({
+      "@type": "ListItem",
+      "position": 3,
+      "name": pageName,
+      "item": canonical
+    });
+  } else if (eastKeys.some(k => urlPath.includes(k))) {
+    items.push({
+      "@type": "ListItem",
+      "position": 2,
+      "name": "East Delhi SEO",
+      "item": "https://www.nkdigitaltech.net/best-seo-company-in-east-delhi/"
+    });
+    items.push({
+      "@type": "ListItem",
+      "position": 3,
+      "name": pageName,
+      "item": canonical
+    });
+  } else if (urlPath.includes('south-delhi') || urlPath.includes('north-delhi') || urlPath.includes('west-delhi') || urlPath.includes('east-delhi')) {
+    items.push({
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Delhi SEO",
+      "item": "https://www.nkdigitaltech.net/best-seo-company-in-delhi/"
+    });
+    items.push({
+      "@type": "ListItem",
+      "position": 3,
+      "name": pageName,
+      "item": canonical
+    });
+  } else {
+    items.push({
+      "@type": "ListItem",
+      "position": 2,
+      "name": pageName,
+      "item": canonical
+    });
+  }
+
+  schemaBreadcrumb = JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": items
+  });
+}
 ---
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
@@ -205,6 +310,9 @@ const schemaFAQ = JSON.stringify({
   <!-- Schema JSON-LD -->
   <script type="application/ld+json" set:html={customSchemaLocalBusiness || schemaLocalBusiness} />
   <script type="application/ld+json" set:html={customSchemaFAQ || schemaFAQ} />
+  {schemaBreadcrumb && (
+    <script type="application/ld+json" set:html={schemaBreadcrumb} />
+  )}
 </head>
 <body class="relative min-h-screen flex flex-col selection:bg-brand-500 selection:text-white">
 

@@ -1,0 +1,142 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '../styles/global.css';
+
+const pageTitle = '404: Page Not Found | NK Digital Tech';
+const pageDescription = 'The page you were looking for does not exist or has been moved. Explore our core search services, Delhi regional hubs and commercial directories.';
+const pageCanonical = 'https://www.nkdigitaltech.net/404';
+
+const zonalHubs = [
+  {
+    zone: 'South Delhi Hub',
+    corridors: 'Nehru Place, Okhla, Saket, Hauz Khas, GK, Vasant Vihar & Green Park',
+    href: '/best-seo-company-in-south-delhi/',
+    accent: 'from-brand-500 to-sky-400',
+  },
+  {
+    zone: 'North Delhi Hub',
+    corridors: 'Netaji Subhash Place, Pitampura, Rohini, Model Town, Ashok Vihar & Wazirpur',
+    href: '/best-seo-company-in-north-delhi/',
+    accent: 'from-accent-500 to-violet-400',
+  },
+  {
+    zone: 'West Delhi Hub',
+    corridors: 'Rajouri Garden, Janakpuri, Dwarka, Kirti Nagar, Punjabi Bagh & Mayapuri',
+    href: '/best-seo-company-in-west-delhi/',
+    accent: 'from-cyan-500 to-teal-400',
+  },
+  {
+    zone: 'East Delhi Hub',
+    corridors: 'Laxmi Nagar, Preet Vihar, Mayur Vihar, Patparganj, Karkardooma & Nirman Vihar',
+    href: '/best-seo-company-in-east-delhi/',
+    accent: 'from-emerald-500 to-green-400',
+  },
+];
+
+const coreServices = [
+  { name: 'Search Engine Optimisation (SEO)', href: '/best-seo-company-in-delhi-ncr/' },
+  { name: 'AI Search Visibility & AI SEO', href: '/ai-seo-company-in-delhi-ncr/' },
+  { name: 'Generative Engine Optimisation (GEO)', href: '/geo-services-in-delhi-ncr/' },
+  { name: 'Answer Engine Optimisation (AEO)', href: '/aeo-services-in-delhi-ncr/' },
+  { name: 'Local SEO & Google Maps', href: '/local-seo-services-in-delhi-ncr/' },
+  { name: 'Website Design & Development', href: '/best-website-development-company-in-delhi-ncr/' },
+];
+---
+
+<Layout
+  title={pageTitle}
+  description={pageDescription}
+  canonical={pageCanonical}
+>
+  <main class="flex-1 bg-[#050a14] text-white">
+    <section class="relative py-16 sm:py-24 lg:py-28 px-4 sm:px-6 overflow-hidden">
+      <!-- Glow background -->
+      <div class="absolute inset-0 bg-gradient-to-b from-brand-950/40 via-transparent to-transparent pointer-events-none"></div>
+      <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-96 h-96 bg-brand-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+      <div class="relative z-10 max-w-4xl mx-auto text-center">
+        <!-- 404 Badge -->
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-400 text-xs sm:text-sm font-semibold mb-6">
+          <span class="w-2 h-2 rounded-full bg-brand-400 animate-pulse"></span>
+          Error 404 • Resource Not In Index
+        </div>
+
+        <h1 class="font-display font-extrabold text-3xl sm:text-5xl lg:text-6xl text-white tracking-tight leading-tight mb-5">
+          We Couldn’t Locate That Page in Our Crawl Index
+        </h1>
+
+        <p class="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto mb-8 sm:mb-10">
+          The link you followed may be outdated, moved or mistyped. Explore our regional Delhi commercial hubs and core search engineering practices below.
+        </p>
+
+        <div class="flex flex-wrap items-center justify-center gap-4 mb-14">
+          <a
+            href="/"
+            class="px-6 py-3.5 rounded-xl bg-brand-600 hover:bg-brand-500 text-white font-bold text-sm transition-all duration-200 shadow-lg shadow-brand-500/25 inline-flex items-center gap-2"
+          >
+            <span>Return to Homepage</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+            </svg>
+          </a>
+          <a
+            href="mailto:connect@nkdigitaltech.com"
+            class="px-6 py-3.5 rounded-xl bg-slate-900/80 hover:bg-slate-800 text-slate-200 border border-slate-700/80 font-bold text-sm transition-all duration-200"
+          >
+            Report Missing URL
+          </a>
+        </div>
+
+        <!-- Regional Delhi Zonal Hubs -->
+        <div class="border-t border-slate-800/80 pt-10 sm:pt-14 text-left">
+          <h2 class="font-display font-bold text-xl sm:text-2xl text-white mb-3 text-center sm:text-left">
+            Explore Regional Delhi SEO Directories
+          </h2>
+          <p class="text-slate-400 text-sm mb-6 text-center sm:text-left">
+            Select a zonal hub to access dedicated micro-market coverage across all 48 Delhi commercial and industrial corridors:
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {zonalHubs.map((hub) => (
+              <a
+                href={hub.href}
+                class="group block p-4 sm:p-5 rounded-2xl bg-slate-900/60 hover:bg-slate-900 border border-slate-800 hover:border-slate-700 transition-all duration-200"
+              >
+                <div class={`h-1 w-full bg-gradient-to-r ${hub.accent} rounded-full mb-3`}></div>
+                <div class="flex items-center justify-between gap-2 mb-1.5">
+                  <h3 class="font-display font-bold text-base sm:text-lg text-white group-hover:text-brand-400 transition-colors">
+                    {hub.zone}
+                  </h3>
+                  <svg class="w-4 h-4 text-brand-400 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+                  </svg>
+                </div>
+                <p class="text-slate-400 text-xs sm:text-[13px] leading-relaxed">
+                  {hub.corridors}
+                </p>
+              </a>
+            ))}
+          </div>
+        </div>
+
+        <!-- Core Services Directory -->
+        <div class="border-t border-slate-800/80 pt-10 sm:pt-12 mt-10 text-left">
+          <h2 class="font-display font-bold text-lg sm:text-xl text-white mb-4 text-center sm:text-left">
+            Specialised Search &amp; Growth Disciplines
+          </h2>
+          <div class="flex flex-wrap gap-2.5 justify-center sm:justify-start">
+            {coreServices.map((s) => (
+              <a
+                href={s.href}
+                class="px-3.5 py-2 rounded-lg bg-slate-900/80 hover:bg-slate-800 border border-slate-800 text-xs sm:text-sm text-slate-300 hover:text-white transition-colors"
+              >
+                {s.name}
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
+

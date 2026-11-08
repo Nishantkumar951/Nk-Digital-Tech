@@ -1,0 +1,1414 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '../styles/global.css';
+
+const pageTitle = 'Best SEO Company in Tilak Nagar Delhi | NK Digital Tech';
+const pageDescription = 'NK Digital Tech is the Best SEO Company in Tilak Nagar Delhi. We help Jail Road and Najafgarh Road CA firms, visa consultants, academies and B2B brands.';
+const pageCanonical = 'https://www.nkdigitaltech.net/seo-company-in-tilak-nagar/';
+
+const clients = [
+  {
+    name: 'Creative Academy',
+    sector: 'IELTS, PTE & Overseas Visa Consultancy',
+    region: 'Tilak Nagar Metro & Najafgarh Road',
+    logo: '/images/clients/creative-academy.webp',
+  },
+  {
+    name: 'Aangan',
+    sector: 'Modular Kitchens & Commercial Interiors',
+    region: 'Jail Road Furniture & Design Belt',
+    logo: '/images/clients/aangan.webp',
+  },
+  {
+    name: 'Propertyways',
+    sector: 'Commercial Floor & Office Leasing',
+    region: 'Mall Road, Fateh Nagar & Ganesh Nagar',
+    logo: '/images/clients/propertyways.webp',
+  },
+  {
+    name: 'VP Infra',
+    sector: 'Builder Floors & Turnkey Civil EPC',
+    region: 'Ajay Enclave & Prithvi Park Pockets',
+    logo: '/images/clients/vp-infra.webp',
+  },
+  {
+    name: 'Vision',
+    sector: 'Commercial Glass & B2B Hardware Supply',
+    region: 'Subhash Nagar & Vishnu Garden Axis',
+    logo: '/images/clients/vision.webp',
+  },
+];
+
+const services = [
+  {
+    num: '01',
+    category: 'Jail Road & B2B Pages',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>`,
+    iconStyle: 'bg-sky-50 border-sky-200 text-brand-600',
+    impactStyle: 'bg-sky-50/80 border-sky-200/80 text-slate-800',
+    badgeColor: 'text-brand-600 bg-sky-100/80',
+    title: 'Jail Road Commercial SEO & B2B Pages',
+    body: 'We execute specialized Jail Road commercial SEO and Najafgarh Road B2B SEO Tilak Nagar by building fast mobile specification pages for modular interior studios, commercial hardware wholesalers, corporate offices and property advisors.',
+    impact: 'Daily commercial showroom enquiries and B2B order calls across Pin 110018.',
+    cta: 'Website Development Company in Delhi',
+    href: '/website-development-company-in-delhi/',
+  },
+  {
+    num: '02',
+    category: 'AI Assistant Citations',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>`,
+    iconStyle: 'bg-violet-50 border-violet-200 text-accent-600',
+    impactStyle: 'bg-violet-50/80 border-violet-200/80 text-slate-800',
+    badgeColor: 'text-accent-600 bg-violet-100/80',
+    title: 'ChatGPT, Gemini & AI Overview Authority',
+    body: 'Applicants and business owners in West Delhi ask AI search engines which study visa consultant, IELTS academy, Chartered Accountant or modular furniture contractor near Tilak Nagar Metro is reliable. We structure your data into clean JSON LD.',
+    impact: 'Direct brand recommendations when buyers ask ChatGPT or Gemini for Tilak Nagar firms.',
+    cta: 'AI SEO Company in Delhi',
+    href: '/ai-seo-company-in-delhi/',
+  },
+  {
+    num: '03',
+    category: 'Pin 110018 Map Top 3',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>`,
+    iconStyle: 'bg-emerald-50 border-emerald-200 text-emerald-600',
+    impactStyle: 'bg-emerald-50/80 border-emerald-200/80 text-slate-800',
+    badgeColor: 'text-emerald-700 bg-emerald-100/80',
+    title: 'Google Map Ranking Tilak Nagar & Local Pack',
+    body: 'Operating as a dedicated local SEO agency Tilak Nagar businesses count on, we lift your Google Map ranking Tilak Nagar by verifying Blue Line metro coordinates, matching Mall Road and Jail Road addresses and growing genuine client reviews.',
+    impact: 'Consistent navigation taps and direct phone calls from commuters on Najafgarh Road.',
+    cta: 'Local SEO Services in Delhi',
+    href: '/local-seo-services-in-delhi/',
+  },
+  {
+    num: '04',
+    category: 'Visa & Tax Answer Boxes',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>`,
+    iconStyle: 'bg-amber-50 border-amber-200 text-amber-600',
+    impactStyle: 'bg-amber-50/80 border-amber-200/80 text-slate-800',
+    badgeColor: 'text-amber-700 bg-amber-100/80',
+    title: 'IELTS, Visa & CA Firm SEO in Tilak Nagar',
+    body: 'Combining IELTS and visa consultant SEO Tilak Nagar with CA firm SEO in Tilak Nagar, we place concise 40 to 60 word answers below batch fee, study visa checklist, GST registration and audit queries backed by FAQPage schema.',
+    impact: 'Position zero snippets when students and MSME founders compare fees and timelines.',
+    cta: 'AEO Services in Delhi',
+    href: '/aeo-services-in-delhi/',
+  },
+  {
+    num: '05',
+    category: 'Entity & Trade Trust',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>`,
+    iconStyle: 'bg-indigo-50 border-indigo-200 text-indigo-600',
+    impactStyle: 'bg-indigo-50/80 border-indigo-200/80 text-slate-800',
+    badgeColor: 'text-indigo-700 bg-indigo-100/80',
+    title: 'Generative Entity & B2B Directory Authority',
+    body: 'Guided by an experienced SEO consultant Tilak Nagar companies trust, we publish modular specification tables, transparent fee matrices, llms.txt files and verified Indian commercial directory citations across Pin 110018.',
+    impact: 'Stronger buyer confidence and higher conversion rates for corporate and B2B services.',
+    cta: 'GEO Services in Delhi',
+    href: '/geo-services-in-delhi/',
+  },
+  {
+    num: '06',
+    category: 'West Delhi B2B Reach',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>`,
+    iconStyle: 'bg-cyan-50 border-cyan-200 text-cyan-700',
+    impactStyle: 'bg-cyan-50/80 border-cyan-200/80 text-slate-800',
+    badgeColor: 'text-cyan-700 bg-cyan-100/80',
+    title: 'Full Funnel Digital Marketing in Tilak Nagar',
+    body: 'Our organic digital marketing in Tilak Nagar connects B2B hardware suppliers, light fabrication units in Vishnu Garden, builder floor developers in Ajay Enclave and coaching hubs with high intent buyers across West Delhi.',
+    impact: 'Predictable inbound phone enquiries and walk ins without continuous ad spend.',
+    cta: 'Best SEO Company in West Delhi',
+    href: '/best-seo-company-in-west-delhi/',
+  },
+];
+
+const comparison = [
+  {
+    metric: 'Tilak Nagar Corridor Precision',
+    typical: 'Generic citywide pages that ignore Jail Road modular hubs, Mall Road offices or Najafgarh Road metro traffic',
+    nk: 'Dedicated pages built for Jail Road, Najafgarh Road, Ganesh Nagar, Fateh Nagar, Ajay Enclave and Subhash Nagar',
+  },
+  {
+    metric: 'Campaign Execution Team',
+    typical: 'Junior coordinators send automated rank spreadsheets while your technical crawl and schema stay untouched',
+    nk: 'Senior search engineers and B2B writers fix mobile speed, JSON LD markup and map pins directly on your site',
+  },
+  {
+    metric: 'AI & Answer Engine Visibility',
+    typical: 'Filler blog articles without course fees, tax checklists or modular specs that ChatGPT and Gemini skip',
+    nk: 'Concise 50 word answer blocks, fee tables, Course and ProfessionalService schema plus a custom llms.txt file',
+  },
+  {
+    metric: 'Mobile Page Load Performance',
+    typical: 'Heavy page builders taking six seconds to render on 4G and 5G phones near Tilak Nagar Metro',
+    nk: 'Sub two second WebP pages engineered for students, corporate buyers and architects on Najafgarh Road',
+  },
+  {
+    metric: 'Pin 110018 Citation Hygiene',
+    typical: 'Low quality bulk directory links that trigger ranking drops during Google core updates',
+    nk: 'Verified Indian education, tax, interior design and B2B trade directories aligned to Pin 110018',
+  },
+  {
+    metric: 'Asset & Data Ownership',
+    typical: 'Vendor locks you out of your website admin panel, analytics property or Google Business Profile',
+    nk: 'You retain 100% primary owner access to all code, copy, Search Console and map assets',
+  },
+];
+
+const westCorridors = [
+  {
+    "hub": "Area 01",
+    "area": "Rajouri Garden",
+    "focus": "SEO Company in Rajouri Garden",
+    "pincode": "Pin 110027",
+    "cta": "View Dedicated Rajouri Garden Page",
+    "href": "/seo-company-in-rajouri-garden/",
+    "accent": "from-brand-500 to-sky-400",
+    "desc": "Leading bridal couture flagships, main market jewellery stores and commercial developers capture steady store walk ins."
+  },
+  {
+    "hub": "Area 02",
+    "area": "Janakpuri",
+    "focus": "SEO Company in Janakpuri",
+    "pincode": "Pin 110058",
+    "cta": "View Dedicated Janakpuri Page",
+    "href": "/seo-company-in-janakpuri/",
+    "accent": "from-accent-500 to-violet-400",
+    "desc": "Janakpuri District Centre CA firms, visa consultancies, IT companies and coaching centres gain top Google Map rankings."
+  },
+  {
+    "hub": "Area 03",
+    "area": "Dwarka",
+    "focus": "SEO Company in Dwarka",
+    "pincode": "Pin 110075",
+    "cta": "View Dedicated Dwarka Page",
+    "href": "/seo-company-in-dwarka/",
+    "accent": "from-cyan-500 to-teal-400",
+    "desc": "CGHS flat brokers, Sector 10 legal advisors, schools and retail brands across Dwarka win three pack visibility."
+  },
+  {
+    "hub": "Area 04",
+    "area": "Kirti Nagar",
+    "focus": "SEO Company in Kirti Nagar",
+    "pincode": "Pin 110015",
+    "cta": "View Dedicated Kirti Nagar Page",
+    "href": "/seo-company-in-kirti-nagar/",
+    "accent": "from-emerald-500 to-green-400",
+    "desc": "Furniture manufacturers, modular kitchen showrooms, timber stockists and architects secure high value client enquiries."
+  },
+  {
+    "hub": "Area 05",
+    "area": "Punjabi Bagh",
+    "focus": "SEO Company in Punjabi Bagh",
+    "pincode": "Pin 110026",
+    "cta": "View Dedicated Punjabi Bagh Page",
+    "href": "/seo-company-in-punjabi-bagh/",
+    "accent": "from-indigo-500 to-blue-400",
+    "desc": "Club Road corporate firms, wealth managers, builders and B2B traders capture prime organic search placements."
+  },
+  {
+    "hub": "Area 06",
+    "area": "Paschim Vihar",
+    "focus": "SEO Company in Paschim Vihar",
+    "pincode": "Pin 110063",
+    "cta": "View Dedicated Paschim Vihar Page",
+    "href": "/seo-company-in-paschim-vihar/",
+    "accent": "from-violet-500 to-purple-400",
+    "desc": "Jwala Heri retail markets, CA chambers, builder floor developers and B2B brands secure top local enquiry calls."
+  },
+  {
+    "hub": "Area 07",
+    "area": "Tilak Nagar",
+    "focus": "SEO Company in Tilak Nagar",
+    "pincode": "Pin 110018",
+    "cta": "View Dedicated Tilak Nagar Page",
+    "href": "/seo-company-in-tilak-nagar/",
+    "accent": "from-amber-500 to-orange-400",
+    "desc": "Jail Road modular studios, visa consultants, foundation academies and B2B hardware traders dominate organic search."
+  },
+  {
+    "hub": "Area 08",
+    "area": "Mayapuri Industrial Area",
+    "focus": "SEO Company in Mayapuri",
+    "pincode": "Pin 110064",
+    "cta": "View Dedicated Mayapuri Page",
+    "href": "/seo-company-in-mayapuri/",
+    "accent": "from-teal-500 to-emerald-400",
+    "desc": "Phase 1 and 2 auto component plants, CNC machining units, printers and packaging suppliers secure direct OEM enquiries."
+  },
+  {
+    "hub": "Area 09",
+    "area": "Naraina",
+    "focus": "SEO Company in Naraina",
+    "pincode": "Pin 110028",
+    "cta": "View Dedicated Naraina Page",
+    "href": "/seo-company-in-naraina/",
+    "accent": "from-rose-500 to-pink-400",
+    "desc": "Steel suppliers, electronics fabricators, offset printers, logistics providers and corporate offices win steady leads."
+  },
+  {
+    "hub": "Area 10",
+    "area": "Vikaspuri",
+    "focus": "SEO Company in Vikaspuri",
+    "pincode": "Pin 110018",
+    "cta": "View Dedicated Vikaspuri Page",
+    "href": "/seo-company-in-vikaspuri/",
+    "accent": "from-sky-500 to-cyan-400",
+    "desc": "Shankar Chowk CA chambers, coaching centres, interior designers and real estate firms win daily buyer enquiries."
+  },
+  {
+    "hub": "Area 11",
+    "area": "Uttam Nagar",
+    "focus": "SEO Company in Uttam Nagar",
+    "pincode": "Pin 110059",
+    "cta": "View Dedicated Uttam Nagar Page",
+    "href": "/seo-company-in-uttam-nagar/",
+    "accent": "from-blue-500 to-indigo-400",
+    "desc": "Najafgarh Road builder floor developers, mortgage consultants, coaching institutes and B2B shops gain phone leads."
+  },
+  {
+    "hub": "Area 12",
+    "area": "Patel Nagar",
+    "focus": "SEO Company in Patel Nagar",
+    "pincode": "Pin 110008",
+    "cta": "View Dedicated Patel Nagar Page",
+    "href": "/seo-company-in-patel-nagar/",
+    "accent": "from-fuchsia-500 to-rose-400",
+    "desc": "East, West and South Patel Nagar CA offices, civil service coaching hubs and corporate offices capture top rankings."
+  }
+];
+
+
+
+
+const industries = [
+  {
+    sector: 'IELTS, PTE & Overseas Visa',
+    title: 'Study Abroad & Immigration Consultancies',
+    focus: 'Using targeted IELTS and visa consultant SEO Tilak Nagar, we build country specific visa checklist pages, band score study plans and transparent fee tables around Tilak Nagar Metro and Ganesh Nagar.',
+    outcome: 'Daily student walk ins, mock test bookings and Canada, UK and Australia visa filings.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>`,
+    accentBorder: 'border-t-brand-500',
+    iconBg: 'bg-sky-50 text-brand-600 border-sky-200',
+  },
+  {
+    sector: 'Jail Road Modular & Furniture',
+    title: 'Modular Kitchens & Office Furniture Makers',
+    focus: 'Through specialized Jail Road commercial SEO, we publish fast WebP product catalogues, per square foot modular pricing tables and Product schema for furniture manufacturers and interior studios.',
+    outcome: 'Steady architect specifications, corporate office orders and weekend showroom visits.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"/></svg>`,
+    accentBorder: 'border-t-amber-500',
+    iconBg: 'bg-amber-50 text-amber-600 border-amber-200',
+  },
+  {
+    sector: 'CA, Tax & MSME Compliance',
+    title: 'Chartered Accountants & Financial Advisors',
+    focus: 'Executing CA firm SEO in Tilak Nagar, we rank GST audit, company registration, MSME project loan and trademark filing pages for chambers on Mall Road and Najafgarh Road.',
+    outcome: 'Recurring annual corporate compliance retainers and B2B tax advisory mandates.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>`,
+    accentBorder: 'border-t-indigo-500',
+    iconBg: 'bg-indigo-50 text-indigo-600 border-indigo-200',
+  },
+  {
+    sector: 'Builder Floors & Real Estate',
+    title: 'Property Developers & Commercial Brokers',
+    focus: 'We build enclave landing pages, floor plan galleries and circle rate guides for builder floor developers and commercial leasing agents across Ajay Enclave, Fateh Nagar and Ganesh Nagar.',
+    outcome: 'Direct buyer walkthroughs and main road showroom lease inquiries without portal fees.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>`,
+    accentBorder: 'border-t-emerald-500',
+    iconBg: 'bg-emerald-50 text-emerald-600 border-emerald-200',
+  },
+  {
+    sector: 'Banking, SSC & Skill Academies',
+    title: 'Competitive Exam & IT Training Institutes',
+    focus: 'We create syllabus hubs, batch schedule tables and Course schema for banking, SSC, digital marketing, coding and foreign language academies along Najafgarh Road.',
+    outcome: 'Higher batch occupancy and steady daily admission counselling calls.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"/></svg>`,
+    accentBorder: 'border-t-teal-500',
+    iconBg: 'bg-teal-50 text-teal-700 border-teal-200',
+  },
+  {
+    sector: 'Turnkey Architects & Civil EPC',
+    title: 'Architectural Studios & Interior Contractors',
+    focus: 'We rank residential and commercial architects, acoustic office planners and civil renovation contractors in Tilak Nagar with project calculators and portfolio schema.',
+    outcome: 'Consistent plot construction and commercial office fit out contracts.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 21h18M5 21V7l8-4v18M19 21V11l-6-4M9 9v.01M9 12v.01M9 15v.01M9 18v.01"/></svg>`,
+    accentBorder: 'border-t-violet-500',
+    iconBg: 'bg-violet-50 text-accent-600 border-violet-200',
+  },
+  {
+    sector: 'B2B Hardware & Electrical Supply',
+    title: 'Wholesale Traders & Fabrication Units',
+    focus: 'Through Najafgarh Road B2B SEO Tilak Nagar, we convert static product lists into HTML specification tables for electrical switchgear, plywood, sanitaryware and Vishnu Garden fabrication units.',
+    outcome: 'Direct bulk contractor orders and pan Delhi dealer enquiries.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>`,
+    accentBorder: 'border-t-red-500',
+    iconBg: 'bg-red-50 text-red-600 border-red-200',
+  },
+  {
+    sector: 'Legal & Property Advocates',
+    title: 'Civil, Registry & Commercial Law Chambers',
+    focus: 'We structure Bar Council compliant practice pages for property mutation, NRI succession, commercial recovery, arbitration and trademark lawyers around Tilak Nagar and Hari Nagar.',
+    outcome: 'Strong page one visibility and booked chamber consultations.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"/></svg>`,
+    accentBorder: 'border-t-orange-500',
+    iconBg: 'bg-orange-50 text-orange-600 border-orange-200',
+  },
+  {
+    sector: 'IT, SaaS & ERP Solutions',
+    title: 'Software Studios & B2B Tech Integrators',
+    focus: 'We help web and mobile app studios, billing software providers, CCTV networking integrators and cloud agencies in Tilak Nagar and Subhash Nagar rank for commercial IT tenders.',
+    outcome: 'Qualified inbound software demos and annual corporate AMC contracts.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>`,
+    accentBorder: 'border-t-cyan-500',
+    iconBg: 'bg-cyan-50 text-cyan-700 border-cyan-200',
+  },
+  {
+    sector: 'Home Loans & MSME Finance',
+    title: 'DSA, Project Finance & Insurance Desks',
+    focus: 'We optimize loan eligibility calculators, LAP documentation guides and financial advisory pages for mortgage DSAs and MSME credit consultants along Najafgarh Road.',
+    outcome: 'High value builder floor mortgage applications and machinery loan mandates.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>`,
+    accentBorder: 'border-t-pink-500',
+    iconBg: 'bg-pink-50 text-pink-600 border-pink-200',
+  },
+  {
+    sector: 'Coworking & Serviced Cabins',
+    title: 'Managed Workspaces & Virtual Offices',
+    focus: 'We improve your Google Map ranking Tilak Nagar for plug and play office seats, meeting rooms and GST registration addresses near Tilak Nagar and Subhash Nagar metro stations.',
+    outcome: 'Full cabin occupancy and long term corporate team memberships.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>`,
+    accentBorder: 'border-t-rose-500',
+    iconBg: 'bg-rose-50 text-rose-600 border-rose-200',
+  },
+  {
+    sector: 'Logistics, Courier & B2B Services',
+    title: 'International Cargo, Solar & Facility Firms',
+    focus: 'We rank international courier aggregators, commercial solar EPC installers, pest control and corporate staffing agencies serving Tilak Nagar and West Delhi.',
+    outcome: 'Daily B2B shipment bookings and commercial service contracts.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>`,
+    accentBorder: 'border-t-purple-500',
+    iconBg: 'bg-purple-50 text-purple-600 border-purple-200',
+  },
+];
+
+const testimonials = [
+  {
+    name: 'Harpreet Singh Bedi',
+    title: 'Director',
+    company: 'Creative Academy',
+    sector: 'IELTS, PTE & Study Visa Hub, Tilak Nagar Metro',
+    metrics: [
+      '3.5x increase in daily IELTS batch and study visa walk ins',
+      'Top 3 Google Map Pack placement across Pin 110018',
+      'Featured on ChatGPT and AI Overviews for Tilak Nagar visa mentors',
+    ],
+    quote: 'Students and parents exiting Tilak Nagar Metro check Google Maps and AI answers on their phones before visiting an institute. NK Digital Tech executed IELTS and visa consultant SEO Tilak Nagar, published clear fee and band tables and lifted our map pin into the top three.',
+    logo: '/images/clients/creative-academy.webp',
+  },
+  {
+    name: 'Maninder Pal Arora',
+    title: 'Managing Partner',
+    company: 'Aangan',
+    sector: 'Modular Kitchens & Commercial Furniture, Jail Road',
+    metrics: [
+      '310% jump in architect and corporate interior consultation calls',
+      'Page one rankings for 45+ Jail Road commercial SEO keywords',
+      'Direct turnkey office furniture orders from West Delhi companies',
+    ],
+    quote: 'Jail Road is packed with furniture and modular kitchen studios competing for the same buyers. NK Digital Tech rebuilt our slow catalog with fast WebP specification tables through Jail Road commercial SEO, bringing us serious architects, corporate buyers and builders every day.',
+    logo: '/images/clients/aangan.webp',
+  },
+  {
+    name: 'Charanjeet Grover',
+    title: 'Regional Head',
+    company: 'Propertyways',
+    sector: 'Commercial Leasing & Builder Floors, Fateh Nagar & Mall Road',
+    metrics: [
+      '2.9x growth in verified commercial lease and plot buyer calls',
+      'Position zero snippets for Tilak Nagar commercial rental rates',
+      'Consistent referrals from Gemini and Perplexity property prompts',
+    ],
+    quote: 'Commercial tenants on Najafgarh Road and builder floor buyers in Fateh Nagar and Ajay Enclave research thoroughly on Google. NK Digital Tech structured our enclave pages and local schema, cutting our portal reliance and filling our inspection calendar.',
+    logo: '/images/clients/propertyways.webp',
+  },
+  {
+    name: 'Dinesh Sachdeva',
+    title: 'Director',
+    company: 'Vision',
+    sector: 'Commercial Glass & Hardware Supply, Vishnu Garden & Subhash Nagar',
+    metrics: [
+      '275% rise in B2B contractor and interior hardware RFQs',
+      'Top three Google Map ranking Tilak Nagar for commercial glazing',
+      'Steady dealer enquiries across Najafgarh Road and West Delhi',
+    ],
+    quote: 'Interior contractors and commercial builders search by technical thickness and hardware grade. NK Digital Tech handled our Najafgarh Road B2B SEO Tilak Nagar with crawlable HTML spec sheets, turning our website into a steady wholesale order channel.',
+    logo: '/images/clients/vision.webp',
+  },
+];
+
+const stages = [
+  {
+    num: 'Milestone 01',
+    step: '01',
+    title: 'Technical Speed Audit & Pin 110018 Competitor Benchmark',
+    body: 'We inspect your mobile Core Web Vitals, crawl depth and Google Business Profile verification while benchmarking which visa consultancies, Jail Road showrooms, CA chambers and B2B suppliers currently rank across Tilak Nagar.',
+    accent: 'from-brand-600 to-sky-500',
+  },
+  {
+    num: 'Milestone 02',
+    step: '02',
+    title: 'Six Sprint Corridor, B2B & Service Keyword Blueprint',
+    body: 'You receive a clear 90 day plan divided into six fortnightly sprints. We map every Jail Road, Najafgarh Road, Mall Road and Fateh Nagar keyword, landing page wireframe, 50 word answer block and JSON LD schema entity.',
+    accent: 'from-accent-600 to-violet-500',
+  },
+  {
+    num: 'Milestone 03',
+    step: '03',
+    title: 'In House Code Optimization, Copywriting & Citations',
+    body: 'Our own developers and writers strip out heavy scripts, publish authoritative B2B and service pages, inject LocalBusiness and FAQPage schema, deploy llms.txt and align your Pin 110018 directory citations.',
+    accent: 'from-cyan-600 to-teal-500',
+  },
+  {
+    num: 'Milestone 04',
+    step: '04',
+    title: 'Biweekly Call Tracking & Live AI Citation Audits',
+    body: 'Every two weeks we review your Google Map direction clicks, reception phone calls, B2B enquiry forms and live brand mentions across ChatGPT, Gemini and Google AI Overviews.',
+    accent: 'from-emerald-600 to-green-500',
+  },
+];
+
+const faqs = [
+  {
+    q: 'Why do visa consultancies, Jail Road studios and B2B firms choose NK Digital Tech as their SEO Company in Tilak Nagar Delhi?',
+    a: 'Business owners choose NK Digital Tech as their SEO Company in Tilak Nagar Delhi because we focus on qualified phone enquiries, student walk ins and B2B orders rather than vanity traffic. Our senior team handles technical speed engineering, Google Map Pack verification, AEO and GEO across Najafgarh Road, Jail Road, Mall Road, Fateh Nagar and Ganesh Nagar.',
+  },
+  {
+    q: 'What is the monthly fee for SEO services in Tilak Nagar?',
+    a: 'Retainers for SEO services in Tilak Nagar typically range from ₹15,000 to ₹40,000 per month depending on your service categories, website size and corridor competition. A single location CA chamber, legal office or coaching centre fits our local growth tier, while multi floor Jail Road furniture studios, study abroad agencies and B2B wholesalers use our comprehensive B2B plan.',
+  },
+  {
+    q: 'How does Jail Road commercial SEO help modular kitchen and furniture businesses?',
+    a: 'Buyers and architects visiting Jail Road compare modular kitchen per square foot rates, hardware warranties and office furniture specifications on Google before stepping into a showroom. Our Jail Road commercial SEO playbook replaces slow image galleries with fast WebP catalogues, price tables and Product schema so you capture daily walkthroughs and bulk corporate orders.',
+  },
+  {
+    q: 'How fast can you improve our Google Map ranking Tilak Nagar?',
+    a: 'Most verified offices, academies and B2B showrooms see measurable gains in their Google Map ranking Tilak Nagar within 45 to 60 days once we align Pin 110018 NAP citations, verify Blue Line metro proximity, remove duplicate pins and establish a steady review velocity.',
+  },
+  {
+    q: 'How do IELTS and visa consultant SEO Tilak Nagar and CA firm SEO in Tilak Nagar work?',
+    a: 'Students and corporate founders search with specific questions about IELTS batch timings, study visa refusal remedies, GST registration and statutory audit fees. Through IELTS and visa consultant SEO Tilak Nagar and CA firm SEO in Tilak Nagar, we publish 50 word answer boxes, fee matrices and FAQPage schema that rank in position zero and AI Overviews.',
+  },
+  {
+    q: 'Can you get our Tilak Nagar business recommended by ChatGPT, Gemini and Perplexity?',
+    a: 'Yes. We pair classic Google optimization with Generative Engine Optimization. By structuring your credentials, service tables, client reviews and JSON LD entity graphs alongside a custom llms.txt file, AI assistants cite your Tilak Nagar brand when users ask for trusted providers.',
+  },
+  {
+    q: 'How do you help Vishnu Garden light manufacturing and Najafgarh Road B2B suppliers?',
+    a: 'Many hardware, electrical and sheet metal suppliers in Vishnu Garden and along Najafgarh Road still rely on word of mouth or unindexed brochures. We build crawlable HTML specification tables and dealer inquiry pages that bring direct bulk RFQs from contractors across Delhi NCR.',
+  },
+  {
+    q: 'Do you require long lock in contracts for digital marketing in Tilak Nagar?',
+    a: 'No. We work on transparent monthly retainers backed by a documented 90 day sprint roadmap. You retain 100% ownership of your website code, content, Google Search Console, analytics and Google Business Profile at all times.',
+  },
+];
+
+const trustStrip = [
+  'Jail Road & Najafgarh Road Focus',
+  'Page One B2B & Service SEO',
+  'Pin 110018 Map Pack Top 3',
+  'Cited on ChatGPT & Gemini',
+  'Course & Product JSON LD Schema',
+  'Position Zero Fee Snippets',
+  'Sub Two Second WebP Speed',
+  '100% Client Admin Ownership',
+];
+
+const seoTilakNagarSchemaLocalBusiness = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "NK Digital Tech Best SEO Company in Tilak Nagar Delhi",
+  "url": "https://www.nkdigitaltech.net/seo-company-in-tilak-nagar/",
+  "logo": "https://www.nkdigitaltech.net/images/seo-tilak-nagar/hero-seo-company-tilak-nagar.webp",
+  "image": "https://www.nkdigitaltech.net/images/seo-tilak-nagar/hero-seo-company-tilak-nagar.webp",
+  "description": pageDescription,
+  "email": "connect@nkdigitaltech.com",
+  "priceRange": "₹15,000 to ₹40,000+",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Tilak Nagar",
+    "addressRegion": "Delhi",
+    "postalCode": "110018",
+    "addressCountry": "IN"
+  },
+  "areaServed": [
+    "Tilak Nagar",
+    "Jail Road",
+    "Najafgarh Road",
+    "Mall Road Tilak Nagar",
+    "Fateh Nagar",
+    "Ganesh Nagar",
+    "Ajay Enclave",
+    "Vishnu Garden",
+    "Subhash Nagar",
+    "West Delhi"
+  ],
+  "serviceType": [
+    "SEO Services in Tilak Nagar",
+    "Jail Road Commercial SEO",
+    "IELTS and Visa Consultant SEO Tilak Nagar",
+    "CA Firm SEO in Tilak Nagar",
+    "Najafgarh Road B2B SEO Tilak Nagar",
+    "Local SEO Agency Tilak Nagar"
+  ]
+});
+
+const seoTilakNagarSchemaFAQ = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map((item) => ({
+    "@type": "Question",
+    "name": item.q,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": item.a
+    }
+  }))
+});
+---
+
+<Layout
+  title={pageTitle}
+  description={pageDescription}
+  canonical={pageCanonical}
+  ogImage="https://www.nkdigitaltech.net/images/seo-tilak-nagar/hero-seo-company-tilak-nagar.webp"
+  preloadImage="/images/seo-tilak-nagar/hero-seo-company-tilak-nagar.webp"
+  hideLocationsNav={false}
+  customSchemaLocalBusiness={seoTilakNagarSchemaLocalBusiness}
+  customSchemaFAQ={seoTilakNagarSchemaFAQ}
+  utilityTagline="Best SEO Company in Tilak Nagar Delhi • Jail Road, Najafgarh Road & Mall Road"
+  brandSubtitle="Tilak Nagar • Corporate, Visa & B2B SEO"
+  footerBio="Best SEO Company in Tilak Nagar Delhi helping Jail Road modular studios, study visa consultancies, IELTS academies, CA chambers and B2B hardware suppliers win Google rankings and AI buyer leads."
+  footerCoreDisciplines={[
+    { label: 'Best SEO Company in Delhi', href: '/best-seo-company-in-delhi/' },
+    { label: 'AI SEO Company in Delhi', href: '/ai-seo-company-in-delhi/' },
+    { label: 'Local SEO Services in Delhi', href: '/local-seo-services-in-delhi/' },
+    { label: 'AEO Services in Delhi', href: '/aeo-services-in-delhi/' },
+    { label: 'GEO Services in Delhi', href: '/geo-services-in-delhi/' },
+    { label: 'Website Development Company in Delhi', href: '/website-development-company-in-delhi/' },
+  ]}
+  footerTagline="Best SEO Company in Tilak Nagar Delhi • Pin 110018 Corporate, Academy & B2B Search"
+>
+
+  <!-- =====================================================================
+       SECTION 1: HERO (DARK SURFACE WITH UNIQUE TILAK NAGAR SEO HERO IMAGE)
+  ===================================================================== -->
+  <section class="relative surface-dark overflow-hidden pt-5 pb-9 sm:pt-16 sm:pb-20 lg:pt-20 lg:pb-24 border-b border-slate-800/80">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="absolute inset-0 mesh-glow pointer-events-none"></div>
+    <div class="absolute -top-24 -left-24 sm:-top-36 sm:-left-36 w-56 h-56 sm:w-96 sm:h-96 bg-brand-500/20 rounded-full blur-[80px] sm:blur-[130px] pointer-events-none"></div>
+    <div class="absolute top-1/4 -right-24 sm:-right-36 w-56 h-56 sm:w-96 sm:h-96 bg-accent-500/20 rounded-full blur-[80px] sm:blur-[130px] pointer-events-none"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns: Headline & CTA -->
+        <div class="lg:col-span-7 text-left min-w-0">
+          <div class="badge-dark mb-3 sm:mb-6 py-1.5 px-2.5 sm:px-3.5">
+            <span class="w-2 h-2 rounded-full bg-brand-400 animate-ping flex-shrink-0"></span>
+            <span class="min-w-0 break-words">Najafgarh Road &bull; Jail Road &bull; Mall Road &bull; Fateh Nagar</span>
+          </div>
+
+          <h1 class="font-display text-[clamp(1.75rem,7vw,2.4rem)] sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-[1.14] sm:leading-[1.1] mb-3.5 sm:mb-6 text-glow">
+            Best SEO Company in <br />
+            <span class="gradient-text-light">Tilak Nagar Delhi</span>
+          </h1>
+
+          <p class="text-[13.5px] sm:text-base md:text-lg text-slate-300 leading-[1.68] sm:leading-relaxed mb-5 sm:mb-8 font-normal text-justify hyphens-auto [text-align-last:left]">
+            Hiring a senior led <strong class="text-white font-semibold">SEO Company in Tilak Nagar Delhi</strong> helps Jail Road studios, visa consultants, CA firms and B2B suppliers win daily buyer calls. NK Digital Tech builds fast mobile websites, top Pin 110018 Map Pack pins and citations on ChatGPT and AI Overviews.
+          </p>
+
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-4 mb-5 sm:mb-10">
+            <a href="#contact" class="btn-primary w-full sm:w-auto min-h-[50px] text-[13.5px] sm:text-base px-4 sm:px-8 py-3.5 sm:py-4">
+              <span>Request Your Tilak Nagar SEO Audit</span>
+              <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+              </svg>
+            </a>
+            <a href="#services" class="btn-secondary-dark w-full sm:w-auto min-h-[48px] text-[13.5px] sm:text-base px-4 sm:px-7 py-3.5 sm:py-4">
+              <span>See Tilak Nagar Growth Capabilities</span>
+            </a>
+          </div>
+
+          <!-- Trust Verification Strip -->
+          <div class="pt-4 sm:pt-6 border-t border-slate-800/80">
+            <div class="grid grid-cols-2 sm:flex sm:flex-wrap items-stretch sm:items-center gap-2">
+              {trustStrip.map((item) => (
+                <span class="px-2.5 sm:px-3 py-2 sm:py-1.5 min-h-[42px] sm:min-h-0 rounded-lg bg-slate-900/90 border border-slate-800 text-[11px] sm:text-xs text-slate-300 font-medium flex items-center justify-center sm:justify-start text-center sm:text-left leading-tight break-words">
+                  {item}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Unique Tilak Nagar SEO Hero Image -->
+        <div class="lg:col-span-5 min-w-0">
+          <div class="relative rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-700/80 shadow-2xl shadow-brand-500/15 bg-slate-900 group">
+            <div class="relative">
+              <img
+                src="/images/seo-tilak-nagar/hero-seo-company-tilak-nagar.webp"
+                alt="Best SEO Company in Tilak Nagar Delhi Strategists Reviewing Jail Road and Najafgarh Road Search Rankings"
+                width="960"
+                height="540"
+                sizes="(max-width: 1024px) 100vw, 42vw"
+                fetchpriority="high"
+                decoding="async"
+                class="w-full aspect-[16/9] sm:aspect-auto sm:h-72 md:h-[380px] lg:h-[400px] object-cover object-center sm:group-hover:scale-105 transition-transform duration-500"
+              />
+              <div class="hidden sm:block absolute inset-0 bg-gradient-to-t from-[#050a14] via-transparent to-transparent opacity-80"></div>
+            </div>
+            <div class="relative sm:absolute sm:bottom-4 sm:left-4 sm:right-4 glass-card border-t sm:border border-slate-800 sm:rounded-2xl p-3.5 sm:p-4">
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-1">
+                <span class="text-xs font-bold text-white">Pin 110018 Corporate, Visa &amp; B2B Engine</span>
+                <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-400">
+                  <span class="w-2 h-2 rounded-full bg-emerald-400 flex-shrink-0"></span>
+                  Active Walk Ins &amp; RFQs
+                </span>
+              </div>
+              <p class="text-[11px] sm:text-xs text-slate-300 text-justify hyphens-auto [text-align-last:left] leading-relaxed">
+                Driving daily student walk ins, modular interior enquiries and B2B hardware orders across Tilak Nagar corridors.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 2: INTRODUCTION (CRISP WHITE CONTRAST SECTION + TEAM IMAGE)
+  ===================================================================== -->
+  <section class="relative surface-white overflow-hidden py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns -->
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-light mb-3.5 sm:mb-4">Pin 110018 Commercial &amp; B2B Pipeline</div>
+          <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-4 sm:mb-6">
+            How Our Tilak Nagar SEO Team <span class="gradient-text-dark">Drives Enquiries &amp; Orders</span>
+          </h2>
+          <div class="space-y-4 sm:space-y-5 text-slate-700 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            <p>
+              NK Digital Tech operates as the <strong>Best SEO Company in Tilak Nagar Delhi</strong> for IELTS and visa hubs near Tilak Nagar Metro, Jail Road modular studios, Mall Road CA chambers and Vishnu Garden B2B traders. A senior <strong>SEO consultant Tilak Nagar</strong> aligns fast pages and map pins to win calls.
+            </p>
+            <p>
+              Skip generic keyword charts. Your brand gets direct execution from the <a href="/best-seo-company-in-west-delhi/" class="text-brand-600 font-semibold hover:underline">Best SEO Company in West Delhi</a> alongside our engineering as the <a href="/best-seo-company-in-delhi/" class="text-brand-600 font-semibold hover:underline">Best SEO Company in Delhi</a> and <a href="/local-seo-services-in-delhi/" class="text-brand-600 font-semibold hover:underline">Local SEO Services in Delhi</a> to keep phones ringing.
+            </p>
+          </div>
+          <div class="mt-6 sm:mt-8 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
+            <a href="#contact" class="btn-primary w-full sm:w-auto min-h-[48px]">
+              <span>Consult Our Tilak Nagar Search Team</span>
+              <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+              </svg>
+            </a>
+            <a href="#why-us" class="btn-secondary-light w-full sm:w-auto min-h-[48px]">
+              <span>Review Agency Comparison</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Unique Tilak Nagar SEO Team Image + Stats -->
+        <div class="lg:col-span-5 space-y-4 sm:space-y-5 min-w-0">
+          <div class="rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-200 shadow-lg bg-slate-100">
+            <img
+              src="/images/seo-tilak-nagar/why-tilak-nagar-businesses-need-seo.webp"
+              alt="Local SEO Agency Tilak Nagar Strategy Team Planning Google and AI Rankings"
+              width="800"
+              height="533"
+              sizes="(max-width: 1024px) 100vw, 42vw"
+              class="w-full aspect-[16/9] sm:aspect-auto sm:h-64 lg:h-72 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="grid grid-cols-2 gap-2.5 sm:gap-4">
+            {[
+              { val: '3.5x', label: 'Enquiry & RFQ Lift', sub: 'Across Pin 110018 corridors' },
+              { val: '12 Weeks', label: 'Milestone Calendar', sub: 'Tracked in biweekly sprints' },
+              { val: 'Top 3', label: 'Metro & Jail Rd Maps', sub: 'Najafgarh Rd & Mall Road' },
+              { val: '100%', label: 'Direct Site Control', sub: 'No agency lock in traps' },
+            ].map((stat) => (
+              <div class="elevated-card rounded-xl sm:rounded-2xl p-3 sm:p-4 min-w-0 flex flex-col justify-between">
+                <div class="font-display font-black text-[1.1rem] sm:text-2xl text-brand-600 mb-0.5 leading-tight break-words">{stat.val}</div>
+                <div class="text-[11px] sm:text-xs font-bold text-slate-900 leading-snug">{stat.label}</div>
+                <div class="text-[10.5px] sm:text-[11px] text-slate-500 leading-snug mt-0.5">{stat.sub}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 3: PROBLEM STATEMENT (DEEP INDIGO DARK CONTRAST SECTION)
+  ===================================================================== -->
+  <section class="relative surface-indigo py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="max-w-7xl mx-auto relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns -->
+        <div class="lg:col-span-7 min-w-0">
+          <div class="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-3.5 py-1 sm:py-1.5 rounded-full text-[10px] sm:text-xs font-bold uppercase tracking-wider sm:tracking-widest bg-amber-500/10 border border-amber-500/30 text-amber-300 max-w-full leading-snug mb-4 sm:mb-5">
+            <svg class="w-4 h-4 text-amber-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+            </svg>
+            <span>Hidden Revenue Leaks in Tilak Nagar</span>
+          </div>
+
+          <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-white tracking-tight leading-[1.22] sm:leading-tight mb-4 sm:mb-6">
+            Why Established Tilak Nagar Studios, Academies &amp; B2B Firms Miss Daily Leads
+          </h2>
+
+          <div class="space-y-4 sm:space-y-5 text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            <p>
+              Across Najafgarh Road, Jail Road and Mall Road, many respected visa consultancies, modular interior studios, Chartered Accountants and Vishnu Garden hardware suppliers lose ready buyers every week because their websites load heavy sliders, hide specs inside PDFs and leave duplicate Pin 110018 map pins unverified.
+            </p>
+            <p>
+              Using our <a href="/ai-seo-company-in-delhi/" class="text-sky-300 font-semibold hover:underline">AI SEO Company in Delhi</a> and <a href="/aeo-services-in-delhi/" class="text-sky-300 font-semibold hover:underline">AEO Services in Delhi</a> architecture, we accelerate mobile code, inject Course, Product and LocalBusiness schema and publish clear cost summaries that capture high intent Tilak Nagar searches.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Diagnostic Comparison Cards -->
+        <div class="lg:col-span-5 space-y-3.5 sm:space-y-4 min-w-0">
+          <div class="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6 border-l-4 border-l-rose-500">
+            <div class="flex flex-wrap items-center justify-between gap-1.5 mb-2">
+              <span class="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-rose-400">Routine SEO Packages</span>
+              <span class="text-[11px] sm:text-xs text-slate-400">Lost Metro Walk Ins</span>
+            </div>
+            <h3 class="font-display font-bold text-[15px] sm:text-base text-white mb-2 leading-snug">Slow Brochure Pages, Hidden Fees &amp; Unverified Map Pins</h3>
+            <p class="text-xs text-slate-300 leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+              Stalls on smartphone screens near Tilak Nagar Metro and never surfaces when buyers compare providers on Maps, ChatGPT or Gemini.
+            </p>
+          </div>
+
+          <div class="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6 border-l-4 border-l-emerald-400">
+            <div class="flex flex-wrap items-center justify-between gap-1.5 mb-2">
+              <span class="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-emerald-400">NK Digital Tech Blueprint</span>
+              <span class="text-[11px] sm:text-xs text-brand-300">Walk Ins &amp; B2B Orders</span>
+            </div>
+            <h3 class="font-display font-bold text-[15px] sm:text-base text-white mb-2 leading-snug">Fast WebP Pages, HTML Spec Tables &amp; Top 3 Map Pins</h3>
+            <p class="text-xs text-slate-300 leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+              Combines sub two second mobile speed, verified Pin 110018 citations, clean JSON LD schema and 40 to 60 word cost answers that convert.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 4: SERVICES (LIGHT COOL ALABASTER CONTRAST + TECHNICAL IMAGE)
+  ===================================================================== -->
+  <section id="services" class="relative surface-cool overflow-hidden scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 items-center mb-9 sm:mb-16">
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-light mb-3">Six Tilak Nagar Growth Capabilities</div>
+          <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+            Full Funnel SEO Services in Tilak Nagar Built Around Enquiries &amp; RFQs
+          </h2>
+          <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            Our <strong>SEO services in Tilak Nagar</strong> bring mobile speed engineering, Pin 110018 map authority, cost snippet formatting and <a href="/geo-services-in-delhi/" class="text-brand-600 font-semibold hover:underline">GEO Services in Delhi</a> under one roof. Each fortnightly sprint lifts your commercial service or B2B product pages on Google while earning organic citations across ChatGPT, Perplexity and AI Overviews.
+          </p>
+        </div>
+        <div class="lg:col-span-5 min-w-0">
+          <div class="rounded-2xl overflow-hidden border border-slate-200 shadow-md bg-white">
+            <img
+              src="/images/seo-tilak-nagar/technical-ai-seo-services-tilak-nagar.webp"
+              alt="SEO Services in Tilak Nagar Engineers Auditing Website Speed and Schema Markup"
+              width="800"
+              height="450"
+              sizes="(max-width: 1024px) 100vw, 42vw"
+              class="w-full aspect-[16/9] sm:aspect-auto sm:h-56 lg:h-64 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- 3 Columns x 2 Rows Grid Layout -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-7">
+        {services.map((s) => (
+          <div class="elevated-card rounded-2xl p-4 sm:p-7 flex flex-col justify-between group sm:hover:-translate-y-1 min-w-0">
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-4 sm:mb-6">
+                <div class={`w-11 h-11 sm:w-12 sm:h-12 rounded-xl border flex items-center justify-center flex-shrink-0 ${s.iconStyle}`}>
+                  <Fragment set:html={s.icon} />
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class={`text-[10.5px] sm:text-[11px] font-semibold px-2.5 py-1 rounded-md ${s.badgeColor}`}>
+                    {s.category}
+                  </span>
+                  <span class="font-display font-black text-base sm:text-lg text-slate-300">{s.num}</span>
+                </div>
+              </div>
+
+              <h3 class="font-display font-bold text-[17px] sm:text-xl text-slate-900 mb-2.5 sm:mb-3 leading-snug group-hover:text-brand-600 transition-colors">
+                {s.title}
+              </h3>
+
+              <p class="text-slate-600 text-[13px] sm:text-sm leading-relaxed mb-4 sm:mb-6 text-justify hyphens-auto [text-align-last:left]">
+                {s.body}
+              </p>
+            </div>
+
+            <div>
+              <div class={`rounded-xl border p-3.5 sm:p-4 mb-3.5 sm:mb-5 ${s.impactStyle}`}>
+                <div class="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-slate-900 mb-1">
+                  <svg class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                  </svg>
+                  <span>Tilak Nagar Impact</span>
+                </div>
+                <p class="text-xs text-slate-700 leading-relaxed font-medium text-justify hyphens-auto [text-align-last:left]">
+                  {s.impact}
+                </p>
+              </div>
+
+              <a href={s.href} class="w-full sm:w-auto inline-flex items-center justify-between sm:justify-start gap-2 rounded-xl sm:rounded-none bg-slate-50 active:bg-sky-50 sm:bg-transparent border border-slate-200/80 sm:border-0 px-3.5 sm:px-0 py-2.5 min-h-[46px] sm:min-h-0 text-xs font-bold text-brand-600 hover:text-brand-700 group-hover:gap-3 transition-all">
+                <span>{s.cta}</span>
+                <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 5: WHY NK DIGITAL TECH (CRISP WHITE CONTRAST SECTION)
+  ===================================================================== -->
+  <section id="why-us" class="relative surface-white overflow-hidden scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-14 text-left sm:text-center">
+        <div class="badge-light mb-3">Built for Commercial &amp; B2B ROI</div>
+        <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+          Why Corporate &amp; B2B Founders Rate Us the Best SEO Company in Tilak Nagar
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed mb-4 text-justify hyphens-auto [text-align-last:left]">
+          Working with the <strong>best SEO company in Tilak Nagar</strong> means knowing exactly what changed on your website every fortnight and seeing the impact in student walk ins, corporate consultations and B2B hardware orders. Senior specialists run your campaign directly with zero annual lock ins.
+        </p>
+        <p class="text-slate-700 font-semibold text-xs sm:text-sm">
+          How our Tilak Nagar execution compares against standard market vendors:
+        </p>
+      </div>
+
+      <!-- Desktop Comparison Matrix -->
+      <div class="hidden md:block overflow-hidden rounded-2xl border border-slate-200 shadow-lg">
+        <table class="w-full text-left border-collapse">
+          <thead>
+            <tr class="bg-slate-900 text-white">
+              <th class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-slate-300 w-1/4">
+                Operating Standard
+              </th>
+              <th class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-rose-300 w-[37.5%] border-l border-slate-800">
+                Standard Local Vendor
+              </th>
+              <th class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-brand-300 w-[37.5%] border-l border-slate-800 bg-slate-950">
+                NK Digital Tech Tilak Nagar
+              </th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200 text-sm">
+            {comparison.map((row, idx) => (
+              <tr class={idx % 2 === 0 ? 'bg-white' : 'bg-slate-50/80'}>
+                <td class="py-5 px-6 font-display font-bold text-slate-900">
+                  {row.metric}
+                </td>
+                <td class="py-5 px-6 text-slate-600 border-l border-slate-200">
+                  <div class="flex items-start gap-2.5">
+                    <svg class="w-4 h-4 text-rose-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                    <span>{row.typical}</span>
+                  </div>
+                </td>
+                <td class="py-5 px-6 text-slate-900 font-medium border-l border-slate-200 bg-sky-50/40">
+                  <div class="flex items-start gap-2.5">
+                    <svg class="w-4 h-4 text-emerald-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span>{row.nk}</span>
+                  </div>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Mobile Comparison Cards -->
+      <div class="md:hidden space-y-3.5">
+        {comparison.map((row) => (
+          <div class="elevated-card rounded-2xl p-4 space-y-2.5 min-w-0">
+            <h3 class="font-display font-bold text-slate-900 text-[15px] leading-snug pb-2 border-b border-slate-100">{row.metric}</h3>
+            <div class="rounded-xl bg-rose-50 border border-rose-100 p-3">
+              <div class="flex items-center gap-1.5 mb-1">
+                <svg class="w-3.5 h-3.5 text-rose-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+                <p class="text-[10px] font-bold uppercase tracking-wider text-rose-600">Standard Local Vendor</p>
+              </div>
+              <p class="text-xs text-slate-700 leading-relaxed">{row.typical}</p>
+            </div>
+            <div class="rounded-xl bg-sky-50 border border-sky-200 p-3">
+              <div class="flex items-center gap-1.5 mb-1">
+                <svg class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                </svg>
+                <p class="text-[10px] font-bold uppercase tracking-wider text-brand-600">NK Digital Tech Tilak Nagar</p>
+              </div>
+              <p class="text-xs text-slate-900 font-semibold leading-relaxed">{row.nk}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 6: WEST DELHI COMMERCIAL CORRIDORS COVERAGE
+  ===================================================================== -->
+  <section id="locations" class="relative surface-cool overflow-hidden scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-14 text-left sm:text-center">
+        <div class="badge-light mb-3">Sub City &amp; Market Belts</div>
+        <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+          Retail, Corporate &amp; Industrial Corridors We Rank in West Delhi
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          Whether you want an <strong>SEO company in Rajouri Garden</strong> for a bridal showroom, an <strong>SEO company in Janakpuri</strong> for a CA firm or District Centre consultancy, or sector level <strong>SEO services in Dwarka</strong> and Mayapuri, we build local authority tailored to your exact catchment.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
+        {westCorridors.map((c) => (
+          <div class="elevated-card rounded-2xl p-4 sm:p-5 flex flex-col justify-between min-w-0">
+            <div>
+              <div class={`h-1 w-full bg-gradient-to-r ${c.accent} rounded-full mb-3.5`}></div>
+              <div class="flex items-center justify-between gap-2 mb-2.5">
+                <span class="px-2 py-0.5 rounded-md bg-sky-50 border border-sky-200 text-[11px] font-bold uppercase tracking-wider text-brand-600">
+                  {c.hub}
+                </span>
+                <span class="text-[11px] font-semibold text-slate-500">
+                  {c.pincode}
+                </span>
+              </div>
+              <h3 class="font-display font-bold text-base sm:text-lg text-slate-900 mb-1 leading-snug">
+                {c.area}
+              </h3>
+              <p class="text-xs font-bold text-brand-600 mb-2">{c.focus}</p>
+              <p class="text-slate-600 text-[13px] leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+                {c.desc}
+              </p>
+            </div>
+            <div class="mt-3.5 sm:mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
+              <a href={c.href} class="w-full sm:w-auto min-h-[44px] sm:min-h-0 inline-flex items-center justify-between sm:justify-start gap-1.5 text-xs font-bold text-brand-600 hover:text-brand-700 group/link">
+                <span>{c.cta}</span>
+                <svg class="w-3.5 h-3.5 flex-shrink-0 transition-transform group-hover/link:translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 7: OUR CLIENTS (DARK INDIGO CONTRAST SECTION)
+  ===================================================================== -->
+  <section id="clients" class="relative surface-indigo scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-14 text-left sm:text-center">
+        <div class="badge-dark mb-3">Proven Across Pin 110018</div>
+        <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-white tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+          Academies, Modular Studios &amp; B2B Brands Winning With Our SEO
+        </h2>
+        <p class="text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          From overseas education hubs near Tilak Nagar Metro and modular furniture studios on Jail Road to builders in Ajay Enclave and hardware suppliers in Vishnu Garden, local founders rely on our team for compounding organic leads.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2.5 sm:gap-5">
+        {clients.map((client) => (
+          <div class="glass-card rounded-2xl p-3 sm:p-5 flex flex-col items-center text-center group sm:hover:-translate-y-1 last:col-span-2 sm:last:col-span-1 min-w-0">
+            <div class="w-full max-w-[200px] sm:max-w-none mx-auto h-14 sm:h-20 rounded-xl bg-white border border-slate-200 flex items-center justify-center p-2.5 sm:p-4 mb-2.5 sm:mb-4 shadow-sm">
+              <img
+                src={client.logo}
+                alt={`${client.name} Logo`}
+                width="130"
+                height="48"
+                class="max-h-9 sm:max-h-12 w-auto object-contain"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <h3 class="font-display font-bold text-sm sm:text-base text-white mb-1">{client.name}</h3>
+            <p class="text-[11px] sm:text-xs text-slate-300 leading-snug mb-2.5 sm:mb-3 flex-grow">{client.sector}</p>
+            <span class="w-full sm:w-auto inline-flex items-center justify-center gap-1 text-[10px] sm:text-[11px] font-semibold text-brand-300 bg-brand-500/15 border border-brand-500/30 px-2 sm:px-2.5 py-1.5 sm:py-1 rounded-md leading-tight max-w-full">
+              <svg class="w-2.5 h-2.5 sm:w-3 sm:h-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+              </svg>
+              <span class="text-center leading-tight break-words">{client.region}</span>
+            </span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 8: INDUSTRIES (LIGHT SLATE CONTRAST SECTION - 12 SECTORS)
+  ===================================================================== -->
+  <section id="industries" class="relative surface-slate overflow-hidden scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-16 text-left sm:text-center">
+        <div class="badge-light mb-3">Industry Focused Campaigns</div>
+        <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+          Dedicated Search Growth Across Twelve Tilak Nagar Industries
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          A student comparing IELTS coaching near Tilak Nagar Metro searches very differently from an architect sourcing modular workstations on Jail Road. We align our <strong>SEO services in Tilak Nagar</strong> with the commercial buying habits of twelve core sectors.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-7">
+        {industries.map((ind) => (
+          <div class={`elevated-card rounded-2xl p-4 sm:p-7 border-t-4 ${ind.accentBorder} flex flex-col justify-between sm:hover:-translate-y-1 min-w-0`}>
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-4 sm:mb-5">
+                <div class={`w-10 h-10 sm:w-11 sm:h-11 rounded-xl border flex items-center justify-center flex-shrink-0 ${ind.iconBg}`}>
+                  <Fragment set:html={ind.icon} />
+                </div>
+                <span class="text-[11px] font-semibold text-slate-600 bg-slate-100 px-2.5 py-1 rounded-md">
+                  {ind.sector}
+                </span>
+              </div>
+
+              <h3 class="font-display font-bold text-[17px] sm:text-xl text-slate-900 mb-3 sm:mb-4 leading-snug">
+                {ind.title}
+              </h3>
+
+              <div class="mb-4 sm:mb-5">
+                <p class="text-[11px] font-bold uppercase tracking-wider text-brand-600 mb-1.5">
+                  Execution Angle
+                </p>
+                <p class="text-slate-600 text-[13px] sm:text-sm leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+                  {ind.focus}
+                </p>
+              </div>
+            </div>
+
+            <div class="rounded-xl bg-emerald-50/70 border border-emerald-200/80 p-3.5 sm:p-4">
+              <p class="text-[11px] font-bold uppercase tracking-wider text-emerald-700 mb-1">
+                Revenue Impact
+              </p>
+              <p class="text-slate-800 text-xs font-medium leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+                {ind.outcome}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 9: TESTIMONIALS (DEEP NAVY CONTRAST SECTION - 2x2 GRID)
+  ===================================================================== -->
+  <section id="testimonials" class="relative surface-dark scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="absolute inset-0 mesh-glow pointer-events-none opacity-60"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-16 text-left sm:text-center">
+        <div class="badge-dark mb-3">Tracked Tilak Nagar Growth</div>
+        <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-white tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+          Stories From Tilak Nagar Directors, Partners &amp; Founders
+        </h2>
+        <p class="text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          Verified walk ins, B2B RFQs and commercial leasing mandates reported by client teams across Tilak Nagar Metro, Jail Road, Fateh Nagar and Vishnu Garden.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-7">
+        {testimonials.map((t) => (
+          <div class="glass-card rounded-2xl p-4 sm:p-8 flex flex-col justify-between sm:hover:-translate-y-1 min-w-0">
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-4 sm:mb-5">
+                <div class="flex items-center gap-1">
+                  {[1, 2, 3, 4, 5].map(() => (
+                    <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                    </svg>
+                  ))}
+                </div>
+                <span class="text-[10px] sm:text-[11px] font-semibold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-1 rounded-md">
+                  Tilak Nagar Client
+                </span>
+              </div>
+
+              <p class="text-slate-200 text-[13.5px] sm:text-base leading-relaxed italic mb-5 sm:mb-6 text-justify hyphens-auto [text-align-last:left]">
+                "{t.quote}"
+              </p>
+
+              <div class="rounded-xl bg-slate-900/90 border border-slate-700/80 p-3.5 sm:p-4 mb-5 sm:mb-6">
+                <p class="text-[11px] font-bold uppercase tracking-wider text-brand-400 mb-2 sm:mb-2.5">
+                  Verified Gains
+                </p>
+                <ul class="space-y-2">
+                  {t.metrics.map((m) => (
+                    <li class="flex items-start gap-2 text-xs text-slate-300 font-medium leading-snug">
+                      <svg class="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                      </svg>
+                      <span>{m}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3.5 sm:gap-4 pt-3.5 sm:pt-4 border-t border-slate-800">
+              <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-white p-2 flex items-center justify-center flex-shrink-0 shadow-sm">
+                <img
+                  src={t.logo}
+                  alt={`${t.company} Logo`}
+                  width="48"
+                  height="48"
+                  class="max-h-8 sm:max-h-10 w-auto object-contain"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="min-w-0">
+                <h3 class="font-display font-bold text-white text-sm sm:text-base leading-snug">{t.name}</h3>
+                <p class="text-xs text-slate-300 leading-snug">
+                  {t.title}, <strong class="text-brand-400 font-semibold">{t.company}</strong>
+                </p>
+                <p class="text-[10.5px] sm:text-[11px] text-slate-400 mt-0.5 leading-snug">{t.sector}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 10: HOW WE WORK (CRISP WHITE CONTRAST SECTION - 4 STAGES)
+  ===================================================================== -->
+  <section id="process" class="relative surface-white overflow-hidden scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-16 text-left sm:text-center">
+        <div class="badge-light mb-3">Four Milestone Workflow</div>
+        <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+          How We Turn Tilak Nagar Websites Into Daily Lead Engines
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          Each twelve week cycle starts with mobile speed repair, locks in Pin 110018 Google Map pins from Jail Road to Najafgarh Road, and builds lasting authority across AI search platforms.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-7">
+        {stages.map((s) => (
+          <div class="elevated-card rounded-2xl p-4 sm:p-8 relative overflow-hidden group sm:hover:-translate-y-1 min-w-0">
+            <div class="flex items-center justify-between gap-4 mb-3.5 sm:mb-5">
+              <span class={`inline-flex items-center px-2.5 sm:px-3 py-1 rounded-lg text-xs font-bold uppercase tracking-wider text-white bg-gradient-to-r ${s.accent}`}>
+                {s.num}
+              </span>
+              <span class="font-display font-black text-3xl sm:text-4xl text-slate-200 group-hover:text-slate-300 transition-colors">
+                {s.step}
+              </span>
+            </div>
+            <h3 class="font-display font-bold text-[17px] sm:text-xl text-slate-900 mb-2.5 sm:mb-3 leading-snug">
+              {s.title}
+            </h3>
+            <p class="text-slate-600 text-[13px] sm:text-sm leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+              {s.body}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 11: PARTNER WITH THE BEST SEO COMPANY IN TILAK NAGAR (CONCLUSION)
+  ===================================================================== -->
+  <section class="relative surface-indigo py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-7 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns -->
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-dark mb-3.5 sm:mb-4">Long Term Commercial &amp; B2B Growth</div>
+          <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-white tracking-tight leading-[1.22] sm:leading-tight mb-4 sm:mb-6">
+            Scale Walk Ins &amp; Orders With the Best SEO Company in Tilak Nagar Delhi
+          </h2>
+          <div class="space-y-4 sm:space-y-5 text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            <p>
+              Competing across Pin 110018 takes far more than a static brochure site or paid clicks that vanish whenever ad spend pauses. Every afternoon, students exiting Tilak Nagar Metro, architects visiting Jail Road, corporate founders on Mall Road and contractors sourcing from Vishnu Garden check map listings and AI assistants before calling anyone.
+            </p>
+            <p>
+              Choosing NK Digital Tech as your <strong>SEO Company in Tilak Nagar Delhi</strong> puts senior search strategists and <a href="/website-development-company-in-delhi/" class="text-sky-300 font-semibold hover:underline">Website Development Company in Delhi</a> engineers directly to work on your site speed, service or B2B product pages, map authority and structured markup. Claim your free Tilak Nagar audit today and get a clear twelve week plan built for measurable revenue.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Unique Tilak Nagar Growth Image -->
+        <div class="lg:col-span-5 min-w-0">
+          <div class="rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-700/80 shadow-2xl bg-slate-900">
+            <img
+              src="/images/seo-tilak-nagar/organic-search-growth-tilak-nagar.webp"
+              alt="Best SEO Company in Tilak Nagar Delhi Reviewing Corporate and B2B Lead Growth"
+              width="800"
+              height="450"
+              sizes="(max-width: 1024px) 100vw, 42vw"
+              class="w-full aspect-[16/9] sm:aspect-auto sm:h-64 lg:h-72 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 12: FAQ (LIGHT COOL SLATE CONTRAST SECTION)
+  ===================================================================== -->
+  <section id="faq" class="relative surface-cool overflow-hidden scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-left sm:text-center mb-9 sm:mb-14">
+        <div class="badge-light mb-3">Tilak Nagar Buyer Guide</div>
+        <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+          Answers to Key Questions About SEO Services in Tilak Nagar
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          Honest, plain language answers for visa consultants, coaching directors, Jail Road studio founders, CA partners and B2B wholesalers across Pin 110018.
+        </p>
+      </div>
+
+      <div class="space-y-3 sm:space-y-4">
+        {faqs.map((f, i) => (
+          <details class="elevated-card rounded-2xl group overflow-hidden" open={i === 0}>
+            <summary class="flex items-start sm:items-center justify-between gap-2.5 sm:gap-4 px-3.5 sm:px-6 py-4 sm:py-5 min-h-[56px] active:bg-sky-50/60 transition-colors select-none">
+              <div class="flex items-start sm:items-center gap-2.5 sm:gap-3.5 text-left min-w-0">
+                <span class="w-6 h-6 sm:w-7 sm:h-7 rounded-lg bg-sky-50 border border-sky-200 text-brand-600 font-display font-bold text-xs flex items-center justify-center flex-shrink-0 mt-0.5 sm:mt-0">
+                  0{i + 1}
+                </span>
+                <span class="font-display font-bold text-slate-900 text-[14px] sm:text-base md:text-lg leading-[1.4] sm:leading-snug break-words">
+                  {f.q}
+                </span>
+              </div>
+              <span class="faq-icon w-7 h-7 sm:w-8 sm:h-8 rounded-full border border-slate-200 text-slate-600 flex items-center justify-center flex-shrink-0 mt-0.5 sm:mt-0">
+                <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                </svg>
+              </span>
+            </summary>
+            <div class="px-3.5 sm:px-6 pb-4 sm:pb-6 pt-3 text-slate-600 text-[13.5px] sm:text-sm md:text-base leading-[1.68] sm:leading-relaxed border-t border-slate-100 text-justify hyphens-auto [text-align-last:left]">
+              {f.a}
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 13: CALL TO ACTION BANNER (LAST SECTION)
+  ===================================================================== -->
+  <section id="contact" class="relative surface-dark scroll-mt-16 sm:scroll-mt-20 pt-10 pb-12 sm:py-16 lg:py-20 px-4 sm:px-6 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-5xl mx-auto">
+      <div class="rounded-2xl sm:rounded-3xl bg-gradient-to-r from-brand-600 via-brand-700 to-accent-700 p-6 sm:p-10 md:p-12 text-center text-white shadow-2xl border border-white/15 relative overflow-hidden">
+        <div class="relative z-10 max-w-2xl mx-auto">
+          <h2 class="font-display font-black text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl md:text-4xl text-white tracking-tight leading-[1.22] sm:leading-snug mb-3 sm:mb-4">
+            Start Growing With the Best SEO Company in Tilak Nagar Delhi
+          </h2>
+
+          <p class="text-sky-50 text-[13px] sm:text-sm md:text-base leading-relaxed mb-6 sm:mb-8">
+            Schedule a free technical and local map audit covering Najafgarh Road, Jail Road, Mall Road, Fateh Nagar, Ganesh Nagar and Vishnu Garden with our senior search specialists.
+          </p>
+
+          <a
+            href="mailto:connect@nkdigitaltech.com"
+            class="inline-flex w-full sm:w-auto min-h-[48px] items-center justify-center gap-2 sm:gap-3 px-5 sm:px-8 py-3.5 sm:py-4 rounded-xl bg-white text-slate-950 hover:bg-sky-50 font-display font-bold text-sm sm:text-base shadow-xl transition-all duration-300 active:scale-95 text-center leading-snug"
+          >
+            <span>Schedule Free Tilak Nagar Audit</span>
+            <svg class="w-4 h-4 sm:w-5 sm:h-5 text-brand-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mobile Sticky Bottom Quick Action Bar -->
+  <div class="mobile-sticky-cta sm:hidden fixed bottom-0 inset-x-0 z-40 bg-[#050a14]/95 backdrop-blur-xl border-t border-slate-800 px-3 pt-2.5 pb-[max(0.7rem,env(safe-area-inset-bottom))] shadow-[0_-8px_24px_rgba(0,0,0,0.45)] transition-all duration-200">
+    <div class="flex items-center gap-2.5">
+      <a
+        href="mailto:connect@nkdigitaltech.com"
+        class="btn-primary flex-1 min-w-0 min-h-[48px] py-2.5 px-3 text-[12.5px] font-bold rounded-xl whitespace-nowrap"
+      >
+        <span class="truncate">Free Tilak Nagar SEO Audit</span>
+        <svg class="w-3.5 h-3.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+        </svg>
+      </a>
+      <a
+        href="#services"
+        class="btn-secondary-dark min-h-[48px] py-2.5 px-4 text-[12.5px] font-semibold rounded-xl flex-shrink-0 whitespace-nowrap"
+      >
+        <span>Services</span>
+      </a>
+    </div>
+  </div>
+
+  <style>
+    @media (max-width: 639px) {
+      .glass-card {
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+      }
+      #locations,
+      #why-us,
+      #clients,
+      #industries,
+      #testimonials,
+      #process,
+      #faq {
+        content-visibility: auto;
+        contain-intrinsic-size: auto 720px;
+      }
+      a,
+      button,
+      summary {
+        touch-action: manipulation;
+        -webkit-tap-highlight-color: transparent;
+      }
+    }
+  </style>
+
+</Layout>

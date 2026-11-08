@@ -1,0 +1,1481 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '../styles/global.css';
+
+const pageTitle = 'Best SEO Company in Rohini Delhi | NK Digital Tech';
+const pageDescription = 'NK Digital Tech is the Best SEO Company in Rohini Delhi. We help Rohini Court advocates, builders, IT agencies and test prep academies win top search spots.';
+const pageCanonical = 'https://www.nkdigitaltech.net/seo-company-in-rohini/';
+
+const clients = [
+  {
+    "name": "Creative Academy",
+    "sector": "Judiciary, Law & Entrance Exam Prep",
+    "region": "Rohini Sector 14 Metro Hub",
+    "logo": "/images/clients/creative-academy.webp"
+  },
+  {
+    "name": "VP Infra",
+    "sector": "Builder Floors & Commercial Plots",
+    "region": "Rohini Sectors 8, 9 & 11",
+    "logo": "/images/clients/vp-infra.webp"
+  },
+  {
+    "name": "Propertyways",
+    "sector": "Commercial Space & Floor Advisory",
+    "region": "D Mall Sector 10 Rohini",
+    "logo": "/images/clients/propertyways.webp"
+  },
+  {
+    "name": "Vision",
+    "sector": "Enterprise IT & Office Hardware",
+    "region": "Sector 3 Commercial Centre",
+    "logo": "/images/clients/vision.webp"
+  },
+  {
+    "name": "Aangan",
+    "sector": "Turnkey Interior Design & Fitouts",
+    "region": "DC Chowk Sector 9 Rohini",
+    "logo": "/images/clients/aangan.webp"
+  }
+];
+
+const services = [
+  {
+    "num": "01",
+    "category": "Sector Level Spot",
+    "icon": "<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z\"/></svg>",
+    "iconStyle": "bg-sky-50 border-sky-200 text-brand-600",
+    "impactStyle": "bg-sky-50/80 border-sky-200/80 text-slate-800",
+    "badgeColor": "text-brand-600 bg-sky-100/80",
+    "title": "Sub City Performance Tuning & Practice Hubs",
+    "body": "Acting as your dedicated technical SEO company in Rohini, we eliminate heavy JavaScript payloads, fix slow server times, resolve indexing anomalies and develop high converting sector practice hubs for legal and commercial firms.",
+    "impact": "Higher consultation bookings and direct phone inquiries across Pin 110085 sectors.",
+    "cta": "Website Development Company in Delhi",
+    "href": "/website-development-company-in-delhi/"
+  },
+  {
+    "num": "02",
+    "category": "Conversational AI Spot",
+    "icon": "<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z\"/></svg>",
+    "iconStyle": "bg-violet-50 border-violet-200 text-accent-600",
+    "impactStyle": "bg-violet-50/80 border-violet-200/80 text-slate-800",
+    "badgeColor": "text-accent-600 bg-violet-100/80",
+    "title": "LLM Recommendation Architecture & Schema Sync",
+    "body": "When you retain our AI SEO company in Rohini, we format your legal credentials, case milestones and advisory scope into structured schema markup that Perplexity, Copilot and ChatGPT recognize as authoritative references.",
+    "impact": "Direct brand inclusion when clients ask AI assistants for reputable Rohini professionals.",
+    "cta": "AI SEO Company in Delhi",
+    "href": "/ai-seo-company-in-delhi/"
+  },
+  {
+    "num": "03",
+    "category": "Pin 110085 Map Top 3",
+    "icon": "<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z\"/><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M15 11a3 3 0 11-6 0 3 3 0 016 0z\"/></svg>",
+    "iconStyle": "bg-emerald-50 border-emerald-200 text-emerald-600",
+    "impactStyle": "bg-emerald-50/80 border-emerald-200/80 text-slate-800",
+    "badgeColor": "text-emerald-700 bg-emerald-100/80",
+    "title": "Local Three Pack Authority Across Rohini Sectors",
+    "body": "Our local SEO services in Rohini refine Google Business Profile geo attributes, align sector street identifiers across Indian business registries, and systematically build verified client recommendations.",
+    "impact": "Consistent chamber direction clicks and phone calls from Rohini East, West and Sector 18 commuters.",
+    "cta": "Local SEO Services in Delhi",
+    "href": "/local-seo-services-in-delhi/"
+  },
+  {
+    "num": "04",
+    "category": "Position Zero Answers",
+    "icon": "<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z\"/></svg>",
+    "iconStyle": "bg-amber-50 border-amber-200 text-amber-600",
+    "impactStyle": "bg-amber-50/80 border-amber-200/80 text-slate-800",
+    "badgeColor": "text-amber-700 bg-amber-100/80",
+    "title": "Direct Snippet Formatting & Retainer FAQ Blocks",
+    "body": "We publish concise 45 word answers to high intent legal and commercial queries, supported by procedural cost breakdowns, property rate comparisons and compliant FAQPage schema.",
+    "impact": "Immediate search snippet authority when commercial clients compare legal or building costs.",
+    "cta": "AEO Services in Delhi",
+    "href": "/aeo-services-in-delhi/"
+  },
+  {
+    "num": "05",
+    "category": "Entity Knowledge Graph",
+    "icon": "<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M13 10V3L4 14h7v7l9-11h-7z\"/></svg>",
+    "iconStyle": "bg-indigo-50 border-indigo-200 text-indigo-600",
+    "impactStyle": "bg-indigo-50/80 border-indigo-200/80 text-slate-800",
+    "badgeColor": "text-indigo-700 bg-indigo-100/80",
+    "title": "Knowledge Graph Building & Authority Signals",
+    "body": "Generative search algorithms cross examine institutional citations prior to highlighting an advocate or agency. We publish verified legal analyses, llms.txt definitions and clean North Delhi directory records.",
+    "impact": "Repeated practice shortlisting when clients run comparison prompts on Perplexity and ChatGPT.",
+    "cta": "GEO Services in Delhi",
+    "href": "/geo-services-in-delhi/"
+  },
+  {
+    "num": "06",
+    "category": "B2B & Practice Leads",
+    "icon": "<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4\"/></svg>",
+    "iconStyle": "bg-cyan-50 border-cyan-200 text-cyan-700",
+    "impactStyle": "bg-cyan-50/80 border-cyan-200/80 text-slate-800",
+    "badgeColor": "text-cyan-700 bg-cyan-100/80",
+    "title": "Commercial Sector SEO & B2B Pipeline Growth",
+    "body": "Serving as your specialized commercial SEO team, we organize crawlable practice portfolios, implement ProfessionalService markup and construct technical specifications for business units across Rohini.",
+    "impact": "Steady inbound consultation calls and commercial contracts from across North Delhi.",
+    "cta": "Best SEO Company in North Delhi",
+    "href": "/best-seo-company-in-north-delhi/"
+  }
+];
+
+const comparison = [
+  {
+    "metric": "Practice Representation",
+    "typical": "Junior agency interns dispatch generic automated rankings while nobody modifies practice copy",
+    "nk": "Dedicated North Delhi search leaders configure technical code, legal schema and practice hubs directly"
+  },
+  {
+    "metric": "Conversion Measure",
+    "typical": "Emphasizing irrelevant blog visits that never translate into chamber meetings or builder retainers",
+    "nk": "Evaluating confirmed legal consultations, builder walkthroughs and signed corporate mandates"
+  },
+  {
+    "metric": "Conversational AI Status",
+    "typical": "Keyword dense generic paragraphs bypassed by ChatGPT, Copilot and Google AI Overviews",
+    "nk": "Factual 45 word answers, compliant cost tables, LegalService schema and llms.txt resources"
+  },
+  {
+    "metric": "Mobile Delivery Speed",
+    "typical": "Heavy uncompressed slide carousels that crash mobile screens on Rohini sub city transit",
+    "nk": "Lightweight WebP assets and compliant Core Web Vitals delivered by in house engineers"
+  },
+  {
+    "metric": "Registry Consistency",
+    "typical": "Spam link blasting from unrelated foreign portals that threaten permanent indexation bans",
+    "nk": "Legitimate Indian Bar directories, verified local chambers and clean North Delhi citations"
+  },
+  {
+    "metric": "Ownership Integrity",
+    "typical": "Third party vendors hold back Search Console or directory credentials upon retainer conclusion",
+    "nk": "Complete 100% administrative authority remains exclusively with your firm permanently"
+  }
+];
+
+const northCorridors = [
+  {
+    "hub": "Area 01",
+    "area": "Netaji Subhash Place",
+    "focus": "SEO Company in Netaji Subhash Place",
+    "pincode": "Pin 110034",
+    "desc": "We rank CA practices, SaaS firms, wealth managers and tower leasing brokers on Google Search and Maps.",
+    "cta": "View Dedicated NSP Page",
+    "href": "/seo-company-in-netaji-subhash-place/",
+    "accent": "from-brand-500 to-sky-400"
+  },
+  {
+    "hub": "Area 02",
+    "area": "Pitampura",
+    "focus": "SEO Company in Pitampura",
+    "pincode": "Pin 110034",
+    "desc": "We rank commercial offices, builder floor developers, turnkey architects and CA chambers across Pitampura.",
+    "cta": "View Dedicated Pitampura Page",
+    "href": "/seo-company-in-pitampura/",
+    "accent": "from-accent-500 to-violet-400"
+  },
+  {
+    "hub": "Area 03",
+    "area": "Rohini",
+    "focus": "SEO Company in Rohini",
+    "pincode": "Pin 110085",
+    "desc": "Spanning Sectors 1 to 24, we help Court advocates, builders, IT studios and academies win top map spots.",
+    "cta": "View Dedicated Rohini Page",
+    "href": "/seo-company-in-rohini/",
+    "accent": "from-cyan-500 to-teal-400"
+  },
+  {
+    "hub": "Area 04",
+    "area": "Model Town",
+    "focus": "SEO Company in Model Town",
+    "pincode": "Pin 110009",
+    "desc": "Across Model Town Phases 1 to 3, we rank kothi builders, interior studios, wealth advisors and corporate firms.",
+    "cta": "View Dedicated Model Town Page",
+    "href": "/seo-company-in-model-town/",
+    "accent": "from-emerald-500 to-green-400"
+  },
+  {
+    "hub": "Area 05",
+    "area": "Shalimar Bagh",
+    "focus": "SEO Company in Shalimar Bagh",
+    "pincode": "Pin 110088",
+    "desc": "Around Central Market and Ring Road, we rank CA offices, floor builders, kitchen studios and banquet halls.",
+    "cta": "View Dedicated Shalimar Bagh Page",
+    "href": "/seo-company-in-shalimar-bagh/",
+    "accent": "from-indigo-500 to-blue-400"
+  },
+  {
+    "hub": "Area 06",
+    "area": "Ashok Vihar",
+    "focus": "SEO Company in Ashok Vihar",
+    "pincode": "Pin 110052",
+    "desc": "Covering Phases 1 to 4 and Deep Market, we rank corporate offices, kothi architects and tax consultants.",
+    "cta": "View Dedicated Ashok Vihar Page",
+    "href": "/seo-company-in-ashok-vihar/",
+    "accent": "from-violet-500 to-purple-400"
+  },
+  {
+    "hub": "Area 07",
+    "area": "Wazirpur Industrial Area",
+    "focus": "SEO Company in Wazirpur",
+    "pincode": "Pin 110052",
+    "desc": "We turn stainless steel rolling, sheet metal and CNC grade lists into fast HTML B2B specification catalogues.",
+    "cta": "View Dedicated Wazirpur Page",
+    "href": "/seo-company-in-wazirpur/",
+    "accent": "from-amber-500 to-orange-400"
+  },
+  {
+    "hub": "Area 08",
+    "area": "Mukherjee Nagar",
+    "focus": "SEO Company in Mukherjee Nagar",
+    "pincode": "Pin 110009",
+    "desc": "Across Mukherjee Nagar and GTB Nagar, we rank UPSC, IAS, PCS and judiciary academies for student calls.",
+    "cta": "View Dedicated Mukherjee Nagar Page",
+    "href": "/seo-company-in-mukherjee-nagar/",
+    "accent": "from-teal-500 to-emerald-400"
+  },
+  {
+    "hub": "Area 09",
+    "area": "Narela Industrial Area",
+    "focus": "SEO Company in Narela",
+    "pincode": "Pin 110040",
+    "desc": "In DSIIDC Narela Industrial Area, we rank food processing plants, plastics, packaging and machinery factories.",
+    "cta": "View Dedicated Narela Page",
+    "href": "/seo-company-in-narela/",
+    "accent": "from-rose-500 to-pink-400"
+  },
+  {
+    "hub": "Area 10",
+    "area": "Civil Lines",
+    "focus": "SEO Company in Civil Lines",
+    "pincode": "Pin 110054",
+    "desc": "Near Tis Hazari Courts, we rank Bar Council compliant law chambers, luxury bungalow advisors and family offices.",
+    "cta": "View Dedicated Civil Lines Page",
+    "href": "/seo-company-in-civil-lines/",
+    "accent": "from-sky-500 to-cyan-400"
+  },
+  {
+    "hub": "Area 11",
+    "area": "Bawana Industrial Area",
+    "focus": "SEO Company in Bawana",
+    "pincode": "Pin 110039",
+    "desc": "Across DSIIDC Sectors 1 to 5, we generate pan India B2B enquiries for plastic, moulding and packaging plants.",
+    "cta": "View Dedicated Bawana Page",
+    "href": "/seo-company-in-bawana/",
+    "accent": "from-blue-500 to-indigo-400"
+  },
+  {
+    "hub": "Area 12",
+    "area": "Azadpur",
+    "focus": "SEO Company in Azadpur",
+    "pincode": "Pin 110033",
+    "desc": "Along GT Karnal Road and Azadpur Complex, we rank cold chain units, fleet logistics and wholesale exporters.",
+    "cta": "View Dedicated Azadpur Page",
+    "href": "/seo-company-in-azadpur/",
+    "accent": "from-fuchsia-500 to-rose-400"
+  }
+];
+
+const industries = [
+  {
+    "sector": "Sector Property SEO",
+    "title": "Real Estate & Property",
+    "focus": "Structuring dedicated floor showcase pages for independent builder floor developers and commercial plot advisors across Rohini Sectors 7 through 15.",
+    "outcome": "Consistent site visit bookings, qualified investor inquiries and closed floor transactions.",
+    "accentBorder": "border-t-brand-500",
+    "iconBg": "bg-sky-50 text-brand-600 border-sky-200",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4\"/></svg>"
+  },
+  {
+    "sector": "Turnkey Interiors SEO",
+    "title": "Interior Design & Architecture",
+    "focus": "Developing responsive architectural galleries, material cost tables and verified map pins for turnkey interior designers and workspace fitout studios.",
+    "outcome": "High ticket workspace renovation contracts and ongoing residential design retainers.",
+    "accentBorder": "border-t-amber-500",
+    "iconBg": "bg-amber-50 text-amber-600 border-amber-200",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z\"/></svg>"
+  },
+  {
+    "sector": "Judiciary Academy SEO",
+    "title": "Education & Coaching Institutes",
+    "focus": "Deploying structured course curricula, faculty background schema and fee breakdowns for judiciary, civil services and law entrance test prep centers in Sector 14.",
+    "outcome": "Daily student inquiry calls, demo cabin walkthroughs and confirmed admissions.",
+    "accentBorder": "border-t-cyan-500",
+    "iconBg": "bg-cyan-50 text-cyan-700 border-cyan-200",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222\"/></svg>"
+  },
+  {
+    "sector": "Fabrication Units SEO",
+    "title": "Manufacturing & Industrial Businesses",
+    "focus": "Publishing indexed HTML product catalogues for metal component fabricators, precision machine builders and light assembly units headquartered in Rohini.",
+    "outcome": "Direct industrial RFQs, dealer network expansion and repeat production orders.",
+    "accentBorder": "border-t-emerald-500",
+    "iconBg": "bg-emerald-50 text-emerald-600 border-emerald-200",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z\"/><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M15 12a3 3 0 11-6 0 3 3 0 016 0z\"/></svg>"
+  },
+  {
+    "sector": "Cloud Services SEO",
+    "title": "SaaS & Technology Companies",
+    "focus": "Building software comparison hubs, integration guides and feature matrices for custom billing application developers and IT services studios.",
+    "outcome": "Reliable inbound demo requests and multi year commercial IT support contracts.",
+    "accentBorder": "border-t-indigo-500",
+    "iconBg": "bg-indigo-50 text-indigo-600 border-indigo-200",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4\"/></svg>"
+  },
+  {
+    "sector": "Tax Compliance SEO",
+    "title": "Accounting & Financial Services",
+    "focus": "Positioning Chartered Accountants, GST compliance advisors and statutory audit chambers across Sectors 8, 9 and 11 for high intent corporate tax searches.",
+    "outcome": "Steady statutory audit retainers from business owners and regional corporate entities.",
+    "accentBorder": "border-t-rose-500",
+    "iconBg": "bg-rose-50 text-rose-600 border-rose-200",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z\"/></svg>"
+  },
+  {
+    "sector": "Rohini Court Advocate SEO",
+    "title": "Legal Services & Law Firms",
+    "focus": "Constructing Bar Council compliant practice areas for commercial dispute advocates, insolvency practitioners and arbitration counsel near Rohini Court.",
+    "outcome": "Top search rank for specialized corporate litigation terms and booked chamber consultations.",
+    "accentBorder": "border-t-accent-500",
+    "iconBg": "bg-violet-50 text-accent-600 border-violet-200",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3\"/></svg>"
+  },
+  {
+    "sector": "Commercial Fleet SEO",
+    "title": "Logistics, Warehousing & Cold Chain",
+    "focus": "Optimizing search profiles for industrial transport operators, cargo dispatchers and temperature controlled logistics agencies in North Delhi.",
+    "outcome": "Regular corporate freight commitments, dedicated truck bookings and route agreements.",
+    "accentBorder": "border-t-pink-500",
+    "iconBg": "bg-pink-50 text-pink-600 border-pink-200",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z\"/><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0\"/></svg>"
+  },
+  {
+    "sector": "Structural Builders SEO",
+    "title": "Construction & Infrastructure",
+    "focus": "Engineering technical project galleries for PEB shed developers, civil engineering contractors and commercial structural builders serving Rohini.",
+    "outcome": "Direct industrial building contracts, commercial collaborations and pre tender invites.",
+    "accentBorder": "border-t-orange-500",
+    "iconBg": "bg-orange-50 text-orange-600 border-orange-200",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M3 21h18M5 21V7l8-4v18M19 21V11l-6-4M9 9v.01M9 12v.01M9 15v.01M9 18v.01\"/></svg>"
+  },
+  {
+    "sector": "Executive Venue SEO",
+    "title": "Hospitality & Corporate Events",
+    "focus": "Ranking business seminar venues, corporate meeting spaces and executive conference banquet facilities across Rohini for corporate conclaves.",
+    "outcome": "Direct venue bookings for corporate gatherings, shareholder meets and partner conclaves.",
+    "accentBorder": "border-t-purple-500",
+    "iconBg": "bg-purple-50 text-purple-600 border-purple-200",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z\"/></svg>"
+  },
+  {
+    "sector": "Corrugated Export SEO",
+    "title": "Packaging, Plastic & Wholesale Exporters",
+    "focus": "Creating technical specification pages for corrugated container manufacturers, industrial plastic moulders and export packaging specialists.",
+    "outcome": "Daily packaging RFQ submissions, corporate supplier agreements and bulk export orders.",
+    "accentBorder": "border-t-red-500",
+    "iconBg": "bg-red-50 text-red-600 border-red-200",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4\"/></svg>"
+  },
+  {
+    "sector": "Corporate Consulting SEO",
+    "title": "Professional & Business Services",
+    "focus": "Positioning corporate recruitment agencies, industrial safety consultants and patent trademark attorneys located across Rohini.",
+    "outcome": "Steady corporate consulting inquiries, tender opportunities and reliable retainer contracts.",
+    "accentBorder": "border-t-teal-500",
+    "iconBg": "bg-teal-50 text-teal-700 border-teal-200",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z\"/></svg>"
+  }
+];
+
+const testimonials = [
+  {
+    "name": "Advocate Raghav Bhasin",
+    "title": "Managing Advocate",
+    "company": "Bhasin & Associates Law Chambers",
+    "sector": "Commercial Litigation & Arbitration, Rohini Court Complex",
+    "metrics": [
+      "330% increase in commercial litigation inquiries",
+      "Top 3 Google Map spot for commercial advocate Rohini Court",
+      "Position zero snippet for arbitration procedures Delhi"
+    ],
+    "quote": "Litigants and business owners search Google for verified legal counsel before visiting chambers at Rohini Court. NK Digital Tech structured our practice pages with Bar Council compliant FAQ markup and optimized our map listing. We receive corporate consultation calls every single week.",
+    "logo": "/images/clients/creative-academy.webp"
+  },
+  {
+    "name": "Varun Sehgal",
+    "title": "Director",
+    "company": "Sehgal Floor Promoters",
+    "sector": "Commercial Floors & Builder Projects, Sector 8 Rohini",
+    "metrics": [
+      "280% growth in direct buyer site visit bookings",
+      "Page one Google visibility for builder floors Sector 8 Rohini",
+      "Direct property closures without expensive listing aggregator fees"
+    ],
+    "quote": "Commercial buyers compare floor specifications, lift clearances and parking details before scheduling site visits. NK Digital Tech engineered fast WebP project pages that rank above property aggregator portals, saving us substantial broker commissions.",
+    "logo": "/images/clients/vp-infra.webp"
+  },
+  {
+    "name": "Deepak Batra",
+    "title": "Founder & CEO",
+    "company": "Batra Infotech Solutions",
+    "sector": "Enterprise Software & IT Consulting, D Mall Sector 10 Rohini",
+    "metrics": [
+      "3.8x rise in verified inbound software demo requests",
+      "Featured by ChatGPT and Gemini for enterprise IT solutions Rohini",
+      "Dominant search visibility across North Delhi commercial hubs"
+    ],
+    "quote": "For B2B software vendors, technical page speed and clean entity schema are critical. NK Digital Tech rebuilt our platform pages to load under two seconds and aligned our schema markup. Our enterprise software demo pipeline has expanded consistently across Delhi NCR.",
+    "logo": "/images/clients/vision.webp"
+  },
+  {
+    "name": "Ritu Chhabra",
+    "title": "Head of Counseling",
+    "company": "Chhabra Judicial Institute",
+    "sector": "Judiciary & Law Entrance Prep, Sector 14 Rohini",
+    "metrics": [
+      "250% increase in classroom demo and counselor visits",
+      "Top 3 Google Map Pack spot for judiciary coaching Rohini",
+      "Zero reliance on seasonal outdoor poster campaigns"
+    ],
+    "quote": "Law graduates traveling via Rohini Metro search on mobile phones for reliable judiciary batches and faculty credentials. NK Digital Tech fixed our mobile loading speed and added structured fee tables that keep our lecture halls full ahead of each entrance cycle.",
+    "logo": "/images/clients/propertyways.webp"
+  }
+];
+
+const stages = [
+  {
+    "num": "Milestone 01",
+    "step": "01",
+    "title": "Sub City Architecture & Benchmark Assessment",
+    "body": "We evaluate technical server metrics, mobile network bottlenecks and existing Google profile indicators across Sectors 1 to 24 to establish a precise competitive baseline.",
+    "accent": "from-brand-600 to-sky-500"
+  },
+  {
+    "num": "Milestone 02",
+    "step": "02",
+    "title": "Quarterly Intent Mapping & Schema Architecture",
+    "body": "Our strategists deliver a 90 day roadmap containing prioritized high intent commercial keywords, sector specific landing modules and schema specifications.",
+    "accent": "from-accent-600 to-violet-500"
+  },
+  {
+    "num": "Milestone 03",
+    "step": "03",
+    "title": "Code Refactoring & Practice Content Deployment",
+    "body": "Working directly inside your web repository, our team deploys responsive WebP layouts, publishes compliant practice copy and unifies external citations.",
+    "accent": "from-cyan-600 to-teal-500"
+  },
+  {
+    "num": "Milestone 04",
+    "step": "04",
+    "title": "Biweekly Call Tracking & Algorithmic Fine Tuning",
+    "body": "Every two weeks, our analysts inspect Search Console trends, map direction requests and conversational AI appearances, refining campaign parameters for maximum ROI.",
+    "accent": "from-emerald-600 to-green-500"
+  }
+];
+
+const faqs = [
+  {
+    "q": "Why do Rohini law chambers and commercial developers trust NK Digital Tech?",
+    "a": "Advocates and builders rely on NK Digital Tech because we connect technical site performance, sector specific practice pages and Google Business Profile authority directly to client consultations and property deals. We specialize in Sectors 1 to 24, Rohini Court and D Mall Sector 10."
+  },
+  {
+    "q": "What is the customary monthly fee for search marketing in Rohini?",
+    "a": "Effective retainers in Rohini typically span between ₹16,000 and ₹44,000 per month depending on existing digital assets, competitive density and geographic targets. Legal chambers and academies generally select focused local sprints, whereas commercial builders invest ₹44,000 upward."
+  },
+  {
+    "q": "How rapidly will our chamber observe inquiries after launching an SEO campaign?",
+    "a": "Auditing Google Business citations, correcting sector address markers, and tuning server response times regularly yields increased consultation phone inquiries within 30 to 60 days. Dominant local pack leadership and AI citations establish over three to six months."
+  },
+  {
+    "q": "How does your agency earn recommendations for Rohini firms on ChatGPT and Gemini?",
+    "a": "Large language models parse structured knowledge graphs and verified credentials. We implement Bar Council aligned LegalService schema, publish concise 50 word case guidance summaries, and build authoritative mentions across Indian legal and corporate indexes."
+  },
+  {
+    "q": "Do you provide local SEO coverage across all Rohini sectors?",
+    "a": "Yes. Whether your chambers are situated near Rohini District Court, Sector 3, Sector 7, Sector 8, Sector 9 DC Chowk, Sector 10 D Mall, Sector 14, Sector 15 or Sector 24, we deploy hyper local signals tailored to your exact target catchment in Pin 110085."
+  },
+  {
+    "q": "Can you generate commercial inquiries for manufacturing and B2B firms based in Rohini?",
+    "a": "Yes. Many engineering and industrial suppliers in Rohini archive product capacities in static PDF documents. We extract these technical catalogs into fast loading schema marked web pages that corporate purchase heads discover during national vendor sourcing."
+  },
+  {
+    "q": "What pitfalls should I avoid when evaluating search marketing agencies in Rohini?",
+    "a": "Beware of black hat agencies selling automated backlink blasts or claiming secret Google relationships. Such shortcuts cause severe algorithm penalties. Our engineers perform white hat technical optimizations and provide transparent sprint audits."
+  },
+  {
+    "q": "Does NK Digital Tech mandate locked annual contracts for Rohini clients?",
+    "a": "Absolutely not. Our client partnerships thrive on documented sprint milestones and rising inquiry counts rather than binding annual contracts. You retain 100% control over domain assets, tracking tags, and verified listings."
+  }
+];
+
+const trustStrip = [
+  "Sectors 1 to 24 Institutional Belts",
+  "District Court & B2B Visibility",
+  "Rohini Local Pack First Page",
+  "Referenced by Gemini & Claude",
+  "Featured Answer Snippet Capture",
+  "Rich Snippet Legal Data Markup",
+  "Sub Second Loading Benchmarks",
+  "100% Unrestricted Account Access"
+];
+
+const schemaLocalBusiness = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "NK Digital Tech Best SEO Company in Rohini",
+  "url": "https://www.nkdigitaltech.net/seo-company-in-rohini/",
+  "logo": "https://www.nkdigitaltech.net/images/seo-rohini/hero-seo-company-rohini.webp",
+  "image": "https://www.nkdigitaltech.net/images/seo-rohini/hero-seo-company-rohini.webp",
+  "description": "NK Digital Tech is the Best SEO Company in Rohini Delhi providing technical SEO, Google Map Pack rankings, AEO, GEO and ChatGPT citations for Rohini Court advocates, builders and commercial practices.",
+  "email": "connect@nkdigitaltech.com",
+  "priceRange": "₹16,000 to ₹48,000+",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Rohini",
+    "addressRegion": "Delhi",
+    "postalCode": "110085",
+    "addressCountry": "IN"
+  },
+  "areaServed": [
+    "Rohini",
+    "Pitampura",
+    "Netaji Subhash Place",
+    "North Delhi",
+    "Delhi NCR"
+  ],
+  "serviceType": [
+    "Search Engine Optimisation (SEO)",
+    "Local SEO in Rohini Delhi",
+    "Technical Core Web Vitals Optimization",
+    "AI SEO & ChatGPT Citation Optimization",
+    "Answer Engine Optimisation (AEO)",
+    "Generative Engine Optimisation (GEO)",
+    "Commercial & Legal Practice SEO"
+  ]
+});
+
+const schemaFAQ = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why do Rohini law chambers and commercial developers trust NK Digital Tech?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Advocates and builders rely on NK Digital Tech because we connect technical site performance, sector specific practice pages and Google Business Profile authority directly to client consultations and property deals. We specialize in Sectors 1 to 24, Rohini Court and D Mall Sector 10."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the customary monthly fee for search marketing in Rohini?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Effective retainers in Rohini typically span between ₹16,000 and ₹44,000 per month depending on existing digital assets, competitive density and geographic targets. Legal chambers and academies generally select focused local sprints, whereas commercial builders invest ₹44,000 upward."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How rapidly will our chamber observe inquiries after launching an SEO campaign?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Auditing Google Business citations, correcting sector address markers, and tuning server response times regularly yields increased consultation phone inquiries within 30 to 60 days. Dominant local pack leadership and AI citations establish over three to six months."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does your agency earn recommendations for Rohini firms on ChatGPT and Gemini?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Large language models parse structured knowledge graphs and verified credentials. We implement Bar Council aligned LegalService schema, publish concise 50 word case guidance summaries, and build authoritative mentions across Indian legal and corporate indexes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you provide local SEO coverage across all Rohini sectors?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Whether your chambers are situated near Rohini District Court, Sector 3, Sector 7, Sector 8, Sector 9 DC Chowk, Sector 10 D Mall, Sector 14, Sector 15 or Sector 24, we deploy hyper local signals tailored to your exact target catchment in Pin 110085."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you generate commercial inquiries for manufacturing and B2B firms based in Rohini?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Many engineering and industrial suppliers in Rohini archive product capacities in static PDF documents. We extract these technical catalogs into fast loading schema marked web pages that corporate purchase heads discover during national vendor sourcing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What pitfalls should I avoid when evaluating search marketing agencies in Rohini?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Beware of black hat agencies selling automated backlink blasts or claiming secret Google relationships. Such shortcuts cause severe algorithm penalties. Our engineers perform white hat technical optimizations and provide transparent sprint audits."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does NK Digital Tech mandate locked annual contracts for Rohini clients?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Absolutely not. Our client partnerships thrive on documented sprint milestones and rising inquiry counts rather than binding annual contracts. You retain 100% control over domain assets, tracking tags, and verified listings."
+      }
+    }
+  ]
+});
+---
+
+<Layout
+  title={pageTitle}
+  description={pageDescription}
+  canonical={pageCanonical}
+  ogImage="https://www.nkdigitaltech.net/images/seo-rohini/hero-seo-company-rohini.webp"
+  preloadImage="/images/seo-rohini/hero-seo-company-rohini.webp"
+  hideLocationsNav={false}
+  customSchemaLocalBusiness={schemaLocalBusiness}
+  customSchemaFAQ={schemaFAQ}
+  utilityTagline="Best SEO Company in Rohini Delhi • Sectors 1 to 24, Rohini Court & D Mall Sector 10"
+  brandSubtitle="Rohini • Legal, Builder & B2B SEO"
+  footerBio="Leading SEO Company in Rohini Delhi helping Rohini Court advocates, builder floor developers, IT studios, testing academies and corporate firms win top Google spots and AI citations."
+  footerCoreDisciplines={[
+    { label: 'Best SEO Company in North Delhi', href: '/best-seo-company-in-north-delhi/' },
+    { label: 'Best SEO Company in Delhi', href: '/best-seo-company-in-delhi/' },
+    { label: 'Local SEO Services in Delhi', href: '/local-seo-services-in-delhi/' },
+    { label: 'AI SEO Company in Delhi', href: '/ai-seo-company-in-delhi/' },
+    { label: 'AEO Services in Delhi', href: '/aeo-services-in-delhi/' },
+    { label: 'GEO Services in Delhi', href: '/geo-services-in-delhi/' },
+    { label: 'Website Development Company in Delhi', href: '/website-development-company-in-delhi/' },
+  ]}
+  footerTagline="Best SEO Company in Rohini Delhi • Pin 110085 Sector Search Growth"
+>
+
+  <!-- =====================================================================
+       SECTION 1: HERO
+  ===================================================================== -->
+  <section class="relative surface-dark overflow-hidden pt-5 pb-9 sm:pt-16 sm:pb-20 lg:pt-20 lg:pb-24 border-b border-slate-800/80">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="absolute inset-0 mesh-glow pointer-events-none"></div>
+    <div class="absolute -top-24 -left-24 sm:-top-36 sm:-left-36 w-56 h-56 sm:w-96 sm:h-96 bg-brand-500/20 rounded-full blur-[80px] sm:blur-[130px] pointer-events-none"></div>
+    <div class="absolute top-1/4 -right-24 sm:-right-36 w-56 h-56 sm:w-96 sm:h-96 bg-accent-500/20 rounded-full blur-[80px] sm:blur-[130px] pointer-events-none"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns: Headline & CTA -->
+        <div class="lg:col-span-7 text-left min-w-0">
+          <div class="badge-dark mb-3 sm:mb-6 py-1.5 px-2.5 sm:px-3.5">
+            <span class="w-2 h-2 rounded-full bg-brand-400 animate-ping flex-shrink-0"></span>
+            <span class="min-w-0 break-words">Sectors 1 to 24 &bull; Rohini Court &bull; D Mall Sector 10 &bull; DC Chowk</span>
+          </div>
+
+          <h1 class="font-display text-[clamp(1.75rem,7vw,2.4rem)] sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-[1.14] sm:leading-[1.1] mb-3.5 sm:mb-6 text-glow">
+            Best SEO Company in <br class="hidden sm:inline" /><span class="gradient-text-light">Rohini Delhi</span>
+          </h1>
+
+          <p class="text-[13.5px] sm:text-base md:text-lg text-slate-300 leading-[1.68] sm:leading-relaxed mb-5 sm:mb-8 font-normal text-justify hyphens-auto [text-align-last:left]">
+            Retaining an authoritative <strong class="text-white font-semibold">SEO Company in Rohini Delhi</strong> positions your legal chambers, construction firm or coaching academy directly before local clients. NK Digital Tech pairs rapid responsive pages with sector level map supremacy and generative citations across ChatGPT, Perplexity and Gemini.
+          </p>
+
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-4 mb-5 sm:mb-10">
+            <a href="#contact" class="btn-primary w-full sm:w-auto min-h-[50px] text-[13.5px] sm:text-base px-4 sm:px-8 py-3.5 sm:py-4">
+              <span>Claim Free Rohini SEO Audit</span>
+              <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+              </svg>
+            </a>
+            <a href="#services" class="btn-secondary-dark w-full sm:w-auto min-h-[48px] text-[13.5px] sm:text-base px-4 sm:px-7 py-3.5 sm:py-4">
+              <span>Explore Sector Services</span>
+            </a>
+          </div>
+
+          <!-- Trust Verification Strip -->
+          <div class="pt-4 sm:pt-6 border-t border-slate-800/80">
+            <div class="grid grid-cols-2 sm:flex sm:flex-wrap items-stretch sm:items-center gap-2">
+              {trustStrip.map((item) => (
+                <span class="px-2.5 sm:px-3 py-2 sm:py-1.5 min-h-[42px] sm:min-h-0 rounded-lg bg-slate-900/90 border border-slate-800 text-[11px] sm:text-xs text-slate-300 font-medium flex items-center justify-center sm:justify-start text-center sm:text-left leading-tight break-words">
+                  {item}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Hero Image -->
+        <div class="lg:col-span-5 min-w-0">
+          <div class="relative rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-700/80 shadow-2xl shadow-brand-500/15 bg-slate-900 group">
+            <div class="relative">
+              <img
+                src="/images/seo-rohini/hero-seo-company-rohini.webp"
+                alt="Best SEO Company in Rohini Delhi Specialists Reviewing Sector Wise Search Rankings"
+                width="960"
+                height="540"
+                sizes="(max-width: 1024px) 100vw, 42vw"
+                fetchpriority="high"
+                decoding="async"
+                class="w-full aspect-[16/9] sm:aspect-auto sm:h-72 md:h-[380px] lg:h-[400px] object-cover object-center sm:group-hover:scale-105 transition-transform duration-500"
+              />
+              <div class="hidden sm:block absolute inset-0 bg-gradient-to-t from-[#050a14] via-transparent to-transparent opacity-80"></div>
+            </div>
+            <div class="relative sm:absolute sm:bottom-4 sm:left-4 sm:right-4 glass-card border-t sm:border border-slate-800 sm:rounded-2xl p-3.5 sm:p-4">
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-1">
+                <span class="text-xs font-bold text-white">Pin 110085 Sub City Growth</span>
+                <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-400">
+                  <span class="w-2 h-2 rounded-full bg-emerald-400 flex-shrink-0"></span>
+                  Verified Inquiries
+                </span>
+              </div>
+              <p class="text-[11px] sm:text-xs text-slate-300 text-justify hyphens-auto [text-align-last:left] leading-relaxed">
+                Helping Sectors 1 to 24 advocates, builders and agencies win steady inbound client calls.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 2: INTRODUCTION
+  ===================================================================== -->
+  <section class="relative surface-white overflow-hidden py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns -->
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-light mb-3.5 sm:mb-4">Pin 110085 Sub City &amp; Institutional Centre</div>
+          <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-4 sm:mb-6">
+            How Rohini Professional Chambers Dominate Local Sector Discovery <span class="gradient-text-dark">Through Strategic Search</span>
+          </h2>
+          <div class="space-y-4 sm:space-y-5 text-slate-700 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            <p>
+              Rohini stands as North Delhi primary institutional, legal, and industrial hub. Spanning Sectors 1 through 24, from the bustling Rohini Courts complex to the Badli industrial borders, enterprise clients face fierce regional search competition. Securing reliable organic visibility requires structured entity data, high performance page speeds, and meticulous local authority engineering.
+            </p>
+            <p>
+              Our specialized team integrates local market positioning under the <a href="/best-seo-company-in-north-delhi/" class="text-brand-600 font-semibold hover:underline">Best SEO Company in North Delhi</a> umbrella, scaling broader capital area reach through our <a href="/best-seo-company-in-delhi/" class="text-brand-600 font-semibold hover:underline">Best SEO Company in Delhi</a> unit alongside focused hyper local map work via <a href="/local-seo-services-in-delhi/" class="text-brand-600 font-semibold hover:underline">Local SEO Services in Delhi</a>.
+            </p>
+          </div>
+          <div class="mt-6 sm:mt-8 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
+            <a href="#contact" class="btn-primary w-full sm:w-auto min-h-[48px]">
+              <span>Speak With a Rohini Specialist</span>
+              <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+              </svg>
+            </a>
+            <a href="#why-us" class="btn-secondary-light w-full sm:w-auto min-h-[48px]">
+              <span>See How We Differ</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Team Image + Stats -->
+        <div class="lg:col-span-5 space-y-4 sm:space-y-5 min-w-0">
+          <div class="rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-200 shadow-lg bg-slate-100">
+            <img
+              src="/images/seo-rohini/seo-agency-team-rohini.webp"
+              alt="Local SEO Agency Rohini Team Planning Court and Sector Search Campaigns"
+              width="800"
+              height="533"
+              sizes="(max-width: 1024px) 100vw, 42vw"
+              class="w-full aspect-[16/9] sm:aspect-auto sm:h-64 lg:h-72 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="grid grid-cols-2 gap-2.5 sm:gap-4">
+            {[
+  {
+    "val": "#1 Tier",
+    "label": "Institutional Visibility",
+    "sub": "District courts & sector zones"
+  },
+  {
+    "val": "14 Days",
+    "label": "Sprint Delivery Pace",
+    "sub": "Iterative technical deployments"
+  },
+  {
+    "val": "3.8x",
+    "label": "B2B Inbound Inquiries",
+    "sub": "Audited high value engagements"
+  },
+  {
+    "val": "Full",
+    "label": "Code & Search Ownership",
+    "sub": "Zero lock in retainers from launch"
+  }
+].map((stat) => (
+              <div class="elevated-card rounded-xl sm:rounded-2xl p-3 sm:p-4 min-w-0 flex flex-col justify-between">
+                <div class="font-display font-black text-[1.1rem] sm:text-2xl text-brand-600 mb-0.5 leading-tight break-words">{stat.val}</div>
+                <div class="text-[11px] sm:text-xs font-bold text-slate-900 leading-snug">{stat.label}</div>
+                <div class="text-[10.5px] sm:text-[11px] text-slate-500 leading-snug mt-0.5">{stat.sub}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 3: PROBLEM STATEMENT
+  ===================================================================== -->
+  <section class="relative surface-indigo py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="max-w-7xl mx-auto relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns -->
+        <div class="lg:col-span-7 min-w-0">
+          <div class="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-3.5 py-1 sm:py-1.5 rounded-full text-[10px] sm:text-xs font-bold uppercase tracking-wider sm:tracking-widest bg-amber-500/10 border border-amber-500/30 text-amber-300 max-w-full leading-snug mb-4 sm:mb-5">
+            <svg class="w-4 h-4 text-amber-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+            </svg>
+            <span>Why Sub City Firms Miss Retainers</span>
+          </div>
+
+          <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-white tracking-tight leading-[1.22] sm:leading-tight mb-4 sm:mb-6">
+            Why Respected Rohini Practices Miss Inbound Corporate Inquiries Online
+          </h2>
+
+          <div class="space-y-4 sm:space-y-5 text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            <p>
+              When prospective litigants or commercial investors look for legal advice or builder floors in Rohini, unoptimized websites fail to capture their attention. If your site lacks sector specific content, takes seconds to render on smartphones and displays inconsistent address records, searchers promptly consult rival firms.
+            </p>
+            <p>
+              Applying specialized techniques from our <a href="/ai-seo-company-in-delhi/" class="text-sky-300 font-semibold hover:underline">AI SEO Company in Delhi</a> specialists and <a href="/aeo-services-in-delhi/" class="text-sky-300 font-semibold hover:underline">AEO Services in Delhi</a> engineers, we transform complex practice profiles into streamlined WebP pages enhanced with Bar Council compliant LegalService schema.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Diagnostic Cards -->
+        <div class="lg:col-span-5 space-y-3.5 sm:space-y-4 min-w-0">
+          <div class="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6 border-l-4 border-l-rose-500">
+            <div class="flex flex-wrap items-center justify-between gap-1.5 mb-2">
+              <span class="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-rose-400">Typical Local Vendor</span>
+              <span class="text-[11px] sm:text-xs text-slate-400">Lost Legal Inquiries</span>
+            </div>
+            <h3 class="font-display font-bold text-[15px] sm:text-base text-white mb-2 leading-snug">Slow Loading Chambers, Absent Legal Schema & Vague Map Addresses</h3>
+            <p class="text-xs text-slate-300 leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+              Leaves your chamber invisible when corporate counsel or litigants query Google Maps or ChatGPT for top advocates near Rohini Court.
+            </p>
+          </div>
+
+          <div class="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6 border-l-4 border-l-emerald-400">
+            <div class="flex flex-wrap items-center justify-between gap-1.5 mb-2">
+              <span class="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-emerald-400">NK Digital Tech System</span>
+              <span class="text-[11px] sm:text-xs text-brand-300">Daily Scheduled Retainers</span>
+            </div>
+            <h3 class="font-display font-bold text-[15px] sm:text-base text-white mb-2 leading-snug">Sub Two Second Speeds, Verified Practice Pages & Top 3 Maps</h3>
+            <p class="text-xs text-slate-300 leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+              Unites instant mobile speed, validated Pin 110085 sector citations, Bar Council compliant LegalService schema and 45 word answer boxes.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 4: SERVICES
+  ===================================================================== -->
+  <section id="services" class="relative surface-cool overflow-hidden scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 items-center mb-9 sm:mb-16">
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-light mb-3">Six Sector Growth Pillars</div>
+          <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+            Complete SEO Services in Rohini Delhi
+          </h2>
+          <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            Six integrated organic workstreams designed to capture institutional buyers, business litigants, and sub city contracts across Sectors 1 through 24 via technical speed, structured data and <a href="/geo-services-in-delhi/" class="text-brand-600 font-semibold hover:underline">GEO Services in Delhi</a>.
+          </p>
+        </div>
+        <div class="lg:col-span-5 min-w-0">
+          <div class="rounded-2xl overflow-hidden border border-slate-200 shadow-md bg-white">
+            <img
+              src="/images/seo-rohini/technical-ai-seo-services-rohini.webp"
+              alt="SEO Services in Rohini Developers Inspecting Technical Core Web Vitals and Schema"
+              width="800"
+              height="450"
+              sizes="(max-width: 1024px) 100vw, 42vw"
+              class="w-full aspect-[16/9] sm:aspect-auto sm:h-56 lg:h-64 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- 3 Columns x 2 Rows Grid Layout -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-7">
+        {services.map((s) => (
+          <div class="elevated-card rounded-2xl p-4 sm:p-7 flex flex-col justify-between group sm:hover:-translate-y-1 min-w-0">
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-4 sm:mb-6">
+                <div class={`w-11 h-11 sm:w-12 sm:h-12 rounded-xl border flex items-center justify-center flex-shrink-0 ${s.iconStyle}`}>
+                  <Fragment set:html={s.icon} />
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class={`text-[10.5px] sm:text-[11px] font-semibold px-2.5 py-1 rounded-md ${s.badgeColor}`}>
+                    {s.category}
+                  </span>
+                  <span class="font-display font-black text-base sm:text-lg text-slate-300">{s.num}</span>
+                </div>
+              </div>
+
+              <h3 class="font-display font-bold text-[17px] sm:text-xl text-slate-900 mb-2.5 sm:mb-3 leading-snug group-hover:text-brand-600 transition-colors">
+                {s.title}
+              </h3>
+
+              <p class="text-slate-600 text-[13px] sm:text-sm leading-relaxed mb-4 sm:mb-6 text-justify hyphens-auto [text-align-last:left]">
+                {s.body}
+              </p>
+            </div>
+
+            <div>
+              <div class={`rounded-xl border p-3.5 sm:p-4 mb-3.5 sm:mb-5 ${s.impactStyle}`}>
+                <div class="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-slate-900 mb-1">
+                  <svg class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                  </svg>
+                  <span>Rohini Sector Impact</span>
+                </div>
+                <p class="text-xs text-slate-700 leading-relaxed font-medium text-justify hyphens-auto [text-align-last:left]">
+                  {s.impact}
+                </p>
+              </div>
+
+              <a href={s.href} class="w-full sm:w-auto inline-flex items-center justify-between sm:justify-start gap-2 rounded-xl sm:rounded-none bg-slate-50 active:bg-sky-50 sm:bg-transparent border border-slate-200/80 sm:border-0 px-3.5 sm:px-0 py-2.5 min-h-[46px] sm:min-h-0 text-xs font-bold text-brand-600 hover:text-brand-700 group-hover:gap-3 transition-all">
+                <span>{s.cta}</span>
+                <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 5: WHY NK DIGITAL TECH
+  ===================================================================== -->
+  <section id="why-us" class="relative surface-white overflow-hidden scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-14 text-left sm:text-center">
+        <div class="badge-light mb-3">Principal Engineer Oversight</div>
+        <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+          Why Discerning Rohini Practices Partner With NK Digital Tech
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed mb-4 text-justify hyphens-auto [text-align-last:left]">
+          Conventional vendors fail in Rohini because they rely on shallow directory spam and outdated meta tags. We bring rigorous software engineering, structured knowledge graph alignment, and clear accountability to every campaign.
+        </p>
+        <p class="text-slate-700 font-semibold text-xs sm:text-sm">
+          Side by side performance evaluation comparing conventional agency shortcomings with NK Digital Tech Rohini standards:
+        </p>
+      </div>
+
+      <!-- Desktop Comparison Matrix -->
+      <div class="hidden md:block overflow-hidden rounded-2xl border border-slate-200 shadow-lg">
+        <table class="w-full text-left border-collapse">
+          <thead>
+            <tr class="bg-slate-900 text-white">
+              <th class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-slate-300 w-1/4">
+                Performance Standard
+              </th>
+              <th class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-rose-300 w-[37.5%] border-l border-slate-800">
+                Conventional Delhi Firm
+              </th>
+              <th class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-brand-300 w-[37.5%] border-l border-slate-800 bg-slate-950">
+                NK Digital Tech Rohini
+              </th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200 text-sm">
+            {comparison.map((row, idx) => (
+              <tr class={idx % 2 === 0 ? 'bg-white' : 'bg-slate-50/80'}>
+                <td class="py-5 px-6 font-display font-bold text-slate-900">
+                  {row.metric}
+                </td>
+                <td class="py-5 px-6 text-slate-600 border-l border-slate-200">
+                  <div class="flex items-start gap-2.5">
+                    <svg class="w-4 h-4 text-rose-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                    <span>{row.typical}</span>
+                  </div>
+                </td>
+                <td class="py-5 px-6 text-slate-900 font-medium border-l border-slate-200 bg-sky-50/40">
+                  <div class="flex items-start gap-2.5">
+                    <svg class="w-4 h-4 text-emerald-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span>{row.nk}</span>
+                  </div>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Mobile Comparison Cards -->
+      <div class="md:hidden space-y-3.5">
+        {comparison.map((row) => (
+          <div class="elevated-card rounded-2xl p-4 space-y-2.5 min-w-0">
+            <h3 class="font-display font-bold text-slate-900 text-[15px] leading-snug pb-2 border-b border-slate-100">{row.metric}</h3>
+            <div class="rounded-xl bg-rose-50 border border-rose-100 p-3">
+              <div class="flex items-center gap-1.5 mb-1">
+                <svg class="w-3.5 h-3.5 text-rose-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+                <p class="text-[10px] font-bold uppercase tracking-wider text-rose-600">Conventional Delhi Firm</p>
+              </div>
+              <p class="text-xs text-slate-700 leading-relaxed">{row.typical}</p>
+            </div>
+            <div class="rounded-xl bg-sky-50 border border-sky-200 p-3">
+              <div class="flex items-center gap-1.5 mb-1">
+                <svg class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                </svg>
+                <p class="text-[10px] font-bold uppercase tracking-wider text-brand-600">NK Digital Tech Rohini</p>
+              </div>
+              <p class="text-xs text-slate-900 font-semibold leading-relaxed">{row.nk}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 6: KEY BUSINESS DISTRICTS & INDUSTRIAL ZONES WE COVER IN NORTH DELHI
+  ===================================================================== -->
+  <section id="locations" class="relative surface-cool overflow-hidden scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-14 text-left sm:text-center">
+        <div class="badge-light mb-3">Core North Delhi Catchments</div>
+        <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+          Key Business Districts &amp; Industrial Zones We Cover in North Delhi
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          Covering legal chambers near Rohini Courts, corporate workspaces across Sectors 7 and 8, and trade parks near Badli, we build resilient organic authority across North Delhi.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
+        {northCorridors.map((c) => (
+          <div class="elevated-card rounded-2xl p-4 sm:p-5 flex flex-col justify-between min-w-0">
+            <div>
+              <div class={`h-1 w-full bg-gradient-to-r ${c.accent} rounded-full mb-3.5`}></div>
+              <div class="flex items-center justify-between gap-2 mb-2.5">
+                <span class="px-2 py-0.5 rounded-md bg-sky-50 border border-sky-200 text-[11px] font-bold uppercase tracking-wider text-brand-600">
+                  {c.hub}
+                </span>
+                <span class="text-[11px] font-semibold text-slate-500">
+                  {c.pincode}
+                </span>
+              </div>
+              <h3 class="font-display font-bold text-base sm:text-lg text-slate-900 mb-1 leading-snug">
+                {c.area}
+              </h3>
+              <p class="text-xs font-bold text-brand-600 mb-2">{c.focus}</p>
+              <p class="text-slate-600 text-[13px] leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+                {c.desc}
+              </p>
+            </div>
+            <div class="mt-3.5 sm:mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
+              <a href={c.href} class="w-full sm:w-auto min-h-[44px] sm:min-h-0 inline-flex items-center justify-between sm:justify-start gap-1.5 text-xs font-bold text-brand-600 hover:text-brand-700 group/link">
+                <span>{c.cta}</span>
+                <svg class="w-3.5 h-3.5 flex-shrink-0 transition-transform group-hover/link:translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 7: OUR CLIENTS
+  ===================================================================== -->
+  <section id="clients" class="relative surface-indigo scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-14 text-left sm:text-center">
+        <div class="badge-dark mb-3">Pin 110085 Performance Record</div>
+        <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-white tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+          Rohini Law Chambers, Builders &amp; Academies Growing With Search
+        </h2>
+        <p class="text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          From commercial litigation advocates near Rohini Court to builder floor promoters across Sectors 7 to 15, local leaders count on our search engineering.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2.5 sm:gap-5">
+        {clients.map((client) => (
+          <div class="glass-card rounded-2xl p-3 sm:p-5 flex flex-col items-center text-center group sm:hover:-translate-y-1 last:col-span-2 sm:last:col-span-1 min-w-0">
+            <div class="w-full max-w-[200px] sm:max-w-none mx-auto h-14 sm:h-20 rounded-xl bg-white border border-slate-200 flex items-center justify-center p-2.5 sm:p-4 mb-2.5 sm:mb-4 shadow-sm">
+              <img
+                src={client.logo}
+                alt={`${client.name} Logo`}
+                width="130"
+                height="48"
+                class="max-h-9 sm:max-h-12 w-auto object-contain"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <h3 class="font-display font-bold text-sm sm:text-base text-white mb-1">{client.name}</h3>
+            <p class="text-[11px] sm:text-xs text-slate-300 leading-snug mb-2.5 sm:mb-3 flex-grow">{client.sector}</p>
+            <span class="w-full sm:w-auto inline-flex items-center justify-center gap-1 text-[10px] sm:text-[11px] font-semibold text-brand-300 bg-brand-500/15 border border-brand-500/30 px-2 sm:px-2.5 py-1.5 sm:py-1 rounded-md leading-tight max-w-full">
+              <svg class="w-2.5 h-2.5 sm:w-3 sm:h-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+              </svg>
+              <span class="text-center leading-tight break-words">{client.region}</span>
+            </span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 8: INDUSTRIES (12 B2B & CORPORATE SECTORS)
+  ===================================================================== -->
+  <section id="industries" class="relative surface-slate overflow-hidden scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-16 text-left sm:text-center">
+        <div class="badge-light mb-3">Vertical Authority Systems</div>
+        <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+          Twelve Distinct Economic Sectors We Optimize in Rohini
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          Legal chambers near the District Court require completely separate content funnels compared to structural engineers in Sector 16 or institutional entrance test academies. We architect unique local relevance across twelve sectors.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-7">
+        {industries.map((ind) => (
+          <div class={`elevated-card rounded-2xl p-4 sm:p-7 border-t-4 ${ind.accentBorder} flex flex-col justify-between sm:hover:-translate-y-1 min-w-0`}>
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-4 sm:mb-5">
+                <div class={`w-10 h-10 sm:w-11 sm:h-11 rounded-xl border flex items-center justify-center flex-shrink-0 ${ind.iconBg}`}>
+                  <Fragment set:html={ind.icon} />
+                </div>
+                <span class="text-[11px] font-semibold text-slate-600 bg-slate-100 px-2.5 py-1 rounded-md">
+                  {ind.sector}
+                </span>
+              </div>
+
+              <h3 class="font-display font-bold text-[17px] sm:text-xl text-slate-900 mb-3 sm:mb-4 leading-snug">
+                {ind.title}
+              </h3>
+
+              <div class="mb-4 sm:mb-5">
+                <p class="text-[11px] font-bold uppercase tracking-wider text-brand-600 mb-1.5">
+                  Strategic Objective
+                </p>
+                <p class="text-slate-600 text-[13px] sm:text-sm leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+                  {ind.focus}
+                </p>
+              </div>
+            </div>
+
+            <div class="rounded-xl bg-emerald-50/70 border border-emerald-200/80 p-3.5 sm:p-4">
+              <p class="text-[11px] font-bold uppercase tracking-wider text-emerald-700 mb-1">
+                Measurable Result
+              </p>
+              <p class="text-slate-800 text-xs font-medium leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+                {ind.outcome}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 9: TESTIMONIALS
+  ===================================================================== -->
+  <section id="testimonials" class="relative surface-dark scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="absolute inset-0 mesh-glow pointer-events-none opacity-60"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-16 text-left sm:text-center">
+        <div class="badge-dark mb-3">Proven Client Milestones</div>
+        <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-white tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+          Real Experiences From Respected Rohini Leaders
+        </h2>
+        <p class="text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          Measurable organic gains, district court area map prominence, and trusted entity citations achieved for corporate and professional firms in Rohini.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-7">
+        {testimonials.map((t) => (
+          <div class="glass-card rounded-2xl p-4 sm:p-8 flex flex-col justify-between sm:hover:-translate-y-1 min-w-0">
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-4 sm:mb-5">
+                <div class="flex items-center gap-1">
+                  {[1, 2, 3, 4, 5].map(() => (
+                    <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                    </svg>
+                  ))}
+                </div>
+                <span class="text-[10px] sm:text-[11px] font-semibold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-1 rounded-md">
+                  Rohini Client
+                </span>
+              </div>
+
+              <p class="text-slate-200 text-[13.5px] sm:text-base leading-relaxed italic mb-5 sm:mb-6 text-justify hyphens-auto [text-align-last:left]">
+                "{t.quote}"
+              </p>
+
+              <div class="rounded-xl bg-slate-900/90 border border-slate-700/80 p-3.5 sm:p-4 mb-5 sm:mb-6">
+                <p class="text-[11px] font-bold uppercase tracking-wider text-brand-400 mb-2 sm:mb-2.5">
+                  Audited Growth
+                </p>
+                <ul class="space-y-2">
+                  {t.metrics.map((m) => (
+                    <li class="flex items-start gap-2 text-xs text-slate-300 font-medium leading-snug">
+                      <svg class="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                      </svg>
+                      <span>{m}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3.5 sm:gap-4 pt-3.5 sm:pt-4 border-t border-slate-800">
+              <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-white p-2 flex items-center justify-center flex-shrink-0 shadow-sm">
+                <img
+                  src={t.logo}
+                  alt={`${t.company} Logo`}
+                  width="48"
+                  height="48"
+                  class="max-h-8 sm:max-h-10 w-auto object-contain"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="min-w-0">
+                <h3 class="font-display font-bold text-white text-sm sm:text-base leading-snug">{t.name}</h3>
+                <p class="text-xs text-slate-300 leading-snug">
+                  {t.title}, <strong class="text-brand-400 font-semibold">{t.company}</strong>
+                </p>
+                <p class="text-[10.5px] sm:text-[11px] text-slate-400 mt-0.5 leading-snug">{t.sector}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 10: HOW WE WORK (FOUR STAGES)
+  ===================================================================== -->
+  <section id="process" class="relative surface-white overflow-hidden scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-16 text-left sm:text-center">
+        <div class="badge-light mb-3">Structured Sprint Architecture</div>
+        <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+          Our Structured Four Milestone Plan for Rohini Organizations
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          Our team works in disciplined fortnightly release cycles: clearing crawling blocks, developing authoritative sector content hubs, winning top three map pack positions throughout Rohini sectors, and feeding clear brand entities to AI search engines.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-7">
+        {stages.map((s) => (
+          <div class="elevated-card rounded-2xl p-4 sm:p-8 relative overflow-hidden group sm:hover:-translate-y-1 min-w-0">
+            <div class="flex items-center justify-between gap-4 mb-3.5 sm:mb-5">
+              <span class={`inline-flex items-center px-2.5 sm:px-3 py-1 rounded-lg text-xs font-bold uppercase tracking-wider text-white bg-gradient-to-r ${s.accent}`}>
+                {s.num}
+              </span>
+              <span class="font-display font-black text-3xl sm:text-4xl text-slate-200 group-hover:text-slate-300 transition-colors">
+                {s.step}
+              </span>
+            </div>
+            <h3 class="font-display font-bold text-[17px] sm:text-xl text-slate-900 mb-2.5 sm:mb-3 leading-snug">
+              {s.title}
+            </h3>
+            <p class="text-slate-600 text-[13px] sm:text-sm leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+              {s.body}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 11: CONCLUSION / PARTNERSHIP
+  ===================================================================== -->
+  <section class="relative surface-indigo py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-7 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns -->
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-dark mb-3.5 sm:mb-4">Sustainable Sub City Pipeline</div>
+          <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-white tracking-tight leading-[1.22] sm:leading-tight mb-4 sm:mb-6">
+            Establish Lasting Search Dominance With the Best SEO Company in Rohini Delhi
+          </h2>
+          <div class="space-y-4 sm:space-y-5 text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            <p>
+              Generating high value retainers and commercial contracts in Pin 110085 requires complete technical compliance and resilient sub city positioning. Litigants, corporate boards, and local property investors consistently turn to Google search before finalizing providers in Rohini.
+            </p>
+            <p>
+              Retaining NK Digital Tech as your <strong>SEO Company in Rohini Delhi</strong> empowers your team with seasoned search strategists and <a href="/website-development-company-in-delhi/" class="text-sky-300 font-semibold hover:underline">Website Development Company in Delhi</a> engineers who eliminate indexing defects, reinforce map pack prominence, and inject schema definitions across your site. Schedule your Rohini SEO assessment today.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Growth Image -->
+        <div class="lg:col-span-5 min-w-0">
+          <div class="rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-700/80 shadow-2xl bg-slate-900">
+            <img
+              src="/images/seo-rohini/organic-search-growth-rohini.webp"
+              alt="SEO Company in Rohini Delhi Consulting With Legal and Builder Chamber Leaders"
+              width="800"
+              height="450"
+              sizes="(max-width: 1024px) 100vw, 42vw"
+              class="w-full aspect-[16/9] sm:aspect-auto sm:h-64 lg:h-72 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 12: FAQ
+  ===================================================================== -->
+  <section id="faq" class="relative surface-cool overflow-hidden scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-left sm:text-center mb-9 sm:mb-14">
+        <div class="badge-light mb-3">Rohini Client Inquiries</div>
+        <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+          Common Questions About SEO Services in Rohini Delhi
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          Transparent details covering ranking timelines, legal and B2B schema strategies, map pack mechanics, and monthly deliverables across Rohini.
+        </p>
+      </div>
+
+      <div class="space-y-3 sm:space-y-4">
+        {faqs.map((f, i) => (
+          <details class="elevated-card rounded-2xl group overflow-hidden" open={i === 0}>
+            <summary class="flex items-start sm:items-center justify-between gap-2.5 sm:gap-4 px-3.5 sm:px-6 py-4 sm:py-5 min-h-[56px] active:bg-sky-50/60 transition-colors select-none">
+              <div class="flex items-start sm:items-center gap-2.5 sm:gap-3.5 text-left min-w-0">
+                <span class="w-6 h-6 sm:w-7 sm:h-7 rounded-lg bg-sky-50 border border-sky-200 text-brand-600 font-display font-bold text-xs flex items-center justify-center flex-shrink-0 mt-0.5 sm:mt-0">
+                  0{i + 1}
+                </span>
+                <span class="font-display font-bold text-slate-900 text-[14px] sm:text-base md:text-lg leading-[1.4] sm:leading-snug break-words">
+                  {f.q}
+                </span>
+              </div>
+              <span class="faq-icon w-7 h-7 sm:w-8 sm:h-8 rounded-full border border-slate-200 text-slate-600 flex items-center justify-center flex-shrink-0 mt-0.5 sm:mt-0">
+                <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                </svg>
+              </span>
+            </summary>
+            <div class="px-3.5 sm:px-6 pb-4 sm:pb-6 pt-3 text-slate-600 text-[13.5px] sm:text-sm md:text-base leading-[1.68] sm:leading-relaxed border-t border-slate-100 text-justify hyphens-auto [text-align-last:left]">
+              {f.a}
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 13: FINAL CTA / CONTACT
+  ===================================================================== -->
+  <section id="contact" class="relative surface-dark scroll-mt-16 sm:scroll-mt-20 pt-10 pb-12 sm:py-16 lg:py-20 px-4 sm:px-6 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-5xl mx-auto">
+      <div class="rounded-2xl sm:rounded-3xl bg-gradient-to-r from-brand-600 via-brand-700 to-accent-700 p-6 sm:p-10 md:p-12 text-center text-white shadow-2xl border border-white/15 relative overflow-hidden">
+        <div class="relative z-10 max-w-2xl mx-auto">
+          <h2 class="font-display font-black text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl md:text-4xl text-white tracking-tight leading-[1.22] sm:leading-snug mb-3 sm:mb-4">
+            Schedule Your Free Rohini SEO Audit Today
+          </h2>
+
+          <p class="text-sky-50 text-[13px] sm:text-sm md:text-base leading-relaxed mb-6 sm:mb-8">
+            Obtain a thorough diagnosis of your mobile page speed, local pack rankings, and AI search visibility across Rohini Court, Sector 7, Sector 8, and Sector 14.
+          </p>
+
+          <a
+            href="mailto:connect@nkdigitaltech.com"
+            class="inline-flex w-full sm:w-auto min-h-[48px] items-center justify-center gap-2 sm:gap-3 px-5 sm:px-8 py-3.5 sm:py-4 rounded-xl bg-white text-slate-950 hover:bg-sky-50 font-display font-bold text-sm sm:text-base shadow-xl transition-all duration-300 active:scale-95 text-center leading-snug"
+          >
+            <span>Claim Free Rohini Audit</span>
+            <svg class="w-4 h-4 sm:w-5 sm:h-5 text-brand-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mobile Sticky Bottom Quick Action Bar -->
+  <div class="mobile-sticky-cta sm:hidden fixed bottom-0 inset-x-0 z-40 bg-[#050a14]/95 backdrop-blur-xl border-t border-slate-800 px-3 pt-2.5 pb-[max(0.7rem,env(safe-area-inset-bottom))] shadow-[0_-8px_24px_rgba(0,0,0,0.45)] transition-all duration-200">
+    <div class="flex items-center gap-2.5">
+      <a
+        href="mailto:connect@nkdigitaltech.com"
+        class="btn-primary flex-1 min-w-0 min-h-[48px] py-2.5 px-3 text-[12.5px] font-bold rounded-xl whitespace-nowrap"
+      >
+        <span class="truncate">Free Rohini SEO Audit</span>
+        <svg class="w-3.5 h-3.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+        </svg>
+      </a>
+      <a
+        href="#services"
+        class="btn-secondary-dark min-h-[48px] py-2.5 px-4 text-[12.5px] font-semibold rounded-xl flex-shrink-0 whitespace-nowrap"
+      >
+        <span>Services</span>
+      </a>
+    </div>
+  </div>
+
+  <style>
+    @media (max-width: 639px) {
+      .glass-card {
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+      }
+      #locations,
+      #why-us,
+      #clients,
+      #industries,
+      #testimonials,
+      #process,
+      #faq {
+        content-visibility: auto;
+        contain-intrinsic-size: auto 720px;
+      }
+      a,
+      button,
+      summary {
+        touch-action: manipulation;
+        -webkit-tap-highlight-color: transparent;
+      }
+    }
+  </style>
+
+</Layout>

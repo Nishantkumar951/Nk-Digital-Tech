@@ -1,0 +1,1481 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '../styles/global.css';
+
+const pageTitle = 'Best SEO Company in Netaji Subhash Place | NK Digital Tech';
+const pageDescription = 'NK Digital Tech is the Best SEO Company in Netaji Subhash Place Delhi. We help corporate towers, CA firms, SaaS teams and consultants win daily phone calls.';
+const pageCanonical = 'https://www.nkdigitaltech.net/seo-company-in-netaji-subhash-place/';
+
+const clients = [
+  {
+    "name": "Propertyways",
+    "sector": "Grade A Commercial Office Space Leasing",
+    "region": "Aggarwal Cyber Plaza 2 NSP",
+    "logo": "/images/clients/propertyways.webp"
+  },
+  {
+    "name": "Vision",
+    "sector": "Enterprise IT & Cloud Hardware Systems",
+    "region": "Pearls Omaxe Tower NSP",
+    "logo": "/images/clients/vision.webp"
+  },
+  {
+    "name": "Creative Academy",
+    "sector": "Judiciary, UPSC & Professional Prep Hub",
+    "region": "Gopal Heights NSP",
+    "logo": "/images/clients/creative-academy.webp"
+  },
+  {
+    "name": "VP Infra",
+    "sector": "Commercial Floors & Civil Infrastructure",
+    "region": "D Mall Commercial Complex NSP",
+    "logo": "/images/clients/vp-infra.webp"
+  },
+  {
+    "name": "Aangan",
+    "sector": "Turnkey Corporate & Workspace Interiors",
+    "region": "KLJ Miners Tower NSP",
+    "logo": "/images/clients/aangan.webp"
+  }
+];
+
+const services = [
+  {
+    "num": "01",
+    "category": "Tower Visibility Spot",
+    "icon": "<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z\"/></svg>",
+    "iconStyle": "bg-sky-50 border-sky-200 text-brand-600",
+    "impactStyle": "bg-sky-50/80 border-sky-200/80 text-slate-800",
+    "badgeColor": "text-brand-600 bg-sky-100/80",
+    "title": "Core Web Vitals & Corporate Landing Pages",
+    "body": "Serving as your technical SEO agency in Netaji Subhash Place, we eliminate render blocking scripts, accelerate mobile server response, repair indexation bloat and construct dedicated practice pages for CA chambers, IT firms and commercial brokers.",
+    "impact": "Higher executive consultation inquiries and direct corporate calls across Pin 110034 towers.",
+    "cta": "Website Development Company in Delhi",
+    "href": "/website-development-company-in-delhi/"
+  },
+  {
+    "num": "02",
+    "category": "Generative AI Trust",
+    "icon": "<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z\"/></svg>",
+    "iconStyle": "bg-violet-50 border-violet-200 text-accent-600",
+    "impactStyle": "bg-violet-50/80 border-violet-200/80 text-slate-800",
+    "badgeColor": "text-accent-600 bg-violet-100/80",
+    "title": "ChatGPT, Gemini & AI Overview Structuring",
+    "body": "When you hire our AI SEO company in Netaji Subhash Place, we translate your statutory credentials, case studies and advisory specializations into structured JSON LD and comparison matrices that conversational models quote directly.",
+    "impact": "Frequent brand citations when corporate leaders ask AI assistants for verified NSP professionals.",
+    "cta": "AI SEO Company in Delhi",
+    "href": "/ai-seo-company-in-delhi/"
+  },
+  {
+    "num": "03",
+    "category": "Pin 110034 Map Top 3",
+    "icon": "<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z\"/><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M15 11a3 3 0 11-6 0 3 3 0 016 0z\"/></svg>",
+    "iconStyle": "bg-emerald-50 border-emerald-200 text-emerald-600",
+    "impactStyle": "bg-emerald-50/80 border-emerald-200/80 text-slate-800",
+    "badgeColor": "text-emerald-700 bg-emerald-100/80",
+    "title": "Google Maps & Tower Profile Dominance",
+    "body": "Our local SEO services in Netaji Subhash Place optimize your Google Business Profile attributes, align floor and tower address citations across authoritative trade networks, and generate authentic corporate client endorsements.",
+    "impact": "Steady office walkthrough requests and phone calls from NSP Metro commuters and Ring Road corporates.",
+    "cta": "Local SEO Services in Delhi",
+    "href": "/local-seo-services-in-delhi/"
+  },
+  {
+    "num": "04",
+    "category": "Position Zero Answer",
+    "icon": "<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z\"/></svg>",
+    "iconStyle": "bg-amber-50 border-amber-200 text-amber-600",
+    "impactStyle": "bg-amber-50/80 border-amber-200/80 text-slate-800",
+    "badgeColor": "text-amber-700 bg-amber-100/80",
+    "title": "Retainer Tables & Direct Answer Box Setup",
+    "body": "We format concise 40 to 60 word answers directly beneath high intent executive questions, pairing them with corporate office leasing cost tables, statutory audit timelines and comprehensive FAQ schema markup.",
+    "impact": "Immediate position zero visibility when directors compare commercial lease rates or audit charges.",
+    "cta": "AEO Services in Delhi",
+    "href": "/aeo-services-in-delhi/"
+  },
+  {
+    "num": "05",
+    "category": "Verified Entity Graph",
+    "icon": "<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M13 10V3L4 14h7v7l9-11h-7z\"/></svg>",
+    "iconStyle": "bg-indigo-50 border-indigo-200 text-indigo-600",
+    "impactStyle": "bg-indigo-50/80 border-indigo-200/80 text-slate-800",
+    "badgeColor": "text-indigo-700 bg-indigo-100/80",
+    "title": "Knowledge Graph & Corporate Entity Building",
+    "body": "LLM engines cross examine external citations prior to citing an advisory firm. We publish authoritative whitepapers, deploy llms.txt specifications and secure clean corporate directory records across North Delhi business channels.",
+    "impact": "Consistent entity recommendation across Perplexity, Copilot and Claude commercial searches.",
+    "cta": "GEO Services in Delhi",
+    "href": "/geo-services-in-delhi/"
+  },
+  {
+    "num": "06",
+    "category": "Industrial & B2B Leads",
+    "icon": "<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4\"/></svg>",
+    "iconStyle": "bg-cyan-50 border-cyan-200 text-cyan-700",
+    "impactStyle": "bg-cyan-50/80 border-cyan-200/80 text-slate-800",
+    "badgeColor": "text-cyan-700 bg-cyan-100/80",
+    "title": "Enterprise B2B Lead Generation & Industrial SEO",
+    "body": "Operating as a dedicated B2B SEO agency, we build crawlable service matrices for SaaS providers, management consultants and industrial trade suppliers operating out of NSP, linking them directly with pan India buyers.",
+    "impact": "Direct enterprise contract proposals and institutional advisory inquiries from industrial hubs.",
+    "cta": "Best SEO Company in North Delhi",
+    "href": "/best-seo-company-in-north-delhi/"
+  }
+];
+
+const comparison = [
+  {
+    "metric": "Campaign Execution",
+    "typical": "Junior coordinators send automated monthly reports while no one updates code or copy",
+    "nk": "Senior North Delhi search specialists optimize your code, schema and practice copy directly"
+  },
+  {
+    "metric": "Success Benchmark",
+    "typical": "Celebrating vanity impressions on unranked articles that fail to generate corporate calls",
+    "nk": "Measuring verified board consultations, corporate RFP submissions and inbound client calls"
+  },
+  {
+    "metric": "AI Engine Authority",
+    "typical": "Keyword stuffed pages ignored by ChatGPT, Gemini and Google AI Overviews",
+    "nk": "Structured 50 word answers, transparent retainer tables, Organization schema and llms.txt"
+  },
+  {
+    "metric": "Mobile Loading Speed",
+    "typical": "Bloated scripts and heavy PDFs that stall on smartphone browsers across Ring Road",
+    "nk": "Sub two second WebP assets and compliant Core Web Vitals delivered by in house engineers"
+  },
+  {
+    "metric": "Directory Citation Health",
+    "typical": "Purchased backlink packages from unrelated foreign blogs that risk Google penalties",
+    "nk": "Legitimate Indian trade registrations, NSP commercial citations and legal directory profiles"
+  },
+  {
+    "metric": "Data & Asset Ownership",
+    "typical": "Vendor locks Search Console ownership, tag configurations or schema assets upon cancellation",
+    "nk": "Full 100% administrative property rights remain with your enterprise from project kickoff"
+  }
+];
+
+const northCorridors = [
+  {
+    "hub": "Area 01",
+    "area": "Netaji Subhash Place",
+    "focus": "SEO Company in Netaji Subhash Place",
+    "pincode": "Pin 110034",
+    "desc": "We rank CA practices, SaaS firms, wealth managers and tower leasing brokers on Google Search and Maps.",
+    "cta": "View Dedicated NSP Page",
+    "href": "/seo-company-in-netaji-subhash-place/",
+    "accent": "from-brand-500 to-sky-400"
+  },
+  {
+    "hub": "Area 02",
+    "area": "Pitampura",
+    "focus": "SEO Company in Pitampura",
+    "pincode": "Pin 110034",
+    "desc": "We rank commercial offices, builder floor developers, turnkey architects and CA chambers across Pitampura.",
+    "cta": "View Dedicated Pitampura Page",
+    "href": "/seo-company-in-pitampura/",
+    "accent": "from-accent-500 to-violet-400"
+  },
+  {
+    "hub": "Area 03",
+    "area": "Rohini",
+    "focus": "SEO Company in Rohini",
+    "pincode": "Pin 110085",
+    "desc": "Spanning Sectors 1 to 24, we help Court advocates, builders, IT studios and academies win top map spots.",
+    "cta": "View Dedicated Rohini Page",
+    "href": "/seo-company-in-rohini/",
+    "accent": "from-cyan-500 to-teal-400"
+  },
+  {
+    "hub": "Area 04",
+    "area": "Model Town",
+    "focus": "SEO Company in Model Town",
+    "pincode": "Pin 110009",
+    "desc": "Across Model Town Phases 1 to 3, we rank kothi builders, interior studios, wealth advisors and corporate firms.",
+    "cta": "View Dedicated Model Town Page",
+    "href": "/seo-company-in-model-town/",
+    "accent": "from-emerald-500 to-green-400"
+  },
+  {
+    "hub": "Area 05",
+    "area": "Shalimar Bagh",
+    "focus": "SEO Company in Shalimar Bagh",
+    "pincode": "Pin 110088",
+    "desc": "Around Central Market and Ring Road, we rank CA offices, floor builders, kitchen studios and banquet halls.",
+    "cta": "View Dedicated Shalimar Bagh Page",
+    "href": "/seo-company-in-shalimar-bagh/",
+    "accent": "from-indigo-500 to-blue-400"
+  },
+  {
+    "hub": "Area 06",
+    "area": "Ashok Vihar",
+    "focus": "SEO Company in Ashok Vihar",
+    "pincode": "Pin 110052",
+    "desc": "Covering Phases 1 to 4 and Deep Market, we rank corporate offices, kothi architects and tax consultants.",
+    "cta": "View Dedicated Ashok Vihar Page",
+    "href": "/seo-company-in-ashok-vihar/",
+    "accent": "from-violet-500 to-purple-400"
+  },
+  {
+    "hub": "Area 07",
+    "area": "Wazirpur Industrial Area",
+    "focus": "SEO Company in Wazirpur",
+    "pincode": "Pin 110052",
+    "desc": "We turn stainless steel rolling, sheet metal and CNC grade lists into fast HTML B2B specification catalogues.",
+    "cta": "View Dedicated Wazirpur Page",
+    "href": "/seo-company-in-wazirpur/",
+    "accent": "from-amber-500 to-orange-400"
+  },
+  {
+    "hub": "Area 08",
+    "area": "Mukherjee Nagar",
+    "focus": "SEO Company in Mukherjee Nagar",
+    "pincode": "Pin 110009",
+    "desc": "Across Mukherjee Nagar and GTB Nagar, we rank UPSC, IAS, PCS and judiciary academies for student calls.",
+    "cta": "View Dedicated Mukherjee Nagar Page",
+    "href": "/seo-company-in-mukherjee-nagar/",
+    "accent": "from-teal-500 to-emerald-400"
+  },
+  {
+    "hub": "Area 09",
+    "area": "Narela Industrial Area",
+    "focus": "SEO Company in Narela",
+    "pincode": "Pin 110040",
+    "desc": "In DSIIDC Narela Industrial Area, we rank food processing plants, plastics, packaging and machinery factories.",
+    "cta": "View Dedicated Narela Page",
+    "href": "/seo-company-in-narela/",
+    "accent": "from-rose-500 to-pink-400"
+  },
+  {
+    "hub": "Area 10",
+    "area": "Civil Lines",
+    "focus": "SEO Company in Civil Lines",
+    "pincode": "Pin 110054",
+    "desc": "Near Tis Hazari Courts, we rank Bar Council compliant law chambers, luxury bungalow advisors and family offices.",
+    "cta": "View Dedicated Civil Lines Page",
+    "href": "/seo-company-in-civil-lines/",
+    "accent": "from-sky-500 to-cyan-400"
+  },
+  {
+    "hub": "Area 11",
+    "area": "Bawana Industrial Area",
+    "focus": "SEO Company in Bawana",
+    "pincode": "Pin 110039",
+    "desc": "Across DSIIDC Sectors 1 to 5, we generate pan India B2B enquiries for plastic, moulding and packaging plants.",
+    "cta": "View Dedicated Bawana Page",
+    "href": "/seo-company-in-bawana/",
+    "accent": "from-blue-500 to-indigo-400"
+  },
+  {
+    "hub": "Area 12",
+    "area": "Azadpur",
+    "focus": "SEO Company in Azadpur",
+    "pincode": "Pin 110033",
+    "desc": "Along GT Karnal Road and Azadpur Complex, we rank cold chain units, fleet logistics and wholesale exporters.",
+    "cta": "View Dedicated Azadpur Page",
+    "href": "/seo-company-in-azadpur/",
+    "accent": "from-fuchsia-500 to-rose-400"
+  }
+];
+
+const industries = [
+  {
+    "sector": "Office Leasing SEO",
+    "title": "Real Estate & Property",
+    "focus": "We rank Grade A commercial office floors, corporate leasing brokers and commercial developers in Netaji Subhash Place and Pitampura on Google Search and AI property guides.",
+    "outcome": "Continuous commercial leasing inquiries, verified corporate tenant walkthroughs and signed mandates.",
+    "accentBorder": "border-t-brand-500",
+    "iconBg": "bg-sky-50 text-brand-600 border-sky-200",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4\"/></svg>"
+  },
+  {
+    "sector": "Corporate Fitout SEO",
+    "title": "Interior Design & Architecture",
+    "focus": "We build commercial case studies, turnkey fitout cost guides and verified map profiles for corporate interior studios and architects designing modern workspaces across NSP towers.",
+    "outcome": "Predictable corporate office fitout contracts and turnkey workspace renovation retainers.",
+    "accentBorder": "border-t-amber-500",
+    "iconBg": "bg-amber-50 text-amber-600 border-amber-200",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z\"/></svg>"
+  },
+  {
+    "sector": "Professional Academy SEO",
+    "title": "Education & Coaching Institutes",
+    "focus": "We help CA entrance, CS, CFA, UPSC and judiciary institutes in NSP capture fee snippets, batch schedule searches and AI study recommendations.",
+    "outcome": "Consistent student counseling inquiries, classroom demo bookings and study material signups.",
+    "accentBorder": "border-t-cyan-500",
+    "iconBg": "bg-cyan-50 text-cyan-700 border-cyan-200",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222\"/></svg>"
+  },
+  {
+    "sector": "Industrial Equipment SEO",
+    "title": "Manufacturing & Industrial Businesses",
+    "focus": "We turn engineering specifications into fast HTML catalogues for machinery vendors, automation suppliers and metal component manufacturers with corporate offices in NSP.",
+    "outcome": "Direct pan India wholesale RFQs, dealer network applications and bulk manufacturing orders.",
+    "accentBorder": "border-t-emerald-500",
+    "iconBg": "bg-emerald-50 text-emerald-600 border-emerald-200",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z\"/><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M15 12a3 3 0 11-6 0 3 3 0 016 0z\"/></svg>"
+  },
+  {
+    "sector": "Enterprise Cloud SEO",
+    "title": "SaaS & Technology Companies",
+    "focus": "We write technical comparison hubs, feature matrices and software schema for B2B SaaS firms, ERP integrators and cloud consultants located in Netaji Subhash Place.",
+    "outcome": "Consistent qualified inbound software demo bookings from corporate and industrial buyers.",
+    "accentBorder": "border-t-indigo-500",
+    "iconBg": "bg-indigo-50 text-indigo-600 border-indigo-200",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4\"/></svg>"
+  },
+  {
+    "sector": "Corporate Audit SEO",
+    "title": "Accounting & Financial Services",
+    "focus": "We position Chartered Accountants, transfer pricing specialists, GST litigators and statutory auditors in Aggarwal Cyber Plaza for high value enterprise searches.",
+    "outcome": "Dependable annual retainers from North Delhi factory owners, traders and corporate firms.",
+    "accentBorder": "border-t-rose-500",
+    "iconBg": "bg-rose-50 text-rose-600 border-rose-200",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z\"/></svg>"
+  },
+  {
+    "sector": "Commercial Chamber SEO",
+    "title": "Legal Services & Law Firms",
+    "focus": "We structure Bar Council compliant practice pages for corporate arbitration, commercial litigation, insolvency and contract dispute advocates operating near Rohini Court.",
+    "outcome": "First page search rankings for corporate legal queries and booked chamber meetings.",
+    "accentBorder": "border-t-accent-500",
+    "iconBg": "bg-violet-50 text-accent-600 border-violet-200",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3\"/></svg>"
+  },
+  {
+    "sector": "Cold Storage & Fleet SEO",
+    "title": "Logistics, Warehousing & Cold Chain",
+    "focus": "We rank cold storage operators, commercial fleet transport agencies and logistics companies with regional offices in NSP across Google Search and Maps.",
+    "outcome": "Regular corporate freight contracts, cold room reservations and warehouse lease closures.",
+    "accentBorder": "border-t-pink-500",
+    "iconBg": "bg-pink-50 text-pink-600 border-pink-200",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z\"/><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0\"/></svg>"
+  },
+  {
+    "sector": "Industrial Shed SEO",
+    "title": "Construction & Infrastructure",
+    "focus": "We rank commercial civil contractors, PEB shed fabricators and infrastructure developers serving North Delhi industrial corridors through detailed technical hubs.",
+    "outcome": "Direct industrial building contracts, commercial collaborations and pre tender invites.",
+    "accentBorder": "border-t-orange-500",
+    "iconBg": "bg-orange-50 text-orange-600 border-orange-200",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M3 21h18M5 21V7l8-4v18M19 21V11l-6-4M9 9v.01M9 12v.01M9 15v.01M9 18v.01\"/></svg>"
+  },
+  {
+    "sector": "Business Conference SEO",
+    "title": "Hospitality & Corporate Events",
+    "focus": "We rank executive conference spaces, corporate banquet halls and business meeting venues around NSP and Ring Road for corporate annual meets and seminars.",
+    "outcome": "Direct corporate booking contracts, banquet date reservations and corporate event visits.",
+    "accentBorder": "border-t-purple-500",
+    "iconBg": "bg-purple-50 text-purple-600 border-purple-200",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z\"/></svg>"
+  },
+  {
+    "sector": "Industrial Packaging SEO",
+    "title": "Packaging, Plastic & Wholesale Exporters",
+    "focus": "We rank corrugated packaging firms, masterbatch producers and industrial plastic exporters maintaining sales and liaison offices in Netaji Subhash Place.",
+    "outcome": "Daily packaging RFQ submissions, corporate supplier agreements and bulk export orders.",
+    "accentBorder": "border-t-red-500",
+    "iconBg": "bg-red-50 text-red-600 border-red-200",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4\"/></svg>"
+  },
+  {
+    "sector": "Corporate Advisory SEO",
+    "title": "Professional & Business Services",
+    "focus": "We position executive recruitment agencies, business valuation practices, ESG consultants and corporate ISO certifying firms across NSP office complexes.",
+    "outcome": "Steady inbound enterprise consulting leads, RFP invites and long term retainers.",
+    "accentBorder": "border-t-teal-500",
+    "iconBg": "bg-teal-50 text-teal-700 border-teal-200",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z\"/></svg>"
+  }
+];
+
+const testimonials = [
+  {
+    "name": "Vikramaditya Singhania",
+    "title": "Managing Director",
+    "company": "Singhania Capital Advisory",
+    "sector": "Corporate Wealth & M&A Advisory, Pearls Omaxe NSP",
+    "metrics": [
+      "340% increase in qualified corporate advisory enquiries",
+      "Top 3 Google Map positions across NSP corporate towers",
+      "Featured by ChatGPT for North Delhi corporate finance advice"
+    ],
+    "quote": "CFOs and corporate promoters across North Delhi search thoroughly before engaging a wealth or M&A advisor. NK Digital Tech rebuilt our technical pages, published concise regulatory guides and lifted our map position into the top three. We now sign high value advisory retainers every quarter straight from organic search.",
+    "logo": "/images/clients/propertyways.webp"
+  },
+  {
+    "name": "Rajesh K. Goel",
+    "title": "Senior Partner",
+    "company": "Goel & Associates CAs",
+    "sector": "Statutory Audit & Corporate Tax, Aggarwal Cyber Plaza 1 NSP",
+    "metrics": [
+      "290% growth in corporate statutory audit inquiries",
+      "Page one Google spots for 40+ corporate CA search terms",
+      "Position zero featured snippet for GST corporate litigation"
+    ],
+    "quote": "Previous agencies focused on irrelevant social media updates that failed to bring serious corporate clients. NK Digital Tech implemented comprehensive practice schema, structured our compliance answers and established verified map credentials. Managing directors now call our chambers directly.",
+    "logo": "/images/clients/vision.webp"
+  },
+  {
+    "name": "Amitesh Varma",
+    "title": "VP Growth",
+    "company": "CloudCore Systems",
+    "sector": "B2B ERP & Cloud Software, Gopal Heights NSP",
+    "metrics": [
+      "4.2x rise in verified inbound software demo bookings",
+      "Consistent citations inside Gemini and Perplexity software prompts",
+      "Top rankings across Delhi NCR for industrial ERP software"
+    ],
+    "quote": "In enterprise software, search visibility hinges on fast performance and clear feature matrices. NK Digital Tech sped up our platform pages to sub two seconds and implemented clean schema that generative engines recognize. Our enterprise demo pipeline has never been healthier.",
+    "logo": "/images/clients/creative-academy.webp"
+  },
+  {
+    "name": "Manpreet Singh",
+    "title": "Principal Broker",
+    "company": "NSP Prime Spaces",
+    "sector": "Commercial Office Space Leasing, D Mall NSP",
+    "metrics": [
+      "310% surge in commercial office leasing site visits",
+      "Dominant Google Map Pack spot for Netaji Subhash Place office rent",
+      "Zero reliance on expensive third party property broker portals"
+    ],
+    "quote": "Commercial office tenants compare tower floor plans, parking availability and rent tables before scheduling visits. NK Digital Tech engineered dedicated tower profiles that rank ahead of generic property aggregators, saving us lakhs in broker commissions every month.",
+    "logo": "/images/clients/vp-infra.webp"
+  }
+];
+
+const stages = [
+  {
+    "num": "Milestone 01",
+    "step": "01",
+    "title": "Tower Speed Audit & NSP Competitive Analysis",
+    "body": "We test your website performance on mobile connections, audit server response bottlenecks and examine your Google Business Profile against the leading corporate practices in Aggarwal Cyber Plaza and Pearls Omaxe.",
+    "accent": "from-brand-600 to-sky-500"
+  },
+  {
+    "num": "Milestone 02",
+    "step": "02",
+    "title": "90 Day Corporate Intent & Generative AI Blueprint",
+    "body": "You receive a detailed twelve week schedule organized into biweekly milestones. We prioritize high intent commercial queries, tower specific location pages, concise retainer tables and Organization schema.",
+    "accent": "from-accent-600 to-violet-500"
+  },
+  {
+    "num": "Milestone 03",
+    "step": "03",
+    "title": "In House Engineering, Practice Copy & Directory Sync",
+    "body": "Our full time software developers and financial copywriters execute every deliverable. We optimize Core Web Vitals, publish authoritative practice hubs, implement LocalBusiness schema and standardize Indian citations.",
+    "accent": "from-cyan-600 to-teal-500"
+  },
+  {
+    "num": "Milestone 04",
+    "step": "04",
+    "title": "Biweekly Deal Flow, Call Tracking & AI Verification",
+    "body": "Every fourteen days we analyze your Search Console queries, map route requests, direct phone leads and live mentions across ChatGPT, Gemini and Google AI Overviews to accelerate top performing channels.",
+    "accent": "from-emerald-600 to-green-500"
+  }
+];
+
+const faqs = [
+  {
+    "q": "What makes NK Digital Tech the Best SEO Company in Netaji Subhash Place for corporate and CA firms?",
+    "a": "Corporate directors and practice heads select NK Digital Tech because we link technical Core Web Vitals engineering, tower specific search pages and Google Business Profile authority directly to client consultations and high value retainers. Our full time team specializes in Aggarwal Cyber Plaza, Pearls Omaxe, Gopal Heights and D Mall commercial complexes."
+  },
+  {
+    "q": "How much should an enterprise in Netaji Subhash Place budget for professional SEO services?",
+    "a": "Effective monthly SEO retainers for Netaji Subhash Place enterprises range between ₹18,000 and ₹48,000 based on website architecture, technical scope and industry competition. A CA firm or legal chamber in NSP thrives on a focused local and practice hub campaign, while B2B SaaS companies or leasing agencies invest ₹48,000 upward."
+  },
+  {
+    "q": "How quickly will our NSP office begin seeing inquiries from an SEO agency in Netaji Subhash Place?",
+    "a": "Standardizing inconsistent address records, tuning your Google Business Profile and rectifying mobile loading delays normally yields measurable map call increases within four to eight weeks. Competitive commercial rankings and continuous mentions across ChatGPT and AI Overviews solidify across three to six months."
+  },
+  {
+    "q": "How does your AI SEO company in Netaji Subhash Place earn citations on ChatGPT, Gemini and Perplexity?",
+    "a": "Generative search engines prioritize websites that deliver factual answers in crisp 40 to 60 word blocks, publish honest retainer tables, embed Organization schema, provide llms.txt reference files and maintain clean corporate directory profiles. Our technical team builds these components directly into your web architecture."
+  },
+  {
+    "q": "Do you optimize Google Maps for specific office towers in Netaji Subhash Place?",
+    "a": "Yes. Whether your office is in Aggarwal Cyber Plaza 1 or 2, Pearls Omaxe, Gopal Heights, GD-ITL Northex, D Mall, HB Twin Towers or Bigjos Tower, we optimize exact floor, unit and complex coordinates to capture local searches from business executives throughout Pin 110034."
+  },
+  {
+    "q": "Can you generate nationwide B2B contracts for software or manufacturing firms with NSP headquarters?",
+    "a": "Yes. Many B2B firms operating out of NSP hide their service capabilities inside heavy PDF files. We transform those offerings into indexable HTML solution pages with structured technical markup so corporate buyers across India can review specifications and submit RFQs directly."
+  },
+  {
+    "q": "What warning signs should we look out for when interviewing SEO agencies in Netaji Subhash Place?",
+    "a": "Avoid vendors guaranteeing overnight number one rankings or peddling automated low quality backlink schemes. Such shortcuts violate webmaster guidelines and expose your domain to search penalties. Partnering with the best SEO agency in Netaji Subhash Place delivers complete code transparency and total admin control."
+  },
+  {
+    "q": "Are Netaji Subhash Place clients locked into inflexible annual contracts?",
+    "a": "Never. We retain enterprise partners through demonstrable biweekly progress and growing consultation inquiries rather than restrictive long term contracts. Every line of source code, schema asset, article and analytics account belongs completely to your organization from day one."
+  }
+];
+
+const trustStrip = [
+  "Aggarwal Cyber Plaza to Pearls Omaxe",
+  "Page One Corporate Rankings",
+  "NSP Tower Map Pack Top 3",
+  "Cited on ChatGPT and Perplexity",
+  "Position Zero Retainer Snippets",
+  "Organization & Local Schema",
+  "Fast Mobile WebP Engineering",
+  "Zero Lock In Client Ownership"
+];
+
+const schemaLocalBusiness = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "NK Digital Tech Best SEO Company in Netaji Subhash Place",
+  "url": "https://www.nkdigitaltech.net/seo-company-in-netaji-subhash-place/",
+  "logo": "https://www.nkdigitaltech.net/images/seo-netaji-subhash-place/hero-seo-company-netaji-subhash-place.webp",
+  "image": "https://www.nkdigitaltech.net/images/seo-netaji-subhash-place/hero-seo-company-netaji-subhash-place.webp",
+  "description": "NK Digital Tech is the Best SEO Company in Netaji Subhash Place Delhi providing technical SEO, Google Map Pack rankings, AEO, GEO and generative AI citations for corporate towers, CA firms and SaaS enterprises.",
+  "email": "connect@nkdigitaltech.com",
+  "priceRange": "₹18,000 to ₹50,000+",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Netaji Subhash Place, Pitampura",
+    "addressRegion": "Delhi",
+    "postalCode": "110034",
+    "addressCountry": "IN"
+  },
+  "areaServed": [
+    "Netaji Subhash Place",
+    "Pitampura",
+    "Rohini",
+    "North Delhi",
+    "Delhi NCR"
+  ],
+  "serviceType": [
+    "Search Engine Optimisation (SEO)",
+    "Local SEO in Netaji Subhash Place",
+    "Technical Core Web Vitals Engineering",
+    "AI SEO & ChatGPT Citation Optimization",
+    "Answer Engine Optimisation (AEO)",
+    "Generative Engine Optimisation (GEO)",
+    "B2B Enterprise Corporate SEO"
+  ]
+});
+
+const schemaFAQ = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What makes NK Digital Tech the Best SEO Company in Netaji Subhash Place for corporate and CA firms?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Corporate directors and practice heads select NK Digital Tech because we link technical Core Web Vitals engineering, tower specific search pages and Google Business Profile authority directly to client consultations and high value retainers. Our full time team specializes in Aggarwal Cyber Plaza, Pearls Omaxe, Gopal Heights and D Mall commercial complexes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much should an enterprise in Netaji Subhash Place budget for professional SEO services?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Effective monthly SEO retainers for Netaji Subhash Place enterprises range between ₹18,000 and ₹48,000 based on website architecture, technical scope and industry competition. A CA firm or legal chamber in NSP thrives on a focused local and practice hub campaign, while B2B SaaS companies or leasing agencies invest ₹48,000 upward."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How quickly will our NSP office begin seeing inquiries from an SEO agency in Netaji Subhash Place?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Standardizing inconsistent address records, tuning your Google Business Profile and rectifying mobile loading delays normally yields measurable map call increases within four to eight weeks. Competitive commercial rankings and continuous mentions across ChatGPT and AI Overviews solidify across three to six months."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does your AI SEO company in Netaji Subhash Place earn citations on ChatGPT, Gemini and Perplexity?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Generative search engines prioritize websites that deliver factual answers in crisp 40 to 60 word blocks, publish honest retainer tables, embed Organization schema, provide llms.txt reference files and maintain clean corporate directory profiles. Our technical team builds these components directly into your web architecture."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you optimize Google Maps for specific office towers in Netaji Subhash Place?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Whether your office is in Aggarwal Cyber Plaza 1 or 2, Pearls Omaxe, Gopal Heights, GD-ITL Northex, D Mall, HB Twin Towers or Bigjos Tower, we optimize exact floor, unit and complex coordinates to capture local searches from business executives throughout Pin 110034."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you generate nationwide B2B contracts for software or manufacturing firms with NSP headquarters?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Many B2B firms operating out of NSP hide their service capabilities inside heavy PDF files. We transform those offerings into indexable HTML solution pages with structured technical markup so corporate buyers across India can review specifications and submit RFQs directly."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What warning signs should we look out for when interviewing SEO agencies in Netaji Subhash Place?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Avoid vendors guaranteeing overnight number one rankings or peddling automated low quality backlink schemes. Such shortcuts violate webmaster guidelines and expose your domain to search penalties. Partnering with the best SEO agency in Netaji Subhash Place delivers complete code transparency and total admin control."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are Netaji Subhash Place clients locked into inflexible annual contracts?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Never. We retain enterprise partners through demonstrable biweekly progress and growing consultation inquiries rather than restrictive long term contracts. Every line of source code, schema asset, article and analytics account belongs completely to your organization from day one."
+      }
+    }
+  ]
+});
+---
+
+<Layout
+  title={pageTitle}
+  description={pageDescription}
+  canonical={pageCanonical}
+  ogImage="https://www.nkdigitaltech.net/images/seo-netaji-subhash-place/hero-seo-company-netaji-subhash-place.webp"
+  preloadImage="/images/seo-netaji-subhash-place/hero-seo-company-netaji-subhash-place.webp"
+  hideLocationsNav={false}
+  customSchemaLocalBusiness={schemaLocalBusiness}
+  customSchemaFAQ={schemaFAQ}
+  utilityTagline="Best SEO Company in Netaji Subhash Place Delhi • Aggarwal Cyber Plaza, Pearls Omaxe & D Mall"
+  brandSubtitle="Netaji Subhash Place • Corporate & B2B SEO"
+  footerBio="Leading SEO Company in Netaji Subhash Place Delhi helping Grade A office towers, CA practices, SaaS software teams, wealth advisors and corporate brokers win top Google rankings and AI citations."
+  footerCoreDisciplines={[
+    { label: 'Best SEO Company in North Delhi', href: '/best-seo-company-in-north-delhi/' },
+    { label: 'Best SEO Company in Delhi', href: '/best-seo-company-in-delhi/' },
+    { label: 'Local SEO Services in Delhi', href: '/local-seo-services-in-delhi/' },
+    { label: 'AI SEO Company in Delhi', href: '/ai-seo-company-in-delhi/' },
+    { label: 'AEO Services in Delhi', href: '/aeo-services-in-delhi/' },
+    { label: 'GEO Services in Delhi', href: '/geo-services-in-delhi/' },
+    { label: 'Website Development Company in Delhi', href: '/website-development-company-in-delhi/' },
+  ]}
+  footerTagline="Best SEO Company in Netaji Subhash Place Delhi • Pin 110034 Corporate Search Growth"
+>
+
+  <!-- =====================================================================
+       SECTION 1: HERO
+  ===================================================================== -->
+  <section class="relative surface-dark overflow-hidden pt-5 pb-9 sm:pt-16 sm:pb-20 lg:pt-20 lg:pb-24 border-b border-slate-800/80">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="absolute inset-0 mesh-glow pointer-events-none"></div>
+    <div class="absolute -top-24 -left-24 sm:-top-36 sm:-left-36 w-56 h-56 sm:w-96 sm:h-96 bg-brand-500/20 rounded-full blur-[80px] sm:blur-[130px] pointer-events-none"></div>
+    <div class="absolute top-1/4 -right-24 sm:-right-36 w-56 h-56 sm:w-96 sm:h-96 bg-accent-500/20 rounded-full blur-[80px] sm:blur-[130px] pointer-events-none"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns: Headline & CTA -->
+        <div class="lg:col-span-7 text-left min-w-0">
+          <div class="badge-dark mb-3 sm:mb-6 py-1.5 px-2.5 sm:px-3.5">
+            <span class="w-2 h-2 rounded-full bg-brand-400 animate-ping flex-shrink-0"></span>
+            <span class="min-w-0 break-words">Aggarwal Cyber Plaza &bull; Pearls Omaxe &bull; Gopal Heights &bull; D Mall</span>
+          </div>
+
+          <h1 class="font-display text-[clamp(1.75rem,7vw,2.4rem)] sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-[1.14] sm:leading-[1.1] mb-3.5 sm:mb-6 text-glow">
+            Best SEO Company in <br class="hidden sm:inline" /><span class="gradient-text-light">Netaji Subhash Place</span>
+          </h1>
+
+          <p class="text-[13.5px] sm:text-base md:text-lg text-slate-300 leading-[1.68] sm:leading-relaxed mb-5 sm:mb-8 font-normal text-justify hyphens-auto [text-align-last:left]">
+            Partnering with an authoritative <strong class="text-white font-semibold">SEO Company in Netaji Subhash Place</strong> empowers corporate towers, CA firms and consulting practices to capture active enterprise buyers. NK Digital Tech pairs rapid mobile pages with top Google Map pins and trusted citations on ChatGPT, Perplexity and Gemini.
+          </p>
+
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-4 mb-5 sm:mb-10">
+            <a href="#contact" class="btn-primary w-full sm:w-auto min-h-[50px] text-[13.5px] sm:text-base px-4 sm:px-8 py-3.5 sm:py-4">
+              <span>Get Free NSP SEO Audit</span>
+              <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+              </svg>
+            </a>
+            <a href="#services" class="btn-secondary-dark w-full sm:w-auto min-h-[48px] text-[13.5px] sm:text-base px-4 sm:px-7 py-3.5 sm:py-4">
+              <span>View Corporate SEO Services</span>
+            </a>
+          </div>
+
+          <!-- Trust Verification Strip -->
+          <div class="pt-4 sm:pt-6 border-t border-slate-800/80">
+            <div class="grid grid-cols-2 sm:flex sm:flex-wrap items-stretch sm:items-center gap-2">
+              {trustStrip.map((item) => (
+                <span class="px-2.5 sm:px-3 py-2 sm:py-1.5 min-h-[42px] sm:min-h-0 rounded-lg bg-slate-900/90 border border-slate-800 text-[11px] sm:text-xs text-slate-300 font-medium flex items-center justify-center sm:justify-start text-center sm:text-left leading-tight break-words">
+                  {item}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Hero Image -->
+        <div class="lg:col-span-5 min-w-0">
+          <div class="relative rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-700/80 shadow-2xl shadow-brand-500/15 bg-slate-900 group">
+            <div class="relative">
+              <img
+                src="/images/seo-netaji-subhash-place/hero-seo-company-netaji-subhash-place.webp"
+                alt="Best SEO Company in Netaji Subhash Place Delhi Consultants Reviewing Corporate Tower Rankings"
+                width="960"
+                height="540"
+                sizes="(max-width: 1024px) 100vw, 42vw"
+                fetchpriority="high"
+                decoding="async"
+                class="w-full aspect-[16/9] sm:aspect-auto sm:h-72 md:h-[380px] lg:h-[400px] object-cover object-center sm:group-hover:scale-105 transition-transform duration-500"
+              />
+              <div class="hidden sm:block absolute inset-0 bg-gradient-to-t from-[#050a14] via-transparent to-transparent opacity-80"></div>
+            </div>
+            <div class="relative sm:absolute sm:bottom-4 sm:left-4 sm:right-4 glass-card border-t sm:border border-slate-800 sm:rounded-2xl p-3.5 sm:p-4">
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-1">
+                <span class="text-xs font-bold text-white">Pin 110034 Corporate &amp; B2B Growth</span>
+                <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-400">
+                  <span class="w-2 h-2 rounded-full bg-emerald-400 flex-shrink-0"></span>
+                  Verified Calls
+                </span>
+              </div>
+              <p class="text-[11px] sm:text-xs text-slate-300 text-justify hyphens-auto [text-align-last:left] leading-relaxed">
+                Helping Aggarwal Cyber Plaza, Pearls Omaxe and D Mall firms win daily client phone calls.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 2: INTRODUCTION
+  ===================================================================== -->
+  <section class="relative surface-white overflow-hidden py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns -->
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-light mb-3.5 sm:mb-4">Pin 110034 Corporate &amp; Financial Centre</div>
+          <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-4 sm:mb-6">
+            Why Corporate Leaders Pick the Best SEO Company in Netaji Subhash Place <span class="gradient-text-dark">for Real Deal Flow</span>
+          </h2>
+          <div class="space-y-4 sm:space-y-5 text-slate-700 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            <p>
+              NK Digital Tech operates as the <strong>Best SEO Company in Netaji Subhash Place Delhi</strong> for commercial leasing brokers, Chartered Accountants, cloud software providers, corporate litigators and investment advisors. We replace static brochures with fast mobile service hubs and verified map pins that turn corporate searches into booked boardroom meetings.
+            </p>
+            <p>
+              Instead of losing mandates to generic aggregators, your enterprise gains dedicated support from our regional hub as the <a href="/best-seo-company-in-north-delhi/" class="text-brand-600 font-semibold hover:underline">Best SEO Company in North Delhi</a> alongside our citywide systems from the <a href="/best-seo-company-in-delhi/" class="text-brand-600 font-semibold hover:underline">Best SEO Company in Delhi</a> and <a href="/local-seo-services-in-delhi/" class="text-brand-600 font-semibold hover:underline">Local SEO Services in Delhi</a> for consistent B2B deal flow.
+            </p>
+          </div>
+          <div class="mt-6 sm:mt-8 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
+            <a href="#contact" class="btn-primary w-full sm:w-auto min-h-[48px]">
+              <span>Talk to an NSP SEO Specialist</span>
+              <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+              </svg>
+            </a>
+            <a href="#why-us" class="btn-secondary-light w-full sm:w-auto min-h-[48px]">
+              <span>See How We Differ</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Team Image + Stats -->
+        <div class="lg:col-span-5 space-y-4 sm:space-y-5 min-w-0">
+          <div class="rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-200 shadow-lg bg-slate-100">
+            <img
+              src="/images/seo-netaji-subhash-place/seo-agency-team-netaji-subhash-place.webp"
+              alt="Local SEO Agency Netaji Subhash Place Team Planning Tower and CA Search Campaigns"
+              width="800"
+              height="533"
+              sizes="(max-width: 1024px) 100vw, 42vw"
+              class="w-full aspect-[16/9] sm:aspect-auto sm:h-64 lg:h-72 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="grid grid-cols-2 gap-2.5 sm:gap-4">
+            {[
+  {
+    "val": "340%",
+    "label": "Inbound Enquiries",
+    "sub": "Across Pin 110034 office towers"
+  },
+  {
+    "val": "6 Sprints",
+    "label": "90 Day Plan",
+    "sub": "Reviewed every fourteen days"
+  },
+  {
+    "val": "Top 3",
+    "label": "NSP Tower Maps",
+    "sub": "Cyber Plaza to Pearls Omaxe"
+  },
+  {
+    "val": "100%",
+    "label": "Client Ownership",
+    "sub": "Your domain, code and listings"
+  }
+].map((stat) => (
+              <div class="elevated-card rounded-xl sm:rounded-2xl p-3 sm:p-4 min-w-0 flex flex-col justify-between">
+                <div class="font-display font-black text-[1.1rem] sm:text-2xl text-brand-600 mb-0.5 leading-tight break-words">{stat.val}</div>
+                <div class="text-[11px] sm:text-xs font-bold text-slate-900 leading-snug">{stat.label}</div>
+                <div class="text-[10.5px] sm:text-[11px] text-slate-500 leading-snug mt-0.5">{stat.sub}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 3: PROBLEM STATEMENT
+  ===================================================================== -->
+  <section class="relative surface-indigo py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="max-w-7xl mx-auto relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns -->
+        <div class="lg:col-span-7 min-w-0">
+          <div class="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-3.5 py-1 sm:py-1.5 rounded-full text-[10px] sm:text-xs font-bold uppercase tracking-wider sm:tracking-widest bg-amber-500/10 border border-amber-500/30 text-amber-300 max-w-full leading-snug mb-4 sm:mb-5">
+            <svg class="w-4 h-4 text-amber-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+            </svg>
+            <span>Why Tower Offices Miss B2B Enquiries</span>
+          </div>
+
+          <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-white tracking-tight leading-[1.22] sm:leading-tight mb-4 sm:mb-6">
+            Why Established Netaji Subhash Place Firms Lose Corporate Deals Online
+          </h2>
+
+          <div class="space-y-4 sm:space-y-5 text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            <p>
+              In Netaji Subhash Place, over two dozen commercial multi storey complexes house hundreds of CA firms, SaaS studios, wealth managers and brokers. When your website takes six seconds to load on mobile and your Google Business Profile fails to pinpoint your exact floor or tower block, corporate decision makers call competing firms on the next search result.
+            </p>
+            <p>
+              Using our proven <a href="/ai-seo-company-in-delhi/" class="text-sky-300 font-semibold hover:underline">AI SEO Company in Delhi</a> and <a href="/aeo-services-in-delhi/" class="text-sky-300 font-semibold hover:underline">AEO Services in Delhi</a> frameworks, we convert corporate credentials into fast WebP case studies, add Organization and LocalBusiness schema, and publish transparent retainer tables.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Diagnostic Cards -->
+        <div class="lg:col-span-5 space-y-3.5 sm:space-y-4 min-w-0">
+          <div class="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6 border-l-4 border-l-rose-500">
+            <div class="flex flex-wrap items-center justify-between gap-1.5 mb-2">
+              <span class="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-rose-400">Typical Local Vendor</span>
+              <span class="text-[11px] sm:text-xs text-slate-400">Lost High Value Retainers</span>
+            </div>
+            <h3 class="font-display font-bold text-[15px] sm:text-base text-white mb-2 leading-snug">Slow PDF Downloads, Thin Profiles & Hidden Map Pins</h3>
+            <p class="text-xs text-slate-300 leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+              Never appears when a CFO, founder or procurement head searches Google Maps or asks ChatGPT for the best CA, software vendor or leasing consultant in NSP.
+            </p>
+          </div>
+
+          <div class="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6 border-l-4 border-l-emerald-400">
+            <div class="flex flex-wrap items-center justify-between gap-1.5 mb-2">
+              <span class="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-emerald-400">NK Digital Tech System</span>
+              <span class="text-[11px] sm:text-xs text-brand-300">Daily Executive Consultations</span>
+            </div>
+            <h3 class="font-display font-bold text-[15px] sm:text-base text-white mb-2 leading-snug">Fast Corporate Pages, Clear Fee Tables & Top 3 Maps</h3>
+            <p class="text-xs text-slate-300 leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+              Combines sub two second page rendering, verified Pin 110034 tower citations, Organization schema and 50 word answer boxes that win executive trust.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 4: SERVICES
+  ===================================================================== -->
+  <section id="services" class="relative surface-cool overflow-hidden scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 items-center mb-9 sm:mb-16">
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-light mb-3">Six Corporate Growth Pillars</div>
+          <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+            Complete SEO Services in Netaji Subhash Place
+          </h2>
+          <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            Our <strong>SEO services in Netaji Subhash Place</strong> combine Core Web Vitals speed engineering, Google Business Profile optimization, executive direct answer boxes and <a href="/geo-services-in-delhi/" class="text-brand-600 font-semibold hover:underline">GEO Services in Delhi</a> into a disciplined 90 day sprint schedule.
+          </p>
+        </div>
+        <div class="lg:col-span-5 min-w-0">
+          <div class="rounded-2xl overflow-hidden border border-slate-200 shadow-md bg-white">
+            <img
+              src="/images/seo-netaji-subhash-place/technical-ai-seo-services-netaji-subhash-place.webp"
+              alt="SEO Services in Netaji Subhash Place Engineers Auditing Tower Speed and Schema Markup"
+              width="800"
+              height="450"
+              sizes="(max-width: 1024px) 100vw, 42vw"
+              class="w-full aspect-[16/9] sm:aspect-auto sm:h-56 lg:h-64 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- 3 Columns x 2 Rows Grid Layout -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-7">
+        {services.map((s) => (
+          <div class="elevated-card rounded-2xl p-4 sm:p-7 flex flex-col justify-between group sm:hover:-translate-y-1 min-w-0">
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-4 sm:mb-6">
+                <div class={`w-11 h-11 sm:w-12 sm:h-12 rounded-xl border flex items-center justify-center flex-shrink-0 ${s.iconStyle}`}>
+                  <Fragment set:html={s.icon} />
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class={`text-[10.5px] sm:text-[11px] font-semibold px-2.5 py-1 rounded-md ${s.badgeColor}`}>
+                    {s.category}
+                  </span>
+                  <span class="font-display font-black text-base sm:text-lg text-slate-300">{s.num}</span>
+                </div>
+              </div>
+
+              <h3 class="font-display font-bold text-[17px] sm:text-xl text-slate-900 mb-2.5 sm:mb-3 leading-snug group-hover:text-brand-600 transition-colors">
+                {s.title}
+              </h3>
+
+              <p class="text-slate-600 text-[13px] sm:text-sm leading-relaxed mb-4 sm:mb-6 text-justify hyphens-auto [text-align-last:left]">
+                {s.body}
+              </p>
+            </div>
+
+            <div>
+              <div class={`rounded-xl border p-3.5 sm:p-4 mb-3.5 sm:mb-5 ${s.impactStyle}`}>
+                <div class="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-slate-900 mb-1">
+                  <svg class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                  </svg>
+                  <span>NSP Business Impact</span>
+                </div>
+                <p class="text-xs text-slate-700 leading-relaxed font-medium text-justify hyphens-auto [text-align-last:left]">
+                  {s.impact}
+                </p>
+              </div>
+
+              <a href={s.href} class="w-full sm:w-auto inline-flex items-center justify-between sm:justify-start gap-2 rounded-xl sm:rounded-none bg-slate-50 active:bg-sky-50 sm:bg-transparent border border-slate-200/80 sm:border-0 px-3.5 sm:px-0 py-2.5 min-h-[46px] sm:min-h-0 text-xs font-bold text-brand-600 hover:text-brand-700 group-hover:gap-3 transition-all">
+                <span>{s.cta}</span>
+                <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 5: WHY NK DIGITAL TECH
+  ===================================================================== -->
+  <section id="why-us" class="relative surface-white overflow-hidden scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-14 text-left sm:text-center">
+        <div class="badge-light mb-3">Direct Senior Accountability</div>
+        <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+          Why the Best SEO Company in Netaji Subhash Place Beats Generic Agencies
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed mb-4 text-justify hyphens-auto [text-align-last:left]">
+          Selecting the <strong>best SEO company in Netaji Subhash Place</strong> determines whether your monthly investment generates real CFO consultations, signed audit retainers and corporate leasing tours. At NK Digital Tech, senior search specialists implement your schema, copy and map profiles directly.
+        </p>
+        <p class="text-slate-700 font-semibold text-xs sm:text-sm">
+          Direct comparison between cheap vendors and our NSP executive system:
+        </p>
+      </div>
+
+      <!-- Desktop Comparison Matrix -->
+      <div class="hidden md:block overflow-hidden rounded-2xl border border-slate-200 shadow-lg">
+        <table class="w-full text-left border-collapse">
+          <thead>
+            <tr class="bg-slate-900 text-white">
+              <th class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-slate-300 w-1/4">
+                Comparison Factor
+              </th>
+              <th class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-rose-300 w-[37.5%] border-l border-slate-800">
+                Typical Local Vendor
+              </th>
+              <th class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-brand-300 w-[37.5%] border-l border-slate-800 bg-slate-950">
+                NK Digital Tech Netaji Subhash Place
+              </th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200 text-sm">
+            {comparison.map((row, idx) => (
+              <tr class={idx % 2 === 0 ? 'bg-white' : 'bg-slate-50/80'}>
+                <td class="py-5 px-6 font-display font-bold text-slate-900">
+                  {row.metric}
+                </td>
+                <td class="py-5 px-6 text-slate-600 border-l border-slate-200">
+                  <div class="flex items-start gap-2.5">
+                    <svg class="w-4 h-4 text-rose-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                    <span>{row.typical}</span>
+                  </div>
+                </td>
+                <td class="py-5 px-6 text-slate-900 font-medium border-l border-slate-200 bg-sky-50/40">
+                  <div class="flex items-start gap-2.5">
+                    <svg class="w-4 h-4 text-emerald-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span>{row.nk}</span>
+                  </div>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Mobile Comparison Cards -->
+      <div class="md:hidden space-y-3.5">
+        {comparison.map((row) => (
+          <div class="elevated-card rounded-2xl p-4 space-y-2.5 min-w-0">
+            <h3 class="font-display font-bold text-slate-900 text-[15px] leading-snug pb-2 border-b border-slate-100">{row.metric}</h3>
+            <div class="rounded-xl bg-rose-50 border border-rose-100 p-3">
+              <div class="flex items-center gap-1.5 mb-1">
+                <svg class="w-3.5 h-3.5 text-rose-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+                <p class="text-[10px] font-bold uppercase tracking-wider text-rose-600">Typical Local Vendor</p>
+              </div>
+              <p class="text-xs text-slate-700 leading-relaxed">{row.typical}</p>
+            </div>
+            <div class="rounded-xl bg-sky-50 border border-sky-200 p-3">
+              <div class="flex items-center gap-1.5 mb-1">
+                <svg class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                </svg>
+                <p class="text-[10px] font-bold uppercase tracking-wider text-brand-600">NK Digital Tech Netaji Subhash Place</p>
+              </div>
+              <p class="text-xs text-slate-900 font-semibold leading-relaxed">{row.nk}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 6: KEY BUSINESS DISTRICTS & INDUSTRIAL ZONES WE COVER IN NORTH DELHI
+  ===================================================================== -->
+  <section id="locations" class="relative surface-cool overflow-hidden scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-14 text-left sm:text-center">
+        <div class="badge-light mb-3">Key North Delhi Corridors</div>
+        <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+          Key Business Districts &amp; Industrial Zones We Cover in North Delhi
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          Whether you require an <strong>SEO company in Netaji Subhash Place</strong> for corporate tower prominence, an <strong>SEO company in Pitampura</strong> for commercial projects, or industrial <strong>SEO services in Wazirpur</strong> and Bawana, we engineer market authority tailored to your exact catchment.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
+        {northCorridors.map((c) => (
+          <div class="elevated-card rounded-2xl p-4 sm:p-5 flex flex-col justify-between min-w-0">
+            <div>
+              <div class={`h-1 w-full bg-gradient-to-r ${c.accent} rounded-full mb-3.5`}></div>
+              <div class="flex items-center justify-between gap-2 mb-2.5">
+                <span class="px-2 py-0.5 rounded-md bg-sky-50 border border-sky-200 text-[11px] font-bold uppercase tracking-wider text-brand-600">
+                  {c.hub}
+                </span>
+                <span class="text-[11px] font-semibold text-slate-500">
+                  {c.pincode}
+                </span>
+              </div>
+              <h3 class="font-display font-bold text-base sm:text-lg text-slate-900 mb-1 leading-snug">
+                {c.area}
+              </h3>
+              <p class="text-xs font-bold text-brand-600 mb-2">{c.focus}</p>
+              <p class="text-slate-600 text-[13px] leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+                {c.desc}
+              </p>
+            </div>
+            <div class="mt-3.5 sm:mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
+              <a href={c.href} class="w-full sm:w-auto min-h-[44px] sm:min-h-0 inline-flex items-center justify-between sm:justify-start gap-1.5 text-xs font-bold text-brand-600 hover:text-brand-700 group/link">
+                <span>{c.cta}</span>
+                <svg class="w-3.5 h-3.5 flex-shrink-0 transition-transform group-hover/link:translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 7: OUR CLIENTS
+  ===================================================================== -->
+  <section id="clients" class="relative surface-indigo scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-14 text-left sm:text-center">
+        <div class="badge-dark mb-3">Pin 110034 Corporate Track Record</div>
+        <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-white tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+          Netaji Subhash Place Towers, Practices &amp; Tech Teams Growing With Search
+        </h2>
+        <p class="text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          From statutory audit firms in Aggarwal Cyber Plaza to commercial leasing agencies in Pearls Omaxe, leading NSP business founders rely on our execution.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2.5 sm:gap-5">
+        {clients.map((client) => (
+          <div class="glass-card rounded-2xl p-3 sm:p-5 flex flex-col items-center text-center group sm:hover:-translate-y-1 last:col-span-2 sm:last:col-span-1 min-w-0">
+            <div class="w-full max-w-[200px] sm:max-w-none mx-auto h-14 sm:h-20 rounded-xl bg-white border border-slate-200 flex items-center justify-center p-2.5 sm:p-4 mb-2.5 sm:mb-4 shadow-sm">
+              <img
+                src={client.logo}
+                alt={`${client.name} Logo`}
+                width="130"
+                height="48"
+                class="max-h-9 sm:max-h-12 w-auto object-contain"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <h3 class="font-display font-bold text-sm sm:text-base text-white mb-1">{client.name}</h3>
+            <p class="text-[11px] sm:text-xs text-slate-300 leading-snug mb-2.5 sm:mb-3 flex-grow">{client.sector}</p>
+            <span class="w-full sm:w-auto inline-flex items-center justify-center gap-1 text-[10px] sm:text-[11px] font-semibold text-brand-300 bg-brand-500/15 border border-brand-500/30 px-2 sm:px-2.5 py-1.5 sm:py-1 rounded-md leading-tight max-w-full">
+              <svg class="w-2.5 h-2.5 sm:w-3 sm:h-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+              </svg>
+              <span class="text-center leading-tight break-words">{client.region}</span>
+            </span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 8: INDUSTRIES (12 B2B & CORPORATE SECTORS)
+  ===================================================================== -->
+  <section id="industries" class="relative surface-slate overflow-hidden scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-16 text-left sm:text-center">
+        <div class="badge-light mb-3">Sector Specific Playbooks</div>
+        <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+          Twelve Netaji Subhash Place Corporate &amp; Industrial Sectors We Rank
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          A commercial leasing desk in Aggarwal Cyber Plaza requires completely different keyword positioning than a cloud software firm in Gopal Heights or a law chamber serving Rohini Court. We engineer custom architectures for twelve local sectors.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-7">
+        {industries.map((ind) => (
+          <div class={`elevated-card rounded-2xl p-4 sm:p-7 border-t-4 ${ind.accentBorder} flex flex-col justify-between sm:hover:-translate-y-1 min-w-0`}>
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-4 sm:mb-5">
+                <div class={`w-10 h-10 sm:w-11 sm:h-11 rounded-xl border flex items-center justify-center flex-shrink-0 ${ind.iconBg}`}>
+                  <Fragment set:html={ind.icon} />
+                </div>
+                <span class="text-[11px] font-semibold text-slate-600 bg-slate-100 px-2.5 py-1 rounded-md">
+                  {ind.sector}
+                </span>
+              </div>
+
+              <h3 class="font-display font-bold text-[17px] sm:text-xl text-slate-900 mb-3 sm:mb-4 leading-snug">
+                {ind.title}
+              </h3>
+
+              <div class="mb-4 sm:mb-5">
+                <p class="text-[11px] font-bold uppercase tracking-wider text-brand-600 mb-1.5">
+                  Campaign Priority
+                </p>
+                <p class="text-slate-600 text-[13px] sm:text-sm leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+                  {ind.focus}
+                </p>
+              </div>
+            </div>
+
+            <div class="rounded-xl bg-emerald-50/70 border border-emerald-200/80 p-3.5 sm:p-4">
+              <p class="text-[11px] font-bold uppercase tracking-wider text-emerald-700 mb-1">
+                Business Outcome
+              </p>
+              <p class="text-slate-800 text-xs font-medium leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+                {ind.outcome}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 9: TESTIMONIALS
+  ===================================================================== -->
+  <section id="testimonials" class="relative surface-dark scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="absolute inset-0 mesh-glow pointer-events-none opacity-60"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-16 text-left sm:text-center">
+        <div class="badge-dark mb-3">Verified Local Results</div>
+        <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-white tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+          What Netaji Subhash Place Corporate Leaders Say
+        </h2>
+        <p class="text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          Real client retainer growth, top three Google Map rankings and executive AI citations shared by business leaders across Aggarwal Cyber Plaza, Pearls Omaxe and D Mall.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-7">
+        {testimonials.map((t) => (
+          <div class="glass-card rounded-2xl p-4 sm:p-8 flex flex-col justify-between sm:hover:-translate-y-1 min-w-0">
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-4 sm:mb-5">
+                <div class="flex items-center gap-1">
+                  {[1, 2, 3, 4, 5].map(() => (
+                    <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                    </svg>
+                  ))}
+                </div>
+                <span class="text-[10px] sm:text-[11px] font-semibold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-1 rounded-md">
+                  NSP Corporate Client
+                </span>
+              </div>
+
+              <p class="text-slate-200 text-[13.5px] sm:text-base leading-relaxed italic mb-5 sm:mb-6 text-justify hyphens-auto [text-align-last:left]">
+                "{t.quote}"
+              </p>
+
+              <div class="rounded-xl bg-slate-900/90 border border-slate-700/80 p-3.5 sm:p-4 mb-5 sm:mb-6">
+                <p class="text-[11px] font-bold uppercase tracking-wider text-brand-400 mb-2 sm:mb-2.5">
+                  Recorded Results
+                </p>
+                <ul class="space-y-2">
+                  {t.metrics.map((m) => (
+                    <li class="flex items-start gap-2 text-xs text-slate-300 font-medium leading-snug">
+                      <svg class="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                      </svg>
+                      <span>{m}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3.5 sm:gap-4 pt-3.5 sm:pt-4 border-t border-slate-800">
+              <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-white p-2 flex items-center justify-center flex-shrink-0 shadow-sm">
+                <img
+                  src={t.logo}
+                  alt={`${t.company} Logo`}
+                  width="48"
+                  height="48"
+                  class="max-h-8 sm:max-h-10 w-auto object-contain"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="min-w-0">
+                <h3 class="font-display font-bold text-white text-sm sm:text-base leading-snug">{t.name}</h3>
+                <p class="text-xs text-slate-300 leading-snug">
+                  {t.title}, <strong class="text-brand-400 font-semibold">{t.company}</strong>
+                </p>
+                <p class="text-[10.5px] sm:text-[11px] text-slate-400 mt-0.5 leading-snug">{t.sector}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 10: HOW WE WORK (FOUR STAGES)
+  ===================================================================== -->
+  <section id="process" class="relative surface-white overflow-hidden scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-16 text-left sm:text-center">
+        <div class="badge-light mb-3">Four Phase Sprint Plan</div>
+        <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+          Our Four Stage Execution Roadmap for Netaji Subhash Place Firms
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          We start by resolving mobile speed bottlenecks, secure top three Google Map spots across NSP multi storey towers, and engineer lasting citations across ChatGPT and Gemini.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-7">
+        {stages.map((s) => (
+          <div class="elevated-card rounded-2xl p-4 sm:p-8 relative overflow-hidden group sm:hover:-translate-y-1 min-w-0">
+            <div class="flex items-center justify-between gap-4 mb-3.5 sm:mb-5">
+              <span class={`inline-flex items-center px-2.5 sm:px-3 py-1 rounded-lg text-xs font-bold uppercase tracking-wider text-white bg-gradient-to-r ${s.accent}`}>
+                {s.num}
+              </span>
+              <span class="font-display font-black text-3xl sm:text-4xl text-slate-200 group-hover:text-slate-300 transition-colors">
+                {s.step}
+              </span>
+            </div>
+            <h3 class="font-display font-bold text-[17px] sm:text-xl text-slate-900 mb-2.5 sm:mb-3 leading-snug">
+              {s.title}
+            </h3>
+            <p class="text-slate-600 text-[13px] sm:text-sm leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+              {s.body}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 11: CONCLUSION / PARTNERSHIP
+  ===================================================================== -->
+  <section class="relative surface-indigo py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-7 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns -->
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-dark mb-3.5 sm:mb-4">Verified Enterprise Deal Flow</div>
+          <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-white tracking-tight leading-[1.22] sm:leading-tight mb-4 sm:mb-6">
+            Scale Your Corporate Client Pipeline With the Best SEO Company in Netaji Subhash Place
+          </h2>
+          <div class="space-y-4 sm:space-y-5 text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            <p>
+              Securing dependable enterprise retainers and high value advisory clients in Pin 110034 requires more than static directory profiles or one off social advertisements. Every business day, CFOs, startup founders and corporate legal heads consult Google Search and AI assistants before selecting partners in Netaji Subhash Place.
+            </p>
+            <p>
+              When you collaborate with NK Digital Tech as your <strong>SEO Company in Netaji Subhash Place Delhi</strong>, our search consultants and <a href="/website-development-company-in-delhi/" class="text-sky-300 font-semibold hover:underline">Website Development Company in Delhi</a> engineers rebuild your mobile architecture, deploy verified credentials, align business directories and implement Organization schema directly. Request your complimentary NSP audit today.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Growth Image -->
+        <div class="lg:col-span-5 min-w-0">
+          <div class="rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-700/80 shadow-2xl bg-slate-900">
+            <img
+              src="/images/seo-netaji-subhash-place/organic-search-growth-netaji-subhash-place.webp"
+              alt="SEO Company in Netaji Subhash Place Delhi Partnering With Corporate Tower Founders"
+              width="800"
+              height="450"
+              sizes="(max-width: 1024px) 100vw, 42vw"
+              class="w-full aspect-[16/9] sm:aspect-auto sm:h-64 lg:h-72 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 12: FAQ
+  ===================================================================== -->
+  <section id="faq" class="relative surface-cool overflow-hidden scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-left sm:text-center mb-9 sm:mb-14">
+        <div class="badge-light mb-3">NSP Corporate Buyer Questions</div>
+        <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+          Frequently Asked Questions on Netaji Subhash Place SEO
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          Clear answers on commercial retainers, ranking timelines, corporate tower map optimization, and ChatGPT recommendations for Netaji Subhash Place.
+        </p>
+      </div>
+
+      <div class="space-y-3 sm:space-y-4">
+        {faqs.map((f, i) => (
+          <details class="elevated-card rounded-2xl group overflow-hidden" open={i === 0}>
+            <summary class="flex items-start sm:items-center justify-between gap-2.5 sm:gap-4 px-3.5 sm:px-6 py-4 sm:py-5 min-h-[56px] active:bg-sky-50/60 transition-colors select-none">
+              <div class="flex items-start sm:items-center gap-2.5 sm:gap-3.5 text-left min-w-0">
+                <span class="w-6 h-6 sm:w-7 sm:h-7 rounded-lg bg-sky-50 border border-sky-200 text-brand-600 font-display font-bold text-xs flex items-center justify-center flex-shrink-0 mt-0.5 sm:mt-0">
+                  0{i + 1}
+                </span>
+                <span class="font-display font-bold text-slate-900 text-[14px] sm:text-base md:text-lg leading-[1.4] sm:leading-snug break-words">
+                  {f.q}
+                </span>
+              </div>
+              <span class="faq-icon w-7 h-7 sm:w-8 sm:h-8 rounded-full border border-slate-200 text-slate-600 flex items-center justify-center flex-shrink-0 mt-0.5 sm:mt-0">
+                <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                </svg>
+              </span>
+            </summary>
+            <div class="px-3.5 sm:px-6 pb-4 sm:pb-6 pt-3 text-slate-600 text-[13.5px] sm:text-sm md:text-base leading-[1.68] sm:leading-relaxed border-t border-slate-100 text-justify hyphens-auto [text-align-last:left]">
+              {f.a}
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 13: FINAL CTA / CONTACT
+  ===================================================================== -->
+  <section id="contact" class="relative surface-dark scroll-mt-16 sm:scroll-mt-20 pt-10 pb-12 sm:py-16 lg:py-20 px-4 sm:px-6 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-5xl mx-auto">
+      <div class="rounded-2xl sm:rounded-3xl bg-gradient-to-r from-brand-600 via-brand-700 to-accent-700 p-6 sm:p-10 md:p-12 text-center text-white shadow-2xl border border-white/15 relative overflow-hidden">
+        <div class="relative z-10 max-w-2xl mx-auto">
+          <h2 class="font-display font-black text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl md:text-4xl text-white tracking-tight leading-[1.22] sm:leading-snug mb-3 sm:mb-4">
+            Claim Your Free Netaji Subhash Place SEO Audit
+          </h2>
+
+          <p class="text-sky-50 text-[13px] sm:text-sm md:text-base leading-relaxed mb-6 sm:mb-8">
+            Get a comprehensive evaluation of your tower page speed, Google Map Pack rankings and ChatGPT visibility across Aggarwal Cyber Plaza, Pearls Omaxe and D Mall.
+          </p>
+
+          <a
+            href="mailto:connect@nkdigitaltech.com"
+            class="inline-flex w-full sm:w-auto min-h-[48px] items-center justify-center gap-2 sm:gap-3 px-5 sm:px-8 py-3.5 sm:py-4 rounded-xl bg-white text-slate-950 hover:bg-sky-50 font-display font-bold text-sm sm:text-base shadow-xl transition-all duration-300 active:scale-95 text-center leading-snug"
+          >
+            <span>Request Free NSP Audit</span>
+            <svg class="w-4 h-4 sm:w-5 sm:h-5 text-brand-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mobile Sticky Bottom Quick Action Bar -->
+  <div class="mobile-sticky-cta sm:hidden fixed bottom-0 inset-x-0 z-40 bg-[#050a14]/95 backdrop-blur-xl border-t border-slate-800 px-3 pt-2.5 pb-[max(0.7rem,env(safe-area-inset-bottom))] shadow-[0_-8px_24px_rgba(0,0,0,0.45)] transition-all duration-200">
+    <div class="flex items-center gap-2.5">
+      <a
+        href="mailto:connect@nkdigitaltech.com"
+        class="btn-primary flex-1 min-w-0 min-h-[48px] py-2.5 px-3 text-[12.5px] font-bold rounded-xl whitespace-nowrap"
+      >
+        <span class="truncate">Free NSP SEO Audit</span>
+        <svg class="w-3.5 h-3.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+        </svg>
+      </a>
+      <a
+        href="#services"
+        class="btn-secondary-dark min-h-[48px] py-2.5 px-4 text-[12.5px] font-semibold rounded-xl flex-shrink-0 whitespace-nowrap"
+      >
+        <span>Services</span>
+      </a>
+    </div>
+  </div>
+
+  <style>
+    @media (max-width: 639px) {
+      .glass-card {
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+      }
+      #locations,
+      #why-us,
+      #clients,
+      #industries,
+      #testimonials,
+      #process,
+      #faq {
+        content-visibility: auto;
+        contain-intrinsic-size: auto 720px;
+      }
+      a,
+      button,
+      summary {
+        touch-action: manipulation;
+        -webkit-tap-highlight-color: transparent;
+      }
+    }
+  </style>
+
+</Layout>

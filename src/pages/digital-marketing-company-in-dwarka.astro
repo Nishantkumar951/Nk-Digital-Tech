@@ -1,0 +1,1059 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const pageTitle = 'Digital Marketing Company in Dwarka | NK Digital Tech';
+const pageDescription = 'Trusted digital marketing company in Dwarka. Win top 3 Google Map rankings, page one SEO and AI search authority for legal chambers, schools and B2B firms.';
+const canonicalUrl = 'https://www.nkdigitaltech.net/digital-marketing-company-in-dwarka/';
+const ogImage = 'https://www.nkdigitaltech.net/images/dm-dwarka/hero-digital-marketing-company-dwarka.webp';
+
+const services = [
+  {
+    num: '01',
+    category: 'Page One Google Authority',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>`,
+    iconStyle: 'bg-sky-50 border-sky-200 text-brand-600',
+    impactStyle: 'bg-sky-50/80 border-sky-200/80 text-slate-800',
+    badgeColor: 'text-brand-600 bg-sky-100/80',
+    title: 'Search Engine Optimisation (SEO)',
+    body: 'Working as a specialised digital marketing company in Dwarka, we fix technical crawl bottlenecks, compress mobile scripts and build dedicated service, product and advisory pages that secure Google page one positions across Pin 110075.',
+    impact: 'Daily inbound client calls, showroom enquiries and B2B service mandates from verified local decision makers.',
+    cta: 'Best SEO Company in Dwarka',
+    href: '/seo-company-in-dwarka/',
+  },
+  {
+    num: '02',
+    category: 'ChatGPT & Gemini Citations',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>`,
+    iconStyle: 'bg-violet-50 border-violet-200 text-accent-600',
+    impactStyle: 'bg-violet-50/80 border-violet-200/80 text-slate-800',
+    badgeColor: 'text-accent-600 bg-violet-100/80',
+    title: 'AI SEO & Conversational Visibility',
+    body: 'Commercial buyers and local families ask AI tools which Dwarka business has verified credentials and transparent pricing. We embed structured pricing tables and JSON LD schema so ChatGPT, Gemini and Google AI Overviews cite your brand.',
+    impact: 'Direct AI recommendations when buyers compare Dwarka options on mobile and desktop.',
+    cta: 'AI SEO Company in Delhi',
+    href: '/ai-seo-company-in-delhi/',
+  },
+  {
+    num: '03',
+    category: 'Dwarka Map Pack Top 3',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>`,
+    iconStyle: 'bg-emerald-50 border-emerald-200 text-emerald-600',
+    impactStyle: 'bg-emerald-50/80 border-emerald-200/80 text-slate-800',
+    badgeColor: 'text-emerald-700 bg-emerald-100/80',
+    title: 'Local SEO & Google Business Profile',
+    body: 'Our digital marketing services in Dwarka optimise your Google Business Profile categories, block level NAP citations and client review velocity across Sector 12 & Ramphal Chowk Corridor.',
+    impact: 'Top three Google Map Pack placement generating immediate tap to call leads and walk ins across Dwarka.',
+    cta: 'Local SEO Services in Delhi',
+    href: '/local-seo-services-in-delhi/',
+  },
+  {
+    num: '04',
+    category: 'Direct Answer Snippets',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg>`,
+    iconStyle: 'bg-amber-50 border-amber-200 text-amber-600',
+    impactStyle: 'bg-amber-50/80 border-amber-200/80 text-slate-800',
+    badgeColor: 'text-amber-700 bg-amber-100/80',
+    title: 'Answer Engine Optimisation (AEO)',
+    body: 'We format 45 to 60 word direct answers under question headings, publish clean service cost or product specification tables and attach FAQPage schema so Google featured snippets and voice search read out your website.',
+    impact: 'Position Zero capture when prospective clients check prices, specifications and credentials on mobile.',
+    cta: 'AEO Services in Delhi',
+    href: '/aeo-services-in-delhi/',
+  },
+  {
+    num: '05',
+    category: 'Generative Entity Authority',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>`,
+    iconStyle: 'bg-indigo-50 border-indigo-200 text-indigo-600',
+    impactStyle: 'bg-indigo-50/80 border-indigo-200/80 text-slate-800',
+    badgeColor: 'text-indigo-700 bg-indigo-100/80',
+    title: 'Generative Engine Optimisation (GEO)',
+    body: 'We publish structured comparison matrices, llms.txt discovery files and verified Indian trade directory mentions that anchor your Dwarka brand inside LLM knowledge graphs.',
+    impact: 'Sustained recommendation share across ChatGPT, Perplexity and Gemini comparison queries.',
+    cta: 'GEO Services in Delhi',
+    href: '/geo-services-in-delhi/',
+  },
+  {
+    num: '06',
+    category: 'Sub Second Mobile Websites',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>`,
+    iconStyle: 'bg-cyan-50 border-cyan-200 text-cyan-700',
+    impactStyle: 'bg-cyan-50/80 border-cyan-200/80 text-slate-800',
+    badgeColor: 'text-cyan-700 bg-cyan-100/80',
+    title: 'Website Design & Development',
+    body: 'Our in house web developers build fast mobile websites, digital visual lookbooks, B2B specification portals and appointment booking pages that load in under two seconds on mobile networks.',
+    impact: 'Higher mobile inquiry conversions, instant WhatsApp chats and nationwide brand authority.',
+    cta: 'Website Development Company in Delhi',
+    href: '/website-development-company-in-delhi/',
+  },
+];
+
+const comparison = [
+  {
+    metric: 'Who Runs Your Campaign',
+    typical: 'Junior trainees following generic templates across dozens of accounts',
+    nk: 'Senior digital marketing engineers manage your Dwarka search, map and web strategy directly',
+  },
+  {
+    metric: 'How Results Are Tracked',
+    typical: 'Monthly PDFs filled with social media likes and non-buyer keyword impressions',
+    nk: 'Verified client phone calls, WhatsApp messages, map direction taps and exclusive retainers',
+  },
+  {
+    metric: 'ChatGPT & AI Search Readiness',
+    typical: 'Repetitive 500-word blog posts ignored by ChatGPT, Gemini and Google AI Overviews',
+    nk: 'Structured AEO pricing blocks, GEO comparison tables, LocalBusiness schema and llms.txt feeds',
+  },
+  {
+    metric: 'Mobile Website Speed in Dwarka',
+    typical: 'Heavy page builder themes taking 6+ seconds to load on mobile data',
+    nk: 'Clean semantic HTML engineered in house for sub two second mobile load times',
+  },
+  {
+    metric: 'Micro Market Precision',
+    typical: 'Broad city pages that miss local commercial search intent across Dwarka',
+    nk: 'Dedicated block level funnels tailored to Dwarka retail, corporate and commercial buyers',
+  },
+  {
+    metric: 'Code & Account Ownership',
+    typical: 'Agency locks admin rights to your website, domain or Google Business Profile',
+    nk: 'You retain 100% administrative ownership of all website code, content and analytics',
+  },
+];
+
+const westCorridors = [
+  {
+    "hub": "Area 01",
+    "area": "Rajouri Garden",
+    "focus": "Digital Marketing Company in Rajouri Garden",
+    "pincode": "Pin 110027",
+    "desc": "For bridal couture flagships, fine jewellery showrooms, corporate consultancies and builder floor developers around Rajouri Garden Main Market and Ring Road, we drive top three Map Pack footfall and AI search citations.",
+    "cta": "Explore Rajouri Garden Digital Marketing",
+    "href": "/digital-marketing-company-in-rajouri-garden/",
+    "accent": "from-brand-500 to-sky-400"
+  },
+  {
+    "hub": "Area 02",
+    "area": "Janakpuri",
+    "focus": "Digital Marketing Company in Janakpuri",
+    "pincode": "Pin 110058",
+    "desc": "Centered on Janakpuri District Centre, we help Chartered Accountant chambers, overseas study visa consultants, IELTS academies and IT firms capture daily organic enquiries and consultation calls.",
+    "cta": "Explore Janakpuri Digital Marketing",
+    "href": "/digital-marketing-company-in-janakpuri/",
+    "accent": "from-accent-500 to-violet-400"
+  },
+  {
+    "hub": "Area 03",
+    "area": "Dwarka Sub-City",
+    "focus": "Digital Marketing Company in Dwarka",
+    "pincode": "Pin 110075",
+    "desc": "Covering Sectors 1 to 23 and Ramphal Chowk Sector 7, we build local map dominance, fast corporate websites and AI visibility for B2B service firms, CGHS property advisors, District Court lawyers and schools.",
+    "cta": "Explore Dwarka Digital Marketing",
+    "href": "/digital-marketing-company-in-dwarka/",
+    "accent": "from-cyan-500 to-teal-400"
+  },
+  {
+    "hub": "Area 04",
+    "area": "Kirti Nagar",
+    "focus": "Digital Marketing Company in Kirti Nagar",
+    "pincode": "Pin 110015",
+    "desc": "In India's largest furniture and interior design hub, we build fast visual lookbooks, modular kitchen cost guides, Map Pack authority and B2B timber/marble SEO across WHS Kirti Nagar and Rama Road.",
+    "cta": "Explore Kirti Nagar Digital Marketing",
+    "href": "/digital-marketing-company-in-kirti-nagar/",
+    "accent": "from-emerald-500 to-green-400"
+  },
+  {
+    "hub": "Area 05",
+    "area": "Punjabi Bagh",
+    "focus": "Digital Marketing Company in Punjabi Bagh",
+    "pincode": "Pin 110026",
+    "desc": "Along Club Road, Central Market and Rohtak Road, we position luxury builder floor promoters, turnkey architects, wealth CAs, corporate advisory practices and hospitality brands for high ticket client enquiries.",
+    "cta": "Explore Punjabi Bagh Digital Marketing",
+    "href": "/digital-marketing-company-in-punjabi-bagh/",
+    "accent": "from-indigo-500 to-blue-400"
+  },
+  {
+    "hub": "Area 06",
+    "area": "Mayapuri Industrial Area",
+    "focus": "Digital Marketing Company in Mayapuri",
+    "pincode": "Pin 110064",
+    "desc": "For CNC machinery plants, auto component manufacturers, metal stockists and offset packaging presses in Mayapuri Phases 1 and 2, we build searchable HTML specification catalogues that generate B2B RFQs.",
+    "cta": "Explore Mayapuri Digital Marketing",
+    "href": "/digital-marketing-company-in-mayapuri/",
+    "accent": "from-violet-500 to-purple-400"
+  },
+  {
+    "hub": "Area 07",
+    "area": "Patel Nagar",
+    "focus": "Digital Marketing Company in Patel Nagar",
+    "pincode": "Pin 110008",
+    "desc": "Serving East, West and South Patel Nagar, we help competitive coaching institutes, CA practices, coworking hubs and B2B offices rank on Google page one and inside ChatGPT and Gemini answers.",
+    "cta": "Explore Patel Nagar Digital Marketing",
+    "href": "/digital-marketing-company-in-patel-nagar/",
+    "accent": "from-amber-500 to-orange-400"
+  },
+  {
+    "hub": "Area 08",
+    "area": "Paschim Vihar",
+    "focus": "Digital Marketing Company in Paschim Vihar",
+    "pincode": "Pin 110063",
+    "desc": "Across Jwala Heri Market, Sunder Vihar and Meera Bagh, we deliver local map pack top three rankings, conversion websites and AI citations for CA chambers, builder floor developers and interior studios.",
+    "cta": "Explore Paschim Vihar Digital Marketing",
+    "href": "/digital-marketing-company-in-paschim-vihar/",
+    "accent": "from-teal-500 to-emerald-400"
+  },
+  {
+    "hub": "Area 09",
+    "area": "Tilak Nagar",
+    "focus": "Digital Marketing Company in Tilak Nagar",
+    "pincode": "Pin 110018",
+    "desc": "Along Jail Road furniture markets and Tilak Nagar commercial lanes, we grow modular furniture studios, IELTS/PTE coaching centres, visa consultants and CA chambers with high intent search funnels.",
+    "cta": "Explore Tilak Nagar Digital Marketing",
+    "href": "/digital-marketing-company-in-tilak-nagar/",
+    "accent": "from-rose-500 to-pink-400"
+  },
+  {
+    "hub": "Area 10",
+    "area": "Naraina Industrial Area",
+    "focus": "Digital Marketing Company in Naraina",
+    "pincode": "Pin 110028",
+    "desc": "Across Naraina Phases 1 and 2, we engineer B2B industrial websites, technical specification SEO and AI procurement visibility for steel traders, electronics OEMs, garment exporters and packaging plants.",
+    "cta": "Explore Naraina Digital Marketing",
+    "href": "/digital-marketing-company-in-naraina/",
+    "accent": "from-sky-500 to-cyan-400"
+  },
+  {
+    "hub": "Area 11",
+    "area": "Vikaspuri",
+    "focus": "Digital Marketing Company in Vikaspuri",
+    "pincode": "Pin 110018",
+    "desc": "Around Shankar Chowk and PVR Complex, we help IT & ERP consultancies, foundation coaching academies, CGHS property consultants and turnkey contractors capture daily neighbourhood calls.",
+    "cta": "Explore Vikaspuri Digital Marketing",
+    "href": "/digital-marketing-company-in-vikaspuri/",
+    "accent": "from-blue-500 to-indigo-400"
+  },
+  {
+    "hub": "Area 12",
+    "area": "Uttam Nagar",
+    "focus": "Digital Marketing Company in Uttam Nagar",
+    "pincode": "Pin 110059",
+    "desc": "Along Najafgarh Road from Uttam Nagar East to West, we build fast lead capture pages and Google Map Pack authority for builder floor developers, home loan DSAs, computer institutes and hardware dealers.",
+    "cta": "Explore Uttam Nagar Digital Marketing",
+    "href": "/digital-marketing-company-in-uttam-nagar/",
+    "accent": "from-fuchsia-500 to-rose-400"
+  }
+];
+
+const siblingZonalHubs = [
+  {
+    zone: 'West Delhi Parent Hub',
+    title: 'Digital Marketing Company in West Delhi',
+    corridors: 'Complete West Delhi Hub: All 12 Commercial & Industrial Corridors',
+    href: '/digital-marketing-company-in-west-delhi/',
+  },
+  {
+    zone: 'East Delhi Hub',
+    title: 'Digital Marketing Company in East Delhi',
+    corridors: 'Laxmi Nagar, Preet Vihar, Mayur Vihar, Patparganj, Karkardooma & Shahdara',
+    href: '/digital-marketing-company-in-east-delhi/',
+  },
+  {
+    zone: 'South Delhi Hub',
+    title: 'Digital Marketing Company in South Delhi',
+    corridors: 'Nehru Place, Okhla, Saket, Greater Kailash, Hauz Khas & Vasant Vihar',
+    href: '/digital-marketing-company-in-south-delhi/',
+  },
+  {
+    zone: 'North Delhi Hub',
+    title: 'Digital Marketing Company in North Delhi',
+    corridors: 'Netaji Subhash Place, Pitampura, Rohini, Model Town, Wazirpur & Bawana',
+    href: '/digital-marketing-company-in-north-delhi/',
+  },
+];
+
+const industries = [
+  {
+    "sector": "Dwarka Court Advocates & Law Firms",
+    "title": "Corporate Legal & Arbitration Chambers",
+    "focus": "Bar compliant practice profiles, legal topic answer blocks, LocalBusiness schema, and Map Pack authority near Dwarka District Court.",
+    "outcome": "Direct corporate litigation retainers, arbitration mandates, and qualified legal consultation calls.",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3\"/></svg>",
+    "accentBorder": "border-t-brand-500",
+    "iconBg": "bg-sky-50 text-brand-700 border-sky-200"
+  },
+  {
+    "sector": "Private Schools, Daycares & Academies",
+    "title": "Educational Institutions & Coaching",
+    "focus": "Admission portal speed, curriculum answer summaries, school tour booking funnels, and generative AI search recommendations.",
+    "outcome": "Higher parent campus tour registrations, admissions desk inquiries, and early enrollment forms.",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222\"/></svg>",
+    "accentBorder": "border-t-emerald-500",
+    "iconBg": "bg-emerald-50 text-emerald-700 border-emerald-200"
+  },
+  {
+    "sector": "CGHS Property Advisory & Architects",
+    "title": "Real Estate & Architecture Firms",
+    "focus": "CGHS apartment resale guides, turnkey architectural portfolios, 3D walkthrough pages, and Local SEO for Dwarka sectors.",
+    "outcome": "Exclusive property buyer site visits, turnkey interior contracts, and architectural consultations.",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4\"/></svg>",
+    "accentBorder": "border-t-amber-500",
+    "iconBg": "bg-amber-50 text-amber-700 border-amber-200"
+  },
+  {
+    "sector": "B2B Corporate Services & IT",
+    "title": "Enterprise IT & Accounting Practices",
+    "focus": "B2B service specification matrices, llms.txt integration, AEO compliance snippets, and sub second mobile speed.",
+    "outcome": "Steady corporate accounting retainers, enterprise IT contracts, and qualified B2B service inquiries.",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4\"/></svg>",
+    "accentBorder": "border-t-violet-500",
+    "iconBg": "bg-violet-50 text-violet-700 border-violet-200"
+  }
+];
+
+const testimonials = [
+  {
+    quote: 'Our enquiries from Dwarka and across Delhi surged within 60 days of partnering with NK Digital Tech. Their local Google Maps optimization and fast mobile web architecture positioned us directly in front of high intent buyers.',
+    name: 'Strategic Growth Director',
+    role: 'Managing Partner',
+    company: 'Dwarka Commercial Practice',
+    logo: '/images/clients/tech-corp.svg',
+    metrics: ['+142% Inbound Customer Calls', 'Top 3 Google Map Placement', 'Sub 2-Second Mobile Load Speed'],
+  },
+  {
+    quote: 'Unlike typical agencies that deliver vanity social metrics, NK Digital Tech connected our search visibility directly to real consultations, walk ins and verified retainers across Pin 110075.',
+    name: 'Executive Partner',
+    role: 'Principal Advisor',
+    company: 'Dwarka Corporate Services',
+    logo: '/images/clients/finance-hub.svg',
+    metrics: ['3.8x Client Retainer Growth', 'ChatGPT & Gemini Recommendation Share', '100% Asset & Code Ownership'],
+  },
+];
+
+const faqs = [
+  {
+    "q": "How does NK Digital Tech dominate Google Map rankings across Dwarka sectors?",
+    "a": "We optimize individual sector pins, correct NAP data, build authentic review velocity, and add LocalBusiness schema so your Dwarka profile ranks in the top three map spots across Sectors 1 to 23."
+  },
+  {
+    "q": "Do you work with legal chambers near Dwarka District Court?",
+    "a": "Yes. We create compliant, informative practice profiles and answer blocks covering corporate, civil and arbitration law that attract corporate retainers and litigation consultations."
+  },
+  {
+    "q": "How does your AI SEO strategy help Dwarka businesses appear in ChatGPT and Gemini?",
+    "a": "We publish verified entity data, attach FAQPage schema, maintain an active llms.txt discovery file, and structure content in direct answer blocks that LLM crawlers cite prominently."
+  },
+  {
+    "q": "What is your timeline for delivering organic results in Dwarka?",
+    "a": "Our structured 90 day sprint plan delivers technical fixes and local map ranking boosts in the first 30 days, followed by search authority expansion in days 31 to 60, and lead scaling in days 61 to 90."
+  }
+];
+
+
+const stats = [
+  { val: '3.8x', label: 'Inbound Enquiry Lift', sub: 'Across Pin 110075 corridors' },
+  { val: '90 Days', label: 'Sprint Roadmap', sub: 'Biweekly milestone reviews' },
+  { val: 'Top 3', label: 'Dwarka Map Pack', sub: 'Local search dominance' },
+  { val: '100%', label: 'Asset Ownership', sub: 'You own code & analytics' },
+];
+
+const trustStrip = [
+  'Sector 12 & Ramphal Chowk Corridor',
+  'Page One Google Rankings',
+  'Dwarka Map Pack Top 3',
+  'ChatGPT & Gemini Citations',
+  'Google AI Overview Answers',
+  'Technical AEO, GEO & Schema',
+  'Sub Second Mobile Websites',
+  '100% Client Asset Ownership',
+];
+
+const dmDwarkaSchemaLocalBusiness = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "NK Digital Tech: Digital Marketing Company in Dwarka",
+  "url": "https://www.nkdigitaltech.net/digital-marketing-company-in-dwarka/",
+  "logo": "https://www.nkdigitaltech.net/images/dm-dwarka/hero-digital-marketing-company-dwarka.webp",
+  "image": "https://www.nkdigitaltech.net/images/dm-dwarka/hero-digital-marketing-company-dwarka.webp",
+  "description": "Trusted digital marketing company in Dwarka. Win top 3 Google Map rankings, page one SEO and AI search authority for legal chambers, schools and B2B firms.",
+  "telephone": "+91-8052189051",
+  "email": "nkdigitaltech1@gmail.com",
+  "priceRange": "₹15,000 to ₹50,000+",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Sector 12 & Ramphal Chowk Corridor, Dwarka",
+    "addressLocality": "West Delhi",
+    "postalCode": "110075",
+    "addressRegion": "Delhi",
+    "addressCountry": "IN"
+  },
+  "areaServed": [
+    "Dwarka",
+    "Sector 12 City Centre",
+    "Sector 7 Ramphal Chowk",
+    "Dwarka District Court Sector 10",
+    "Sector 6 Market",
+    "Sector 10 Metro",
+    "Sector 14",
+    "Sector 21",
+    "Sector 23",
+    "West Delhi",
+    "Delhi"
+  ],
+  "serviceType": [
+    "Digital Marketing Services in Dwarka",
+    "Search Engine Optimisation (SEO)",
+    "AI SEO & ChatGPT Citation Optimisation",
+    "Local SEO & Google Business Profile",
+    "Answer Engine Optimisation (AEO)",
+    "Generative Engine Optimisation (GEO)",
+    "Website Design and Development"
+  ]
+});
+
+const dmDwarkaSchemaFAQ = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map((item) => ({
+    "@type": "Question",
+    "name": item.q,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": item.a
+    }
+  }))
+});
+---
+
+<Layout
+  title={pageTitle}
+  description={pageDescription}
+  canonical={canonicalUrl}
+  ogImage={ogImage}
+  preloadImage={ogImage}
+  hideLocationsNav={false}
+  customSchemaLocalBusiness={dmDwarkaSchemaLocalBusiness}
+  customSchemaFAQ={dmDwarkaSchemaFAQ}
+  utilityTagline="Digital Marketing Company in Dwarka • Sectors 1 to 23 & Ramphal Chowk Commercial Belt (Pin 110075)"
+  brandSubtitle="Dwarka • Search, AI & Web Growth"
+  footerBio="Digital Marketing Company in Dwarka helping B2B enterprises, retail showrooms and corporate firms win Google rankings, Map Pack calls and AI citations."
+  footerCoreDisciplines={[
+    { label: 'Best Digital Marketing Agency in Delhi', href: '/best-digital-marketing-agency-in-delhi/' },
+    { label: 'Digital Marketing Company in West Delhi', href: '/digital-marketing-company-in-west-delhi/' },
+    { label: 'Best SEO Company in Dwarka', href: '/seo-company-in-dwarka/' },
+    { label: 'AI SEO Company in Delhi', href: '/ai-seo-company-in-delhi/' },
+    { label: 'Local SEO Services in Delhi', href: '/local-seo-services-in-delhi/' },
+    { label: 'AEO Services in Delhi', href: '/aeo-services-in-delhi/' },
+    { label: 'GEO Services in Delhi', href: '/geo-services-in-delhi/' },
+    { label: 'Website Development Company in Delhi', href: '/website-development-company-in-delhi/' },
+  ]}
+  footerTagline="Digital Marketing Company in Dwarka • Full Funnel Search & AI Growth"
+>
+
+  <!-- =====================================================================
+       SECTION 1: HERO (DARK SURFACE WITH UNIQUE DWARKA HERO IMAGE)
+  ===================================================================== -->
+  <section class="relative surface-dark overflow-hidden pt-8 pb-10 sm:pt-16 sm:pb-20 lg:pt-20 lg:pb-24 border-b border-slate-800/80">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="absolute inset-0 mesh-glow pointer-events-none"></div>
+    <div class="absolute -top-36 -left-36 w-96 h-96 bg-brand-500/20 rounded-full blur-[130px] pointer-events-none"></div>
+    <div class="absolute top-1/4 -right-36 w-96 h-96 bg-accent-500/20 rounded-full blur-[130px] pointer-events-none"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-7 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns -->
+        <div class="lg:col-span-7 text-left min-w-0">
+          <div class="badge-dark mb-4 sm:mb-6">
+            <span class="w-2 h-2 rounded-full bg-brand-400 animate-ping flex-shrink-0"></span>
+            <span class="min-w-0 break-words">Sector 12 & Ramphal Chowk Corridor &bull; Pin 110075</span>
+          </div>
+
+          <h1 class="font-display text-[clamp(1.9rem,6.8vw,3.75rem)] font-black tracking-tight text-white leading-[1.12] sm:leading-[1.08] mb-4 sm:mb-6 text-glow">
+            Digital Marketing Company <br />
+            <span class="gradient-text-light">in Dwarka</span>
+          </h1>
+
+          <p class="text-[13.5px] sm:text-base md:text-lg text-slate-300 leading-relaxed mb-6 sm:mb-8 font-normal text-justify hyphens-auto [text-align-last:left]">
+            Capture daily consultation calls, student enrollments and B2B clients with a performance focused digital marketing company in Dwarka. We engineer top three Google Map Pack rankings, page one search authority, ChatGPT citations and sub second web pages across Sectors 1 to 23 and Ramphal Chowk.
+          </p>
+
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 mb-7 sm:mb-10">
+            <a href="#contact" class="btn-primary w-full sm:w-auto min-h-[48px] text-sm sm:text-base px-5 sm:px-8 py-3.5 sm:py-4">
+              <span>Claim Your Free Dwarka Audit</span>
+              <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+              </svg>
+            </a>
+            <a href="#services" class="btn-secondary-dark w-full sm:w-auto min-h-[48px] text-sm sm:text-base px-5 sm:px-7 py-3.5 sm:py-4">
+              <span>Explore Marketing Services</span>
+            </a>
+          </div>
+
+          <!-- Trust Verification Strip -->
+          <div class="pt-5 sm:pt-6 border-t border-slate-800/80">
+            <div class="grid grid-cols-2 sm:flex sm:flex-wrap items-stretch sm:items-center gap-2">
+              {trustStrip.map((item) => (
+                <span class="px-2.5 sm:px-3 py-2 sm:py-1.5 rounded-lg bg-slate-900/90 border border-slate-800 text-[11px] sm:text-xs text-slate-300 font-medium flex items-center justify-center sm:justify-start text-center sm:text-left leading-tight">
+                  {item}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Unique Dwarka Hero Image -->
+        <div class="lg:col-span-5 min-w-0">
+          <div class="relative rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-700/80 shadow-2xl shadow-brand-500/15 bg-slate-900 group">
+            <div class="relative">
+              <img
+                src="/images/dm-dwarka/hero-digital-marketing-company-dwarka.webp"
+                alt="Digital Marketing Company in Dwarka Senior Strategists Reviewing Multi-Channel Growth"
+                width="960"
+                height="540"
+                sizes="(max-width: 1024px) 100vw, 42vw"
+                fetchpriority="high"
+                decoding="async"
+                class="w-full aspect-[16/9] sm:aspect-auto sm:h-72 md:h-[380px] lg:h-[400px] object-cover object-center sm:group-hover:scale-105 transition-transform duration-500"
+              />
+              <div class="hidden sm:block absolute inset-0 bg-gradient-to-t from-[#050a14] via-transparent to-transparent opacity-80"></div>
+            </div>
+            <div class="relative sm:absolute sm:bottom-4 sm:left-4 sm:right-4 glass-card border-t sm:border border-slate-800 sm:rounded-2xl p-3.5 sm:p-4">
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-1">
+                <span class="text-xs font-bold text-white">Dwarka Commercial Growth Engine</span>
+                <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-400">
+                  <span class="w-2 h-2 rounded-full bg-emerald-400 flex-shrink-0"></span>
+                  Verified Inbound Leads
+                </span>
+              </div>
+              <p class="text-[11px] sm:text-xs text-slate-300 text-justify hyphens-auto [text-align-last:left] leading-relaxed">
+                Positioning Dwarka businesses first across Google Search, Google Maps and AI search answers.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 2: INTRODUCTION (CRISP WHITE CONTRAST SECTION + TEAM IMAGE)
+  ===================================================================== -->
+  <section id="overview" class="relative surface-white overflow-hidden py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns -->
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-light mb-3.5 sm:mb-4">Pin 110075 & 110078 Commercial Growth Partner</div>
+          <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-4 sm:mb-6">
+            Why Dwarka Law Chambers, Corporate Firms & Academies Choose Our <span class="gradient-text-dark">Digital Marketing Company</span>
+          </h2>
+          <div class="space-y-4 sm:space-y-5 text-slate-700 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            Dwarka is Asia's largest organized residential and institutional sub city, housing thousands of corporate offices, legal chambers near Dwarka District Court, premium schools and bustling markets like Ramphal Chowk Sector 7 and Sector 12 City Centre. When families and corporate decision makers search for legal counsel, B2B services or specialized education, their search begins on Google, Google Maps and AI assistants. As an accountable <strong>Digital Marketing Company in Dwarka</strong> backed by our <a href="/digital-marketing-company-in-west-delhi/" class="text-brand-600 font-semibold hover:underline">Digital Marketing Company in West Delhi</a> hub, NK Digital Tech makes sure your business captures high value leads first.
+          </div>
+          <div class="mt-6 sm:mt-8 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
+            <a href="/contact-us/" class="btn-primary w-full sm:w-auto min-h-[48px]">
+              <span>Speak With a Dwarka Strategist</span>
+              <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+              </svg>
+            </a>
+            <a href="#why-us" class="btn-secondary-light w-full sm:w-auto min-h-[48px]">
+              <span>Compare Our Execution Model</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Unique Dwarka Team Image + Stats -->
+        <div class="lg:col-span-5 space-y-4 sm:space-y-5 min-w-0">
+          <div class="rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-200 shadow-lg bg-slate-100">
+            <img
+              src="/images/dm-dwarka/digital-marketing-team-dwarka.webp"
+              alt="Digital Marketing Agency in Dwarka Team Planning 90 day Growth Sprints"
+              width="800"
+              height="533"
+              sizes="(max-width: 1024px) 100vw, 42vw"
+              loading="lazy"
+              decoding="async"
+              class="w-full aspect-[16/10] sm:aspect-auto sm:h-64 lg:h-72 object-cover object-center"
+            />
+          </div>
+          <div class="grid grid-cols-2 gap-3 sm:gap-4">
+            {stats.map((stat) => (
+              <div class="elevated-card rounded-xl sm:rounded-2xl p-3.5 sm:p-4 min-w-0">
+                <div class="font-display font-black text-xl sm:text-2xl text-brand-600 mb-0.5">{stat.val}</div>
+                <div class="text-[11px] sm:text-xs font-bold text-slate-900 leading-snug">{stat.label}</div>
+                <div class="text-[10.5px] sm:text-[11px] text-slate-500 leading-snug mt-0.5">{stat.sub}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 3: LOCAL REALITY & SEARCH CHALLENGES (DARK SECTION)
+  ===================================================================== -->
+  <section class="relative surface-dark overflow-hidden py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns -->
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-dark mb-3.5 sm:mb-4">Commercial Reality in Dwarka</div>
+          <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-white tracking-tight leading-[1.22] sm:leading-tight mb-4 sm:mb-6">
+            In Dwarka, Buyer Decisions Happen on Mobile First
+          </h2>
+
+          <div class="space-y-4 sm:space-y-5 text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            <p>
+              Across Dwarka's 29 sectors, buyers and corporate clients rely heavily on Google Maps and mobile search before shortlisting a legal advisor, academy or B2B partner.
+            </p>
+            <p>
+              Without sector level map optimization and sub second mobile speed, local prospects choose competing firms in Sector 12 or Janakpuri. Backed by our <a href="/ai-seo-company-in-delhi/" class="text-sky-300 font-semibold hover:underline">AI SEO Company in Delhi</a> and <a href="/website-development-company-in-delhi/" class="text-sky-300 font-semibold hover:underline">Website Development Company in Delhi</a> infrastructure, we ensure your firm leads every commercial query.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Comparison Cards -->
+        <div class="lg:col-span-5 space-y-3.5 sm:space-y-4 min-w-0">
+          <div class="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6 border-l-4 border-l-rose-500">
+            <div class="flex flex-wrap items-center justify-between gap-1.5 mb-2">
+              <span class="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-rose-400">Typical Local Vendor</span>
+              <span class="text-[11px] sm:text-xs text-slate-400">Impressions Without Walk ins</span>
+            </div>
+            <h3 class="font-display font-bold text-[15px] sm:text-base text-white mb-2 leading-snug">Slow Mobile Pages, Template Posts &amp; Weak Map Signals</h3>
+            <p class="text-xs text-slate-300 leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+              Fails Core Web Vitals checks and gets completely skipped when commercial buyers in Dwarka search Google Maps or ask AI tools who to contact.
+            </p>
+          </div>
+
+          <div class="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6 border-l-4 border-l-emerald-400">
+            <div class="flex flex-wrap items-center justify-between gap-1.5 mb-2">
+              <span class="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-emerald-400">NK Digital Tech System</span>
+              <span class="text-[11px] sm:text-xs text-brand-300">Daily Calls, Admissions &amp; Retainers</span>
+            </div>
+            <h3 class="font-display font-bold text-[15px] sm:text-base text-white mb-2 leading-snug">Sub Second HTML, block level Maps &amp; AI Citations</h3>
+            <p class="text-xs text-slate-300 leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+              Combines fast mobile code, verified Google Business Profiles, LocalBusiness schema and AEO answer tables that turn visitors into paying clients.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 4: WHY US (COMPARISON TABLE - CRISP LIGHT SURFACE)
+  ===================================================================== -->
+  <section id="why-us" class="relative surface-white overflow-hidden scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-16 text-left sm:text-center">
+        <div class="badge-light mb-3">Engineering Rigour vs Vanity Fluff</div>
+        <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+          Why Dwarka Leaders Hire NK Digital Tech Over Traditional Agencies
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          Compare how our senior engineering team executes digital marketing against the outdated models of generic agencies across West Delhi.
+        </p>
+      </div>
+
+      <div class="elevated-card rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-200 shadow-xl bg-white">
+        <div class="overflow-x-auto">
+          <table class="w-full text-left border-collapse min-w-[560px]">
+            <thead>
+              <tr class="border-b border-slate-200 bg-slate-50/80">
+                <th class="py-3.5 sm:py-4 px-4 sm:px-6 text-xs sm:text-sm font-bold text-slate-900 uppercase tracking-wider w-1/4">Accountability Pillar</th>
+                <th class="py-3.5 sm:py-4 px-4 sm:px-6 text-xs sm:text-sm font-bold text-rose-600 uppercase tracking-wider w-3/8 bg-rose-50/40">Generic Dwarka Agency</th>
+                <th class="py-3.5 sm:py-4 px-4 sm:px-6 text-xs sm:text-sm font-bold text-brand-600 uppercase tracking-wider w-3/8 bg-brand-50/40">NK Digital Tech Framework</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100 text-xs sm:text-sm">
+              {comparison.map((row) => (
+                <tr class="hover:bg-slate-50/50 transition-colors">
+                  <td class="py-3.5 sm:py-4 px-4 sm:px-6 font-bold text-slate-900">{row.metric}</td>
+                  <td class="py-3.5 sm:py-4 px-4 sm:px-6 text-slate-600 bg-rose-50/20">{row.typical}</td>
+                  <td class="py-3.5 sm:py-4 px-4 sm:px-6 font-medium text-slate-900 bg-brand-50/20">{row.nk}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 5: SERVICES (LIGHT COOL ALABASTER CONTRAST + TECHNICAL IMAGE)
+  ===================================================================== -->
+  <section id="services" class="relative surface-cool overflow-hidden scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 items-center mb-9 sm:mb-16">
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-light mb-3">Six Integrated Growth Pillars</div>
+          <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+            Complete Digital Marketing Services in Dwarka
+          </h2>
+          <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            Our <strong>digital marketing services in Dwarka</strong> unite organic search rankings, Google Business Profile growth, <a href="/aeo-services-in-delhi/" class="text-brand-600 font-semibold hover:underline">AEO Services in Delhi</a>, <a href="/geo-services-in-delhi/" class="text-brand-600 font-semibold hover:underline">GEO Services in Delhi</a> and fast web development so your business captures every high intent query in Pin 110075.
+          </p>
+        </div>
+        <div class="lg:col-span-5 min-w-0">
+          <div class="rounded-2xl overflow-hidden border border-slate-200 shadow-md bg-white">
+            <img
+              src="/images/dm-dwarka/technical-digital-marketing-dwarka.webp"
+              alt="Digital Marketing Company in Dwarka Engineer Auditing Core Web Vitals and Schema Markup"
+              width="800"
+              height="450"
+              sizes="(max-width: 1024px) 100vw, 42vw"
+              loading="lazy"
+              decoding="async"
+              class="w-full aspect-[16/9] sm:aspect-auto sm:h-56 lg:h-64 object-cover object-center"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- 3 Columns x 2 Rows Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-7">
+        {services.map((s) => (
+          <div class="elevated-card rounded-2xl p-5 sm:p-7 flex flex-col justify-between group sm:hover:-translate-y-1 min-w-0">
+            <div>
+              <div class="flex items-center justify-between gap-3 mb-4">
+                <span class="font-mono text-xs font-bold text-slate-400">{s.num}</span>
+                <span class={`text-[11px] font-semibold px-2.5 py-0.5 rounded-full border ${s.badgeColor}`}>
+                  {s.category}
+                </span>
+              </div>
+              <div class={`w-12 h-12 rounded-xl flex items-center justify-center mb-4 border ${s.iconStyle}`} set:html={s.icon} />
+              <h3 class="font-display font-bold text-lg sm:text-xl text-slate-900 mb-2 leading-snug group-hover:text-brand-600 transition-colors">
+                {s.title}
+              </h3>
+              <p class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-4 text-justify hyphens-auto [text-align-last:left]">
+                {s.body}
+              </p>
+            </div>
+            <div>
+              <div class={`p-3 rounded-xl border text-xs mb-4 ${s.impactStyle}`}>
+                <span class="font-semibold block mb-0.5">Commercial Outcome:</span>
+                <span class="text-slate-700 leading-snug block">{s.impact}</span>
+              </div>
+              <a href={s.href} class="text-brand-600 font-semibold text-xs sm:text-sm inline-flex items-center gap-1.5 hover:gap-2 transition-all">
+                <span>{s.cta}</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/></svg>
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 6: WEST DELHI COMMERCIAL CORRIDORS COVERAGE
+  ===================================================================== -->
+  <section id="corridors" class="relative surface-white overflow-hidden scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-16 text-left sm:text-center">
+        <div class="badge-light mb-3">West Delhi Micro Market Network</div>
+        <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+          Hyperlocal Search Coverage Across All 12 West Delhi Hubs
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          Customer search terms shift sharply between retail markets, industrial zones and corporate district centres. As the leading <a href="/digital-marketing-company-in-west-delhi/" class="text-brand-600 font-semibold hover:underline">Digital Marketing Company in West Delhi</a>, we build pages matched to each pocket.
+        </p>
+      </div>
+
+      <!-- 12 West Delhi Corridors Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-12 sm:mb-16">
+        {westCorridors.map((c) => (
+          <div class={`elevated-card rounded-2xl p-5 sm:p-6 flex flex-col justify-between border-t-4 sm:hover:-translate-y-1 transition-transform min-w-0 ${c.area.toLowerCase().includes('dwarka') ? 'border-brand-500 ring-2 ring-brand-500/20' : 'border-slate-200'}`}>
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-2">
+                <span class="font-mono text-xs font-bold text-slate-400">{c.hub}</span>
+                <span class="text-[11px] font-semibold text-slate-500 bg-slate-100 px-2 py-0.5 rounded-full">{c.pincode}</span>
+              </div>
+              <h3 class="font-display font-bold text-base sm:text-lg text-slate-900 mb-2 leading-snug">{c.area}</h3>
+              <p class="text-slate-600 text-xs sm:text-[13px] leading-relaxed mb-4 text-justify hyphens-auto [text-align-last:left]">
+                {c.desc}
+              </p>
+            </div>
+            <a href={c.href} class="text-brand-600 font-semibold text-xs sm:text-sm inline-flex items-center gap-1.5 hover:gap-2 transition-all mt-auto pt-2 border-t border-slate-100">
+              <span>{c.cta}</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/></svg>
+            </a>
+          </div>
+        ))}
+      </div>
+
+      <!-- Sibling Zonal Hubs -->
+      <div class="rounded-2xl sm:rounded-3xl p-6 sm:p-8 bg-slate-900 text-white">
+        <div class="max-w-2xl mb-6">
+          <div class="badge-dark mb-2">Delhi NCR Regional Network</div>
+          <h3 class="font-display font-bold text-xl sm:text-2xl text-white tracking-tight mb-2">
+            Looking Beyond Dwarka? Explore Our Zonal Digital Marketing Hubs
+          </h3>
+          <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+            We operate dedicated search engineering and performance marketing hubs across every commercial zone in the capital.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          {siblingZonalHubs.map((hub) => (
+            <a href={hub.href} class="p-4 rounded-xl bg-slate-800/80 border border-slate-700/80 hover:border-brand-500/80 transition-colors group block">
+              <span class="text-[11px] font-bold text-brand-400 block mb-1">{hub.zone}</span>
+              <h4 class="font-display font-bold text-sm text-white group-hover:text-brand-300 transition-colors mb-1">{hub.title}</h4>
+              <p class="text-[11px] text-slate-400 leading-snug">{hub.corridors}</p>
+            </a>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 7: INDUSTRIES (LIGHT SLATE CONTRAST SECTION - 4 SECTORS)
+  ===================================================================== -->
+  <section id="industries" class="relative surface-cool overflow-hidden scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-16 text-left sm:text-center">
+        <div class="badge-light mb-3">Sector Specific Frameworks</div>
+        <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+          Tailored Digital Marketing for Dwarka Commercial Corridors
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          We design custom organic and conversational search strategies built for the specific transaction models of Dwarka businesses.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-7">
+        {industries.map((ind) => (
+          <div class={`elevated-card rounded-2xl p-5 sm:p-7 flex flex-col justify-between border-t-4 ${ind.accentBorder} min-w-0`}>
+            <div>
+              <div class="flex items-center gap-3 mb-4">
+                <div class={`w-11 h-11 rounded-xl flex items-center justify-center border ${ind.iconBg}`} set:html={ind.icon} />
+                <div>
+                  <span class="text-xs font-bold text-slate-400 block uppercase tracking-wider">{ind.sector}</span>
+                  <h3 class="font-display font-bold text-lg sm:text-xl text-slate-900 leading-snug">{ind.title}</h3>
+                </div>
+              </div>
+              <p class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-4 text-justify hyphens-auto [text-align-last:left]">
+                {ind.focus}
+              </p>
+            </div>
+            <div class="pt-3 border-t border-slate-100 flex items-start gap-2 text-xs font-medium text-slate-700 bg-slate-50/80 p-3 rounded-xl">
+              <svg class="w-4 h-4 text-emerald-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+              <span><strong>Deliverable:</strong> {ind.outcome}</span>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 8: TESTIMONIALS (DEEP NAVY CONTRAST SECTION - 2x2 GRID)
+  ===================================================================== -->
+  <section id="testimonials" class="relative surface-dark scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="absolute inset-0 mesh-glow pointer-events-none opacity-60"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-16 text-left sm:text-center">
+        <div class="badge-dark mb-3">Verified Client Outcomes</div>
+        <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-white tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+          Feedback From Dwarka Commercial Leaders &amp; Practices
+        </h2>
+        <p class="text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          Measured inquiry growth, Map Pack dominance and AI citations reported by business owners across Sector 12 & Ramphal Chowk Corridor.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-7">
+        {testimonials.map((t) => (
+          <div class="glass-card rounded-2xl p-4 sm:p-8 flex flex-col justify-between sm:hover:-translate-y-1 min-w-0">
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-4 sm:mb-5">
+                <div class="flex items-center gap-1">
+                  {[1, 2, 3, 4, 5].map(() => (
+                    <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                    </svg>
+                  ))}
+                </div>
+                <span class="text-[10px] sm:text-[11px] font-semibold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-1 rounded-md">
+                  Dwarka Verified Client
+                </span>
+              </div>
+
+              <p class="text-slate-200 text-[13.5px] sm:text-base leading-relaxed italic mb-5 sm:mb-6 text-justify hyphens-auto [text-align-last:left]">
+                "{t.quote}"
+              </p>
+
+              <div class="rounded-xl bg-slate-900/90 border border-slate-700/80 p-3.5 sm:p-4 mb-5 sm:mb-6">
+                <p class="text-[11px] font-bold uppercase tracking-wider text-brand-400 mb-2 sm:mb-2.5">
+                  Recorded Results
+                </p>
+                <ul class="space-y-2">
+                  {t.metrics.map((m) => (
+                    <li class="flex items-start gap-2 text-xs text-slate-300 font-medium leading-snug">
+                      <svg class="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                      </svg>
+                      <span>{m}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3.5 sm:gap-4 pt-3.5 sm:pt-4 border-t border-slate-800">
+              <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-white p-2 flex items-center justify-center flex-shrink-0 shadow-sm">
+                <img
+                  src={t.logo}
+                  alt={`${t.company} Logo`}
+                  width="48"
+                  height="48"
+                  class="max-h-8 sm:max-h-10 w-auto object-contain"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="min-w-0">
+                <h3 class="font-display font-bold text-white text-sm sm:text-base leading-snug">{t.name}</h3>
+                <p class="text-xs text-slate-300 leading-snug">{t.role}, <span class="text-brand-300">{t.company}</span></p>
+                <span class="inline-block mt-0.5 text-[11px] text-emerald-400 font-medium">Pin 110075</span>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 9: HOW WE WORK (CRISP WHITE CONTRAST SECTION - 4 STAGES)
+  ===================================================================== -->
+  <section id="roadmap" class="relative surface-white overflow-hidden scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-16 text-left sm:text-center">
+        <div class="badge-light mb-3">Four Stage Execution Framework</div>
+        <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+          Our Disciplined 90 Day Sprint Roadmap in Dwarka
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          We operate in structured 90 day sprints, accelerating mobile page speed and local Map Pack rankings first while compounding page one organic authority and AI citations across Pin 110075.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+        {[
+          {
+            step: 'Stage 01',
+            days: 'Days 01 to 20',
+            title: 'Technical Speed & Architecture',
+            desc: 'Fix mobile Core Web Vitals, trim script bloat, configure schema markup and build clean HTML templates.',
+            deliverable: 'Sub two second mobile load speed & zero crawl errors'
+          },
+          {
+            step: 'Stage 02',
+            days: 'Days 21 to 40',
+            title: 'Local Maps & GBP Dominance',
+            desc: 'Align block level citations, optimize primary categories and accelerate verified customer reviews across Dwarka.',
+            deliverable: 'Top 3 Google Business Profile map placements'
+          },
+          {
+            step: 'Stage 03',
+            days: 'Days 41 to 65',
+            title: 'AEO & AI Search Readiness',
+            desc: 'Publish 45 to 60 word factual answer blocks, transparent pricing matrices and llms.txt discovery feeds.',
+            deliverable: 'Verified brand citations on ChatGPT, Gemini & AI Overviews'
+          },
+          {
+            step: 'Stage 04',
+            days: 'Days 66 to 90',
+            title: 'Revenue Lead Funnels',
+            desc: 'A/B test tap to call CTAs, mobile appointment booking funnels and conversion tracking to scale inbound enquiries.',
+            deliverable: 'Consistent flow of qualified customer enquiries & calls'
+          }
+        ].map((st) => (
+          <div class="elevated-card rounded-2xl p-5 sm:p-6 flex flex-col justify-between border-t-4 border-brand-500 min-w-0">
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-2">
+                <span class="font-mono text-xs font-bold text-brand-600">{st.step}</span>
+                <span class="text-[11px] font-semibold text-slate-500 bg-slate-100 px-2 py-0.5 rounded-full">{st.days}</span>
+              </div>
+              <h3 class="font-display font-bold text-base sm:text-lg text-slate-900 mb-2 leading-snug">{st.title}</h3>
+              <p class="text-slate-600 text-xs sm:text-[13px] leading-relaxed mb-4 text-justify hyphens-auto [text-align-last:left]">
+                {st.desc}
+              </p>
+            </div>
+            <div class="pt-3 border-t border-slate-100 text-[11px] font-medium text-slate-700 bg-slate-50 p-2.5 rounded-lg">
+              <strong class="text-brand-600 block">Milestone:</strong> {st.deliverable}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 10: FAQ (CRISP ACCORDIONS WITH FAQPAGE SCHEMA)
+  ===================================================================== -->
+  <section id="faq" class="relative surface-cool overflow-hidden scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-4xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-16 text-left sm:text-center">
+        <div class="badge-light mb-3">Straight Answers</div>
+        <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+          Frequently Asked Questions: Digital Marketing in Dwarka
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          Direct answers to common questions asked by business owners in Dwarka before hiring our search and web engineering team.
+        </p>
+      </div>
+
+      <div class="space-y-4">
+        {faqs.map((f, idx) => (
+          <div class="elevated-card rounded-2xl p-5 sm:p-6 bg-white border border-slate-200">
+            <h3 class="font-display font-bold text-base sm:text-lg text-slate-900 mb-2 leading-snug">
+              {f.q}
+            </h3>
+            <p class="text-slate-600 text-xs sm:text-sm leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+              {f.a}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 11: FINAL CTA (DEEP NAVY CONVERSION BLOCK)
+  ===================================================================== -->
+  <section id="contact" class="relative surface-dark overflow-hidden py-12 sm:py-20 lg:py-24 px-4 sm:px-6">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-5xl mx-auto text-center">
+      <div class="badge-dark mb-4">Start Your 90 Day Growth Sprint</div>
+      <h2 class="font-display text-2xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight mb-4 sm:mb-6">
+        Ready to Lead Dwarka in <span class="gradient-text-light">Search &amp; AI Visibility</span>?
+      </h2>
+      <p class="text-slate-300 text-sm sm:text-base md:text-lg max-w-2xl mx-auto mb-8 leading-relaxed">
+        Schedule your free website, Google Map Pack and AI visibility audit across Sector 12 & Ramphal Chowk Corridor. Speak directly with our senior search engineers, not junior sales reps.
+      </p>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
+        <a href="/contact-us/" class="btn-primary w-full sm:w-auto text-base px-8 py-4">
+          <span>Claim Your Free Dwarka Audit</span>
+          <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+          </svg>
+        </a>
+        <a href="tel:8052189051" class="btn-secondary-dark w-full sm:w-auto text-base px-8 py-4">
+          <span>Call 8052189051</span>
+        </a>
+      </div>
+
+      <div class="pt-6 border-t border-slate-800 text-xs text-slate-400">
+        Direct mobile line (8052189051) available Monday to Saturday, 10:00 AM to 7:00 PM IST &bull; 100% Client Asset Ownership
+      </div>
+    </div>
+  </section>
+
+</Layout>

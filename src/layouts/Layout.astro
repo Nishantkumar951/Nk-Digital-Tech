@@ -401,26 +401,26 @@ if (customSchemaBreadcrumb) {
     </div>
 
     <!-- Mobile Menu Drawer -->
-    <div id="mobile-menu" class="hidden lg:hidden border-t border-slate-800 bg-[#050a14]/98 backdrop-blur-2xl px-4 sm:px-5 py-5 max-h-[82vh] overflow-y-auto shadow-2xl">
-      <div class="flex flex-col gap-1 pb-5 border-b border-slate-800/80 text-sm font-medium">
-        <a href={`${navPrefix}#services`} class="text-slate-200 hover:text-brand-300 hover:bg-slate-900/80 px-3.5 py-3 rounded-xl transition-colors">Services</a>
-        {!hideLocationsNav && <a href={`${navPrefix}#locations`} class="text-slate-200 hover:text-brand-300 hover:bg-slate-900/80 px-3.5 py-3 rounded-xl transition-colors">Regional Hubs</a>}
-        <a href={`${navPrefix}#why-us`} class="text-slate-200 hover:text-brand-300 hover:bg-slate-900/80 px-3.5 py-3 rounded-xl transition-colors">Why NK Digital Tech</a>
-        <a href={`${navPrefix}#clients`} class="text-slate-200 hover:text-brand-300 hover:bg-slate-900/80 px-3.5 py-3 rounded-xl transition-colors">Our Clients</a>
-        <a href={`${navPrefix}#industries`} class="text-slate-200 hover:text-brand-300 hover:bg-slate-900/80 px-3.5 py-3 rounded-xl transition-colors">Industries</a>
-        <a href={`${navPrefix}#testimonials`} class="text-slate-200 hover:text-brand-300 hover:bg-slate-900/80 px-3.5 py-3 rounded-xl transition-colors">Client Testimonials</a>
-        <a href={faqHref} class="text-slate-200 hover:text-brand-300 hover:bg-slate-900/80 px-3.5 py-3 rounded-xl transition-colors">FAQ</a>
-        <a href="/contact-us/" class="text-slate-200 hover:text-brand-300 hover:bg-slate-900/80 px-3.5 py-3 rounded-xl transition-colors">Contact us</a>
+    <div id="mobile-menu" class="hidden lg:hidden border-t border-slate-800 bg-[#050a14]/98 backdrop-blur-2xl px-4 sm:px-5 py-4 sm:py-5 max-h-[84vh] overflow-y-auto shadow-2xl">
+      <div class="flex flex-col gap-1 pb-4 border-b border-slate-800/80 text-sm font-medium">
+        <a href={`${navPrefix}#services`} class="text-slate-200 hover:text-brand-300 active:bg-slate-900/90 hover:bg-slate-900/80 px-3.5 py-3 min-h-[44px] flex items-center rounded-xl transition-colors">Services</a>
+        {!hideLocationsNav && <a href={`${navPrefix}#locations`} class="text-slate-200 hover:text-brand-300 active:bg-slate-900/90 hover:bg-slate-900/80 px-3.5 py-3 min-h-[44px] flex items-center rounded-xl transition-colors">Regional Hubs</a>}
+        <a href={`${navPrefix}#why-us`} class="text-slate-200 hover:text-brand-300 active:bg-slate-900/90 hover:bg-slate-900/80 px-3.5 py-3 min-h-[44px] flex items-center rounded-xl transition-colors">Why NK Digital Tech</a>
+        <a href={`${navPrefix}#clients`} class="text-slate-200 hover:text-brand-300 active:bg-slate-900/90 hover:bg-slate-900/80 px-3.5 py-3 min-h-[44px] flex items-center rounded-xl transition-colors">Our Clients</a>
+        <a href={`${navPrefix}#industries`} class="text-slate-200 hover:text-brand-300 active:bg-slate-900/90 hover:bg-slate-900/80 px-3.5 py-3 min-h-[44px] flex items-center rounded-xl transition-colors">Industries</a>
+        <a href={`${navPrefix}#testimonials`} class="text-slate-200 hover:text-brand-300 active:bg-slate-900/90 hover:bg-slate-900/80 px-3.5 py-3 min-h-[44px] flex items-center rounded-xl transition-colors">Client Testimonials</a>
+        <a href={faqHref} class="text-slate-200 hover:text-brand-300 active:bg-slate-900/90 hover:bg-slate-900/80 px-3.5 py-3 min-h-[44px] flex items-center rounded-xl transition-colors">FAQ</a>
+        <a href="/contact-us/" class="text-slate-200 hover:text-brand-300 active:bg-slate-900/90 hover:bg-slate-900/80 px-3.5 py-3 min-h-[44px] flex items-center rounded-xl transition-colors">Contact us</a>
       </div>
-      <div class="pt-5 flex flex-col gap-3">
-        <a href={contactCtaHref} class="btn-primary w-full text-center py-3.5">
+      <div class="pt-4 flex flex-col gap-3">
+        <a href={contactCtaHref} class="btn-primary w-full min-h-[48px] text-center py-3.5">
           <span>Book a Strategic Consultation</span>
-          <svg class="w-4 h-4 ml-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg class="w-4 h-4 ml-1.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
           </svg>
         </a>
-        <a href="mailto:connect@nkdigitaltech.com" class="text-xs text-center text-slate-400 hover:text-brand-300 py-1 flex items-center justify-center gap-1.5">
-          <svg class="w-3.5 h-3.5 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <a href="mailto:connect@nkdigitaltech.com" class="text-xs text-center text-slate-400 hover:text-brand-300 py-2 min-h-[40px] flex items-center justify-center gap-1.5">
+          <svg class="w-3.5 h-3.5 text-brand-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
           </svg>
           connect@nkdigitaltech.com

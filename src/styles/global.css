@@ -30,6 +30,9 @@
     .text-justify {
       word-spacing: -0.02em;
     }
+    section {
+      overflow-x: clip;
+    }
   }
 }
 

@@ -302,10 +302,10 @@ const regionalDirectories = [
                 </div>
                 <div>
                   <h3 id="form-success-title" class="font-display font-bold text-lg text-emerald-950 mb-1">
-                    Thank You! Your Enquiry Has Been Sent.
+                    Thank You! We will contact you soon.
                   </h3>
                   <p id="form-success-desc" class="text-emerald-800 text-xs sm:text-sm leading-relaxed mb-4">
-                    We have forwarded your details to <strong>nkdigitaltech1@gmail.com</strong>. One of our senior strategists will review your requirements and reach out within 4 business hours.
+                    We have received your enquiry for <strong>nkdigitaltech1@gmail.com</strong>. One of our senior strategists will review your requirements and reach out soon.
                   </p>
                   <div class="flex flex-wrap gap-3">
                     <a
@@ -711,6 +711,60 @@ const regionalDirectories = [
     </div>
   </section>
 
+  <!-- =====================================================================
+       THANK YOU POPUP MODAL (TRIGGERED ON FORM SUBMISSION)
+  ===================================================================== -->
+  <div
+    id="thank-you-popup"
+    class="hidden fixed inset-0 z-[100] flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="popup-title"
+  >
+    <div
+      class="relative w-full max-w-md rounded-2xl sm:rounded-3xl bg-white p-6 sm:p-8 text-center shadow-2xl border border-slate-100"
+    >
+      <!-- Close 'X' Button -->
+      <button
+        type="button"
+        id="popup-close-x"
+        aria-label="Close thank you popup"
+        class="absolute top-4 right-4 text-slate-400 hover:text-slate-700 p-2 rounded-xl hover:bg-slate-100 active:bg-slate-200 transition-colors focus:outline-none"
+      >
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+
+      <!-- Animated Green Check Icon -->
+      <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-emerald-50 border border-emerald-200/80 text-emerald-600 mx-auto flex items-center justify-center mb-4 sm:mb-5 shadow-sm">
+        <svg class="w-9 h-9 sm:w-11 sm:h-11" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+        </svg>
+      </div>
+
+      <!-- Pop-up Title & Message -->
+      <h3 id="popup-title" class="font-display font-black text-2xl sm:text-3xl text-slate-900 tracking-tight mb-2">
+        Thank You!
+      </h3>
+      <p class="text-base sm:text-lg font-bold text-emerald-600 mb-2">
+        We will contact you soon
+      </p>
+      <p class="text-xs sm:text-sm text-slate-500 leading-relaxed mb-6">
+        Your enquiry has been received at <strong class="text-slate-700 font-semibold">nkdigitaltech1@gmail.com</strong>. Our senior strategists will review your project details and reach out shortly.
+      </p>
+
+      <!-- Dismiss Button -->
+      <button
+        type="button"
+        id="popup-close-btn"
+        class="btn-primary w-full py-3.5 text-sm sm:text-base font-bold shadow-lg shadow-brand-500/25"
+      >
+        <span>OK</span>
+      </button>
+    </div>
+  </div>
+
   <!-- Inline Form Handler -->
   <script is:inline>
     (function () {
@@ -727,6 +781,40 @@ const regionalDirectories = [
       const resetBtn = document.getElementById('form-reset-btn');
       const fallbackMailto = document.getElementById('fallback-mailto');
       const fallbackWhatsapp = document.getElementById('fallback-whatsapp');
+
+      // Popup Elements
+      const popup = document.getElementById('thank-you-popup');
+      const popupCloseX = document.getElementById('popup-close-x');
+      const popupCloseBtn = document.getElementById('popup-close-btn');
+
+      function openPopup() {
+        if (!popup) return;
+        popup.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closePopup() {
+        if (!popup) return;
+        popup.classList.add('hidden');
+        document.body.style.overflow = '';
+      }
+
+      if (popupCloseX) popupCloseX.addEventListener('click', closePopup);
+      if (popupCloseBtn) popupCloseBtn.addEventListener('click', closePopup);
+
+      if (popup) {
+        popup.addEventListener('click', function (e) {
+          if (e.target === popup) {
+            closePopup();
+          }
+        });
+      }
+
+      window.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && popup && !popup.classList.contains('hidden')) {
+          closePopup();
+        }
+      });
 
       if (!form) return;
 
@@ -757,6 +845,7 @@ const regionalDirectories = [
 
       if (resetBtn) {
         resetBtn.addEventListener('click', function () {
+          closePopup();
           successBox.classList.add('hidden');
           errorBox.classList.add('hidden');
           form.classList.remove('hidden');
@@ -845,6 +934,7 @@ const regionalDirectories = [
           if (isSuccess) {
             form.classList.add('hidden');
             successBox.classList.remove('hidden');
+            openPopup();
             successBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
 
             if (needsActivation && successDesc) {

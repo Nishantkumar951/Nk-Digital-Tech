@@ -301,18 +301,28 @@ const regionalDirectories = [
                   </svg>
                 </div>
                 <div>
-                  <h3 class="font-display font-bold text-lg text-emerald-950 mb-1">
+                  <h3 id="form-success-title" class="font-display font-bold text-lg text-emerald-950 mb-1">
                     Thank You! Your Enquiry Has Been Sent.
                   </h3>
-                  <p class="text-emerald-800 text-xs sm:text-sm leading-relaxed mb-4">
+                  <p id="form-success-desc" class="text-emerald-800 text-xs sm:text-sm leading-relaxed mb-4">
                     We have forwarded your details to <strong>nkdigitaltech1@gmail.com</strong>. One of our senior strategists will review your requirements and reach out within 4 business hours.
                   </p>
                   <div class="flex flex-wrap gap-3">
                     <a
-                      href="tel:+918052189051"
+                      id="success-mailto-btn"
+                      href="mailto:nkdigitaltech1@gmail.com"
+                      class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-slate-900 hover:bg-slate-800 text-white text-xs font-semibold transition-colors"
+                    >
+                      <span>Send Direct Email Copy (nkdigitaltech1@gmail.com)</span>
+                    </a>
+                    <a
+                      id="success-whatsapp-btn"
+                      href="https://wa.me/918052189051"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-emerald-700 hover:bg-emerald-800 text-white text-xs font-semibold transition-colors"
                     >
-                      <span>Urgent? Call +91 80521 89051</span>
+                      <span>Send via WhatsApp (8052189051)</span>
                     </a>
                     <button
                       type="button"
@@ -382,19 +392,26 @@ const regionalDirectories = [
                   />
                 </div>
 
-                <!-- Mobile Number -->
+                <!-- Mobile Number (10 digits only, without +91) -->
                 <div>
                   <label for="mobile-number" class="block text-xs sm:text-sm font-semibold text-slate-800 mb-1.5">
-                    Mobile / WhatsApp Number <span class="text-rose-600">*</span>
+                    Mobile / WhatsApp Number (10 Digits Only) <span class="text-rose-600">*</span>
                   </label>
                   <input
                     type="tel"
                     id="mobile-number"
                     name="Mobile_Number"
                     required
-                    placeholder="e.g. +91 98765 43210"
+                    inputmode="numeric"
+                    maxlength="10"
+                    pattern="[0-9]{10}"
+                    title="Please enter a 10-digit mobile number without +91 or spaces (e.g. 9876543210)"
+                    placeholder="e.g. 9876543210"
                     class="w-full rounded-xl border border-slate-300 bg-slate-50/60 px-4 py-3 text-sm text-slate-900 placeholder:text-slate-400 focus:border-brand-600 focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-500/20 transition-all"
                   />
+                  <p id="mobile-helper" class="text-[11px] text-slate-500 mt-1">
+                    Enter 10-digit mobile number without +91.
+                  </p>
                 </div>
               </div>
 
@@ -698,9 +715,14 @@ const regionalDirectories = [
   <script is:inline>
     (function () {
       const form = document.getElementById('contact-form');
+      const mobileInput = document.getElementById('mobile-number');
+      const mobileHelper = document.getElementById('mobile-helper');
       const submitBtn = document.getElementById('submit-btn');
       const submitBtnText = document.getElementById('submit-btn-text');
       const successBox = document.getElementById('form-success');
+      const successDesc = document.getElementById('form-success-desc');
+      const successMailtoBtn = document.getElementById('success-mailto-btn');
+      const successWhatsappBtn = document.getElementById('success-whatsapp-btn');
       const errorBox = document.getElementById('form-error');
       const resetBtn = document.getElementById('form-reset-btn');
       const fallbackMailto = document.getElementById('fallback-mailto');
@@ -708,9 +730,35 @@ const regionalDirectories = [
 
       if (!form) return;
 
+      // Sanitize mobile input to digits only (automatically strip +91 or 0 prefix if pasted)
+      function sanitizeMobile(raw) {
+        let digits = String(raw || '').replace(/\D/g, '');
+        if (digits.length === 12 && digits.indexOf('91') === 0) {
+          digits = digits.slice(2);
+        } else if (digits.length === 11 && digits.indexOf('0') === 0) {
+          digits = digits.slice(1);
+        }
+        return digits.slice(0, 10);
+      }
+
+      if (mobileInput) {
+        mobileInput.addEventListener('input', function () {
+          const cleaned = sanitizeMobile(mobileInput.value);
+          if (mobileInput.value !== cleaned) {
+            mobileInput.value = cleaned;
+          }
+          mobileInput.setCustomValidity('');
+          if (mobileHelper) {
+            mobileHelper.textContent = 'Enter 10-digit mobile number without +91.';
+            mobileHelper.className = 'text-[11px] text-slate-500 mt-1';
+          }
+        });
+      }
+
       if (resetBtn) {
         resetBtn.addEventListener('click', function () {
           successBox.classList.add('hidden');
+          errorBox.classList.add('hidden');
           form.classList.remove('hidden');
           form.reset();
         });
@@ -720,8 +768,27 @@ const regionalDirectories = [
         e.preventDefault();
         errorBox.classList.add('hidden');
 
+        if (mobileInput) {
+          const cleanedMobile = sanitizeMobile(mobileInput.value);
+          mobileInput.value = cleanedMobile;
+          if (!/^[0-9]{10}$/.test(cleanedMobile)) {
+            mobileInput.setCustomValidity('Please enter a valid 10-digit mobile number without +91.');
+            if (mobileHelper) {
+              mobileHelper.textContent = 'Please enter a valid 10-digit mobile number without +91.';
+              mobileHelper.className = 'text-[11px] text-rose-600 font-semibold mt-1';
+            }
+            mobileInput.reportValidity();
+            return;
+          }
+        }
+
         const formData = new FormData(form);
         if (formData.get('_honey')) return;
+
+        // Ensure FormData has the clean 10-digit mobile number
+        if (mobileInput) {
+          formData.set('Mobile_Number', mobileInput.value);
+        }
 
         const payload = {};
         formData.forEach(function (value, key) {
@@ -731,25 +798,27 @@ const regionalDirectories = [
         const summaryLines = [
           'Name: ' + (payload.Full_Name || ''),
           'Mobile: ' + (payload.Mobile_Number || ''),
-          'Email: ' + (payload.email || ''),
+          'Email: ' + (payload.email || 'Not Provided'),
           'Company/Website: ' + (payload.Company_or_Website || 'N/A'),
           'Service: ' + (payload.Service_Required || ''),
           'City: ' + (payload.City_Location || 'N/A'),
           'Details: ' + (payload.Project_Details || '')
         ].join('\n');
 
-        if (fallbackMailto) {
-          fallbackMailto.href =
-            'mailto:nkdigitaltech1@gmail.com?subject=' +
-            encodeURIComponent('New Website Enquiry: ' + (payload.Full_Name || 'NK Digital Tech')) +
-            '&body=' +
-            encodeURIComponent(summaryLines);
-        }
-        if (fallbackWhatsapp) {
-          fallbackWhatsapp.href =
-            'https://wa.me/918052189051?text=' +
-            encodeURIComponent('New Website Enquiry:\n' + summaryLines);
-        }
+        const mailtoUrl =
+          'mailto:nkdigitaltech1@gmail.com?subject=' +
+          encodeURIComponent('New Website Enquiry: ' + (payload.Full_Name || 'NK Digital Tech') + ' (' + (payload.Mobile_Number || '') + ')') +
+          '&body=' +
+          encodeURIComponent(summaryLines);
+
+        const whatsappUrl =
+          'https://wa.me/918052189051?text=' +
+          encodeURIComponent('New Website Enquiry:\n' + summaryLines);
+
+        if (fallbackMailto) fallbackMailto.href = mailtoUrl;
+        if (fallbackWhatsapp) fallbackWhatsapp.href = whatsappUrl;
+        if (successMailtoBtn) successMailtoBtn.href = mailtoUrl;
+        if (successWhatsappBtn) successWhatsappBtn.href = whatsappUrl;
 
         const originalText = submitBtnText ? submitBtnText.textContent : 'Send Enquiry to NK Digital Tech';
         if (submitBtn) submitBtn.disabled = true;
@@ -759,25 +828,30 @@ const regionalDirectories = [
           const res = await fetch('https://formsubmit.co/ajax/nkdigitaltech1@gmail.com', {
             method: 'POST',
             headers: {
-              'Content-Type': 'application/json',
               'Accept': 'application/json'
             },
-            body: JSON.stringify(payload)
+            body: formData
           });
 
           const data = await res.json().catch(function () { return {}; });
           const msg = String(data.message || '').toLowerCase();
+          const needsActivation = msg.indexOf('activate') !== -1 || msg.indexOf('activation') !== -1;
           const isSuccess =
             res.ok &&
             (data.success === true ||
               data.success === 'true' ||
-              msg.indexOf('activate') !== -1 ||
-              msg.indexOf('activation') !== -1);
+              needsActivation);
 
           if (isSuccess) {
             form.classList.add('hidden');
             successBox.classList.remove('hidden');
             successBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+            if (needsActivation && successDesc) {
+              successDesc.innerHTML =
+                'Your enquiry has been recorded for <strong>nkdigitaltech1@gmail.com</strong>. Click the button below to also open your email client or WhatsApp with your pre-filled details for instant delivery.';
+            }
+
             if (typeof window.gtag === 'function') {
               window.gtag('event', 'generate_lead', {
                 event_category: 'Contact Form',

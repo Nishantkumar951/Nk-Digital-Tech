@@ -1,0 +1,1121 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '../styles/global.css';
+
+const pageTitle = 'Best ChatGPT SEO Services in Delhi NCR | NK Digital Tech';
+const pageDescription = 'Get recommended on ChatGPT, Google AI Overviews and Gemini with our ChatGPT SEO Services in Delhi NCR. Book a free prompt citation audit with NK Digital Tech.';
+const pageCanonical = 'https://www.nkdigitaltech.net/chatgpt-seo-services-in-delhi-ncr/';
+
+const services = [
+  {
+    num: '01',
+    category: 'Live Web Retrieval',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>`,
+    iconStyle: 'bg-sky-50 border-sky-200 text-brand-600',
+    impactStyle: 'bg-sky-50/80 border-sky-200/80 text-slate-800',
+    badgeColor: 'text-brand-600 bg-sky-100/80',
+    title: 'Bing Index & OAI SearchBot Alignment',
+    body: 'ChatGPT Search pulls live web answers through OpenAI search crawlers and the Bing search index. Through our ChatGPT search optimisation workflow, we submit your XML sitemaps through Bing Webmaster Tools, configure IndexNow and open access for OAI SearchBot and GPTBot.',
+    impact: 'Fast indexing so ChatGPT Search finds and links to your service pages in real time.',
+    cta: 'Audit Your Crawler Access',
+    href: '/contact-us/',
+  },
+  {
+    num: '02',
+    category: 'Prompt Shortlists',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg>`,
+    iconStyle: 'bg-violet-50 border-violet-200 text-accent-600',
+    impactStyle: 'bg-violet-50/80 border-violet-200/80 text-slate-800',
+    badgeColor: 'text-accent-600 bg-violet-100/80',
+    title: 'Conversational Prompt & Answer Mapping',
+    body: 'Buyers rarely type two word keywords into ChatGPT. They ask full questions about costs, timelines, safety standards and vendor comparisons. Our LLM SEO services map these exact prompts and place clear 40 to 60 word direct answers right below matching headings.',
+    impact: 'Higher inclusion when buyers ask ChatGPT to recommend top companies in Delhi NCR.',
+    cta: 'Map Your Buyer Prompts',
+    href: '/contact-us/',
+  },
+  {
+    num: '03',
+    category: 'Off Page Consensus',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>`,
+    iconStyle: 'bg-emerald-50 border-emerald-200 text-emerald-600',
+    impactStyle: 'bg-emerald-50/80 border-emerald-200/80 text-slate-800',
+    badgeColor: 'text-emerald-700 bg-emerald-100/80',
+    title: 'ChatGPT Brand Mentions & Web Proof',
+    body: 'ChatGPT does not trust a website that only praises itself. It cross checks third party reviews, industry listicles and directory profiles before naming a business. We build verified ChatGPT brand mentions across trusted Indian trade portals, Clutch, GoodFirms and news sites.',
+    impact: 'Consistent third party proof that convinces ChatGPT and Gemini to shortlist your brand.',
+    cta: 'Build Your Brand Mentions',
+    href: '/contact-us/',
+  },
+  {
+    num: '04',
+    category: 'Machine Readable Files',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>`,
+    iconStyle: 'bg-amber-50 border-amber-200 text-amber-600',
+    impactStyle: 'bg-amber-50/80 border-amber-200/80 text-slate-800',
+    badgeColor: 'text-amber-700 bg-amber-100/80',
+    title: 'llms.txt Setup & Nested JSON LD Schema',
+    body: 'Large language models skip pages when service facts sit inside heavy scripts or locked PDFs. We publish a clean llms.txt file at the root of your domain alongside nested Organization, Service and FAQPage JSON LD schema so AI crawlers read your data without guesswork.',
+    impact: 'Zero ambiguity around your services, pricing ranges, office locations and credentials.',
+    cta: 'Set Up Your llms.txt File',
+    href: '/contact-us/',
+  },
+  {
+    num: '05',
+    category: 'Comparison Tables',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>`,
+    iconStyle: 'bg-indigo-50 border-indigo-200 text-indigo-600',
+    impactStyle: 'bg-indigo-50/80 border-indigo-200/80 text-slate-800',
+    badgeColor: 'text-indigo-700 bg-indigo-100/80',
+    title: 'Structured Pricing & Spec Matrices',
+    body: 'When buyers ask ChatGPT to compare providers or estimate project budgets in Delhi NCR, the model looks for clean HTML tables and numbered lists. We convert vague brochure text into factual comparison matrices with real Indian Rupee ranges and clear deliverables.',
+    impact: 'Direct citations inside ChatGPT comparison tables and Google AI Overviews.',
+    cta: 'Upgrade Your Service Pages',
+    href: '/contact-us/',
+  },
+  {
+    num: '06',
+    category: 'Multi Model Tracking',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>`,
+    iconStyle: 'bg-cyan-50 border-cyan-200 text-cyan-700',
+    impactStyle: 'bg-cyan-50/80 border-cyan-200/80 text-slate-800',
+    badgeColor: 'text-cyan-700 bg-cyan-100/80',
+    title: 'ChatGPT, Gemini & Perplexity Lead Tracking',
+    body: 'Ranking reports mean little if they do not show real business enquiries. Our ChatGPT and Gemini SEO reporting tracks live prompt responses across ChatGPT, Google AI Overviews, Gemini and Perplexity while measuring referral clicks from chatgpt.com in Google Analytics.',
+    impact: 'Clear fortnightly proof of citation share, referral visits and direct phone leads.',
+    cta: 'Track Your Prompt Citations',
+    href: '/contact-us/',
+  },
+];
+
+const cities = [
+  {
+    hub: 'Hub 01',
+    city: 'Delhi',
+    keyword: 'AI SEO Company in Delhi',
+    desc: 'We help corporate law chambers in Connaught Place, B2B suppliers in Nehru Place, industrial units in Okhla and super speciality hospitals in South Delhi get named and linked when buyers ask ChatGPT for trusted Delhi providers.',
+    cta: 'Explore Delhi AI SEO Page',
+    href: '/ai-seo-company-in-delhi/',
+    accent: 'from-brand-500 to-sky-400',
+  },
+  {
+    hub: 'Hub 02',
+    city: 'Noida',
+    keyword: 'AI SEO Company in Noida',
+    desc: 'We structure product comparison tables, llms.txt documentation and directory proof for SaaS teams in Sector 62, commercial developers on Noida Expressway and manufacturing plants across Greater Noida.',
+    cta: 'Explore Noida AI SEO Page',
+    href: '/ai-seo-company-in-noida/',
+    accent: 'from-accent-500 to-violet-400',
+  },
+  {
+    hub: 'Hub 03',
+    city: 'Gurgaon',
+    keyword: 'AI SEO Company in Gurgaon',
+    desc: 'We help luxury real estate advisors on Golf Course Road, consulting firms in DLF Cyber City and automotive plants in Manesar earn top recommendations inside ChatGPT Search, Gemini and Perplexity.',
+    cta: 'Explore Gurgaon AI SEO Page',
+    href: '/ai-seo-company-in-gurgaon/',
+    accent: 'from-cyan-500 to-teal-400',
+  },
+  {
+    hub: 'Hub 04',
+    city: 'Lucknow',
+    keyword: 'AI SEO Company in Lucknow',
+    desc: 'From our registered Lucknow office in Aashiana Colony, we help real estate builders, coaching academies, hospitals and retail showrooms across Gomti Nagar and Hazratganj capture conversational AI leads.',
+    cta: 'Explore Lucknow AI SEO Page',
+    href: '/ai-seo-company-in-lucknow/',
+    accent: 'from-emerald-500 to-green-400',
+  },
+];
+
+const comparison = [
+  {
+    metric: 'How Search Engines Are Targeted',
+    typical: 'Focuses only on classic Google blue links and ignores Bing Webmaster Tools or OpenAI crawlers',
+    nk: 'Aligns Google, Bing Webmaster Index, OAI SearchBot and GPTBot so ChatGPT and Google cite you together',
+  },
+  {
+    metric: 'How Buyer Questions Are Answered',
+    typical: 'Stuffs short two word keywords into long, repetitive blog posts with no clear facts',
+    nk: 'Answers real conversational prompts in 40 to 60 word factual blocks and HTML comparison tables',
+  },
+  {
+    metric: 'Third Party Brand Proof',
+    typical: 'Builds low quality backlinks on random blogs that AI models ignore completely',
+    nk: 'Earns verified brand mentions across trusted Indian business directories, review portals and trade media',
+  },
+  {
+    metric: 'Technical Machine Readability',
+    typical: 'Leaves service specs and pricing locked inside heavy scripts or downloadable PDFs',
+    nk: 'Deploys clean static HTML tables, nested JSON LD schema markup and a root llms.txt guide',
+  },
+  {
+    metric: 'Cross Platform AI Visibility',
+    typical: 'No testing across ChatGPT, Gemini, Perplexity or Google AI Overviews',
+    nk: 'Runs fortnightly prompt audits across ChatGPT, Google AI Overviews, Gemini and Perplexity',
+  },
+  {
+    metric: 'Lead & Attribution Reporting',
+    typical: 'Sends generic traffic sheets without tracking AI referrals or phone enquiries',
+    nk: 'Tracks chatgpt.com referral sessions, cited source links, WhatsApp clicks and direct buyer calls',
+  },
+];
+
+const industries = [
+  {
+    sector: 'Property Shortlist Prompts',
+    title: 'Real Estate & Commercial Property',
+    focus: 'Investors and corporate tenants ask ChatGPT to compare circle rates, RERA numbers and office lease rents across Golf Course Road, Noida Expressway and South Delhi. We publish clear project comparison tables and verified broker profiles that ChatGPT cites.',
+    outcome: 'Direct site visit bookings and corporate leasing calls from high intent buyers.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>`,
+    accentBorder: 'border-t-brand-500',
+    iconBg: 'bg-sky-50 text-brand-600 border-sky-200',
+  },
+  {
+    sector: 'Turnkey Cost Comparisons',
+    title: 'Interior Design & Architecture',
+    focus: 'Homeowners and office founders ask ChatGPT for turnkey interior costs per square foot, material grades and studio recommendations in Delhi NCR. We structure transparent budget tables and portfolio facts that earn top prompt mentions.',
+    outcome: 'Qualified residential villa and corporate office design enquiries without ad spend.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"/></svg>`,
+    accentBorder: 'border-t-amber-500',
+    iconBg: 'bg-amber-50 text-amber-600 border-amber-200',
+  },
+  {
+    sector: 'Course & Fee Comparisons',
+    title: 'Education & Coaching Institutes',
+    focus: 'Students and parents ask ChatGPT and Gemini to compare coaching batch sizes, fee structures and past results across Delhi, Noida and Gurgaon. We format clear course tables, faculty credentials and FAQ schema for instant extraction.',
+    outcome: 'Steady admission counselling calls and walk ins from serious students and parents.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"/></svg>`,
+    accentBorder: 'border-t-cyan-500',
+    iconBg: 'bg-cyan-50 text-cyan-700 border-cyan-200',
+  },
+  {
+    sector: 'Industrial Supplier Prompts',
+    title: 'Manufacturing & Industrial Units',
+    focus: 'Procurement heads use ChatGPT to shortlist ISO certified manufacturers, check minimum order quantities and compare material specs across Okhla, Bawana, Manesar and Greater Noida. We convert PDF catalogues into indexable HTML spec sheets.',
+    outcome: 'Direct B2B RFQ enquiries and vendor registrations from corporate buyers.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>`,
+    accentBorder: 'border-t-emerald-500',
+    iconBg: 'bg-emerald-50 text-emerald-600 border-emerald-200',
+  },
+  {
+    sector: 'Software & IT Shortlists',
+    title: 'SaaS & IT Service Companies',
+    focus: 'CTOs and founders ask ChatGPT to recommend software development agencies, cloud partners and ERP vendors in Noida and Gurgaon. We align your Clutch profile, technical documentation, case metrics and llms.txt file.',
+    outcome: 'Consistent product demo bookings and enterprise IT consulting leads.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>`,
+    accentBorder: 'border-t-indigo-500',
+    iconBg: 'bg-indigo-50 text-indigo-600 border-indigo-200',
+  },
+  {
+    sector: 'Tax & Regulatory Queries',
+    title: 'CA Firms & Financial Advisors',
+    focus: 'Business owners ask ChatGPT about GST audit rules, FEMA compliance, transfer pricing and virtual CFO fees in Delhi NCR. We publish partner reviewed answer blocks and AccountingService schema for practices in Connaught Place and Gurgaon.',
+    outcome: 'High trust corporate retainers for tax advisory, audit and compliance work.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>`,
+    accentBorder: 'border-t-rose-500',
+    iconBg: 'bg-rose-50 text-rose-600 border-rose-200',
+  },
+  {
+    sector: 'Legal & Procedural Prompts',
+    title: 'Law Firms & Legal Chambers',
+    focus: 'General counsel and company directors look up arbitration steps, NCLT procedures and trademark filing rules on ChatGPT. We structure Bar Council compliant informational guides and LegalService schema across Delhi NCR.',
+    outcome: 'Verified corporate legal consultations and advisory enquiries.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"/></svg>`,
+    accentBorder: 'border-t-accent-500',
+    iconBg: 'bg-violet-50 text-accent-600 border-violet-200',
+  },
+  {
+    sector: 'Shopping & Showroom Picks',
+    title: 'Retail Showrooms & D2C Brands',
+    focus: 'Shoppers ask ChatGPT where to buy bridal lehengas, modular furniture, jewellery or electronics across South Ex, Kirti Nagar and Gurgaon. We structure Product schema, price brackets and verified showroom reviews.',
+    outcome: 'Higher store walk ins and direct online orders from high intent shoppers.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>`,
+    accentBorder: 'border-t-pink-500',
+    iconBg: 'bg-pink-50 text-pink-600 border-pink-200',
+  },
+  {
+    sector: 'Turnkey EPC & Tender Prompts',
+    title: 'Construction & EPC Contractors',
+    focus: 'Developers ask ChatGPT for PEB warehouse construction rates per square foot, civil contractor credentials and project timelines across Noida and Gurgaon. We publish structured engineering tables that AI assistants quote.',
+    outcome: 'Qualified commercial construction tenders and industrial contracting calls.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 21h18M5 21V7l8-4v18M19 21V11l-6-4M9 9v.01M9 12v.01M9 15v.01M9 18v.01"/></svg>`,
+    accentBorder: 'border-t-orange-500',
+    iconBg: 'bg-orange-50 text-orange-600 border-orange-200',
+  },
+  {
+    sector: 'Venue & Banquet Shortlists',
+    title: 'Hotels, Banquets & Hospitality',
+    focus: 'Families and event planners ask ChatGPT to shortlist wedding resorts, conference halls and per plate catering rates across Aerocity, Chhatarpur and Cyber Hub. We structure clear capacity tables and amenity schemas.',
+    outcome: 'Direct venue bookings, wedding enquiries and corporate event reservations.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>`,
+    accentBorder: 'border-t-purple-500',
+    iconBg: 'bg-purple-50 text-purple-600 border-purple-200',
+  },
+  {
+    sector: 'Patient & Clinical Queries',
+    title: 'Hospitals & Speciality Centres',
+    focus: 'Patients ask ChatGPT and Google AI Overviews about laser eye surgery, orthopaedic recovery times, IVF success rates and cashless insurance panels in Delhi NCR. We build doctor reviewed 50 word clinical answers and MedicalOrganization schema.',
+    outcome: 'Steady patient appointment calls across Delhi, Noida, Gurgaon and Lucknow.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>`,
+    accentBorder: 'border-t-red-500',
+    iconBg: 'bg-red-50 text-red-600 border-red-200',
+  },
+  {
+    sector: 'B2B Partner Recommendations',
+    title: 'B2B & Corporate Consultancies',
+    focus: 'Directors ask ChatGPT to recommend recruitment agencies, logistics partners and management consultancies in Delhi NCR. We align case results, service deliverables and verified directory citations so AI models name your firm.',
+    outcome: 'Predictable executive discovery calls and long term B2B consulting retainers.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>`,
+    accentBorder: 'border-t-teal-500',
+    iconBg: 'bg-teal-50 text-teal-700 border-teal-200',
+  },
+];
+
+const stages = [
+  {
+    num: 'Stage 01',
+    step: '01',
+    title: 'Live ChatGPT, Gemini & AI Overview Prompt Audit',
+    body: 'We run 50 real buyer prompts in your category across ChatGPT Search, Google AI Overviews, Gemini and Perplexity. You see which competitors get recommended today, which third party sites ChatGPT cites and whether Bing indexing or robots.txt rules block your pages.',
+    accent: 'from-brand-600 to-sky-500',
+  },
+  {
+    num: 'Stage 02',
+    step: '02',
+    title: 'Bing Webmaster Sync, Crawler Access & llms.txt Setup',
+    body: 'Because ChatGPT Search relies heavily on the Bing index and OpenAI crawlers, we verify your site in Bing Webmaster Tools, enable IndexNow, open robots.txt permissions for OAI SearchBot and GPTBot and publish a clean llms.txt guide at your domain root.',
+    accent: 'from-accent-600 to-violet-500',
+  },
+  {
+    num: 'Stage 03',
+    step: '03',
+    title: 'Answer Snapshot Writing, Tables & Schema Deployment',
+    body: 'Our writers and developers restructure your service pages with 40 to 60 word direct answers under conversational headings, build HTML pricing and comparison tables and deploy nested Organization, Service and FAQPage JSON LD schema.',
+    accent: 'from-cyan-600 to-teal-500',
+  },
+  {
+    num: 'Stage 04',
+    step: '04',
+    title: 'Third Party Brand Mentions & Referral Lead Tracking',
+    body: 'We build consistent brand mentions across trusted Indian directories, review platforms and trade publications so ChatGPT verifies your authority. Every fortnight, we track your live prompt citations alongside chatgpt.com referral clicks, calls and form leads.',
+    accent: 'from-emerald-600 to-green-500',
+  },
+];
+
+const faqs = [
+  {
+    q: 'How Do ChatGPT SEO Services in Delhi NCR Help My Business Get Recommended?',
+    a: 'ChatGPT SEO Services in Delhi NCR align your website with the exact sources ChatGPT Search uses to answer buyer prompts. We verify your pages in the Bing index, open access for OpenAI crawlers, structure 40 to 60 word factual answers, add HTML comparison tables and build third party brand mentions so ChatGPT names and links to your business.',
+  },
+  {
+    q: 'How Does ChatGPT Decide Which Companies to Recommend in Delhi, Noida and Gurgaon?',
+    a: 'When a buyer asks ChatGPT for the best service provider in Delhi NCR, the model combines its trained knowledge with live web retrieval through OAI SearchBot and the Bing search index. It selects businesses that have clear service facts on their own website, consistent NAP details, strong client reviews and repeated mentions across trusted third party directories and articles.',
+  },
+  {
+    q: 'Why Does My Company Rank on Google Page One Yet Never Appear on ChatGPT?',
+    a: 'Google rankings alone do not guarantee ChatGPT visibility. If your site blocks GPTBot or OAI SearchBot in robots.txt, lacks indexing in Bing Webmaster Tools, hides pricing inside PDFs or has zero mentions on independent review platforms, ChatGPT skips your domain and recommends competitors with clearer web proof.',
+  },
+  {
+    q: 'What Is the Role of Bing Webmaster Tools and llms.txt in ChatGPT Search Optimisation?',
+    a: 'ChatGPT Search pulls a large share of its live web results from the Bing search index alongside OpenAI crawlers. Submitting your sitemaps and IndexNow pings in Bing Webmaster Tools speeds up discovery, while a root llms.txt file gives language models a clean, plain text map of your core services, locations and pricing pages.',
+  },
+  {
+    q: 'Does Optimising for ChatGPT Also Improve Visibility on Google AI Overviews and Gemini?',
+    a: 'Yes. All major AI engines use Retrieval Augmented Generation to extract concise, factual passages and verify brand credibility across the web. Structuring 40 to 60 word answer blocks, HTML comparison tables and nested JSON LD schema helps your business earn citations across ChatGPT, Google AI Overviews, Gemini and Perplexity together.',
+  },
+  {
+    q: 'How Long Does It Take to Rank on ChatGPT and Earn Prompt Citations?',
+    a: 'Live web citations inside ChatGPT Search and Perplexity often begin appearing within four to eight weeks after we fix Bing indexing, open crawler permissions and restructure your service pages with direct answer snapshots. Broader brand recommendations across ungrounded prompts build steadily over three to six months as third party mentions grow.',
+  },
+  {
+    q: 'How Much Do ChatGPT SEO Services Cost in Delhi NCR?',
+    a: 'Focused ChatGPT search optimisation add on packages for existing websites in India usually start between ₹15,000 and ₹25,000 per month. Complete retainers covering technical SEO, answer snapshot writing, schema markup, third party brand mentions and multi model tracking across Delhi NCR typically range from ₹30,000 to ₹85,000 per month.',
+  },
+  {
+    q: 'How Do You Track Leads and Website Traffic Coming From ChatGPT?',
+    a: 'We track ChatGPT performance across three clear layers. First, we test 50 commercial buyer prompts every two weeks to log live brand mentions and source links. Second, we track visitors arriving from chatgpt.com and perplexity.ai inside Google Analytics 4. Third, we measure direct phone calls, WhatsApp messages and enquiry form submissions.',
+  },
+];
+
+const trustStrip = [
+  'ChatGPT Search Citations',
+  'OAI SearchBot & Bing Sync',
+  '40 to 60 Word Snapshots',
+  'llms.txt & JSON LD Schema',
+  'Third Party Brand Mentions',
+  'Google AI Overview & Gemini',
+  'Delhi, Noida, Gurgaon & Lucknow',
+  '100% Client Asset Ownership',
+];
+
+const aioSchemaLocalBusiness = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "NK Digital Tech",
+  "url": "https://www.nkdigitaltech.net/chatgpt-seo-services-in-delhi-ncr/",
+  "logo": "https://www.nkdigitaltech.net/images/chatgpt-seo-delhi-ncr/hero-chatgpt-seo-delhi-ncr.webp",
+  "image": "https://www.nkdigitaltech.net/images/chatgpt-seo-delhi-ncr/hero-chatgpt-seo-delhi-ncr.webp",
+  "description": pageDescription,
+  "telephone": "+91-8052189051",
+  "email": "nkdigitaltech1@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Khazana Complex, Aashiana Colony",
+    "addressLocality": "Lucknow",
+    "addressRegion": "Uttar Pradesh",
+    "addressCountry": "IN"
+  },
+  "areaServed": [
+    "Delhi NCR",
+    "New Delhi",
+    "Noida",
+    "Greater Noida",
+    "Gurgaon",
+    "Gurugram",
+    "Lucknow",
+    "Faridabad",
+    "Ghaziabad"
+  ],
+  "serviceType": [
+    "ChatGPT SEO Services in Delhi NCR",
+    "ChatGPT Search Optimisation",
+    "LLM SEO Services",
+    "ChatGPT and Gemini SEO",
+    "Answer Engine Optimisation",
+    "Generative Engine Optimisation"
+  ]
+});
+
+const aioSchemaFAQ = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map((item) => ({
+    "@type": "Question",
+    "name": item.q,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": item.a
+    }
+  }))
+});
+
+const aioSchemaBreadcrumb = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.nkdigitaltech.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "AI SEO Company in Delhi NCR",
+      "item": "https://www.nkdigitaltech.net/ai-seo-company-in-delhi-ncr/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "ChatGPT SEO Services in Delhi NCR",
+      "item": "https://www.nkdigitaltech.net/chatgpt-seo-services-in-delhi-ncr/"
+    }
+  ]
+});
+---
+
+<Layout
+  title={pageTitle}
+  description={pageDescription}
+  canonical={pageCanonical}
+  ogImage="https://www.nkdigitaltech.net/images/chatgpt-seo-delhi-ncr/hero-chatgpt-seo-delhi-ncr.webp"
+  preloadImage="/images/chatgpt-seo-delhi-ncr/hero-chatgpt-seo-delhi-ncr.webp"
+  customSchemaLocalBusiness={aioSchemaLocalBusiness}
+  customSchemaFAQ={aioSchemaFAQ}
+  customSchemaBreadcrumb={aioSchemaBreadcrumb}
+  utilityTagline="ChatGPT SEO Services in Delhi NCR • Prompt Citations & AI Search"
+  brandSubtitle="ChatGPT, AI Overview & Gemini SEO"
+  footerBio="NK Digital Tech delivers ChatGPT SEO Services in Delhi NCR, helping businesses get recommended and cited across ChatGPT Search, Google AI Overviews, Gemini and Perplexity across Delhi, Noida, Gurgaon and Lucknow."
+  footerTagline="ChatGPT SEO Services in Delhi NCR | NK Digital Tech"
+>
+
+  <!-- =====================================================================
+       SECTION 1: HERO (DARK SURFACE WITH UNIQUE HERO IMAGE & JUSTIFIED COPY)
+  ===================================================================== -->
+  <section class="relative surface-dark overflow-hidden pt-7 pb-10 sm:pt-14 sm:pb-16 lg:pt-16 lg:pb-20 border-b border-slate-800/80">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="absolute inset-0 mesh-glow pointer-events-none"></div>
+    <div class="absolute -top-36 -left-36 w-96 h-96 bg-brand-500/20 rounded-full blur-[130px] pointer-events-none"></div>
+    <div class="absolute top-1/4 -right-36 w-96 h-96 bg-accent-500/20 rounded-full blur-[130px] pointer-events-none"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-7 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns: Headline & CTA -->
+        <div class="lg:col-span-7 text-left min-w-0">
+          <div class="badge-dark mb-4 sm:mb-5">
+            <span class="w-2 h-2 rounded-full bg-brand-400 animate-ping flex-shrink-0"></span>
+            <span class="min-w-0">ChatGPT Search &bull; Google AI Overviews &bull; Gemini &bull; Perplexity</span>
+          </div>
+
+          <h1 class="font-display text-[1.95rem] sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-[1.15] sm:leading-[1.1] mb-4 sm:mb-5 text-glow">
+            ChatGPT SEO Services <br />
+            <span class="gradient-text-light">in Delhi NCR</span>
+          </h1>
+
+          <p class="text-[13.5px] sm:text-base md:text-lg text-slate-300 leading-relaxed mb-5 sm:mb-7 font-normal text-justify hyphens-auto [text-align-last:left]">
+            NK Digital Tech provides <strong class="text-white font-semibold">ChatGPT SEO Services in Delhi NCR</strong> built to get your company named, recommended and linked inside ChatGPT Search, Google AI Overviews, Gemini and Perplexity. We help your brand appear in top AI answers when customers ask for the best services in Delhi, Noida, Gurgaon and Lucknow, turning daily ChatGPT searches into direct phone calls and qualified enquiries.
+          </p>
+
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 mb-6 sm:mb-8">
+            <a href="/contact-us/" class="btn-primary w-full sm:w-auto min-h-[48px] text-sm sm:text-base px-5 sm:px-8 py-3.5 sm:py-4">
+              <span>Request a Free ChatGPT Audit</span>
+              <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+              </svg>
+            </a>
+            <a href="#services" class="btn-secondary-dark w-full sm:w-auto min-h-[48px] text-sm sm:text-base px-5 sm:px-7 py-3.5 sm:py-4">
+              <span>See Our Six Citation Pillars</span>
+            </a>
+          </div>
+
+          <!-- Trust Verification Strip -->
+          <div class="pt-4 sm:pt-5 border-t border-slate-800/80">
+            <div class="grid grid-cols-2 sm:flex sm:flex-wrap items-stretch sm:items-center gap-2">
+              {trustStrip.map((item) => (
+                <span class="px-2.5 sm:px-3 py-2 sm:py-1.5 rounded-lg bg-slate-900/90 border border-slate-800 text-[11px] sm:text-xs text-slate-300 font-medium flex items-center justify-center sm:justify-start text-center sm:text-left leading-tight">
+                  {item}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Unique ChatGPT SEO Hero Image -->
+        <div class="lg:col-span-5 min-w-0">
+          <div class="relative rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-700/80 shadow-2xl shadow-brand-500/15 bg-slate-900 group">
+            <div class="relative">
+              <img
+                src="/images/chatgpt-seo-delhi-ncr/hero-chatgpt-seo-delhi-ncr.webp"
+                alt="ChatGPT SEO Services in Delhi NCR Specialists Reviewing Live Prompt Citations and Source Links"
+                width="960"
+                height="540"
+                fetchpriority="high"
+                decoding="async"
+                class="w-full aspect-[16/10] sm:aspect-auto sm:h-64 md:h-[330px] lg:h-[350px] object-cover object-center group-hover:scale-105 transition-transform duration-500"
+              />
+              <div class="hidden sm:block absolute inset-0 bg-gradient-to-t from-[#050a14] via-transparent to-transparent opacity-80"></div>
+            </div>
+            <div class="relative sm:absolute sm:bottom-4 sm:left-4 sm:right-4 glass-card border-t sm:border border-slate-800 sm:rounded-2xl p-3.5 sm:p-4">
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-1">
+                <span class="text-xs font-bold text-white">Conversational Prompt Citations</span>
+                <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-400">
+                  <span class="w-2 h-2 rounded-full bg-emerald-400 flex-shrink-0"></span>
+                  Live Web Grounding
+                </span>
+              </div>
+              <p class="text-[11px] sm:text-xs text-slate-300 text-justify hyphens-auto [text-align-last:left] leading-relaxed">
+                Built so ChatGPT Search, Google AI Overviews and Gemini recommend your business across Delhi, Noida, Gurgaon and Lucknow.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 2: INTRODUCTION (CRISP WHITE CONTRAST SECTION + TEAM IMAGE)
+  ===================================================================== -->
+  <section class="relative surface-white py-10 sm:py-16 lg:py-20 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-7 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns: Snapshot + Concise Copy -->
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-light mb-3 sm:mb-3.5">Direct AI Assistant Recommendations</div>
+          <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-snug sm:leading-tight mb-3.5 sm:mb-5">
+            How Our ChatGPT SEO Services in Delhi NCR <span class="gradient-text-dark">Put Your Business Inside Buyer Shortlists</span>
+          </h2>
+          <div class="space-y-3.5 sm:space-y-4 text-slate-700 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            <p>
+              Our <strong>ChatGPT SEO Services in Delhi NCR</strong> prepare your website and off page footprint so OpenAI models name and link to your business when buyers ask for vendor recommendations. Instead of relying only on old keyword density, our ChatGPT SEO approach combines clean 40 to 60 word answer blocks, Bing Webmaster indexing, root llms.txt files and verified directory mentions.
+            </p>
+            <p>
+              Think about how decision makers in Gurgaon, Noida and Delhi buy services today. Before calling a real estate consultant, IT partner, law chamber or hospital, they open ChatGPT or Google and ask which three providers have the best track record and transparent pricing. Partnering with our <a href="/ai-seo-company-in-delhi-ncr/" class="text-brand-600 hover:text-brand-700 font-semibold">AI SEO Company in Delhi NCR</a> alongside our specialised <a href="/google-ai-overview-seo-services-in-delhi-ncr/" class="text-brand-600 hover:text-brand-700 font-semibold">Google AI Overview SEO Services in Delhi NCR</a> ensures your company gets cited across both conversational chat prompts and Google top summary boxes.
+            </p>
+          </div>
+          <div class="mt-5 sm:mt-7 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
+            <a href="/contact-us/" class="btn-primary w-full sm:w-auto min-h-[48px]">
+              <span>Book a Consultation With Our Team</span>
+              <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+              </svg>
+            </a>
+            <a href="#why-us" class="btn-secondary-light w-full sm:w-auto min-h-[48px]">
+              <span>Compare Citation Methods</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Unique Team Image + Stats -->
+        <div class="lg:col-span-5 space-y-3.5 sm:space-y-4 min-w-0">
+          <div class="rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-200 shadow-lg bg-slate-100">
+            <img
+              src="/images/chatgpt-seo-delhi-ncr/team-chatgpt-seo-delhi-ncr.webp"
+              alt="NK Digital Tech Search Engineers Executing ChatGPT SEO Services in Delhi NCR"
+              width="800"
+              height="533"
+              class="w-full aspect-[16/10] sm:aspect-auto sm:h-56 lg:h-60 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="grid grid-cols-2 gap-3 sm:gap-3.5">
+            {[
+              { val: '40 to 60', label: 'Word Answer Blocks', sub: 'Structured for prompt retrieval' },
+              { val: 'Bing + OAI', label: 'SearchBot Indexing', sub: 'Live web citation readiness' },
+              { val: '4 Hubs', label: 'Delhi, Noida, Gurgaon, Lucknow', sub: 'Focused regional coverage' },
+              { val: '100%', label: 'Client Code Ownership', sub: 'Full schema & llms.txt rights' },
+            ].map((stat) => (
+              <div class="elevated-card rounded-xl sm:rounded-2xl p-3 sm:p-3.5 min-w-0">
+                <div class="font-display font-black text-xl sm:text-2xl text-brand-600 mb-0.5">{stat.val}</div>
+                <div class="text-[11px] sm:text-xs font-bold text-slate-900 leading-snug">{stat.label}</div>
+                <div class="text-[10.5px] sm:text-[11px] text-slate-500 leading-snug mt-0.5">{stat.sub}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 3: PROBLEM STATEMENT (DEEP INDIGO DARK CONTRAST SECTION)
+  ===================================================================== -->
+  <section class="relative surface-indigo py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="max-w-7xl mx-auto relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns: Problem Statement Justified Copy -->
+        <div class="lg:col-span-7 min-w-0">
+          <div class="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-3.5 py-1 sm:py-1.5 rounded-full text-[10px] sm:text-xs font-bold uppercase tracking-wider sm:tracking-widest bg-amber-500/10 border border-amber-500/30 text-amber-300 max-w-full leading-snug mb-4 sm:mb-5">
+            <svg class="w-4 h-4 text-amber-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+            </svg>
+            <span>Why ChatGPT Skips Most Local Websites</span>
+          </div>
+
+          <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-white tracking-tight leading-snug sm:leading-tight mb-4 sm:mb-6">
+            Why ChatGPT Recommends Your Competitors Even When You Rank on Google
+          </h2>
+
+          <div class="space-y-3.5 sm:space-y-4 text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            <p>
+              When a buyer asks Google a question, they still see several organic links below the top summary. When that same buyer asks ChatGPT or Gemini for the best company in Delhi NCR, the assistant usually names only two or three brands. If your business is not inside that short answer, you miss the enquiry completely.
+            </p>
+            <p>
+              Founders often ask us how to rank on ChatGPT when their website already performs well on Google. Here is the honest reason. ChatGPT Search pulls live web data from the Bing index, OpenAI search crawlers and third party review portals. If your site blocks OAI SearchBot, lacks Bing Webmaster verification, hides pricing in PDFs or has weak off page mentions, ChatGPT overlooks you. Combining strong organic search foundations from the <a href="/best-seo-company-in-delhi-ncr/" class="text-brand-300 hover:text-brand-200 font-semibold">Best SEO Company in Delhi NCR</a> with our targeted AI search visibility services closes that gap fast.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Diagnostic Comparison Cards -->
+        <div class="lg:col-span-5 space-y-3.5 sm:space-y-4 min-w-0">
+          <div class="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6 border-l-4 border-l-rose-500">
+            <div class="flex flex-wrap items-center justify-between gap-1.5 mb-2">
+              <span class="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-rose-400">Old Keyword Approach</span>
+              <span class="text-[11px] sm:text-xs text-slate-400">Invisible on ChatGPT</span>
+            </div>
+            <h3 class="font-display font-bold text-[15px] sm:text-base text-white mb-2 leading-snug">Google Only Focus, Blocked Bots &amp; Vague Copy</h3>
+            <p class="text-xs text-slate-300 leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+              Ignores Bing Webmaster indexing, leaves OpenAI crawlers unconfigured, buries facts in long blog posts and builds zero third party review consensus.
+            </p>
+          </div>
+
+          <div class="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6 border-l-4 border-l-emerald-400">
+            <div class="flex flex-wrap items-center justify-between gap-1.5 mb-2">
+              <span class="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-emerald-400">NK Digital Tech Prompt System</span>
+              <span class="text-[11px] sm:text-xs text-brand-300">Named &amp; Linked Source</span>
+            </div>
+            <h3 class="font-display font-bold text-[15px] sm:text-base text-white mb-2 leading-snug">Bing Sync, Answer Blocks &amp; Verified Brand Proof</h3>
+            <p class="text-xs text-slate-300 leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+              Connects Bing IndexNow, llms.txt, 40 to 60 word answer blocks, HTML pricing tables and trusted Indian directory citations so ChatGPT recommends you with confidence.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 4: SERVICES (LIGHT COOL ALABASTER CONTRAST + SERVICES IMAGE)
+  ===================================================================== -->
+  <section id="services" class="relative surface-cool scroll-mt-20 py-11 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <!-- Services Header with Unique Services Image -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 items-center mb-9 sm:mb-16">
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-light mb-3">Six Core Deliverables</div>
+          <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-snug sm:leading-tight mb-3 sm:mb-4">
+            What Is Included in Our ChatGPT Search Optimisation Scope
+          </h2>
+          <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            Our AI SEO services in Delhi NCR bring Answer Engine Optimisation, Generative Engine Optimisation, crawler setup and third party brand proof under one roof. We combine <a href="/aeo-services-in-delhi-ncr/" class="text-brand-600 hover:text-brand-700 font-semibold">AEO Services in Delhi NCR</a> for crisp question and answer formatting with <a href="/geo-services-in-delhi-ncr/" class="text-brand-600 hover:text-brand-700 font-semibold">GEO Services in Delhi NCR</a> for entity authority so your business wins citations on ChatGPT, Google AI Overviews and Gemini.
+          </p>
+        </div>
+        <div class="lg:col-span-5 min-w-0">
+          <div class="rounded-2xl overflow-hidden border border-slate-200 shadow-md bg-white">
+            <img
+              src="/images/chatgpt-seo-delhi-ncr/services-chatgpt-seo-citations.webp"
+              alt="Bing Index llms.txt and Structured Answer Blocks Feeding ChatGPT Search Citations"
+              width="800"
+              height="450"
+              class="w-full aspect-[16/9] sm:aspect-auto sm:h-56 lg:h-64 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- 3 Columns x 2 Rows Grid Layout -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-7">
+        {services.map((s) => (
+          <div class="elevated-card rounded-2xl p-5 sm:p-7 flex flex-col justify-between group sm:hover:-translate-y-1">
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-4 sm:mb-6">
+                <div class={`w-11 h-11 sm:w-12 sm:h-12 rounded-xl border flex items-center justify-center flex-shrink-0 ${s.iconStyle}`}>
+                  <Fragment set:html={s.icon} />
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class={`text-[10.5px] sm:text-[11px] font-semibold px-2.5 py-1 rounded-md ${s.badgeColor}`}>
+                    {s.category}
+                  </span>
+                  <span class="font-display font-black text-base sm:text-lg text-slate-300">{s.num}</span>
+                </div>
+              </div>
+
+              <h3 class="font-display font-bold text-[17px] sm:text-xl text-slate-900 mb-2.5 sm:mb-3 leading-snug group-hover:text-brand-600 transition-colors">
+                {s.title}
+              </h3>
+
+              <p class="text-slate-600 text-[13px] sm:text-sm leading-relaxed mb-4 sm:mb-6 text-justify hyphens-auto [text-align-last:left]">
+                {s.body}
+              </p>
+            </div>
+
+            <div>
+              <div class={`rounded-xl border p-3.5 sm:p-4 mb-3.5 sm:mb-5 ${s.impactStyle}`}>
+                <div class="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-slate-900 mb-1">
+                  <svg class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                  </svg>
+                  <span>Citation Impact</span>
+                </div>
+                <p class="text-xs text-slate-700 leading-relaxed font-medium text-justify hyphens-auto [text-align-last:left]">
+                  {s.impact}
+                </p>
+              </div>
+
+              <a href={s.href} class="inline-flex items-center gap-2 py-2.5 min-h-[44px] text-xs font-bold text-brand-600 hover:text-brand-700 group-hover:gap-3 transition-all">
+                <span>{s.cta}</span>
+                <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 5: REGIONAL LOCATIONS (DARK NAVY + MULTI CITY IMAGE)
+  ===================================================================== -->
+  <section id="locations" class="relative surface-navy scroll-mt-20 py-11 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <!-- Regional Header with Unique Multi City Image -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 items-center mb-9 sm:mb-16">
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-dark mb-3">Local &amp; Regional Prompt Citations</div>
+          <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-white tracking-tight leading-snug sm:leading-tight mb-3 sm:mb-4">
+            Local ChatGPT SEO Coverage Across Delhi, Noida, Gurgaon and Lucknow
+          </h2>
+          <p class="text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            Most high intent prompts on ChatGPT include a specific city or commercial corridor. When a buyer asks ChatGPT for a corporate law firm in Connaught Place, a SaaS development agency in Noida Sector 62 or a commercial property advisor in Gurgaon, the model checks local directory consistency alongside your city pages. Pairing our prompt work with <a href="/local-seo-services-in-delhi-ncr/" class="text-brand-300 hover:text-brand-200 font-semibold">Local SEO Services in Delhi NCR</a> keeps your address, reviews and regional authority aligned across every market we serve from our Lucknow headquarters.
+          </p>
+        </div>
+        <div class="lg:col-span-5 min-w-0">
+          <div class="rounded-2xl overflow-hidden border border-slate-700/80 shadow-xl bg-slate-900">
+            <img
+              src="/images/chatgpt-seo-delhi-ncr/regional-chatgpt-seo-ncr-hubs.webp"
+              alt="Regional ChatGPT SEO Services Serving Delhi Noida Gurgaon and Lucknow"
+              width="800"
+              height="450"
+              class="w-full aspect-[16/9] sm:aspect-auto sm:h-56 lg:h-64 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- 1 Row x 4 Columns Responsive Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+        {cities.map((c) => (
+          <div class="glass-card rounded-2xl p-5 sm:p-6 flex flex-col justify-between group sm:hover:-translate-y-1">
+            <div>
+              <div class={`h-1 w-full bg-gradient-to-r ${c.accent} rounded-full mb-4 sm:mb-5`}></div>
+
+              <div class="flex items-center justify-between gap-2 mb-3.5 sm:mb-4">
+                <span class="px-2.5 py-1 rounded-md bg-slate-800 border border-slate-700 text-[11px] font-bold uppercase tracking-wider text-brand-300">
+                  {c.hub}
+                </span>
+                <span class="text-xs font-semibold text-slate-400">{c.city}</span>
+              </div>
+
+              <h3 class="font-display font-bold text-base sm:text-lg text-white mb-2.5 sm:mb-3 leading-snug">
+                {c.keyword}
+              </h3>
+
+              <p class="text-slate-300 text-[13px] sm:text-sm leading-relaxed mb-4 sm:mb-5 text-justify hyphens-auto [text-align-last:left]">
+                {c.desc}
+              </p>
+            </div>
+
+            <div class="pt-3.5 sm:pt-4 border-t border-slate-800">
+              <a href={c.href} class="inline-flex items-center gap-1.5 py-2.5 min-h-[44px] text-xs font-bold text-brand-400 hover:text-brand-300 group-hover:gap-2.5 transition-all">
+                <span>{c.cta}</span>
+                <svg class="w-3.5 h-3.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 6: WHY NK DIGITAL TECH (CRISP WHITE CONTRAST SECTION)
+  ===================================================================== -->
+  <section id="why-us" class="relative surface-white scroll-mt-20 py-11 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-14 text-left sm:text-center">
+        <div class="badge-light mb-3">Why Businesses Choose NK Digital Tech</div>
+        <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-snug sm:leading-tight mb-3 sm:mb-4">
+          How Our LLM SEO Services Differ From Traditional Keyword Packages
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed mb-4 text-justify hyphens-auto [text-align-last:left]">
+          Standard SEO agencies still write long blog posts for single keywords and never check whether Bing or OpenAI crawlers can read your pages. Our LLM SEO services combine technical crawler alignment, 40 to 60 word answer blocks, HTML comparison matrices and verified ChatGPT brand mentions across trusted Indian portals.
+        </p>
+        <p class="text-slate-700 font-semibold text-xs sm:text-sm">
+          See how our ChatGPT citation system compares with a typical SEO vendor:
+        </p>
+      </div>
+
+      <!-- Desktop Comparison Matrix -->
+      <div class="hidden md:block overflow-hidden rounded-2xl border border-slate-200 shadow-lg">
+        <table class="w-full text-left border-collapse">
+          <thead>
+            <tr class="bg-slate-900 text-white">
+              <th class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-slate-300 w-1/4">
+                Evaluation Point
+              </th>
+              <th class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-rose-300 w-[37.5%] border-l border-slate-800">
+                Typical Keyword Vendor
+              </th>
+              <th class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-brand-300 w-[37.5%] border-l border-slate-800 bg-slate-950">
+                NK Digital Tech (ChatGPT SEO System)
+              </th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200 text-sm">
+            {comparison.map((row, idx) => (
+              <tr class={idx % 2 === 0 ? 'bg-white' : 'bg-slate-50/80'}>
+                <td class="py-5 px-6 font-display font-bold text-slate-900">
+                  {row.metric}
+                </td>
+                <td class="py-5 px-6 text-slate-600 border-l border-slate-200">
+                  <div class="flex items-start gap-2.5">
+                    <svg class="w-4 h-4 text-rose-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                    <span>{row.typical}</span>
+                  </div>
+                </td>
+                <td class="py-5 px-6 text-slate-900 font-medium border-l border-slate-200 bg-sky-50/40">
+                  <div class="flex items-start gap-2.5">
+                    <svg class="w-4 h-4 text-emerald-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span>{row.nk}</span>
+                  </div>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Mobile Comparison Cards -->
+      <div class="md:hidden space-y-3.5">
+        {comparison.map((row) => (
+          <div class="elevated-card rounded-2xl p-4 space-y-2.5">
+            <h3 class="font-display font-bold text-slate-900 text-[15px] leading-snug">{row.metric}</h3>
+            <div class="rounded-xl bg-rose-50 border border-rose-100 p-3">
+              <div class="flex items-center gap-1.5 mb-1">
+                <svg class="w-3.5 h-3.5 text-rose-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+                <p class="text-[10px] font-bold uppercase tracking-wider text-rose-600">Typical Vendor</p>
+              </div>
+              <p class="text-xs text-slate-700 leading-relaxed text-justify hyphens-auto [text-align-last:left]">{row.typical}</p>
+            </div>
+            <div class="rounded-xl bg-sky-50 border border-sky-200 p-3">
+              <div class="flex items-center gap-1.5 mb-1">
+                <svg class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                </svg>
+                <p class="text-[10px] font-bold uppercase tracking-wider text-brand-600">NK Digital Tech</p>
+              </div>
+              <p class="text-xs text-slate-900 font-semibold leading-relaxed text-justify hyphens-auto [text-align-last:left]">{row.nk}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 7: INDUSTRIES (LIGHT SLATE CONTRAST SECTION - 3x4 GRID)
+  ===================================================================== -->
+  <section id="industries" class="relative surface-slate scroll-mt-20 py-11 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-16 text-left sm:text-center">
+        <div class="badge-light mb-3">Industry Specific Prompt Playbooks</div>
+        <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-snug sm:leading-tight mb-3 sm:mb-4">
+          How Twelve Delhi NCR Sectors Win ChatGPT Recommendations
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          Buyers use ChatGPT to compare costs, credentials, compliance rules and vendor shortlists before calling any sales team. Here is how we structure pages and off page proof around the exact prompts your customers ask in twelve major sectors.
+        </p>
+      </div>
+
+      <!-- 3 Columns Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-7">
+        {industries.map((ind) => (
+          <div class={`elevated-card rounded-2xl p-5 sm:p-7 border-t-4 ${ind.accentBorder} flex flex-col justify-between sm:hover:-translate-y-1`}>
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-4 sm:mb-5">
+                <div class={`w-10 h-10 sm:w-11 sm:h-11 rounded-xl border flex items-center justify-center flex-shrink-0 ${ind.iconBg}`}>
+                  <Fragment set:html={ind.icon} />
+                </div>
+                <span class="text-[11px] font-semibold text-slate-600 bg-slate-100 px-2.5 py-1 rounded-md">
+                  {ind.sector}
+                </span>
+              </div>
+
+              <h3 class="font-display font-bold text-[17px] sm:text-xl text-slate-900 mb-3 sm:mb-4 leading-snug">
+                {ind.title}
+              </h3>
+
+              <div class="mb-4 sm:mb-5">
+                <p class="text-[11px] font-bold uppercase tracking-wider text-brand-600 mb-1.5">
+                  ChatGPT SEO Strategy
+                </p>
+                <p class="text-slate-600 text-[13px] sm:text-sm leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+                  {ind.focus}
+                </p>
+              </div>
+            </div>
+
+            <div class="rounded-xl bg-emerald-50/70 border border-emerald-200/80 p-3.5 sm:p-4">
+              <p class="text-[11px] font-bold uppercase tracking-wider text-emerald-700 mb-1">
+                Business Outcome
+              </p>
+              <p class="text-slate-800 text-xs font-medium leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+                {ind.outcome}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 8: HOW WE WORK (CRISP WHITE CONTRAST SECTION - 4 STAGES)
+  ===================================================================== -->
+  <section class="relative surface-white py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-16 text-left sm:text-center">
+        <div class="badge-light mb-3">Our 4 Step Execution Roadmap</div>
+        <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-snug sm:leading-tight mb-3 sm:mb-4">
+          How We Earn ChatGPT Search and LLM Citations Step by Step
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          Getting recommended on ChatGPT, Google AI Overviews and Gemini follows a clear engineering process. We audit live buyer prompts first, align Bing and OpenAI crawler access, rewrite key pages with direct answer snapshots and track referral leads every fortnight.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-7">
+        {stages.map((s) => (
+          <div class="elevated-card rounded-2xl p-5 sm:p-8 relative overflow-hidden group sm:hover:-translate-y-1">
+            <div class="flex items-center justify-between gap-4 mb-3.5 sm:mb-5">
+              <span class={`inline-flex items-center px-2.5 sm:px-3 py-1 rounded-lg text-xs font-bold uppercase tracking-wider text-white bg-gradient-to-r ${s.accent}`}>
+                {s.num}
+              </span>
+              <span class="font-display font-black text-3xl sm:text-4xl text-slate-200 group-hover:text-slate-300 transition-colors">
+                {s.step}
+              </span>
+            </div>
+            <h3 class="font-display font-bold text-[17px] sm:text-xl text-slate-900 mb-2.5 sm:mb-3 leading-snug">
+              {s.title}
+            </h3>
+            <p class="text-slate-600 text-[13px] sm:text-sm leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+              {s.body}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 9: CONCLUSION / PARTNER SECTION (DARK INDIGO + GROWTH IMAGE)
+  ===================================================================== -->
+  <section class="relative surface-indigo py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-7 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns: Conclusion Paragraphs (Justified) -->
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-dark mb-3.5 sm:mb-4">Win Conversational Buyer Prompts</div>
+          <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-white tracking-tight leading-snug sm:leading-tight mb-4 sm:mb-6">
+            Start Winning Recommendations With ChatGPT SEO Services in Delhi NCR
+          </h2>
+          <div class="space-y-4 sm:space-y-5 text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            <p>
+              Buyer research across Delhi, Noida, Gurgaon and Lucknow has moved from typing short keywords to asking full questions on ChatGPT, Google AI Overviews, Gemini and Perplexity. When your ideal client asks an AI assistant to shortlist the top three companies in your sector, being left out of that response means losing the deal before your sales team even knows the buyer exists.
+            </p>
+            <p>
+              When you choose NK Digital Tech for <strong class="text-white font-semibold">ChatGPT SEO Services in Delhi NCR</strong>, you work directly with senior search strategists and developers who align your Bing Webmaster index, open OAI SearchBot access, publish llms.txt files, write 40 to 60 word answer blocks and build verified brand mentions across trusted Indian portals. Book your free prompt citation audit today and see how your brand performs across ChatGPT, Google AI Overviews and Gemini.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Unique Growth Image -->
+        <div class="lg:col-span-5 min-w-0">
+          <div class="rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-700/80 shadow-2xl bg-slate-900">
+            <img
+              src="/images/chatgpt-seo-delhi-ncr/growth-chatgpt-seo-leads.webp"
+              alt="Business Director Reviewing Verified Enquiries From ChatGPT SEO Services in Delhi NCR"
+              width="800"
+              height="450"
+              class="w-full aspect-[16/10] sm:aspect-auto sm:h-64 lg:h-72 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 10: FAQ (LIGHT COOL SLATE CONTRAST SECTION)
+  ===================================================================== -->
+  <section id="faq" class="relative surface-cool scroll-mt-20 py-11 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-left sm:text-center mb-9 sm:mb-14">
+        <div class="badge-light mb-3">Questions Asked on ChatGPT, Gemini &amp; Google</div>
+        <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-snug sm:leading-tight mb-3 sm:mb-4">
+          Frequently Asked Questions About ChatGPT SEO Services in Delhi NCR
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          Clear, factual answers to the exact questions founders and marketing heads ask on ChatGPT, Google AI Overviews, Gemini and Perplexity before investing in conversational search optimisation.
+        </p>
+      </div>
+
+      <div class="space-y-3 sm:space-y-4">
+        {faqs.map((f, i) => (
+          <details class="elevated-card rounded-2xl group overflow-hidden" open={i === 0}>
+            <summary class="flex items-start sm:items-center justify-between gap-3 sm:gap-4 px-4 sm:px-6 py-4 sm:py-5 min-h-[54px] select-none">
+              <div class="flex items-start sm:items-center gap-2.5 sm:gap-3.5 text-left min-w-0">
+                <span class="w-6 h-6 sm:w-7 sm:h-7 rounded-lg bg-sky-50 border border-sky-200 text-brand-600 font-display font-bold text-xs flex items-center justify-center flex-shrink-0 mt-0.5 sm:mt-0">
+                  0{i + 1}
+                </span>
+                <h3 class="font-display font-bold text-slate-900 text-[14px] sm:text-base md:text-lg leading-snug">
+                  {f.q}
+                </h3>
+              </div>
+              <span class="faq-icon w-7 h-7 sm:w-8 sm:h-8 rounded-full border border-slate-200 text-slate-600 flex items-center justify-center flex-shrink-0 mt-0.5 sm:mt-0">
+                <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                </svg>
+              </span>
+            </summary>
+            <div class="px-4 sm:px-6 pb-5 sm:pb-6 pt-3 text-slate-600 text-[13px] sm:text-sm md:text-base leading-relaxed border-t border-slate-100 text-justify hyphens-auto [text-align-last:left]">
+              {f.a}
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 11: SHORT 2 TO 3 LINE CALL TO ACTION BANNER (LAST SECTION)
+  ===================================================================== -->
+  <section id="contact" class="relative surface-dark scroll-mt-20 py-11 sm:py-16 lg:py-20 px-4 sm:px-6 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-5xl mx-auto">
+      <div class="rounded-2xl sm:rounded-3xl bg-gradient-to-r from-brand-600 via-brand-700 to-accent-700 p-5 sm:p-10 md:p-12 text-center text-white shadow-2xl border border-white/15 relative overflow-hidden">
+        <div class="relative z-10 max-w-2xl mx-auto">
+          <h2 class="font-display font-black text-[1.45rem] sm:text-3xl md:text-4xl text-white tracking-tight leading-snug mb-3 sm:mb-4">
+            Ready to Get Recommended on ChatGPT, AI Overviews &amp; Gemini?
+          </h2>
+
+          <p class="text-sky-50 text-[13px] sm:text-sm md:text-base leading-relaxed mb-6 sm:mb-8 text-justify sm:text-center hyphens-auto [text-align-last:left] sm:[text-align-last:center]">
+            Book a free prompt citation audit with NK Digital Tech to review your current ChatGPT Search, Google AI Overview and Gemini visibility across Delhi, Noida, Gurgaon and Lucknow.
+          </p>
+
+          <a
+            href="/contact-us/"
+            class="inline-flex w-full sm:w-auto min-h-[48px] items-center justify-center gap-2 sm:gap-3 px-5 sm:px-8 py-3.5 sm:py-4 rounded-xl bg-white text-slate-950 hover:bg-sky-50 font-display font-bold text-sm sm:text-base shadow-xl transition-all duration-300 active:scale-95 text-center leading-snug"
+          >
+            <span>Request Your Free ChatGPT Audit</span>
+            <svg class="w-4 h-4 sm:w-5 sm:h-5 text-brand-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mobile Sticky Bottom Quick Action Bar -->
+  <div class="mobile-sticky-cta sm:hidden fixed bottom-0 inset-x-0 z-40 bg-[#050a14]/95 backdrop-blur-xl border-t border-slate-800 px-3.5 pt-2.5 pb-[max(0.625rem,env(safe-area-inset-bottom))] shadow-[0_-8px_24px_rgba(0,0,0,0.45)] transition-all duration-300">
+    <div class="flex items-center gap-2.5">
+      <a
+        href="/contact-us/"
+        class="btn-primary flex-1 min-h-[44px] py-2.5 px-4 text-xs font-bold rounded-xl min-w-0"
+      >
+        <span class="truncate">Free ChatGPT Audit</span>
+        <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+        </svg>
+      </a>
+      <a
+        href="#services"
+        class="btn-secondary-dark min-h-[44px] py-2.5 px-3.5 text-xs font-semibold rounded-xl flex-shrink-0"
+      >
+        <span>Services</span>
+      </a>
+    </div>
+  </div>
+
+</Layout>

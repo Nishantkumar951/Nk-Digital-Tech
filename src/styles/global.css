@@ -26,6 +26,9 @@
     -webkit-tap-highlight-color: transparent;
     touch-action: manipulation;
   }
+  a[href*="/ai-seo-company-in-delhi-ncr/"] {
+    text-decoration: none !important;
+  }
   @media (max-width: 639px) {
     .text-justify {
       word-spacing: -0.02em;

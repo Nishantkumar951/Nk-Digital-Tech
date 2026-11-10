@@ -1,6 +1,6 @@
 # =============================================
 # robots.txt: https://www.nkdigitaltech.net
-# Last updated: 2026-11-09
+# Last updated: 2026-11-10
 # Managed by: Square Root SEO Technical Discovery Standards
 # =============================================
 

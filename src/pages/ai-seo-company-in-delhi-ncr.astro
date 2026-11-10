@@ -89,8 +89,8 @@ const services = [
     title: 'Answer Engine Optimisation Services',
     body: 'Our Answer Engine Optimisation services turn long pages into question led headings, direct factual definitions and FAQ markup that Perplexity and voice search extract first.',
     impact: 'Position zero authority for high intent buyer questions and comparisons.',
-    cta: 'Structure Pages for Direct Answers',
-    href: '#contact',
+    cta: 'Explore AEO Services in Delhi NCR',
+    href: '/aeo-services-in-delhi-ncr/',
   },
   {
     num: '05',
@@ -756,7 +756,13 @@ const aiSeoSchemaFAQ = JSON.stringify({
               </div>
 
               <h3 class="font-display font-bold text-[17px] sm:text-xl text-slate-900 mb-2.5 sm:mb-3 leading-snug group-hover:text-brand-600 transition-colors">
-                {s.title}
+                {s.href && s.href !== '#contact' ? (
+                  <a href={s.href} class="hover:text-brand-600 transition-colors">
+                    {s.title}
+                  </a>
+                ) : (
+                  s.title
+                )}
               </h3>
 
               <p class="text-slate-600 text-[13px] sm:text-sm leading-relaxed mb-4 sm:mb-6 text-justify hyphens-auto [text-align-last:left]">

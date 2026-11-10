@@ -1,0 +1,1121 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '../styles/global.css';
+
+const pageTitle = 'Technical LLM SEO Services in Delhi NCR | NK Digital Tech';
+const pageDescription = 'Get cited on ChatGPT, Gemini and Google with our Technical LLM SEO Services in Delhi NCR. We set up llms.txt, JSON LD schema and AI crawler access. Book now.';
+const pageCanonical = 'https://www.nkdigitaltech.net/technical-llm-seo-services-in-delhi-ncr/';
+
+const services = [
+  {
+    num: '01',
+    category: 'Root Markdown Index',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>`,
+    iconStyle: 'bg-sky-50 border-sky-200 text-brand-600',
+    impactStyle: 'bg-sky-50/80 border-sky-200/80 text-slate-800',
+    badgeColor: 'text-brand-600 bg-sky-100/80',
+    title: 'llms.txt & llms full.txt Setup',
+    body: 'AI crawlers waste time when they have to dig through heavy navigation menus, popups and styling scripts. Through our llms.txt setup, we publish a clean, plain text markdown index at the root of your domain that guides ChatGPT, Claude and Perplexity straight to your core services, pricing and locations.',
+    impact: 'Instant, clean reading of your most important commercial pages by AI models.',
+    cta: 'Set Up Your llms.txt File',
+    href: '/contact-us/',
+  },
+  {
+    num: '02',
+    category: 'Structured Entity Code',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>`,
+    iconStyle: 'bg-violet-50 border-violet-200 text-accent-600',
+    impactStyle: 'bg-violet-50/80 border-violet-200/80 text-slate-800',
+    badgeColor: 'text-accent-600 bg-violet-100/80',
+    title: 'Nested JSON LD Schema Markup Services',
+    body: 'Basic SEO plugins only add flat, disconnected schema tags. Our JSON LD schema markup services build a single nested graph connecting Organization, LocalBusiness, Service, Product, Person and FAQPage entities with verified sameAs links so Google and AI assistants read your facts with zero confusion.',
+    impact: 'Stronger Knowledge Graph recognition and rich source citations across Google and Gemini.',
+    cta: 'Upgrade Your Schema Graph',
+    href: '/contact-us/',
+  },
+  {
+    num: '03',
+    category: 'AI Bot Permissions',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>`,
+    iconStyle: 'bg-emerald-50 border-emerald-200 text-emerald-600',
+    impactStyle: 'bg-emerald-50/80 border-emerald-200/80 text-slate-800',
+    badgeColor: 'text-emerald-700 bg-emerald-100/80',
+    title: 'AI Crawler Optimisation & Firewall Rules',
+    body: 'Many firewalls, CDNs and old robots.txt files block OpenAI, Perplexity and Google AI bots by mistake. Through our AI crawler optimisation workflow, we configure clean access for GPTBot, OAI SearchBot, Google Extended, ClaudeBot and PerplexityBot while keeping bad scraper bots out.',
+    impact: 'Unblocked crawling and live retrieval across ChatGPT Search, Gemini and Perplexity.',
+    cta: 'Audit Your Bot Access',
+    href: '/contact-us/',
+  },
+  {
+    num: '04',
+    category: 'Static HTML Delivery',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>`,
+    iconStyle: 'bg-amber-50 border-amber-200 text-amber-600',
+    impactStyle: 'bg-amber-50/80 border-amber-200/80 text-slate-800',
+    badgeColor: 'text-amber-700 bg-amber-100/80',
+    title: 'JavaScript SEO and Server Side Rendering',
+    body: 'Unlike Googlebot, most AI search crawlers do not run heavy client side JavaScript to read page text. If your pricing tables, FAQs or service tabs load only after scripts run in the browser, AI bots see a blank page. We implement JavaScript SEO and server side rendering so all content arrives in clean static HTML.',
+    impact: '100% of your service copy, tables and FAQs become readable to every LLM crawler.',
+    cta: 'Fix Your HTML Rendering',
+    href: '/contact-us/',
+  },
+  {
+    num: '05',
+    category: 'Semantic DOM Structure',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"/></svg>`,
+    iconStyle: 'bg-indigo-50 border-indigo-200 text-indigo-600',
+    impactStyle: 'bg-indigo-50/80 border-indigo-200/80 text-slate-800',
+    badgeColor: 'text-indigo-700 bg-indigo-100/80',
+    title: 'Semantic HTML5 Tables & Passage Chunking',
+    body: 'Retrieval Augmented Generation systems split web pages into small text chunks before choosing which source to cite. We replace messy div soup and locked PDF brochures with clean HTML5 section tags, ordered heading hierarchies, 40 to 60 word answer blocks and native table elements.',
+    impact: 'Higher passage extraction accuracy for Google AI Overviews and ChatGPT.',
+    cta: 'Restructure Your Page Code',
+    href: '/contact-us/',
+  },
+  {
+    num: '06',
+    category: 'Instant Indexing & Logs',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>`,
+    iconStyle: 'bg-cyan-50 border-cyan-200 text-cyan-700',
+    impactStyle: 'bg-cyan-50/80 border-cyan-200/80 text-slate-800',
+    badgeColor: 'text-cyan-700 bg-cyan-100/80',
+    title: 'IndexNow, Bing Sync & Server Log Audits',
+    body: 'When you update a price or launch a new service page in Delhi NCR, waiting weeks for bots to notice costs you leads. We connect XML sitemaps, Bing IndexNow instant pings and server log monitoring so you can see when GPTBot, Googlebot and PerplexityBot visit your pages.',
+    impact: 'Same day indexing of new content across Google, Bing and live AI search engines.',
+    cta: 'Enable Instant AI Indexing',
+    href: '/contact-us/',
+  },
+];
+
+const cities = [
+  {
+    hub: 'Hub 01',
+    city: 'Delhi',
+    keyword: 'AI SEO Company in Delhi',
+    desc: 'We help hospitals in South Delhi, law chambers in Connaught Place, industrial units in Okhla and traders in Nehru Place fix slow scripts, add nested schema and open AI crawler access.',
+    cta: 'Explore Delhi AI SEO Page',
+    href: '/ai-seo-company-in-delhi/',
+    accent: 'from-brand-500 to-sky-400',
+  },
+  {
+    hub: 'Hub 02',
+    city: 'Noida',
+    keyword: 'AI SEO Company in Noida',
+    desc: 'We work with SaaS teams in Sector 62, real estate developers on Noida Expressway and factories in Greater Noida to deploy server side rendering, llms.txt files and clean HTML spec tables.',
+    cta: 'Explore Noida AI SEO Page',
+    href: '/ai-seo-company-in-noida/',
+    accent: 'from-accent-500 to-violet-400',
+  },
+  {
+    hub: 'Hub 03',
+    city: 'Gurgaon',
+    keyword: 'AI SEO Company in Gurgaon',
+    desc: 'We help enterprise consultancies in Cyber City, luxury property firms on Golf Course Road and OEM plants in Manesar build Knowledge Graph schema and Bing IndexNow pipelines.',
+    cta: 'Explore Gurgaon AI SEO Page',
+    href: '/ai-seo-company-in-gurgaon/',
+    accent: 'from-cyan-500 to-teal-400',
+  },
+  {
+    hub: 'Hub 04',
+    city: 'Lucknow',
+    keyword: 'AI SEO Company in Lucknow',
+    desc: 'From our registered Lucknow office in Aashiana Colony, we help real estate builders, coaching institutes, hospitals and retail brands across Gomti Nagar and Hazratganj build fast, AI ready websites.',
+    cta: 'Explore Lucknow AI SEO Page',
+    href: '/ai-seo-company-in-lucknow/',
+    accent: 'from-emerald-500 to-green-400',
+  },
+];
+
+const comparison = [
+  {
+    metric: 'How AI Crawlers Read Your Site',
+    typical: 'Leaves key text hidden inside heavy React or JavaScript bundles that GPTBot cannot render',
+    nk: 'Delivers fast static HTML and server side rendered copy so every AI crawler reads 100% of your content',
+  },
+  {
+    metric: 'llms.txt & Machine Guidance',
+    typical: 'No llms.txt file, forcing language models to guess which pages on your domain matter',
+    nk: 'Publishes a structured root llms.txt and llms full.txt directory pointing straight to core services and facts',
+  },
+  {
+    metric: 'Schema Markup Architecture',
+    typical: 'Uses basic plugins that output disconnected, incomplete schema with zero entity links',
+    nk: 'Writes custom nested JSON LD graphs linking Organization, Service, FAQPage and verified sameAs profiles',
+  },
+  {
+    metric: 'Firewall & robots.txt Rules',
+    typical: 'Accidentally blocks OAI SearchBot, GPTBot or PerplexityBot through strict CDN or firewall settings',
+    nk: 'Audits server logs, CDN rules and robots.txt so legitimate AI search bots crawl without errors',
+  },
+  {
+    metric: 'Data & Catalogue Formatting',
+    typical: 'Locks technical specs, fee structures and brochures inside unindexed PDF downloads',
+    nk: 'Converts PDF data into clean HTML5 tables and 40 to 60 word answer blocks for instant extraction',
+  },
+  {
+    metric: 'Indexing Speed & Verification',
+    typical: 'Waits weeks for search bots to recrawl updated service pages',
+    nk: 'Connects Google Search Console, Bing Webmaster Tools and IndexNow API pings for rapid discovery',
+  },
+];
+
+const industries = [
+  {
+    sector: 'Project Schema & RERA Tables',
+    title: 'Real Estate & Commercial Property',
+    focus: 'Property portals often hide floor plans, circle rates and RERA numbers inside heavy JavaScript tabs or PDF brochures. We convert project specs into static HTML tables and Residence or CommercialRealEstate schema so ChatGPT and Google cite your listings.',
+    outcome: 'Direct site visit bookings and corporate leasing calls from serious property buyers.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>`,
+    accentBorder: 'border-t-brand-500',
+    iconBg: 'bg-sky-50 text-brand-600 border-sky-200',
+  },
+  {
+    sector: 'Portfolio & Cost Matrix Code',
+    title: 'Interior Design & Architecture',
+    focus: 'Design studios often use image heavy sliders with almost no machine readable text. We add fast WebP delivery, structured cost per square foot HTML tables and LocalBusiness schema so AI models understand and recommend your studio.',
+    outcome: 'Qualified residential and office design consultations across Delhi NCR.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"/></svg>`,
+    accentBorder: 'border-t-amber-500',
+    iconBg: 'bg-amber-50 text-amber-600 border-amber-200',
+  },
+  {
+    sector: 'Course & Syllabus Markup',
+    title: 'Education & Coaching Institutes',
+    focus: 'Coaching institutes usually upload fee structures and batch dates as scanned images or PDFs. We rebuild course pages with clean HTML tables, EducationalOrganization schema and FAQPage markup that Gemini and ChatGPT extract directly.',
+    outcome: 'Steady admission counselling calls from students and parents across NCR.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"/></svg>`,
+    accentBorder: 'border-t-cyan-500',
+    iconBg: 'bg-cyan-50 text-cyan-700 border-cyan-200',
+  },
+  {
+    sector: 'HTML Spec Sheets & OEM Schema',
+    title: 'Manufacturing & Industrial Units',
+    focus: 'Industrial manufacturers lose AI visibility when tolerances, ISO certificates and machine capacities sit inside downloadable PDF catalogues. We convert engineering data into semantic HTML5 spec tables and Product schema.',
+    outcome: 'Direct B2B RFQ submissions and vendor shortlists from corporate buyers.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>`,
+    accentBorder: 'border-t-emerald-500',
+    iconBg: 'bg-emerald-50 text-emerald-600 border-emerald-200',
+  },
+  {
+    sector: 'SSR, Docs & llms.txt Architecture',
+    title: 'SaaS & IT Service Companies',
+    focus: 'Single page React and Vue apps often appear empty to non rendering AI crawlers. We implement pre rendering or server side rendering, publish comprehensive llms.txt documentation and add SoftwareApplication schema.',
+    outcome: 'Consistent software demo requests and enterprise IT consulting enquiries.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>`,
+    accentBorder: 'border-t-indigo-500',
+    iconBg: 'bg-indigo-50 text-indigo-600 border-indigo-200',
+  },
+  {
+    sector: 'Author & Regulatory Schema',
+    title: 'CA Firms & Financial Advisors',
+    focus: 'Financial pages require strict author and credential verification before Google or ChatGPT cites them. We deploy nested AccountingService and Person schema linking ICAI partner credentials and clear compliance checklists.',
+    outcome: 'High trust corporate retainers for tax, audit and advisory firms.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>`,
+    accentBorder: 'border-t-rose-500',
+    iconBg: 'bg-rose-50 text-rose-600 border-rose-200',
+  },
+  {
+    sector: 'Legal Entity & Practice Graphs',
+    title: 'Law Firms & Legal Chambers',
+    focus: 'We structure practice area pages for law chambers across Delhi NCR with clean heading hierarchies, Bar Council compliant informational passages and nested LegalService and Attorney JSON LD markup.',
+    outcome: 'Verified corporate legal consultations and advisory enquiries.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"/></svg>`,
+    accentBorder: 'border-t-accent-500',
+    iconBg: 'bg-violet-50 text-accent-600 border-violet-200',
+  },
+  {
+    sector: 'Product & Offer Schema Feeds',
+    title: 'Retail Showrooms & D2C Brands',
+    focus: 'E commerce and showroom sites miss AI shopping recommendations when price, stock status and store locations sit in client side scripts. We deploy server rendered Product, Offer and Store schema markup.',
+    outcome: 'More showroom visits and direct online orders from high intent shoppers.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>`,
+    accentBorder: 'border-t-pink-500',
+    iconBg: 'bg-pink-50 text-pink-600 border-pink-200',
+  },
+  {
+    sector: 'Engineering & Tender Data Tables',
+    title: 'Construction & EPC Contractors',
+    focus: 'We turn complex civil engineering capabilities, plant lists and safety certifications into fast static HTML tables and Contractor schema so AI assistants can verify and cite your firm for industrial tenders.',
+    outcome: 'Qualified commercial construction and EPC contracting enquiries.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 21h18M5 21V7l8-4v18M19 21V11l-6-4M9 9v.01M9 12v.01M9 15v.01M9 18v.01"/></svg>`,
+    accentBorder: 'border-t-orange-500',
+    iconBg: 'bg-orange-50 text-orange-600 border-orange-200',
+  },
+  {
+    sector: 'Venue Capacity & Lodging Schema',
+    title: 'Hotels, Banquets & Hospitality',
+    focus: 'Hospitality sites often bury hall capacities and package details inside slow booking widgets. We publish clean HTML capacity matrices and Hotel or EventVenue schema across Delhi NCR.',
+    outcome: 'Direct venue bookings, wedding dates and corporate event enquiries.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>`,
+    accentBorder: 'border-t-purple-500',
+    iconBg: 'bg-purple-50 text-purple-600 border-purple-200',
+  },
+  {
+    sector: 'MedicalOrganization & Doctor Graphs',
+    title: 'Hospitals & Speciality Centres',
+    focus: 'Healthcare websites need strict technical trust signals. We link MedicalOrganization, Physician and MedicalWebPage schema with reviewedby attributes and clear 50 word clinical answer blocks.',
+    outcome: 'Steady patient appointment calls across Delhi, Noida, Gurgaon and Lucknow.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>`,
+    accentBorder: 'border-t-red-500',
+    iconBg: 'bg-red-50 text-red-600 border-red-200',
+  },
+  {
+    sector: 'B2B Service & Case Schema',
+    title: 'B2B & Corporate Consultancies',
+    focus: 'We help consulting, staffing and logistics firms structure their service scope, industry benchmarks and client outcomes in clean static HTML and ProfessionalService schema.',
+    outcome: 'Predictable executive discovery calls and long term B2B retainers.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>`,
+    accentBorder: 'border-t-teal-500',
+    iconBg: 'bg-teal-50 text-teal-700 border-teal-200',
+  },
+];
+
+const stages = [
+  {
+    num: 'Stage 01',
+    step: '01',
+    title: 'AI Crawler Log, Rendering & Schema Audit',
+    body: 'We inspect your server logs, robots.txt rules, CDN firewall settings and raw HTML output to see exactly what GPTBot, OAI SearchBot, Google Extended and PerplexityBot experience when they visit your domain.',
+    accent: 'from-brand-600 to-sky-500',
+  },
+  {
+    num: 'Stage 02',
+    step: '02',
+    title: 'Static HTML Delivery & Semantic DOM Clean Up',
+    body: 'Our developers fix client side JavaScript bottlenecks, enable server side rendering where needed, improve Core Web Vitals and restructure your service pages with clean HTML5 headings, 40 to 60 word answer blocks and native data tables.',
+    accent: 'from-accent-600 to-violet-500',
+  },
+  {
+    num: 'Stage 03',
+    step: '03',
+    title: 'llms.txt Deployment & Nested JSON LD Graph',
+    body: 'We write and deploy your root llms.txt and llms full.txt files alongside a custom nested JSON LD schema graph connecting your Organization, LocalBusiness, Service, FAQPage and verified sameAs entity links.',
+    accent: 'from-cyan-600 to-teal-500',
+  },
+  {
+    num: 'Stage 04',
+    step: '04',
+    title: 'IndexNow Sync, Bot Monitoring & Citation Tracking',
+    body: 'We connect Google Search Console, Bing Webmaster Tools and IndexNow API pings so new pages get indexed within hours. Every fortnight, we verify crawler activity and track live citations across ChatGPT, Gemini and Google AI Overviews.',
+    accent: 'from-emerald-600 to-green-500',
+  },
+];
+
+const faqs = [
+  {
+    q: 'What Are Technical LLM SEO Services in Delhi NCR and Why Does My Website Need Them?',
+    a: 'Technical LLM SEO Services in Delhi NCR make your website code, content structure and server settings easy for Large Language Models like ChatGPT, Google Gemini and Perplexity to crawl, read and cite. Without clean static HTML, nested JSON LD schema, open AI bot permissions and a root llms.txt file, AI assistants often skip your site even if you rank on Google.',
+  },
+  {
+    q: 'What Is an llms.txt File and How Does It Help ChatGPT and Perplexity Read My Site?',
+    a: 'An llms.txt file is a plain text markdown guide placed at the root of your website, similar to how sitemaps guide search engines. It gives AI crawlers a clean, clutter free directory of your core services, pricing pages, office locations and company facts so models can retrieve accurate answers without parsing heavy menus or scripts.',
+  },
+  {
+    q: 'Why Do ChatGPT and Perplexity Miss Content on JavaScript Heavy Websites?',
+    a: 'While Googlebot runs a full browser rendering step to execute JavaScript, most AI crawlers like GPTBot, OAI SearchBot, ClaudeBot and PerplexityBot fetch raw HTML for speed and cost efficiency. If your service descriptions, pricing tables or FAQs load only after client side JavaScript runs, AI bots see an empty page. Server side rendering or static HTML fixes this completely.',
+  },
+  {
+    q: 'Which AI Crawlers Should Be Allowed in My robots.txt and CDN Firewall?',
+    a: 'To earn live citations across major AI search tools, your robots.txt file and CDN firewall (such as Cloudflare) should allow Googlebot, Google Extended, Bingbot, OAI SearchBot, GPTBot, ChatGPT User, PerplexityBot and ClaudeBot. We configure exact rules that welcome search and citation bots while blocking malicious scrapers.',
+  },
+  {
+    q: 'How Does Nested JSON LD Schema Help With Google AI Overviews and Gemini?',
+    a: 'Nested JSON LD schema connects your company name, address, phone number, founders, services, reviews and official directory profiles into one machine readable Knowledge Graph. When Google Gemini and Google AI Overviews see verified entity relationships and sameAs links in your code, they cite your pages with much higher confidence.',
+  },
+  {
+    q: 'Why Should We Convert PDF Brochures and Rate Cards Into HTML Tables?',
+    a: 'Large PDF files are slow to crawl, lack clean heading tags and rarely get linked as primary source cards in Google AI Overviews or ChatGPT Search. Converting your key specifications, fee structures and comparisons into native HTML5 tables on your service pages makes those facts immediately extractable for buyer prompts.',
+  },
+  {
+    q: 'How Long Does Technical LLM SEO Implementation Take?',
+    a: 'A complete technical LLM SEO sprint covering crawler permissions, llms.txt setup, nested JSON LD schema markup, Bing IndexNow integration and HTML table restructuring across your main commercial pages typically takes two to four weeks. AI crawler visits and live search citations usually pick up within four to six weeks of deployment.',
+  },
+  {
+    q: 'How Much Do Technical LLM SEO Services Cost in Delhi NCR?',
+    a: 'One time technical LLM readiness sprints for small to mid sized business websites in Delhi NCR typically start between ₹20,000 and ₹45,000 depending on your CMS and page count. Ongoing retainers that combine technical LLM maintenance with content restructuring and multi model citation tracking range from ₹30,000 to ₹85,000 per month.',
+  },
+];
+
+const trustStrip = [
+  'llms.txt & llms full.txt Setup',
+  'Nested JSON LD Entity Graphs',
+  'GPTBot & OAI SearchBot Access',
+  'Static HTML & SSR Delivery',
+  'Bing IndexNow Instant Sync',
+  'Semantic HTML5 Data Tables',
+  'Delhi, Noida, Gurgaon & Lucknow',
+  '100% Client Code Ownership',
+];
+
+const aioSchemaLocalBusiness = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "NK Digital Tech",
+  "url": "https://www.nkdigitaltech.net/technical-llm-seo-services-in-delhi-ncr/",
+  "logo": "https://www.nkdigitaltech.net/images/technical-llm-seo-delhi-ncr/hero-technical-llm-seo-delhi-ncr.webp",
+  "image": "https://www.nkdigitaltech.net/images/technical-llm-seo-delhi-ncr/hero-technical-llm-seo-delhi-ncr.webp",
+  "description": pageDescription,
+  "telephone": "+91-8052189051",
+  "email": "nkdigitaltech1@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Khazana Complex, Aashiana Colony",
+    "addressLocality": "Lucknow",
+    "addressRegion": "Uttar Pradesh",
+    "addressCountry": "IN"
+  },
+  "areaServed": [
+    "Delhi NCR",
+    "New Delhi",
+    "Noida",
+    "Greater Noida",
+    "Gurgaon",
+    "Gurugram",
+    "Lucknow",
+    "Faridabad",
+    "Ghaziabad"
+  ],
+  "serviceType": [
+    "Technical LLM SEO Services in Delhi NCR",
+    "LLM SEO Services",
+    "llms.txt Setup",
+    "JSON LD Schema Markup Services",
+    "AI Crawler Optimisation",
+    "Technical SEO Services in Delhi NCR"
+  ]
+});
+
+const aioSchemaFAQ = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map((item) => ({
+    "@type": "Question",
+    "name": item.q,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": item.a
+    }
+  }))
+});
+
+const aioSchemaBreadcrumb = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.nkdigitaltech.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "AI SEO Company in Delhi NCR",
+      "item": "https://www.nkdigitaltech.net/ai-seo-company-in-delhi-ncr/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Technical LLM SEO Services in Delhi NCR",
+      "item": "https://www.nkdigitaltech.net/technical-llm-seo-services-in-delhi-ncr/"
+    }
+  ]
+});
+---
+
+<Layout
+  title={pageTitle}
+  description={pageDescription}
+  canonical={pageCanonical}
+  ogImage="https://www.nkdigitaltech.net/images/technical-llm-seo-delhi-ncr/hero-technical-llm-seo-delhi-ncr.webp"
+  preloadImage="/images/technical-llm-seo-delhi-ncr/hero-technical-llm-seo-delhi-ncr.webp"
+  customSchemaLocalBusiness={aioSchemaLocalBusiness}
+  customSchemaFAQ={aioSchemaFAQ}
+  customSchemaBreadcrumb={aioSchemaBreadcrumb}
+  utilityTagline="Technical LLM SEO Services in Delhi NCR • llms.txt & JSON LD Schema"
+  brandSubtitle="Technical LLM, Schema & Crawler SEO"
+  footerBio="NK Digital Tech delivers Technical LLM SEO Services in Delhi NCR, building llms.txt files, nested JSON LD schema and clean static HTML so ChatGPT, Gemini, Perplexity and Google AI Overviews cite your business across Delhi, Noida, Gurgaon and Lucknow."
+  footerTagline="Technical LLM SEO Services in Delhi NCR | NK Digital Tech"
+>
+
+  <!-- =====================================================================
+       SECTION 1: HERO (DARK SURFACE WITH UNIQUE HERO IMAGE & JUSTIFIED COPY)
+  ===================================================================== -->
+  <section class="relative surface-dark overflow-hidden pt-7 pb-10 sm:pt-14 sm:pb-16 lg:pt-16 lg:pb-20 border-b border-slate-800/80">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="absolute inset-0 mesh-glow pointer-events-none"></div>
+    <div class="absolute -top-36 -left-36 w-96 h-96 bg-brand-500/20 rounded-full blur-[130px] pointer-events-none"></div>
+    <div class="absolute top-1/4 -right-36 w-96 h-96 bg-accent-500/20 rounded-full blur-[130px] pointer-events-none"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-7 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns: Headline & CTA -->
+        <div class="lg:col-span-7 text-left min-w-0">
+          <div class="badge-dark mb-4 sm:mb-5">
+            <span class="w-2 h-2 rounded-full bg-brand-400 animate-ping flex-shrink-0"></span>
+            <span class="min-w-0">llms.txt &bull; Nested JSON LD &bull; AI Crawler Access &bull; Static HTML</span>
+          </div>
+
+          <h1 class="font-display text-[1.95rem] sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-[1.15] sm:leading-[1.1] mb-4 sm:mb-5 text-glow">
+            Technical LLM SEO <br />
+            <span class="gradient-text-light">Services in Delhi NCR</span>
+          </h1>
+
+          <p class="text-[13.5px] sm:text-base md:text-lg text-slate-300 leading-relaxed mb-5 sm:mb-7 font-normal text-justify hyphens-auto [text-align-last:left]">
+            NK Digital Tech provides <strong class="text-white font-semibold">Technical LLM SEO Services in Delhi NCR</strong> built to make your website fast, clean and 100% readable for ChatGPT, Google Gemini, Perplexity and Google AI Overviews. We set up your root llms.txt file, nested JSON LD schema and AI crawler permissions so search models extract and cite your business across Delhi, Noida, Gurgaon and Lucknow.
+          </p>
+
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 mb-6 sm:mb-8">
+            <a href="/contact-us/" class="btn-primary w-full sm:w-auto min-h-[48px] text-sm sm:text-base px-5 sm:px-8 py-3.5 sm:py-4">
+              <span>Request a Free Technical LLM Audit</span>
+              <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+              </svg>
+            </a>
+            <a href="#services" class="btn-secondary-dark w-full sm:w-auto min-h-[48px] text-sm sm:text-base px-5 sm:px-7 py-3.5 sm:py-4">
+              <span>See Our Six Technical Pillars</span>
+            </a>
+          </div>
+
+          <!-- Trust Verification Strip -->
+          <div class="pt-4 sm:pt-5 border-t border-slate-800/80">
+            <div class="grid grid-cols-2 sm:flex sm:flex-wrap items-stretch sm:items-center gap-2">
+              {trustStrip.map((item) => (
+                <span class="px-2.5 sm:px-3 py-2 sm:py-1.5 rounded-lg bg-slate-900/90 border border-slate-800 text-[11px] sm:text-xs text-slate-300 font-medium flex items-center justify-center sm:justify-start text-center sm:text-left leading-tight">
+                  {item}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Unique Technical LLM SEO Hero Image -->
+        <div class="lg:col-span-5 min-w-0">
+          <div class="relative rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-700/80 shadow-2xl shadow-brand-500/15 bg-slate-900 group">
+            <div class="relative">
+              <img
+                src="/images/technical-llm-seo-delhi-ncr/hero-technical-llm-seo-delhi-ncr.webp"
+                alt="Technical LLM SEO Services in Delhi NCR Engineers Auditing llms.txt and JSON LD Schema"
+                width="960"
+                height="540"
+                fetchpriority="high"
+                decoding="async"
+                class="w-full aspect-[16/10] sm:aspect-auto sm:h-64 md:h-[330px] lg:h-[350px] object-cover object-center group-hover:scale-105 transition-transform duration-500"
+              />
+              <div class="hidden sm:block absolute inset-0 bg-gradient-to-t from-[#050a14] via-transparent to-transparent opacity-80"></div>
+            </div>
+            <div class="relative sm:absolute sm:bottom-4 sm:left-4 sm:right-4 glass-card border-t sm:border border-slate-800 sm:rounded-2xl p-3.5 sm:p-4">
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-1">
+                <span class="text-xs font-bold text-white">Machine Readable Architecture</span>
+                <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-400">
+                  <span class="w-2 h-2 rounded-full bg-emerald-400 flex-shrink-0"></span>
+                  100% Bot Parse Rate
+                </span>
+              </div>
+              <p class="text-[11px] sm:text-xs text-slate-300 text-justify hyphens-auto [text-align-last:left] leading-relaxed">
+                Engineered so GPTBot, OAI SearchBot, Google Extended and PerplexityBot read your website without errors.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 2: INTRODUCTION (CRISP WHITE CONTRAST SECTION + TEAM IMAGE)
+  ===================================================================== -->
+  <section class="relative surface-white py-10 sm:py-16 lg:py-20 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-7 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns: Snapshot + Concise Copy -->
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-light mb-3 sm:mb-3.5">Machine Readable Website Foundations</div>
+          <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-snug sm:leading-tight mb-3.5 sm:mb-5">
+            How Our Technical LLM SEO Services in Delhi NCR <span class="gradient-text-dark">Make Your Website Easy for AI Models to Cite</span>
+          </h2>
+          <div class="space-y-3.5 sm:space-y-4 text-slate-700 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            <p>
+              Our <strong>Technical LLM SEO Services in Delhi NCR</strong> remove the code barriers that stop AI search engines from reading your website. Even the best written content fails to earn citations if your firewall blocks OpenAI crawlers, your pricing hides inside client side JavaScript or your pages lack structured schema markup.
+            </p>
+            <p>
+              We combine clean static HTML delivery, root llms.txt files, Knowledge Graph schema SEO and Bing IndexNow sync so every AI assistant can verify your business in milliseconds. Working with our <a href="/ai-seo-company-in-delhi-ncr/" class="text-brand-600 hover:text-brand-700 font-semibold">AI SEO Company in Delhi NCR</a> alongside proven organic fundamentals from the <a href="/best-seo-company-in-delhi-ncr/" class="text-brand-600 hover:text-brand-700 font-semibold">Best SEO Company in Delhi NCR</a> gives your website the exact technical backbone needed to win citations across Google and standalone AI tools.
+            </p>
+          </div>
+          <div class="mt-5 sm:mt-7 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
+            <a href="/contact-us/" class="btn-primary w-full sm:w-auto min-h-[48px]">
+              <span>Book a Technical Audit With Our Team</span>
+              <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+              </svg>
+            </a>
+            <a href="#why-us" class="btn-secondary-light w-full sm:w-auto min-h-[48px]">
+              <span>Compare Technical Standards</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Unique Team Image + Stats -->
+        <div class="lg:col-span-5 space-y-3.5 sm:space-y-4 min-w-0">
+          <div class="rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-200 shadow-lg bg-slate-100">
+            <img
+              src="/images/technical-llm-seo-delhi-ncr/team-technical-llm-seo-delhi-ncr.webp"
+              alt="NK Digital Tech Engineers Executing Technical LLM SEO Services in Delhi NCR"
+              width="800"
+              height="533"
+              class="w-full aspect-[16/10] sm:aspect-auto sm:h-56 lg:h-60 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="grid grid-cols-2 gap-3 sm:gap-3.5">
+            {[
+              { val: 'llms.txt', label: 'Root Markdown Guide', sub: 'Direct LLM crawler directory' },
+              { val: 'JSON LD', label: 'Nested Entity Graphs', sub: 'Organization, Service & FAQ' },
+              { val: 'Static HTML', label: 'Zero JS Crawl Blocks', sub: 'Readable by all AI search bots' },
+              { val: '100%', label: 'Client Code Ownership', sub: 'Full schema & repository rights' },
+            ].map((stat) => (
+              <div class="elevated-card rounded-xl sm:rounded-2xl p-3 sm:p-3.5 min-w-0">
+                <div class="font-display font-black text-xl sm:text-2xl text-brand-600 mb-0.5">{stat.val}</div>
+                <div class="text-[11px] sm:text-xs font-bold text-slate-900 leading-snug">{stat.label}</div>
+                <div class="text-[10.5px] sm:text-[11px] text-slate-500 leading-snug mt-0.5">{stat.sub}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 3: PROBLEM STATEMENT (DEEP INDIGO DARK CONTRAST SECTION)
+  ===================================================================== -->
+  <section class="relative surface-indigo py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="max-w-7xl mx-auto relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns: Problem Statement Justified Copy -->
+        <div class="lg:col-span-7 min-w-0">
+          <div class="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-3.5 py-1 sm:py-1.5 rounded-full text-[10px] sm:text-xs font-bold uppercase tracking-wider sm:tracking-widest bg-amber-500/10 border border-amber-500/30 text-amber-300 max-w-full leading-snug mb-4 sm:mb-5">
+            <svg class="w-4 h-4 text-amber-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+            </svg>
+            <span>Why AI Bots Fail to Read Most Websites</span>
+          </div>
+
+          <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-white tracking-tight leading-snug sm:leading-tight mb-4 sm:mb-6">
+            Why ChatGPT, Gemini and Google Skip Websites With Weak Technical Setup
+          </h2>
+
+          <div class="space-y-3.5 sm:space-y-4 text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            <p>
+              Most business websites in Delhi NCR were built for human browsers, not for AI crawlers. When GPTBot, OAI SearchBot or PerplexityBot visits a website, it does not wait five seconds for heavy JavaScript frameworks to load text, and it cannot click tabs or open locked PDF brochures to find your pricing.
+            </p>
+            <p>
+              Even worse, many hosting firewalls and default CDN rules silently block AI search bots completely. When a crawler hits a blocked robots.txt rule or a blank client side page, it moves straight to your competitor. Pairing clean code from the <a href="/best-website-development-company-in-delhi-ncr/" class="text-brand-300 hover:text-brand-200 font-semibold">Best Website Development Company in Delhi NCR</a> with our technical SEO services in Delhi NCR fixes every crawl, rendering and schema bottleneck so AI models read your facts effortlessly.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Diagnostic Comparison Cards -->
+        <div class="lg:col-span-5 space-y-3.5 sm:space-y-4 min-w-0">
+          <div class="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6 border-l-4 border-l-rose-500">
+            <div class="flex flex-wrap items-center justify-between gap-1.5 mb-2">
+              <span class="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-rose-400">Unoptimised Website Code</span>
+              <span class="text-[11px] sm:text-xs text-slate-400">Skipped by AI Crawlers</span>
+            </div>
+            <h3 class="font-display font-bold text-[15px] sm:text-base text-white mb-2 leading-snug">Client Side Scripts, Blocked Bots &amp; PDF Silos</h3>
+            <p class="text-xs text-slate-300 leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+              Hides service facts behind slow JavaScript, blocks OpenAI and Perplexity bots in firewall rules, lacks an llms.txt file and outputs broken schema markup.
+            </p>
+          </div>
+
+          <div class="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6 border-l-4 border-l-emerald-400">
+            <div class="flex flex-wrap items-center justify-between gap-1.5 mb-2">
+              <span class="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-emerald-400">NK Digital Tech LLM Architecture</span>
+              <span class="text-[11px] sm:text-xs text-brand-300">100% Machine Readable</span>
+            </div>
+            <h3 class="font-display font-bold text-[15px] sm:text-base text-white mb-2 leading-snug">Static HTML, Root llms.txt &amp; Nested JSON LD</h3>
+            <p class="text-xs text-slate-300 leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+              Serves fast static HTML5 tables, 40 to 60 word answer blocks, a clean llms.txt index, open AI crawler permissions and nested Knowledge Graph schema.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 4: SERVICES (LIGHT COOL ALABASTER CONTRAST + SERVICES IMAGE)
+  ===================================================================== -->
+  <section id="services" class="relative surface-cool scroll-mt-20 py-11 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <!-- Services Header with Unique Services Image -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 items-center mb-9 sm:mb-16">
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-light mb-3">Six Core Engineering Deliverables</div>
+          <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-snug sm:leading-tight mb-3 sm:mb-4">
+            What Is Included in Our Technical LLM SEO Services Scope
+          </h2>
+          <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            Our AI SEO services in Delhi NCR unite technical crawler engineering, Answer Engine Optimisation and Generative Engine Optimisation into one complete system. The technical foundation we build here directly powers our <a href="/google-ai-overview-seo-services-in-delhi-ncr/" class="text-brand-600 hover:text-brand-700 font-semibold">Google AI Overview SEO Services in Delhi NCR</a> and our <a href="/chatgpt-seo-services-in-delhi-ncr/" class="text-brand-600 hover:text-brand-700 font-semibold">ChatGPT SEO Services in Delhi NCR</a> so every page on your domain is ready for live citation extraction.
+          </p>
+        </div>
+        <div class="lg:col-span-5 min-w-0">
+          <div class="rounded-2xl overflow-hidden border border-slate-200 shadow-md bg-white">
+            <img
+              src="/images/technical-llm-seo-delhi-ncr/services-technical-llm-seo-citations.webp"
+              alt="llms.txt Nested JSON LD Schema and Static HTML Feeding AI Search Crawlers"
+              width="800"
+              height="450"
+              class="w-full aspect-[16/9] sm:aspect-auto sm:h-56 lg:h-64 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- 3 Columns x 2 Rows Grid Layout -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-7">
+        {services.map((s) => (
+          <div class="elevated-card rounded-2xl p-5 sm:p-7 flex flex-col justify-between group sm:hover:-translate-y-1">
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-4 sm:mb-6">
+                <div class={`w-11 h-11 sm:w-12 sm:h-12 rounded-xl border flex items-center justify-center flex-shrink-0 ${s.iconStyle}`}>
+                  <Fragment set:html={s.icon} />
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class={`text-[10.5px] sm:text-[11px] font-semibold px-2.5 py-1 rounded-md ${s.badgeColor}`}>
+                    {s.category}
+                  </span>
+                  <span class="font-display font-black text-base sm:text-lg text-slate-300">{s.num}</span>
+                </div>
+              </div>
+
+              <h3 class="font-display font-bold text-[17px] sm:text-xl text-slate-900 mb-2.5 sm:mb-3 leading-snug group-hover:text-brand-600 transition-colors">
+                {s.title}
+              </h3>
+
+              <p class="text-slate-600 text-[13px] sm:text-sm leading-relaxed mb-4 sm:mb-6 text-justify hyphens-auto [text-align-last:left]">
+                {s.body}
+              </p>
+            </div>
+
+            <div>
+              <div class={`rounded-xl border p-3.5 sm:p-4 mb-3.5 sm:mb-5 ${s.impactStyle}`}>
+                <div class="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-slate-900 mb-1">
+                  <svg class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                  </svg>
+                  <span>Technical Impact</span>
+                </div>
+                <p class="text-xs text-slate-700 leading-relaxed font-medium text-justify hyphens-auto [text-align-last:left]">
+                  {s.impact}
+                </p>
+              </div>
+
+              <a href={s.href} class="inline-flex items-center gap-2 py-2.5 min-h-[44px] text-xs font-bold text-brand-600 hover:text-brand-700 group-hover:gap-3 transition-all">
+                <span>{s.cta}</span>
+                <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 5: REGIONAL LOCATIONS (DARK NAVY + MULTI CITY IMAGE)
+  ===================================================================== -->
+  <section id="locations" class="relative surface-navy scroll-mt-20 py-11 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <!-- Regional Header with Unique Multi City Image -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 items-center mb-9 sm:mb-16">
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-dark mb-3">Regional Technical SEO Coverage</div>
+          <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-white tracking-tight leading-snug sm:leading-tight mb-3 sm:mb-4">
+            Technical LLM SEO Support Across Delhi, Noida, Gurgaon and Lucknow
+          </h2>
+          <p class="text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            Multi location businesses across Delhi NCR need clean LocalBusiness schema, areaServed declarations and branch specific URLs inside their llms.txt file so AI models know which office serves which city. Pairing our technical setup with <a href="/gemini-seo-services-in-delhi-ncr/" class="text-brand-300 hover:text-brand-200 font-semibold">Gemini SEO Services in Delhi NCR</a> connects your regional pages and Google Maps signals across Delhi, Noida, Gurgaon and our Lucknow headquarters.
+          </p>
+        </div>
+        <div class="lg:col-span-5 min-w-0">
+          <div class="rounded-2xl overflow-hidden border border-slate-700/80 shadow-xl bg-slate-900">
+            <img
+              src="/images/technical-llm-seo-delhi-ncr/regional-technical-llm-seo-ncr-hubs.webp"
+              alt="Regional Technical LLM SEO Services Serving Delhi Noida Gurgaon and Lucknow"
+              width="800"
+              height="450"
+              class="w-full aspect-[16/9] sm:aspect-auto sm:h-56 lg:h-64 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- 1 Row x 4 Columns Responsive Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+        {cities.map((c) => (
+          <div class="glass-card rounded-2xl p-5 sm:p-6 flex flex-col justify-between group sm:hover:-translate-y-1">
+            <div>
+              <div class={`h-1 w-full bg-gradient-to-r ${c.accent} rounded-full mb-4 sm:mb-5`}></div>
+
+              <div class="flex items-center justify-between gap-2 mb-3.5 sm:mb-4">
+                <span class="px-2.5 py-1 rounded-md bg-slate-800 border border-slate-700 text-[11px] font-bold uppercase tracking-wider text-brand-300">
+                  {c.hub}
+                </span>
+                <span class="text-xs font-semibold text-slate-400">{c.city}</span>
+              </div>
+
+              <h3 class="font-display font-bold text-base sm:text-lg text-white mb-2.5 sm:mb-3 leading-snug">
+                {c.keyword}
+              </h3>
+
+              <p class="text-slate-300 text-[13px] sm:text-sm leading-relaxed mb-4 sm:mb-5 text-justify hyphens-auto [text-align-last:left]">
+                {c.desc}
+              </p>
+            </div>
+
+            <div class="pt-3.5 sm:pt-4 border-t border-slate-800">
+              <a href={c.href} class="inline-flex items-center gap-1.5 py-2.5 min-h-[44px] text-xs font-bold text-brand-400 hover:text-brand-300 group-hover:gap-2.5 transition-all">
+                <span>{c.cta}</span>
+                <svg class="w-3.5 h-3.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 6: WHY NK DIGITAL TECH (CRISP WHITE CONTRAST SECTION)
+  ===================================================================== -->
+  <section id="why-us" class="relative surface-white scroll-mt-20 py-11 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-14 text-left sm:text-center">
+        <div class="badge-light mb-3">Why Businesses Choose NK Digital Tech</div>
+        <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-snug sm:leading-tight mb-3 sm:mb-4">
+          How Our Technical LLM SEO Differs From Standard Website Audits
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed mb-4 text-justify hyphens-auto [text-align-last:left]">
+          Most agencies run an automated site audit tool, fix a few broken meta tags and call it technical SEO. Our LLM SEO services go into your server logs, HTML rendering pipeline, schema graphs and markdown indices so modern AI retrieval systems read your website without friction.
+        </p>
+        <p class="text-slate-700 font-semibold text-xs sm:text-sm">
+          See how our technical LLM engineering compares with a typical SEO vendor:
+        </p>
+      </div>
+
+      <!-- Desktop Comparison Matrix -->
+      <div class="hidden md:block overflow-hidden rounded-2xl border border-slate-200 shadow-lg">
+        <table class="w-full text-left border-collapse">
+          <thead>
+            <tr class="bg-slate-900 text-white">
+              <th class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-slate-300 w-1/4">
+                Evaluation Point
+              </th>
+              <th class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-rose-300 w-[37.5%] border-l border-slate-800">
+                Typical SEO Vendor
+              </th>
+              <th class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-brand-300 w-[37.5%] border-l border-slate-800 bg-slate-950">
+                NK Digital Tech (Technical LLM System)
+              </th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200 text-sm">
+            {comparison.map((row, idx) => (
+              <tr class={idx % 2 === 0 ? 'bg-white' : 'bg-slate-50/80'}>
+                <td class="py-5 px-6 font-display font-bold text-slate-900">
+                  {row.metric}
+                </td>
+                <td class="py-5 px-6 text-slate-600 border-l border-slate-200">
+                  <div class="flex items-start gap-2.5">
+                    <svg class="w-4 h-4 text-rose-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                    <span>{row.typical}</span>
+                  </div>
+                </td>
+                <td class="py-5 px-6 text-slate-900 font-medium border-l border-slate-200 bg-sky-50/40">
+                  <div class="flex items-start gap-2.5">
+                    <svg class="w-4 h-4 text-emerald-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span>{row.nk}</span>
+                  </div>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Mobile Comparison Cards -->
+      <div class="md:hidden space-y-3.5">
+        {comparison.map((row) => (
+          <div class="elevated-card rounded-2xl p-4 space-y-2.5">
+            <h3 class="font-display font-bold text-slate-900 text-[15px] leading-snug">{row.metric}</h3>
+            <div class="rounded-xl bg-rose-50 border border-rose-100 p-3">
+              <div class="flex items-center gap-1.5 mb-1">
+                <svg class="w-3.5 h-3.5 text-rose-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+                <p class="text-[10px] font-bold uppercase tracking-wider text-rose-600">Typical Vendor</p>
+              </div>
+              <p class="text-xs text-slate-700 leading-relaxed text-justify hyphens-auto [text-align-last:left]">{row.typical}</p>
+            </div>
+            <div class="rounded-xl bg-sky-50 border border-sky-200 p-3">
+              <div class="flex items-center gap-1.5 mb-1">
+                <svg class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                </svg>
+                <p class="text-[10px] font-bold uppercase tracking-wider text-brand-600">NK Digital Tech</p>
+              </div>
+              <p class="text-xs text-slate-900 font-semibold leading-relaxed text-justify hyphens-auto [text-align-last:left]">{row.nk}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 7: INDUSTRIES (LIGHT SLATE CONTRAST SECTION - 3x4 GRID)
+  ===================================================================== -->
+  <section id="industries" class="relative surface-slate scroll-mt-20 py-11 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-16 text-left sm:text-center">
+        <div class="badge-light mb-3">Industry Specific Schema &amp; Code Plans</div>
+        <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-snug sm:leading-tight mb-3 sm:mb-4">
+          How Twelve Delhi NCR Sectors Use Technical LLM SEO to Win Citations
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          Every industry has unique data formats, from RERA project tables and industrial ISO specs to hospital doctor directories. Here is how we engineer machine readable HTML and schema across twelve major sectors.
+        </p>
+      </div>
+
+      <!-- 3 Columns Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-7">
+        {industries.map((ind) => (
+          <div class={`elevated-card rounded-2xl p-5 sm:p-7 border-t-4 ${ind.accentBorder} flex flex-col justify-between sm:hover:-translate-y-1`}>
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-4 sm:mb-5">
+                <div class={`w-10 h-10 sm:w-11 sm:h-11 rounded-xl border flex items-center justify-center flex-shrink-0 ${ind.iconBg}`}>
+                  <Fragment set:html={ind.icon} />
+                </div>
+                <span class="text-[11px] font-semibold text-slate-600 bg-slate-100 px-2.5 py-1 rounded-md">
+                  {ind.sector}
+                </span>
+              </div>
+
+              <h3 class="font-display font-bold text-[17px] sm:text-xl text-slate-900 mb-3 sm:mb-4 leading-snug">
+                {ind.title}
+              </h3>
+
+              <div class="mb-4 sm:mb-5">
+                <p class="text-[11px] font-bold uppercase tracking-wider text-brand-600 mb-1.5">
+                  Technical LLM Strategy
+                </p>
+                <p class="text-slate-600 text-[13px] sm:text-sm leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+                  {ind.focus}
+                </p>
+              </div>
+            </div>
+
+            <div class="rounded-xl bg-emerald-50/70 border border-emerald-200/80 p-3.5 sm:p-4">
+              <p class="text-[11px] font-bold uppercase tracking-wider text-emerald-700 mb-1">
+                Business Outcome
+              </p>
+              <p class="text-slate-800 text-xs font-medium leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+                {ind.outcome}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 8: HOW WE WORK (CRISP WHITE CONTRAST SECTION - 4 STAGES)
+  ===================================================================== -->
+  <section class="relative surface-white py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-16 text-left sm:text-center">
+        <div class="badge-light mb-3">Our 4 Step Engineering Roadmap</div>
+        <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-snug sm:leading-tight mb-3 sm:mb-4">
+          How We Deploy Technical LLM Readiness Step by Step
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          Making your domain machine readable follows a clean four stage engineering process. We audit your crawler logs and raw HTML first, fix JavaScript and DOM structure, deploy your llms.txt and nested JSON LD schema and monitor live bot indexing every fortnight.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-7">
+        {stages.map((s) => (
+          <div class="elevated-card rounded-2xl p-5 sm:p-8 relative overflow-hidden group sm:hover:-translate-y-1">
+            <div class="flex items-center justify-between gap-4 mb-3.5 sm:mb-5">
+              <span class={`inline-flex items-center px-2.5 sm:px-3 py-1 rounded-lg text-xs font-bold uppercase tracking-wider text-white bg-gradient-to-r ${s.accent}`}>
+                {s.num}
+              </span>
+              <span class="font-display font-black text-3xl sm:text-4xl text-slate-200 group-hover:text-slate-300 transition-colors">
+                {s.step}
+              </span>
+            </div>
+            <h3 class="font-display font-bold text-[17px] sm:text-xl text-slate-900 mb-2.5 sm:mb-3 leading-snug">
+              {s.title}
+            </h3>
+            <p class="text-slate-600 text-[13px] sm:text-sm leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+              {s.body}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 9: CONCLUSION / PARTNER SECTION (DARK INDIGO + GROWTH IMAGE)
+  ===================================================================== -->
+  <section class="relative surface-indigo py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-7 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns: Conclusion Paragraphs (Justified) -->
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-dark mb-3.5 sm:mb-4">Build an AI Ready Website</div>
+          <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-white tracking-tight leading-snug sm:leading-tight mb-4 sm:mb-6">
+            Upgrade Your Website With Technical LLM SEO Services in Delhi NCR
+          </h2>
+          <div class="space-y-4 sm:space-y-5 text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            <p>
+              Every citation on ChatGPT, Google Gemini, Perplexity and Google AI Overviews starts with a successful technical crawl. When your website serves clean static HTML, structured data tables, an accurate llms.txt directory and a nested JSON LD entity graph, AI systems can read and trust your facts without friction.
+            </p>
+            <p>
+              When you choose NK Digital Tech for <strong class="text-white font-semibold">Technical LLM SEO Services in Delhi NCR</strong>, you work directly with senior technical SEO architects and full stack developers serving Delhi, Noida, Gurgaon and Lucknow. Request your free technical LLM audit today and see how we can make your domain 100% ready for conversational AI search.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Unique Growth Image -->
+        <div class="lg:col-span-5 min-w-0">
+          <div class="rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-700/80 shadow-2xl bg-slate-900">
+            <img
+              src="/images/technical-llm-seo-delhi-ncr/growth-technical-llm-seo-leads.webp"
+              alt="Business Director Reviewing Verified Citations From Technical LLM SEO Services in Delhi NCR"
+              width="800"
+              height="450"
+              class="w-full aspect-[16/10] sm:aspect-auto sm:h-64 lg:h-72 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 10: FAQ (LIGHT COOL SLATE CONTRAST SECTION)
+  ===================================================================== -->
+  <section id="faq" class="relative surface-cool scroll-mt-20 py-11 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-left sm:text-center mb-9 sm:mb-14">
+        <div class="badge-light mb-3">Questions Asked on ChatGPT, Gemini &amp; Google</div>
+        <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-snug sm:leading-tight mb-3 sm:mb-4">
+          Frequently Asked Questions About Technical LLM SEO Services in Delhi NCR
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          Clear, factual answers to the exact technical questions CTOs, founders and marketing heads ask about llms.txt, JSON LD schema, AI crawler rules and JavaScript rendering.
+        </p>
+      </div>
+
+      <div class="space-y-3 sm:space-y-4">
+        {faqs.map((f, i) => (
+          <details class="elevated-card rounded-2xl group overflow-hidden" open={i === 0}>
+            <summary class="flex items-start sm:items-center justify-between gap-3 sm:gap-4 px-4 sm:px-6 py-4 sm:py-5 min-h-[54px] select-none">
+              <div class="flex items-start sm:items-center gap-2.5 sm:gap-3.5 text-left min-w-0">
+                <span class="w-6 h-6 sm:w-7 sm:h-7 rounded-lg bg-sky-50 border border-sky-200 text-brand-600 font-display font-bold text-xs flex items-center justify-center flex-shrink-0 mt-0.5 sm:mt-0">
+                  0{i + 1}
+                </span>
+                <h3 class="font-display font-bold text-slate-900 text-[14px] sm:text-base md:text-lg leading-snug">
+                  {f.q}
+                </h3>
+              </div>
+              <span class="faq-icon w-7 h-7 sm:w-8 sm:h-8 rounded-full border border-slate-200 text-slate-600 flex items-center justify-center flex-shrink-0 mt-0.5 sm:mt-0">
+                <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                </svg>
+              </span>
+            </summary>
+            <div class="px-4 sm:px-6 pb-5 sm:pb-6 pt-3 text-slate-600 text-[13px] sm:text-sm md:text-base leading-relaxed border-t border-slate-100 text-justify hyphens-auto [text-align-last:left]">
+              {f.a}
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 11: SHORT 2 TO 3 LINE CALL TO ACTION BANNER (LAST SECTION)
+  ===================================================================== -->
+  <section id="contact" class="relative surface-dark scroll-mt-20 py-11 sm:py-16 lg:py-20 px-4 sm:px-6 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-5xl mx-auto">
+      <div class="rounded-2xl sm:rounded-3xl bg-gradient-to-r from-brand-600 via-brand-700 to-accent-700 p-5 sm:p-10 md:p-12 text-center text-white shadow-2xl border border-white/15 relative overflow-hidden">
+        <div class="relative z-10 max-w-2xl mx-auto">
+          <h2 class="font-display font-black text-[1.45rem] sm:text-3xl md:text-4xl text-white tracking-tight leading-snug mb-3 sm:mb-4">
+            Ready to Make Your Website 100% Readable for ChatGPT &amp; Gemini?
+          </h2>
+
+          <p class="text-sky-50 text-[13px] sm:text-sm md:text-base leading-relaxed mb-6 sm:mb-8 text-justify sm:text-center hyphens-auto [text-align-last:left] sm:[text-align-last:center]">
+            Book a free technical LLM audit with NK Digital Tech to review your current llms.txt setup, JSON LD schema, AI bot permissions and HTML rendering across Delhi, Noida, Gurgaon and Lucknow.
+          </p>
+
+          <a
+            href="/contact-us/"
+            class="inline-flex w-full sm:w-auto min-h-[48px] items-center justify-center gap-2 sm:gap-3 px-5 sm:px-8 py-3.5 sm:py-4 rounded-xl bg-white text-slate-950 hover:bg-sky-50 font-display font-bold text-sm sm:text-base shadow-xl transition-all duration-300 active:scale-95 text-center leading-snug"
+          >
+            <span>Request Your Free Technical LLM Audit</span>
+            <svg class="w-4 h-4 sm:w-5 sm:h-5 text-brand-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mobile Sticky Bottom Quick Action Bar -->
+  <div class="mobile-sticky-cta sm:hidden fixed bottom-0 inset-x-0 z-40 bg-[#050a14]/95 backdrop-blur-xl border-t border-slate-800 px-3.5 pt-2.5 pb-[max(0.625rem,env(safe-area-inset-bottom))] shadow-[0_-8px_24px_rgba(0,0,0,0.45)] transition-all duration-300">
+    <div class="flex items-center gap-2.5">
+      <a
+        href="/contact-us/"
+        class="btn-primary flex-1 min-h-[44px] py-2.5 px-4 text-xs font-bold rounded-xl min-w-0"
+      >
+        <span class="truncate">Free Technical LLM Audit</span>
+        <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+        </svg>
+      </a>
+      <a
+        href="#services"
+        class="btn-secondary-dark min-h-[44px] py-2.5 px-3.5 text-xs font-semibold rounded-xl flex-shrink-0"
+      >
+        <span>Services</span>
+      </a>
+    </div>
+  </div>
+
+</Layout>

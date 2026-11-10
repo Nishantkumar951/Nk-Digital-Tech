@@ -1,0 +1,1079 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import '../../styles/global.css';
+
+const pageTitle = 'Best SEO for SaaS Companies in Delhi | NK Digital Tech';
+const pageDescription = 'Need SEO for SaaS Companies in Delhi? NK Digital Tech drives B2B software demo signups, free trials and MRR growth across Google, ChatGPT and Gemini.';
+const pageCanonical = 'https://www.nkdigitaltech.net/best-seo-company-in-delhi/SaaS-Technology-Companies/';
+
+const services = [
+  {
+    num: '01',
+    category: 'BoFU & Comparison SEO',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>`,
+    iconStyle: 'bg-sky-50 border-sky-200 text-brand-600',
+    impactStyle: 'bg-sky-50/80 border-sky-200/80 text-slate-800',
+    badgeColor: 'text-brand-600 bg-sky-100/80',
+    title: 'Competitor Alternative & Use Case SEO',
+    body: 'Our SaaS SEO services in Delhi build bottom of funnel comparison pages, competitor alternative hubs and industry use case pages that convert software buyers.',
+    impact: 'Direct product demo bookings and free trial signups from high intent B2B buyers.',
+    cta: 'View Our Core Delhi SEO Approach',
+    href: '/best-seo-company-in-delhi/',
+  },
+  {
+    num: '02',
+    category: 'Local & Global Tech SEO',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>`,
+    iconStyle: 'bg-emerald-50 border-emerald-200 text-emerald-600',
+    impactStyle: 'bg-emerald-50/80 border-emerald-200/80 text-slate-800',
+    badgeColor: 'text-emerald-700 bg-emerald-100/80',
+    title: 'Delhi Tech Hub & Global Market SEO',
+    body: 'We rank your Delhi HQ on Google Maps across Connaught Place, Nehru Place and Okhla while scaling international organic rankings across USA, UK and APAC.',
+    impact: 'Strong local enterprise trust combined with high margin global inbound pipeline.',
+    cta: 'See Local SEO Services in Delhi',
+    href: '/local-seo-services-in-delhi/',
+  },
+  {
+    num: '03',
+    category: 'Technical SaaS SEO',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>`,
+    iconStyle: 'bg-cyan-50 border-cyan-200 text-cyan-700',
+    impactStyle: 'bg-cyan-50/80 border-cyan-200/80 text-slate-800',
+    badgeColor: 'text-cyan-700 bg-cyan-100/80',
+    title: 'JavaScript Rendering & Programmatic SEO',
+    body: 'Our technical SEO for SaaS in Delhi fixes React, Next.js and Vue crawl issues, optimises API docs and builds programmatic integration pages with SoftwareApplication schema.',
+    impact: 'Fast indexing of thousands of feature, template and integration landing pages.',
+    cta: 'Explore Delhi Web Development',
+    href: '/website-development-company-in-delhi/',
+  },
+  {
+    num: '04',
+    category: 'Answer Engine SEO (AEO)',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>`,
+    iconStyle: 'bg-amber-50 border-amber-200 text-amber-600',
+    impactStyle: 'bg-amber-50/80 border-amber-200/80 text-slate-800',
+    badgeColor: 'text-amber-700 bg-amber-100/80',
+    title: 'Answer Engine SEO for Software Buyers',
+    body: 'We publish clear 50 word answer blocks, pricing tier tables and API security FAQs so your SaaS product wins featured snippets and top Google answer boxes.',
+    impact: 'Captures CTOs, product heads and operations teams during software vendor evaluation.',
+    cta: 'Check AEO Services in Delhi',
+    href: '/aeo-services-in-delhi/',
+  },
+  {
+    num: '05',
+    category: 'Generative AI SEO (GEO)',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>`,
+    iconStyle: 'bg-violet-50 border-violet-200 text-accent-600',
+    impactStyle: 'bg-violet-50/80 border-violet-200/80 text-slate-800',
+    badgeColor: 'text-accent-600 bg-violet-100/80',
+    title: 'GEO Citations in ChatGPT, Claude & Gemini',
+    body: 'We align your feature matrices, G2 and Capterra trust signals and llms.txt files so ChatGPT, Gemini and Perplexity recommend your software stack first.',
+    impact: 'Consistent product recommendations when B2B buyers ask AI for best software tools.',
+    cta: 'Explore Delhi AI SEO Services',
+    href: '/ai-seo-company-in-delhi/',
+  },
+  {
+    num: '06',
+    category: 'SaaS Link Building & PR',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>`,
+    iconStyle: 'bg-indigo-50 border-indigo-200 text-indigo-600',
+    impactStyle: 'bg-indigo-50/80 border-indigo-200/80 text-slate-800',
+    badgeColor: 'text-indigo-700 bg-indigo-100/80',
+    title: 'SaaS Digital PR & High DR Link Building',
+    body: 'Our SaaS link building in Delhi earns contextual backlinks from SaaS blogs, tech media, partner directories and software roundups to lift your domain rating.',
+    impact: 'Accelerates page one rankings for competitive software category keywords.',
+    cta: 'Build SaaS Domain Authority',
+    href: '#contact',
+  },
+];
+
+const cities = [
+  {
+    hub: 'Corridor 01',
+    city: 'South Delhi Tech & IT Hubs',
+    corridor: 'Nehru Place • Okhla IT Park • Saket • Hauz Khas • Jasola',
+    keyword: 'SEO for SaaS & IT Firms in South Delhi',
+    desc: 'We help B2B SaaS startups, AI product studios and enterprise software firms in Nehru Place, Okhla, Saket and Hauz Khas scale organic demo signups.',
+    cta: 'Explore South Delhi Search Growth',
+    href: '/digital-marketing-company-in-south-delhi/',
+    accent: 'from-brand-500 to-sky-400',
+  },
+  {
+    hub: 'Corridor 02',
+    city: 'Central Delhi Enterprise Belt',
+    corridor: 'Connaught Place • Barakhamba Road • Aerocity • Bhikaji Cama Place',
+    keyword: 'Enterprise Software SEO in Central Delhi',
+    desc: 'From fintech and regtech platforms in Connaught Place to global SaaS offices in Aerocity, we position your software first on Google and AI prompts.',
+    cta: 'Audit Your SaaS Visibility',
+    href: '#contact',
+    accent: 'from-accent-500 to-violet-400',
+  },
+  {
+    hub: 'Corridor 03',
+    city: 'North Delhi Tech Corridors',
+    corridor: 'Netaji Subhash Place • Pitampura • Rohini • Model Town',
+    keyword: 'B2B Tech & Software SEO in North Delhi',
+    desc: 'We drive inbound trial registrations and enterprise RFQs for ERP, billing, HRTech and EdTech software companies in Netaji Subhash Place and Rohini.',
+    cta: 'Explore North Delhi Search Growth',
+    href: '/digital-marketing-company-in-north-delhi/',
+    accent: 'from-cyan-500 to-teal-400',
+  },
+  {
+    hub: 'Corridor 04',
+    city: 'West Delhi Digital Hubs',
+    corridor: 'Janakpuri • Dwarka • Rajouri Garden • Kirti Nagar • Naraina',
+    keyword: 'SaaS Growth Marketing in West Delhi',
+    desc: 'We build high converting feature, integration and comparison pages for cloud software and app development firms across Janakpuri, Dwarka and Rajouri Garden.',
+    cta: 'Explore West Delhi Search Growth',
+    href: '/digital-marketing-company-in-west-delhi/',
+    accent: 'from-emerald-500 to-green-400',
+  },
+];
+
+const comparison = [
+  {
+    metric: 'Focus of Content Strategy',
+    typical: 'Writes top of funnel generic tech blogs that bring students and zero software buyers',
+    nk: 'Builds competitor alternative, vs comparison, pricing and integration pages that book demos',
+  },
+  {
+    metric: 'Customer Acquisition Cost (CAC)',
+    typical: 'Over-reliance on expensive ₹2,000+ per click Google Ads and cold outbound emails',
+    nk: 'Compounding organic trial signups and demo requests that lower blended CAC every quarter',
+  },
+  {
+    metric: 'AI Search & LLM Recommendations',
+    typical: 'Invisible when CTOs and founders ask ChatGPT, Claude or Gemini for software tools',
+    nk: 'Structured feature matrices, SoftwareApplication schema and G2 signals cited by AI models',
+  },
+  {
+    metric: 'Technical JS & Docs SEO',
+    typical: 'Broken client side React rendering and unindexed help center or API documentation',
+    nk: 'Clean SSR hydration, fast Core Web Vitals and indexable programmatic integration hubs',
+  },
+  {
+    metric: 'Backlink Quality',
+    typical: 'Low quality directory links and spammy guest posts that risk Google penalties',
+    nk: 'Contextual mentions in real SaaS comparison listicles, partner ecosystems and tech blogs',
+  },
+  {
+    metric: 'Pipeline Attribution',
+    typical: 'Reports vanity keyword impressions with no connection to SQLs or MRR',
+    nk: 'Tracks organic signups, demo bookings, SQL conversion and pipeline revenue directly',
+  },
+];
+
+const saasSegments = [
+  {
+    sector: 'B2B Enterprise SaaS',
+    title: 'CRM, ERP, HRMS & Operations Platforms',
+    focus: 'Our B2B SaaS SEO agency in Delhi ranks workflow, compliance and industry ERP software for high intent searches like best HRMS software in India or cloud ERP for manufacturers.',
+    outcome: 'Qualified enterprise demo requests from HR heads, COOs and IT directors.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>`,
+    accentBorder: 'border-t-brand-500',
+    iconBg: 'bg-sky-50 text-brand-600 border-sky-200',
+  },
+  {
+    sector: 'FinTech & RegTech',
+    title: 'Billing, GST, Accounting & Payment SaaS',
+    focus: 'Finance teams search Google and ChatGPT for automated GST reconciliation, e invoicing APIs, expense management and NBFC lending software with RBI and SOC2 compliance.',
+    outcome: 'Steady self serve signups and enterprise finance team onboarding.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>`,
+    accentBorder: 'border-t-amber-500',
+    iconBg: 'bg-amber-50 text-amber-600 border-amber-200',
+  },
+  {
+    sector: 'AI & DevTools',
+    title: 'AI Agents, API Platforms & Developer Tools',
+    focus: 'Developers and CTOs evaluate SDKs, API latency, GitHub docs and security certifications via ChatGPT, Perplexity and technical search queries before integrating a tool.',
+    outcome: 'High velocity developer API key signups and team tier upgrades.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>`,
+    accentBorder: 'border-t-cyan-500',
+    iconBg: 'bg-cyan-50 text-cyan-700 border-cyan-200',
+  },
+  {
+    sector: 'MarTech & SalesTech',
+    title: 'WhatsApp Automation, Customer Support & RevOps',
+    focus: 'Through product led content marketing in Delhi, we build template libraries, WhatsApp API calculators and CRM integration pages that capture growth teams ready to buy.',
+    outcome: 'Consistent PLG free trial activations and lower paid ad dependency.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>`,
+    accentBorder: 'border-t-emerald-500',
+    iconBg: 'bg-emerald-50 text-emerald-600 border-emerald-200',
+  },
+  {
+    sector: 'Vertical SaaS',
+    title: 'HealthTech, PropTech, EdTech & Logistics SaaS',
+    focus: 'Hospital administrators, logistics directors and retail chains search for specialised HMS, WMS, POS and DMS platforms tailored to Indian operational workflows.',
+    outcome: 'High retention vertical B2B contracts and multi location software rollouts.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"/></svg>`,
+    accentBorder: 'border-t-indigo-500',
+    iconBg: 'bg-indigo-50 text-indigo-600 border-indigo-200',
+  },
+  {
+    sector: 'IT & Cloud Services',
+    title: 'Custom Software, Cloud DevOps & Cybersecurity',
+    focus: 'Our SEO for software companies in Delhi ranks enterprise IT, AWS/Azure migration, SOC2 auditing and custom product development firms for global and domestic RFPs.',
+    outcome: 'High ticket B2B specialisting retainers and enterprise consulting mandates.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>`,
+    accentBorder: 'border-t-rose-500',
+    iconBg: 'bg-rose-50 text-rose-600 border-rose-200',
+  },
+];
+
+const stages = [
+  {
+    num: 'Stage 01',
+    step: '01',
+    title: 'Technical JS Crawl, Funnel & Competitor Gap Audit',
+    body: 'We audit your React/Next.js rendering, Core Web Vitals, documentation indexing and current trial conversion rates. We also map the exact competitor alternative and use case keywords where you can win fast SQLs.',
+    accent: 'from-brand-600 to-sky-500',
+  },
+  {
+    num: 'Stage 02',
+    step: '02',
+    title: 'BoFU Keyword Clusters, Software Schema & AI Architecture',
+    body: 'You get a clear 90 day roadmap covering comparison pages, feature hubs, integration directories and llms.txt files. We deploy SoftwareApplication and FAQPage schema so ChatGPT, Claude and Gemini cite your product.',
+    accent: 'from-accent-600 to-violet-500',
+  },
+  {
+    num: 'Stage 03',
+    step: '03',
+    title: 'Product Led Content, Programmatic Hubs & Link Building',
+    body: 'Our SaaS writers and developers publish high converting feature pages, interactive ROI tables, comparison matrices and earn contextual backlinks from authoritative tech and B2B publications.',
+    accent: 'from-cyan-600 to-teal-500',
+  },
+  {
+    num: 'Stage 04',
+    step: '04',
+    title: 'Demo Signup Attribution, AI Share of Voice & MRR Scaling',
+    body: 'Every two weeks we track your organic keyword climbs, free trial activations, demo bookings and live citations across ChatGPT, Perplexity and Google AI Overviews, scaling the clusters that drive the highest MRR.',
+    accent: 'from-emerald-600 to-green-500',
+  },
+];
+
+const faqs = [
+  {
+    q: 'Why does a software startup need SEO for SaaS Companies in Delhi instead of relying only on paid ads and outbound?',
+    a: 'Paid search clicks for B2B software keywords often cost ₹1,500 to ₹5,000 per click, and cold outbound reply rates continue to drop. Investing in SEO for SaaS Companies in Delhi builds compounding organic assets, like competitor comparison pages, integration hubs and use case guides, that bring high intent buyers who are actively looking to switch software tools right now.',
+  },
+  {
+    q: 'How long do SaaS SEO services in Delhi take to increase demo bookings and trial signups?',
+    a: 'Fixing technical indexing issues and publishing bottom of funnel competitor alternative and vs comparison pages typically starts generating organic demo requests within 6 to 10 weeks. Ranking for broad category software keywords and building dominant AI citation share takes 3 to 6 months.',
+  },
+  {
+    q: 'How do you get our SaaS product recommended by ChatGPT, Claude, Perplexity and Google AI Overviews?',
+    a: 'B2B software buyers now ask AI assistants questions like what is the best CRM for real estate teams in India or top alternatives to Zendesk with WhatsApp integration. Through our generative engine optimisation for SaaS, we publish structured HTML feature comparison tables, transparent pricing tiers, SoftwareApplication schema, llms.txt files and third party review signals so AI models recommend your product first.',
+  },
+  {
+    q: 'Can your B2B SaaS SEO agency in Delhi help us rank in the US, UK and global markets?',
+    a: 'Yes. Many Delhi NCR SaaS companies build in India and sell globally. We structure your domain architecture, hreflang tags, US/UK commercial terminology and international SaaS backlinks so your product ranks on page one across North America, Europe, the Middle East and APAC alongside India.',
+  },
+  {
+    q: 'What is the difference between generic blog writing and product led content marketing in Delhi?',
+    a: 'Generic agencies write shallow definitions that attract students and zero buyers. Product led content marketing weaves your software UI screenshots, workflow templates, interactive calculators and specific features directly into problem solving guides so readers naturally sign up for a free trial or book a demo.',
+  },
+  {
+    q: 'How do you handle technical SEO for SaaS websites built on React, Next.js, Webflow or Framer?',
+    a: 'Our technical SEO for SaaS in Delhi resolves client side rendering bottlenecks, dynamic route canonicals, bloated JavaScript bundles, subdomain documentation splits (docs.domain.com vs /docs) and programmatic page indexing so search and AI bots crawl every page effortlessly.',
+  },
+  {
+    q: 'How do you build backlinks for B2B software companies?',
+    a: 'Through white hat SaaS link building in Delhi, we secure contextual placements in software comparison listicles, integration partner ecosystems, B2B podcasts, founder thought leadership articles and high DR technology publications.',
+  },
+  {
+    q: 'How much does SaaS inbound lead generation in Delhi through SEO cost?',
+    a: 'Monthly retainers depend on your product category competition, target geographies (India vs Global) and programmatic content velocity. We offer transparent 90 day sprint plans with clear deliverables, 100% asset ownership and biweekly reporting tied directly to demo requests and SQLs.',
+  },
+];
+
+const trustStrip = [
+  'BoFU Comparison & Vs Pages',
+  'Programmatic Integration SEO',
+  'ChatGPT & Claude Citations',
+  'Google AI Overviews',
+  'SoftwareApplication Schema',
+  'India & Global SaaS Reach',
+  'React & Next.js Tech SEO',
+  'Direct Demo & Trial Signups',
+];
+
+const saasSchemaService = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "SEO for SaaS Companies in Delhi",
+  "serviceType": "B2B SaaS & Technology Search Engine Optimisation & Generative AI Search Marketing",
+  "provider": {
+    "@type": "ProfessionalService",
+    "name": "NK Digital Tech",
+    "url": "https://www.nkdigitaltech.net/",
+    "email": "nkdigitaltech1@gmail.com",
+    "telephone": "+91-80521-89051",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "New Delhi",
+      "addressRegion": "Delhi",
+      "addressCountry": "IN"
+    }
+  },
+  "areaServed": [
+    "New Delhi",
+    "Nehru Place",
+    "Connaught Place",
+    "Okhla",
+    "Aerocity",
+    "Saket",
+    "Netaji Subhash Place",
+    "Hauz Khas",
+    "Dwarka",
+    "India & Global Markets"
+  ],
+  "description": pageDescription,
+  "url": pageCanonical
+});
+
+const saasSchemaFAQ = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map((item) => ({
+    "@type": "Question",
+    "name": item.q,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": item.a
+    }
+  }))
+});
+
+const saasSchemaBreadcrumb = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.nkdigitaltech.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Best SEO Company in Delhi",
+      "item": "https://www.nkdigitaltech.net/best-seo-company-in-delhi/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "SEO for SaaS Companies in Delhi",
+      "item": pageCanonical
+    }
+  ]
+});
+---
+
+<Layout
+  title={pageTitle}
+  description={pageDescription}
+  canonical={pageCanonical}
+  ogImage="https://www.nkdigitaltech.net/images/delhi-saas-seo/hero-saas-seo-delhi.webp"
+  preloadImage="/images/delhi-saas-seo/hero-saas-seo-delhi.webp"
+  hideLocationsNav={false}
+  customSchemaLocalBusiness={saasSchemaService}
+  customSchemaFAQ={saasSchemaFAQ}
+  customSchemaBreadcrumb={saasSchemaBreadcrumb}
+  utilityTagline="SEO for SaaS Companies in Delhi • BoFU Comparisons, Programmatic SEO & AI Search Citations"
+  brandSubtitle="Delhi • B2B SaaS SEO & AI Search"
+  footerBio="NK Digital Tech delivers specialised SEO for SaaS Companies in Delhi, helping B2B software startups and enterprise tech firms scale organic demo bookings and trial signups across Google, ChatGPT, Claude and Gemini."
+  footerCoreDisciplines={[
+    { label: 'Best Digital Marketing Agency in Delhi', href: '/best-digital-marketing-agency-in-delhi/' },
+    { label: 'Best SEO Company in Delhi', href: '/best-seo-company-in-delhi/' },
+    { label: 'Local SEO Services in Delhi', href: '/local-seo-services-in-delhi/' },
+    { label: 'AI SEO Company in Delhi', href: '/ai-seo-company-in-delhi/' },
+    { label: 'AEO Services in Delhi', href: '/aeo-services-in-delhi/' },
+    { label: 'Website Development Company in Delhi', href: '/website-development-company-in-delhi/' },
+  ]}
+  footerTagline="Built for B2B SaaS SEO, AEO & GEO Visibility in Delhi"
+>
+
+  <!-- =====================================================================
+       SECTION 1: HERO (DARK SURFACE WITH UNIQUE SAAS SEO HERO IMAGE)
+  ===================================================================== -->
+  <section class="relative surface-dark overflow-hidden pt-8 pb-12 sm:pt-16 sm:pb-20 lg:pt-20 lg:pb-24 border-b border-slate-800/80">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="absolute inset-0 mesh-glow pointer-events-none"></div>
+    <div class="absolute -top-36 -left-36 w-96 h-96 bg-brand-500/20 rounded-full blur-[130px] pointer-events-none"></div>
+    <div class="absolute top-1/4 -right-36 w-96 h-96 bg-accent-500/20 rounded-full blur-[130px] pointer-events-none"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-7 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns: Headline & CTA -->
+        <div class="lg:col-span-7 text-left min-w-0">
+          <div class="badge-dark mb-4 sm:mb-6">
+            <span class="w-2 h-2 rounded-full bg-brand-400 animate-ping flex-shrink-0"></span>
+            <span class="min-w-0">B2B SaaS SEO &bull; AEO &amp; GEO &bull; Programmatic Hubs</span>
+          </div>
+
+          <h1 class="font-display text-[1.95rem] sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-[1.15] sm:leading-[1.1] mb-4 sm:mb-6 text-glow">
+            SEO for SaaS <br />
+            <span class="gradient-text-light">Companies in Delhi</span>
+          </h1>
+
+          <p class="text-[13.5px] sm:text-base md:text-lg text-slate-300 leading-relaxed mb-6 sm:mb-8 font-normal text-justify hyphens-auto [text-align-last:left]">
+            Looking for pipeline focused <strong class="text-white font-semibold">SEO for SaaS Companies in Delhi</strong> that grows product demos, free trials and MRR without burning cash on paid clicks? NK Digital Tech helps B2B software startups and enterprise tech firms scale through three simple methods: <strong class="text-white font-semibold">SEO</strong> to rank your comparison, integration and use case pages on page one of Google, <strong class="text-white font-semibold">AEO</strong> to win direct answer boxes for software pricing and feature queries, and <strong class="text-white font-semibold">GEO</strong> so ChatGPT, Claude, Gemini and Google AI Overviews recommend your software first.
+          </p>
+
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 mb-7 sm:mb-10">
+            <a href="#contact" class="btn-primary w-full sm:w-auto min-h-[48px] text-sm sm:text-base px-5 sm:px-8 py-3.5 sm:py-4">
+              <span>Claim Your Free SaaS SEO Audit</span>
+              <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+              </svg>
+            </a>
+            <a href="#services" class="btn-secondary-dark w-full sm:w-auto min-h-[48px] text-sm sm:text-base px-5 sm:px-7 py-3.5 sm:py-4">
+              <span>Explore Our Six SaaS SEO Pillars</span>
+            </a>
+          </div>
+
+          <!-- Trust Verification Strip (2x4 Grid on Mobile, Flex Pills on Desktop) -->
+          <div class="pt-5 sm:pt-6 border-t border-slate-800/80">
+            <div class="grid grid-cols-2 sm:flex sm:flex-wrap items-stretch sm:items-center gap-2">
+              {trustStrip.map((item) => (
+                <span class="px-2.5 sm:px-3 py-2 sm:py-1.5 rounded-lg bg-slate-900/90 border border-slate-800 text-[11px] sm:text-xs text-slate-300 font-medium flex items-center justify-center sm:justify-start text-center sm:text-left leading-tight">
+                  {item}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Unique Delhi SaaS SEO Hero Image -->
+        <div class="lg:col-span-5 min-w-0">
+          <div class="relative rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-700/80 shadow-2xl shadow-brand-500/15 bg-slate-900 group">
+            <div class="relative">
+              <img
+                src="/images/delhi-saas-seo/hero-saas-seo-delhi.webp"
+                alt="SEO for SaaS Companies in Delhi Strategy Team Reviewing Organic Demo Signups"
+                width="960"
+                height="540"
+                fetchpriority="high"
+                decoding="async"
+                class="w-full aspect-[16/10] sm:aspect-auto sm:h-72 md:h-[380px] lg:h-[400px] object-cover object-center group-hover:scale-105 transition-transform duration-500"
+              />
+              <div class="hidden sm:block absolute inset-0 bg-gradient-to-t from-[#050a14] via-transparent to-transparent opacity-80"></div>
+            </div>
+            <div class="relative sm:absolute sm:bottom-4 sm:left-4 sm:right-4 glass-card border-t sm:border border-slate-800 sm:rounded-2xl p-3.5 sm:p-4">
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-1">
+                <span class="text-xs font-bold text-white">Delhi B2B SaaS Search &amp; AI Authority</span>
+                <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-400">
+                  <span class="w-2 h-2 rounded-full bg-emerald-400 flex-shrink-0"></span>
+                  Compounding SQLs &amp; MRR
+                </span>
+              </div>
+              <p class="text-[11px] sm:text-xs text-slate-300 text-justify hyphens-auto [text-align-last:left] leading-relaxed">
+                Built to rank Delhi SaaS startups and enterprise software platforms across Google Search, AI assistants and global software queries.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 2: INTRODUCTION (CRISP WHITE CONTRAST SECTION + TEAM IMAGE)
+  ===================================================================== -->
+  <section class="relative surface-white py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns: Concise 2-Paragraph Unique Copy -->
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-light mb-3.5 sm:mb-4">Product Led Organic Pipeline</div>
+          <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-snug sm:leading-tight mb-4 sm:mb-6">
+            How Our SEO for SaaS Companies in Delhi <span class="gradient-text-dark">Scales Demo Bookings &amp; Free Trials</span>
+          </h2>
+          <div class="space-y-4 sm:space-y-5 text-slate-700 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            <p>
+              Modern B2B software buyers do not want cold sales calls. Before booking a product demo or starting a trial, CTOs, founders and operations managers search Google and ask ChatGPT, Claude or Gemini to compare software alternatives, API integrations, pricing tiers and SOC2 compliance. Our <strong>SEO for SaaS Companies in Delhi</strong> positions your product right at the top of these high intent evaluations.
+            </p>
+            <p>
+              As a trusted <a href="/best-digital-marketing-agency-in-delhi/" class="text-brand-600 hover:text-brand-700 font-semibold no-underline hover:no-underline">Best Digital Marketing Agency in Delhi</a> and <a href="/best-seo-company-in-delhi/" class="text-brand-600 hover:text-brand-700 font-semibold no-underline hover:no-underline">Best SEO Company in Delhi</a>, we build <strong>SaaS inbound lead generation in Delhi</strong> that compounds every month. Instead of paying rising CPCs on search ads, our <strong>SaaS SEO services in Delhi</strong> turn your comparison pages, documentation and use case hubs into your lowest CAC customer acquisition channel.
+            </p>
+          </div>
+          <div class="mt-6 sm:mt-8 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
+            <a href="#contact" class="btn-primary w-full sm:w-auto min-h-[48px]">
+              <span>Talk to a B2B SaaS SEO Specialist</span>
+              <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+              </svg>
+            </a>
+            <a href="#why-us" class="btn-secondary-light w-full sm:w-auto min-h-[48px]">
+              <span>Compare Paid Ads vs SaaS SEO</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Unique Team Image + Stats -->
+        <div class="lg:col-span-5 space-y-4 sm:space-y-5 min-w-0">
+          <div class="rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-200 shadow-lg bg-slate-100">
+            <img
+              src="/images/delhi-saas-seo/team-saas-seo-delhi.webp"
+              alt="B2B SaaS SEO Agency in Delhi Reviewing Organic MRR and Trial Signups"
+              width="800"
+              height="533"
+              class="w-full aspect-[16/10] sm:aspect-auto sm:h-64 lg:h-72 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="grid grid-cols-2 gap-3 sm:gap-4">
+            {[
+              { val: '3.8x', label: 'Organic Demo Growth', sub: 'Across B2B SaaS & AI platforms' },
+              { val: '-54%', label: 'Lower Blended CAC', sub: 'Reduced dependency on paid search' },
+              { val: 'BoFU', label: 'Vs & Alternative Pages', sub: 'High conversion buyer intent' },
+              { val: 'Global', label: 'India, US & UK Reach', sub: 'Multi region SaaS search scale' },
+            ].map((stat) => (
+              <div class="elevated-card rounded-xl sm:rounded-2xl p-3.5 sm:p-4 min-w-0">
+                <div class="font-display font-black text-xl sm:text-2xl text-brand-600 mb-0.5">{stat.val}</div>
+                <div class="text-[11px] sm:text-xs font-bold text-slate-900 leading-snug">{stat.label}</div>
+                <div class="text-[10.5px] sm:text-[11px] text-slate-500 leading-snug mt-0.5">{stat.sub}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 3: PROBLEM STATEMENT (DEEP INDIGO DARK CONTRAST SECTION)
+  ===================================================================== -->
+  <section class="relative surface-indigo py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="max-w-7xl mx-auto relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns: Problem Statement Justified Copy -->
+        <div class="lg:col-span-7 min-w-0">
+          <div class="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-3.5 py-1 sm:py-1.5 rounded-full text-[10px] sm:text-xs font-bold uppercase tracking-wider sm:tracking-widest bg-amber-500/10 border border-amber-500/30 text-amber-300 max-w-full leading-snug mb-4 sm:mb-5">
+            <svg class="w-4 h-4 text-amber-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+            </svg>
+            <span>Why SaaS Organic Traffic Fails to Convert</span>
+          </div>
+
+          <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-white tracking-tight leading-snug sm:leading-tight mb-4 sm:mb-6">
+            Why Delhi SaaS Startups Struggle With High CAC and Flat Organic Signups
+          </h2>
+
+          <div class="space-y-4 sm:space-y-5 text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            <p>
+              Most software companies in Delhi make two costly SEO mistakes. First, they hire general content writers who publish top of funnel definition blogs that bring vanity traffic from students but zero trial signups. Second, their React or Next.js marketing site has client side rendering issues, unindexed documentation and zero competitor comparison or integration pages.
+            </p>
+            <p>
+              Software discovery has also shifted to conversational AI. When a VP of Operations or CTO asks ChatGPT, Claude, Perplexity or Google AI Overviews to compare the top five CRM or billing platforms, AI models extract answers from structured comparison matrices, SoftwareApplication schema and verified review profiles. Without a dedicated <a href="/ai-seo-company-in-delhi/" class="text-brand-300 hover:text-white font-semibold no-underline hover:no-underline">AI SEO Company in Delhi</a>, LLMs recommend global incumbents and ignore your platform.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Diagnostic Comparison Cards -->
+        <div class="lg:col-span-5 space-y-3.5 sm:space-y-4 min-w-0">
+          <div class="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6 border-l-4 border-l-rose-500">
+            <div class="flex flex-wrap items-center justify-between gap-1.5 mb-2">
+              <span class="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-rose-400">Typical SaaS Marketing</span>
+              <span class="text-[11px] sm:text-xs text-slate-400">Vanity Blog Traffic</span>
+            </div>
+            <h3 class="font-display font-bold text-[15px] sm:text-base text-white mb-2 leading-snug">Generic Blogs, High Ad Spend &amp; JS Crawl Bugs</h3>
+            <p class="text-xs text-slate-300 leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+              Burns budget on ₹3,000 CPC search ads, publishes top of funnel fluff and fails to appear in ChatGPT or Perplexity software recommendations.
+            </p>
+          </div>
+
+          <div class="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6 border-l-4 border-l-emerald-400">
+            <div class="flex flex-wrap items-center justify-between gap-1.5 mb-2">
+              <span class="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-emerald-400">NK Digital Tech System</span>
+              <span class="text-[11px] sm:text-xs text-brand-300">Product Led SEO &amp; GEO</span>
+            </div>
+            <h3 class="font-display font-bold text-[15px] sm:text-base text-white mb-2 leading-snug">BoFU Comparisons, Programmatic Hubs &amp; LLM Citations</h3>
+            <p class="text-xs text-slate-300 leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+              Builds competitor alternative pages, programmatic integration directories, clean SSR code and AI citations that convert directly into demos and trials.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 4: SERVICES (LIGHT COOL ALABASTER CONTRAST + SERVICES IMAGE)
+  ===================================================================== -->
+  <section id="services" class="relative surface-cool py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <!-- Services Header with Unique Delhi SaaS Services Image -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 items-center mb-9 sm:mb-16">
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-light mb-3">Our Six Pillar SaaS Growth System</div>
+          <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-snug sm:leading-tight mb-3 sm:mb-4">
+            Complete SaaS SEO Services in Delhi
+          </h2>
+          <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            As a specialised <strong>B2B SaaS SEO agency in Delhi</strong>, we deliver six focused SEO, AEO and GEO services built for how software buyers, developers and enterprise teams evaluate and purchase cloud products.
+          </p>
+        </div>
+        <div class="lg:col-span-5 min-w-0">
+          <div class="rounded-2xl overflow-hidden border border-slate-200 shadow-md bg-white">
+            <img
+              src="/images/delhi-saas-seo/services-saas-seo-delhi.webp"
+              alt="SaaS SEO Services in Delhi Technical Architecture and AI Search Citations"
+              width="800"
+              height="450"
+              class="w-full aspect-[16/9] sm:aspect-auto sm:h-56 lg:h-64 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- 3 Columns x 2 Rows Grid Layout -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-7">
+        {services.map((s) => (
+          <div class="elevated-card rounded-2xl p-5 sm:p-7 flex flex-col justify-between group sm:hover:-translate-y-1">
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-4 sm:mb-6">
+                <div class={`w-11 h-11 sm:w-12 sm:h-12 rounded-xl border flex items-center justify-center flex-shrink-0 ${s.iconStyle}`}>
+                  <Fragment set:html={s.icon} />
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class={`text-[10.5px] sm:text-[11px] font-semibold px-2.5 py-1 rounded-md ${s.badgeColor}`}>
+                    {s.category}
+                  </span>
+                  <span class="font-display font-black text-base sm:text-lg text-slate-300">{s.num}</span>
+                </div>
+              </div>
+
+              <h3 class="font-display font-bold text-[17px] sm:text-xl text-slate-900 mb-2.5 sm:mb-3 leading-snug group-hover:text-brand-600 transition-colors">
+                {s.title}
+              </h3>
+
+              <p class="text-slate-600 text-[13px] sm:text-sm leading-relaxed mb-4 sm:mb-6 text-justify hyphens-auto [text-align-last:left]">
+                {s.body}
+              </p>
+            </div>
+
+            <div>
+              <div class={`rounded-xl border p-3.5 sm:p-4 mb-3.5 sm:mb-5 ${s.impactStyle}`}>
+                <div class="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-slate-900 mb-1">
+                  <svg class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                  </svg>
+                  <span>Commercial Impact</span>
+                </div>
+                <p class="text-xs text-slate-700 leading-relaxed font-medium text-justify hyphens-auto [text-align-last:left]">
+                  {s.impact}
+                </p>
+              </div>
+
+              <a href={s.href} class="inline-flex items-center gap-2 py-2 min-h-[40px] text-xs font-bold text-brand-600 hover:text-brand-700 no-underline hover:no-underline group-hover:gap-3 transition-all">
+                <span>{s.cta}</span>
+                <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 5: REGIONAL LOCATIONS (DARK NAVY + DELHI TECH CORRIDORS)
+  ===================================================================== -->
+  <section id="locations" class="relative surface-navy py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <!-- Regional Header with Unique Delhi SaaS Map Image -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 items-center mb-9 sm:mb-16">
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-dark mb-3">Delhi Tech Hubs &amp; Global Reach</div>
+          <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-white tracking-tight leading-snug sm:leading-tight mb-3 sm:mb-4">
+            Search &amp; AI Visibility for Software Teams Across Delhi Tech Corridors
+          </h2>
+          <p class="text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            Whether your software specialisting and growth team is based in Nehru Place, Okhla IT Park, Connaught Place, Aerocity or Netaji Subhash Place, we combine our <a href="/local-seo-services-in-delhi/" class="text-brand-300 hover:text-white font-semibold no-underline hover:no-underline">Local SEO Services in Delhi</a> with national and international SaaS keyword architectures across four key technology corridors.
+          </p>
+        </div>
+        <div class="lg:col-span-5 min-w-0">
+          <div class="rounded-2xl overflow-hidden border border-slate-700/80 shadow-xl bg-slate-900">
+            <img
+              src="/images/delhi-saas-seo/locations-saas-seo-delhi.webp"
+              alt="Delhi SaaS and Technology Hubs Across Nehru Place, Connaught Place and Okhla"
+              width="800"
+              height="450"
+              class="w-full aspect-[16/9] sm:aspect-auto sm:h-56 lg:h-64 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- 1 Row x 4 Columns Responsive Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+        {cities.map((c) => (
+          <div class="glass-card rounded-2xl p-5 sm:p-6 flex flex-col justify-between group sm:hover:-translate-y-1">
+            <div>
+              <div class={`h-1 w-full bg-gradient-to-r ${c.accent} rounded-full mb-4 sm:mb-5`}></div>
+
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-3.5 sm:mb-4">
+                <span class="px-2.5 py-1 rounded-md bg-slate-800 border border-slate-700 text-[11px] font-bold uppercase tracking-wider text-brand-300">
+                  {c.hub}
+                </span>
+                <span class="text-xs font-semibold text-slate-400">{c.city}</span>
+              </div>
+
+              <h3 class="font-display font-bold text-base sm:text-lg text-white mb-2.5 sm:mb-3 leading-snug">
+                <a href={c.href} class="hover:text-brand-300 no-underline hover:no-underline transition-colors">{c.keyword}</a>
+              </h3>
+
+              <p class="text-slate-300 text-[13px] sm:text-sm leading-relaxed mb-4 sm:mb-5 text-justify hyphens-auto [text-align-last:left]">
+                {c.desc}
+              </p>
+            </div>
+
+            <div class="pt-3.5 sm:pt-4 border-t border-slate-800">
+              <p class="text-[11px] text-slate-400 mb-3 sm:mb-4 leading-normal">
+                <strong class="text-slate-300">Key Tech Hubs:</strong> {c.corridor}
+              </p>
+              <a href={c.href} class="inline-flex items-center gap-1.5 py-2 min-h-[40px] text-xs font-bold text-brand-400 hover:text-brand-300 no-underline hover:no-underline group-hover:gap-2.5 transition-all">
+                <span>{c.cta}</span>
+                <svg class="w-3.5 h-3.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 6: WHY NK DIGITAL TECH (CRISP WHITE CONTRAST SECTION)
+  ===================================================================== -->
+  <section id="why-us" class="relative surface-white py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-14 text-left sm:text-center">
+        <div class="badge-light mb-3">Why Delhi SaaS Founders Choose Us</div>
+        <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-snug sm:leading-tight mb-3 sm:mb-4">
+          How Our Product Led SaaS SEO Beats Generic Content Agencies
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed mb-4 text-justify hyphens-auto [text-align-last:left]">
+          Traditional SEO vendors judge success by blog traffic that never converts into paying subscribers. We align our <strong>SEO for IT and technology companies in Delhi</strong> with bottom of funnel buyer intent, <a href="/aeo-services-in-delhi/" class="text-brand-600 hover:text-brand-700 font-semibold no-underline hover:no-underline">AEO Services in Delhi</a>, LLM citations and trial to paid activation.
+        </p>
+        <p class="text-slate-700 font-semibold text-xs sm:text-sm">
+          See how our B2B SaaS SEO system compares to generic content agencies:
+        </p>
+      </div>
+
+      <!-- Desktop Comparison Matrix -->
+      <div class="hidden md:block overflow-hidden rounded-2xl border border-slate-200 shadow-lg">
+        <table class="w-full text-left border-collapse">
+          <thead>
+            <tr class="bg-slate-900 text-white">
+              <th class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-slate-300 w-1/4">
+                Evaluation Criteria
+              </th>
+              <th class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-rose-300 w-[37.5%] border-l border-slate-800">
+                Typical Content / Generic Agency
+              </th>
+              <th class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-brand-300 w-[37.5%] border-l border-slate-800 bg-slate-950">
+                NK Digital Tech B2B SaaS SEO
+              </th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200 text-sm">
+            {comparison.map((row, idx) => (
+              <tr class={idx % 2 === 0 ? 'bg-white' : 'bg-slate-50/80'}>
+                <td class="py-5 px-6 font-display font-bold text-slate-900">
+                  {row.metric}
+                </td>
+                <td class="py-5 px-6 text-slate-600 border-l border-slate-200">
+                  <div class="flex items-start gap-2.5">
+                    <svg class="w-4 h-4 text-rose-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                    <span class="text-justify">{row.typical}</span>
+                  </div>
+                </td>
+                <td class="py-5 px-6 text-slate-900 font-medium border-l border-slate-200 bg-sky-50/40">
+                  <div class="flex items-start gap-2.5">
+                    <svg class="w-4 h-4 text-emerald-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span class="text-justify">{row.nk}</span>
+                  </div>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Mobile Comparison Cards -->
+      <div class="md:hidden space-y-3.5">
+        {comparison.map((row) => (
+          <div class="elevated-card rounded-2xl p-4 space-y-2.5">
+            <h3 class="font-display font-bold text-slate-900 text-[15px] leading-snug">{row.metric}</h3>
+            <div class="rounded-xl bg-rose-50 border border-rose-100 p-3">
+              <div class="flex items-center gap-1.5 mb-1">
+                <svg class="w-3.5 h-3.5 text-rose-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+                <p class="text-[10px] font-bold uppercase tracking-wider text-rose-600">Typical Content / Generic Agency</p>
+              </div>
+              <p class="text-xs text-slate-700 leading-relaxed text-justify hyphens-auto [text-align-last:left]">{row.typical}</p>
+            </div>
+            <div class="rounded-xl bg-sky-50 border border-sky-200 p-3">
+              <div class="flex items-center gap-1.5 mb-1">
+                <svg class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                </svg>
+                <p class="text-[10px] font-bold uppercase tracking-wider text-brand-600">NK Digital Tech B2B SaaS SEO</p>
+              </div>
+              <p class="text-xs text-slate-900 font-semibold leading-relaxed text-justify hyphens-auto [text-align-last:left]">{row.nk}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 7: SAAS SEGMENTS WE SCALE (LIGHT SLATE 3x2 GRID)
+  ===================================================================== -->
+  <section id="industries" class="relative surface-slate py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-16 text-left sm:text-center">
+        <div class="badge-light mb-3">Software Verticals We Serve</div>
+        <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-snug sm:leading-tight mb-3 sm:mb-4">
+          SaaS &amp; Technology Segments We Rank Across Delhi &amp; Global Markets
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          Whether you build enterprise CRM/ERP software, FinTech platforms, AI developer tools, MarTech automation or vertical SaaS, we match your pages with the exact searches software buyers make on Google, ChatGPT and Claude.
+        </p>
+      </div>
+
+      <!-- 3 Columns x 2 Rows Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-7">
+        {saasSegments.map((ind) => (
+          <div class={`elevated-card rounded-2xl p-5 sm:p-7 border-t-4 ${ind.accentBorder} flex flex-col justify-between sm:hover:-translate-y-1`}>
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-4 sm:mb-5">
+                <div class={`w-10 h-10 sm:w-11 sm:h-11 rounded-xl border flex items-center justify-center flex-shrink-0 ${ind.iconBg}`}>
+                  <Fragment set:html={ind.icon} />
+                </div>
+                <span class="text-[11px] font-semibold text-slate-600 bg-slate-100 px-2.5 py-1 rounded-md">
+                  {ind.sector}
+                </span>
+              </div>
+
+              <h3 class="font-display font-bold text-[17px] sm:text-xl text-slate-900 mb-3 sm:mb-4 leading-snug">
+                {ind.title}
+              </h3>
+
+              <div class="mb-4 sm:mb-5">
+                <p class="text-[11px] font-bold uppercase tracking-wider text-brand-600 mb-1.5">
+                  Search &amp; AI Strategy
+                </p>
+                <p class="text-slate-600 text-[13px] sm:text-sm leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+                  {ind.focus}
+                </p>
+              </div>
+            </div>
+
+            <div class="rounded-xl bg-emerald-50/70 border border-emerald-200/80 p-3.5 sm:p-4">
+              <p class="text-[11px] font-bold uppercase tracking-wider text-emerald-700 mb-1">
+                Commercial Result
+              </p>
+              <p class="text-slate-800 text-xs font-medium leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+                {ind.outcome}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 8: HOW WE WORK (CRISP WHITE CONTRAST SECTION - 4 STAGES)
+  ===================================================================== -->
+  <section class="relative surface-white py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-16 text-left sm:text-center">
+        <div class="badge-light mb-3">Our 4 Stage Execution</div>
+        <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-snug sm:leading-tight mb-3 sm:mb-4">
+          How We Rank Delhi SaaS Platforms on Google &amp; AI Answer Engines
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          Our four stage execution model fixes your technical JS rendering first, captures bottom of funnel comparison traffic and scales your product citations across ChatGPT, Claude, Gemini and Google AI Overviews.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-7">
+        {stages.map((s) => (
+          <div class="elevated-card rounded-2xl p-5 sm:p-8 relative overflow-hidden group sm:hover:-translate-y-1">
+            <div class="flex items-center justify-between gap-4 mb-3.5 sm:mb-5">
+              <span class={`inline-flex items-center px-2.5 sm:px-3 py-1 rounded-lg text-xs font-bold uppercase tracking-wider text-white bg-gradient-to-r ${s.accent}`}>
+                {s.num}
+              </span>
+              <span class="font-display font-black text-3xl sm:text-4xl text-slate-200 group-hover:text-slate-300 transition-colors">
+                {s.step}
+              </span>
+            </div>
+            <h3 class="font-display font-bold text-[17px] sm:text-xl text-slate-900 mb-2.5 sm:mb-3 leading-snug">
+              {s.title}
+            </h3>
+            <p class="text-slate-600 text-[13px] sm:text-sm leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+              {s.body}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 9: CONCLUSION / PARTNER SECTION (DARK INDIGO + GROWTH IMAGE)
+  ===================================================================== -->
+  <section class="relative surface-indigo py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-7 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns: Conclusion Paragraphs (Justified) -->
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-dark mb-3.5 sm:mb-4">Compounding MRR &amp; Pipeline</div>
+          <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-white tracking-tight leading-snug sm:leading-tight mb-4 sm:mb-6">
+            Start Scaling Organic Demos With SEO for SaaS Companies in Delhi
+          </h2>
+          <div class="space-y-4 sm:space-y-5 text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            <p>
+              Every month you delay building your bottom of funnel search presence, competing software platforms capture the CTOs, founders and enterprise teams who should be trialing your product. Software buyers in India and global markets check Google, ChatGPT, Claude and Gemini long before booking a sales call.
+            </p>
+            <p>
+              When you choose NK Digital Tech for <strong class="text-white font-semibold">SEO for SaaS Companies in Delhi</strong>, you work directly with senior strategists and developers from a trusted <a href="/website-development-company-in-delhi/" class="text-brand-300 hover:text-white font-semibold no-underline hover:no-underline">Website Development Company in Delhi</a> who build fast comparison hubs, SoftwareApplication schema and LLM citation authority. Claim your free audit today to grow organic signups.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Unique Delhi SaaS Growth Image -->
+        <div class="lg:col-span-5 min-w-0">
+          <div class="rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-700/80 shadow-2xl bg-slate-900">
+            <img
+              src="/images/delhi-saas-seo/growth-saas-seo-delhi.webp"
+              alt="Delhi SaaS Founder Reviewing Organic Demo Bookings and MRR Growth"
+              width="800"
+              height="450"
+              class="w-full aspect-[16/10] sm:aspect-auto sm:h-64 lg:h-72 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 10: FAQ (LIGHT COOL SLATE CONTRAST SECTION)
+  ===================================================================== -->
+  <section id="faq" class="relative surface-cool py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-left sm:text-center mb-9 sm:mb-14">
+        <div class="badge-light mb-3">Questions Asked on Google, ChatGPT &amp; Claude</div>
+        <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-snug sm:leading-tight mb-3 sm:mb-4">
+          Frequently Asked Questions About SEO for SaaS Companies in Delhi
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          Direct, factual answers to the questions SaaS founders, VPs of Marketing and product growth heads in Delhi ask before launching an organic and AI search campaign.
+        </p>
+      </div>
+
+      <div class="space-y-3 sm:space-y-4">
+        {faqs.map((f, i) => (
+          <details class="elevated-card rounded-2xl group overflow-hidden" open={i === 0}>
+            <summary class="flex items-start sm:items-center justify-between gap-3 sm:gap-4 px-4 sm:px-6 py-4 sm:py-5 min-h-[54px] select-none">
+              <div class="flex items-start sm:items-center gap-2.5 sm:gap-3.5 text-left min-w-0">
+                <span class="w-6 h-6 sm:w-7 sm:h-7 rounded-lg bg-sky-50 border border-sky-200 text-brand-600 font-display font-bold text-xs flex items-center justify-center flex-shrink-0 mt-0.5 sm:mt-0">
+                  0{i + 1}
+                </span>
+                <span class="font-display font-bold text-slate-900 text-[14px] sm:text-base md:text-lg leading-snug">
+                  {f.q}
+                </span>
+              </div>
+              <span class="faq-icon w-7 h-7 sm:w-8 sm:h-8 rounded-full border border-slate-200 text-slate-600 flex items-center justify-center flex-shrink-0 mt-0.5 sm:mt-0">
+                <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                </svg>
+              </span>
+            </summary>
+            <div class="px-4 sm:px-6 pb-5 sm:pb-6 pt-3 text-slate-600 text-[13px] sm:text-sm md:text-base leading-relaxed border-t border-slate-100 text-justify hyphens-auto [text-align-last:left]">
+              {f.a}
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 11: SHORT 2 TO 3 LINE CALL TO ACTION BANNER (LAST SECTION)
+  ===================================================================== -->
+  <section id="contact" class="relative surface-dark py-12 pb-24 sm:py-16 lg:py-20 px-4 sm:px-6 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-5xl mx-auto">
+      <div class="rounded-2xl sm:rounded-3xl bg-gradient-to-r from-brand-600 via-brand-700 to-accent-700 p-6 sm:p-10 md:p-12 text-center text-white shadow-2xl border border-white/15 relative overflow-hidden">
+        <div class="relative z-10 max-w-2xl mx-auto">
+          <h2 class="font-display font-black text-[1.45rem] sm:text-3xl md:text-4xl text-white tracking-tight leading-snug mb-3 sm:mb-4">
+            Ready to Scale Organic Demos &amp; Trial Signups for Your SaaS?
+          </h2>
+
+          <p class="text-sky-50 text-[13px] sm:text-sm md:text-base leading-relaxed mb-6 sm:mb-8">
+            Book a free audit with our senior SaaS search specialists to review your comparison pages, technical JS rendering and AI citations.
+          </p>
+
+          <a
+            href="/contact-us/"
+            class="inline-flex w-full sm:w-auto min-h-[48px] items-center justify-center gap-2 sm:gap-3 px-5 sm:px-8 py-3.5 sm:py-4 rounded-xl bg-white text-slate-950 hover:bg-sky-50 no-underline hover:no-underline font-display font-bold text-sm sm:text-base shadow-xl transition-all duration-300 active:scale-95 text-center leading-snug"
+          >
+            <span>Claim Your Free SaaS SEO Audit</span>
+            <svg class="w-4 h-4 sm:w-5 sm:h-5 text-brand-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mobile Sticky Bottom Quick Action Bar -->
+  <div class="sm:hidden fixed bottom-0 inset-x-0 z-40 bg-[#050a14]/95 backdrop-blur-xl border-t border-slate-800 px-3.5 py-2.5 shadow-[0_-8px_24px_rgba(0,0,0,0.45)]">
+    <div class="flex items-center gap-2.5">
+      <a
+        href="/contact-us/"
+        class="btn-primary flex-1 min-h-[44px] py-2.5 px-4 text-xs font-bold rounded-xl no-underline hover:no-underline"
+      >
+        <span>Claim Free SaaS SEO Audit</span>
+        <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+        </svg>
+      </a>
+      <a
+        href="#services"
+        class="btn-secondary-dark min-h-[44px] py-2.5 px-3.5 text-xs font-semibold rounded-xl flex-shrink-0 no-underline hover:no-underline"
+      >
+        <span>Services</span>
+      </a>
+    </div>
+  </div>
+
+</Layout>

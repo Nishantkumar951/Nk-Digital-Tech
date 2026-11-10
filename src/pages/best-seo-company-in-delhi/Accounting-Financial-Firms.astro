@@ -1,0 +1,1079 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import '../../styles/global.css';
+
+const pageTitle = 'Best SEO for Accounting Firms in Delhi | NK Digital Tech';
+const pageDescription = 'Need SEO for Accounting Firms in Delhi? NK Digital Tech drives corporate tax, GST audit, ROC compliance and CA retainer leads across Google, Maps and AI.';
+const pageCanonical = 'https://www.nkdigitaltech.net/best-seo-company-in-delhi/Accounting-Financial-Firms/';
+
+const services = [
+  {
+    num: '01',
+    category: 'Practice & Tax SEO',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>`,
+    iconStyle: 'bg-sky-50 border-sky-200 text-brand-600',
+    impactStyle: 'bg-sky-50/80 border-sky-200/80 text-slate-800',
+    badgeColor: 'text-brand-600 bg-sky-100/80',
+    title: 'Corporate Tax, GST & Audit Keyword SEO',
+    body: 'Our accounting SEO services in Delhi create dedicated pages for searches like GST audit consultant in Connaught Place or NRI taxation CA firm in South Delhi.',
+    impact: 'Direct corporate consultation calls and monthly retainer inquiries without cold outreach.',
+    cta: 'View Our Core Delhi SEO Approach',
+    href: '/best-seo-company-in-delhi/',
+  },
+  {
+    num: '02',
+    category: 'Chamber Map Pack SEO',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>`,
+    iconStyle: 'bg-emerald-50 border-emerald-200 text-emerald-600',
+    impactStyle: 'bg-emerald-50/80 border-emerald-200/80 text-slate-800',
+    badgeColor: 'text-emerald-700 bg-emerald-100/80',
+    title: 'Google Business Profile for CA & Advisory Offices',
+    body: 'Through local SEO for accountants in Delhi, we optimise your Google Business Profile across Connaught Place, ITO, Nehru Place and Netaji Subhash Place.',
+    impact: 'Top three Google Map Pack placement driving business owner calls and office visits.',
+    cta: 'See Local SEO Services in Delhi',
+    href: '/local-seo-services-in-delhi/',
+  },
+  {
+    num: '03',
+    category: 'YMYL & Technical SEO',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>`,
+    iconStyle: 'bg-cyan-50 border-cyan-200 text-cyan-700',
+    impactStyle: 'bg-cyan-50/80 border-cyan-200/80 text-slate-800',
+    badgeColor: 'text-cyan-700 bg-cyan-100/80',
+    title: 'ICAI Compliant YMYL & AccountingService Schema',
+    body: 'Our financial advisory website SEO in Delhi builds fast, ICAI compliant practice pages with partner credentials, AccountingService schema and SSL security.',
+    impact: 'Passes Google Finance YMYL trust checks and doubles consultation form conversions.',
+    cta: 'Explore Delhi Web Development',
+    href: '/website-development-company-in-delhi/',
+  },
+  {
+    num: '04',
+    category: 'Answer Engine SEO (AEO)',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>`,
+    iconStyle: 'bg-amber-50 border-amber-200 text-amber-600',
+    impactStyle: 'bg-amber-50/80 border-amber-200/80 text-slate-800',
+    badgeColor: 'text-amber-700 bg-amber-100/80',
+    title: 'Answer Engine SEO for MCA, FEMA & Tax Rules',
+    body: 'We publish concise 50 word answer blocks and compliance checklists for ROC filings, FEMA rules, transfer pricing and GST notices to win top Google answer boxes.',
+    impact: 'Captures CFOs, startup founders and NRI taxpayers researching urgent compliance rules.',
+    cta: 'Check AEO Services in Delhi',
+    href: '/aeo-services-in-delhi/',
+  },
+  {
+    num: '05',
+    category: 'Generative AI SEO (GEO)',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>`,
+    iconStyle: 'bg-violet-50 border-violet-200 text-accent-600',
+    impactStyle: 'bg-violet-50/80 border-violet-200/80 text-slate-800',
+    badgeColor: 'text-accent-600 bg-violet-100/80',
+    title: 'GEO Citations in ChatGPT & Gemini',
+    body: 'We structure your partner qualifications, industry audit experience and compliance tables so ChatGPT, Gemini and Google AI Overviews cite your firm as a trusted advisor.',
+    impact: 'Consistent brand mentions when founders and foreign subsidiaries ask AI for Delhi CAs.',
+    cta: 'Explore Delhi AI SEO Services',
+    href: '/ai-seo-company-in-delhi/',
+  },
+  {
+    num: '06',
+    category: 'Financial Authority & PR',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>`,
+    iconStyle: 'bg-indigo-50 border-indigo-200 text-indigo-600',
+    impactStyle: 'bg-indigo-50/80 border-indigo-200/80 text-slate-800',
+    badgeColor: 'text-indigo-700 bg-indigo-100/80',
+    title: 'Financial Media & Business Directory Backlinks',
+    body: 'We earn high authority backlinks from Indian finance portals, tax journals, startup media and verified business directories to outrank online filing aggregators.',
+    impact: 'Builds lasting domain authority for high value audit, valuation and virtual CFO terms.',
+    cta: 'Build Firm Domain Authority',
+    href: '#contact',
+  },
+];
+
+const cities = [
+  {
+    hub: 'Corridor 01',
+    city: 'Central Financial District',
+    corridor: 'Connaught Place • Barakhamba Road • ITO • KG Marg • Rajendra Place',
+    keyword: 'SEO for CA & Audit Firms in Central Delhi',
+    desc: 'We help established Chartered Accountant firms and tax consultants in Connaught Place, Barakhamba Road and ITO rank first for corporate audit and advisory queries.',
+    cta: 'Audit Your Firm Visibility',
+    href: '#contact',
+    accent: 'from-brand-500 to-sky-400',
+  },
+  {
+    hub: 'Corridor 02',
+    city: 'South Delhi Corporate Belt',
+    corridor: 'Nehru Place • Bhikaji Cama Place • Saket •Jasola • Greater Kailash',
+    keyword: 'Tax & Virtual CFO SEO in South Delhi',
+    desc: 'From NRI wealth and international tax chambers in Greater Kailash to corporate advisory practices in Nehru Place and Bhikaji Cama Place, we drive retainer leads.',
+    cta: 'Explore South Delhi Search Growth',
+    href: '/digital-marketing-company-in-south-delhi/',
+    accent: 'from-accent-500 to-violet-400',
+  },
+  {
+    hub: 'Corridor 03',
+    city: 'North & West Commercial Hubs',
+    corridor: 'Netaji Subhash Place • Pitampura • Janakpuri • Rajouri Garden • Karol Bagh',
+    keyword: 'SEO for Accountants in North & West Delhi',
+    desc: 'We rank CA chambers and GST consultants in Netaji Subhash Place, Karol Bagh and Janakpuri at the top of Google Search and Map Packs for SME compliance.',
+    cta: 'Explore North Delhi Search Growth',
+    href: '/digital-marketing-company-in-north-delhi/',
+    accent: 'from-cyan-500 to-teal-400',
+  },
+  {
+    hub: 'Corridor 04',
+    city: 'East Delhi CA & SME Belt',
+    corridor: 'Laxmi Nagar • Preet Vihar • Karkardooma • Nirman Vihar • Mayur Vihar',
+    keyword: 'CA & Tax Consultant SEO in East Delhi',
+    desc: 'We generate daily company registration, trademark, GST return and income tax scrutiny inquiries for practices across Laxmi Nagar, Preet Vihar and Karkardooma.',
+    cta: 'Explore West & East Search Growth',
+    href: '/digital-marketing-company-in-west-delhi/',
+    accent: 'from-emerald-500 to-green-400',
+  },
+];
+
+const comparison = [
+  {
+    metric: 'Quality of Financial Leads',
+    typical: 'Low budget ₹500 ITR filing inquiries from generic tax aggregator portals',
+    nk: 'Exclusive corporate retainers, statutory audits, virtual CFO and NRI tax mandates',
+  },
+  {
+    metric: 'ICAI & Regulatory Compliance',
+    typical: 'Uses loud promotional ad language that violates ICAI ethical guidelines',
+    nk: '100% ICAI compliant educational pull marketing built on technical tax expertise',
+  },
+  {
+    metric: 'AI Search & ChatGPT Citations',
+    typical: 'Zero visibility when founders or NRIs ask ChatGPT or Gemini for Delhi tax advisors',
+    nk: 'Structured FEMA, GST, MCA and Income Tax guides cited directly by AI answer engines',
+  },
+  {
+    metric: 'Google YMYL Trust Signals',
+    typical: 'Anonymous thin content with no author credentials that fails Google Finance updates',
+    nk: 'CA partner reviewed articles with verified qualifications and AccountingService schema',
+  },
+  {
+    metric: 'Google Maps Office Reach',
+    typical: 'Neglected Google Business Profile buried below low cost agents in NSP or CP',
+    nk: 'Top 3 Map Pack rankings for your chamber driving high trust corporate consultations',
+  },
+  {
+    metric: 'Referral Dependency',
+    typical: 'Waits passively for existing client referrals while newer firms capture online growth',
+    nk: 'Predictable monthly inbound pipeline of startups, SMEs and foreign subsidiaries',
+  },
+];
+
+const accountingSegments = [
+  {
+    sector: 'Statutory & Internal Audit',
+    title: 'Corporate Audit, Assurance & Ind AS Advisory',
+    focus: 'Our SEO for Chartered Accountants in Delhi positions your firm for statutory audit, internal audit, forensic audit, IFC testing and Ind AS conversion searches by mid market and enterprise CFOs.',
+    outcome: 'Annual corporate audit mandates and institutional committee appointments.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>`,
+    accentBorder: 'border-t-brand-500',
+    iconBg: 'bg-sky-50 text-brand-600 border-sky-200',
+  },
+  {
+    sector: 'Taxation & Scrutiny',
+    title: 'Direct Tax, GST Litigation & Transfer Pricing',
+    focus: 'Through SEO for tax consultants in Delhi, we rank dedicated practice pages for Income Tax appellate representation, GST show cause notices, input tax credit audits and international transfer pricing.',
+    outcome: 'High value tax advisory and litigation representation cases from Delhi businesses.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>`,
+    accentBorder: 'border-t-amber-500',
+    iconBg: 'bg-amber-50 text-amber-600 border-amber-200',
+  },
+  {
+    sector: 'Startups & Virtual CFO',
+    title: 'Virtual CFO, Valuation & Startup Fundraising',
+    focus: 'Funded startups in Delhi NCR search Google and ChatGPT for virtual CFO services, IBBI registered valuation reports, pitch deck financial modelling, ESOP structuring and due diligence.',
+    outcome: 'Long term monthly Virtual CFO retainers with high growth venture backed startups.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>`,
+    accentBorder: 'border-t-cyan-500',
+    iconBg: 'bg-cyan-50 text-cyan-700 border-cyan-200',
+  },
+  {
+    sector: 'Cross Border & NRI',
+    title: 'Foreign Subsidiary Setup, FEMA & NRI Tax',
+    focus: 'Overseas companies entering India and NRIs selling property in Delhi search for wholly owned subsidiary registration, RBI FEMA compliance, Form 15CA/15CB and DTAA tax advisory.',
+    outcome: 'High margin international corporate setup and NRI tax repatriation clients.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>`,
+    accentBorder: 'border-t-emerald-500',
+    iconBg: 'bg-emerald-50 text-emerald-600 border-emerald-200',
+  },
+  {
+    sector: 'Corporate Secretarial',
+    title: 'Company Incorporation, ROC & NCLT Compliance',
+    focus: 'Entrepreneurs and corporate groups search for Private Limited registration, LLP formation, annual MCA ROC filings, strike off revival and NCLT restructuring across New Delhi.',
+    outcome: 'Daily company setup inquiries that convert into annual accounting and GST retainers.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>`,
+    accentBorder: 'border-t-indigo-500',
+    iconBg: 'bg-indigo-50 text-indigo-600 border-indigo-200',
+  },
+  {
+    sector: 'Bookkeeping & Payroll',
+    title: 'Outsourced Accounting, Zoho/Tally & Payroll',
+    focus: 'Through accounting lead generation in Delhi, we rank bookkeeping and payroll practices for SME and ecommerce accounting, PF/ESI compliance and cloud ERP migration.',
+    outcome: 'Predictable recurring monthly bookkeeping and compliance contracts.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>`,
+    accentBorder: 'border-t-rose-500',
+    iconBg: 'bg-rose-50 text-rose-600 border-rose-200',
+  },
+];
+
+const stages = [
+  {
+    num: 'Stage 01',
+    step: '01',
+    title: 'Firm Website, YMYL Trust & Portal Competitor Audit',
+    body: 'We audit your current website speed, ICAI compliance, practice area structure and Google Business Profile health. We also map the exact corporate tax, audit and advisory keywords where your firm can beat online aggregators.',
+    accent: 'from-brand-600 to-sky-500',
+  },
+  {
+    num: 'Stage 02',
+    step: '02',
+    title: 'Practice Silos, AccountingService Schema & AI Architecture',
+    body: 'You get a clear 90 day roadmap covering corporate tax, GST, FEMA, valuation and ROC compliance pages. We deploy AccountingService and Person author schema so Google AI Overviews, ChatGPT and Gemini verify your partners.',
+    accent: 'from-accent-600 to-violet-500',
+  },
+  {
+    num: 'Stage 03',
+    step: '03',
+    title: 'Compliance Guide Publishing, Map Pack & Citations',
+    body: 'Our financial writers and developers publish partner reviewed tax guides, due date calendars, compliance checklists and verified Google Business Profile updates across your Delhi chambers.',
+    accent: 'from-cyan-600 to-teal-500',
+  },
+  {
+    num: 'Stage 04',
+    step: '04',
+    title: 'Retainer Inquiry Tracking, AI Checks & Scaling',
+    body: 'Every two weeks we review your organic keyword rankings, Google Map direction clicks, WhatsApp and email consultations and live citations inside ChatGPT and Google AI Overviews, scaling the practice areas with the highest retainer value.',
+    accent: 'from-emerald-600 to-green-500',
+  },
+];
+
+const faqs = [
+  {
+    q: 'Is SEO for Accounting Firms in Delhi allowed under ICAI guidelines for Chartered Accountants?',
+    a: 'Yes, when executed as ethical pull marketing. ICAI guidelines prohibit solicitation, push advertising and exaggerated claims like best CA firm. Our SEO for Chartered Accountants in Delhi focuses on 100% compliant informational content, such as factual GST, Income Tax, FEMA and MCA compliance guides, directory listings and technical website structure, so clients searching for help find your practice organically.',
+  },
+  {
+    q: 'How long do accounting SEO services in Delhi take to generate corporate retainer inquiries?',
+    a: 'Optimising your Google Business Profile and fixing technical website issues typically increases local map pack phone calls within 4 to 8 weeks. Ranking dedicated practice pages for corporate audit, GST litigation, virtual CFO and foreign subsidiary setup on page one of Google and earning AI citations takes 3 to 6 months.',
+  },
+  {
+    q: 'How do you get Delhi accounting and CA firms cited in ChatGPT, Gemini and Google AI Overviews?',
+    a: 'Founders, CFOs and NRIs frequently ask ChatGPT and Gemini questions like what are the FEMA compliance steps for a US company opening a subsidiary in Delhi or how to reply to a GST DRC 01 notice. We structure your pages with 40 to 60 word factual summaries, statutory section references, compliance tables and AccountingService schema so AI models cite your firm.',
+  },
+  {
+    q: 'Can a boutique CA or financial advisory firm outrank big portals like IndiaFilings, ClearTax and Vakilsearch?',
+    a: 'Yes. Online portals rely on call centre sales teams and generic templates for basic registrations. Mid market companies, funded startups and HNI families looking for a GST scrutiny advisor in Connaught Place, a Virtual CFO in Nehru Place or an NRI tax consultant in South Delhi want a real partner led firm. Our SEO for CA firms in Delhi ranks your local expertise above mass portals.',
+  },
+  {
+    q: 'What is Google YMYL and why does it matter for accounting firm websites?',
+    a: 'Google classifies tax, audit and financial pages as Your Money Your Life (YMYL) content and holds them to strict quality standards. Anonymous blog posts will not rank. We build strong E-E-A-T signals by adding partner bio pages, ICAI/ICSI/IBBI qualification badges, statutory citations and secure technical architecture.',
+  },
+  {
+    q: 'What is included in your local SEO for accountants in Delhi?',
+    a: 'We verify and optimise your Google Business Profile across Connaught Place, ITO, Nehru Place, Netaji Subhash Place and Laxmi Nagar with accurate Chartered Accountant, Tax Consultant or Accounting Firm categories, office photos, professional directory citations and a compliant client review process.',
+  },
+  {
+    q: 'How do you filter out low budget ₹500 ITR callers and attract corporate B2B clients?',
+    a: 'We avoid targeting cheap DIY keywords like free ITR filing online. Instead, our accounting lead generation in Delhi targets high value commercial intent such as statutory audit firm, transfer pricing study, virtual CFO for startups, FEMA compliance consultant and GST appellate representation.',
+  },
+  {
+    q: 'How much does digital marketing for accounting firms in Delhi cost?',
+    a: 'Monthly retainers depend on the number of practice areas (Audit, Direct Tax, GST, Virtual CFO, NRI Tax) and Delhi commercial hubs you want to target. We provide transparent 90 day sprint plans with clear deliverables, 100% content ownership and biweekly reporting.',
+  },
+];
+
+const trustStrip = [
+  '100% ICAI Compliant Pull SEO',
+  'Corporate Tax & GST Silos',
+  'ChatGPT & Gemini Citations',
+  'Google AI Overviews',
+  'YMYL & Author E-E-A-T',
+  'Google Map Pack Top 3',
+  'Virtual CFO & NRI Leads',
+  'High Value Retainer Focus',
+];
+
+const accountingSchemaService = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "SEO for Accounting Firms in Delhi",
+  "serviceType": "Chartered Accountant, Tax Consultant & Financial Advisory Search Engine Optimisation",
+  "provider": {
+    "@type": "ProfessionalService",
+    "name": "NK Digital Tech",
+    "url": "https://www.nkdigitaltech.net/",
+    "email": "nkdigitaltech1@gmail.com",
+    "telephone": "+91-80521-89051",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "New Delhi",
+      "addressRegion": "Delhi",
+      "addressCountry": "IN"
+    }
+  },
+  "areaServed": [
+    "New Delhi",
+    "Connaught Place",
+    "ITO",
+    "Barakhamba Road",
+    "Nehru Place",
+    "Netaji Subhash Place",
+    "Bhikaji Cama Place",
+    "Laxmi Nagar",
+    "South Delhi",
+    "Rajendra Place"
+  ],
+  "description": pageDescription,
+  "url": pageCanonical
+});
+
+const accountingSchemaFAQ = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map((item) => ({
+    "@type": "Question",
+    "name": item.q,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": item.a
+    }
+  }))
+});
+
+const accountingSchemaBreadcrumb = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.nkdigitaltech.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Best SEO Company in Delhi",
+      "item": "https://www.nkdigitaltech.net/best-seo-company-in-delhi/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "SEO for Accounting Firms in Delhi",
+      "item": pageCanonical
+    }
+  ]
+});
+---
+
+<Layout
+  title={pageTitle}
+  description={pageDescription}
+  canonical={pageCanonical}
+  ogImage="https://www.nkdigitaltech.net/images/delhi-accounting-seo/hero-accounting-seo-delhi.webp"
+  preloadImage="/images/delhi-accounting-seo/hero-accounting-seo-delhi.webp"
+  hideLocationsNav={false}
+  customSchemaLocalBusiness={accountingSchemaService}
+  customSchemaFAQ={accountingSchemaFAQ}
+  customSchemaBreadcrumb={accountingSchemaBreadcrumb}
+  utilityTagline="SEO for Accounting Firms in Delhi • Chartered Accountants, Tax Advisory, GST Audit & Virtual CFO"
+  brandSubtitle="Delhi • CA & Financial SEO & AI Search"
+  footerBio="NK Digital Tech delivers compliant SEO for Accounting Firms in Delhi, helping Chartered Accountants, tax consultants and Virtual CFO practices win corporate retainer clients across Google, Maps, ChatGPT and Gemini."
+  footerCoreDisciplines={[
+    { label: 'Best Digital Marketing Agency in Delhi', href: '/best-digital-marketing-agency-in-delhi/' },
+    { label: 'Best SEO Company in Delhi', href: '/best-seo-company-in-delhi/' },
+    { label: 'Local SEO Services in Delhi', href: '/local-seo-services-in-delhi/' },
+    { label: 'AI SEO Company in Delhi', href: '/ai-seo-company-in-delhi/' },
+    { label: 'AEO Services in Delhi', href: '/aeo-services-in-delhi/' },
+    { label: 'Website Development Company in Delhi', href: '/website-development-company-in-delhi/' },
+  ]}
+  footerTagline="Built for Accounting & CA Firm SEO, AEO & GEO Visibility in Delhi"
+>
+
+  <!-- =====================================================================
+       SECTION 1: HERO (DARK SURFACE WITH UNIQUE ACCOUNTING SEO HERO IMAGE)
+  ===================================================================== -->
+  <section class="relative surface-dark overflow-hidden pt-8 pb-12 sm:pt-16 sm:pb-20 lg:pt-20 lg:pb-24 border-b border-slate-800/80">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="absolute inset-0 mesh-glow pointer-events-none"></div>
+    <div class="absolute -top-36 -left-36 w-96 h-96 bg-brand-500/20 rounded-full blur-[130px] pointer-events-none"></div>
+    <div class="absolute top-1/4 -right-36 w-96 h-96 bg-accent-500/20 rounded-full blur-[130px] pointer-events-none"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-7 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns: Headline & CTA -->
+        <div class="lg:col-span-7 text-left min-w-0">
+          <div class="badge-dark mb-4 sm:mb-6">
+            <span class="w-2 h-2 rounded-full bg-brand-400 animate-ping flex-shrink-0"></span>
+            <span class="min-w-0">CA &amp; Tax Firm SEO &bull; AEO &amp; GEO &bull; ICAI Compliant</span>
+          </div>
+
+          <h1 class="font-display text-[1.95rem] sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-[1.15] sm:leading-[1.1] mb-4 sm:mb-6 text-glow">
+            SEO for Accounting <br />
+            <span class="gradient-text-light">Firms in Delhi</span>
+          </h1>
+
+          <p class="text-[13.5px] sm:text-base md:text-lg text-slate-300 leading-relaxed mb-6 sm:mb-8 font-normal text-justify hyphens-auto [text-align-last:left]">
+            Looking for ethical, high trust <strong class="text-white font-semibold">SEO for Accounting Firms in Delhi</strong> that brings corporate tax retainers, statutory audits and Virtual CFO mandates? NK Digital Tech helps Chartered Accountants, tax consultants and financial advisory firms grow through three simple methods: <strong class="text-white font-semibold">SEO</strong> to rank your practice pages on page one of Google and Map Packs, <strong class="text-white font-semibold">AEO</strong> to win direct answer boxes for GST, Income Tax and MCA compliance queries, and <strong class="text-white font-semibold">GEO</strong> so ChatGPT, Gemini and Google AI Overviews cite your firm first.
+          </p>
+
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 mb-7 sm:mb-10">
+            <a href="#contact" class="btn-primary w-full sm:w-auto min-h-[48px] text-sm sm:text-base px-5 sm:px-8 py-3.5 sm:py-4">
+              <span>Claim Your Free Accounting Firm SEO Audit</span>
+              <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+              </svg>
+            </a>
+            <a href="#services" class="btn-secondary-dark w-full sm:w-auto min-h-[48px] text-sm sm:text-base px-5 sm:px-7 py-3.5 sm:py-4">
+              <span>Explore Our Six Financial SEO Pillars</span>
+            </a>
+          </div>
+
+          <!-- Trust Verification Strip (2x4 Grid on Mobile, Flex Pills on Desktop) -->
+          <div class="pt-5 sm:pt-6 border-t border-slate-800/80">
+            <div class="grid grid-cols-2 sm:flex sm:flex-wrap items-stretch sm:items-center gap-2">
+              {trustStrip.map((item) => (
+                <span class="px-2.5 sm:px-3 py-2 sm:py-1.5 rounded-lg bg-slate-900/90 border border-slate-800 text-[11px] sm:text-xs text-slate-300 font-medium flex items-center justify-center sm:justify-start text-center sm:text-left leading-tight">
+                  {item}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Unique Delhi Accounting SEO Hero Image -->
+        <div class="lg:col-span-5 min-w-0">
+          <div class="relative rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-700/80 shadow-2xl shadow-brand-500/15 bg-slate-900 group">
+            <div class="relative">
+              <img
+                src="/images/delhi-accounting-seo/hero-accounting-seo-delhi.webp"
+                alt="SEO for Accounting Firms in Delhi Strategy Team Reviewing Corporate Retainer Growth"
+                width="960"
+                height="540"
+                fetchpriority="high"
+                decoding="async"
+                class="w-full aspect-[16/10] sm:aspect-auto sm:h-72 md:h-[380px] lg:h-[400px] object-cover object-center group-hover:scale-105 transition-transform duration-500"
+              />
+              <div class="hidden sm:block absolute inset-0 bg-gradient-to-t from-[#050a14] via-transparent to-transparent opacity-80"></div>
+            </div>
+            <div class="relative sm:absolute sm:bottom-4 sm:left-4 sm:right-4 glass-card border-t sm:border border-slate-800 sm:rounded-2xl p-3.5 sm:p-4">
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-1">
+                <span class="text-xs font-bold text-white">Delhi CA &amp; Financial Advisory Authority</span>
+                <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-400">
+                  <span class="w-2 h-2 rounded-full bg-emerald-400 flex-shrink-0"></span>
+                  Corporate Retainer Leads
+                </span>
+              </div>
+              <p class="text-[11px] sm:text-xs text-slate-300 text-justify hyphens-auto [text-align-last:left] leading-relaxed">
+                Built to rank Connaught Place, ITO, Nehru Place and NSP accounting firms across Google Search, Map Packs and AI tools.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 2: INTRODUCTION (CRISP WHITE CONTRAST SECTION + TEAM IMAGE)
+  ===================================================================== -->
+  <section class="relative surface-white py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns: Concise 2-Paragraph Unique Copy -->
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-light mb-3.5 sm:mb-4">Corporate Tax &amp; Audit Pipeline</div>
+          <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-snug sm:leading-tight mb-4 sm:mb-6">
+            How Our SEO for Accounting Firms in Delhi <span class="gradient-text-dark">Wins High Value Corporate Retainers</span>
+          </h2>
+          <div class="space-y-4 sm:space-y-5 text-slate-700 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            <p>
+              When a startup founder in South Delhi needs a Virtual CFO, an exporter in Okhla receives a GST scrutiny notice, or an overseas company sets up an Indian subsidiary in Connaught Place, they do not wait for a referral. They search Google, check Google Maps and ask ChatGPT or Gemini to shortlist reputable Chartered Accountants and tax advisors. Our <strong>SEO for Accounting Firms in Delhi</strong> ensures your practice is the first name they discover.
+            </p>
+            <p>
+              As a trusted <a href="/best-digital-marketing-agency-in-delhi/" class="text-brand-600 hover:text-brand-700 font-semibold no-underline hover:no-underline">Best Digital Marketing Agency in Delhi</a> and <a href="/best-seo-company-in-delhi/" class="text-brand-600 hover:text-brand-700 font-semibold no-underline hover:no-underline">Best SEO Company in Delhi</a>, we build 100% ICAI compliant <strong>accounting lead generation in Delhi</strong>. Instead of competing with low cost online filing agents, our <strong>accounting SEO services in Delhi</strong> position your partners as authoritative specialists for statutory audits, corporate tax, FEMA and ROC compliance.
+            </p>
+          </div>
+          <div class="mt-6 sm:mt-8 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
+            <a href="#contact" class="btn-primary w-full sm:w-auto min-h-[48px]">
+              <span>Talk to a Financial SEO Specialist</span>
+              <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+              </svg>
+            </a>
+            <a href="#why-us" class="btn-secondary-light w-full sm:w-auto min-h-[48px]">
+              <span>Compare Portals vs CA Firm SEO</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Unique Team Image + Stats -->
+        <div class="lg:col-span-5 space-y-4 sm:space-y-5 min-w-0">
+          <div class="rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-200 shadow-lg bg-slate-100">
+            <img
+              src="/images/delhi-accounting-seo/team-accounting-seo-delhi.webp"
+              alt="SEO for Chartered Accountants in Delhi Reviewing Practice Area Growth"
+              width="800"
+              height="533"
+              class="w-full aspect-[16/10] sm:aspect-auto sm:h-64 lg:h-72 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="grid grid-cols-2 gap-3 sm:gap-4">
+            {[
+              { val: '3.7x', label: 'Corporate Inquiry Growth', sub: 'Across audit, GST & Virtual CFO' },
+              { val: '100%', label: 'ICAI Compliant Pull SEO', sub: 'Educational & factual authority' },
+              { val: 'Top 3', label: 'Google Map Pack Focus', sub: 'For CP, ITO, NSP & South Delhi' },
+              { val: 'YMYL', label: 'Partner E-E-A-T Schema', sub: 'Verified CA & advisor credentials' },
+            ].map((stat) => (
+              <div class="elevated-card rounded-xl sm:rounded-2xl p-3.5 sm:p-4 min-w-0">
+                <div class="font-display font-black text-xl sm:text-2xl text-brand-600 mb-0.5">{stat.val}</div>
+                <div class="text-[11px] sm:text-xs font-bold text-slate-900 leading-snug">{stat.label}</div>
+                <div class="text-[10.5px] sm:text-[11px] text-slate-500 leading-snug mt-0.5">{stat.sub}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 3: PROBLEM STATEMENT (DEEP INDIGO DARK CONTRAST SECTION)
+  ===================================================================== -->
+  <section class="relative surface-indigo py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="max-w-7xl mx-auto relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns: Problem Statement Justified Copy -->
+        <div class="lg:col-span-7 min-w-0">
+          <div class="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-3.5 py-1 sm:py-1.5 rounded-full text-[10px] sm:text-xs font-bold uppercase tracking-wider sm:tracking-widest bg-amber-500/10 border border-amber-500/30 text-amber-300 max-w-full leading-snug mb-4 sm:mb-5">
+            <svg class="w-4 h-4 text-amber-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+            </svg>
+            <span>Why Referral Only Growth Plateaus</span>
+          </div>
+
+          <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-white tracking-tight leading-snug sm:leading-tight mb-4 sm:mb-6">
+            Why Experienced Delhi CA and Accounting Firms Lose Corporate Clients Online
+          </h2>
+
+          <div class="space-y-4 sm:space-y-5 text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            <p>
+              Many respected Chartered Accountant and financial advisory firms in Delhi have decades of partner experience, yet their website sits invisible on page four of Google. Why? Because their site lists all services on one generic bulleted page, lacks YMYL author credentials and has an unoptimised Google Business Profile, allowing mass call centre portals to capture high growth startups and SMEs.
+            </p>
+            <p>
+              Search behaviour among CFOs and founders has also moved to AI. When an NRI investor or corporate director asks ChatGPT, Gemini or Google AI Overviews to explain transfer pricing rules, FEMA compliance or top audit firms in Delhi, AI engines cite websites with structured statutory tables and schema markup. Without a dedicated <a href="/ai-seo-company-in-delhi/" class="text-brand-300 hover:text-white font-semibold no-underline hover:no-underline">AI SEO Company in Delhi</a>, your firm remains invisible in AI answers.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Diagnostic Comparison Cards -->
+        <div class="lg:col-span-5 space-y-3.5 sm:space-y-4 min-w-0">
+          <div class="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6 border-l-4 border-l-rose-500">
+            <div class="flex flex-wrap items-center justify-between gap-1.5 mb-2">
+              <span class="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-rose-400">Typical Firm Website</span>
+              <span class="text-[11px] sm:text-xs text-slate-400">Referral Dependent</span>
+            </div>
+            <h3 class="font-display font-bold text-[15px] sm:text-base text-white mb-2 leading-snug">Static Brochure Pages &amp; Aggregator Loss</h3>
+            <p class="text-xs text-slate-300 leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+              Lists every tax and audit service on one thin page, fails Google YMYL checks and loses startup and corporate inquiries to online filing portals.
+            </p>
+          </div>
+
+          <div class="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6 border-l-4 border-l-emerald-400">
+            <div class="flex flex-wrap items-center justify-between gap-1.5 mb-2">
+              <span class="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-emerald-400">NK Digital Tech System</span>
+              <span class="text-[11px] sm:text-xs text-brand-300">Compliant Inbound Authority</span>
+            </div>
+            <h3 class="font-display font-bold text-[15px] sm:text-base text-white mb-2 leading-snug">Practice Silos, YMYL Schema &amp; AI Citations</h3>
+            <p class="text-xs text-slate-300 leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+              Builds dedicated GST, audit, FEMA and Virtual CFO hubs, partner E-E-A-T schema and top three Map Pack rankings to attract corporate retainers.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 4: SERVICES (LIGHT COOL ALABASTER CONTRAST + SERVICES IMAGE)
+  ===================================================================== -->
+  <section id="services" class="relative surface-cool py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <!-- Services Header with Unique Delhi Accounting Services Image -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 items-center mb-9 sm:mb-16">
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-light mb-3">Our Six Pillar Financial System</div>
+          <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-snug sm:leading-tight mb-3 sm:mb-4">
+            Complete Accounting &amp; CA Firm SEO Services in Delhi
+          </h2>
+          <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            Through specialised <strong>digital marketing for accounting firms in Delhi</strong>, we deliver six focused SEO, AEO and GEO services built for how corporate CFOs, startup founders and NRI clients select financial advisors across New Delhi.
+          </p>
+        </div>
+        <div class="lg:col-span-5 min-w-0">
+          <div class="rounded-2xl overflow-hidden border border-slate-200 shadow-md bg-white">
+            <img
+              src="/images/delhi-accounting-seo/services-accounting-seo-delhi.webp"
+              alt="Accounting SEO Services in Delhi YMYL Compliance and AI Citations"
+              width="800"
+              height="450"
+              class="w-full aspect-[16/9] sm:aspect-auto sm:h-56 lg:h-64 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- 3 Columns x 2 Rows Grid Layout -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-7">
+        {services.map((s) => (
+          <div class="elevated-card rounded-2xl p-5 sm:p-7 flex flex-col justify-between group sm:hover:-translate-y-1">
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-4 sm:mb-6">
+                <div class={`w-11 h-11 sm:w-12 sm:h-12 rounded-xl border flex items-center justify-center flex-shrink-0 ${s.iconStyle}`}>
+                  <Fragment set:html={s.icon} />
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class={`text-[10.5px] sm:text-[11px] font-semibold px-2.5 py-1 rounded-md ${s.badgeColor}`}>
+                    {s.category}
+                  </span>
+                  <span class="font-display font-black text-base sm:text-lg text-slate-300">{s.num}</span>
+                </div>
+              </div>
+
+              <h3 class="font-display font-bold text-[17px] sm:text-xl text-slate-900 mb-2.5 sm:mb-3 leading-snug group-hover:text-brand-600 transition-colors">
+                {s.title}
+              </h3>
+
+              <p class="text-slate-600 text-[13px] sm:text-sm leading-relaxed mb-4 sm:mb-6 text-justify hyphens-auto [text-align-last:left]">
+                {s.body}
+              </p>
+            </div>
+
+            <div>
+              <div class={`rounded-xl border p-3.5 sm:p-4 mb-3.5 sm:mb-5 ${s.impactStyle}`}>
+                <div class="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-slate-900 mb-1">
+                  <svg class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                  </svg>
+                  <span>Commercial Impact</span>
+                </div>
+                <p class="text-xs text-slate-700 leading-relaxed font-medium text-justify hyphens-auto [text-align-last:left]">
+                  {s.impact}
+                </p>
+              </div>
+
+              <a href={s.href} class="inline-flex items-center gap-2 py-2 min-h-[40px] text-xs font-bold text-brand-600 hover:text-brand-700 no-underline hover:no-underline group-hover:gap-3 transition-all">
+                <span>{s.cta}</span>
+                <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 5: REGIONAL LOCATIONS (DARK NAVY + DELHI COMMERCIAL HUBS)
+  ===================================================================== -->
+  <section id="locations" class="relative surface-navy py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <!-- Regional Header with Unique Delhi Accounting Map Image -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 items-center mb-9 sm:mb-16">
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-dark mb-3">Commercial District Targeting</div>
+          <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-white tracking-tight leading-snug sm:leading-tight mb-3 sm:mb-4">
+            Hyper Local Financial Search Coverage Across Delhi Commercial Hubs
+          </h2>
+          <p class="text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            Corporate and SME tax searches in Delhi concentrate around major business districts. A multinational subsidiary searching near Connaught Place or Barakhamba Road has different needs from an IT company in Nehru Place or a trading house in Netaji Subhash Place. We pair our <a href="/local-seo-services-in-delhi/" class="text-brand-300 hover:text-white font-semibold no-underline hover:no-underline">Local SEO Services in Delhi</a> with district landing pages across four key financial corridors.
+          </p>
+        </div>
+        <div class="lg:col-span-5 min-w-0">
+          <div class="rounded-2xl overflow-hidden border border-slate-700/80 shadow-xl bg-slate-900">
+            <img
+              src="/images/delhi-accounting-seo/locations-accounting-seo-delhi.webp"
+              alt="Delhi Accounting Corridors Across Connaught Place, ITO, Nehru Place and NSP"
+              width="800"
+              height="450"
+              class="w-full aspect-[16/9] sm:aspect-auto sm:h-56 lg:h-64 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- 1 Row x 4 Columns Responsive Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+        {cities.map((c) => (
+          <div class="glass-card rounded-2xl p-5 sm:p-6 flex flex-col justify-between group sm:hover:-translate-y-1">
+            <div>
+              <div class={`h-1 w-full bg-gradient-to-r ${c.accent} rounded-full mb-4 sm:mb-5`}></div>
+
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-3.5 sm:mb-4">
+                <span class="px-2.5 py-1 rounded-md bg-slate-800 border border-slate-700 text-[11px] font-bold uppercase tracking-wider text-brand-300">
+                  {c.hub}
+                </span>
+                <span class="text-xs font-semibold text-slate-400">{c.city}</span>
+              </div>
+
+              <h3 class="font-display font-bold text-base sm:text-lg text-white mb-2.5 sm:mb-3 leading-snug">
+                <a href={c.href} class="hover:text-brand-300 no-underline hover:no-underline transition-colors">{c.keyword}</a>
+              </h3>
+
+              <p class="text-slate-300 text-[13px] sm:text-sm leading-relaxed mb-4 sm:mb-5 text-justify hyphens-auto [text-align-last:left]">
+                {c.desc}
+              </p>
+            </div>
+
+            <div class="pt-3.5 sm:pt-4 border-t border-slate-800">
+              <p class="text-[11px] text-slate-400 mb-3 sm:mb-4 leading-normal">
+                <strong class="text-slate-300">Key Districts:</strong> {c.corridor}
+              </p>
+              <a href={c.href} class="inline-flex items-center gap-1.5 py-2 min-h-[40px] text-xs font-bold text-brand-400 hover:text-brand-300 no-underline hover:no-underline group-hover:gap-2.5 transition-all">
+                <span>{c.cta}</span>
+                <svg class="w-3.5 h-3.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 6: WHY NK DIGITAL TECH (CRISP WHITE CONTRAST SECTION)
+  ===================================================================== -->
+  <section id="why-us" class="relative surface-white py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-14 text-left sm:text-center">
+        <div class="badge-light mb-3">Why Delhi Managing Partners Choose Us</div>
+        <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-snug sm:leading-tight mb-3 sm:mb-4">
+          How Our SEO for CA Firms in Delhi Beats Online Tax Portals
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed mb-4 text-justify hyphens-auto [text-align-last:left]">
+          Generic agencies write shallow tax articles that fail Google YMYL checks and attract low budget callers. We build your search presence around partner authority, statutory precision, <a href="/aeo-services-in-delhi/" class="text-brand-600 hover:text-brand-700 font-semibold no-underline hover:no-underline">AEO Services in Delhi</a> and corporate retainer conversion.
+        </p>
+        <p class="text-slate-700 font-semibold text-xs sm:text-sm">
+          See how our CA and accounting SEO system compares to tax portals and generic agencies:
+        </p>
+      </div>
+
+      <!-- Desktop Comparison Matrix -->
+      <div class="hidden md:block overflow-hidden rounded-2xl border border-slate-200 shadow-lg">
+        <table class="w-full text-left border-collapse">
+          <thead>
+            <tr class="bg-slate-900 text-white">
+              <th class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-slate-300 w-1/4">
+                Evaluation Criteria
+              </th>
+              <th class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-rose-300 w-[37.5%] border-l border-slate-800">
+                Typical Tax Portal / Generic Vendor
+              </th>
+              <th class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-brand-300 w-[37.5%] border-l border-slate-800 bg-slate-950">
+                NK Digital Tech Accounting Firm SEO
+              </th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200 text-sm">
+            {comparison.map((row, idx) => (
+              <tr class={idx % 2 === 0 ? 'bg-white' : 'bg-slate-50/80'}>
+                <td class="py-5 px-6 font-display font-bold text-slate-900">
+                  {row.metric}
+                </td>
+                <td class="py-5 px-6 text-slate-600 border-l border-slate-200">
+                  <div class="flex items-start gap-2.5">
+                    <svg class="w-4 h-4 text-rose-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                    <span class="text-justify">{row.typical}</span>
+                  </div>
+                </td>
+                <td class="py-5 px-6 text-slate-900 font-medium border-l border-slate-200 bg-sky-50/40">
+                  <div class="flex items-start gap-2.5">
+                    <svg class="w-4 h-4 text-emerald-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span class="text-justify">{row.nk}</span>
+                  </div>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Mobile Comparison Cards -->
+      <div class="md:hidden space-y-3.5">
+        {comparison.map((row) => (
+          <div class="elevated-card rounded-2xl p-4 space-y-2.5">
+            <h3 class="font-display font-bold text-slate-900 text-[15px] leading-snug">{row.metric}</h3>
+            <div class="rounded-xl bg-rose-50 border border-rose-100 p-3">
+              <div class="flex items-center gap-1.5 mb-1">
+                <svg class="w-3.5 h-3.5 text-rose-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+                <p class="text-[10px] font-bold uppercase tracking-wider text-rose-600">Typical Tax Portal / Generic Vendor</p>
+              </div>
+              <p class="text-xs text-slate-700 leading-relaxed text-justify hyphens-auto [text-align-last:left]">{row.typical}</p>
+            </div>
+            <div class="rounded-xl bg-sky-50 border border-sky-200 p-3">
+              <div class="flex items-center gap-1.5 mb-1">
+                <svg class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                </svg>
+                <p class="text-[10px] font-bold uppercase tracking-wider text-brand-600">NK Digital Tech Accounting Firm SEO</p>
+              </div>
+              <p class="text-xs text-slate-900 font-semibold leading-relaxed text-justify hyphens-auto [text-align-last:left]">{row.nk}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 7: ACCOUNTING SEGMENTS WE SCALE (LIGHT SLATE 3x2 GRID)
+  ===================================================================== -->
+  <section id="industries" class="relative surface-slate py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-16 text-left sm:text-center">
+        <div class="badge-light mb-3">Practice Areas We Serve</div>
+        <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-snug sm:leading-tight mb-3 sm:mb-4">
+          Accounting, Tax &amp; Advisory Segments We Rank Across Delhi
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          Whether your practice specialises in statutory audits, GST litigation, Virtual CFO advisory, NRI taxation or company secretarial compliance, we match your pages with the exact searches corporate clients make on Google, ChatGPT and Gemini.
+        </p>
+      </div>
+
+      <!-- 3 Columns x 2 Rows Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-7">
+        {accountingSegments.map((ind) => (
+          <div class={`elevated-card rounded-2xl p-5 sm:p-7 border-t-4 ${ind.accentBorder} flex flex-col justify-between sm:hover:-translate-y-1`}>
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-4 sm:mb-5">
+                <div class={`w-10 h-10 sm:w-11 sm:h-11 rounded-xl border flex items-center justify-center flex-shrink-0 ${ind.iconBg}`}>
+                  <Fragment set:html={ind.icon} />
+                </div>
+                <span class="text-[11px] font-semibold text-slate-600 bg-slate-100 px-2.5 py-1 rounded-md">
+                  {ind.sector}
+                </span>
+              </div>
+
+              <h3 class="font-display font-bold text-[17px] sm:text-xl text-slate-900 mb-3 sm:mb-4 leading-snug">
+                {ind.title}
+              </h3>
+
+              <div class="mb-4 sm:mb-5">
+                <p class="text-[11px] font-bold uppercase tracking-wider text-brand-600 mb-1.5">
+                  Search &amp; AI Strategy
+                </p>
+                <p class="text-slate-600 text-[13px] sm:text-sm leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+                  {ind.focus}
+                </p>
+              </div>
+            </div>
+
+            <div class="rounded-xl bg-emerald-50/70 border border-emerald-200/80 p-3.5 sm:p-4">
+              <p class="text-[11px] font-bold uppercase tracking-wider text-emerald-700 mb-1">
+                Commercial Result
+              </p>
+              <p class="text-slate-800 text-xs font-medium leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+                {ind.outcome}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 8: HOW WE WORK (CRISP WHITE CONTRAST SECTION - 4 STAGES)
+  ===================================================================== -->
+  <section class="relative surface-white py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-16 text-left sm:text-center">
+        <div class="badge-light mb-3">Our 4 Stage Execution</div>
+        <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-snug sm:leading-tight mb-3 sm:mb-4">
+          How We Rank Delhi Accounting &amp; CA Websites on Google &amp; AI Engines
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          Our four stage execution model establishes your Google YMYL trust signals first, captures local map pack calls around your chambers and scales your citations across ChatGPT, Gemini and Google AI Overviews.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-7">
+        {stages.map((s) => (
+          <div class="elevated-card rounded-2xl p-5 sm:p-8 relative overflow-hidden group sm:hover:-translate-y-1">
+            <div class="flex items-center justify-between gap-4 mb-3.5 sm:mb-5">
+              <span class={`inline-flex items-center px-2.5 sm:px-3 py-1 rounded-lg text-xs font-bold uppercase tracking-wider text-white bg-gradient-to-r ${s.accent}`}>
+                {s.num}
+              </span>
+              <span class="font-display font-black text-3xl sm:text-4xl text-slate-200 group-hover:text-slate-300 transition-colors">
+                {s.step}
+              </span>
+            </div>
+            <h3 class="font-display font-bold text-[17px] sm:text-xl text-slate-900 mb-2.5 sm:mb-3 leading-snug">
+              {s.title}
+            </h3>
+            <p class="text-slate-600 text-[13px] sm:text-sm leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+              {s.body}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 9: CONCLUSION / PARTNER SECTION (DARK INDIGO + GROWTH IMAGE)
+  ===================================================================== -->
+  <section class="relative surface-indigo py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-7 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns: Conclusion Paragraphs (Justified) -->
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-dark mb-3.5 sm:mb-4">Compounding Advisory Authority</div>
+          <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-white tracking-tight leading-snug sm:leading-tight mb-4 sm:mb-6">
+            Start Winning Corporate Clients With SEO for Accounting Firms in Delhi
+          </h2>
+          <div class="space-y-4 sm:space-y-5 text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            <p>
+              Every month you delay building your firm's organic search authority, online filing aggregators and competing practices capture the funded startups, corporate groups and NRI clients who should be retaining your partners. Business owners in Connaught Place, Nehru Place and NSP check Google, Maps, ChatGPT and Gemini long before scheduling a tax consultation.
+            </p>
+            <p>
+              When you choose NK Digital Tech for <strong class="text-white font-semibold">SEO for Accounting Firms in Delhi</strong>, you work directly with senior strategists and developers from a trusted <a href="/website-development-company-in-delhi/" class="text-brand-300 hover:text-white font-semibold no-underline hover:no-underline">Website Development Company in Delhi</a> who build ICAI compliant practice pages, YMYL schema and top three Map Pack rankings. Claim your free audit today to grow corporate retainers.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Unique Delhi Accounting Growth Image -->
+        <div class="lg:col-span-5 min-w-0">
+          <div class="rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-700/80 shadow-2xl bg-slate-900">
+            <img
+              src="/images/delhi-accounting-seo/growth-accounting-seo-delhi.webp"
+              alt="Delhi CA Managing Partner Reviewing Corporate Retainer Inquiry Growth"
+              width="800"
+              height="450"
+              class="w-full aspect-[16/10] sm:aspect-auto sm:h-64 lg:h-72 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 10: FAQ (LIGHT COOL SLATE CONTRAST SECTION)
+  ===================================================================== -->
+  <section id="faq" class="relative surface-cool py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-left sm:text-center mb-9 sm:mb-14">
+        <div class="badge-light mb-3">Questions Asked on Google, ChatGPT &amp; Gemini</div>
+        <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-snug sm:leading-tight mb-3 sm:mb-4">
+          Frequently Asked Questions About SEO for Accounting Firms in Delhi
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          Direct, factual answers to the questions Chartered Accountants, tax partners and Virtual CFO directors in Delhi ask before launching a compliant search and AI campaign.
+        </p>
+      </div>
+
+      <div class="space-y-3 sm:space-y-4">
+        {faqs.map((f, i) => (
+          <details class="elevated-card rounded-2xl group overflow-hidden" open={i === 0}>
+            <summary class="flex items-start sm:items-center justify-between gap-3 sm:gap-4 px-4 sm:px-6 py-4 sm:py-5 min-h-[54px] select-none">
+              <div class="flex items-start sm:items-center gap-2.5 sm:gap-3.5 text-left min-w-0">
+                <span class="w-6 h-6 sm:w-7 sm:h-7 rounded-lg bg-sky-50 border border-sky-200 text-brand-600 font-display font-bold text-xs flex items-center justify-center flex-shrink-0 mt-0.5 sm:mt-0">
+                  0{i + 1}
+                </span>
+                <span class="font-display font-bold text-slate-900 text-[14px] sm:text-base md:text-lg leading-snug">
+                  {f.q}
+                </span>
+              </div>
+              <span class="faq-icon w-7 h-7 sm:w-8 sm:h-8 rounded-full border border-slate-200 text-slate-600 flex items-center justify-center flex-shrink-0 mt-0.5 sm:mt-0">
+                <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                </svg>
+              </span>
+            </summary>
+            <div class="px-4 sm:px-6 pb-5 sm:pb-6 pt-3 text-slate-600 text-[13px] sm:text-sm md:text-base leading-relaxed border-t border-slate-100 text-justify hyphens-auto [text-align-last:left]">
+              {f.a}
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 11: SHORT 2 TO 3 LINE CALL TO ACTION BANNER (LAST SECTION)
+  ===================================================================== -->
+  <section id="contact" class="relative surface-dark py-12 pb-24 sm:py-16 lg:py-20 px-4 sm:px-6 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-5xl mx-auto">
+      <div class="rounded-2xl sm:rounded-3xl bg-gradient-to-r from-brand-600 via-brand-700 to-accent-700 p-6 sm:p-10 md:p-12 text-center text-white shadow-2xl border border-white/15 relative overflow-hidden">
+        <div class="relative z-10 max-w-2xl mx-auto">
+          <h2 class="font-display font-black text-[1.45rem] sm:text-3xl md:text-4xl text-white tracking-tight leading-snug mb-3 sm:mb-4">
+            Ready to Attract High Value Corporate &amp; Tax Retainers in Delhi?
+          </h2>
+
+          <p class="text-sky-50 text-[13px] sm:text-sm md:text-base leading-relaxed mb-6 sm:mb-8">
+            Book a free audit with our senior search specialists to review your practice pages, Google Business Profile and AI citations across New Delhi.
+          </p>
+
+          <a
+            href="/contact-us/"
+            class="inline-flex w-full sm:w-auto min-h-[48px] items-center justify-center gap-2 sm:gap-3 px-5 sm:px-8 py-3.5 sm:py-4 rounded-xl bg-white text-slate-950 hover:bg-sky-50 no-underline hover:no-underline font-display font-bold text-sm sm:text-base shadow-xl transition-all duration-300 active:scale-95 text-center leading-snug"
+          >
+            <span>Claim Your Free Accounting Firm SEO Audit</span>
+            <svg class="w-4 h-4 sm:w-5 sm:h-5 text-brand-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mobile Sticky Bottom Quick Action Bar -->
+  <div class="sm:hidden fixed bottom-0 inset-x-0 z-40 bg-[#050a14]/95 backdrop-blur-xl border-t border-slate-800 px-3.5 py-2.5 shadow-[0_-8px_24px_rgba(0,0,0,0.45)]">
+    <div class="flex items-center gap-2.5">
+      <a
+        href="/contact-us/"
+        class="btn-primary flex-1 min-h-[44px] py-2.5 px-4 text-xs font-bold rounded-xl no-underline hover:no-underline"
+      >
+        <span>Claim Free CA Firm Audit</span>
+        <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+        </svg>
+      </a>
+      <a
+        href="#services"
+        class="btn-secondary-dark min-h-[44px] py-2.5 px-3.5 text-xs font-semibold rounded-xl flex-shrink-0 no-underline hover:no-underline"
+      >
+        <span>Services</span>
+      </a>
+    </div>
+  </div>
+
+</Layout>

@@ -1,0 +1,1072 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import '../../styles/global.css';
+
+const pageTitle = "Best SEO for Manufacturing Companies in Noida | NK Digital Tech";
+const pageDescription = "Need SEO for Manufacturing Companies in Noida? NK Digital Tech drives direct B2B RFQs, OEM vendor inquiries and export orders across Google and AI search.";
+const pageCanonical = "https://www.nkdigitaltech.net/best-seo-company-in-noida/Manufacturing-Businesses/";
+
+const services = [
+  {
+    "num": "01",
+    "category": "Technical Spec Page SEO",
+    "icon": "<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z\"/></svg>",
+    "iconStyle": "bg-sky-50 border-sky-200 text-brand-600",
+    "impactStyle": "bg-sky-50/80 border-sky-200/80 text-slate-800",
+    "badgeColor": "text-brand-600 bg-sky-100/80",
+    "title": "Part Number, Material Grade & OEM Keyword SEO",
+    "body": "We convert static PDF catalogues into indexed HTML product category and sub-assembly pages targeting exact B2B buyer specs, material grades and MOQ terms.",
+    "impact": "Page one Google rankings when procurement specialists search for OEM suppliers.",
+    "cta": "View Our Core Noida SEO Approach",
+    "href": "/best-seo-company-in-noida/"
+  },
+  {
+    "num": "02",
+    "category": "Industrial Estate Map SEO",
+    "icon": "<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z\"/><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M15 11a3 3 0 11-6 0 3 3 0 016 0z\"/></svg>",
+    "iconStyle": "bg-emerald-50 border-emerald-200 text-emerald-600",
+    "impactStyle": "bg-emerald-50/80 border-emerald-200/80 text-slate-800",
+    "badgeColor": "text-emerald-700 bg-emerald-100/80",
+    "title": "Google Business Profile for Factory Units",
+    "body": "We verify and optimise Google Business Profiles for plants in Phase 2, Sector 63, Sector 80, Surajpur and Ecotech Greater Noida with shop-floor photos.",
+    "impact": "Top three Map Pack visibility for vendor plant audits and local B2B buyers.",
+    "cta": "See Local SEO Services in Noida",
+    "href": "/local-seo-services-in-noida/"
+  },
+  {
+    "num": "03",
+    "category": "Catalogue & Schema SEO",
+    "icon": "<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4\"/></svg>",
+    "iconStyle": "bg-cyan-50 border-cyan-200 text-cyan-700",
+    "impactStyle": "bg-cyan-50/80 border-cyan-200/80 text-slate-800",
+    "badgeColor": "text-cyan-700 bg-cyan-100/80",
+    "title": "Fast CAD/Datasheet Portals & Product Schema",
+    "body": "We build sub-two-second mobile product pages, structured HTML tolerance tables and Organization, Product and FAQPage JSON LD schema markup.",
+    "impact": "Seamless technical evaluation by technical teams and higher RFQ conversions.",
+    "cta": "Explore Noida Web Development",
+    "href": "/website-development-company-in-noida/"
+  },
+  {
+    "num": "04",
+    "category": "Answer Engine SEO (AEO)",
+    "icon": "<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z\"/></svg>",
+    "iconStyle": "bg-amber-50 border-amber-200 text-amber-600",
+    "impactStyle": "bg-amber-50/80 border-amber-200/80 text-slate-800",
+    "badgeColor": "text-amber-700 bg-amber-100/80",
+    "title": "Answer Engine SEO for ISO, BIS & ASTM Standards",
+    "body": "We publish concise 50 word technical answers and comparison matrices for BIS, RoHS, CE, IATF 16949 and material standards to win Google Featured Snippets.",
+    "impact": "Positions your technical team as the trusted authority during vendor vetting.",
+    "cta": "Check AEO Services in Noida",
+    "href": "/aeo-services-in-noida/"
+  },
+  {
+    "num": "05",
+    "category": "Generative AI SEO (GEO)",
+    "icon": "<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z\"/></svg>",
+    "iconStyle": "bg-violet-50 border-violet-200 text-accent-600",
+    "impactStyle": "bg-violet-50/80 border-violet-200/80 text-slate-800",
+    "badgeColor": "text-accent-600 bg-violet-100/80",
+    "title": "GEO Citations in ChatGPT & Gemini for Procurement",
+    "body": "We structure plant capacity data, machinery lists, quality certifications and export credentials so ChatGPT, Perplexity and Gemini shortlist your factory.",
+    "impact": "Direct supplier citations when domestic and global buyers query AI assistants.",
+    "cta": "Explore Noida AI SEO Services",
+    "href": "/ai-seo-company-in-noida/"
+  },
+  {
+    "num": "06",
+    "category": "Export & Trade Authority",
+    "icon": "<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M13 10V3L4 14h7v7l9-11h-7z\"/></svg>",
+    "iconStyle": "bg-indigo-50 border-indigo-200 text-indigo-600",
+    "impactStyle": "bg-indigo-50/80 border-indigo-200/80 text-slate-800",
+    "badgeColor": "text-indigo-700 bg-indigo-100/80",
+    "title": "Global Export Pages & Industrial PR Backlinks",
+    "body": "We create country-targeted export pages for US, EU, MENA and ASEAN buyers backed by authoritative citations from Indian technical councils and trade media.",
+    "impact": "Steady inbound container-load export inquiries and international dealer signups.",
+    "cta": "Scale Your Export RFQ Pipeline",
+    "href": "#contact"
+  }
+];
+
+const cities = [
+  {
+    "hub": "Corridor 01",
+    "city": "Sector 63, 62 & 57-58 Cluster",
+    "corridor": "Sector 63 • Sector 57 • Sector 58 • Sector 59 • Sector 60",
+    "keyword": "Electronics, EMS & Precision technical SEO in Noida",
+    "desc": "We help PCB assembly plants, LED/EMS manufacturers, electrical panel builders and precision tool rooms in Sector 63 and Sector 58 win corporate OEM contracts.",
+    "cta": "Audit Your Plant Visibility",
+    "href": "#contact",
+    "accent": "from-brand-500 to-sky-400"
+  },
+  {
+    "hub": "Corridor 02",
+    "city": "Noida Phase 2 & Sector 80-83",
+    "corridor": "Phase 2 NSEZ • Sector 80 • Sector 81 • Sector 83 • Hosiery Complex",
+    "keyword": "Export Manufacturing & NSEZ Factory SEO in Noida",
+    "desc": "From NSEZ export units and garment manufacturers to plastic injection moulding and sheet metal plants in Phase 2 and Sector 80, we drive bulk B2B orders.",
+    "cta": "Scale Phase 2 Factory RFQs",
+    "href": "#contact",
+    "accent": "from-accent-500 to-violet-400"
+  },
+  {
+    "hub": "Corridor 03",
+    "city": "Ecotech & Surajpur Greater Noida",
+    "corridor": "Ecotech 1, 2, 3 & 11 • Surajpur • Kasna • Site 4 & Site 5",
+    "keyword": "Heavy Machinery & Auto Component SEO in Greater Noida",
+    "desc": "We rank Tier-1 and Tier-2 automotive component makers, chemical plants, HVAC manufacturers and heavy fabrication units across Surajpur and Ecotech.",
+    "cta": "Capture OEM Vendor Inquiries",
+    "href": "#contact",
+    "accent": "from-cyan-500 to-teal-400"
+  },
+  {
+    "hub": "Corridor 04",
+    "city": "YEIDA & Jewar Industrial Corridor",
+    "corridor": "YEIDA Sector 28, 29, 32 & 33 • Toy Park • Medical Device Park",
+    "keyword": "YEIDA Industrial Park & Export OEM SEO",
+    "desc": "We build global search visibility for new manufacturing plants in YEIDA’s Medical Device Park, Apparel Park, Toy Park and electronics clusters near Jewar Airport.",
+    "cta": "Build Global Export Pipeline",
+    "href": "#contact",
+    "accent": "from-emerald-500 to-green-400"
+  }
+];
+
+const comparison = [
+  {
+    "metric": "Quality of Buyer Inquiries",
+    "typical": "Single-piece retail callers or shared portal leads sold to ten traders at once",
+    "nk": "Exclusive corporate RFQs, MOQ-qualified bulk orders and OEM vendor invitations"
+  },
+  {
+    "metric": "Technical Specification Indexing",
+    "typical": "Uploads 30 MB PDF brochures that Google and AI crawlers cannot index properly",
+    "nk": "Structured HTML specification tables, part numbers, CAD sheets and Product schema"
+  },
+  {
+    "metric": "AI Search & Procurement Citations",
+    "typical": "Invisible when purchase heads ask ChatGPT or Gemini for certified Noida manufacturers",
+    "nk": "Machine-readable ISO/BIS/IATF credentials and capacity tables cited by AI tools"
+  },
+  {
+    "metric": "Export & International Reach",
+    "typical": "Limited to local directory listings with no global technical keyword strategy",
+    "nk": "Country and standard specific landing pages targeting US, EU, GCC and pan-India buyers"
+  },
+  {
+    "metric": "Trader vs Manufacturer Positioning",
+    "typical": "Resellers and middlemen outrank your actual factory for your own product lines",
+    "nk": "Establishes your plant as the verified primary OEM source with shop-floor E-E-A-T"
+  },
+  {
+    "metric": "Long Term Pipeline Ownership",
+    "typical": "Annual portal subscription upgrades where leads stop if you stop paying",
+    "nk": "100% owned industrial digital asset that compounds OEM inquiries year after year"
+  }
+];
+
+const propertySegments = [
+  {
+    "sector": "Electronics & EMS",
+    "title": "PCB Assembly, LED, Mobile & IoT Hardware Plants",
+    "focus": "OEM hardware brands and defence/telecom buyers search Google and ChatGPT for SMT PCB assembly in Noida Sector 63, box-build EMS contract manufacturing, RoHS compliance and cleanroom testing facilities.",
+    "outcome": "High value contract manufacturing and OEM electronics assembly RFQs.",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4\"/></svg>",
+    "accentBorder": "border-t-brand-500",
+    "iconBg": "bg-sky-50 text-brand-600 border-sky-200"
+  },
+  {
+    "sector": "Auto & Precision technical",
+    "title": "CNC Machining, Sheet Metal & Auto Ancillaries",
+    "focus": "Tier-1 automotive buyers and industrial equipment makers search for IATF 16949 certified CNC turned components, progressive die stamping, die casting and laser fabrication in Surajpur, Ecotech and Phase 2.",
+    "outcome": "Long-term OEM supply contracts and vendor empanelment invitations.",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z\"/></svg>",
+    "accentBorder": "border-t-amber-500",
+    "iconBg": "bg-amber-50 text-amber-600 border-amber-200"
+  },
+  {
+    "sector": "Machinery & Electricals",
+    "title": "Industrial Automation, Transformers & Control Panels",
+    "focus": "Factory project heads and EPC contractors search Google for CPRI approved LT/HT electrical panels, servo voltage stabilizers, conveyor systems, packaging machinery and industrial chillers manufactured in Noida.",
+    "outcome": "Direct capital equipment orders and turnkey factory installation tenders.",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M3 21h18M5 21V7l8-4v18M19 21V11l-6-4M9 9v.01M9 12v.01M9 15v.01M9 18v.01\"/></svg>",
+    "accentBorder": "border-t-cyan-500",
+    "iconBg": "bg-cyan-50 text-cyan-700 border-cyan-200"
+  },
+  {
+    "sector": "Plastics, Moulding & Packaging",
+    "title": "Injection Moulding, Corrugated & Flexible Packaging",
+    "focus": "FMCG, pharmaceutical, D2C and electronics brands across NCR search for custom injection moulded enclosures, blow moulded bottles, mono cartons and bulk corrugated box manufacturers in Noida Phase 2 and Sector 80.",
+    "outcome": "Recurring monthly bulk packaging and custom moulding supply contracts.",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z\"/></svg>",
+    "accentBorder": "border-t-emerald-500",
+    "iconBg": "bg-emerald-50 text-emerald-600 border-emerald-200"
+  },
+  {
+    "sector": "Apparel, Leather & Lifestyle Exports",
+    "title": "NSEZ & Hosiery Complex Garment & Export Units",
+    "focus": "International retail buyers in Europe, the US and UAE search Google and AI tools for SEDEX/BSCI audited garment exporters, private label knitwear factories and leather accessories manufacturers in Noida.",
+    "outcome": "Direct overseas buyer sampling requests and export LC orders.",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z\"/><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M15 11a3 3 0 11-6 0 3 3 0 016 0z\"/></svg>",
+    "accentBorder": "border-t-indigo-500",
+    "iconBg": "bg-indigo-50 text-indigo-600 border-indigo-200"
+  },
+  {
+    "sector": "Chemicals, Pharma & Medical Devices",
+    "title": "Specialty Chemicals, Lab Equipment & Medical Devices",
+    "focus": "Hospital chains, diagnostic distributors and industrial formulators search for ISO 13485 medical device manufacturers, cleanroom disposables, masterbatches and specialty industrial chemicals in Greater Noida and YEIDA.",
+    "outcome": "National distributor applications and institutional supply contracts.",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4\"/></svg>",
+    "accentBorder": "border-t-rose-500",
+    "iconBg": "bg-rose-50 text-rose-600 border-rose-200"
+  }
+];
+
+const stages = [
+  {
+    "num": "Stage 01",
+    "step": "01",
+    "title": "Technical Catalogue, Crawl Health & OEM Keyword Gap Audit",
+    "body": "We audit your current website speed, PDF specification bottlenecks, indexation gaps and Google Business Profile health while mapping the exact part, material and OEM keywords where your factory can outrank B2B portals.",
+    "accent": "from-brand-600 to-sky-500"
+  },
+  {
+    "num": "Stage 02",
+    "step": "02",
+    "title": "Product Silos, HTML Spec Tables & Industrial Schema Setup",
+    "body": "You get a 90 day technical SEO roadmap covering product categories, industries served and quality certifications. We deploy Product, Organization and FAQPage JSON LD schema so Google and AI tools read your specs accurately.",
+    "accent": "from-accent-600 to-violet-500"
+  },
+  {
+    "num": "Stage 03",
+    "step": "03",
+    "title": "Spec Page Publishing, Factory Map Pack & Trade Citations",
+    "body": "Our technical writers and developers publish fast HTML specification pages, MOQ-qualified RFQ forms and verified Google Business Profile updates across Phase 2, Sector 63, Surajpur and Ecotech Greater Noida.",
+    "accent": "from-cyan-600 to-teal-500"
+  },
+  {
+    "num": "Stage 04",
+    "step": "04",
+    "title": "RFQ Conversion Tracking, AI Citation Checks & Export Scaling",
+    "body": "Every two weeks we review your B2B keyword rankings, CAD datasheet downloads, RFQ form submissions and live supplier citations inside ChatGPT and Google AI Overviews, expanding into high-margin export categories.",
+    "accent": "from-emerald-600 to-green-500"
+  }
+];
+
+const faqs = [
+  {
+    "q": "Why does an industrial plant need SEO for Manufacturing Companies in Noida instead of relying only on IndiaMART or TradeIndia?",
+    "a": "On B2B aggregator portals, your factory is listed alongside dozens of middlemen traders who do not even own a machine, and every buyer inquiry is sold to ten competitors at once, forcing a race to the bottom on price. Investing in SEO for Manufacturing Companies in Noida brings corporate purchase managers and overseas importers directly to your official factory website for exclusive, high-margin RFQs."
+  },
+  {
+    "q": "How do you stop single-piece retail callers and attract only bulk B2B buyers?",
+    "a": "We eliminate generic consumer keywords and optimise your pages around commercial B2B modifiers such as OEM manufacturer, bulk supplier, custom fabrication, ASTM/BIS specifications and industrial lot sizes. We also build structured RFQ forms with mandatory Company Name, GSTIN/Import Code and Minimum Order Quantity (MOQ) fields."
+  },
+  {
+    "q": "How do you get Noida factories shortlisted by ChatGPT, Gemini and Google AI Overviews?",
+    "a": "Procurement specialists increasingly ask ChatGPT, Perplexity and Gemini questions like top ISO certified sheet metal manufacturers in Noida or EMS PCB assembly companies in Sector 63 Noida. We structure your plant capacity, machine list, tolerances, ISO/IATF/BIS certifications and Product schema into clean HTML tables so AI engines cite your company directly."
+  },
+  {
+    "q": "Should we remove our downloadable PDF technical catalogues?",
+    "a": "You should keep downloadable PDFs for offline technical review, but never rely on PDFs alone for SEO. We convert the core specifications, dimensional charts, material grades and applications from your PDFs into fast, crawlable HTML tables on each product page so Google and AI crawlers index every technical parameter."
+  },
+  {
+    "q": "How long do industrial SEO services in Noida take to generate corporate RFQs?",
+    "a": "Technical indexing fixes, HTML specification table deployment and Google Business Profile optimisation typically begin generating long-tail part and specification inquiries within 6 to 10 weeks. Ranking competitive national and export B2B category pages on page one of Google and earning steady AI procurement citations takes 3 to 6 months."
+  },
+  {
+    "q": "Can you help Noida and NSEZ factories generate international export inquiries?",
+    "a": "Yes. Many of our manufacturing clients in Phase 2 NSEZ, Sector 63 and Ecotech export to the US, Europe, Middle East and Africa. We build international export landing pages aligned with global compliance standards (CE, UL, RoHS, REACH, FDA) and clean hreflang/geo-targeted architecture."
+  },
+  {
+    "q": "What is included in your local SEO for factories in Noida and Greater Noida?",
+    "a": "We verify and optimise your Google Business Profile with accurate Manufacturer and Industrial Supplier categories, publish geo-tagged shop-floor, CNC/SMT line and quality lab photos, align your Phase 2, Sector 63, Surajpur or Ecotech plant address across Indian industrial directories and build verified B2B review signals."
+  },
+  {
+    "q": "Do we need to rewrite our entire website to start B2B manufacturing SEO?",
+    "a": "Not always. If your existing site can be technically optimised, we upgrade its speed, category structure and HTML spec tables directly. If your site is outdated or built on slow legacy code, our in-house Noida web development team can rebuild a lightning-fast industrial catalogue site that you own 100%."
+  }
+];
+
+const trustStrip = [
+  "Phase 2, Sec 63 & Ecotech SEO",
+  "Direct B2B RFQ Generation",
+  "ChatGPT & Gemini Procurement Citations",
+  "Google AI Overviews",
+  "Product & Tech Spec Schema",
+  "Domestic & Export Buyer SEO",
+  "HTML Spec Sheet Architecture",
+  "Zero B2B Portal Lead Sharing"
+];
+
+const sectorSchemaService = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "SEO for Manufacturing Companies in Noida",
+  "serviceType": "Industrial & B2B Manufacturing Search Engine Optimisation in Noida",
+  "provider": {
+    "@type": "ProfessionalService",
+    "name": "NK Digital Tech",
+    "url": "https://www.nkdigitaltech.net/",
+    "email": "nkdigitaltech1@gmail.com",
+    "telephone": "+91-80521-89051",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Noida",
+      "addressRegion": "Uttar Pradesh",
+      "addressCountry": "IN"
+    }
+  },
+  "areaServed": [
+    "Noida",
+    "Phase 2 Noida",
+    "Sector 63 Noida",
+    "Sector 80 Noida",
+    "Ecotech Greater Noida",
+    "Surajpur Industrial Area",
+    "Sector 57 & 58 Noida",
+    "YEIDA Industrial Park"
+],
+  "description": pageDescription,
+  "url": pageCanonical
+});
+
+const sectorSchemaFAQ = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map((item) => ({
+    "@type": "Question",
+    "name": item.q,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": item.a
+    }
+  }))
+});
+
+const sectorSchemaBreadcrumb = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.nkdigitaltech.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Best SEO Company in Noida",
+      "item": "https://www.nkdigitaltech.net/best-seo-company-in-noida/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "SEO for Manufacturing Companies in Noida",
+      "item": pageCanonical
+    }
+  ]
+});
+---
+
+<Layout
+  title={pageTitle}
+  description={pageDescription}
+  canonical={pageCanonical}
+  ogImage="https://www.nkdigitaltech.net/images/noida-manufacturing-seo/hero-manufacturing-seo-noida.webp"
+  preloadImage="/images/noida-manufacturing-seo/hero-manufacturing-seo-noida.webp"
+  hideLocationsNav={false}
+  customSchemaLocalBusiness={sectorSchemaService}
+  customSchemaFAQ={sectorSchemaFAQ}
+  customSchemaBreadcrumb={sectorSchemaBreadcrumb}
+  utilityTagline="SEO for Manufacturing Companies in Noida • Electronics, OEM Auto Components, Packaging & Industrial Machinery"
+  brandSubtitle="Noida • B2B Industrial SEO & AI Search"
+  footerBio="NK Digital Tech delivers specialised SEO for Manufacturing Companies in Noida, helping factories in Phase 2, Sector 63, Sector 80, Surajpur and Ecotech Greater Noida win direct corporate RFQs, OEM contracts and export orders."
+  footerCoreDisciplines={[
+    { label: 'Best Digital Marketing Agency in Noida', href: '/best-digital-marketing-agency-in-noida/' },
+    { label: 'Best SEO Company in Noida', href: '/best-seo-company-in-noida/' },
+    { label: 'Local SEO Services in Noida', href: '/local-seo-services-in-noida/' },
+    { label: 'AI SEO Company in Noida', href: '/ai-seo-company-in-noida/' },
+    { label: 'AEO Services in Noida', href: '/aeo-services-in-noida/' },
+    { label: 'Website Development Company in Noida', href: '/website-development-company-in-noida/' },
+  ]}
+  footerTagline="Built for Industrial B2B SEO, AEO & GEO Visibility in Noida"
+>
+
+  <!-- =====================================================================
+       SECTION 1: HERO (DARK SURFACE WITH UNIQUE SECTOR SEO HERO IMAGE)
+  ===================================================================== -->
+  <section class="relative surface-dark overflow-hidden pt-8 pb-12 sm:pt-16 sm:pb-20 lg:pt-20 lg:pb-24 border-b border-slate-800/80">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="absolute inset-0 mesh-glow pointer-events-none"></div>
+    <div class="absolute -top-36 -left-36 w-96 h-96 bg-brand-500/20 rounded-full blur-[130px] pointer-events-none"></div>
+    <div class="absolute top-1/4 -right-36 w-96 h-96 bg-accent-500/20 rounded-full blur-[130px] pointer-events-none"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-7 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns: Headline & CTA -->
+        <div class="lg:col-span-7 text-left min-w-0">
+          <div class="badge-dark mb-4 sm:mb-6">
+            <span class="w-2 h-2 rounded-full bg-brand-400 animate-ping flex-shrink-0"></span>
+            <span class="min-w-0">Industrial B2B SEO • AEO & GEO • Factory RFQ Pipeline</span>
+          </div>
+
+          <h1 class="font-display text-[1.95rem] sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-[1.15] sm:leading-[1.1] mb-4 sm:mb-6 text-glow">
+            SEO for Manufacturing <br />
+            <span class="gradient-text-light">Companies in Noida</span>
+          </h1>
+
+          <p class="text-[13.5px] sm:text-base md:text-lg text-slate-300 leading-relaxed mb-6 sm:mb-8 font-normal text-justify hyphens-auto [text-align-last:left]">
+            Looking for high-return <strong class="text-white font-semibold">SEO for Manufacturing Companies in Noida</strong> that brings direct corporate RFQs, OEM vendor approvals and bulk export inquiries? NK Digital Tech helps industrial plants, electronics manufacturers and technical exporters grow through three simple methods: <strong class="text-white font-semibold">SEO</strong> to rank your technical specification and product pages on page one of Google, <strong class="text-white font-semibold">AEO</strong> to win direct answer boxes for ISO, BIS and tolerance queries, and <strong class="text-white font-semibold">GEO</strong> so ChatGPT, Gemini and Google AI Overviews shortlist your factory to procurement heads.
+          </p>
+
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 mb-7 sm:mb-10">
+            <a href="#contact" class="btn-primary w-full sm:w-auto min-h-[48px] text-sm sm:text-base px-5 sm:px-8 py-3.5 sm:py-4">
+              <span>Claim Your Free Factory B2B SEO Audit</span>
+              <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+              </svg>
+            </a>
+            <a href="#services" class="btn-secondary-dark w-full sm:w-auto min-h-[48px] text-sm sm:text-base px-5 sm:px-7 py-3.5 sm:py-4">
+              <span>Explore Our Six Industrial SEO Pillars</span>
+            </a>
+          </div>
+
+          <!-- Trust Verification Strip (2x4 Grid on Mobile, Flex Pills on Desktop) -->
+          <div class="pt-5 sm:pt-6 border-t border-slate-800/80">
+            <div class="grid grid-cols-2 sm:flex sm:flex-wrap items-stretch sm:items-center gap-2">
+              {trustStrip.map((item) => (
+                <span class="px-2.5 sm:px-3 py-2 sm:py-1.5 rounded-lg bg-slate-900/90 border border-slate-800 text-[11px] sm:text-xs text-slate-300 font-medium flex items-center justify-center sm:justify-start text-center sm:text-left leading-tight">
+                  {item}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Unique Sector Hero Image -->
+        <div class="lg:col-span-5 min-w-0">
+          <div class="relative rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-700/80 shadow-2xl shadow-brand-500/15 bg-slate-900 group">
+            <div class="relative">
+              <img
+                src="/images/noida-manufacturing-seo/hero-manufacturing-seo-noida.webp"
+                alt="SEO for Manufacturing Companies in Noida Strategy Team Reviewing B2B RFQ Growth"
+                width="960"
+                height="540"
+                fetchpriority="high"
+                decoding="async"
+                class="w-full aspect-[16/10] sm:aspect-auto sm:h-72 md:h-[380px] lg:h-[400px] object-cover object-center group-hover:scale-105 transition-transform duration-500"
+              />
+              <div class="hidden sm:block absolute inset-0 bg-gradient-to-t from-[#050a14] via-transparent to-transparent opacity-80"></div>
+            </div>
+            <div class="relative sm:absolute sm:bottom-4 sm:left-4 sm:right-4 glass-card border-t sm:border border-slate-800 sm:rounded-2xl p-3.5 sm:p-4">
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-1">
+                <span class="text-xs font-bold text-white">Noida Industrial B2B & AI Authority</span>
+                <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-400">
+                  <span class="w-2 h-2 rounded-full bg-emerald-400 flex-shrink-0"></span>
+                  Direct Corporate RFQs
+                </span>
+              </div>
+              <p class="text-[11px] sm:text-xs text-slate-300 text-justify hyphens-auto [text-align-last:left] leading-relaxed">
+                Built to rank Phase 2 Noida plants, Sector 63 electronics units and Ecotech Greater Noida factories across Google, Maps and AI procurement tools.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 2: INTRODUCTION (CRISP WHITE CONTRAST SECTION + TEAM IMAGE)
+  ===================================================================== -->
+  <section class="relative surface-white py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns: Concise 2-Paragraph Unique Copy -->
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-light mb-3.5 sm:mb-4">Direct B2B Procurement & Export Engine</div>
+          <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-snug sm:leading-tight mb-4 sm:mb-6">
+            How Our SEO for Manufacturing Companies in Noida <span class="gradient-text-dark">Drives Direct OEM & Bulk RFQs</span>
+          </h2>
+          <div class="space-y-4 sm:space-y-5 text-slate-700 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            <p>
+              Noida and Greater Noida form one of India’s largest manufacturing powerhouses, spanning mobile and EMS electronics in Sector 63 and Phase 2, auto components in Surajpur, heavy machinery in Ecotech Greater Noida, and packaging, plastics and garment exports across Sector 57, 58 and 80. When corporate purchase managers, EPC contractors and overseas importers source an OEM vendor today, they search Google, ChatGPT and Gemini using exact part numbers, ASTM/DIN standards, production capacities and ISO certifications. Our <strong>SEO for Manufacturing Companies in Noida</strong> ensures your factory ranks first for those exact technical specifications.
+            </p>
+            <p>
+              As a trusted <a href="/best-digital-marketing-agency-in-noida/" class="text-brand-600 hover:text-brand-700 font-semibold no-underline hover:no-underline">Best Digital Marketing Agency in Noida</a> and <a href="/best-seo-company-in-noida/" class="text-brand-600 hover:text-brand-700 font-semibold no-underline hover:no-underline">Best SEO Company in Noida</a>, we replace low-margin B2B directory leads, where ten traders bid down your price, with an owned B2B inquiry pipeline. Our <strong>industrial SEO services in Noida</strong> turn your technical catalogues into fast HTML specification hubs that generate direct RFQ submissions and distributor applications.
+            </p>
+          </div>
+          <div class="mt-6 sm:mt-8 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
+            <a href="#contact" class="btn-primary w-full sm:w-auto min-h-[48px]">
+              <span>Talk to a B2B Industrial SEO Specialist</span>
+              <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+              </svg>
+            </a>
+            <a href="#why-us" class="btn-secondary-light w-full sm:w-auto min-h-[48px]">
+              <span>Compare B2B Portals vs Factory SEO</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Unique Team Image + Stats -->
+        <div class="lg:col-span-5 space-y-4 sm:space-y-5 min-w-0">
+          <div class="rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-200 shadow-lg bg-slate-100">
+            <img
+              src="/images/noida-manufacturing-seo/team-manufacturing-seo-noida.webp"
+              alt="B2B Manufacturing SEO Agency in Noida Reviewing Technical Spec Pages and Export Keywords"
+              width="800"
+              height="533"
+              class="w-full aspect-[16/10] sm:aspect-auto sm:h-64 lg:h-72 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="grid grid-cols-2 gap-3 sm:gap-4">
+            {[{"val":"4.1x","label":"Direct B2B RFQ Growth","sub":"From OEM buyers & EPC procurement teams"},{"val":"100%","label":"Exclusive Buyer Inquiries","sub":"Zero price wars on shared B2B portals"},{"val":"Global","label":"Export Search Reach","sub":"Ranks across India, GCC, US & EU markets"},{"val":"< 1.9s","label":"Spec Catalogue Speed","sub":"Indexed HTML tables & CAD download portals"}].map((stat) => (
+              <div class="elevated-card rounded-xl sm:rounded-2xl p-3.5 sm:p-4 min-w-0">
+                <div class="font-display font-black text-xl sm:text-2xl text-brand-600 mb-0.5">{stat.val}</div>
+                <div class="text-[11px] sm:text-xs font-bold text-slate-900 leading-snug">{stat.label}</div>
+                <div class="text-[10.5px] sm:text-[11px] text-slate-500 leading-snug mt-0.5">{stat.sub}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 3: PROBLEM STATEMENT (DEEP INDIGO DARK CONTRAST SECTION)
+  ===================================================================== -->
+  <section class="relative surface-indigo py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="max-w-7xl mx-auto relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns: Problem Statement Justified Copy -->
+        <div class="lg:col-span-7 min-w-0">
+          <div class="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-3.5 py-1 sm:py-1.5 rounded-full text-[10px] sm:text-xs font-bold uppercase tracking-wider sm:tracking-widest bg-amber-500/10 border border-amber-500/30 text-amber-300 max-w-full leading-snug mb-4 sm:mb-5">
+            <svg class="w-4 h-4 text-amber-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+            </svg>
+            <span>Why Factory Websites Miss RFQs</span>
+          </div>
+
+          <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-white tracking-tight leading-snug sm:leading-tight mb-4 sm:mb-6">
+            Why Noida Manufacturers Lose High Value OEM Contracts Online
+          </h2>
+
+          <div class="space-y-4 sm:space-y-5 text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            <p>
+              Walk through Phase 2 Noida, Sector 63 or Ecotech Greater Noida and you will find world-class ISO-certified factories running multi-crore CNC, SMT and injection moulding lines, yet their websites look like 2012 digital brochures. Most factories lock their best technical specifications, material grades and dimensional tolerances inside unindexed 40 MB PDF catalogues. Because Google cannot crawl those spec tables, B2B directories and middlemen traders outrank the actual manufacturer.
+            </p>
+            <p>
+              At the same time, global and domestic procurement specialists now use ChatGPT, Perplexity, Gemini and Google AI Overviews to shortlist Indian suppliers by asking questions like top PCB assembly manufacturers in Noida with IATF 16949 or custom corrugated packaging suppliers in Greater Noida. Without machine-readable HTML spec sheets, Product schema and entity authority from a dedicated <a href="/ai-seo-company-in-noida/" class="text-brand-300 hover:text-white font-semibold no-underline hover:no-underline">AI SEO Company in Noida</a>, AI tools never cite your plant.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Diagnostic Comparison Cards -->
+        <div class="lg:col-span-5 space-y-3.5 sm:space-y-4 min-w-0">
+          <div class="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6 border-l-4 border-l-rose-500">
+            <div class="flex flex-wrap items-center justify-between gap-1.5 mb-2">
+              <span class="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-rose-400">Typical Factory Marketing</span>
+              <span class="text-[11px] sm:text-xs text-slate-400">Trader & Directory Trap</span>
+            </div>
+            <h3 class="font-display font-bold text-[15px] sm:text-base text-white mb-2 leading-snug">Locked PDF Catalogues & Retail Inquiries</h3>
+            <p class="text-xs text-slate-300 leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+              Hides technical part specs inside scanned PDFs and relies on B2B aggregator portals where single-piece retail callers waste your sales specialists’ time.
+            </p>
+          </div>
+
+          <div class="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6 border-l-4 border-l-emerald-400">
+            <div class="flex flex-wrap items-center justify-between gap-1.5 mb-2">
+              <span class="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-emerald-400">NK Digital Tech System</span>
+              <span class="text-[11px] sm:text-xs text-brand-300">Owned OEM RFQ Pipeline</span>
+            </div>
+            <h3 class="font-display font-bold text-[15px] sm:text-base text-white mb-2 leading-snug">Indexed Spec Tables, ISO Schema & AI Citations</h3>
+            <p class="text-xs text-slate-300 leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+              Converts PDF catalogues into crawlable HTML specification matrices with MOQ filters, Product schema and global B2B export landing pages for direct bulk RFQs.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 4: SERVICES (LIGHT COOL ALABASTER CONTRAST + SERVICES IMAGE)
+  ===================================================================== -->
+  <section id="services" class="relative surface-cool py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <!-- Services Header with Unique Services Image -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 items-center mb-9 sm:mb-16">
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-light mb-3">Our Six Pillar Industrial System</div>
+          <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-snug sm:leading-tight mb-3 sm:mb-4">
+            Complete B2B Manufacturing SEO Services in Noida
+          </h2>
+          <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            As a specialised partner for <strong>B2B SEO for factories in Noida</strong>, we execute six technical-grade SEO, AEO and GEO pillars built for how purchase heads, quality specialists and international importers vet industrial suppliers.
+          </p>
+        </div>
+        <div class="lg:col-span-5 min-w-0">
+          <div class="rounded-2xl overflow-hidden border border-slate-200 shadow-md bg-white">
+            <img
+              src="/images/noida-manufacturing-seo/services-manufacturing-seo-noida.webp"
+              alt="Manufacturing SEO Services in Noida Technical Spec Architecture and B2B RFQ Funnel"
+              width="800"
+              height="450"
+              class="w-full aspect-[16/9] sm:aspect-auto sm:h-56 lg:h-64 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- 3 Columns x 2 Rows Grid Layout -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-7">
+        {services.map((s) => (
+          <div class="elevated-card rounded-2xl p-5 sm:p-7 flex flex-col justify-between group sm:hover:-translate-y-1">
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-4 sm:mb-6">
+                <div class={`w-11 h-11 sm:w-12 sm:h-12 rounded-xl border flex items-center justify-center flex-shrink-0 ${s.iconStyle}`}>
+                  <Fragment set:html={s.icon} />
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class={`text-[10.5px] sm:text-[11px] font-semibold px-2.5 py-1 rounded-md ${s.badgeColor}`}>
+                    {s.category}
+                  </span>
+                  <span class="font-display font-black text-base sm:text-lg text-slate-300">{s.num}</span>
+                </div>
+              </div>
+
+              <h3 class="font-display font-bold text-[17px] sm:text-xl text-slate-900 mb-2.5 sm:mb-3 leading-snug group-hover:text-brand-600 transition-colors">
+                {s.title}
+              </h3>
+
+              <p class="text-slate-600 text-[13px] sm:text-sm leading-relaxed mb-4 sm:mb-6 text-justify hyphens-auto [text-align-last:left]">
+                {s.body}
+              </p>
+            </div>
+
+            <div>
+              <div class={`rounded-xl border p-3.5 sm:p-4 mb-3.5 sm:mb-5 ${s.impactStyle}`}>
+                <div class="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-slate-900 mb-1">
+                  <svg class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                  </svg>
+                  <span>Commercial Impact</span>
+                </div>
+                <p class="text-xs text-slate-700 leading-relaxed font-medium text-justify hyphens-auto [text-align-last:left]">
+                  {s.impact}
+                </p>
+              </div>
+
+              <a href={s.href} class="inline-flex items-center gap-2 py-2 min-h-[40px] text-xs font-bold text-brand-600 hover:text-brand-700 no-underline hover:no-underline group-hover:gap-3 transition-all">
+                <span>{s.cta}</span>
+                <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 5: REGIONAL LOCATIONS (DARK NAVY + NOIDA CORRIDORS)
+  ===================================================================== -->
+  <section id="locations" class="relative surface-navy py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <!-- Regional Header with Unique Locations Image -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 items-center mb-9 sm:mb-16">
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-dark mb-3">Industrial Cluster Targeting</div>
+          <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-white tracking-tight leading-snug sm:leading-tight mb-3 sm:mb-4">
+            Hyper Local Industrial Search Coverage Across Noida Micro Markets
+          </h2>
+          <p class="text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            Manufacturing in Gautam Buddha Nagar is organized into specialized industrial zones, from electronics and EMS clusters in Sector 63 and Phase 2 to heavy machinery and auto ancillaries in Surajpur, Ecotech Greater Noida and the Yamuna Expressway industrial belt. We pair our <a href="/local-seo-services-in-noida/" class="text-brand-300 hover:text-white font-semibold no-underline hover:no-underline">Local SEO Services in Noida</a> with cluster-specific B2B landing pages across four key industrial corridors.
+          </p>
+        </div>
+        <div class="lg:col-span-5 min-w-0">
+          <div class="rounded-2xl overflow-hidden border border-slate-700/80 shadow-xl bg-slate-900">
+            <img
+              src="/images/noida-manufacturing-seo/locations-manufacturing-seo-noida.webp"
+              alt="Noida Manufacturing Corridors Across Phase 2, Sector 63, Surajpur and Ecotech Greater Noida"
+              width="800"
+              height="450"
+              class="w-full aspect-[16/9] sm:aspect-auto sm:h-56 lg:h-64 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- 1 Row x 4 Columns Responsive Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+        {cities.map((c) => (
+          <div class="glass-card rounded-2xl p-5 sm:p-6 flex flex-col justify-between group sm:hover:-translate-y-1">
+            <div>
+              <div class={`h-1 w-full bg-gradient-to-r ${c.accent} rounded-full mb-4 sm:mb-5`}></div>
+
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-3.5 sm:mb-4">
+                <span class="px-2.5 py-1 rounded-md bg-slate-800 border border-slate-700 text-[11px] font-bold uppercase tracking-wider text-brand-300">
+                  {c.hub}
+                </span>
+                <span class="text-xs font-semibold text-slate-400">{c.city}</span>
+              </div>
+
+              <h3 class="font-display font-bold text-base sm:text-lg text-white mb-2.5 sm:mb-3 leading-snug">
+                <a href={c.href} class="hover:text-brand-300 no-underline hover:no-underline transition-colors">{c.keyword}</a>
+              </h3>
+
+              <p class="text-slate-300 text-[13px] sm:text-sm leading-relaxed mb-4 sm:mb-5 text-justify hyphens-auto [text-align-last:left]">
+                {c.desc}
+              </p>
+            </div>
+
+            <div class="pt-3.5 sm:pt-4 border-t border-slate-800">
+              <p class="text-[11px] text-slate-400 mb-3 sm:mb-4 leading-normal">
+                <strong class="text-slate-300">Key Sectors:</strong> {c.corridor}
+              </p>
+              <a href={c.href} class="inline-flex items-center gap-1.5 py-2 min-h-[40px] text-xs font-bold text-brand-400 hover:text-brand-300 no-underline hover:no-underline group-hover:gap-2.5 transition-all">
+                <span>{c.cta}</span>
+                <svg class="w-3.5 h-3.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 6: WHY NK DIGITAL TECH (CRISP WHITE CONTRAST SECTION)
+  ===================================================================== -->
+  <section id="why-us" class="relative surface-white py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-14 text-left sm:text-center">
+        <div class="badge-light mb-3">Why Plant Directors & Promoters Choose Us</div>
+        <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-snug sm:leading-tight mb-3 sm:mb-4">
+          How Our Industrial Lead Generation in Noida Beats B2B Directories
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed mb-4 text-justify hyphens-auto [text-align-last:left]">
+          Generic agencies write consumer-style blog posts that bring zero RFQs and attract retail callers asking for one spare part. We build B2B specification matrices, MOQ qualification forms, <a href="/aeo-services-in-noida/" class="text-brand-600 hover:text-brand-700 font-semibold no-underline hover:no-underline">AEO Services in Noida</a> and AI supplier verification signals.
+        </p>
+        <p class="text-slate-700 font-semibold text-xs sm:text-sm">
+          See how our B2B manufacturing SEO system compares to B2B directories and generic agencies:
+        </p>
+      </div>
+
+      <!-- Desktop Comparison Matrix -->
+      <div class="hidden md:block overflow-hidden rounded-2xl border border-slate-200 shadow-lg">
+        <table class="w-full text-left border-collapse">
+          <thead>
+            <tr class="bg-slate-900 text-white">
+              <th class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-slate-300 w-1/4">
+                Evaluation Criteria
+              </th>
+              <th class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-rose-300 w-[37.5%] border-l border-slate-800">
+                B2B Portals / Generic Agency
+              </th>
+              <th class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-brand-300 w-[37.5%] border-l border-slate-800 bg-slate-950">
+                NK Digital Tech Industrial SEO
+              </th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200 text-sm">
+            {comparison.map((row, idx) => (
+              <tr class={idx % 2 === 0 ? 'bg-white' : 'bg-slate-50/80'}>
+                <td class="py-5 px-6 font-display font-bold text-slate-900">
+                  {row.metric}
+                </td>
+                <td class="py-5 px-6 text-slate-600 border-l border-slate-200">
+                  <div class="flex items-start gap-2.5">
+                    <svg class="w-4 h-4 text-rose-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                    <span class="text-justify">{row.typical}</span>
+                  </div>
+                </td>
+                <td class="py-5 px-6 text-slate-900 font-medium border-l border-slate-200 bg-sky-50/40">
+                  <div class="flex items-start gap-2.5">
+                    <svg class="w-4 h-4 text-emerald-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span class="text-justify">{row.nk}</span>
+                  </div>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Mobile Comparison Cards -->
+      <div class="md:hidden space-y-3.5">
+        {comparison.map((row) => (
+          <div class="elevated-card rounded-2xl p-4 space-y-2.5">
+            <h3 class="font-display font-bold text-slate-900 text-[15px] leading-snug">{row.metric}</h3>
+            <div class="rounded-xl bg-rose-50 border border-rose-100 p-3">
+              <div class="flex items-center gap-1.5 mb-1">
+                <svg class="w-3.5 h-3.5 text-rose-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+                <p class="text-[10px] font-bold uppercase tracking-wider text-rose-600">B2B Portals / Generic Agency</p>
+              </div>
+              <p class="text-xs text-slate-700 leading-relaxed text-justify hyphens-auto [text-align-last:left]">{row.typical}</p>
+            </div>
+            <div class="rounded-xl bg-sky-50 border border-sky-200 p-3">
+              <div class="flex items-center gap-1.5 mb-1">
+                <svg class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                </svg>
+                <p class="text-[10px] font-bold uppercase tracking-wider text-brand-600">NK Digital Tech Industrial SEO</p>
+              </div>
+              <p class="text-xs text-slate-900 font-semibold leading-relaxed text-justify hyphens-auto [text-align-last:left]">{row.nk}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 7: SECTOR VERTICALS WE SCALE (LIGHT SLATE 3x2 GRID)
+  ===================================================================== -->
+  <section id="industries" class="relative surface-slate py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-16 text-left sm:text-center">
+        <div class="badge-light mb-3">Industrial Verticals We Scale</div>
+        <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-snug sm:leading-tight mb-3 sm:mb-4">
+          Custom Search Playbooks for Six Noida Manufacturing Segments
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          Whether you operate an SMT electronics assembly plant in Sector 63, an auto ancillary unit in Surajpur or a packaging factory in Phase 2, we build search pages around how your B2B buyers write RFQs.
+        </p>
+      </div>
+
+      <!-- 3 Columns x 2 Rows Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-7">
+        {propertySegments.map((ind) => (
+          <div class={`elevated-card rounded-2xl p-5 sm:p-7 border-t-4 ${ind.accentBorder} flex flex-col justify-between sm:hover:-translate-y-1`}>
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-4 sm:mb-5">
+                <div class={`w-10 h-10 sm:w-11 sm:h-11 rounded-xl border flex items-center justify-center flex-shrink-0 ${ind.iconBg}`}>
+                  <Fragment set:html={ind.icon} />
+                </div>
+                <span class="text-[11px] font-semibold text-slate-600 bg-slate-100 px-2.5 py-1 rounded-md">
+                  {ind.sector}
+                </span>
+              </div>
+
+              <h3 class="font-display font-bold text-[17px] sm:text-xl text-slate-900 mb-3 sm:mb-4 leading-snug">
+                {ind.title}
+              </h3>
+
+              <div class="mb-4 sm:mb-5">
+                <p class="text-[11px] font-bold uppercase tracking-wider text-brand-600 mb-1.5">
+                  Search &amp; AI Strategy
+                </p>
+                <p class="text-slate-600 text-[13px] sm:text-sm leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+                  {ind.focus}
+                </p>
+              </div>
+            </div>
+
+            <div class="rounded-xl bg-emerald-50/70 border border-emerald-200/80 p-3.5 sm:p-4">
+              <p class="text-[11px] font-bold uppercase tracking-wider text-emerald-700 mb-1">
+                Commercial Result
+              </p>
+              <p class="text-slate-800 text-xs font-medium leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+                {ind.outcome}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 8: HOW WE WORK (CRISP WHITE CONTRAST SECTION - 4 STAGES)
+  ===================================================================== -->
+  <section class="relative surface-white py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-16 text-left sm:text-center">
+        <div class="badge-light mb-3">Our 4 Stage Execution</div>
+        <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-snug sm:leading-tight mb-3 sm:mb-4">
+          How We Rank Noida Manufacturing Websites on Google & AI Engines
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          Our four stage execution model extracts your technical specifications out of locked PDFs, builds crawlable B2B product silos and scales your factory citations across Google, ChatGPT and Gemini.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-7">
+        {stages.map((s) => (
+          <div class="elevated-card rounded-2xl p-5 sm:p-8 relative overflow-hidden group sm:hover:-translate-y-1">
+            <div class="flex items-center justify-between gap-4 mb-3.5 sm:mb-5">
+              <span class={`inline-flex items-center px-2.5 sm:px-3 py-1 rounded-lg text-xs font-bold uppercase tracking-wider text-white bg-gradient-to-r ${s.accent}`}>
+                {s.num}
+              </span>
+              <span class="font-display font-black text-3xl sm:text-4xl text-slate-200 group-hover:text-slate-300 transition-colors">
+                {s.step}
+              </span>
+            </div>
+            <h3 class="font-display font-bold text-[17px] sm:text-xl text-slate-900 mb-2.5 sm:mb-3 leading-snug">
+              {s.title}
+            </h3>
+            <p class="text-slate-600 text-[13px] sm:text-sm leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+              {s.body}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 9: CONCLUSION / PARTNER SECTION (DARK INDIGO + GROWTH IMAGE)
+  ===================================================================== -->
+  <section class="relative surface-indigo py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-7 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns: Conclusion Paragraphs (Justified) -->
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-dark mb-3.5 sm:mb-4">Compounding B2B Order Pipeline</div>
+          <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-white tracking-tight leading-snug sm:leading-tight mb-4 sm:mb-6">
+            Start Winning Direct OEM Orders With SEO for Manufacturing Companies in Noida
+          </h2>
+          <div class="space-y-4 sm:space-y-5 text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            <p>
+              Every day domestic procurement heads, EPC contractors and international importers search Google and ask AI assistants for verified manufacturers in Noida and Greater Noida. If your technical capabilities are hidden inside slow PDFs or buried behind trader directories, inferior competitors win the contracts your plant was built to deliver.
+            </p>
+            <p>
+              When you partner with NK Digital Tech for <strong class="text-white font-semibold">SEO for Manufacturing Companies in Noida</strong>, you work directly with senior strategists and developers from a trusted <a href="/website-development-company-in-noida/" class="text-brand-300 hover:text-white font-semibold no-underline hover:no-underline">Website Development Company in Noida</a> who build fast specification hubs, Product schema and global B2B visibility. Claim your free factory audit today.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Unique Growth Image -->
+        <div class="lg:col-span-5 min-w-0">
+          <div class="rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-700/80 shadow-2xl bg-slate-900">
+            <img
+              src="/images/noida-manufacturing-seo/growth-manufacturing-seo-noida.webp"
+              alt="Noida Manufacturing Plant Director Shaking Hands With B2B Procurement Buyers"
+              width="800"
+              height="450"
+              class="w-full aspect-[16/10] sm:aspect-auto sm:h-64 lg:h-72 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 10: FAQ (LIGHT COOL SLATE CONTRAST SECTION)
+  ===================================================================== -->
+  <section id="faq" class="relative surface-cool py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-left sm:text-center mb-9 sm:mb-14">
+        <div class="badge-light mb-3">Questions Asked on Google, ChatGPT &amp; Gemini</div>
+        <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-snug sm:leading-tight mb-3 sm:mb-4">
+          Frequently Asked Questions About SEO for Manufacturing Companies in Noida
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          Direct, factual answers to the questions factory managing directors, export heads and plant promoters in Noida and Greater Noida ask before launching a B2B industrial SEO campaign.
+        </p>
+      </div>
+
+      <div class="space-y-3 sm:space-y-4">
+        {faqs.map((f, i) => (
+          <details class="elevated-card rounded-2xl group overflow-hidden" open={i === 0}>
+            <summary class="flex items-start sm:items-center justify-between gap-3 sm:gap-4 px-4 sm:px-6 py-4 sm:py-5 min-h-[54px] select-none">
+              <div class="flex items-start sm:items-center gap-2.5 sm:gap-3.5 text-left min-w-0">
+                <span class="w-6 h-6 sm:w-7 sm:h-7 rounded-lg bg-sky-50 border border-sky-200 text-brand-600 font-display font-bold text-xs flex items-center justify-center flex-shrink-0 mt-0.5 sm:mt-0">
+                  0{i + 1}
+                </span>
+                <span class="font-display font-bold text-slate-900 text-[14px] sm:text-base md:text-lg leading-snug">
+                  {f.q}
+                </span>
+              </div>
+              <span class="faq-icon w-7 h-7 sm:w-8 sm:h-8 rounded-full border border-slate-200 text-slate-600 flex items-center justify-center flex-shrink-0 mt-0.5 sm:mt-0">
+                <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                </svg>
+              </span>
+            </summary>
+            <div class="px-4 sm:px-6 pb-5 sm:pb-6 pt-3 text-slate-600 text-[13px] sm:text-sm md:text-base leading-relaxed border-t border-slate-100 text-justify hyphens-auto [text-align-last:left]">
+              {f.a}
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 11: SHORT 2 TO 3 LINE CALL TO ACTION BANNER (LAST SECTION)
+  ===================================================================== -->
+  <section id="contact" class="relative surface-dark py-12 pb-24 sm:py-16 lg:py-20 px-4 sm:px-6 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-5xl mx-auto">
+      <div class="rounded-2xl sm:rounded-3xl bg-gradient-to-r from-brand-600 via-brand-700 to-accent-700 p-6 sm:p-10 md:p-12 text-center text-white shadow-2xl border border-white/15 relative overflow-hidden">
+        <div class="relative z-10 max-w-2xl mx-auto">
+          <h2 class="font-display font-black text-[1.45rem] sm:text-3xl md:text-4xl text-white tracking-tight leading-snug mb-3 sm:mb-4">
+            Ready to Generate Direct OEM Contracts & Bulk Factory RFQs in Noida?
+          </h2>
+
+          <p class="text-sky-50 text-[13px] sm:text-sm md:text-base leading-relaxed mb-6 sm:mb-8">
+            Book a free industrial B2B audit with our senior search specialists to review your product spec pages, export visibility and AI citations.
+          </p>
+
+          <a
+            href="/contact-us/"
+            class="inline-flex w-full sm:w-auto min-h-[48px] items-center justify-center gap-2 sm:gap-3 px-5 sm:px-8 py-3.5 sm:py-4 rounded-xl bg-white text-slate-950 hover:bg-sky-50 no-underline hover:no-underline font-display font-bold text-sm sm:text-base shadow-xl transition-all duration-300 active:scale-95 text-center leading-snug"
+          >
+            <span>Claim Your Free Factory B2B SEO Audit</span>
+            <svg class="w-4 h-4 sm:w-5 sm:h-5 text-brand-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mobile Sticky Bottom Quick Action Bar -->
+  <div class="sm:hidden fixed bottom-0 inset-x-0 z-40 bg-[#050a14]/95 backdrop-blur-xl border-t border-slate-800 px-3.5 py-2.5 shadow-[0_-8px_24px_rgba(0,0,0,0.45)]">
+    <div class="flex items-center gap-2.5">
+      <a
+        href="/contact-us/"
+        class="btn-primary flex-1 min-h-[44px] py-2.5 px-4 text-xs font-bold rounded-xl no-underline hover:no-underline"
+      >
+        <span>Claim Free Factory SEO Audit</span>
+        <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+        </svg>
+      </a>
+      <a
+        href="#services"
+        class="btn-secondary-dark min-h-[44px] py-2.5 px-3.5 text-xs font-semibold rounded-xl flex-shrink-0 no-underline hover:no-underline"
+      >
+        <span>Services</span>
+      </a>
+    </div>
+  </div>
+
+</Layout>

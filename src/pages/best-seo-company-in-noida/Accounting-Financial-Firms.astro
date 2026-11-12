@@ -1,0 +1,1072 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import '../../styles/global.css';
+
+const pageTitle = "Best SEO for Accounting Firms in Noida | NK Digital Tech";
+const pageDescription = "Need SEO for Accounting Firms in Noida? NK Digital Tech builds ICAI compliant CA practice pages, Google Map rankings and ChatGPT citations across Noida.";
+const pageCanonical = "https://www.nkdigitaltech.net/best-seo-company-in-noida/Accounting-Financial-Firms/";
+
+const services = [
+  {
+    "num": "01",
+    "category": "Advisory & Compliance Silos",
+    "icon": "<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z\"/></svg>",
+    "iconStyle": "bg-sky-50 border-sky-200 text-brand-600",
+    "impactStyle": "bg-sky-50/80 border-sky-200/80 text-slate-800",
+    "badgeColor": "text-brand-600 bg-sky-100/80",
+    "title": "Corporate Tax, Audit, GST & Virtual CFO Page SEO",
+    "body": "We build dedicated, ICAI-compliant practice pages for Statutory Audit, Virtual CFO, Transfer Pricing, FEMA/FDI, Company Incorporation and NRI Taxation in Noida.",
+    "impact": "Attracts recurring corporate retainers instead of one-time ₹1,000 ITR callers.",
+    "cta": "View Our Core Noida SEO Approach",
+    "href": "/best-seo-company-in-noida/"
+  },
+  {
+    "num": "02",
+    "category": "Chamber Map Pack SEO",
+    "icon": "<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z\"/><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M15 11a3 3 0 11-6 0 3 3 0 016 0z\"/></svg>",
+    "iconStyle": "bg-emerald-50 border-emerald-200 text-emerald-600",
+    "impactStyle": "bg-emerald-50/80 border-emerald-200/80 text-slate-800",
+    "badgeColor": "text-emerald-700 bg-emerald-100/80",
+    "title": "Google Business Profile for Noida CA Offices",
+    "body": "We verify and optimise Google Business Profiles for CA chambers and advisory offices across Sector 18, Sector 16, Sector 62 and Wave City Center.",
+    "impact": "Top three Google Map Pack placement driving direct corporate phone calls and visits.",
+    "cta": "See Local SEO Services in Noida",
+    "href": "/local-seo-services-in-noida/"
+  },
+  {
+    "num": "03",
+    "category": "YMYL & E-E-A-T Technical SEO",
+    "icon": "<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4\"/></svg>",
+    "iconStyle": "bg-cyan-50 border-cyan-200 text-cyan-700",
+    "impactStyle": "bg-cyan-50/80 border-cyan-200/80 text-slate-800",
+    "badgeColor": "text-cyan-700 bg-cyan-100/80",
+    "title": "Partner Credential Bios & AccountingService Schema",
+    "body": "We implement AccountingService, Person (FCA/ACA/DISA credentials) and FAQPage JSON LD schema alongside fast mobile speed to pass Google YMYL checks.",
+    "impact": "Establishes verifiable domain trust that lifts every tax and audit guide you publish.",
+    "cta": "Explore Noida Web Development",
+    "href": "/website-development-company-in-noida/"
+  },
+  {
+    "num": "04",
+    "category": "Answer Engine SEO (AEO)",
+    "icon": "<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z\"/></svg>",
+    "iconStyle": "bg-amber-50 border-amber-200 text-amber-600",
+    "impactStyle": "bg-amber-50/80 border-amber-200/80 text-slate-800",
+    "badgeColor": "text-amber-700 bg-amber-100/80",
+    "title": "Answer Engine SEO for Tax Sections & Due Dates",
+    "body": "We format crisp 50 word statutory summaries, TDS/TCS rate tables and ROC compliance calendars to win Google Featured Snippets and Position Zero boxes.",
+    "impact": "Captures CFOs, finance managers and founders researching immediate tax rules.",
+    "cta": "Check AEO Services in Noida",
+    "href": "/aeo-services-in-noida/"
+  },
+  {
+    "num": "05",
+    "category": "Generative AI SEO (GEO)",
+    "icon": "<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z\"/></svg>",
+    "iconStyle": "bg-violet-50 border-violet-200 text-accent-600",
+    "impactStyle": "bg-violet-50/80 border-violet-200/80 text-slate-800",
+    "badgeColor": "text-accent-600 bg-violet-100/80",
+    "title": "GEO Citations in ChatGPT, Perplexity & Gemini",
+    "body": "We structure your Finance Act analyses, GST appellate guides and NRI DTAA tables so ChatGPT, Gemini and Google AI Overviews cite your firm as a primary source.",
+    "impact": "Direct firm citations when corporate decision-makers query AI assistants.",
+    "cta": "Explore Noida AI SEO Services",
+    "href": "/ai-seo-company-in-noida/"
+  },
+  {
+    "num": "06",
+    "category": "Financial PR & Authority",
+    "icon": "<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M13 10V3L4 14h7v7l9-11h-7z\"/></svg>",
+    "iconStyle": "bg-indigo-50 border-indigo-200 text-indigo-600",
+    "impactStyle": "bg-indigo-50/80 border-indigo-200/80 text-slate-800",
+    "badgeColor": "text-indigo-700 bg-indigo-100/80",
+    "title": "Business Media & Directory Citation Building",
+    "body": "We secure authoritative mentions and citations across Indian financial portals, startup ecosystems and verified business directories to strengthen domain authority.",
+    "impact": "Outranks national DIY filing portals for high-value Noida advisory searches.",
+    "cta": "Build Practice Domain Authority",
+    "href": "#contact"
+  }
+];
+
+const cities = [
+  {
+    "hub": "Corridor 01",
+    "city": "Sector 18, Sector 16 & Wave City Center",
+    "corridor": "Sector 18 • Sector 16 • Sector 15 • Wave City Center • Sector 2",
+    "keyword": "Chartered Accountant & Tax Advisory SEO in Sector 18 Noida",
+    "desc": "We help established CA chambers and corporate advisories in Sector 18 and Sector 16 rank first on Google and Maps for audit, GST litigation and tax planning.",
+    "cta": "Audit Your Practice Visibility",
+    "href": "#contact",
+    "accent": "from-brand-500 to-sky-400"
+  },
+  {
+    "hub": "Corridor 02",
+    "city": "Sector 62, 63 & Expressway IT Parks",
+    "corridor": "Sector 62 • Sector 125 • Sector 132 • Sector 142 • Sector 16A",
+    "keyword": "Startup Virtual CFO, Valuation & FEMA SEO in Noida",
+    "desc": "We connect CA firms with funded tech startups and IT companies across Sector 62 and Noida Expressway searching for Virtual CFO, ESOP, valuation and FEMA compliance.",
+    "cta": "Win Startup CFO Retainers",
+    "href": "#contact",
+    "accent": "from-accent-500 to-violet-400"
+  },
+  {
+    "hub": "Corridor 03",
+    "city": "Phase 2 NSEZ, Sector 80 & Ecotech",
+    "corridor": "Phase 2 NSEZ • Sector 63 • Sector 80 • Surajpur • Ecotech Greater Noida",
+    "keyword": "Industrial Audit, Costing & SEZ Export Tax SEO in Noida",
+    "desc": "We rank financial firms for factory internal audits, SEZ/EOU compliance, GST LUT refunds, transfer pricing and project finance across Noida’s industrial belts.",
+    "cta": "Capture Industrial Audit Mandates",
+    "href": "#contact",
+    "accent": "from-cyan-500 to-teal-400"
+  },
+  {
+    "hub": "Corridor 04",
+    "city": "Sector 150, Central Noida & NRI Hubs",
+    "corridor": "Sector 150 • Sector 107 • Sector 44 • Sector 50 • Jaypee Greens",
+    "keyword": "NRI Taxation, Wealth & Property TDS SEO in Noida",
+    "desc": "We capture HNI families and overseas NRIs searching for Form 15CA/15CB, lower TDS certificates (Section 197), capital gains planning and family office advisory.",
+    "cta": "Grow NRI & HNI Client Inquiries",
+    "href": "#contact",
+    "accent": "from-emerald-500 to-green-400"
+  }
+];
+
+const comparison = [
+  {
+    "metric": "ICAI Code of Ethics Compliance",
+    "typical": "Uses prohibited promotional claims, fee discounts or push ad language",
+    "nk": "100% ICAI compliant informational guides, statutory updates and chamber credentials"
+  },
+  {
+    "metric": "Client Profile & Retainer Value",
+    "typical": "Attracts price-sensitive individuals looking for free ITR filing",
+    "nk": "Targets founders, CFOs, exporters and NRIs seeking annual retainers and audits"
+  },
+  {
+    "metric": "Google YMYL & E-E-A-T Authority",
+    "typical": "Unverified blog posts written by generalist copywriters with tax inaccuracies",
+    "nk": "Structured partner bylines highlighting FCA/ACA, DISA, Valuation and ICAI credentials"
+  },
+  {
+    "metric": "AI Search & ChatGPT Citations",
+    "typical": "Invisible when CFOs or NRIs ask ChatGPT or Gemini for Indian tax rules",
+    "nk": "Clean HTML tax rate tables, section summaries and schema cited by AI engines"
+  },
+  {
+    "metric": "Google Maps Office Visibility",
+    "typical": "Dormant Google Business Profile buried below national call-centre aggregators",
+    "nk": "Top 3 Map Pack placement in Sector 18, Sector 62 and Expressway for direct visits"
+  },
+  {
+    "metric": "Long-Term Practice Equity",
+    "typical": "Buying shared leads from aggregators who take a cut of your client fees",
+    "nk": "100% owned digital knowledge hub that compounds corporate inquiries year-round"
+  }
+];
+
+const propertySegments = [
+  {
+    "sector": "Startups & Tech Advisory",
+    "title": "Virtual CFO, Startup Incorporation & Fundraising Advisory",
+    "focus": "Founders across Sector 62, Sector 125 and Expressway incubators search Google and ChatGPT for Private Limited registration in Noida, DPIIT Startup India tax exemption, DCF valuation reports, ESOP structuring and Virtual CFO retainers.",
+    "outcome": "High-retention monthly Virtual CFO and compliance retainers from funded startups.",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4\"/></svg>",
+    "accentBorder": "border-t-brand-500",
+    "iconBg": "bg-sky-50 text-brand-600 border-sky-200"
+  },
+  {
+    "sector": "Corporate Audit & Assurance",
+    "title": "Statutory Audit, Internal Audit & IFC Testing Firms",
+    "focus": "Mid-market companies, manufacturing plants in Phase 2/Ecotech and MNC subsidiaries search for statutory auditors in Noida, risk-based internal audits, Ind-AS conversion, forensic audits and SOP implementation.",
+    "outcome": "Annual corporate audit mandates and board-level assurance engagements.",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z\"/></svg>",
+    "accentBorder": "border-t-amber-500",
+    "iconBg": "bg-amber-50 text-amber-600 border-amber-200"
+  },
+  {
+    "sector": "Indirect Tax & Litigation",
+    "title": "GST Advisory, Departmental Audits & Appellate Representation",
+    "focus": "Exporters in NSEZ, real estate builders and B2B enterprises search urgently for GST departmental audit representation, DRC-01 show cause notice replies, ITC mismatch resolution and LUT export refund consultants in Noida.",
+    "outcome": "High-value GST advisory, representation and retainer mandates.",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M3 21h18M5 21V7l8-4v18M19 21V11l-6-4M9 9v.01M9 12v.01M9 15v.01M9 18v.01\"/></svg>",
+    "accentBorder": "border-t-cyan-500",
+    "iconBg": "bg-cyan-50 text-cyan-700 border-cyan-200"
+  },
+  {
+    "sector": "International & NRI Tax",
+    "title": "FEMA, Transfer Pricing, Expat & NRI Property Taxation",
+    "focus": "NRIs selling property in Noida/Greater Noida and foreign subsidiaries search Google and AI tools for Form 15CA/15CB certification, Section 197 lower TDS certificates, DTAA relief, FC-GPR filings and transfer pricing study reports.",
+    "outcome": "Premium cross-border tax advisory and NRI wealth compliance engagements.",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z\"/></svg>",
+    "accentBorder": "border-t-emerald-500",
+    "iconBg": "bg-emerald-50 text-emerald-600 border-emerald-200"
+  },
+  {
+    "sector": "Debt, Project Finance & M&A",
+    "title": "Project Finance, CMA Data, SME IPO & Transaction Advisory",
+    "focus": "Industrial promoters in Greater Noida and expanding enterprises search for project report preparation, CMA data for CC/OD bank limits, MSME subsidies, financial due diligence and SME IPO readiness consultants.",
+    "outcome": "High-ticket transaction advisory and corporate debt syndication mandates.",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z\"/><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M15 11a3 3 0 11-6 0 3 3 0 016 0z\"/></svg>",
+    "accentBorder": "border-t-indigo-500",
+    "iconBg": "bg-indigo-50 text-indigo-600 border-indigo-200"
+  },
+  {
+    "sector": "Wealth & Family Office",
+    "title": "SEBI Registered Investment Advisors & Wealth Managers",
+    "focus": "Senior IT executives, doctors and business owners in Sector 150, Sector 44 and Jaypee Greens search for fee-only financial planners, PMS/AIF evaluation, estate trust structuring and retirement portfolio management in Noida.",
+    "outcome": "Long-term HNI wealth management and family office advisory relationships.",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4\"/></svg>",
+    "accentBorder": "border-t-rose-500",
+    "iconBg": "bg-rose-50 text-rose-600 border-rose-200"
+  }
+];
+
+const stages = [
+  {
+    "num": "Stage 01",
+    "step": "01",
+    "title": "ICAI Compliance, YMYL Authority & Keyword Gap Audit",
+    "body": "We audit your website for ICAI ethical compliance, mobile speed, schema gaps and Google Business Profile health while mapping the exact corporate tax, audit and NRI keywords where your firm can beat online portals.",
+    "accent": "from-brand-600 to-sky-500"
+  },
+  {
+    "num": "Stage 02",
+    "step": "02",
+    "title": "Practice Silos, Partner E-E-A-T Bios & Financial Schema Setup",
+    "body": "You receive a 90 day roadmap covering corporate audit, GST, Virtual CFO and international tax silos. We implement AccountingService, Person (partner qualifications) and FAQPage JSON LD schema to satisfy Google YMYL standards.",
+    "accent": "from-accent-600 to-violet-500"
+  },
+  {
+    "num": "Stage 03",
+    "step": "03",
+    "title": "Statutory Guides, Tax Rate Tables & Map Pack Execution",
+    "body": "Our financial content editors and developers publish accurate statutory explainers, HTML compliance calendars and verified Google Business Profile updates across Sector 18, Sector 16, Sector 62 and Noida Expressway.",
+    "accent": "from-cyan-600 to-teal-500"
+  },
+  {
+    "num": "Stage 04",
+    "step": "04",
+    "title": "Corporate Inquiry Tracking, AI Citation Checks & Seasonal Scaling",
+    "body": "Every two weeks we track your organic keyword climbs, chamber phone calls, consultation bookings and live citations inside ChatGPT and Google AI Overviews, aligning content ahead of Union Budget, ROC and tax audit deadlines.",
+    "accent": "from-emerald-600 to-green-500"
+  }
+];
+
+const faqs = [
+  {
+    "q": "Is SEO for Accounting Firms in Noida allowed under ICAI Code of Ethics?",
+    "a": "Yes, when executed on a strict pull basis. While ICAI guidelines prohibit push solicitation, paid banner ads and promotional superlatives (\"Best/Cheapest CA\"), Chartered Accountants are permitted to maintain a professional website on a pull model containing factual practice information, partner qualifications, educational statutory updates and regulatory guides that appear when users actively search on Google or AI engines."
+  },
+  {
+    "q": "How do you help a local Noida CA firm outrank huge portals like ClearTax and IndiaFilings?",
+    "a": "National portals rely on generic call-centre templates. Corporate CFOs, factory directors and NRIs prefer face-to-face advisory with a qualified FCA/ACA partner in Noida for complex matters like GST departmental audits, FEMA compliance, statutory audits and Section 197 lower TDS certificates. We build deep, Noida-focused statutory pages with verified partner E-E-A-T credentials that outrank generic portal pages for high-value advisory searches."
+  },
+  {
+    "q": "How do you filter out ₹500 salaried ITR callers and attract corporate B2B retainers?",
+    "a": "We deliberately avoid ranking for consumer bargain terms like \"cheap ITR filing online.\" Instead, we structure your architecture around B2B and HNI search intent: Virtual CFO services for SaaS startups in Noida, statutory audit firm in Sector 62, SEZ GST refund consultant in Noida Phase 2 and NRI property capital gains CA in Noida."
+  },
+  {
+    "q": "How do you get Noida CA and financial firms cited in ChatGPT, Gemini and Google AI Overviews?",
+    "a": "Founders, finance heads and NRIs constantly ask ChatGPT and Gemini procedural questions like documents required for FC-GPR filing with RBI or how to apply for Form 15CA/15CB for NRI property sale in Noida. We publish crisp 40 to 60 word factual answer blocks, HTML compliance checklists, section tables and AccountingService schema so AI engines cite your firm as an authoritative source."
+  },
+  {
+    "q": "What is Google YMYL and why does it matter for accounting firm websites?",
+    "a": "Google classifies taxation, accounting and financial advice under YMYL (Your Money Your Life) and applies its strictest quality filters. Websites without SSL security, fast mobile speed, clear physical addresses and verified author bios (Experience, Expertise, Authoritativeness and Trustworthiness) are suppressed. We implement complete partner E-E-A-T profiles and JSON-LD schema so Google trusts your domain."
+  },
+  {
+    "q": "What is included in your local SEO for Chartered Accountants in Noida?",
+    "a": "We verify and optimise your Google Business Profile with accurate Chartered Accountant, Certified Public Accountant or Tax Consultant categories, chamber location pins in Sector 18, Sector 16, Sector 62 or Greater Noida, consistent NAP citations across Indian business directories and a compliant client review workflow to secure Top 3 Map Pack rankings."
+  },
+  {
+    "q": "How long does it take to see corporate and NRI client inquiries from SEO?",
+    "a": "Google Business Profile optimisation and technical YMYL fixes typically increase local Map Pack phone calls and chamber direction clicks within 4 to 8 weeks. Ranking competitive corporate tax, GST litigation, Virtual CFO and NRI taxation silos on page one of Google and earning steady AI citations takes 3 to 6 months."
+  },
+  {
+    "q": "Do you write the tax and compliance articles or does our CA team need to write them?",
+    "a": "Our specialised financial content team researches and drafts all practice pages, Finance Act summaries, GST guides and FAQ blocks based on current Indian statutes. Your partners only spend 15 minutes reviewing and approving the draft for technical accuracy before we publish it under their verified author bio."
+  }
+];
+
+const trustStrip = [
+  "ICAI Guideline Compliant",
+  "Google YMYL & E-E-A-T Signals",
+  "Google Map Pack Top 3",
+  "ChatGPT & Gemini Citations",
+  "Google AI Overviews",
+  "AccountingService Schema",
+  "Corporate & NRI Tax Silos",
+  "Zero Aggregator Commission"
+];
+
+const sectorSchemaService = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "SEO for Accounting Firms in Noida",
+  "serviceType": "Chartered Accountant, Tax Advisory & Financial Firm SEO in Noida",
+  "provider": {
+    "@type": "ProfessionalService",
+    "name": "NK Digital Tech",
+    "url": "https://www.nkdigitaltech.net/",
+    "email": "nkdigitaltech1@gmail.com",
+    "telephone": "+91-80521-89051",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Noida",
+      "addressRegion": "Uttar Pradesh",
+      "addressCountry": "IN"
+    }
+  },
+  "areaServed": [
+    "Noida",
+    "Sector 18 Noida",
+    "Sector 16 Noida",
+    "Sector 62 Noida",
+    "Wave City Center Noida",
+    "Noida Expressway",
+    "Greater Noida",
+    "NSEZ Phase 2 Noida"
+],
+  "description": pageDescription,
+  "url": pageCanonical
+});
+
+const sectorSchemaFAQ = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map((item) => ({
+    "@type": "Question",
+    "name": item.q,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": item.a
+    }
+  }))
+});
+
+const sectorSchemaBreadcrumb = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.nkdigitaltech.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Best SEO Company in Noida",
+      "item": "https://www.nkdigitaltech.net/best-seo-company-in-noida/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "SEO for Accounting Firms in Noida",
+      "item": pageCanonical
+    }
+  ]
+});
+---
+
+<Layout
+  title={pageTitle}
+  description={pageDescription}
+  canonical={pageCanonical}
+  ogImage="https://www.nkdigitaltech.net/images/noida-accounting-seo/hero-accounting-seo-noida.webp"
+  preloadImage="/images/noida-accounting-seo/hero-accounting-seo-noida.webp"
+  hideLocationsNav={false}
+  customSchemaLocalBusiness={sectorSchemaService}
+  customSchemaFAQ={sectorSchemaFAQ}
+  customSchemaBreadcrumb={sectorSchemaBreadcrumb}
+  utilityTagline="SEO for Accounting Firms in Noida • Chartered Accountants, Virtual CFO, GST, FEMA & Startup Advisory"
+  brandSubtitle="Noida • CA & Financial SEO & AI Search"
+  footerBio="NK Digital Tech delivers ICAI compliant SEO for Accounting Firms in Noida, helping Chartered Accountants, Virtual CFO practices and corporate tax advisors across Sector 18, Sector 16, Sector 62 and Noida Expressway attract direct corporate retainers."
+  footerCoreDisciplines={[
+    { label: 'Best Digital Marketing Agency in Noida', href: '/best-digital-marketing-agency-in-noida/' },
+    { label: 'Best SEO Company in Noida', href: '/best-seo-company-in-noida/' },
+    { label: 'Local SEO Services in Noida', href: '/local-seo-services-in-noida/' },
+    { label: 'AI SEO Company in Noida', href: '/ai-seo-company-in-noida/' },
+    { label: 'AEO Services in Noida', href: '/aeo-services-in-noida/' },
+    { label: 'Website Development Company in Noida', href: '/website-development-company-in-noida/' },
+  ]}
+  footerTagline="Built for CA & Financial YMYL SEO, AEO & GEO Visibility in Noida"
+>
+
+  <!-- =====================================================================
+       SECTION 1: HERO (DARK SURFACE WITH UNIQUE SECTOR SEO HERO IMAGE)
+  ===================================================================== -->
+  <section class="relative surface-dark overflow-hidden pt-8 pb-12 sm:pt-16 sm:pb-20 lg:pt-20 lg:pb-24 border-b border-slate-800/80">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="absolute inset-0 mesh-glow pointer-events-none"></div>
+    <div class="absolute -top-36 -left-36 w-96 h-96 bg-brand-500/20 rounded-full blur-[130px] pointer-events-none"></div>
+    <div class="absolute top-1/4 -right-36 w-96 h-96 bg-accent-500/20 rounded-full blur-[130px] pointer-events-none"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-7 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns: Headline & CTA -->
+        <div class="lg:col-span-7 text-left min-w-0">
+          <div class="badge-dark mb-4 sm:mb-6">
+            <span class="w-2 h-2 rounded-full bg-brand-400 animate-ping flex-shrink-0"></span>
+            <span class="min-w-0">ICAI Compliant YMYL SEO • AEO & GEO • CA Practice Map Packs</span>
+          </div>
+
+          <h1 class="font-display text-[1.95rem] sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-[1.15] sm:leading-[1.1] mb-4 sm:mb-6 text-glow">
+            SEO for Accounting <br />
+            <span class="gradient-text-light">Firms in Noida</span>
+          </h1>
+
+          <p class="text-[13.5px] sm:text-base md:text-lg text-slate-300 leading-relaxed mb-6 sm:mb-8 font-normal text-justify hyphens-auto [text-align-last:left]">
+            Looking for dignified, high-trust <strong class="text-white font-semibold">SEO for Accounting Firms in Noida</strong> that brings corporate audit mandates, Virtual CFO retainers and NRI tax clients? NK Digital Tech helps Chartered Accountants, tax consultancies and financial advisory firms grow through three simple methods: <strong class="text-white font-semibold">SEO</strong> to rank your compliance and advisory pages on page one of Google and Map Packs, <strong class="text-white font-semibold">AEO</strong> to win direct answer boxes for Income Tax, GST and FEMA rules, and <strong class="text-white font-semibold">GEO</strong> so ChatGPT, Gemini and Google AI Overviews cite your partners as trusted financial authorities.
+          </p>
+
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 mb-7 sm:mb-10">
+            <a href="#contact" class="btn-primary w-full sm:w-auto min-h-[48px] text-sm sm:text-base px-5 sm:px-8 py-3.5 sm:py-4">
+              <span>Claim Your Free CA Practice SEO Audit</span>
+              <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+              </svg>
+            </a>
+            <a href="#services" class="btn-secondary-dark w-full sm:w-auto min-h-[48px] text-sm sm:text-base px-5 sm:px-7 py-3.5 sm:py-4">
+              <span>Explore Our Six Financial SEO Pillars</span>
+            </a>
+          </div>
+
+          <!-- Trust Verification Strip (2x4 Grid on Mobile, Flex Pills on Desktop) -->
+          <div class="pt-5 sm:pt-6 border-t border-slate-800/80">
+            <div class="grid grid-cols-2 sm:flex sm:flex-wrap items-stretch sm:items-center gap-2">
+              {trustStrip.map((item) => (
+                <span class="px-2.5 sm:px-3 py-2 sm:py-1.5 rounded-lg bg-slate-900/90 border border-slate-800 text-[11px] sm:text-xs text-slate-300 font-medium flex items-center justify-center sm:justify-start text-center sm:text-left leading-tight">
+                  {item}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Unique Sector Hero Image -->
+        <div class="lg:col-span-5 min-w-0">
+          <div class="relative rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-700/80 shadow-2xl shadow-brand-500/15 bg-slate-900 group">
+            <div class="relative">
+              <img
+                src="/images/noida-accounting-seo/hero-accounting-seo-noida.webp"
+                alt="SEO for Accounting Firms in Noida Strategy Team Reviewing CA Firm Search Growth"
+                width="960"
+                height="540"
+                fetchpriority="high"
+                decoding="async"
+                class="w-full aspect-[16/10] sm:aspect-auto sm:h-72 md:h-[380px] lg:h-[400px] object-cover object-center group-hover:scale-105 transition-transform duration-500"
+              />
+              <div class="hidden sm:block absolute inset-0 bg-gradient-to-t from-[#050a14] via-transparent to-transparent opacity-80"></div>
+            </div>
+            <div class="relative sm:absolute sm:bottom-4 sm:left-4 sm:right-4 glass-card border-t sm:border border-slate-800 sm:rounded-2xl p-3.5 sm:p-4">
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-1">
+                <span class="text-xs font-bold text-white">Noida CA & Financial AI Authority</span>
+                <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-400">
+                  <span class="w-2 h-2 rounded-full bg-emerald-400 flex-shrink-0"></span>
+                  ICAI Compliant Pull SEO
+                </span>
+              </div>
+              <p class="text-[11px] sm:text-xs text-slate-300 text-justify hyphens-auto [text-align-last:left] leading-relaxed">
+                Built to rank Sector 18 CA chambers, Sector 62 Virtual CFO firms and Expressway corporate tax advisors across Google, Maps and AI search.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 2: INTRODUCTION (CRISP WHITE CONTRAST SECTION + TEAM IMAGE)
+  ===================================================================== -->
+  <section class="relative surface-white py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns: Concise 2-Paragraph Unique Copy -->
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-light mb-3.5 sm:mb-4">Ethical Pull-Based Corporate Retainer Engine</div>
+          <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-snug sm:leading-tight mb-4 sm:mb-6">
+            How Our SEO for Accounting Firms in Noida <span class="gradient-text-dark">Attracts Corporate & NRI Retainers</span>
+          </h2>
+          <div class="space-y-4 sm:space-y-5 text-slate-700 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            <p>
+              Noida is home to thousands of funded SaaS startups in Sector 62 and Sector 125, export manufacturing units in Phase 2 and Ecotech, real estate developers on the Expressway and affluent NRI property owners. When a startup founder needs FEMA/FDI valuation and Virtual CFO support, a factory director faces a GST scrutiny notice, or an NRI sells property in Noida, they search Google, Google Maps, ChatGPT and Gemini for a seasoned Chartered Accountant in Noida. Our <strong>SEO for Accounting Firms in Noida</strong> positions your practice at the top of those high-value searches.
+            </p>
+            <p>
+              As a trusted <a href="/best-digital-marketing-agency-in-noida/" class="text-brand-600 hover:text-brand-700 font-semibold no-underline hover:no-underline">Best Digital Marketing Agency in Noida</a> and <a href="/best-seo-company-in-noida/" class="text-brand-600 hover:text-brand-700 font-semibold no-underline hover:no-underline">Best SEO Company in Noida</a>, we strictly honour ICAI professional ethics, never using push solicitation or prohibited promotional claims. Instead, our <strong>SEO for Chartered Accountants in Noida</strong> builds pull-based statutory guides, verified partner E-E-A-T profiles and Map Pack authority that bring direct client consultations to your office.
+            </p>
+          </div>
+          <div class="mt-6 sm:mt-8 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
+            <a href="#contact" class="btn-primary w-full sm:w-auto min-h-[48px]">
+              <span>Talk to a Financial SEO Specialist</span>
+              <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+              </svg>
+            </a>
+            <a href="#why-us" class="btn-secondary-light w-full sm:w-auto min-h-[48px]">
+              <span>Compare Tax Portals vs CA Firm SEO</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Unique Team Image + Stats -->
+        <div class="lg:col-span-5 space-y-4 sm:space-y-5 min-w-0">
+          <div class="rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-200 shadow-lg bg-slate-100">
+            <img
+              src="/images/noida-accounting-seo/team-accounting-seo-noida.webp"
+              alt="Accounting Firm SEO Specialists in Noida Mapping Corporate Tax and Audit Keywords"
+              width="800"
+              height="533"
+              class="w-full aspect-[16/10] sm:aspect-auto sm:h-64 lg:h-72 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="grid grid-cols-2 gap-3 sm:gap-4">
+            {[{"val":"100%","label":"ICAI Ethics Compliant","sub":"Dignified pull-based statutory content"},{"val":"3.6x","label":"Corporate Retainer Calls","sub":"From Noida startups, SMEs & NRIs"},{"val":"Top 3","label":"Google Map Pack Focus","sub":"Across Sector 18, 16, 62 & Expressway"},{"val":"YMYL","label":"Partner E-E-A-T Schema","sub":"Verified FCA/ACA author credentials"}].map((stat) => (
+              <div class="elevated-card rounded-xl sm:rounded-2xl p-3.5 sm:p-4 min-w-0">
+                <div class="font-display font-black text-xl sm:text-2xl text-brand-600 mb-0.5">{stat.val}</div>
+                <div class="text-[11px] sm:text-xs font-bold text-slate-900 leading-snug">{stat.label}</div>
+                <div class="text-[10.5px] sm:text-[11px] text-slate-500 leading-snug mt-0.5">{stat.sub}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 3: PROBLEM STATEMENT (DEEP INDIGO DARK CONTRAST SECTION)
+  ===================================================================== -->
+  <section class="relative surface-indigo py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="max-w-7xl mx-auto relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns: Problem Statement Justified Copy -->
+        <div class="lg:col-span-7 min-w-0">
+          <div class="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-3.5 py-1 sm:py-1.5 rounded-full text-[10px] sm:text-xs font-bold uppercase tracking-wider sm:tracking-widest bg-amber-500/10 border border-amber-500/30 text-amber-300 max-w-full leading-snug mb-4 sm:mb-5">
+            <svg class="w-4 h-4 text-amber-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+            </svg>
+            <span>Why CA Practices Lose Corporate Clients Online</span>
+          </div>
+
+          <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-white tracking-tight leading-snug sm:leading-tight mb-4 sm:mb-6">
+            Why Experienced Noida CA & Financial Firms Lose High Value Mandates Online
+          </h2>
+
+          <div class="space-y-4 sm:space-y-5 text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            <p>
+              Most established Chartered Accountant and financial advisory firms in Sector 18, Sector 16 and Sector 62 have a single "Services" page that lists thirty items, from ITR filing to statutory audit and transfer pricing, in bullet points. Because Google’s YMYL (Your Money Your Life) algorithm requires deep, dedicated pages with verified author credentials for financial topics, a one-page service list never ranks on page one.
+            </p>
+            <p>
+              As a result, commercial portals like IndiaFilings, ClearTax and Vakilsearch outrank local Noida CA firms for company registration in Noida, GST audit consultant and NRI capital gains tax, skimming off startup and SME clients. Furthermore, when a founder asks ChatGPT or Google AI Overviews to explain FDI compliance or Section 54EC capital gains bonds, firms without structured statutory tables and schema from a dedicated <a href="/ai-seo-company-in-noida/" class="text-brand-300 hover:text-white font-semibold no-underline hover:no-underline">AI SEO Company in Noida</a> remain invisible.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Diagnostic Comparison Cards -->
+        <div class="lg:col-span-5 space-y-3.5 sm:space-y-4 min-w-0">
+          <div class="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6 border-l-4 border-l-rose-500">
+            <div class="flex flex-wrap items-center justify-between gap-1.5 mb-2">
+              <span class="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-rose-400">Typical CA Firm Website</span>
+              <span class="text-[11px] sm:text-xs text-slate-400">Static Brochure Trap</span>
+            </div>
+            <h3 class="font-display font-bold text-[15px] sm:text-base text-white mb-2 leading-snug">Bullet-Point Services & Low-Ticket ITR Callers</h3>
+            <p class="text-xs text-slate-300 leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+              Lists all financial services on one thin page, failing Google YMYL authority checks while online portals capture Noida’s startup and corporate retainers.
+            </p>
+          </div>
+
+          <div class="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6 border-l-4 border-l-emerald-400">
+            <div class="flex flex-wrap items-center justify-between gap-1.5 mb-2">
+              <span class="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-emerald-400">NK Digital Tech System</span>
+              <span class="text-[11px] sm:text-xs text-brand-300">Owned Corporate Retainer Pipeline</span>
+            </div>
+            <h3 class="font-display font-bold text-[15px] sm:text-base text-white mb-2 leading-snug">Statutory Silos, Partner E-E-A-T & AI Citations</h3>
+            <p class="text-xs text-slate-300 leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+              Builds dedicated practice pages reviewed by FCA/ACA partners, AccountingService schema, compliance checklists and Top 3 Map Pack rankings for B2B mandates.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 4: SERVICES (LIGHT COOL ALABASTER CONTRAST + SERVICES IMAGE)
+  ===================================================================== -->
+  <section id="services" class="relative surface-cool py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <!-- Services Header with Unique Services Image -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 items-center mb-9 sm:mb-16">
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-light mb-3">Our Six Pillar Financial System</div>
+          <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-snug sm:leading-tight mb-3 sm:mb-4">
+            Complete Accounting & Financial SEO Services in Noida
+          </h2>
+          <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            As a specialised partner for <strong>financial services SEO in Noida</strong>, we execute six ICAI-compliant SEO, AEO and GEO pillars built for Google’s strict YMYL quality standards.
+          </p>
+        </div>
+        <div class="lg:col-span-5 min-w-0">
+          <div class="rounded-2xl overflow-hidden border border-slate-200 shadow-md bg-white">
+            <img
+              src="/images/noida-accounting-seo/services-accounting-seo-noida.webp"
+              alt="SEO for Accounting Firms in Noida YMYL Architecture and Map Pack Visibility"
+              width="800"
+              height="450"
+              class="w-full aspect-[16/9] sm:aspect-auto sm:h-56 lg:h-64 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- 3 Columns x 2 Rows Grid Layout -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-7">
+        {services.map((s) => (
+          <div class="elevated-card rounded-2xl p-5 sm:p-7 flex flex-col justify-between group sm:hover:-translate-y-1">
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-4 sm:mb-6">
+                <div class={`w-11 h-11 sm:w-12 sm:h-12 rounded-xl border flex items-center justify-center flex-shrink-0 ${s.iconStyle}`}>
+                  <Fragment set:html={s.icon} />
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class={`text-[10.5px] sm:text-[11px] font-semibold px-2.5 py-1 rounded-md ${s.badgeColor}`}>
+                    {s.category}
+                  </span>
+                  <span class="font-display font-black text-base sm:text-lg text-slate-300">{s.num}</span>
+                </div>
+              </div>
+
+              <h3 class="font-display font-bold text-[17px] sm:text-xl text-slate-900 mb-2.5 sm:mb-3 leading-snug group-hover:text-brand-600 transition-colors">
+                {s.title}
+              </h3>
+
+              <p class="text-slate-600 text-[13px] sm:text-sm leading-relaxed mb-4 sm:mb-6 text-justify hyphens-auto [text-align-last:left]">
+                {s.body}
+              </p>
+            </div>
+
+            <div>
+              <div class={`rounded-xl border p-3.5 sm:p-4 mb-3.5 sm:mb-5 ${s.impactStyle}`}>
+                <div class="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-slate-900 mb-1">
+                  <svg class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                  </svg>
+                  <span>Commercial Impact</span>
+                </div>
+                <p class="text-xs text-slate-700 leading-relaxed font-medium text-justify hyphens-auto [text-align-last:left]">
+                  {s.impact}
+                </p>
+              </div>
+
+              <a href={s.href} class="inline-flex items-center gap-2 py-2 min-h-[40px] text-xs font-bold text-brand-600 hover:text-brand-700 no-underline hover:no-underline group-hover:gap-3 transition-all">
+                <span>{s.cta}</span>
+                <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 5: REGIONAL LOCATIONS (DARK NAVY + NOIDA CORRIDORS)
+  ===================================================================== -->
+  <section id="locations" class="relative surface-navy py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <!-- Regional Header with Unique Locations Image -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 items-center mb-9 sm:mb-16">
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-dark mb-3">Commercial & Corporate Hub Targeting</div>
+          <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-white tracking-tight leading-snug sm:leading-tight mb-3 sm:mb-4">
+            Hyper Local Financial Search Coverage Across Noida Micro Markets
+          </h2>
+          <p class="text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            Demand for accounting and financial advisory in Noida varies sharply by commercial corridor. A SaaS startup in Sector 125 needs US Delaware flip structuring, Angel Tax/FEMA filings and Virtual CFO dashboards, whereas an exporter in Phase 2 NSEZ needs SEZ GST refunds and customs compliance. We pair our <a href="/local-seo-services-in-noida/" class="text-brand-300 hover:text-white font-semibold no-underline hover:no-underline">Local SEO Services in Noida</a> with corridor-specific pages across four commercial zones.
+          </p>
+        </div>
+        <div class="lg:col-span-5 min-w-0">
+          <div class="rounded-2xl overflow-hidden border border-slate-700/80 shadow-xl bg-slate-900">
+            <img
+              src="/images/noida-accounting-seo/locations-accounting-seo-noida.webp"
+              alt="Noida Accounting and Financial Corridors Across Sector 18, Sector 62 and Expressway"
+              width="800"
+              height="450"
+              class="w-full aspect-[16/9] sm:aspect-auto sm:h-56 lg:h-64 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- 1 Row x 4 Columns Responsive Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+        {cities.map((c) => (
+          <div class="glass-card rounded-2xl p-5 sm:p-6 flex flex-col justify-between group sm:hover:-translate-y-1">
+            <div>
+              <div class={`h-1 w-full bg-gradient-to-r ${c.accent} rounded-full mb-4 sm:mb-5`}></div>
+
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-3.5 sm:mb-4">
+                <span class="px-2.5 py-1 rounded-md bg-slate-800 border border-slate-700 text-[11px] font-bold uppercase tracking-wider text-brand-300">
+                  {c.hub}
+                </span>
+                <span class="text-xs font-semibold text-slate-400">{c.city}</span>
+              </div>
+
+              <h3 class="font-display font-bold text-base sm:text-lg text-white mb-2.5 sm:mb-3 leading-snug">
+                <a href={c.href} class="hover:text-brand-300 no-underline hover:no-underline transition-colors">{c.keyword}</a>
+              </h3>
+
+              <p class="text-slate-300 text-[13px] sm:text-sm leading-relaxed mb-4 sm:mb-5 text-justify hyphens-auto [text-align-last:left]">
+                {c.desc}
+              </p>
+            </div>
+
+            <div class="pt-3.5 sm:pt-4 border-t border-slate-800">
+              <p class="text-[11px] text-slate-400 mb-3 sm:mb-4 leading-normal">
+                <strong class="text-slate-300">Key Sectors:</strong> {c.corridor}
+              </p>
+              <a href={c.href} class="inline-flex items-center gap-1.5 py-2 min-h-[40px] text-xs font-bold text-brand-400 hover:text-brand-300 no-underline hover:no-underline group-hover:gap-2.5 transition-all">
+                <span>{c.cta}</span>
+                <svg class="w-3.5 h-3.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 6: WHY NK DIGITAL TECH (CRISP WHITE CONTRAST SECTION)
+  ===================================================================== -->
+  <section id="why-us" class="relative surface-white py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-14 text-left sm:text-center">
+        <div class="badge-light mb-3">Why Managing Partners & FCA Advisors Choose Us</div>
+        <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-snug sm:leading-tight mb-3 sm:mb-4">
+          How Our ICAI-Compliant CA SEO in Noida Beats Online Tax Portals
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed mb-4 text-justify hyphens-auto [text-align-last:left]">
+          Generic marketing vendors write flashy sales copy that violates ICAI guidelines and attracts ₹500 salaried ITR inquiries. We build dignified, partner-reviewed statutory content clusters backed by <a href="/aeo-services-in-noida/" class="text-brand-600 hover:text-brand-700 font-semibold no-underline hover:no-underline">AEO Services in Noida</a> and strict Google YMYL E-E-A-T signals.
+        </p>
+        <p class="text-slate-700 font-semibold text-xs sm:text-sm">
+          Compare our financial firm SEO system with DIY portals and generic agencies:
+        </p>
+      </div>
+
+      <!-- Desktop Comparison Matrix -->
+      <div class="hidden md:block overflow-hidden rounded-2xl border border-slate-200 shadow-lg">
+        <table class="w-full text-left border-collapse">
+          <thead>
+            <tr class="bg-slate-900 text-white">
+              <th class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-slate-300 w-1/4">
+                Evaluation Criteria
+              </th>
+              <th class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-rose-300 w-[37.5%] border-l border-slate-800">
+                DIY Tax Portals / Generic Agency
+              </th>
+              <th class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-brand-300 w-[37.5%] border-l border-slate-800 bg-slate-950">
+                NK Digital Tech CA & Financial SEO
+              </th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200 text-sm">
+            {comparison.map((row, idx) => (
+              <tr class={idx % 2 === 0 ? 'bg-white' : 'bg-slate-50/80'}>
+                <td class="py-5 px-6 font-display font-bold text-slate-900">
+                  {row.metric}
+                </td>
+                <td class="py-5 px-6 text-slate-600 border-l border-slate-200">
+                  <div class="flex items-start gap-2.5">
+                    <svg class="w-4 h-4 text-rose-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                    <span class="text-justify">{row.typical}</span>
+                  </div>
+                </td>
+                <td class="py-5 px-6 text-slate-900 font-medium border-l border-slate-200 bg-sky-50/40">
+                  <div class="flex items-start gap-2.5">
+                    <svg class="w-4 h-4 text-emerald-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span class="text-justify">{row.nk}</span>
+                  </div>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Mobile Comparison Cards -->
+      <div class="md:hidden space-y-3.5">
+        {comparison.map((row) => (
+          <div class="elevated-card rounded-2xl p-4 space-y-2.5">
+            <h3 class="font-display font-bold text-slate-900 text-[15px] leading-snug">{row.metric}</h3>
+            <div class="rounded-xl bg-rose-50 border border-rose-100 p-3">
+              <div class="flex items-center gap-1.5 mb-1">
+                <svg class="w-3.5 h-3.5 text-rose-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+                <p class="text-[10px] font-bold uppercase tracking-wider text-rose-600">DIY Tax Portals / Generic Agency</p>
+              </div>
+              <p class="text-xs text-slate-700 leading-relaxed text-justify hyphens-auto [text-align-last:left]">{row.typical}</p>
+            </div>
+            <div class="rounded-xl bg-sky-50 border border-sky-200 p-3">
+              <div class="flex items-center gap-1.5 mb-1">
+                <svg class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                </svg>
+                <p class="text-[10px] font-bold uppercase tracking-wider text-brand-600">NK Digital Tech CA & Financial SEO</p>
+              </div>
+              <p class="text-xs text-slate-900 font-semibold leading-relaxed text-justify hyphens-auto [text-align-last:left]">{row.nk}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 7: SECTOR VERTICALS WE SCALE (LIGHT SLATE 3x2 GRID)
+  ===================================================================== -->
+  <section id="industries" class="relative surface-slate py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-16 text-left sm:text-center">
+        <div class="badge-light mb-3">Financial Practices We Scale</div>
+        <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-snug sm:leading-tight mb-3 sm:mb-4">
+          Custom Search Playbooks for Six Noida Accounting & Financial Segments
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          Whether your firm specialises in statutory and internal audits, startup Virtual CFO services, international transfer pricing or NRI taxation, we align your pages with high-value client search queries.
+        </p>
+      </div>
+
+      <!-- 3 Columns x 2 Rows Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-7">
+        {propertySegments.map((ind) => (
+          <div class={`elevated-card rounded-2xl p-5 sm:p-7 border-t-4 ${ind.accentBorder} flex flex-col justify-between sm:hover:-translate-y-1`}>
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-4 sm:mb-5">
+                <div class={`w-10 h-10 sm:w-11 sm:h-11 rounded-xl border flex items-center justify-center flex-shrink-0 ${ind.iconBg}`}>
+                  <Fragment set:html={ind.icon} />
+                </div>
+                <span class="text-[11px] font-semibold text-slate-600 bg-slate-100 px-2.5 py-1 rounded-md">
+                  {ind.sector}
+                </span>
+              </div>
+
+              <h3 class="font-display font-bold text-[17px] sm:text-xl text-slate-900 mb-3 sm:mb-4 leading-snug">
+                {ind.title}
+              </h3>
+
+              <div class="mb-4 sm:mb-5">
+                <p class="text-[11px] font-bold uppercase tracking-wider text-brand-600 mb-1.5">
+                  Search &amp; AI Strategy
+                </p>
+                <p class="text-slate-600 text-[13px] sm:text-sm leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+                  {ind.focus}
+                </p>
+              </div>
+            </div>
+
+            <div class="rounded-xl bg-emerald-50/70 border border-emerald-200/80 p-3.5 sm:p-4">
+              <p class="text-[11px] font-bold uppercase tracking-wider text-emerald-700 mb-1">
+                Commercial Result
+              </p>
+              <p class="text-slate-800 text-xs font-medium leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+                {ind.outcome}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 8: HOW WE WORK (CRISP WHITE CONTRAST SECTION - 4 STAGES)
+  ===================================================================== -->
+  <section class="relative surface-white py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-16 text-left sm:text-center">
+        <div class="badge-light mb-3">Our 4 Stage Execution</div>
+        <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-snug sm:leading-tight mb-3 sm:mb-4">
+          How We Rank Noida Accounting & Financial Websites on Google & AI Engines
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          Our four stage execution model establishes ICAI compliance and Google YMYL E-E-A-T authority first, builds deep service and statutory silos, and scales your firm’s citations across Google Map Packs, ChatGPT and Gemini.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-7">
+        {stages.map((s) => (
+          <div class="elevated-card rounded-2xl p-5 sm:p-8 relative overflow-hidden group sm:hover:-translate-y-1">
+            <div class="flex items-center justify-between gap-4 mb-3.5 sm:mb-5">
+              <span class={`inline-flex items-center px-2.5 sm:px-3 py-1 rounded-lg text-xs font-bold uppercase tracking-wider text-white bg-gradient-to-r ${s.accent}`}>
+                {s.num}
+              </span>
+              <span class="font-display font-black text-3xl sm:text-4xl text-slate-200 group-hover:text-slate-300 transition-colors">
+                {s.step}
+              </span>
+            </div>
+            <h3 class="font-display font-bold text-[17px] sm:text-xl text-slate-900 mb-2.5 sm:mb-3 leading-snug">
+              {s.title}
+            </h3>
+            <p class="text-slate-600 text-[13px] sm:text-sm leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+              {s.body}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 9: CONCLUSION / PARTNER SECTION (DARK INDIGO + GROWTH IMAGE)
+  ===================================================================== -->
+  <section class="relative surface-indigo py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-7 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns: Conclusion Paragraphs (Justified) -->
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-dark mb-3.5 sm:mb-4">Compounding Practice Authority</div>
+          <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-white tracking-tight leading-snug sm:leading-tight mb-4 sm:mb-6">
+            Start Attracting Corporate Retainers With SEO for Accounting Firms in Noida
+          </h2>
+          <div class="space-y-4 sm:space-y-5 text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            <p>
+              When a startup raises seed funding in Sector 125, a factory expands in Greater Noida or an NRI sells an apartment in Sector 150, they turn to Google, Google Maps, ChatGPT and Gemini to find a credible Chartered Accountant or financial advisor. If your firm is missing from page one, automated filing portals capture the client relationships that belong in your chamber.
+            </p>
+            <p>
+              When you partner with NK Digital Tech for <strong class="text-white font-semibold">SEO for Accounting Firms in Noida</strong>, you work directly with senior strategists and developers from a trusted <a href="/website-development-company-in-noida/" class="text-brand-300 hover:text-white font-semibold no-underline hover:no-underline">Website Development Company in Noida</a> who build fast, ICAI-compliant websites, YMYL schema and Top 3 Map Pack visibility. Claim your free practice audit today.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Unique Growth Image -->
+        <div class="lg:col-span-5 min-w-0">
+          <div class="rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-700/80 shadow-2xl bg-slate-900">
+            <img
+              src="/images/noida-accounting-seo/growth-accounting-seo-noida.webp"
+              alt="Noida Chartered Accountant Partner Shaking Hands With Corporate CFO Client"
+              width="800"
+              height="450"
+              class="w-full aspect-[16/10] sm:aspect-auto sm:h-64 lg:h-72 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 10: FAQ (LIGHT COOL SLATE CONTRAST SECTION)
+  ===================================================================== -->
+  <section id="faq" class="relative surface-cool py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-left sm:text-center mb-9 sm:mb-14">
+        <div class="badge-light mb-3">Questions Asked on Google, ChatGPT &amp; Gemini</div>
+        <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-snug sm:leading-tight mb-3 sm:mb-4">
+          Frequently Asked Questions About SEO for Accounting Firms in Noida
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          Direct, factual answers to the questions Chartered Accountant partners, Virtual CFO founders and financial advisors in Noida ask before starting an organic and AI search campaign.
+        </p>
+      </div>
+
+      <div class="space-y-3 sm:space-y-4">
+        {faqs.map((f, i) => (
+          <details class="elevated-card rounded-2xl group overflow-hidden" open={i === 0}>
+            <summary class="flex items-start sm:items-center justify-between gap-3 sm:gap-4 px-4 sm:px-6 py-4 sm:py-5 min-h-[54px] select-none">
+              <div class="flex items-start sm:items-center gap-2.5 sm:gap-3.5 text-left min-w-0">
+                <span class="w-6 h-6 sm:w-7 sm:h-7 rounded-lg bg-sky-50 border border-sky-200 text-brand-600 font-display font-bold text-xs flex items-center justify-center flex-shrink-0 mt-0.5 sm:mt-0">
+                  0{i + 1}
+                </span>
+                <span class="font-display font-bold text-slate-900 text-[14px] sm:text-base md:text-lg leading-snug">
+                  {f.q}
+                </span>
+              </div>
+              <span class="faq-icon w-7 h-7 sm:w-8 sm:h-8 rounded-full border border-slate-200 text-slate-600 flex items-center justify-center flex-shrink-0 mt-0.5 sm:mt-0">
+                <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                </svg>
+              </span>
+            </summary>
+            <div class="px-4 sm:px-6 pb-5 sm:pb-6 pt-3 text-slate-600 text-[13px] sm:text-sm md:text-base leading-relaxed border-t border-slate-100 text-justify hyphens-auto [text-align-last:left]">
+              {f.a}
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 11: SHORT 2 TO 3 LINE CALL TO ACTION BANNER (LAST SECTION)
+  ===================================================================== -->
+  <section id="contact" class="relative surface-dark py-12 pb-24 sm:py-16 lg:py-20 px-4 sm:px-6 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-5xl mx-auto">
+      <div class="rounded-2xl sm:rounded-3xl bg-gradient-to-r from-brand-600 via-brand-700 to-accent-700 p-6 sm:p-10 md:p-12 text-center text-white shadow-2xl border border-white/15 relative overflow-hidden">
+        <div class="relative z-10 max-w-2xl mx-auto">
+          <h2 class="font-display font-black text-[1.45rem] sm:text-3xl md:text-4xl text-white tracking-tight leading-snug mb-3 sm:mb-4">
+            Ready to Attract High-Value Corporate & NRI Clients to Your Noida Firm?
+          </h2>
+
+          <p class="text-sky-50 text-[13px] sm:text-sm md:text-base leading-relaxed mb-6 sm:mb-8">
+            Book a free ICAI-compliant SEO audit with our senior specialists to review your practice pages, Google Map Pack rankings and AI visibility.
+          </p>
+
+          <a
+            href="/contact-us/"
+            class="inline-flex w-full sm:w-auto min-h-[48px] items-center justify-center gap-2 sm:gap-3 px-5 sm:px-8 py-3.5 sm:py-4 rounded-xl bg-white text-slate-950 hover:bg-sky-50 no-underline hover:no-underline font-display font-bold text-sm sm:text-base shadow-xl transition-all duration-300 active:scale-95 text-center leading-snug"
+          >
+            <span>Claim Your Free CA Practice SEO Audit</span>
+            <svg class="w-4 h-4 sm:w-5 sm:h-5 text-brand-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mobile Sticky Bottom Quick Action Bar -->
+  <div class="sm:hidden fixed bottom-0 inset-x-0 z-40 bg-[#050a14]/95 backdrop-blur-xl border-t border-slate-800 px-3.5 py-2.5 shadow-[0_-8px_24px_rgba(0,0,0,0.45)]">
+    <div class="flex items-center gap-2.5">
+      <a
+        href="/contact-us/"
+        class="btn-primary flex-1 min-h-[44px] py-2.5 px-4 text-xs font-bold rounded-xl no-underline hover:no-underline"
+      >
+        <span>Claim Free CA Firm SEO Audit</span>
+        <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+        </svg>
+      </a>
+      <a
+        href="#services"
+        class="btn-secondary-dark min-h-[44px] py-2.5 px-3.5 text-xs font-semibold rounded-xl flex-shrink-0 no-underline hover:no-underline"
+      >
+        <span>Services</span>
+      </a>
+    </div>
+  </div>
+
+</Layout>

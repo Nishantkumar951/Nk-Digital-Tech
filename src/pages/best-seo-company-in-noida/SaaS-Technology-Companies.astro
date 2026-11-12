@@ -1,0 +1,1072 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import '../../styles/global.css';
+
+const pageTitle = "Best SEO for SaaS Companies in Noida | NK Digital Tech";
+const pageDescription = "Need SEO for SaaS Companies in Noida? NK Digital Tech drives product demos, trial signups and ChatGPT citations for B2B software firms across Noida IT corridors.";
+const pageCanonical = "https://www.nkdigitaltech.net/best-seo-company-in-noida/SaaS-Technology-Companies/";
+
+const services = [
+  {
+    "num": "01",
+    "category": "BoFu & Comparison SEO",
+    "icon": "<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z\"/></svg>",
+    "iconStyle": "bg-sky-50 border-sky-200 text-brand-600",
+    "impactStyle": "bg-sky-50/80 border-sky-200/80 text-slate-800",
+    "badgeColor": "text-brand-600 bg-sky-100/80",
+    "title": "Competitor Alternatives & Feature Matrix SEO",
+    "body": "We build high converting \"Brand vs Competitor\", \"Top Alternatives\" and persona use-case pages that capture buyers actively evaluating software vendors.",
+    "impact": "Immediate lift in bottom-of-funnel demo requests and free trial activations.",
+    "cta": "View Our Core Noida SEO Approach",
+    "href": "/best-seo-company-in-noida/"
+  },
+  {
+    "num": "02",
+    "category": "Programmatic & API SEO",
+    "icon": "<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z\"/><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M15 11a3 3 0 11-6 0 3 3 0 016 0z\"/></svg>",
+    "iconStyle": "bg-emerald-50 border-emerald-200 text-emerald-600",
+    "impactStyle": "bg-emerald-50/80 border-emerald-200/80 text-slate-800",
+    "badgeColor": "text-emerald-700 bg-emerald-100/80",
+    "title": "Integration Marketplaces & Template Hubs",
+    "body": "We architect scalable programmatic pages for your native integrations (Salesforce, Slack, Tally, SAP, Zapier), workflows and industry templates.",
+    "impact": "Captures thousands of long-tail technical buyer searches with high product fit.",
+    "cta": "Explore Noida Web Development",
+    "href": "/website-development-company-in-noida/"
+  },
+  {
+    "num": "03",
+    "category": "Technical JS & CWV SEO",
+    "icon": "<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4\"/></svg>",
+    "iconStyle": "bg-cyan-50 border-cyan-200 text-cyan-700",
+    "impactStyle": "bg-cyan-50/80 border-cyan-200/80 text-slate-800",
+    "badgeColor": "text-cyan-700 bg-cyan-100/80",
+    "title": "Next.js/React SSR & SoftwareApplication Schema",
+    "body": "We resolve client-side rendering issues, optimise Core Web Vitals and deploy SoftwareApplication, Offer, AggregateRating and TechArticle JSON LD schema.",
+    "impact": "100% crawlability for Googlebot, GPTBot, ClaudeBot and PerplexityBot.",
+    "cta": "See Local SEO Services in Noida",
+    "href": "/local-seo-services-in-noida/"
+  },
+  {
+    "num": "04",
+    "category": "Answer Engine SEO (AEO)",
+    "icon": "<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z\"/></svg>",
+    "iconStyle": "bg-amber-50 border-amber-200 text-amber-600",
+    "impactStyle": "bg-amber-50/80 border-amber-200/80 text-slate-800",
+    "badgeColor": "text-amber-700 bg-amber-100/80",
+    "title": "Answer Engine SEO for Pricing, API & Security",
+    "body": "We structure crisp 50 word technical answers and HTML tables for pricing tiers, SOC2/GDPR compliance and deployment specs to win Google Featured Snippets.",
+    "impact": "Positions your software at Position Zero when CTOs verify technical requirements.",
+    "cta": "Check AEO Services in Noida",
+    "href": "/aeo-services-in-noida/"
+  },
+  {
+    "num": "05",
+    "category": "Generative AI SEO (GEO)",
+    "icon": "<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z\"/></svg>",
+    "iconStyle": "bg-violet-50 border-violet-200 text-accent-600",
+    "impactStyle": "bg-violet-50/80 border-violet-200/80 text-slate-800",
+    "badgeColor": "text-accent-600 bg-violet-100/80",
+    "title": "GEO Citations in ChatGPT, Perplexity & Gemini",
+    "body": "We implement llms.txt files, structured comparison tables and G2/Capterra entity alignment so AI engines recommend your SaaS platform in buyer prompts.",
+    "impact": "Consistent product inclusions when enterprise buyers shortlist vendors on AI.",
+    "cta": "Explore Noida AI SEO Services",
+    "href": "/ai-seo-company-in-noida/"
+  },
+  {
+    "num": "06",
+    "category": "SaaS Digital PR & Links",
+    "icon": "<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M13 10V3L4 14h7v7l9-11h-7z\"/></svg>",
+    "iconStyle": "bg-indigo-50 border-indigo-200 text-indigo-600",
+    "impactStyle": "bg-indigo-50/80 border-indigo-200/80 text-slate-800",
+    "badgeColor": "text-indigo-700 bg-indigo-100/80",
+    "title": "High DR Tech Editorial & Review Authority",
+    "body": "We earn authoritative backlinks and brand mentions across global SaaS publications, developer communities and software review ecosystems.",
+    "impact": "Builds the domain rating needed to outrank funded US and Indian SaaS competitors.",
+    "cta": "Scale Your SaaS Domain Rating",
+    "href": "#contact"
+  }
+];
+
+const cities = [
+  {
+    "hub": "Corridor 01",
+    "city": "Sector 62 & Sector 63 IT Hub",
+    "corridor": "Sector 62 • Candor TechSpace • Galaxy Business Park • Electronic City",
+    "keyword": "B2B SaaS & Enterprise Software SEO in Sector 62 Noida",
+    "desc": "We help B2B SaaS, ERP, FinTech and cybersecurity firms in Sector 62 rank globally for commercial software keywords and enterprise RFP searches.",
+    "cta": "Audit Your SaaS Visibility",
+    "href": "#contact",
+    "accent": "from-brand-500 to-sky-400"
+  },
+  {
+    "hub": "Corridor 02",
+    "city": "Sector 125, 126 & 127 Expressway",
+    "corridor": "Sector 125 • Sector 126 • Sector 127 • HCL & Windsor IT Corridor",
+    "keyword": "AI, Cloud & Product technical SEO on Noida Expressway",
+    "desc": "We scale organic demo pipelines for AI product startups, DevOps platforms and custom software technical firms along the upper Noida Expressway belt.",
+    "cta": "Scale Your Global SQL Pipeline",
+    "href": "#contact",
+    "accent": "from-accent-500 to-violet-400"
+  },
+  {
+    "hub": "Corridor 03",
+    "city": "Sector 132, 135 & 142 Tech Parks",
+    "corridor": "Sector 132 • Sector 135 • Sector 142 • Advant Navis • Oxygen Business Park",
+    "keyword": "Global SaaS & FinTech Growth SEO in Sector 142 Noida",
+    "desc": "We build high-converting comparison silos, integration hubs and LLM citation authority for growth-stage SaaS companies in Sector 132, 135 and 142.",
+    "cta": "Win AI & Google Shortlists",
+    "href": "#contact",
+    "accent": "from-cyan-500 to-teal-400"
+  },
+  {
+    "hub": "Corridor 04",
+    "city": "Sector 16, 18 & Greater Noida Techzone",
+    "corridor": "Sector 16 • Sector 18 • Techzone 4 • Knowledge Park IT Incubators",
+    "keyword": "Startup SaaS & IT Services SEO in Noida & Greater Noida",
+    "desc": "From seed-stage SaaS products in Noida incubators to global IT consulting practices in Sector 16 and Techzone, we turn organic search into recurring ARR.",
+    "cta": "Book Your Growth Sprint",
+    "href": "#contact",
+    "accent": "from-emerald-500 to-green-400"
+  }
+];
+
+const comparison = [
+  {
+    "metric": "Primary North-Star Metric",
+    "typical": "Vanity blog traffic from student definitions with zero demo intent",
+    "nk": "Verified demo bookings, free trial signups, SQLs and pipeline ARR contribution"
+  },
+  {
+    "metric": "Content Architecture Focus",
+    "typical": "Generic 600-word blog posts written by freelancers who do not know your product",
+    "nk": "BoFu Competitor vs pages, integration directories, persona use cases and ROI calculators"
+  },
+  {
+    "metric": "AI Search & LLM Readiness",
+    "typical": "No llms.txt, no structured feature matrices and zero visibility in ChatGPT or Perplexity",
+    "nk": "Full GEO architecture, SoftwareApplication schema and citation technical across LLMs"
+  },
+  {
+    "metric": "Modern JS Framework SEO",
+    "typical": "Breaks on Next.js, React, Vue or Astro sites due to hydration and crawl traps",
+    "nk": "In-house technical specialists who optimise SSR, dynamic sitemaps and Core Web Vitals"
+  },
+  {
+    "metric": "Global vs Domestic Targeting",
+    "typical": "Only understands local directory citations with no US/UK/EU SaaS SERP experience",
+    "nk": "Ranks Noida-headquartered SaaS brands across US, UK, EU, MENA and Indian SERPs"
+  },
+  {
+    "metric": "CAC Payback & Attribution",
+    "typical": "No CRM integration or attribution between organic landing pages and closed deals",
+    "nk": "First-touch and multi-touch organic attribution connected directly to your CRM"
+  }
+];
+
+const propertySegments = [
+  {
+    "sector": "B2B Enterprise SaaS",
+    "title": "CRM, HRMS, ERP & RevOps Software Platforms",
+    "focus": "COOs, CHROs and RevOps leaders search Google and ChatGPT for best HRMS with payroll compliance, CRM alternatives to Salesforce/HubSpot and ERP integrations with Tally and SAP.",
+    "outcome": "High-intent enterprise demo requests and multi-year annual contract value (ACV).",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4\"/></svg>",
+    "accentBorder": "border-t-brand-500",
+    "iconBg": "bg-sky-50 text-brand-600 border-sky-200"
+  },
+  {
+    "sector": "FinTech & RegTech",
+    "title": "Payment Gateways, Lending, Wealth & GST Compliance SaaS",
+    "focus": "CFOs, banks and merchants search for RBI-compliant payment orchestration, automated accounts payable, e-invoicing APIs, KYC verification engines and treasury software.",
+    "outcome": "Verified institutional sandbox signups and enterprise FinTech onboarding.",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z\"/></svg>",
+    "accentBorder": "border-t-amber-500",
+    "iconBg": "bg-amber-50 text-amber-600 border-amber-200"
+  },
+  {
+    "sector": "AI, Data & DevTools",
+    "title": "Generative AI Agents, Cloud Security & Developer Tools",
+    "focus": "CTOs, VPs of technical and SecOps teams query Perplexity, Claude and Google for LLM observability tools, vector database benchmarks, SOC2 cloud security and CI/CD automation.",
+    "outcome": "Developer self-serve activations, GitHub/API adoption and enterprise seat expansion.",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M3 21h18M5 21V7l8-4v18M19 21V11l-6-4M9 9v.01M9 12v.01M9 15v.01M9 18v.01\"/></svg>",
+    "accentBorder": "border-t-cyan-500",
+    "iconBg": "bg-cyan-50 text-cyan-700 border-cyan-200"
+  },
+  {
+    "sector": "Vertical SaaS",
+    "title": "HealthTech, EdTech, PropTech & Logistics SaaS",
+    "focus": "Hospital administrators, real estate developers, university deans and 3PL fleet owners search for hospital management software (HMIS), real estate CRM, LMS platforms and supply chain visibility SaaS.",
+    "outcome": "Predictable vertical-specific demo pipeline with high demo-to-close rates.",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z\"/></svg>",
+    "accentBorder": "border-t-emerald-500",
+    "iconBg": "bg-emerald-50 text-emerald-600 border-emerald-200"
+  },
+  {
+    "sector": "IT & Product technical",
+    "title": "Custom Software, Cloud Migration & AI Consulting Firms",
+    "focus": "Global enterprises in the US, UK and GCC search for AWS/Azure migration partners, dedicated React/Python technical pods and enterprise AI development companies in Noida.",
+    "outcome": "High-ticket B2B RFPs and multi-developer offshore/nearshore retainers.",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z\"/><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M15 11a3 3 0 11-6 0 3 3 0 016 0z\"/></svg>",
+    "accentBorder": "border-t-indigo-500",
+    "iconBg": "bg-indigo-50 text-indigo-600 border-indigo-200"
+  },
+  {
+    "sector": "D2C & MarTech Platforms",
+    "title": "WhatsApp Commerce, Retention & E-Commerce Enablement SaaS",
+    "focus": "D2C founders and growth heads search for WhatsApp Business API providers, Shopify checkout accelerators, omnichannel customer support and AI marketing automation tools.",
+    "outcome": "Rapid PLG free-trial velocity and low-CAC subscription upgrades.",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4\"/></svg>",
+    "accentBorder": "border-t-rose-500",
+    "iconBg": "bg-rose-50 text-rose-600 border-rose-200"
+  }
+];
+
+const stages = [
+  {
+    "num": "Stage 01",
+    "step": "01",
+    "title": "Technical JS Crawl, ICP Keyword & Competitor Gap Audit",
+    "body": "We audit your Next.js/React/Webflow crawlability, Core Web Vitals, documentation indexing and CRM attribution while mapping the exact BoFu keywords and AI prompts your competitors win.",
+    "accent": "from-brand-600 to-sky-500"
+  },
+  {
+    "num": "Stage 02",
+    "step": "02",
+    "title": "BoFu Comparison Matrix, Use-Case Silos & Schema Setup",
+    "body": "You receive a 90 day product-led SEO roadmap prioritizing Competitor vs pages, persona solutions and integration pages backed by SoftwareApplication, FAQPage and llms.txt architecture.",
+    "accent": "from-accent-600 to-violet-500"
+  },
+  {
+    "num": "Stage 03",
+    "step": "03",
+    "title": "Product-Led Content, Programmatic Hubs & GEO Execution",
+    "body": "Our SaaS strategists and developers publish interactive feature comparison tables, API integration guides and entity-aligned review signals so Google, ChatGPT and Perplexity cite your platform.",
+    "accent": "from-cyan-600 to-teal-500"
+  },
+  {
+    "num": "Stage 04",
+    "step": "04",
+    "title": "CRM Pipeline Attribution, AI Share-of-Voice & Global Scaling",
+    "body": "Every two weeks we track organic trial signups, demo bookings, MQL-to-SQL conversion rates and LLM citation share across US, EU and Indian SERPs, doubling down on highest-ARR pages.",
+    "accent": "from-emerald-600 to-green-500"
+  }
+];
+
+const faqs = [
+  {
+    "q": "How is SEO for SaaS Companies in Noida different from traditional local or blog SEO?",
+    "a": "Traditional SEO chases high-volume informational keywords or local store visits. SEO for SaaS Companies in Noida is built around product-led growth (PLG) and enterprise sales cycles. We focus on bottom-of-funnel (BoFu) competitor comparison pages, alternative matrices, industry use cases, programmatic integration hubs and LLM citations that convert directly into free trials, product demos and SQLs."
+  },
+  {
+    "q": "Can a Noida-based SaaS company rank on page one of Google in the US, UK, Europe and Middle East?",
+    "a": "Yes. Most of our Noida SaaS clients in Sector 62, Sector 125 and Sector 142 generate 60% to 85% of their ARR from North America, Europe and MENA. We build clean international domain architecture, US/UK semantic terminology, global high-DR editorial backlinks and geo-agnostic technical authority so your software ranks worldwide."
+  },
+  {
+    "q": "How do you get our SaaS product recommended by ChatGPT, Perplexity, Claude and Google AI Overviews?",
+    "a": "When buyers ask AI models for the best software in a category, LLMs synthesize data from structured comparison tables, official documentation, G2/Capterra/ProductHunt profiles and authoritative listicles. We deploy llms.txt files, SoftwareApplication JSON-LD schema, objective HTML feature comparison matrices and third-party entity citations so AI engines consistently recommend your platform."
+  },
+  {
+    "q": "Why do you start with Bottom-of-Funnel (BoFu) pages instead of Top-of-Funnel blog posts?",
+    "a": "A buyer searching \"Alternative to [Competitor]\" or \"Best SOC2 HR software for 500 employees\" is ready to book a demo this week. Even 300 monthly visitors to a BoFu comparison page often generate more SQLs and ARR than 20,000 visitors reading a generic top-of-funnel definition blog. We lock in BoFu revenue first, then expand into Mid-Funnel and Top-of-Funnel clusters."
+  },
+  {
+    "q": "Do you work with modern JavaScript frameworks like Next.js, React, Astro and Webflow?",
+    "a": "Yes. Client-side rendering, hydration delays, duplicate URL query parameters and unindexed documentation subdomains are common on SaaS websites. Our technical SEO specialists work directly with your product/dev team in GitHub, Next.js, Astro or Webflow to ensure 100% server-side crawlability and green Core Web Vitals."
+  },
+  {
+    "q": "How long does it take to see demo and trial pipeline growth from B2B SaaS SEO?",
+    "a": "Technical indexing fixes, existing page CTR/conversion optimisation and long-tail competitor comparison pages typically start generating incremental demo signups within 6 to 10 weeks. Compounding page-one dominance for competitive category keywords and sustained LLM share-of-voice builds over 3 to 6 months."
+  },
+  {
+    "q": "Can you build programmatic SEO hubs for our software integrations and templates?",
+    "a": "Absolutely. If your software integrates with 50+ tools or offers industry-specific templates, calculators or workflows, we design clean, non-spammy programmatic landing page templates rich with unique technical documentation, schema markup and interactive CTAs that scale organic user acquisition."
+  },
+  {
+    "q": "How do you measure SaaS SEO ROI beyond keyword rankings?",
+    "a": "We integrate Google Search Console and GA4 with your CRM (HubSpot, Salesforce, Zoho or Pipedrive) and product analytics (Mixpanel/PostHog). Every biweekly report tracks organic signups, demo requests, MQL-to-SQL progression, pipeline dollar value and blended CAC reduction."
+  }
+];
+
+const trustStrip = [
+  "Sec 62 & Expressway IT SEO",
+  "BoFu Competitor vs Pages",
+  "ChatGPT & Perplexity Citations",
+  "Google AI Overviews",
+  "SoftwareApplication Schema",
+  "Global US/EU/APAC Reach",
+  "Programmatic Integration Hubs",
+  "Lower Blended CAC & Payback"
+];
+
+const sectorSchemaService = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "SEO for SaaS Companies in Noida",
+  "serviceType": "B2B SaaS, Cloud & Enterprise Software Search Engine Optimisation in Noida",
+  "provider": {
+    "@type": "ProfessionalService",
+    "name": "NK Digital Tech",
+    "url": "https://www.nkdigitaltech.net/",
+    "email": "nkdigitaltech1@gmail.com",
+    "telephone": "+91-80521-89051",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Noida",
+      "addressRegion": "Uttar Pradesh",
+      "addressCountry": "IN"
+    }
+  },
+  "areaServed": [
+    "Noida",
+    "Sector 62 Noida",
+    "Sector 125 Noida",
+    "Sector 132 Noida",
+    "Sector 142 Noida",
+    "Noida Expressway IT Corridor",
+    "Sector 16 Noida",
+    "Greater Noida Techzone"
+],
+  "description": pageDescription,
+  "url": pageCanonical
+});
+
+const sectorSchemaFAQ = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map((item) => ({
+    "@type": "Question",
+    "name": item.q,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": item.a
+    }
+  }))
+});
+
+const sectorSchemaBreadcrumb = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.nkdigitaltech.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Best SEO Company in Noida",
+      "item": "https://www.nkdigitaltech.net/best-seo-company-in-noida/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "SEO for SaaS Companies in Noida",
+      "item": pageCanonical
+    }
+  ]
+});
+---
+
+<Layout
+  title={pageTitle}
+  description={pageDescription}
+  canonical={pageCanonical}
+  ogImage="https://www.nkdigitaltech.net/images/noida-saas-seo/hero-saas-seo-noida.webp"
+  preloadImage="/images/noida-saas-seo/hero-saas-seo-noida.webp"
+  hideLocationsNav={false}
+  customSchemaLocalBusiness={sectorSchemaService}
+  customSchemaFAQ={sectorSchemaFAQ}
+  customSchemaBreadcrumb={sectorSchemaBreadcrumb}
+  utilityTagline="SEO for SaaS Companies in Noida • B2B Software, FinTech, AI Products & Cloud Platforms"
+  brandSubtitle="Noida • SaaS & Tech SEO & AI Search"
+  footerBio="NK Digital Tech delivers specialised SEO for SaaS Companies in Noida, helping software product firms across Sector 62, Sector 125, Sector 132 and Sector 142 win enterprise demo bookings across Google Search, ChatGPT, Perplexity and Gemini."
+  footerCoreDisciplines={[
+    { label: 'Best Digital Marketing Agency in Noida', href: '/best-digital-marketing-agency-in-noida/' },
+    { label: 'Best SEO Company in Noida', href: '/best-seo-company-in-noida/' },
+    { label: 'Local SEO Services in Noida', href: '/local-seo-services-in-noida/' },
+    { label: 'AI SEO Company in Noida', href: '/ai-seo-company-in-noida/' },
+    { label: 'AEO Services in Noida', href: '/aeo-services-in-noida/' },
+    { label: 'Website Development Company in Noida', href: '/website-development-company-in-noida/' },
+  ]}
+  footerTagline="Built for B2B SaaS SEO, AEO & GEO Visibility in Noida"
+>
+
+  <!-- =====================================================================
+       SECTION 1: HERO (DARK SURFACE WITH UNIQUE SECTOR SEO HERO IMAGE)
+  ===================================================================== -->
+  <section class="relative surface-dark overflow-hidden pt-8 pb-12 sm:pt-16 sm:pb-20 lg:pt-20 lg:pb-24 border-b border-slate-800/80">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="absolute inset-0 mesh-glow pointer-events-none"></div>
+    <div class="absolute -top-36 -left-36 w-96 h-96 bg-brand-500/20 rounded-full blur-[130px] pointer-events-none"></div>
+    <div class="absolute top-1/4 -right-36 w-96 h-96 bg-accent-500/20 rounded-full blur-[130px] pointer-events-none"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-7 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns: Headline & CTA -->
+        <div class="lg:col-span-7 text-left min-w-0">
+          <div class="badge-dark mb-4 sm:mb-6">
+            <span class="w-2 h-2 rounded-full bg-brand-400 animate-ping flex-shrink-0"></span>
+            <span class="min-w-0">B2B SaaS & Tech SEO • AEO & GEO • Global Demo Pipeline</span>
+          </div>
+
+          <h1 class="font-display text-[1.95rem] sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-[1.15] sm:leading-[1.1] mb-4 sm:mb-6 text-glow">
+            SEO for SaaS <br />
+            <span class="gradient-text-light">Companies in Noida</span>
+          </h1>
+
+          <p class="text-[13.5px] sm:text-base md:text-lg text-slate-300 leading-relaxed mb-6 sm:mb-8 font-normal text-justify hyphens-auto [text-align-last:left]">
+            Looking for pipeline focused <strong class="text-white font-semibold">SEO for SaaS Companies in Noida</strong> that compounds SQLs, trial signups and enterprise demo requests? NK Digital Tech helps B2B software platforms, FinTech startups and AI technical companies grow through three simple methods: <strong class="text-white font-semibold">SEO</strong> to rank your bottom of funnel competitor comparison and use case pages on page one of Google, <strong class="text-white font-semibold">AEO</strong> to win direct answer boxes for API, security and pricing queries, and <strong class="text-white font-semibold">GEO</strong> so ChatGPT, Perplexity, Claude and Google AI Overviews recommend your software to global CTOs.
+          </p>
+
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 mb-7 sm:mb-10">
+            <a href="#contact" class="btn-primary w-full sm:w-auto min-h-[48px] text-sm sm:text-base px-5 sm:px-8 py-3.5 sm:py-4">
+              <span>Claim Your Free SaaS Pipeline SEO Audit</span>
+              <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+              </svg>
+            </a>
+            <a href="#services" class="btn-secondary-dark w-full sm:w-auto min-h-[48px] text-sm sm:text-base px-5 sm:px-7 py-3.5 sm:py-4">
+              <span>Explore Our Six SaaS SEO Pillars</span>
+            </a>
+          </div>
+
+          <!-- Trust Verification Strip (2x4 Grid on Mobile, Flex Pills on Desktop) -->
+          <div class="pt-5 sm:pt-6 border-t border-slate-800/80">
+            <div class="grid grid-cols-2 sm:flex sm:flex-wrap items-stretch sm:items-center gap-2">
+              {trustStrip.map((item) => (
+                <span class="px-2.5 sm:px-3 py-2 sm:py-1.5 rounded-lg bg-slate-900/90 border border-slate-800 text-[11px] sm:text-xs text-slate-300 font-medium flex items-center justify-center sm:justify-start text-center sm:text-left leading-tight">
+                  {item}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Unique Sector Hero Image -->
+        <div class="lg:col-span-5 min-w-0">
+          <div class="relative rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-700/80 shadow-2xl shadow-brand-500/15 bg-slate-900 group">
+            <div class="relative">
+              <img
+                src="/images/noida-saas-seo/hero-saas-seo-noida.webp"
+                alt="SEO for SaaS Companies in Noida Strategy Team Reviewing Software Demo Pipeline"
+                width="960"
+                height="540"
+                fetchpriority="high"
+                decoding="async"
+                class="w-full aspect-[16/10] sm:aspect-auto sm:h-72 md:h-[380px] lg:h-[400px] object-cover object-center group-hover:scale-105 transition-transform duration-500"
+              />
+              <div class="hidden sm:block absolute inset-0 bg-gradient-to-t from-[#050a14] via-transparent to-transparent opacity-80"></div>
+            </div>
+            <div class="relative sm:absolute sm:bottom-4 sm:left-4 sm:right-4 glass-card border-t sm:border border-slate-800 sm:rounded-2xl p-3.5 sm:p-4">
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-1">
+                <span class="text-xs font-bold text-white">Noida B2B SaaS & AI Authority</span>
+                <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-400">
+                  <span class="w-2 h-2 rounded-full bg-emerald-400 flex-shrink-0"></span>
+                  Compounding SQL Demos
+                </span>
+              </div>
+              <p class="text-[11px] sm:text-xs text-slate-300 text-justify hyphens-auto [text-align-last:left] leading-relaxed">
+                Built to scale Sector 62, Sector 125, Sector 132 and Sector 142 software companies across global Google search and AI answer engines.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 2: INTRODUCTION (CRISP WHITE CONTRAST SECTION + TEAM IMAGE)
+  ===================================================================== -->
+  <section class="relative surface-white py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns: Concise 2-Paragraph Unique Copy -->
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-light mb-3.5 sm:mb-4">Compounding Product Demo & SQL Engine</div>
+          <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-snug sm:leading-tight mb-4 sm:mb-6">
+            How Our SEO for SaaS Companies in Noida <span class="gradient-text-dark">Scales Global Enterprise Demo Bookings</span>
+          </h2>
+          <div class="space-y-4 sm:space-y-5 text-slate-700 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            <p>
+              Noida’s Sector 62, Sector 125, Sector 132 and Sector 142 IT corridors house some of India’s fastest growing B2B SaaS, FinTech, EdTech, HRTech and AI software companies selling to enterprise buyers across North America, Europe, MENA and APAC. When a VP of technical, CFO or RevOps lead evaluates software today, they search Google, ChatGPT, Perplexity and Gemini for competitor alternatives, SOC2/ISO compliance, API integrations and transparent pricing tiers. Our <strong>SEO for SaaS Companies in Noida</strong> ensures your product pages capture that high intent demand before buyers book a demo with a competitor.
+            </p>
+            <p>
+              As a trusted <a href="/best-digital-marketing-agency-in-noida/" class="text-brand-600 hover:text-brand-700 font-semibold no-underline hover:no-underline">Best Digital Marketing Agency in Noida</a> and <a href="/best-seo-company-in-noida/" class="text-brand-600 hover:text-brand-700 font-semibold no-underline hover:no-underline">Best SEO Company in Noida</a>, we replace high-CAC paid search dependence and shallow top-of-funnel glossary traffic with revenue-focused organic assets. Our <strong>B2B SaaS SEO agency in Noida</strong> builds high-converting comparison matrices, persona use-case silos and LLM-ready documentation that lower your blended customer acquisition cost.
+            </p>
+          </div>
+          <div class="mt-6 sm:mt-8 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
+            <a href="#contact" class="btn-primary w-full sm:w-auto min-h-[48px]">
+              <span>Talk to a B2B SaaS SEO Strategist</span>
+              <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+              </svg>
+            </a>
+            <a href="#why-us" class="btn-secondary-light w-full sm:w-auto min-h-[48px]">
+              <span>Compare Generic Blogs vs BoFu SaaS SEO</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Unique Team Image + Stats -->
+        <div class="lg:col-span-5 space-y-4 sm:space-y-5 min-w-0">
+          <div class="rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-200 shadow-lg bg-slate-100">
+            <img
+              src="/images/noida-saas-seo/team-saas-seo-noida.webp"
+              alt="B2B SaaS SEO Agency in Noida Mapping Product Led Growth and Comparison Keywords"
+              width="800"
+              height="533"
+              class="w-full aspect-[16/10] sm:aspect-auto sm:h-64 lg:h-72 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="grid grid-cols-2 gap-3 sm:gap-4">
+            {[{"val":"3.7x","label":"Organic Demo Bookings","sub":"From BoFu comparison & feature pages"},{"val":"-48%","label":"Lower Blended CAC","sub":"Reduced reliance on ₹1,500+ CPC ads"},{"val":"Global","label":"US, EU & India Rankings","sub":"Multi-region SaaS search architecture"},{"val":"LLM","label":"AI Vendor Shortlists","sub":"Cited in ChatGPT, Perplexity & Gemini"}].map((stat) => (
+              <div class="elevated-card rounded-xl sm:rounded-2xl p-3.5 sm:p-4 min-w-0">
+                <div class="font-display font-black text-xl sm:text-2xl text-brand-600 mb-0.5">{stat.val}</div>
+                <div class="text-[11px] sm:text-xs font-bold text-slate-900 leading-snug">{stat.label}</div>
+                <div class="text-[10.5px] sm:text-[11px] text-slate-500 leading-snug mt-0.5">{stat.sub}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 3: PROBLEM STATEMENT (DEEP INDIGO DARK CONTRAST SECTION)
+  ===================================================================== -->
+  <section class="relative surface-indigo py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="max-w-7xl mx-auto relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns: Problem Statement Justified Copy -->
+        <div class="lg:col-span-7 min-w-0">
+          <div class="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-3.5 py-1 sm:py-1.5 rounded-full text-[10px] sm:text-xs font-bold uppercase tracking-wider sm:tracking-widest bg-amber-500/10 border border-amber-500/30 text-amber-300 max-w-full leading-snug mb-4 sm:mb-5">
+            <svg class="w-4 h-4 text-amber-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+            </svg>
+            <span>Why SaaS Organic Traffic Fails to Convert</span>
+          </div>
+
+          <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-white tracking-tight leading-snug sm:leading-tight mb-4 sm:mb-6">
+            Why Noida Software & SaaS Companies Lose Enterprise Pipeline Online
+          </h2>
+
+          <div class="space-y-4 sm:space-y-5 text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            <p>
+              Most SaaS and IT product companies in Noida make one of two expensive mistakes. Either they spend lakhs every month on Google Ads where a single B2B software click costs $25 to $80, or they hire generic content vendors who publish 500-word "What is Cloud Computing" blog posts. Those top-of-funnel definitions bring student traffic with zero buying authority while your actual product feature, integration and competitor comparison pages sit on page four of Google.
+            </p>
+            <p>
+              Software discovery has also shifted into AI answer engines. Today, enterprise procurement teams and CTOs ask ChatGPT, Claude, Perplexity and Google AI Overviews prompts like best CRM with WhatsApp API integration in India or top SOC2 compliant HRMS software alternatives to Workday. Without structured SoftwareApplication schema, llms.txt manifests and feature comparison tables from a dedicated <a href="/ai-seo-company-in-noida/" class="text-brand-300 hover:text-white font-semibold no-underline hover:no-underline">AI SEO Company in Noida</a>, LLMs exclude your product from the shortlist.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Diagnostic Comparison Cards -->
+        <div class="lg:col-span-5 space-y-3.5 sm:space-y-4 min-w-0">
+          <div class="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6 border-l-4 border-l-rose-500">
+            <div class="flex flex-wrap items-center justify-between gap-1.5 mb-2">
+              <span class="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-rose-400">Typical SaaS Content Vendor</span>
+              <span class="text-[11px] sm:text-xs text-slate-400">Vanity Traffic Trap</span>
+            </div>
+            <h3 class="font-display font-bold text-[15px] sm:text-base text-white mb-2 leading-snug">Generic ToFu Blogs & React Rendering Bugs</h3>
+            <p class="text-xs text-slate-300 leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+              Publishes basic glossary blogs that never convert into SQLs while ignoring client-side JavaScript rendering bottlenecks that block Google and AI crawlers.
+            </p>
+          </div>
+
+          <div class="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6 border-l-4 border-l-emerald-400">
+            <div class="flex flex-wrap items-center justify-between gap-1.5 mb-2">
+              <span class="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-emerald-400">NK Digital Tech System</span>
+              <span class="text-[11px] sm:text-xs text-brand-300">Product-Led SEO Pipeline</span>
+            </div>
+            <h3 class="font-display font-bold text-[15px] sm:text-base text-white mb-2 leading-snug">BoFu Comparisons, Integration Hubs & GEO</h3>
+            <p class="text-xs text-slate-300 leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+              Builds Competitor vs Competitor pages, industry use-case clusters, SoftwareApplication schema and llms.txt files that drive high-intent trial and demo signups.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 4: SERVICES (LIGHT COOL ALABASTER CONTRAST + SERVICES IMAGE)
+  ===================================================================== -->
+  <section id="services" class="relative surface-cool py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <!-- Services Header with Unique Services Image -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 items-center mb-9 sm:mb-16">
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-light mb-3">Our Six Pillar SaaS System</div>
+          <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-snug sm:leading-tight mb-3 sm:mb-4">
+            Complete B2B SaaS & Technology SEO Services in Noida
+          </h2>
+          <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            As a specialised partner for <strong>SEO for IT companies in Noida</strong> and B2B software brands, we execute six product-led SEO, AEO and GEO pillars built around MRR, ARR and SQL pipeline growth.
+          </p>
+        </div>
+        <div class="lg:col-span-5 min-w-0">
+          <div class="rounded-2xl overflow-hidden border border-slate-200 shadow-md bg-white">
+            <img
+              src="/images/noida-saas-seo/services-saas-seo-noida.webp"
+              alt="SaaS SEO Services in Noida BoFu Comparison Architecture and AI Search Citations"
+              width="800"
+              height="450"
+              class="w-full aspect-[16/9] sm:aspect-auto sm:h-56 lg:h-64 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- 3 Columns x 2 Rows Grid Layout -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-7">
+        {services.map((s) => (
+          <div class="elevated-card rounded-2xl p-5 sm:p-7 flex flex-col justify-between group sm:hover:-translate-y-1">
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-4 sm:mb-6">
+                <div class={`w-11 h-11 sm:w-12 sm:h-12 rounded-xl border flex items-center justify-center flex-shrink-0 ${s.iconStyle}`}>
+                  <Fragment set:html={s.icon} />
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class={`text-[10.5px] sm:text-[11px] font-semibold px-2.5 py-1 rounded-md ${s.badgeColor}`}>
+                    {s.category}
+                  </span>
+                  <span class="font-display font-black text-base sm:text-lg text-slate-300">{s.num}</span>
+                </div>
+              </div>
+
+              <h3 class="font-display font-bold text-[17px] sm:text-xl text-slate-900 mb-2.5 sm:mb-3 leading-snug group-hover:text-brand-600 transition-colors">
+                {s.title}
+              </h3>
+
+              <p class="text-slate-600 text-[13px] sm:text-sm leading-relaxed mb-4 sm:mb-6 text-justify hyphens-auto [text-align-last:left]">
+                {s.body}
+              </p>
+            </div>
+
+            <div>
+              <div class={`rounded-xl border p-3.5 sm:p-4 mb-3.5 sm:mb-5 ${s.impactStyle}`}>
+                <div class="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-slate-900 mb-1">
+                  <svg class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                  </svg>
+                  <span>Commercial Impact</span>
+                </div>
+                <p class="text-xs text-slate-700 leading-relaxed font-medium text-justify hyphens-auto [text-align-last:left]">
+                  {s.impact}
+                </p>
+              </div>
+
+              <a href={s.href} class="inline-flex items-center gap-2 py-2 min-h-[40px] text-xs font-bold text-brand-600 hover:text-brand-700 no-underline hover:no-underline group-hover:gap-3 transition-all">
+                <span>{s.cta}</span>
+                <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 5: REGIONAL LOCATIONS (DARK NAVY + NOIDA CORRIDORS)
+  ===================================================================== -->
+  <section id="locations" class="relative surface-navy py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <!-- Regional Header with Unique Locations Image -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 items-center mb-9 sm:mb-16">
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-dark mb-3">Noida IT Corridor Targeting</div>
+          <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-white tracking-tight leading-snug sm:leading-tight mb-3 sm:mb-4">
+            Hyper Local & Global Search Coverage Across Noida Tech Corridors
+          </h2>
+          <p class="text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            Whether your technical and growth teams operate out of Sector 62’s institutional tech park, Sector 125 and 132’s Expressway software campuses, or Sector 142’s enterprise IT towers, your organic strategy must win both local NCR enterprise accounts and global US/EU buyers. We pair our <a href="/local-seo-services-in-noida/" class="text-brand-300 hover:text-white font-semibold no-underline hover:no-underline">Local SEO Services in Noida</a> with international multi-region SaaS architecture across four core tech hubs.
+          </p>
+        </div>
+        <div class="lg:col-span-5 min-w-0">
+          <div class="rounded-2xl overflow-hidden border border-slate-700/80 shadow-xl bg-slate-900">
+            <img
+              src="/images/noida-saas-seo/locations-saas-seo-noida.webp"
+              alt="Noida IT and SaaS Corridors Across Sector 62, Sector 125, Sector 132 and Sector 142"
+              width="800"
+              height="450"
+              class="w-full aspect-[16/9] sm:aspect-auto sm:h-56 lg:h-64 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- 1 Row x 4 Columns Responsive Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+        {cities.map((c) => (
+          <div class="glass-card rounded-2xl p-5 sm:p-6 flex flex-col justify-between group sm:hover:-translate-y-1">
+            <div>
+              <div class={`h-1 w-full bg-gradient-to-r ${c.accent} rounded-full mb-4 sm:mb-5`}></div>
+
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-3.5 sm:mb-4">
+                <span class="px-2.5 py-1 rounded-md bg-slate-800 border border-slate-700 text-[11px] font-bold uppercase tracking-wider text-brand-300">
+                  {c.hub}
+                </span>
+                <span class="text-xs font-semibold text-slate-400">{c.city}</span>
+              </div>
+
+              <h3 class="font-display font-bold text-base sm:text-lg text-white mb-2.5 sm:mb-3 leading-snug">
+                <a href={c.href} class="hover:text-brand-300 no-underline hover:no-underline transition-colors">{c.keyword}</a>
+              </h3>
+
+              <p class="text-slate-300 text-[13px] sm:text-sm leading-relaxed mb-4 sm:mb-5 text-justify hyphens-auto [text-align-last:left]">
+                {c.desc}
+              </p>
+            </div>
+
+            <div class="pt-3.5 sm:pt-4 border-t border-slate-800">
+              <p class="text-[11px] text-slate-400 mb-3 sm:mb-4 leading-normal">
+                <strong class="text-slate-300">Key Sectors:</strong> {c.corridor}
+              </p>
+              <a href={c.href} class="inline-flex items-center gap-1.5 py-2 min-h-[40px] text-xs font-bold text-brand-400 hover:text-brand-300 no-underline hover:no-underline group-hover:gap-2.5 transition-all">
+                <span>{c.cta}</span>
+                <svg class="w-3.5 h-3.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 6: WHY NK DIGITAL TECH (CRISP WHITE CONTRAST SECTION)
+  ===================================================================== -->
+  <section id="why-us" class="relative surface-white py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-14 text-left sm:text-center">
+        <div class="badge-light mb-3">Why SaaS Founders, CMOs & VPs Choose Us</div>
+        <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-snug sm:leading-tight mb-3 sm:mb-4">
+          How Our Product-Led SaaS SEO in Noida Beats Generic Agencies
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed mb-4 text-justify hyphens-auto [text-align-last:left]">
+          Generic SEO agencies report on vanity blog impressions while your MQL-to-SQL conversion rate stays flat. We align every technical fix, comparison page, <a href="/aeo-services-in-noida/" class="text-brand-600 hover:text-brand-700 font-semibold no-underline hover:no-underline">AEO Services in Noida</a> block and GEO citation directly with HubSpot/Salesforce pipeline metrics and ARR impact.
+        </p>
+        <p class="text-slate-700 font-semibold text-xs sm:text-sm">
+          Compare our B2B SaaS SEO execution with traditional content vendors:
+        </p>
+      </div>
+
+      <!-- Desktop Comparison Matrix -->
+      <div class="hidden md:block overflow-hidden rounded-2xl border border-slate-200 shadow-lg">
+        <table class="w-full text-left border-collapse">
+          <thead>
+            <tr class="bg-slate-900 text-white">
+              <th class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-slate-300 w-1/4">
+                Evaluation Criteria
+              </th>
+              <th class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-rose-300 w-[37.5%] border-l border-slate-800">
+                Generic SEO / Content Vendor
+              </th>
+              <th class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-brand-300 w-[37.5%] border-l border-slate-800 bg-slate-950">
+                NK Digital Tech B2B SaaS SEO
+              </th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200 text-sm">
+            {comparison.map((row, idx) => (
+              <tr class={idx % 2 === 0 ? 'bg-white' : 'bg-slate-50/80'}>
+                <td class="py-5 px-6 font-display font-bold text-slate-900">
+                  {row.metric}
+                </td>
+                <td class="py-5 px-6 text-slate-600 border-l border-slate-200">
+                  <div class="flex items-start gap-2.5">
+                    <svg class="w-4 h-4 text-rose-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                    <span class="text-justify">{row.typical}</span>
+                  </div>
+                </td>
+                <td class="py-5 px-6 text-slate-900 font-medium border-l border-slate-200 bg-sky-50/40">
+                  <div class="flex items-start gap-2.5">
+                    <svg class="w-4 h-4 text-emerald-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span class="text-justify">{row.nk}</span>
+                  </div>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Mobile Comparison Cards -->
+      <div class="md:hidden space-y-3.5">
+        {comparison.map((row) => (
+          <div class="elevated-card rounded-2xl p-4 space-y-2.5">
+            <h3 class="font-display font-bold text-slate-900 text-[15px] leading-snug">{row.metric}</h3>
+            <div class="rounded-xl bg-rose-50 border border-rose-100 p-3">
+              <div class="flex items-center gap-1.5 mb-1">
+                <svg class="w-3.5 h-3.5 text-rose-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+                <p class="text-[10px] font-bold uppercase tracking-wider text-rose-600">Generic SEO / Content Vendor</p>
+              </div>
+              <p class="text-xs text-slate-700 leading-relaxed text-justify hyphens-auto [text-align-last:left]">{row.typical}</p>
+            </div>
+            <div class="rounded-xl bg-sky-50 border border-sky-200 p-3">
+              <div class="flex items-center gap-1.5 mb-1">
+                <svg class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                </svg>
+                <p class="text-[10px] font-bold uppercase tracking-wider text-brand-600">NK Digital Tech B2B SaaS SEO</p>
+              </div>
+              <p class="text-xs text-slate-900 font-semibold leading-relaxed text-justify hyphens-auto [text-align-last:left]">{row.nk}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 7: SECTOR VERTICALS WE SCALE (LIGHT SLATE 3x2 GRID)
+  ===================================================================== -->
+  <section id="industries" class="relative surface-slate py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-16 text-left sm:text-center">
+        <div class="badge-light mb-3">Software Verticals We Scale</div>
+        <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-snug sm:leading-tight mb-3 sm:mb-4">
+          Custom Search Playbooks for Six Noida SaaS & Tech Segments
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          Whether you sell PLG self-serve software, enterprise B2B SaaS or high-ticket AI/cloud technical retainers, we build search architectures around how technical and executive buyers evaluate vendors.
+        </p>
+      </div>
+
+      <!-- 3 Columns x 2 Rows Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-7">
+        {propertySegments.map((ind) => (
+          <div class={`elevated-card rounded-2xl p-5 sm:p-7 border-t-4 ${ind.accentBorder} flex flex-col justify-between sm:hover:-translate-y-1`}>
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-4 sm:mb-5">
+                <div class={`w-10 h-10 sm:w-11 sm:h-11 rounded-xl border flex items-center justify-center flex-shrink-0 ${ind.iconBg}`}>
+                  <Fragment set:html={ind.icon} />
+                </div>
+                <span class="text-[11px] font-semibold text-slate-600 bg-slate-100 px-2.5 py-1 rounded-md">
+                  {ind.sector}
+                </span>
+              </div>
+
+              <h3 class="font-display font-bold text-[17px] sm:text-xl text-slate-900 mb-3 sm:mb-4 leading-snug">
+                {ind.title}
+              </h3>
+
+              <div class="mb-4 sm:mb-5">
+                <p class="text-[11px] font-bold uppercase tracking-wider text-brand-600 mb-1.5">
+                  Search &amp; AI Strategy
+                </p>
+                <p class="text-slate-600 text-[13px] sm:text-sm leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+                  {ind.focus}
+                </p>
+              </div>
+            </div>
+
+            <div class="rounded-xl bg-emerald-50/70 border border-emerald-200/80 p-3.5 sm:p-4">
+              <p class="text-[11px] font-bold uppercase tracking-wider text-emerald-700 mb-1">
+                Commercial Result
+              </p>
+              <p class="text-slate-800 text-xs font-medium leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+                {ind.outcome}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 8: HOW WE WORK (CRISP WHITE CONTRAST SECTION - 4 STAGES)
+  ===================================================================== -->
+  <section class="relative surface-white py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-16 text-left sm:text-center">
+        <div class="badge-light mb-3">Our 4 Stage Execution</div>
+        <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-snug sm:leading-tight mb-3 sm:mb-4">
+          How We Rank Noida SaaS & Tech Websites on Google & AI Engines
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          Our four stage execution model captures bottom-of-funnel buyer intent first, fixes JavaScript and technical crawl bottlenecks, and scales your programmatic and AI citation footprint globally.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-7">
+        {stages.map((s) => (
+          <div class="elevated-card rounded-2xl p-5 sm:p-8 relative overflow-hidden group sm:hover:-translate-y-1">
+            <div class="flex items-center justify-between gap-4 mb-3.5 sm:mb-5">
+              <span class={`inline-flex items-center px-2.5 sm:px-3 py-1 rounded-lg text-xs font-bold uppercase tracking-wider text-white bg-gradient-to-r ${s.accent}`}>
+                {s.num}
+              </span>
+              <span class="font-display font-black text-3xl sm:text-4xl text-slate-200 group-hover:text-slate-300 transition-colors">
+                {s.step}
+              </span>
+            </div>
+            <h3 class="font-display font-bold text-[17px] sm:text-xl text-slate-900 mb-2.5 sm:mb-3 leading-snug">
+              {s.title}
+            </h3>
+            <p class="text-slate-600 text-[13px] sm:text-sm leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+              {s.body}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 9: CONCLUSION / PARTNER SECTION (DARK INDIGO + GROWTH IMAGE)
+  ===================================================================== -->
+  <section class="relative surface-indigo py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-7 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns: Conclusion Paragraphs (Justified) -->
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-dark mb-3.5 sm:mb-4">Compounding ARR & Demo Pipeline</div>
+          <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-white tracking-tight leading-snug sm:leading-tight mb-4 sm:mb-6">
+            Start Scaling Demo Bookings With SEO for SaaS Companies in Noida
+          </h2>
+          <div class="space-y-4 sm:space-y-5 text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            <p>
+              Paid acquisition costs in B2B SaaS continue to climb every quarter while buyers increasingly rely on organic search, peer reviews, ChatGPT and Perplexity to build their vendor shortlists before ever talking to an SDR. If your product is absent from those bottom-of-funnel comparisons, your competitors capture your highest-LTV accounts.
+            </p>
+            <p>
+              When you partner with NK Digital Tech for <strong class="text-white font-semibold">SEO for SaaS Companies in Noida</strong>, you work directly with senior technical SEOs and full-stack developers from a trusted <a href="/website-development-company-in-noida/" class="text-brand-300 hover:text-white font-semibold no-underline hover:no-underline">Website Development Company in Noida</a> who understand modern JS stacks, PLG funnels and LLM citation technical. Claim your free SaaS pipeline audit today.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Unique Growth Image -->
+        <div class="lg:col-span-5 min-w-0">
+          <div class="rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-700/80 shadow-2xl bg-slate-900">
+            <img
+              src="/images/noida-saas-seo/growth-saas-seo-noida.webp"
+              alt="Noida B2B SaaS Leadership Team Celebrating Enterprise Demo Bookings"
+              width="800"
+              height="450"
+              class="w-full aspect-[16/10] sm:aspect-auto sm:h-64 lg:h-72 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 10: FAQ (LIGHT COOL SLATE CONTRAST SECTION)
+  ===================================================================== -->
+  <section id="faq" class="relative surface-cool py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-left sm:text-center mb-9 sm:mb-14">
+        <div class="badge-light mb-3">Questions Asked on Google, ChatGPT &amp; Gemini</div>
+        <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-snug sm:leading-tight mb-3 sm:mb-4">
+          Frequently Asked Questions About SEO for SaaS Companies in Noida
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          Direct, factual answers to the questions SaaS founders, VPs of Marketing and growth leaders in Noida ask before launching a B2B software SEO and GEO campaign.
+        </p>
+      </div>
+
+      <div class="space-y-3 sm:space-y-4">
+        {faqs.map((f, i) => (
+          <details class="elevated-card rounded-2xl group overflow-hidden" open={i === 0}>
+            <summary class="flex items-start sm:items-center justify-between gap-3 sm:gap-4 px-4 sm:px-6 py-4 sm:py-5 min-h-[54px] select-none">
+              <div class="flex items-start sm:items-center gap-2.5 sm:gap-3.5 text-left min-w-0">
+                <span class="w-6 h-6 sm:w-7 sm:h-7 rounded-lg bg-sky-50 border border-sky-200 text-brand-600 font-display font-bold text-xs flex items-center justify-center flex-shrink-0 mt-0.5 sm:mt-0">
+                  0{i + 1}
+                </span>
+                <span class="font-display font-bold text-slate-900 text-[14px] sm:text-base md:text-lg leading-snug">
+                  {f.q}
+                </span>
+              </div>
+              <span class="faq-icon w-7 h-7 sm:w-8 sm:h-8 rounded-full border border-slate-200 text-slate-600 flex items-center justify-center flex-shrink-0 mt-0.5 sm:mt-0">
+                <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                </svg>
+              </span>
+            </summary>
+            <div class="px-4 sm:px-6 pb-5 sm:pb-6 pt-3 text-slate-600 text-[13px] sm:text-sm md:text-base leading-relaxed border-t border-slate-100 text-justify hyphens-auto [text-align-last:left]">
+              {f.a}
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 11: SHORT 2 TO 3 LINE CALL TO ACTION BANNER (LAST SECTION)
+  ===================================================================== -->
+  <section id="contact" class="relative surface-dark py-12 pb-24 sm:py-16 lg:py-20 px-4 sm:px-6 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-5xl mx-auto">
+      <div class="rounded-2xl sm:rounded-3xl bg-gradient-to-r from-brand-600 via-brand-700 to-accent-700 p-6 sm:p-10 md:p-12 text-center text-white shadow-2xl border border-white/15 relative overflow-hidden">
+        <div class="relative z-10 max-w-2xl mx-auto">
+          <h2 class="font-display font-black text-[1.45rem] sm:text-3xl md:text-4xl text-white tracking-tight leading-snug mb-3 sm:mb-4">
+            Ready to Scale Global Software Demos & Lower Your SaaS CAC?
+          </h2>
+
+          <p class="text-sky-50 text-[13px] sm:text-sm md:text-base leading-relaxed mb-6 sm:mb-8">
+            Book a free SaaS pipeline audit with our senior technical SEOs to review your BoFu comparison pages, JS crawl health and LLM citations.
+          </p>
+
+          <a
+            href="/contact-us/"
+            class="inline-flex w-full sm:w-auto min-h-[48px] items-center justify-center gap-2 sm:gap-3 px-5 sm:px-8 py-3.5 sm:py-4 rounded-xl bg-white text-slate-950 hover:bg-sky-50 no-underline hover:no-underline font-display font-bold text-sm sm:text-base shadow-xl transition-all duration-300 active:scale-95 text-center leading-snug"
+          >
+            <span>Claim Your Free SaaS Pipeline SEO Audit</span>
+            <svg class="w-4 h-4 sm:w-5 sm:h-5 text-brand-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mobile Sticky Bottom Quick Action Bar -->
+  <div class="sm:hidden fixed bottom-0 inset-x-0 z-40 bg-[#050a14]/95 backdrop-blur-xl border-t border-slate-800 px-3.5 py-2.5 shadow-[0_-8px_24px_rgba(0,0,0,0.45)]">
+    <div class="flex items-center gap-2.5">
+      <a
+        href="/contact-us/"
+        class="btn-primary flex-1 min-h-[44px] py-2.5 px-4 text-xs font-bold rounded-xl no-underline hover:no-underline"
+      >
+        <span>Claim Free SaaS SEO Audit</span>
+        <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+        </svg>
+      </a>
+      <a
+        href="#services"
+        class="btn-secondary-dark min-h-[44px] py-2.5 px-3.5 text-xs font-semibold rounded-xl flex-shrink-0 no-underline hover:no-underline"
+      >
+        <span>Services</span>
+      </a>
+    </div>
+  </div>
+
+</Layout>

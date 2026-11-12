@@ -1,0 +1,1072 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import '../../styles/global.css';
+
+const pageTitle = "Best SEO for Professional Services Firms in Noida | NK Digital Tech";
+const pageDescription = "Need SEO for Professional Services Firms in Noida? NK Digital Tech drives B2B corporate leads, RFPs and ChatGPT citations for consultancies across Noida.";
+const pageCanonical = "https://www.nkdigitaltech.net/best-seo-company-in-noida/Professional-Services-Firms/";
+
+const services = [
+  {
+    "num": "01",
+    "category": "B2B Capability Silos",
+    "icon": "<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z\"/></svg>",
+    "iconStyle": "bg-sky-50 border-sky-200 text-brand-600",
+    "impactStyle": "bg-sky-50/80 border-sky-200/80 text-slate-800",
+    "badgeColor": "text-brand-600 bg-sky-100/80",
+    "title": "Practice Area & Industry Vertical Keyword SEO",
+    "body": "We replace vague corporate jargon with high-intent B2B service pages targeting employer, CFO, COO and procurement search terms across Noida and NCR.",
+    "impact": "Direct RFP invitations and discovery calls from verified corporate accounts.",
+    "cta": "View Our Core Noida SEO Approach",
+    "href": "/best-seo-company-in-noida/"
+  },
+  {
+    "num": "02",
+    "category": "Business Park Map SEO",
+    "icon": "<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z\"/><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M15 11a3 3 0 11-6 0 3 3 0 016 0z\"/></svg>",
+    "iconStyle": "bg-emerald-50 border-emerald-200 text-emerald-600",
+    "impactStyle": "bg-emerald-50/80 border-emerald-200/80 text-slate-800",
+    "badgeColor": "text-emerald-700 bg-emerald-100/80",
+    "title": "Google Business Profile for Noida Corporate Offices",
+    "body": "We optimise your Google Business Profile across Sector 62, Sector 16A Film City, Sector 18 and Noida Expressway business parks with verified B2B reviews.",
+    "impact": "Top three Google Map Pack placement when nearby enterprises search for vendors.",
+    "cta": "See Local SEO Services in Noida",
+    "href": "/local-seo-services-in-noida/"
+  },
+  {
+    "num": "03",
+    "category": "Case Studies & Schema SEO",
+    "icon": "<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4\"/></svg>",
+    "iconStyle": "bg-cyan-50 border-cyan-200 text-cyan-700",
+    "impactStyle": "bg-cyan-50/80 border-cyan-200/80 text-slate-800",
+    "badgeColor": "text-cyan-700 bg-cyan-100/80",
+    "title": "ROI Case Study Hubs & ProfessionalService Schema",
+    "body": "We structure your client success stories, partner credentials and ISO certifications with ProfessionalService, Organization and FAQPage JSON LD schema.",
+    "impact": "Builds immediate executive trust during procurement due diligence.",
+    "cta": "Explore Noida Web Development",
+    "href": "/website-development-company-in-noida/"
+  },
+  {
+    "num": "04",
+    "category": "Answer Engine SEO (AEO)",
+    "icon": "<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z\"/></svg>",
+    "iconStyle": "bg-amber-50 border-amber-200 text-amber-600",
+    "impactStyle": "bg-amber-50/80 border-amber-200/80 text-slate-800",
+    "badgeColor": "text-amber-700 bg-amber-100/80",
+    "title": "Answer Engine SEO for SLAs, Compliance & Pricing Models",
+    "body": "We publish concise 50 word executive answers and HTML comparison tables for retainer models, turnaround SLAs and statutory compliance to win Featured Snippets.",
+    "impact": "Captures C-suite and operations heads researching vendor evaluation criteria.",
+    "cta": "Check AEO Services in Noida",
+    "href": "/aeo-services-in-noida/"
+  },
+  {
+    "num": "05",
+    "category": "Generative AI SEO (GEO)",
+    "icon": "<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z\"/></svg>",
+    "iconStyle": "bg-violet-50 border-violet-200 text-accent-600",
+    "impactStyle": "bg-violet-50/80 border-violet-200/80 text-slate-800",
+    "badgeColor": "text-accent-600 bg-violet-100/80",
+    "title": "GEO Citations in ChatGPT, Perplexity & Gemini",
+    "body": "We format your methodology frameworks, industry benchmarks and leadership profiles so ChatGPT, Perplexity and Gemini recommend your firm in B2B prompts.",
+    "impact": "Consistent firm inclusion when enterprise buyers ask AI to shortlist Noida vendors.",
+    "cta": "Explore Noida AI SEO Services",
+    "href": "/ai-seo-company-in-noida/"
+  },
+  {
+    "num": "06",
+    "category": "Thought Leadership PR",
+    "icon": "<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M13 10V3L4 14h7v7l9-11h-7z\"/></svg>",
+    "iconStyle": "bg-indigo-50 border-indigo-200 text-indigo-600",
+    "impactStyle": "bg-indigo-50/80 border-indigo-200/80 text-slate-800",
+    "badgeColor": "text-indigo-700 bg-indigo-100/80",
+    "title": "B2B Editorial Backlinks & Directory Citations",
+    "body": "We secure authoritative citations and thought-leadership backlinks across Indian business publications, trade associations and Clutch/GoodFirms directories.",
+    "impact": "Elevates domain authority to outrank national and global consulting competitors.",
+    "cta": "Build B2B Domain Authority",
+    "href": "#contact"
+  }
+];
+
+const cities = [
+  {
+    "hub": "Corridor 01",
+    "city": "Sector 62, 63 & Electronic City",
+    "corridor": "Sector 62 • Sector 63 • Candor TechSpace • Stellar IT Park • Galaxy Park",
+    "keyword": "HR Recruitment, IT Staffing & Payroll SEO in Sector 62 Noida",
+    "desc": "We help executive search firms, contract IT staffing agencies and payroll/EPFO consultancies in Sector 62 capture CHRO and talent acquisition mandates.",
+    "cta": "Audit Your B2B Visibility",
+    "href": "#contact",
+    "accent": "from-brand-500 to-sky-400"
+  },
+  {
+    "hub": "Corridor 02",
+    "city": "Noida Expressway Corporate Belt",
+    "corridor": "Sector 125 • Sector 132 • Sector 135 • Sector 142 Advant Navis • Sector 94",
+    "keyword": "Management, ESG, Cybersecurity & Risk Consulting SEO in Noida",
+    "desc": "We rank management consultancies, ISO/SOC2 auditors, ERP advisors and corporate training firms serving MNCs along the Noida-Greater Noida Expressway.",
+    "cta": "Win Enterprise Advisory RFPs",
+    "href": "#contact",
+    "accent": "from-accent-500 to-violet-400"
+  },
+  {
+    "hub": "Corridor 03",
+    "city": "Sector 16A Film City & Sector 18",
+    "corridor": "Sector 16A Film City • Sector 18 • Sector 16 • Wave City Center",
+    "keyword": "PR, Media Production, Event & Brand Advisory SEO in Noida",
+    "desc": "We position corporate PR agencies, video production houses, market research firms and event management companies in Film City and Sector 18 on page one.",
+    "cta": "Scale Corporate Brand Briefs",
+    "href": "#contact",
+    "accent": "from-cyan-500 to-teal-400"
+  },
+  {
+    "hub": "Corridor 04",
+    "city": "Phase 2, Ecotech & Dadri Logistics Belt",
+    "corridor": "Phase 2 NSEZ • Surajpur • Ecotech Greater Noida • Dadri ICD • Jewar Belt",
+    "keyword": "3PL Logistics, Customs, Facility & Security Services SEO in Noida",
+    "desc": "We connect 3PL warehousing operators, freight forwarders, integrated facility management (IFM) and industrial security agencies with factory and retail heads.",
+    "cta": "Capture Supply Chain & IFM Contracts",
+    "href": "#contact",
+    "accent": "from-emerald-500 to-green-400"
+  }
+];
+
+const comparison = [
+  {
+    "metric": "Search Intent Filtering",
+    "typical": "Brings job seekers, interns and students searching for career tips or resumes",
+    "nk": "Targets employer-only B2B keywords searched by CHROs, COOs, CFOs and procurement heads"
+  },
+  {
+    "metric": "Articulation of Service Value",
+    "typical": "Fluffy 500-word blogs written by generalists with zero industry depth",
+    "nk": "Executive capability pages detailing SLAs, compliance standards and quantified ROI case studies"
+  },
+  {
+    "metric": "AI Search & Vendor Shortlisting",
+    "typical": "Invisible when corporate teams ask ChatGPT or Perplexity to recommend Noida vendors",
+    "nk": "Structured comparison matrices, credentials and schema cited by AI answer engines"
+  },
+  {
+    "metric": "Lead Capture & Qualification",
+    "typical": "Basic contact forms flooded with spam and irrelevant vendor pitches",
+    "nk": "RFP-ready inquiry forms filtering by Company Size, Requirement Scope and Corporate Email"
+  },
+  {
+    "metric": "Local Corporate Corridor Reach",
+    "typical": "Neglected Google Business Profile with no presence in Noida’s IT and industrial hubs",
+    "nk": "Top 3 Map Pack rankings across Sector 62, Expressway and Greater Noida business parks"
+  },
+  {
+    "metric": "Pipeline Cost vs Cold Outreach",
+    "typical": "Endless spend on cold email tools and LinkedIn InMails with <1% reply rates",
+    "nk": "Compounding inbound discovery calls from buyers actively ready to sign a retainer"
+  }
+];
+
+const propertySegments = [
+  {
+    "sector": "HR, Staffing & Executive Search",
+    "title": "IT Contract Staffing, RPO, Executive Search & Payroll Firms",
+    "focus": "CHROs and talent heads in Sector 62 and Expressway IT parks search Google and ChatGPT for IT contract staffing agencies in Noida, GCC hiring partners, CXO executive search firms and third-party payroll/POSH/labour law compliance.",
+    "outcome": "Exclusive corporate empanelments and bulk hiring mandates (zero job-seeker spam).",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4\"/></svg>",
+    "accentBorder": "border-t-brand-500",
+    "iconBg": "bg-sky-50 text-brand-600 border-sky-200"
+  },
+  {
+    "sector": "Management & Strategy Advisory",
+    "title": "Business Transformation, ERP, ISO & ESG Consultancies",
+    "focus": "Promoters and COOs across Noida and Greater Noida search for SAP/ERP implementation partners, ISO 9001/27001 certification consultants, ESG sustainability reporting, lean manufacturing and supply chain consulting.",
+    "outcome": "High-ticket management consulting retainers and multi-month advisory projects.",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z\"/></svg>",
+    "accentBorder": "border-t-amber-500",
+    "iconBg": "bg-amber-50 text-amber-600 border-amber-200"
+  },
+  {
+    "sector": "Logistics, 3PL & Supply Chain",
+    "title": "3PL Warehousing, Freight Forwarding & Customs (CHA) Firms",
+    "focus": "Exporters in NSEZ Phase 2, electronics plants in Sector 63 and D2C brands search for 3PL warehouse space in Noida/Greater Noida, air/sea freight forwarders near Dadri ICD and Jewar, and cold chain logistics providers.",
+    "outcome": "Long-term B2B warehousing, distribution and international freight contracts.",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M3 21h18M5 21V7l8-4v18M19 21V11l-6-4M9 9v.01M9 12v.01M9 15v.01M9 18v.01\"/></svg>",
+    "accentBorder": "border-t-cyan-500",
+    "iconBg": "bg-cyan-50 text-cyan-700 border-cyan-200"
+  },
+  {
+    "sector": "Facility, Security & Corporate Infra",
+    "title": "Integrated Facility Management (IFM), Housekeeping & Security",
+    "focus": "Admin heads of Noida IT parks, hospitals, universities and RWAs search for integrated facility management companies in Noida, PSARA licensed corporate security agencies, electro-mechanical O&M and corporate catering.",
+    "outcome": "Annual multi-site facility management and corporate manpower tenders.",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z\"/></svg>",
+    "accentBorder": "border-t-emerald-500",
+    "iconBg": "bg-emerald-50 text-emerald-600 border-emerald-200"
+  },
+  {
+    "sector": "Media, PR & Corporate Events",
+    "title": "Sector 16A Film City Production, PR & MICE Event Agencies",
+    "focus": "Brand directors and corporate communications heads search Google for corporate video production houses in Noida Film City, B2B tech PR agencies, exhibition stall fabricators for India Expo Mart and MICE event planners.",
+    "outcome": "High-budget corporate film, PR retainer and exhibition fabrication mandates.",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z\"/><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M15 11a3 3 0 11-6 0 3 3 0 016 0z\"/></svg>",
+    "accentBorder": "border-t-indigo-500",
+    "iconBg": "bg-indigo-50 text-indigo-600 border-indigo-200"
+  },
+  {
+    "sector": "IT Managed Services & Cyber",
+    "title": "Managed IT (MSP), CERT-In Cybersecurity & Cloud Support",
+    "focus": "CTOs and IT managers across Noida’s mid-market enterprises search for VAPT cybersecurity audit firms, AMC server/network support in Noida, cloud cost optimisation and managed SOC providers.",
+    "outcome": "Recurring annual IT AMC contracts and cybersecurity compliance engagements.",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4\"/></svg>",
+    "accentBorder": "border-t-rose-500",
+    "iconBg": "bg-rose-50 text-rose-600 border-rose-200"
+  }
+];
+
+const stages = [
+  {
+    "num": "Stage 01",
+    "step": "01",
+    "title": "B2B Search Intent, Keyword Leak & Competitor Gap Audit",
+    "body": "We audit your website speed, B2C/job-seeker traffic leaks, indexation gaps and Google Business Profile health while mapping the exact procurement and RFP keywords your ideal enterprise clients search in Noida.",
+    "accent": "from-brand-600 to-sky-500"
+  },
+  {
+    "num": "Stage 02",
+    "step": "02",
+    "title": "Capability Silos, Industry Pages & ProfessionalService Schema",
+    "body": "You get a 90 day B2B roadmap covering core service lines and target industries (IT, Manufacturing, BFSI, Real Estate) backed by ProfessionalService, Organization and FAQPage JSON LD schema.",
+    "accent": "from-accent-600 to-violet-500"
+  },
+  {
+    "num": "Stage 03",
+    "step": "03",
+    "title": "Executive Case Studies, SLA Guides & Map Pack Execution",
+    "body": "Our B2B strategists and developers publish ROI-backed case studies, vendor evaluation checklists and verified Google Business Profile updates across Sector 62, Film City, Sector 18 and Noida Expressway.",
+    "accent": "from-cyan-600 to-teal-500"
+  },
+  {
+    "num": "Stage 04",
+    "step": "04",
+    "title": "RFP Conversion Tracking, AI Citation Checks & Account Scaling",
+    "body": "Every two weeks we review your B2B keyword rankings, corporate consultation bookings, RFP uploads and live vendor citations inside ChatGPT, Perplexity and Google AI Overviews.",
+    "accent": "from-emerald-600 to-green-500"
+  }
+];
+
+const faqs = [
+  {
+    "q": "How does SEO for Professional Services Firms in Noida attract corporate decision-makers instead of job seekers?",
+    "a": "This is the single most important distinction in B2B SEO, especially for HR, recruitment, security and facility management firms. We block candidate-intent keywords (\"jobs in Noida\", \"vacancy\") and optimise exclusively for employer and procurement modifiers (\"IT contract staffing agency for enterprises in Noida\", \"RPO recruitment partner\", \"turnkey IFM company for IT parks\"). We also separate candidate portals from B2B client landing pages."
+  },
+  {
+    "q": "Can SEO really generate high-ticket B2B consulting and corporate service retainers?",
+    "a": "Yes. Even when a CHRO, COO or CFO receives a referral, they immediately search Google and ask ChatGPT to benchmark 3 to 4 specialist firms in Noida before issuing an RFP. Ranking on page one with quantified industry case studies, ISO/statutory certifications and clear SLA frameworks turns your website into your highest-converting partner."
+  },
+  {
+    "q": "How do you get Noida B2B consultancies recommended by ChatGPT, Perplexity and Google AI Overviews?",
+    "a": "Corporate buyers increasingly ask AI assistants prompts like top executive search firms in Noida for tech hiring or best exhibition stall fabricators near India Expo Mart Greater Noida. We structure your service pages with concise 40 to 60 word executive summaries, HTML capability comparison matrices, verified client sectors and ProfessionalService schema alongside Clutch/directory entity alignment so LLMs cite your firm."
+  },
+  {
+    "q": "How long do B2B SEO services in Noida take to generate qualified enterprise inquiries?",
+    "a": "Google Business Profile optimisation, technical speed fixes and niche B2B service pages typically start generating initial discovery calls within 6 to 10 weeks. Building dominant page-one rankings for competitive NCR corporate keywords and consistent AI shortlist citations takes 3 to 6 months."
+  },
+  {
+    "q": "What is included in your local SEO for corporate offices in Sector 62, Film City and Noida Expressway?",
+    "a": "We verify and optimise your Google Business Profile with exact B2B categories (Recruiter, Business Management Consultant, Logistics Service, Property Management Company, etc.), geo-tagged corporate office photos, service area pins across Noida and Greater Noida business parks, Indian B2B directory citations and a corporate client review strategy."
+  },
+  {
+    "q": "How do we showcase client case studies if we have strict corporate NDAs?",
+    "a": "You never need to breach an NDA to build powerful B2B E-E-A-T. We publish anonymized, metric-driven case studies (for example: \"How We Scaled a 120-build DevOps Team in 45 Days for a Series-C FinTech in Sector 132 Noida\") that prove your domain expertise to both human buyers and search engines."
+  },
+  {
+    "q": "Do you help exhibition, event and PR agencies targeting India Expo Mart and Film City?",
+    "a": "Yes. Noida’s Sector 16A Film City and Greater Noida’s India Expo Centre & Mart drive massive B2B demand for corporate video production, PR, MICE event management and custom booth fabrication. We build dedicated vertical silos that capture both NCR and international exhibitors searching for local execution partners."
+  },
+  {
+    "q": "How do you measure B2B SEO ROI when sales cycles are 30 to 90 days long?",
+    "a": "We integrate Google Search Console and GA4 with your CRM (HubSpot, Zoho, Salesforce) and call tracking, measuring verified corporate email submissions, RFP document uploads, discovery call bookings and organic pipeline value from first touch to closed retainer."
+  }
+];
+
+const trustStrip = [
+  "Sec 62, Film City & Expressway SEO",
+  "Enterprise RFP & Retainer Leads",
+  "ChatGPT & Perplexity Citations",
+  "Google AI Overviews",
+  "ProfessionalService & B2B Schema",
+  "Zero Job-Seeker Traffic Waste",
+  "Executive Case Study Silos",
+  "100% Owned B2B Pipeline"
+];
+
+const sectorSchemaService = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "SEO for Professional Services Firms in Noida",
+  "serviceType": "B2B Consulting, HR, Logistics, IT Staffing & Corporate Advisory SEO in Noida",
+  "provider": {
+    "@type": "ProfessionalService",
+    "name": "NK Digital Tech",
+    "url": "https://www.nkdigitaltech.net/",
+    "email": "nkdigitaltech1@gmail.com",
+    "telephone": "+91-80521-89051",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Noida",
+      "addressRegion": "Uttar Pradesh",
+      "addressCountry": "IN"
+    }
+  },
+  "areaServed": [
+    "Noida",
+    "Sector 62 Noida",
+    "Sector 16A Film City Noida",
+    "Advant Navis Sector 142",
+    "Sector 125 & 132 Noida",
+    "Sector 18 Noida",
+    "Greater Noida",
+    "NSEZ Phase 2 Noida"
+],
+  "description": pageDescription,
+  "url": pageCanonical
+});
+
+const sectorSchemaFAQ = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map((item) => ({
+    "@type": "Question",
+    "name": item.q,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": item.a
+    }
+  }))
+});
+
+const sectorSchemaBreadcrumb = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.nkdigitaltech.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Best SEO Company in Noida",
+      "item": "https://www.nkdigitaltech.net/best-seo-company-in-noida/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "SEO for Professional Services Firms in Noida",
+      "item": pageCanonical
+    }
+  ]
+});
+---
+
+<Layout
+  title={pageTitle}
+  description={pageDescription}
+  canonical={pageCanonical}
+  ogImage="https://www.nkdigitaltech.net/images/noida-professional-seo/hero-professional-seo-noida.webp"
+  preloadImage="/images/noida-professional-seo/hero-professional-seo-noida.webp"
+  hideLocationsNav={false}
+  customSchemaLocalBusiness={sectorSchemaService}
+  customSchemaFAQ={sectorSchemaFAQ}
+  customSchemaBreadcrumb={sectorSchemaBreadcrumb}
+  utilityTagline="SEO for Professional Services Firms in Noida • Management Consulting, HR Staffing, 3PL Logistics & Corporate Advisory"
+  brandSubtitle="Noida • B2B Professional Services SEO & AI Search"
+  footerBio="NK Digital Tech delivers specialised SEO for Professional Services Firms in Noida, helping management consultancies, HR recruitment agencies, 3PL logistics providers, facility management and corporate advisory firms across Sector 62, Sector 16A and Noida Expressway win enterprise RFPs."
+  footerCoreDisciplines={[
+    { label: 'Best Digital Marketing Agency in Noida', href: '/best-digital-marketing-agency-in-noida/' },
+    { label: 'Best SEO Company in Noida', href: '/best-seo-company-in-noida/' },
+    { label: 'Local SEO Services in Noida', href: '/local-seo-services-in-noida/' },
+    { label: 'AI SEO Company in Noida', href: '/ai-seo-company-in-noida/' },
+    { label: 'AEO Services in Noida', href: '/aeo-services-in-noida/' },
+    { label: 'Website Development Company in Noida', href: '/website-development-company-in-noida/' },
+  ]}
+  footerTagline="Built for B2B Professional Services SEO, AEO & GEO Visibility in Noida"
+>
+
+  <!-- =====================================================================
+       SECTION 1: HERO (DARK SURFACE WITH UNIQUE SECTOR SEO HERO IMAGE)
+  ===================================================================== -->
+  <section class="relative surface-dark overflow-hidden pt-8 pb-12 sm:pt-16 sm:pb-20 lg:pt-20 lg:pb-24 border-b border-slate-800/80">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="absolute inset-0 mesh-glow pointer-events-none"></div>
+    <div class="absolute -top-36 -left-36 w-96 h-96 bg-brand-500/20 rounded-full blur-[130px] pointer-events-none"></div>
+    <div class="absolute top-1/4 -right-36 w-96 h-96 bg-accent-500/20 rounded-full blur-[130px] pointer-events-none"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-7 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns: Headline & CTA -->
+        <div class="lg:col-span-7 text-left min-w-0">
+          <div class="badge-dark mb-4 sm:mb-6">
+            <span class="w-2 h-2 rounded-full bg-brand-400 animate-ping flex-shrink-0"></span>
+            <span class="min-w-0">B2B Corporate Services SEO • AEO & GEO • Enterprise RFP Pipeline</span>
+          </div>
+
+          <h1 class="font-display text-[1.95rem] sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-[1.15] sm:leading-[1.1] mb-4 sm:mb-6 text-glow">
+            SEO for Professional <br />
+            <span class="gradient-text-light">Services Firms in Noida</span>
+          </h1>
+
+          <p class="text-[13.5px] sm:text-base md:text-lg text-slate-300 leading-relaxed mb-6 sm:mb-8 font-normal text-justify hyphens-auto [text-align-last:left]">
+            Looking for executive-grade <strong class="text-white font-semibold">SEO for Professional Services Firms in Noida</strong> that generates qualified enterprise RFPs, B2B retainer inquiries and C-suite consultations? NK Digital Tech helps management consultancies, HR & IT staffing firms, 3PL logistics providers and corporate service leaders grow through three simple methods: <strong class="text-white font-semibold">SEO</strong> to rank your B2B capability pages on page one of Google and Map Packs, <strong class="text-white font-semibold">AEO</strong> to win direct answer boxes for SLA, compliance and cost models, and <strong class="text-white font-semibold">GEO</strong> so ChatGPT, Perplexity, Gemini and Google AI Overviews shortlist your firm to procurement teams.
+          </p>
+
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 mb-7 sm:mb-10">
+            <a href="#contact" class="btn-primary w-full sm:w-auto min-h-[48px] text-sm sm:text-base px-5 sm:px-8 py-3.5 sm:py-4">
+              <span>Claim Your Free B2B Consultancy SEO Audit</span>
+              <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+              </svg>
+            </a>
+            <a href="#services" class="btn-secondary-dark w-full sm:w-auto min-h-[48px] text-sm sm:text-base px-5 sm:px-7 py-3.5 sm:py-4">
+              <span>Explore Our Six B2B SEO Pillars</span>
+            </a>
+          </div>
+
+          <!-- Trust Verification Strip (2x4 Grid on Mobile, Flex Pills on Desktop) -->
+          <div class="pt-5 sm:pt-6 border-t border-slate-800/80">
+            <div class="grid grid-cols-2 sm:flex sm:flex-wrap items-stretch sm:items-center gap-2">
+              {trustStrip.map((item) => (
+                <span class="px-2.5 sm:px-3 py-2 sm:py-1.5 rounded-lg bg-slate-900/90 border border-slate-800 text-[11px] sm:text-xs text-slate-300 font-medium flex items-center justify-center sm:justify-start text-center sm:text-left leading-tight">
+                  {item}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Unique Sector Hero Image -->
+        <div class="lg:col-span-5 min-w-0">
+          <div class="relative rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-700/80 shadow-2xl shadow-brand-500/15 bg-slate-900 group">
+            <div class="relative">
+              <img
+                src="/images/noida-professional-seo/hero-professional-seo-noida.webp"
+                alt="SEO for Professional Services Firms in Noida Strategy Team Reviewing B2B RFP Pipeline"
+                width="960"
+                height="540"
+                fetchpriority="high"
+                decoding="async"
+                class="w-full aspect-[16/10] sm:aspect-auto sm:h-72 md:h-[380px] lg:h-[400px] object-cover object-center group-hover:scale-105 transition-transform duration-500"
+              />
+              <div class="hidden sm:block absolute inset-0 bg-gradient-to-t from-[#050a14] via-transparent to-transparent opacity-80"></div>
+            </div>
+            <div class="relative sm:absolute sm:bottom-4 sm:left-4 sm:right-4 glass-card border-t sm:border border-slate-800 sm:rounded-2xl p-3.5 sm:p-4">
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-1">
+                <span class="text-xs font-bold text-white">Noida B2B Advisory & AI Authority</span>
+                <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-400">
+                  <span class="w-2 h-2 rounded-full bg-emerald-400 flex-shrink-0"></span>
+                  Enterprise RFP Leads
+                </span>
+              </div>
+              <p class="text-[11px] sm:text-xs text-slate-300 text-justify hyphens-auto [text-align-last:left] leading-relaxed">
+                Built to rank Sector 62 HR & IT consultancies, Expressway corporate advisories and Greater Noida 3PL & facility firms across Google and AI.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 2: INTRODUCTION (CRISP WHITE CONTRAST SECTION + TEAM IMAGE)
+  ===================================================================== -->
+  <section class="relative surface-white py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns: Concise 2-Paragraph Unique Copy -->
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-light mb-3.5 sm:mb-4">Predictable Enterprise RFP & Retainer Engine</div>
+          <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-snug sm:leading-tight mb-4 sm:mb-6">
+            How Our SEO for Professional Services Firms in Noida <span class="gradient-text-dark">Drives High-Ticket B2B Retainers</span>
+          </h2>
+          <div class="space-y-4 sm:space-y-5 text-slate-700 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            <p>
+              Across Noida’s Sector 62, Sector 16A Film City, Sector 125-142 Expressway business parks and Greater Noida industrial belts, thousands of enterprises outsource critical functions, from executive HR recruitment, contract IT staffing and payroll compliance to 3PL supply chain logistics, integrated facility management, PR/media production and ISO/ESG management consulting. When a CHRO, COO or VP of Procurement looks for a specialized B2B partner in Noida, they research vendors on Google Search, Google Maps, ChatGPT and Gemini. Our <strong>SEO for Professional Services Firms in Noida</strong> ensures your firm appears first on their shortlist.
+            </p>
+            <p>
+              As a trusted <a href="/best-digital-marketing-agency-in-noida/" class="text-brand-600 hover:text-brand-700 font-semibold no-underline hover:no-underline">Best Digital Marketing Agency in Noida</a> and <a href="/best-seo-company-in-noida/" class="text-brand-600 hover:text-brand-700 font-semibold no-underline hover:no-underline">Best SEO Company in Noida</a>, we replace cold LinkedIn outreach fatigue and dried-up referral networks with a compounding inbound B2B pipeline. Our <strong>B2B SEO agency in Noida</strong> structures your practice areas, industry verticals and ROI case studies so corporate decision-makers invite your partners directly to pitch.
+            </p>
+          </div>
+          <div class="mt-6 sm:mt-8 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
+            <a href="#contact" class="btn-primary w-full sm:w-auto min-h-[48px]">
+              <span>Talk to a B2B Services SEO Strategist</span>
+              <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+              </svg>
+            </a>
+            <a href="#why-us" class="btn-secondary-light w-full sm:w-auto min-h-[48px]">
+              <span>Compare Cold Outreach vs Inbound B2B SEO</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Unique Team Image + Stats -->
+        <div class="lg:col-span-5 space-y-4 sm:space-y-5 min-w-0">
+          <div class="rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-200 shadow-lg bg-slate-100">
+            <img
+              src="/images/noida-professional-seo/team-professional-seo-noida.webp"
+              alt="B2B Professional Services SEO Agency in Noida Mapping Enterprise Advisory Keywords"
+              width="800"
+              height="533"
+              class="w-full aspect-[16/10] sm:aspect-auto sm:h-64 lg:h-72 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="grid grid-cols-2 gap-3 sm:gap-4">
+            {[{"val":"3.9x","label":"Qualified B2B RFP Growth","sub":"From Noida & NCR enterprise buyers"},{"val":"100%","label":"B2B Decision-Maker Intent","sub":"Filters out job-seekers & students"},{"val":"Top 3","label":"Google Map Pack Focus","sub":"Across Sec 62, 16A, 18 & Expressway"},{"val":"GEO","label":"AI Vendor Shortlists","sub":"Cited in ChatGPT, Perplexity & Gemini"}].map((stat) => (
+              <div class="elevated-card rounded-xl sm:rounded-2xl p-3.5 sm:p-4 min-w-0">
+                <div class="font-display font-black text-xl sm:text-2xl text-brand-600 mb-0.5">{stat.val}</div>
+                <div class="text-[11px] sm:text-xs font-bold text-slate-900 leading-snug">{stat.label}</div>
+                <div class="text-[10.5px] sm:text-[11px] text-slate-500 leading-snug mt-0.5">{stat.sub}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 3: PROBLEM STATEMENT (DEEP INDIGO DARK CONTRAST SECTION)
+  ===================================================================== -->
+  <section class="relative surface-indigo py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="max-w-7xl mx-auto relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns: Problem Statement Justified Copy -->
+        <div class="lg:col-span-7 min-w-0">
+          <div class="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-3.5 py-1 sm:py-1.5 rounded-full text-[10px] sm:text-xs font-bold uppercase tracking-wider sm:tracking-widest bg-amber-500/10 border border-amber-500/30 text-amber-300 max-w-full leading-snug mb-4 sm:mb-5">
+            <svg class="w-4 h-4 text-amber-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+            </svg>
+            <span>Why B2B Consultancies Stall on Referrals Alone</span>
+          </div>
+
+          <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-white tracking-tight leading-snug sm:leading-tight mb-4 sm:mb-6">
+            Why Noida Consulting & B2B Service Firms Lose Enterprise Contracts Online
+          </h2>
+
+          <div class="space-y-4 sm:space-y-5 text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            <p>
+              Most professional services firms in Noida grow initially through founder referrals, but hit a hard ceiling when expanding into new enterprise accounts. Online, their websites suffer from two classic B2B flaws: either they use vague corporate buzzwords ("holistic synergistic business transformation") that no procurement head ever types into Google, or, in the case of HR and staffing agencies, they attract thousands of job seekers uploading resumes instead of CHROs hiring a recruitment partner.
+            </p>
+            <p>
+              Corporate vendor discovery has also moved into generative AI. Today, when an operations head in Sector 132 asks ChatGPT or Perplexity for top IT contract staffing agencies in Noida or best 3PL warehousing and customs clearance companies near Greater Noida, AI engines extract recommendations from structured capability matrices, verified case studies and third-party citations. Without ProfessionalService schema and GEO architecture from a dedicated <a href="/ai-seo-company-in-noida/" class="text-brand-300 hover:text-white font-semibold no-underline hover:no-underline">AI SEO Company in Noida</a>, your firm is left off the RFP list.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Diagnostic Comparison Cards -->
+        <div class="lg:col-span-5 space-y-3.5 sm:space-y-4 min-w-0">
+          <div class="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6 border-l-4 border-l-rose-500">
+            <div class="flex flex-wrap items-center justify-between gap-1.5 mb-2">
+              <span class="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-rose-400">Typical B2B Website</span>
+              <span class="text-[11px] sm:text-xs text-slate-400">Buzzwords or Job-Seeker Noise</span>
+            </div>
+            <h3 class="font-display font-bold text-[15px] sm:text-base text-white mb-2 leading-snug">Vague Corporate Copy & Resume Spam</h3>
+            <p class="text-xs text-slate-300 leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+              Uses abstract consulting jargon that ranks for nothing, or ranks for candidate job searches while enterprise CHROs and COOs hire competing firms.
+            </p>
+          </div>
+
+          <div class="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6 border-l-4 border-l-emerald-400">
+            <div class="flex flex-wrap items-center justify-between gap-1.5 mb-2">
+              <span class="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-emerald-400">NK Digital Tech System</span>
+              <span class="text-[11px] sm:text-xs text-brand-300">Owned Enterprise RFP Pipeline</span>
+            </div>
+            <h3 class="font-display font-bold text-[15px] sm:text-base text-white mb-2 leading-snug">Employer-Intent Silos, Case Studies & AI Citations</h3>
+            <p class="text-xs text-slate-300 leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+              Builds buyer-focused capability pages, SLA/ROI frameworks, ProfessionalService schema and Top 3 Map Pack rankings that attract C-suite and procurement RFPs.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 4: SERVICES (LIGHT COOL ALABASTER CONTRAST + SERVICES IMAGE)
+  ===================================================================== -->
+  <section id="services" class="relative surface-cool py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <!-- Services Header with Unique Services Image -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 items-center mb-9 sm:mb-16">
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-light mb-3">Our Six Pillar B2B System</div>
+          <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-snug sm:leading-tight mb-3 sm:mb-4">
+            Complete Professional Services & B2B SEO in Noida
+          </h2>
+          <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            As a specialised partner for <strong>SEO for consulting firms in Noida</strong>, recruitment leaders and corporate service providers, we execute six B2B-focused SEO, AEO and GEO pillars built around retainer LTV and RFP win rates.
+          </p>
+        </div>
+        <div class="lg:col-span-5 min-w-0">
+          <div class="rounded-2xl overflow-hidden border border-slate-200 shadow-md bg-white">
+            <img
+              src="/images/noida-professional-seo/services-professional-seo-noida.webp"
+              alt="SEO for Professional Services Firms in Noida B2B Architecture and RFP Funnel"
+              width="800"
+              height="450"
+              class="w-full aspect-[16/9] sm:aspect-auto sm:h-56 lg:h-64 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- 3 Columns x 2 Rows Grid Layout -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-7">
+        {services.map((s) => (
+          <div class="elevated-card rounded-2xl p-5 sm:p-7 flex flex-col justify-between group sm:hover:-translate-y-1">
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-4 sm:mb-6">
+                <div class={`w-11 h-11 sm:w-12 sm:h-12 rounded-xl border flex items-center justify-center flex-shrink-0 ${s.iconStyle}`}>
+                  <Fragment set:html={s.icon} />
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class={`text-[10.5px] sm:text-[11px] font-semibold px-2.5 py-1 rounded-md ${s.badgeColor}`}>
+                    {s.category}
+                  </span>
+                  <span class="font-display font-black text-base sm:text-lg text-slate-300">{s.num}</span>
+                </div>
+              </div>
+
+              <h3 class="font-display font-bold text-[17px] sm:text-xl text-slate-900 mb-2.5 sm:mb-3 leading-snug group-hover:text-brand-600 transition-colors">
+                {s.title}
+              </h3>
+
+              <p class="text-slate-600 text-[13px] sm:text-sm leading-relaxed mb-4 sm:mb-6 text-justify hyphens-auto [text-align-last:left]">
+                {s.body}
+              </p>
+            </div>
+
+            <div>
+              <div class={`rounded-xl border p-3.5 sm:p-4 mb-3.5 sm:mb-5 ${s.impactStyle}`}>
+                <div class="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-slate-900 mb-1">
+                  <svg class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                  </svg>
+                  <span>Commercial Impact</span>
+                </div>
+                <p class="text-xs text-slate-700 leading-relaxed font-medium text-justify hyphens-auto [text-align-last:left]">
+                  {s.impact}
+                </p>
+              </div>
+
+              <a href={s.href} class="inline-flex items-center gap-2 py-2 min-h-[40px] text-xs font-bold text-brand-600 hover:text-brand-700 no-underline hover:no-underline group-hover:gap-3 transition-all">
+                <span>{s.cta}</span>
+                <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 5: REGIONAL LOCATIONS (DARK NAVY + NOIDA CORRIDORS)
+  ===================================================================== -->
+  <section id="locations" class="relative surface-navy py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <!-- Regional Header with Unique Locations Image -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 items-center mb-9 sm:mb-16">
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-dark mb-3">Corporate Corridor Targeting</div>
+          <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-white tracking-tight leading-snug sm:leading-tight mb-3 sm:mb-4">
+            Hyper Local B2B Search Coverage Across Noida Corporate Corridors
+          </h2>
+          <p class="text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            B2B service demand in Noida clusters around specific commercial ecosystems, from IT and BFSI campuses in Sector 62 and along the Noida Expressway to broadcast/media agencies in Sector 16A Film City and industrial/logistics operations in Phase 2 and Greater Noida. We pair our <a href="/local-seo-services-in-noida/" class="text-brand-300 hover:text-white font-semibold no-underline hover:no-underline">Local SEO Services in Noida</a> with corridor-specific B2B landing pages across four key business zones.
+          </p>
+        </div>
+        <div class="lg:col-span-5 min-w-0">
+          <div class="rounded-2xl overflow-hidden border border-slate-700/80 shadow-xl bg-slate-900">
+            <img
+              src="/images/noida-professional-seo/locations-professional-seo-noida.webp"
+              alt="Noida Corporate Business Parks Across Sector 62, Sector 16A Film City and Expressway"
+              width="800"
+              height="450"
+              class="w-full aspect-[16/9] sm:aspect-auto sm:h-56 lg:h-64 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- 1 Row x 4 Columns Responsive Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+        {cities.map((c) => (
+          <div class="glass-card rounded-2xl p-5 sm:p-6 flex flex-col justify-between group sm:hover:-translate-y-1">
+            <div>
+              <div class={`h-1 w-full bg-gradient-to-r ${c.accent} rounded-full mb-4 sm:mb-5`}></div>
+
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-3.5 sm:mb-4">
+                <span class="px-2.5 py-1 rounded-md bg-slate-800 border border-slate-700 text-[11px] font-bold uppercase tracking-wider text-brand-300">
+                  {c.hub}
+                </span>
+                <span class="text-xs font-semibold text-slate-400">{c.city}</span>
+              </div>
+
+              <h3 class="font-display font-bold text-base sm:text-lg text-white mb-2.5 sm:mb-3 leading-snug">
+                <a href={c.href} class="hover:text-brand-300 no-underline hover:no-underline transition-colors">{c.keyword}</a>
+              </h3>
+
+              <p class="text-slate-300 text-[13px] sm:text-sm leading-relaxed mb-4 sm:mb-5 text-justify hyphens-auto [text-align-last:left]">
+                {c.desc}
+              </p>
+            </div>
+
+            <div class="pt-3.5 sm:pt-4 border-t border-slate-800">
+              <p class="text-[11px] text-slate-400 mb-3 sm:mb-4 leading-normal">
+                <strong class="text-slate-300">Key Sectors:</strong> {c.corridor}
+              </p>
+              <a href={c.href} class="inline-flex items-center gap-1.5 py-2 min-h-[40px] text-xs font-bold text-brand-400 hover:text-brand-300 no-underline hover:no-underline group-hover:gap-2.5 transition-all">
+                <span>{c.cta}</span>
+                <svg class="w-3.5 h-3.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 6: WHY NK DIGITAL TECH (CRISP WHITE CONTRAST SECTION)
+  ===================================================================== -->
+  <section id="why-us" class="relative surface-white py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-14 text-left sm:text-center">
+        <div class="badge-light mb-3">Why Managing Partners & B2B Founders Choose Us</div>
+        <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-snug sm:leading-tight mb-3 sm:mb-4">
+          How Our B2B Professional Services SEO in Noida Beats Generic Vendors
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed mb-4 text-justify hyphens-auto [text-align-last:left]">
+          Generic agencies do not understand the difference between B2C traffic and B2B procurement intent. We build your search engine around employer-side keywords, RFP qualification forms, <a href="/aeo-services-in-noida/" class="text-brand-600 hover:text-brand-700 font-semibold no-underline hover:no-underline">AEO Services in Noida</a> and executive thought leadership.
+        </p>
+        <p class="text-slate-700 font-semibold text-xs sm:text-sm">
+          Compare our B2B professional services SEO system with generic marketing vendors:
+        </p>
+      </div>
+
+      <!-- Desktop Comparison Matrix -->
+      <div class="hidden md:block overflow-hidden rounded-2xl border border-slate-200 shadow-lg">
+        <table class="w-full text-left border-collapse">
+          <thead>
+            <tr class="bg-slate-900 text-white">
+              <th class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-slate-300 w-1/4">
+                Evaluation Criteria
+              </th>
+              <th class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-rose-300 w-[37.5%] border-l border-slate-800">
+                Generic SEO Vendor
+              </th>
+              <th class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-brand-300 w-[37.5%] border-l border-slate-800 bg-slate-950">
+                NK Digital Tech B2B Services SEO
+              </th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200 text-sm">
+            {comparison.map((row, idx) => (
+              <tr class={idx % 2 === 0 ? 'bg-white' : 'bg-slate-50/80'}>
+                <td class="py-5 px-6 font-display font-bold text-slate-900">
+                  {row.metric}
+                </td>
+                <td class="py-5 px-6 text-slate-600 border-l border-slate-200">
+                  <div class="flex items-start gap-2.5">
+                    <svg class="w-4 h-4 text-rose-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                    <span class="text-justify">{row.typical}</span>
+                  </div>
+                </td>
+                <td class="py-5 px-6 text-slate-900 font-medium border-l border-slate-200 bg-sky-50/40">
+                  <div class="flex items-start gap-2.5">
+                    <svg class="w-4 h-4 text-emerald-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span class="text-justify">{row.nk}</span>
+                  </div>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Mobile Comparison Cards -->
+      <div class="md:hidden space-y-3.5">
+        {comparison.map((row) => (
+          <div class="elevated-card rounded-2xl p-4 space-y-2.5">
+            <h3 class="font-display font-bold text-slate-900 text-[15px] leading-snug">{row.metric}</h3>
+            <div class="rounded-xl bg-rose-50 border border-rose-100 p-3">
+              <div class="flex items-center gap-1.5 mb-1">
+                <svg class="w-3.5 h-3.5 text-rose-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+                <p class="text-[10px] font-bold uppercase tracking-wider text-rose-600">Generic SEO Vendor</p>
+              </div>
+              <p class="text-xs text-slate-700 leading-relaxed text-justify hyphens-auto [text-align-last:left]">{row.typical}</p>
+            </div>
+            <div class="rounded-xl bg-sky-50 border border-sky-200 p-3">
+              <div class="flex items-center gap-1.5 mb-1">
+                <svg class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                </svg>
+                <p class="text-[10px] font-bold uppercase tracking-wider text-brand-600">NK Digital Tech B2B Services SEO</p>
+              </div>
+              <p class="text-xs text-slate-900 font-semibold leading-relaxed text-justify hyphens-auto [text-align-last:left]">{row.nk}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 7: SECTOR VERTICALS WE SCALE (LIGHT SLATE 3x2 GRID)
+  ===================================================================== -->
+  <section id="industries" class="relative surface-slate py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-16 text-left sm:text-center">
+        <div class="badge-light mb-3">B2B Service Verticals We Scale</div>
+        <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-snug sm:leading-tight mb-3 sm:mb-4">
+          Custom Search Playbooks for Six Noida Professional Services Segments
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          Whether your firm places C-suite executives, manages 3PL supply chains, audits cybersecurity compliance or runs corporate facilities, we align your website with how enterprise buyers write RFPs.
+        </p>
+      </div>
+
+      <!-- 3 Columns x 2 Rows Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-7">
+        {propertySegments.map((ind) => (
+          <div class={`elevated-card rounded-2xl p-5 sm:p-7 border-t-4 ${ind.accentBorder} flex flex-col justify-between sm:hover:-translate-y-1`}>
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-4 sm:mb-5">
+                <div class={`w-10 h-10 sm:w-11 sm:h-11 rounded-xl border flex items-center justify-center flex-shrink-0 ${ind.iconBg}`}>
+                  <Fragment set:html={ind.icon} />
+                </div>
+                <span class="text-[11px] font-semibold text-slate-600 bg-slate-100 px-2.5 py-1 rounded-md">
+                  {ind.sector}
+                </span>
+              </div>
+
+              <h3 class="font-display font-bold text-[17px] sm:text-xl text-slate-900 mb-3 sm:mb-4 leading-snug">
+                {ind.title}
+              </h3>
+
+              <div class="mb-4 sm:mb-5">
+                <p class="text-[11px] font-bold uppercase tracking-wider text-brand-600 mb-1.5">
+                  Search &amp; AI Strategy
+                </p>
+                <p class="text-slate-600 text-[13px] sm:text-sm leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+                  {ind.focus}
+                </p>
+              </div>
+            </div>
+
+            <div class="rounded-xl bg-emerald-50/70 border border-emerald-200/80 p-3.5 sm:p-4">
+              <p class="text-[11px] font-bold uppercase tracking-wider text-emerald-700 mb-1">
+                Commercial Result
+              </p>
+              <p class="text-slate-800 text-xs font-medium leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+                {ind.outcome}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 8: HOW WE WORK (CRISP WHITE CONTRAST SECTION - 4 STAGES)
+  ===================================================================== -->
+  <section class="relative surface-white py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-16 text-left sm:text-center">
+        <div class="badge-light mb-3">Our 4 Stage Execution</div>
+        <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-snug sm:leading-tight mb-3 sm:mb-4">
+          How We Rank Noida Professional Services Websites on Google & AI Engines
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          Our four stage execution model eliminates job-seeker and consumer noise first, builds deep B2B capability and vertical silos, and scales your consultancy citations across Google, ChatGPT and Perplexity.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-7">
+        {stages.map((s) => (
+          <div class="elevated-card rounded-2xl p-5 sm:p-8 relative overflow-hidden group sm:hover:-translate-y-1">
+            <div class="flex items-center justify-between gap-4 mb-3.5 sm:mb-5">
+              <span class={`inline-flex items-center px-2.5 sm:px-3 py-1 rounded-lg text-xs font-bold uppercase tracking-wider text-white bg-gradient-to-r ${s.accent}`}>
+                {s.num}
+              </span>
+              <span class="font-display font-black text-3xl sm:text-4xl text-slate-200 group-hover:text-slate-300 transition-colors">
+                {s.step}
+              </span>
+            </div>
+            <h3 class="font-display font-bold text-[17px] sm:text-xl text-slate-900 mb-2.5 sm:mb-3 leading-snug">
+              {s.title}
+            </h3>
+            <p class="text-slate-600 text-[13px] sm:text-sm leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+              {s.body}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 9: CONCLUSION / PARTNER SECTION (DARK INDIGO + GROWTH IMAGE)
+  ===================================================================== -->
+  <section class="relative surface-indigo py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-7 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns: Conclusion Paragraphs (Justified) -->
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-dark mb-3.5 sm:mb-4">Compounding Enterprise Pipeline</div>
+          <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-white tracking-tight leading-snug sm:leading-tight mb-4 sm:mb-6">
+            Start Winning Enterprise RFPs With SEO for Professional Services Firms in Noida
+          </h2>
+          <div class="space-y-4 sm:space-y-5 text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            <p>
+              When a fast-growing company in Sector 142 needs an IT staffing partner, an exporter in Phase 2 needs a 3PL logistics provider, or a corporate tower in Sector 62 tenders its facility management contract, the shortlist is built on Google and AI answer engines before any sales call happens. Relying solely on referrals means missing 80% of active market demand.
+            </p>
+            <p>
+              When you partner with NK Digital Tech for <strong class="text-white font-semibold">SEO for Professional Services Firms in Noida</strong>, you work directly with senior B2B strategists and developers from a trusted <a href="/website-development-company-in-noida/" class="text-brand-300 hover:text-white font-semibold no-underline hover:no-underline">Website Development Company in Noida</a> who build authoritative capability hubs, schema and Top 3 Map Pack rankings. Claim your free B2B audit today.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Unique Growth Image -->
+        <div class="lg:col-span-5 min-w-0">
+          <div class="rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-700/80 shadow-2xl bg-slate-900">
+            <img
+              src="/images/noida-professional-seo/growth-professional-seo-noida.webp"
+              alt="Noida B2B Consulting Partner Shaking Hands With Enterprise Executive After Signing Retainer"
+              width="800"
+              height="450"
+              class="w-full aspect-[16/10] sm:aspect-auto sm:h-64 lg:h-72 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 10: FAQ (LIGHT COOL SLATE CONTRAST SECTION)
+  ===================================================================== -->
+  <section id="faq" class="relative surface-cool py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-left sm:text-center mb-9 sm:mb-14">
+        <div class="badge-light mb-3">Questions Asked on Google, ChatGPT &amp; Gemini</div>
+        <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-snug sm:leading-tight mb-3 sm:mb-4">
+          Frequently Asked Questions About SEO for Professional Services Firms in Noida
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          Direct, factual answers to the questions managing partners, B2B founders and practice heads in Noida ask before launching an enterprise professional services SEO campaign.
+        </p>
+      </div>
+
+      <div class="space-y-3 sm:space-y-4">
+        {faqs.map((f, i) => (
+          <details class="elevated-card rounded-2xl group overflow-hidden" open={i === 0}>
+            <summary class="flex items-start sm:items-center justify-between gap-3 sm:gap-4 px-4 sm:px-6 py-4 sm:py-5 min-h-[54px] select-none">
+              <div class="flex items-start sm:items-center gap-2.5 sm:gap-3.5 text-left min-w-0">
+                <span class="w-6 h-6 sm:w-7 sm:h-7 rounded-lg bg-sky-50 border border-sky-200 text-brand-600 font-display font-bold text-xs flex items-center justify-center flex-shrink-0 mt-0.5 sm:mt-0">
+                  0{i + 1}
+                </span>
+                <span class="font-display font-bold text-slate-900 text-[14px] sm:text-base md:text-lg leading-snug">
+                  {f.q}
+                </span>
+              </div>
+              <span class="faq-icon w-7 h-7 sm:w-8 sm:h-8 rounded-full border border-slate-200 text-slate-600 flex items-center justify-center flex-shrink-0 mt-0.5 sm:mt-0">
+                <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                </svg>
+              </span>
+            </summary>
+            <div class="px-4 sm:px-6 pb-5 sm:pb-6 pt-3 text-slate-600 text-[13px] sm:text-sm md:text-base leading-relaxed border-t border-slate-100 text-justify hyphens-auto [text-align-last:left]">
+              {f.a}
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 11: SHORT 2 TO 3 LINE CALL TO ACTION BANNER (LAST SECTION)
+  ===================================================================== -->
+  <section id="contact" class="relative surface-dark py-12 pb-24 sm:py-16 lg:py-20 px-4 sm:px-6 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-5xl mx-auto">
+      <div class="rounded-2xl sm:rounded-3xl bg-gradient-to-r from-brand-600 via-brand-700 to-accent-700 p-6 sm:p-10 md:p-12 text-center text-white shadow-2xl border border-white/15 relative overflow-hidden">
+        <div class="relative z-10 max-w-2xl mx-auto">
+          <h2 class="font-display font-black text-[1.45rem] sm:text-3xl md:text-4xl text-white tracking-tight leading-snug mb-3 sm:mb-4">
+            Ready to Build a Predictable Enterprise RFP & Retainer Pipeline in Noida?
+          </h2>
+
+          <p class="text-sky-50 text-[13px] sm:text-sm md:text-base leading-relaxed mb-6 sm:mb-8">
+            Book a free B2B consultancy SEO audit with our senior specialists to review your capability pages, Map Pack rankings and AI visibility.
+          </p>
+
+          <a
+            href="/contact-us/"
+            class="inline-flex w-full sm:w-auto min-h-[48px] items-center justify-center gap-2 sm:gap-3 px-5 sm:px-8 py-3.5 sm:py-4 rounded-xl bg-white text-slate-950 hover:bg-sky-50 no-underline hover:no-underline font-display font-bold text-sm sm:text-base shadow-xl transition-all duration-300 active:scale-95 text-center leading-snug"
+          >
+            <span>Claim Your Free B2B Consultancy SEO Audit</span>
+            <svg class="w-4 h-4 sm:w-5 sm:h-5 text-brand-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mobile Sticky Bottom Quick Action Bar -->
+  <div class="sm:hidden fixed bottom-0 inset-x-0 z-40 bg-[#050a14]/95 backdrop-blur-xl border-t border-slate-800 px-3.5 py-2.5 shadow-[0_-8px_24px_rgba(0,0,0,0.45)]">
+    <div class="flex items-center gap-2.5">
+      <a
+        href="/contact-us/"
+        class="btn-primary flex-1 min-h-[44px] py-2.5 px-4 text-xs font-bold rounded-xl no-underline hover:no-underline"
+      >
+        <span>Claim Free B2B SEO Audit</span>
+        <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+        </svg>
+      </a>
+      <a
+        href="#services"
+        class="btn-secondary-dark min-h-[44px] py-2.5 px-3.5 text-xs font-semibold rounded-xl flex-shrink-0 no-underline hover:no-underline"
+      >
+        <span>Services</span>
+      </a>
+    </div>
+  </div>
+
+</Layout>

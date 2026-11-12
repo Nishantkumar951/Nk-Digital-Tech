@@ -1,0 +1,1072 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import '../../styles/global.css';
+
+const pageTitle = "Best SEO for Construction Companies in Noida | NK Digital Tech";
+const pageDescription = "Need SEO for Construction Companies in Noida? NK Digital Tech drives direct EPC tenders, PEB warehouse contracts and turnkey inquiries across Noida & Jewar.";
+const pageCanonical = "https://www.nkdigitaltech.net/best-seo-company-in-noida/Construction-Companies/";
+
+const services = [
+  {
+    "num": "01",
+    "category": "EPC Capability Silos",
+    "icon": "<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z\"/></svg>",
+    "iconStyle": "bg-sky-50 border-sky-200 text-brand-600",
+    "impactStyle": "bg-sky-50/80 border-sky-200/80 text-slate-800",
+    "badgeColor": "text-brand-600 bg-sky-100/80",
+    "title": "Industrial, PEB, Commercial & Turnkey Page SEO",
+    "body": "We build dedicated HTML pages for Industrial Factory Construction, PEB Warehouses, Commercial RCC Towers, Cleanrooms, MEP/HVAC and Kothi Turnkey Projects.",
+    "impact": "Page one Google rankings when project heads and PMCs search for Noida contractors.",
+    "cta": "View Our Core Noida SEO Approach",
+    "href": "/best-seo-company-in-noida/"
+  },
+  {
+    "num": "02",
+    "category": "Head Office Map Pack SEO",
+    "icon": "<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z\"/><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M15 11a3 3 0 11-6 0 3 3 0 016 0z\"/></svg>",
+    "iconStyle": "bg-emerald-50 border-emerald-200 text-emerald-600",
+    "impactStyle": "bg-emerald-50/80 border-emerald-200/80 text-slate-800",
+    "badgeColor": "text-emerald-700 bg-emerald-100/80",
+    "title": "Google Business Profile for Contractors in Noida",
+    "body": "We verify and optimise Google Business Profiles for your corporate technical office and fabrication yards across Noida, Greater Noida and Yamuna Expressway.",
+    "impact": "Top three Google Map Pack placement driving direct PMC and promoter enquiries.",
+    "cta": "See Local SEO Services in Noida",
+    "href": "/local-seo-services-in-noida/"
+  },
+  {
+    "num": "03",
+    "category": "Project Portfolio & Schema",
+    "icon": "<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4\"/></svg>",
+    "iconStyle": "bg-cyan-50 border-cyan-200 text-cyan-700",
+    "impactStyle": "bg-cyan-50/80 border-cyan-200/80 text-slate-800",
+    "badgeColor": "text-cyan-700 bg-cyan-100/80",
+    "title": "Fast Project Case Studies & Contractor Schema",
+    "body": "We convert heavy PDF company profiles into fast HTML project case studies with sq ft built, client sectors and GeneralContractor and FAQPage JSON LD schema.",
+    "impact": "Instant credibility during technical vendor pre-qualification and tender audits.",
+    "cta": "Explore Noida Web Development",
+    "href": "/website-development-company-in-noida/"
+  },
+  {
+    "num": "04",
+    "category": "Answer Engine SEO (AEO)",
+    "icon": "<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z\"/></svg>",
+    "iconStyle": "bg-amber-50 border-amber-200 text-amber-600",
+    "impactStyle": "bg-amber-50/80 border-amber-200/80 text-slate-800",
+    "badgeColor": "text-amber-700 bg-amber-100/80",
+    "title": "Answer Engine SEO for Per Sq Ft Cost & Authority Norms",
+    "body": "We publish clear 50 word answer blocks and HTML cost tables for RCC factory rates, PEB per kg/sq ft costs and Noida/YEIDA ground coverage and FAR rules.",
+    "impact": "Captures industrial promoters and landowners during initial capex budgeting.",
+    "cta": "Check AEO Services in Noida",
+    "href": "/aeo-services-in-noida/"
+  },
+  {
+    "num": "05",
+    "category": "Generative AI SEO (GEO)",
+    "icon": "<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z\"/></svg>",
+    "iconStyle": "bg-violet-50 border-violet-200 text-accent-600",
+    "impactStyle": "bg-violet-50/80 border-violet-200/80 text-slate-800",
+    "badgeColor": "text-accent-600 bg-violet-100/80",
+    "title": "GEO Citations in ChatGPT, Perplexity & Gemini",
+    "body": "We structure your machinery fleet, shuttering area, ISO/EHS safety records and completed sq ft metrics so ChatGPT and Gemini recommend your firm.",
+    "impact": "Direct contractor citations when procurement teams shortlist EPC vendors on AI.",
+    "cta": "Explore Noida AI SEO Services",
+    "href": "/ai-seo-company-in-noida/"
+  },
+  {
+    "num": "06",
+    "category": "Infrastructure PR & Links",
+    "icon": "<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M13 10V3L4 14h7v7l9-11h-7z\"/></svg>",
+    "iconStyle": "bg-indigo-50 border-indigo-200 text-indigo-600",
+    "impactStyle": "bg-indigo-50/80 border-indigo-200/80 text-slate-800",
+    "badgeColor": "text-indigo-700 bg-indigo-100/80",
+    "title": "EPC Trade Media & Industrial Directory Citations",
+    "body": "We build high-authority backlinks and citations across Indian construction journals, infrastructure portals and B2B technical directories.",
+    "impact": "Strengthens domain authority to outrank national contractors in NCR search results.",
+    "cta": "Build EPC Domain Authority",
+    "href": "#contact"
+  }
+];
+
+const cities = [
+  {
+    "hub": "Corridor 01",
+    "city": "Yamuna Expressway & Jewar Corridor",
+    "corridor": "YEIDA Sectors 28, 29, 32, 33 • Jewar Airport • Film City • Apparel & Toy Park",
+    "keyword": "EPC, Factory & PEB Warehouse SEO near Jewar Airport",
+    "desc": "We help civil and PEB contractors capture greenfield factory construction, logistics park and commercial infrastructure tenders across YEIDA and Jewar.",
+    "cta": "Capture YEIDA Factory Tenders",
+    "href": "#contact",
+    "accent": "from-brand-500 to-sky-400"
+  },
+  {
+    "hub": "Corridor 02",
+    "city": "Ecotech Greater Noida & Surajpur",
+    "corridor": "Ecotech 1 to 16 • Surajpur • Kasna • Site 4 & 5 • Dadri Logistics Hub",
+    "keyword": "Industrial Civil & Factory Building Contractor SEO in Greater Noida",
+    "desc": "We rank turnkey industrial builders for manufacturing plants, heavy machine foundations, VDF flooring and EOT crane sheds across Ecotech and Surajpur.",
+    "cta": "Scale Industrial Civil RFQs",
+    "href": "#contact",
+    "accent": "from-accent-500 to-violet-400"
+  },
+  {
+    "hub": "Corridor 03",
+    "city": "Noida Phase 2, Sector 63 & Sector 80",
+    "corridor": "Phase 2 NSEZ • Sector 62 • Sector 63 • Sector 80 • Sector 57-59",
+    "keyword": "Cleanroom, Electronics Plant & Brownfield Expansion SEO in Noida",
+    "desc": "We connect civil, MEP and HVAC contractors with electronics, EMS and export units in Phase 2 and Sector 63 building multi-storey factories and cleanrooms.",
+    "cta": "Win Factory Expansion Bids",
+    "href": "#contact",
+    "accent": "from-cyan-500 to-teal-400"
+  },
+  {
+    "hub": "Corridor 04",
+    "city": "Noida Expressway & Central Noida",
+    "corridor": "Sector 132 • Sector 142 • Sector 150 • Sector 44 • Jaypee Greens",
+    "keyword": "Commercial Tower, Institutional & Luxury Villa Construction SEO",
+    "desc": "We position civil contractors and design-build firms first on Google for IT park construction, hospital/school campuses and luxury bungalow construction in Noida.",
+    "cta": "Audit Your EPC Visibility",
+    "href": "#contact",
+    "accent": "from-emerald-500 to-green-400"
+  }
+];
+
+const comparison = [
+  {
+    "metric": "Project Ticket Size & Lead Filter",
+    "typical": "Attracts small domestic repair and renovation callers with no B2B budget",
+    "nk": "Targets industrial promoters, PMCs and developers with 10,000+ sq ft turnkey projects"
+  },
+  {
+    "metric": "Pre-Qualification Proof (E-E-A-T)",
+    "typical": "Vague marketing text with no mention of shuttering, batching plants or safety stats",
+    "nk": "Structured HTML tables showcasing plant & machinery, EHS records and past work orders"
+  },
+  {
+    "metric": "AI Search & PMC Shortlisting",
+    "typical": "Invisible when project consultants ask ChatGPT or Gemini for Noida EPC contractors",
+    "nk": "Machine-readable sq ft cost guides, ISO certifications and schema cited by AI tools"
+  },
+  {
+    "metric": "Company Profile & BOQ Conversion",
+    "typical": "Slow 35 MB PDF brochure that fails to load on site specialists’ mobile phones",
+    "nk": "Fast HTML project dossiers with one-click BOQ/drawing upload and tender invite forms"
+  },
+  {
+    "metric": "Corridor & Authority Specificity",
+    "typical": "No coverage of Noida Authority, GNIDA or YEIDA building bylaws and industrial zones",
+    "nk": "Dedicated landing pages for Ecotech, Phase 2, YEIDA Jewar corridor and Expressway hubs"
+  },
+  {
+    "metric": "Long-Term Bidding Pipeline",
+    "typical": "Complete reliance on offline broker networks or low-margin subcontracts",
+    "nk": "100% owned organic tender engine that brings direct client mandates year-round"
+  }
+];
+
+const propertySegments = [
+  {
+    "sector": "Industrial & Factory EPC",
+    "title": "Turnkey Manufacturing Plants & Industrial Sheds",
+    "focus": "Factory promoters allotted plots in Ecotech Greater Noida, Phase 2 Noida and YEIDA Sectors 28-33 search Google and ChatGPT for turnkey industrial civil contractors, RCC factory buildings, machine foundations and GNIDA/YEIDA completion compliance.",
+    "outcome": "Direct multi-crore greenfield factory construction tenders and design-build contracts.",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4\"/></svg>",
+    "accentBorder": "border-t-brand-500",
+    "iconBg": "bg-sky-50 text-brand-600 border-sky-200"
+  },
+  {
+    "sector": "PEB & Warehousing",
+    "title": "Pre-built Buildings (PEB) & Logistics Parks",
+    "focus": "3PL logistics operators, e-commerce fulfillment centres and cold storage developers along Yamuna Expressway, Dadri and NH-9 search for PEB structure manufacturers, clear-span steel warehouses, FM2 laser screed VDF flooring and dock levellers.",
+    "outcome": "High-tonnage PEB fabrication and turnkey warehouse construction RFQs.",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z\"/></svg>",
+    "accentBorder": "border-t-amber-500",
+    "iconBg": "bg-amber-50 text-amber-600 border-amber-200"
+  },
+  {
+    "sector": "Commercial & Institutional",
+    "title": "IT Parks, Hospitals, Universities & High-Rise Civil Works",
+    "focus": "Real estate developers, hospital chains and Knowledge Park educational trusts search for A-class civil structure contractors, diaphragm wall/shoring specialists, post-tensioned slabs and institutional campus builders in Noida.",
+    "outcome": "Pre-qualification invites for commercial, healthcare and institutional packages.",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M3 21h18M5 21V7l8-4v18M19 21V11l-6-4M9 9v.01M9 12v.01M9 15v.01M9 18v.01\"/></svg>",
+    "accentBorder": "border-t-cyan-500",
+    "iconBg": "bg-cyan-50 text-cyan-700 border-cyan-200"
+  },
+  {
+    "sector": "MEP, HVAC & Cleanrooms",
+    "title": "Industrial MEP, Fire Fighting, Substation & Cleanroom EPC",
+    "focus": "Electronics EMS plants in Sector 63, pharma/medical device units in YEIDA and corporate IT towers search for ISO Class 1000-100000 modular cleanroom contractors, HT/LT electrical substations, chiller HVAC and NBC fire fighting contractors.",
+    "outcome": "Specialised high-margin MEP, HVAC and cleanroom turnkey work orders.",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z\"/></svg>",
+    "accentBorder": "border-t-emerald-500",
+    "iconBg": "bg-emerald-50 text-emerald-600 border-emerald-200"
+  },
+  {
+    "sector": "Luxury Residential Turnkey",
+    "title": "Bungalow, Kothi & Farm Villa Design-Build With Material",
+    "focus": "Plot owners in Noida Sector 44, Sector 50, Sector 15A, Jaypee Greens and Greater Noida authority sectors search Google for turnkey house construction contractors in Noida with material, per sq ft kothi construction rates and architectural sanctioning.",
+    "outcome": "Direct ₹2 crore to ₹15 crore independent bungalow construction contracts.",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z\"/><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M15 11a3 3 0 11-6 0 3 3 0 016 0z\"/></svg>",
+    "accentBorder": "border-t-indigo-500",
+    "iconBg": "bg-indigo-50 text-indigo-600 border-indigo-200"
+  },
+  {
+    "sector": "Facade, Roads & Infrastructure",
+    "title": "Structural Glazing, Road Paving, STP/ETP & Heavy Civil",
+    "focus": "Developers and industrial estates across NCR search for structural ACP/curtain wall glazing contractors, concrete road and paver block contractors, rainwater harvesting and zero-liquid-discharge ETP/STP civil plants.",
+    "outcome": "Recurring B2B infrastructure subcontracting and specialist package tenders.",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4\"/></svg>",
+    "accentBorder": "border-t-rose-500",
+    "iconBg": "bg-rose-50 text-rose-600 border-rose-200"
+  }
+];
+
+const stages = [
+  {
+    "num": "Stage 01",
+    "step": "01",
+    "title": "Technical Website, Project Portfolio & EPC Keyword Gap Audit",
+    "body": "We audit your current website speed, PDF company profile bottlenecks, indexation health and Google Business Profile while mapping the exact industrial, PEB and commercial construction keywords in Noida and Greater Noida.",
+    "accent": "from-brand-600 to-sky-500"
+  },
+  {
+    "num": "Stage 02",
+    "step": "02",
+    "title": "Capability Silos, Sq Ft Cost Matrices & Contractor Schema",
+    "body": "You get a 90 day technical SEO roadmap covering factory civil works, PEB warehouses, MEP and turnkey kothi silos backed by GeneralContractor, Organization and FAQPage JSON LD schema.",
+    "accent": "from-accent-600 to-violet-500"
+  },
+  {
+    "num": "Stage 03",
+    "step": "03",
+    "title": "Project Case Studies, Authority Guides & Map Pack Execution",
+    "body": "Our technical writers and developers publish detailed Noida/Greater Noida project case studies, per sq ft construction cost calculators and verified Google Business Profile updates.",
+    "accent": "from-cyan-600 to-teal-500"
+  },
+  {
+    "num": "Stage 04",
+    "step": "04",
+    "title": "BOQ Submission Tracking, AI Citation Checks & Corridor Scaling",
+    "body": "Every two weeks we track your B2B keyword rankings, company profile downloads, BOQ drawing uploads and live contractor citations inside ChatGPT and Google AI Overviews, scaling across new YEIDA and NCR zones.",
+    "accent": "from-emerald-600 to-green-500"
+  }
+];
+
+const faqs = [
+  {
+    "q": "How does SEO for Construction Companies in Noida generate multi-crore B2B tenders?",
+    "a": "When an industrialist is allotted a factory plot in Ecotech Greater Noida or YEIDA, or when a PMC builds a vendor list for a commercial project on the Noida Expressway, their technical team searches Google and asks ChatGPT for qualified turnkey civil and PEB contractors in Noida. Ranking on page one with verified project case studies, plant & machinery lists and EHS credentials gets your firm invited directly to the tender table."
+  },
+  {
+    "q": "How do you filter out small home repair callers and attract only large turnkey or industrial projects?",
+    "a": "We never target handyman or petty repair keywords. We build your pages around high-ticket B2B and turnkey modifiers: turnkey industrial building contractor in Greater Noida, PEB warehouse manufacturer on Yamuna Expressway, commercial RCC structure contractor in Noida and luxury kothi construction with material. Our RFQ forms also include mandatory Plot Area (Sq. Ft./Sq. Mtr.), Project Type and BOQ Upload fields."
+  },
+  {
+    "q": "How do you get Noida construction and EPC companies recommended by ChatGPT and Gemini?",
+    "a": "Project owners and architects frequently ask ChatGPT, Perplexity and Gemini questions like cost of industrial shed construction per sq ft in Greater Noida or top PEB and civil contractors near Jewar Airport. We publish structured 40 to 60 word answers, HTML per sq ft cost breakdown tables, equipment fleet lists and GeneralContractor schema so AI models cite your company directly."
+  },
+  {
+    "q": "Should we keep our downloadable PDF Company Profile on the website?",
+    "a": "Yes, PMCs and procurement teams need a downloadable PDF dossier for internal board approval. However, we also extract your best completed projects, client sectors, shuttering/batching plant capacities and ISO/safety certifications into fast, crawlable HTML pages so Google and AI engines index your capabilities and bring visitors to download your dossier."
+  },
+  {
+    "q": "Can you help us target factory construction projects in YEIDA (Jewar Airport) and Ecotech Greater Noida?",
+    "a": "Absolutely. YEIDA Sectors 28, 29, 32 and 33 (Medical Device Park, Toy Park, Apparel Park, Data Centre Park) and Ecotech 1 to 16 in Greater Noida are our primary focus corridors. We create dedicated industrial zone landing pages covering authority bylaws, FAR/ground coverage norms and turnkey factory execution."
+  },
+  {
+    "q": "Do you also handle SEO for luxury bungalow and kothi turnkey construction in Noida?",
+    "a": "Yes. For firms that build luxury residential homes in Sector 44, Sector 50, Sector 15A, Sector 39 and Jaypee Greens, we build a separate residential design-build silo targeting plot owners searching for turnkey house construction rates per sq ft with A-grade material specifications."
+  },
+  {
+    "q": "How long do construction SEO services in Noida take to deliver qualified RFQs and tender invites?",
+    "a": "Google Business Profile optimisation, technical speed fixes and per sq ft cost calculator pages typically begin generating initial landowner and PMC inquiries within 6 to 10 weeks. Ranking competitive industrial EPC, PEB warehouse and commercial construction pages on page one of Google takes 3 to 6 months."
+  },
+  {
+    "q": "What is included in your local SEO for civil contractors in Noida?",
+    "a": "We verify and optimise your Google Business Profile with General Contractor, Civil technical Company or Steel Fabricator categories, publish geo-tagged site progress and completed building photos, align your Noida/Greater Noida office address across Indian construction directories and build verified client review signals."
+  }
+];
+
+const trustStrip = [
+  "Noida, Ecotech & Jewar EPC SEO",
+  "Direct B2B Tender & RFQ Leads",
+  "ChatGPT & Gemini Procurement Citations",
+  "Google AI Overviews",
+  "GeneralContractor & Project Schema",
+  "PEB, Factory & Commercial Silos",
+  "Fast Project Dossier Pages",
+  "Zero Broker Lead Sharing"
+];
+
+const sectorSchemaService = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "SEO for Construction Companies in Noida",
+  "serviceType": "EPC, Industrial Warehouse, Civil Contracting & Construction SEO in Noida",
+  "provider": {
+    "@type": "ProfessionalService",
+    "name": "NK Digital Tech",
+    "url": "https://www.nkdigitaltech.net/",
+    "email": "nkdigitaltech1@gmail.com",
+    "telephone": "+91-80521-89051",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Noida",
+      "addressRegion": "Uttar Pradesh",
+      "addressCountry": "IN"
+    }
+  },
+  "areaServed": [
+    "Noida",
+    "Yamuna Expressway",
+    "Jewar Airport Corridor",
+    "Ecotech Greater Noida",
+    "Phase 2 Noida",
+    "Noida Expressway",
+    "Sector 62 & 63 Noida",
+    "YEIDA Industrial Sectors"
+],
+  "description": pageDescription,
+  "url": pageCanonical
+});
+
+const sectorSchemaFAQ = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map((item) => ({
+    "@type": "Question",
+    "name": item.q,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": item.a
+    }
+  }))
+});
+
+const sectorSchemaBreadcrumb = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.nkdigitaltech.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Best SEO Company in Noida",
+      "item": "https://www.nkdigitaltech.net/best-seo-company-in-noida/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "SEO for Construction Companies in Noida",
+      "item": pageCanonical
+    }
+  ]
+});
+---
+
+<Layout
+  title={pageTitle}
+  description={pageDescription}
+  canonical={pageCanonical}
+  ogImage="https://www.nkdigitaltech.net/images/noida-construction-seo/hero-construction-seo-noida.webp"
+  preloadImage="/images/noida-construction-seo/hero-construction-seo-noida.webp"
+  hideLocationsNav={false}
+  customSchemaLocalBusiness={sectorSchemaService}
+  customSchemaFAQ={sectorSchemaFAQ}
+  customSchemaBreadcrumb={sectorSchemaBreadcrumb}
+  utilityTagline="SEO for Construction Companies in Noida • EPC Contractors, PEB Warehouses, Industrial Plants & Turnkey Civil Works"
+  brandSubtitle="Noida • Construction & EPC SEO & AI Search"
+  footerBio="NK Digital Tech delivers specialised SEO for Construction Companies in Noida, helping EPC contractors, PEB warehouse builders, industrial civil firms and commercial turnkey contractors across Noida, Greater Noida and the Jewar Airport corridor win direct B2B tenders."
+  footerCoreDisciplines={[
+    { label: 'Best Digital Marketing Agency in Noida', href: '/best-digital-marketing-agency-in-noida/' },
+    { label: 'Best SEO Company in Noida', href: '/best-seo-company-in-noida/' },
+    { label: 'Local SEO Services in Noida', href: '/local-seo-services-in-noida/' },
+    { label: 'AI SEO Company in Noida', href: '/ai-seo-company-in-noida/' },
+    { label: 'AEO Services in Noida', href: '/aeo-services-in-noida/' },
+    { label: 'Website Development Company in Noida', href: '/website-development-company-in-noida/' },
+  ]}
+  footerTagline="Built for Construction & EPC SEO, AEO & GEO Visibility in Noida"
+>
+
+  <!-- =====================================================================
+       SECTION 1: HERO (DARK SURFACE WITH UNIQUE SECTOR SEO HERO IMAGE)
+  ===================================================================== -->
+  <section class="relative surface-dark overflow-hidden pt-8 pb-12 sm:pt-16 sm:pb-20 lg:pt-20 lg:pb-24 border-b border-slate-800/80">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="absolute inset-0 mesh-glow pointer-events-none"></div>
+    <div class="absolute -top-36 -left-36 w-96 h-96 bg-brand-500/20 rounded-full blur-[130px] pointer-events-none"></div>
+    <div class="absolute top-1/4 -right-36 w-96 h-96 bg-accent-500/20 rounded-full blur-[130px] pointer-events-none"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-7 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns: Headline & CTA -->
+        <div class="lg:col-span-7 text-left min-w-0">
+          <div class="badge-dark mb-4 sm:mb-6">
+            <span class="w-2 h-2 rounded-full bg-brand-400 animate-ping flex-shrink-0"></span>
+            <span class="min-w-0">EPC & Civil B2B SEO • AEO & GEO • Tender & RFQ Pipeline</span>
+          </div>
+
+          <h1 class="font-display text-[1.95rem] sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-[1.15] sm:leading-[1.1] mb-4 sm:mb-6 text-glow">
+            SEO for Construction <br />
+            <span class="gradient-text-light">Companies in Noida</span>
+          </h1>
+
+          <p class="text-[13.5px] sm:text-base md:text-lg text-slate-300 leading-relaxed mb-6 sm:mb-8 font-normal text-justify hyphens-auto [text-align-last:left]">
+            Looking for high-value <strong class="text-white font-semibold">SEO for Construction Companies in Noida</strong> that brings direct factory construction tenders, PEB warehouse RFQs and commercial civil contracts? NK Digital Tech helps EPC contractors, industrial builders and turnkey technical firms grow through three simple methods: <strong class="text-white font-semibold">SEO</strong> to rank your capability and project pages on page one of Google and Map Packs, <strong class="text-white font-semibold">AEO</strong> to win direct answer boxes for per sq ft construction cost and FAR queries, and <strong class="text-white font-semibold">GEO</strong> so ChatGPT, Gemini and Google AI Overviews shortlist your firm to project directors.
+          </p>
+
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 mb-7 sm:mb-10">
+            <a href="#contact" class="btn-primary w-full sm:w-auto min-h-[48px] text-sm sm:text-base px-5 sm:px-8 py-3.5 sm:py-4">
+              <span>Claim Your Free EPC Construction SEO Audit</span>
+              <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+              </svg>
+            </a>
+            <a href="#services" class="btn-secondary-dark w-full sm:w-auto min-h-[48px] text-sm sm:text-base px-5 sm:px-7 py-3.5 sm:py-4">
+              <span>Explore Our Six Construction SEO Pillars</span>
+            </a>
+          </div>
+
+          <!-- Trust Verification Strip (2x4 Grid on Mobile, Flex Pills on Desktop) -->
+          <div class="pt-5 sm:pt-6 border-t border-slate-800/80">
+            <div class="grid grid-cols-2 sm:flex sm:flex-wrap items-stretch sm:items-center gap-2">
+              {trustStrip.map((item) => (
+                <span class="px-2.5 sm:px-3 py-2 sm:py-1.5 rounded-lg bg-slate-900/90 border border-slate-800 text-[11px] sm:text-xs text-slate-300 font-medium flex items-center justify-center sm:justify-start text-center sm:text-left leading-tight">
+                  {item}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Unique Sector Hero Image -->
+        <div class="lg:col-span-5 min-w-0">
+          <div class="relative rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-700/80 shadow-2xl shadow-brand-500/15 bg-slate-900 group">
+            <div class="relative">
+              <img
+                src="/images/noida-construction-seo/hero-construction-seo-noida.webp"
+                alt="SEO for Construction Companies in Noida Strategy Team Reviewing EPC Tender Growth"
+                width="960"
+                height="540"
+                fetchpriority="high"
+                decoding="async"
+                class="w-full aspect-[16/10] sm:aspect-auto sm:h-72 md:h-[380px] lg:h-[400px] object-cover object-center group-hover:scale-105 transition-transform duration-500"
+              />
+              <div class="hidden sm:block absolute inset-0 bg-gradient-to-t from-[#050a14] via-transparent to-transparent opacity-80"></div>
+            </div>
+            <div class="relative sm:absolute sm:bottom-4 sm:left-4 sm:right-4 glass-card border-t sm:border border-slate-800 sm:rounded-2xl p-3.5 sm:p-4">
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-1">
+                <span class="text-xs font-bold text-white">Noida EPC & Construction AI Authority</span>
+                <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-400">
+                  <span class="w-2 h-2 rounded-full bg-emerald-400 flex-shrink-0"></span>
+                  Direct B2B Tenders
+                </span>
+              </div>
+              <p class="text-[11px] sm:text-xs text-slate-300 text-justify hyphens-auto [text-align-last:left] leading-relaxed">
+                Built to rank industrial factory contractors in Ecotech, PEB warehouse builders on Yamuna Expressway and commercial EPC firms in Noida.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 2: INTRODUCTION (CRISP WHITE CONTRAST SECTION + TEAM IMAGE)
+  ===================================================================== -->
+  <section class="relative surface-white py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns: Concise 2-Paragraph Unique Copy -->
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-light mb-3.5 sm:mb-4">Direct B2B Tender & Turnkey Contract Engine</div>
+          <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-snug sm:leading-tight mb-4 sm:mb-6">
+            How Our SEO for Construction Companies in Noida <span class="gradient-text-dark">Drives Direct EPC & Industrial Tenders</span>
+          </h2>
+          <div class="space-y-4 sm:space-y-5 text-slate-700 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            <p>
+              With Noida International Airport at Jewar, YEIDA industrial sectors (28, 29, 32, 33), Ecotech Greater Noida and the Noida Expressway commercial belt experiencing massive capital expenditure, Noida is India’s fastest-growing construction corridor. When an industrial promoter plans a 100,000 sq ft factory in Ecotech, a 3PL logistics firm builds a PEB warehouse near Yamuna Expressway, or a developer commissions a commercial tower in Sector 142, their project consultants search Google, ChatGPT and Gemini to pre-qualify civil and EPC contractors. Our <strong>SEO for Construction Companies in Noida</strong> ensures your firm is shortlisted first.
+            </p>
+            <p>
+              As a trusted <a href="/best-digital-marketing-agency-in-noida/" class="text-brand-600 hover:text-brand-700 font-semibold no-underline hover:no-underline">Best Digital Marketing Agency in Noida</a> and <a href="/best-seo-company-in-noida/" class="text-brand-600 hover:text-brand-700 font-semibold no-underline hover:no-underline">Best SEO Company in Noida</a>, we transform static contractor websites into B2B pre-qualification powerhouses. Instead of relying solely on offline liaisons or low-margin subcontracting, our <strong>construction marketing agency in Noida</strong> builds structured capability pages, BOQ cost guides and project case studies that bring direct tender invitations and BOQ evaluations.
+            </p>
+          </div>
+          <div class="mt-6 sm:mt-8 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
+            <a href="#contact" class="btn-primary w-full sm:w-auto min-h-[48px]">
+              <span>Talk to a Construction SEO Specialist</span>
+              <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+              </svg>
+            </a>
+            <a href="#why-us" class="btn-secondary-light w-full sm:w-auto min-h-[48px]">
+              <span>Compare Offline Bidding vs EPC SEO</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Unique Team Image + Stats -->
+        <div class="lg:col-span-5 space-y-4 sm:space-y-5 min-w-0">
+          <div class="rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-200 shadow-lg bg-slate-100">
+            <img
+              src="/images/noida-construction-seo/team-construction-seo-noida.webp"
+              alt="Construction Marketing Agency in Noida Reviewing EPC Project Pages and Tender Keywords"
+              width="800"
+              height="533"
+              class="w-full aspect-[16/10] sm:aspect-auto sm:h-64 lg:h-72 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="grid grid-cols-2 gap-3 sm:gap-4">
+            {[{"val":"3.9x","label":"Direct B2B Tender Invites","sub":"From industrial & commercial promoters"},{"val":"100%","label":"Exclusive BOQ Inquiries","sub":"Direct to your estimation & bidding team"},{"val":"Top 3","label":"Google Map Pack Focus","sub":"Across Noida, Greater Noida & YEIDA"},{"val":"< 2 Sec","label":"Project Dossier Speed","sub":"Fast WebP site progress & plant visuals"}].map((stat) => (
+              <div class="elevated-card rounded-xl sm:rounded-2xl p-3.5 sm:p-4 min-w-0">
+                <div class="font-display font-black text-xl sm:text-2xl text-brand-600 mb-0.5">{stat.val}</div>
+                <div class="text-[11px] sm:text-xs font-bold text-slate-900 leading-snug">{stat.label}</div>
+                <div class="text-[10.5px] sm:text-[11px] text-slate-500 leading-snug mt-0.5">{stat.sub}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 3: PROBLEM STATEMENT (DEEP INDIGO DARK CONTRAST SECTION)
+  ===================================================================== -->
+  <section class="relative surface-indigo py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="max-w-7xl mx-auto relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns: Problem Statement Justified Copy -->
+        <div class="lg:col-span-7 min-w-0">
+          <div class="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-3.5 py-1 sm:py-1.5 rounded-full text-[10px] sm:text-xs font-bold uppercase tracking-wider sm:tracking-widest bg-amber-500/10 border border-amber-500/30 text-amber-300 max-w-full leading-snug mb-4 sm:mb-5">
+            <svg class="w-4 h-4 text-amber-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+            </svg>
+            <span>Why Contractors Miss Private Tenders Online</span>
+          </div>
+
+          <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-white tracking-tight leading-snug sm:leading-tight mb-4 sm:mb-6">
+            Why Capable Noida Civil & EPC Contractors Lose Multi-Crore Projects Online
+          </h2>
+
+          <div class="space-y-4 sm:space-y-5 text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            <p>
+              Many Seasoned civil technical and EPC construction companies in Noida have delivered millions of square feet of factories, warehouses and commercial towers, yet their online presence is an outdated 5-page website with a single 40 MB PDF company profile. When an MNC subsidiary setting up a plant in YEIDA or a developer in Noida searches Google for industrial building contractors in Greater Noida or PEB warehouse manufacturers in Noida, your firm is nowhere on page one.
+            </p>
+            <p>
+              Corporate vendor pre-qualification has also moved to AI search. Today, project management consultants (PMCs) and procurement heads ask ChatGPT, Perplexity and Google AI Overviews prompts like cost of factory building construction per sq ft in Greater Noida or top turnkey civil contractors in Noida with ISO and EHS compliance. Without HTML cost matrices, plant machinery lists and GeneralContractor schema from a dedicated <a href="/ai-seo-company-in-noida/" class="text-brand-300 hover:text-white font-semibold no-underline hover:no-underline">AI SEO Company in Noida</a>, AI tools skip your company.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Diagnostic Comparison Cards -->
+        <div class="lg:col-span-5 space-y-3.5 sm:space-y-4 min-w-0">
+          <div class="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6 border-l-4 border-l-rose-500">
+            <div class="flex flex-wrap items-center justify-between gap-1.5 mb-2">
+              <span class="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-rose-400">Typical Contractor Website</span>
+              <span class="text-[11px] sm:text-xs text-slate-400">Static PDF Dossier Trap</span>
+            </div>
+            <h3 class="font-display font-bold text-[15px] sm:text-base text-white mb-2 leading-snug">Unindexed Company Profiles & Petty Repair Calls</h3>
+            <p class="text-xs text-slate-300 leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+              Locks past project values, crane/batching plant capacities and EHS certifications inside a heavy PDF while attracting small residential repair callers.
+            </p>
+          </div>
+
+          <div class="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6 border-l-4 border-l-emerald-400">
+            <div class="flex flex-wrap items-center justify-between gap-1.5 mb-2">
+              <span class="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-emerald-400">NK Digital Tech System</span>
+              <span class="text-[11px] sm:text-xs text-brand-300">Owned EPC Tender Pipeline</span>
+            </div>
+            <h3 class="font-display font-bold text-[15px] sm:text-base text-white mb-2 leading-snug">Capability Silos, BOQ Guides & AI Citations</h3>
+            <p class="text-xs text-slate-300 leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+              Builds dedicated pages for PEB warehouses, industrial factories, MEP/HVAC and commercial civil works with BOQ submission forms for direct B2B tenders.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 4: SERVICES (LIGHT COOL ALABASTER CONTRAST + SERVICES IMAGE)
+  ===================================================================== -->
+  <section id="services" class="relative surface-cool py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <!-- Services Header with Unique Services Image -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 items-center mb-9 sm:mb-16">
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-light mb-3">Our Six Pillar EPC System</div>
+          <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-snug sm:leading-tight mb-3 sm:mb-4">
+            Complete Construction & EPC SEO Services in Noida
+          </h2>
+          <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            As a specialised partner for <strong>SEO for civil contractors in Noida</strong>, PEB manufacturers and infrastructure firms, we execute six technical-grade SEO, AEO and GEO pillars built around corporate vendor pre-qualification.
+          </p>
+        </div>
+        <div class="lg:col-span-5 min-w-0">
+          <div class="rounded-2xl overflow-hidden border border-slate-200 shadow-md bg-white">
+            <img
+              src="/images/noida-construction-seo/services-construction-seo-noida.webp"
+              alt="Construction SEO Services in Noida EPC Capability Architecture and Tender Funnel"
+              width="800"
+              height="450"
+              class="w-full aspect-[16/9] sm:aspect-auto sm:h-56 lg:h-64 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- 3 Columns x 2 Rows Grid Layout -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-7">
+        {services.map((s) => (
+          <div class="elevated-card rounded-2xl p-5 sm:p-7 flex flex-col justify-between group sm:hover:-translate-y-1">
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-4 sm:mb-6">
+                <div class={`w-11 h-11 sm:w-12 sm:h-12 rounded-xl border flex items-center justify-center flex-shrink-0 ${s.iconStyle}`}>
+                  <Fragment set:html={s.icon} />
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class={`text-[10.5px] sm:text-[11px] font-semibold px-2.5 py-1 rounded-md ${s.badgeColor}`}>
+                    {s.category}
+                  </span>
+                  <span class="font-display font-black text-base sm:text-lg text-slate-300">{s.num}</span>
+                </div>
+              </div>
+
+              <h3 class="font-display font-bold text-[17px] sm:text-xl text-slate-900 mb-2.5 sm:mb-3 leading-snug group-hover:text-brand-600 transition-colors">
+                {s.title}
+              </h3>
+
+              <p class="text-slate-600 text-[13px] sm:text-sm leading-relaxed mb-4 sm:mb-6 text-justify hyphens-auto [text-align-last:left]">
+                {s.body}
+              </p>
+            </div>
+
+            <div>
+              <div class={`rounded-xl border p-3.5 sm:p-4 mb-3.5 sm:mb-5 ${s.impactStyle}`}>
+                <div class="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-slate-900 mb-1">
+                  <svg class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                  </svg>
+                  <span>Commercial Impact</span>
+                </div>
+                <p class="text-xs text-slate-700 leading-relaxed font-medium text-justify hyphens-auto [text-align-last:left]">
+                  {s.impact}
+                </p>
+              </div>
+
+              <a href={s.href} class="inline-flex items-center gap-2 py-2 min-h-[40px] text-xs font-bold text-brand-600 hover:text-brand-700 no-underline hover:no-underline group-hover:gap-3 transition-all">
+                <span>{s.cta}</span>
+                <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 5: REGIONAL LOCATIONS (DARK NAVY + NOIDA CORRIDORS)
+  ===================================================================== -->
+  <section id="locations" class="relative surface-navy py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <!-- Regional Header with Unique Locations Image -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 items-center mb-9 sm:mb-16">
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-dark mb-3">Industrial & Infrastructure Corridor Targeting</div>
+          <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-white tracking-tight leading-snug sm:leading-tight mb-3 sm:mb-4">
+            Hyper Local Construction Search Coverage Across Noida Micro Markets
+          </h2>
+          <p class="text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            Construction demand across Gautam Buddha Nagar is segmented by zoning and authority norms, from industrial plots in Ecotech and Phase 2 to massive logistics and manufacturing parks along the Yamuna Expressway (YEIDA), Grade A commercial towers on the Noida Expressway and luxury residential construction in Central Noida. We pair our <a href="/local-seo-services-in-noida/" class="text-brand-300 hover:text-white font-semibold no-underline hover:no-underline">Local SEO Services in Noida</a> with corridor-specific EPC pages across four high-capex zones.
+          </p>
+        </div>
+        <div class="lg:col-span-5 min-w-0">
+          <div class="rounded-2xl overflow-hidden border border-slate-700/80 shadow-xl bg-slate-900">
+            <img
+              src="/images/noida-construction-seo/locations-construction-seo-noida.webp"
+              alt="Noida Construction Corridors Across Jewar Airport, Yamuna Expressway, Ecotech and Noida Expressway"
+              width="800"
+              height="450"
+              class="w-full aspect-[16/9] sm:aspect-auto sm:h-56 lg:h-64 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- 1 Row x 4 Columns Responsive Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+        {cities.map((c) => (
+          <div class="glass-card rounded-2xl p-5 sm:p-6 flex flex-col justify-between group sm:hover:-translate-y-1">
+            <div>
+              <div class={`h-1 w-full bg-gradient-to-r ${c.accent} rounded-full mb-4 sm:mb-5`}></div>
+
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-3.5 sm:mb-4">
+                <span class="px-2.5 py-1 rounded-md bg-slate-800 border border-slate-700 text-[11px] font-bold uppercase tracking-wider text-brand-300">
+                  {c.hub}
+                </span>
+                <span class="text-xs font-semibold text-slate-400">{c.city}</span>
+              </div>
+
+              <h3 class="font-display font-bold text-base sm:text-lg text-white mb-2.5 sm:mb-3 leading-snug">
+                <a href={c.href} class="hover:text-brand-300 no-underline hover:no-underline transition-colors">{c.keyword}</a>
+              </h3>
+
+              <p class="text-slate-300 text-[13px] sm:text-sm leading-relaxed mb-4 sm:mb-5 text-justify hyphens-auto [text-align-last:left]">
+                {c.desc}
+              </p>
+            </div>
+
+            <div class="pt-3.5 sm:pt-4 border-t border-slate-800">
+              <p class="text-[11px] text-slate-400 mb-3 sm:mb-4 leading-normal">
+                <strong class="text-slate-300">Key Sectors:</strong> {c.corridor}
+              </p>
+              <a href={c.href} class="inline-flex items-center gap-1.5 py-2 min-h-[40px] text-xs font-bold text-brand-400 hover:text-brand-300 no-underline hover:no-underline group-hover:gap-2.5 transition-all">
+                <span>{c.cta}</span>
+                <svg class="w-3.5 h-3.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 6: WHY NK DIGITAL TECH (CRISP WHITE CONTRAST SECTION)
+  ===================================================================== -->
+  <section id="why-us" class="relative surface-white py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-14 text-left sm:text-center">
+        <div class="badge-light mb-3">Why EPC Directors & Promoters Choose Us</div>
+        <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-snug sm:leading-tight mb-3 sm:mb-4">
+          How Our Construction Lead Generation in Noida Wins High-Ticket Tenders
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed mb-4 text-justify hyphens-auto [text-align-last:left]">
+          Generic agencies treat a civil technical company like a home handyman service, bringing calls for bathroom tiling or boundary wall repairs. We build your website around minimum sq ft project thresholds, BOQ uploads, <a href="/aeo-services-in-noida/" class="text-brand-600 hover:text-brand-700 font-semibold no-underline hover:no-underline">AEO Services in Noida</a> and PMC pre-qualification criteria.
+        </p>
+        <p class="text-slate-700 font-semibold text-xs sm:text-sm">
+          Compare our B2B construction SEO system with generic digital agencies:
+        </p>
+      </div>
+
+      <!-- Desktop Comparison Matrix -->
+      <div class="hidden md:block overflow-hidden rounded-2xl border border-slate-200 shadow-lg">
+        <table class="w-full text-left border-collapse">
+          <thead>
+            <tr class="bg-slate-900 text-white">
+              <th class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-slate-300 w-1/4">
+                Evaluation Criteria
+              </th>
+              <th class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-rose-300 w-[37.5%] border-l border-slate-800">
+                Generic Marketing Agency
+              </th>
+              <th class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-brand-300 w-[37.5%] border-l border-slate-800 bg-slate-950">
+                NK Digital Tech Construction SEO
+              </th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200 text-sm">
+            {comparison.map((row, idx) => (
+              <tr class={idx % 2 === 0 ? 'bg-white' : 'bg-slate-50/80'}>
+                <td class="py-5 px-6 font-display font-bold text-slate-900">
+                  {row.metric}
+                </td>
+                <td class="py-5 px-6 text-slate-600 border-l border-slate-200">
+                  <div class="flex items-start gap-2.5">
+                    <svg class="w-4 h-4 text-rose-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                    <span class="text-justify">{row.typical}</span>
+                  </div>
+                </td>
+                <td class="py-5 px-6 text-slate-900 font-medium border-l border-slate-200 bg-sky-50/40">
+                  <div class="flex items-start gap-2.5">
+                    <svg class="w-4 h-4 text-emerald-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span class="text-justify">{row.nk}</span>
+                  </div>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Mobile Comparison Cards -->
+      <div class="md:hidden space-y-3.5">
+        {comparison.map((row) => (
+          <div class="elevated-card rounded-2xl p-4 space-y-2.5">
+            <h3 class="font-display font-bold text-slate-900 text-[15px] leading-snug">{row.metric}</h3>
+            <div class="rounded-xl bg-rose-50 border border-rose-100 p-3">
+              <div class="flex items-center gap-1.5 mb-1">
+                <svg class="w-3.5 h-3.5 text-rose-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+                <p class="text-[10px] font-bold uppercase tracking-wider text-rose-600">Generic Marketing Agency</p>
+              </div>
+              <p class="text-xs text-slate-700 leading-relaxed text-justify hyphens-auto [text-align-last:left]">{row.typical}</p>
+            </div>
+            <div class="rounded-xl bg-sky-50 border border-sky-200 p-3">
+              <div class="flex items-center gap-1.5 mb-1">
+                <svg class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                </svg>
+                <p class="text-[10px] font-bold uppercase tracking-wider text-brand-600">NK Digital Tech Construction SEO</p>
+              </div>
+              <p class="text-xs text-slate-900 font-semibold leading-relaxed text-justify hyphens-auto [text-align-last:left]">{row.nk}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 7: SECTOR VERTICALS WE SCALE (LIGHT SLATE 3x2 GRID)
+  ===================================================================== -->
+  <section id="industries" class="relative surface-slate py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-16 text-left sm:text-center">
+        <div class="badge-light mb-3">Construction Verticals We Scale</div>
+        <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-snug sm:leading-tight mb-3 sm:mb-4">
+          Custom Search Playbooks for Six Noida Construction & EPC Segments
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          Whether you fabricate pre-built steel buildings (PEB), execute turnkey industrial factories, build commercial RCC high-rises or deliver cleanroom MEP packages, we align your pages with how project owners search.
+        </p>
+      </div>
+
+      <!-- 3 Columns x 2 Rows Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-7">
+        {propertySegments.map((ind) => (
+          <div class={`elevated-card rounded-2xl p-5 sm:p-7 border-t-4 ${ind.accentBorder} flex flex-col justify-between sm:hover:-translate-y-1`}>
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-4 sm:mb-5">
+                <div class={`w-10 h-10 sm:w-11 sm:h-11 rounded-xl border flex items-center justify-center flex-shrink-0 ${ind.iconBg}`}>
+                  <Fragment set:html={ind.icon} />
+                </div>
+                <span class="text-[11px] font-semibold text-slate-600 bg-slate-100 px-2.5 py-1 rounded-md">
+                  {ind.sector}
+                </span>
+              </div>
+
+              <h3 class="font-display font-bold text-[17px] sm:text-xl text-slate-900 mb-3 sm:mb-4 leading-snug">
+                {ind.title}
+              </h3>
+
+              <div class="mb-4 sm:mb-5">
+                <p class="text-[11px] font-bold uppercase tracking-wider text-brand-600 mb-1.5">
+                  Search &amp; AI Strategy
+                </p>
+                <p class="text-slate-600 text-[13px] sm:text-sm leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+                  {ind.focus}
+                </p>
+              </div>
+            </div>
+
+            <div class="rounded-xl bg-emerald-50/70 border border-emerald-200/80 p-3.5 sm:p-4">
+              <p class="text-[11px] font-bold uppercase tracking-wider text-emerald-700 mb-1">
+                Commercial Result
+              </p>
+              <p class="text-slate-800 text-xs font-medium leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+                {ind.outcome}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 8: HOW WE WORK (CRISP WHITE CONTRAST SECTION - 4 STAGES)
+  ===================================================================== -->
+  <section class="relative surface-white py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-16 text-left sm:text-center">
+        <div class="badge-light mb-3">Our 4 Stage Execution</div>
+        <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-snug sm:leading-tight mb-3 sm:mb-4">
+          How We Rank Noida Construction Websites on Google & AI Engines
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          Our four stage execution model replaces static PDF profiles with fast HTML capability silos, establishes verifiable technical E-E-A-T and scales your contractor citations across Google, ChatGPT and Gemini.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-7">
+        {stages.map((s) => (
+          <div class="elevated-card rounded-2xl p-5 sm:p-8 relative overflow-hidden group sm:hover:-translate-y-1">
+            <div class="flex items-center justify-between gap-4 mb-3.5 sm:mb-5">
+              <span class={`inline-flex items-center px-2.5 sm:px-3 py-1 rounded-lg text-xs font-bold uppercase tracking-wider text-white bg-gradient-to-r ${s.accent}`}>
+                {s.num}
+              </span>
+              <span class="font-display font-black text-3xl sm:text-4xl text-slate-200 group-hover:text-slate-300 transition-colors">
+                {s.step}
+              </span>
+            </div>
+            <h3 class="font-display font-bold text-[17px] sm:text-xl text-slate-900 mb-2.5 sm:mb-3 leading-snug">
+              {s.title}
+            </h3>
+            <p class="text-slate-600 text-[13px] sm:text-sm leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+              {s.body}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 9: CONCLUSION / PARTNER SECTION (DARK INDIGO + GROWTH IMAGE)
+  ===================================================================== -->
+  <section class="relative surface-indigo py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-7 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns: Conclusion Paragraphs (Justified) -->
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-dark mb-3.5 sm:mb-4">Compounding Tender Pipeline</div>
+          <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-white tracking-tight leading-snug sm:leading-tight mb-4 sm:mb-6">
+            Start Winning Direct Tenders With SEO for Construction Companies in Noida
+          </h2>
+          <div class="space-y-4 sm:space-y-5 text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            <p>
+              Billions of rupees in factory, warehouse, commercial tower and luxury residential construction are being awarded across Noida, Greater Noida and the Jewar Airport corridor every quarter. If project owners and PMCs cannot find your capabilities, machinery fleet and past projects on page one of Google and AI search engines, competing contractors win the tender list before you even receive the BOQ.
+            </p>
+            <p>
+              When you partner with NK Digital Tech for <strong class="text-white font-semibold">SEO for Construction Companies in Noida</strong>, you work directly with senior strategists and developers from a trusted <a href="/website-development-company-in-noida/" class="text-brand-300 hover:text-white font-semibold no-underline hover:no-underline">Website Development Company in Noida</a> who build fast technical portfolios, GeneralContractor schema and Top 3 Map Pack visibility. Claim your free EPC audit today.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Unique Growth Image -->
+        <div class="lg:col-span-5 min-w-0">
+          <div class="rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-700/80 shadow-2xl bg-slate-900">
+            <img
+              src="/images/noida-construction-seo/growth-construction-seo-noida.webp"
+              alt="Noida EPC Construction Director Shaking Hands With Developer Executive at Commercial Site"
+              width="800"
+              height="450"
+              class="w-full aspect-[16/10] sm:aspect-auto sm:h-64 lg:h-72 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 10: FAQ (LIGHT COOL SLATE CONTRAST SECTION)
+  ===================================================================== -->
+  <section id="faq" class="relative surface-cool py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-left sm:text-center mb-9 sm:mb-14">
+        <div class="badge-light mb-3">Questions Asked on Google, ChatGPT &amp; Gemini</div>
+        <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-snug sm:leading-tight mb-3 sm:mb-4">
+          Frequently Asked Questions About SEO for Construction Companies in Noida
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          Direct, factual answers to the questions EPC managing directors, civil contractors and PEB manufacturers in Noida and Greater Noida ask before launching a B2B construction SEO campaign.
+        </p>
+      </div>
+
+      <div class="space-y-3 sm:space-y-4">
+        {faqs.map((f, i) => (
+          <details class="elevated-card rounded-2xl group overflow-hidden" open={i === 0}>
+            <summary class="flex items-start sm:items-center justify-between gap-3 sm:gap-4 px-4 sm:px-6 py-4 sm:py-5 min-h-[54px] select-none">
+              <div class="flex items-start sm:items-center gap-2.5 sm:gap-3.5 text-left min-w-0">
+                <span class="w-6 h-6 sm:w-7 sm:h-7 rounded-lg bg-sky-50 border border-sky-200 text-brand-600 font-display font-bold text-xs flex items-center justify-center flex-shrink-0 mt-0.5 sm:mt-0">
+                  0{i + 1}
+                </span>
+                <span class="font-display font-bold text-slate-900 text-[14px] sm:text-base md:text-lg leading-snug">
+                  {f.q}
+                </span>
+              </div>
+              <span class="faq-icon w-7 h-7 sm:w-8 sm:h-8 rounded-full border border-slate-200 text-slate-600 flex items-center justify-center flex-shrink-0 mt-0.5 sm:mt-0">
+                <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                </svg>
+              </span>
+            </summary>
+            <div class="px-4 sm:px-6 pb-5 sm:pb-6 pt-3 text-slate-600 text-[13px] sm:text-sm md:text-base leading-relaxed border-t border-slate-100 text-justify hyphens-auto [text-align-last:left]">
+              {f.a}
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 11: SHORT 2 TO 3 LINE CALL TO ACTION BANNER (LAST SECTION)
+  ===================================================================== -->
+  <section id="contact" class="relative surface-dark py-12 pb-24 sm:py-16 lg:py-20 px-4 sm:px-6 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-5xl mx-auto">
+      <div class="rounded-2xl sm:rounded-3xl bg-gradient-to-r from-brand-600 via-brand-700 to-accent-700 p-6 sm:p-10 md:p-12 text-center text-white shadow-2xl border border-white/15 relative overflow-hidden">
+        <div class="relative z-10 max-w-2xl mx-auto">
+          <h2 class="font-display font-black text-[1.45rem] sm:text-3xl md:text-4xl text-white tracking-tight leading-snug mb-3 sm:mb-4">
+            Ready to Win More Industrial, PEB & Turnkey Construction Tenders in Noida?
+          </h2>
+
+          <p class="text-sky-50 text-[13px] sm:text-sm md:text-base leading-relaxed mb-6 sm:mb-8">
+            Book a free EPC construction audit with our senior search specialists to review your capability pages, Map Pack rankings and AI visibility.
+          </p>
+
+          <a
+            href="/contact-us/"
+            class="inline-flex w-full sm:w-auto min-h-[48px] items-center justify-center gap-2 sm:gap-3 px-5 sm:px-8 py-3.5 sm:py-4 rounded-xl bg-white text-slate-950 hover:bg-sky-50 no-underline hover:no-underline font-display font-bold text-sm sm:text-base shadow-xl transition-all duration-300 active:scale-95 text-center leading-snug"
+          >
+            <span>Claim Your Free EPC Construction SEO Audit</span>
+            <svg class="w-4 h-4 sm:w-5 sm:h-5 text-brand-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mobile Sticky Bottom Quick Action Bar -->
+  <div class="sm:hidden fixed bottom-0 inset-x-0 z-40 bg-[#050a14]/95 backdrop-blur-xl border-t border-slate-800 px-3.5 py-2.5 shadow-[0_-8px_24px_rgba(0,0,0,0.45)]">
+    <div class="flex items-center gap-2.5">
+      <a
+        href="/contact-us/"
+        class="btn-primary flex-1 min-h-[44px] py-2.5 px-4 text-xs font-bold rounded-xl no-underline hover:no-underline"
+      >
+        <span>Claim Free EPC SEO Audit</span>
+        <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+        </svg>
+      </a>
+      <a
+        href="#services"
+        class="btn-secondary-dark min-h-[44px] py-2.5 px-3.5 text-xs font-semibold rounded-xl flex-shrink-0 no-underline hover:no-underline"
+      >
+        <span>Services</span>
+      </a>
+    </div>
+  </div>
+
+</Layout>

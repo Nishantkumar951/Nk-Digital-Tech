@@ -1,0 +1,1420 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '../styles/global.css';
+
+const pageTitle = 'Best SEO Company in Vivek Vihar Delhi | NK Digital Tech';
+const pageDescription = 'NK Digital Tech is the Best SEO Company in Vivek Vihar Delhi. We help luxury builder floor developers, CA firms, skin clinics and architects get daily calls.';
+const pageCanonical = 'https://www.nkdigitaltech.net/seo-company-in-vivek-vihar-delhi/';
+
+const clients = [
+  {
+    name: 'VP Infra',
+    sector: 'Custom Kothi & 4BHK Builder Floors',
+    region: 'Vivek Vihar Blocks A, B & C',
+    logo: '/images/clients/vp-infra.webp',
+  },
+  {
+    name: 'Propertyways',
+    sector: 'Yojana Vihar & Surajmal Vihar Plots',
+    region: 'Phase 1, Phase 2 & Ram Vihar',
+    logo: '/images/clients/propertyways.webp',
+  },
+  {
+    name: 'Aangan',
+    sector: 'Turnkey Villa & Kothi Interiors',
+    region: 'Vivek Vihar Club Road & Block D',
+    logo: '/images/clients/aangan.webp',
+  },
+  {
+    name: 'Vision',
+    sector: 'Aesthetic Skin, Laser & Eye Studio',
+    region: 'Surajmal Vihar & Anand Vihar Link',
+    logo: '/images/clients/vision.webp',
+  },
+  {
+    name: 'Creative Academy',
+    sector: 'CA Foundation, IB & SAT Prep Wing',
+    region: 'Yojana Vihar & Savita Vihar',
+    logo: '/images/clients/creative-academy.webp',
+  },
+];
+
+const services = [
+  {
+    num: '01',
+    category: 'Kothi & Floor Search',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>`,
+    iconStyle: 'bg-sky-50 border-sky-200 text-brand-600',
+    impactStyle: 'bg-sky-50/80 border-sky-200/80 text-slate-800',
+    badgeColor: 'text-brand-600 bg-sky-100/80',
+    title: 'Luxury Builder Floor SEO Delhi & Project Pages',
+    body: 'We deliver focused luxury builder floor SEO Delhi and premium real estate SEO Delhi by creating fast floor plan pages, stilt parking sheets and walkthrough galleries for Blocks A, B, C and D developers so affluent buyers book private site visits.',
+    impact: 'Direct site visit calls from business families upgrading to 4BHK floors across Pin 110095.',
+    cta: 'Website Development Company in Delhi',
+    href: '/website-development-company-in-delhi/',
+  },
+  {
+    num: '02',
+    category: 'AI Wealth & Advisory',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>`,
+    iconStyle: 'bg-violet-50 border-violet-200 text-accent-600',
+    impactStyle: 'bg-violet-50/80 border-violet-200/80 text-slate-800',
+    badgeColor: 'text-accent-600 bg-violet-100/80',
+    title: 'CA Firm SEO in Vivek Vihar & AI Mentions',
+    body: 'Factory owners and affluent families in Vivek Vihar now ask AI tools which chartered accountant, wealth advisor or tax chamber is reliable. Through CA firm SEO in Vivek Vihar, we add ICAI credentials and JSON LD schema so AI tools name your office.',
+    impact: 'Consistent audit, GST and wealth advisory bookings from ChatGPT, Gemini and Google AI Overviews.',
+    cta: 'AI SEO Company in Delhi',
+    href: '/ai-seo-company-in-delhi/',
+  },
+  {
+    num: '03',
+    category: 'Block & Enclave Maps',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>`,
+    iconStyle: 'bg-emerald-50 border-emerald-200 text-emerald-600',
+    impactStyle: 'bg-emerald-50/80 border-emerald-200/80 text-slate-800',
+    badgeColor: 'text-emerald-700 bg-emerald-100/80',
+    title: 'Local SEO Agency Vivek Vihar Map Top 3',
+    body: 'Operating as a dedicated local SEO agency Vivek Vihar practices rely on, we rank your Google Business Profile in the top three across Vivek Vihar Phase 1, Phase 2, Yojana Vihar and Surajmal Vihar with verified Pin 110095 citations.',
+    impact: 'High intent phone calls and car navigation taps from families along Vivek Vihar Club Road.',
+    cta: 'Local SEO Services in Delhi',
+    href: '/local-seo-services-in-delhi/',
+  },
+  {
+    num: '04',
+    category: 'Aesthetic & Dental Q&A',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>`,
+    iconStyle: 'bg-amber-50 border-amber-200 text-amber-600',
+    impactStyle: 'bg-amber-50/80 border-amber-200/80 text-slate-800',
+    badgeColor: 'text-amber-700 bg-amber-100/80',
+    title: 'Clinic SEO Services Vivek Vihar & Answer Blocks',
+    body: 'With specialized clinic SEO services Vivek Vihar doctors trust, we write clear 40 to 60 word answers for laser skin treatments, clear aligners, dental implants and eye checkups backed by MedicalClinic and FAQPage schema.',
+    impact: 'Private consultation bookings from residents in Savita Vihar, Ram Vihar and Vigyan Vihar.',
+    cta: 'AEO Services in Delhi',
+    href: '/aeo-services-in-delhi/',
+  },
+  {
+    num: '05',
+    category: 'Design & Turnkey Studios',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>`,
+    iconStyle: 'bg-indigo-50 border-indigo-200 text-indigo-600',
+    impactStyle: 'bg-indigo-50/80 border-indigo-200/80 text-slate-800',
+    badgeColor: 'text-indigo-700 bg-indigo-100/80',
+    title: 'Architect SEO in Vivek Vihar & Studio Authority',
+    body: 'Through custom architect SEO in Vivek Vihar, we showcase your kothi elevation designs, modular kitchen portfolios, Council of Architecture registration, llms.txt files and project cost guides so villa owners hire your studio.',
+    impact: 'High ticket turnkey interior and architectural design retainers from kothi owners.',
+    cta: 'GEO Services in Delhi',
+    href: '/geo-services-in-delhi/',
+  },
+  {
+    num: '06',
+    category: 'HNI Brand Positioning',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>`,
+    iconStyle: 'bg-cyan-50 border-cyan-200 text-cyan-700',
+    impactStyle: 'bg-cyan-50/80 border-cyan-200/80 text-slate-800',
+    badgeColor: 'text-cyan-700 bg-cyan-100/80',
+    title: 'High Net Worth Marketing Delhi & Digital PR',
+    body: 'Combining digital marketing Vivek Vihar campaigns with high net worth marketing Delhi positioning, we publish verified case studies, private appointment forms and clean brand mentions that appeal to affluent business families.',
+    impact: 'Steady private consultations and referrals across East Delhi luxury residential enclaves.',
+    cta: 'Best SEO Company in East Delhi',
+    href: '/best-seo-company-in-east-delhi/',
+  },
+];
+
+const comparison = [
+  {
+    metric: 'Understanding of Vivek Vihar HNI Buyers',
+    typical: 'Writes generic mass market blog posts that fail to impress kothi owners, builders or industrial families.',
+    nk: 'Builds refined pages for Blocks A to D builder floors, Yojana Vihar clinics, CA chambers and architecture studios.',
+  },
+  {
+    metric: 'Portfolio & Floor Plan Page Speed',
+    typical: 'Uploads heavy uncompressed kothi renders that take eight seconds to open on mobile phones.',
+    nk: 'Converts every architectural elevation and clinic gallery to crisp WebP under 1.8 seconds load time.',
+  },
+  {
+    metric: 'ChatGPT, Gemini & Perplexity Citations',
+    typical: 'No JSON LD schema, no llms.txt file and zero visibility when wealthy residents ask AI for trusted advisors.',
+    nk: 'Adds verified ICAI, Council of Architecture and doctor credentials so AI engines cite your firm by name.',
+  },
+  {
+    metric: 'Google Map Pack Across Vihar Enclaves',
+    typical: 'Leaves your Google Business Profile unverified with mismatched Pin 110095 and 110092 address details.',
+    nk: 'Aligns your map pin, block coordinates, interior photos and client reviews for top three local pack spots.',
+  },
+  {
+    metric: 'Reporting & Private Consultation Tracking',
+    typical: 'Sends monthly spreadsheets full of vanity impressions with zero proof of actual client meetings.',
+    nk: 'Tracks direct phone calls, WhatsApp inquiries and private site visit bookings every fourteen days.',
+  },
+];
+
+const eastCorridors = [
+  {
+    hub: 'Area 01',
+    area: 'Laxmi Nagar',
+    focus: 'SEO Company in Laxmi Nagar',
+    pincode: 'Pin 110092',
+    desc: 'Home to premier CA, CS and CMA entrance institutes, tax consultancies and IT training centres. We rank fee structures, syllabus pages and local Google Business Profiles ahead of every exam admission cycle.',
+    cta: 'View Dedicated Laxmi Nagar Page',
+    href: '/seo-company-in-laxmi-nagar-delhi/',
+    accent: 'from-brand-500 to-sky-400',
+  },
+  {
+    hub: 'Area 02',
+    area: 'Preet Vihar',
+    focus: 'SEO Company in Preet Vihar',
+    pincode: 'Pin 110092',
+    desc: 'Lining the commercial Vikas Marg corridor, speciality eye and dental clinics, diagnostic labs, architectural practices and bridal flagships count on our search campaigns for high ticket consultations.',
+    cta: 'View Dedicated Preet Vihar Page',
+    href: '/seo-company-in-preet-vihar-delhi/',
+    accent: 'from-accent-500 to-violet-400',
+  },
+  {
+    hub: 'Area 03',
+    area: 'Mayur Vihar',
+    focus: 'SEO Company in Mayur Vihar',
+    pincode: 'Pin 110091',
+    desc: 'Covering Phases 1, 2 and 3, we help real estate consultants, diagnostic centres, preschools and aesthetic clinics win local three pack positions and inbound phone inquiries across dense residential pockets.',
+    cta: 'View Dedicated Mayur Vihar Page',
+    href: '/seo-company-in-mayur-vihar-delhi/',
+    accent: 'from-cyan-500 to-teal-400',
+  },
+  {
+    hub: 'Area 04',
+    area: 'Patparganj Industrial Area',
+    focus: 'SEO Company in Patparganj',
+    pincode: 'Pin 110092',
+    desc: 'We turn engineering catalogues and machinery specifications for packaging, electronics, printing and export units in FIE Patparganj into organic landing pages that pull verified commercial purchase orders.',
+    cta: 'View Dedicated Patparganj Page',
+    href: '/seo-company-in-patparganj-delhi/',
+    accent: 'from-emerald-500 to-green-400',
+  },
+  {
+    hub: 'Area 05',
+    area: 'Karkardooma',
+    focus: 'SEO Company in Karkardooma',
+    pincode: 'Pin 110092',
+    desc: 'Centered around Karkardooma District Courts and Community Centre, we position law chambers, corporate leasing advisories, commercial developers and financial consultants for targeted searches.',
+    cta: 'View Dedicated Karkardooma Page',
+    href: '/seo-company-in-karkardooma-delhi/',
+    accent: 'from-indigo-500 to-blue-400',
+  },
+  {
+    hub: 'Area 06',
+    area: 'Nirman Vihar',
+    focus: 'SEO Company in Nirman Vihar',
+    pincode: 'Pin 110092',
+    desc: 'Along the bustling V3S commercial stretch, we help high end jewellery showrooms, couture designers, wellness clinics and private consultancies win local footfall and premium walk in enquiries.',
+    cta: 'View Dedicated Nirman Vihar Page',
+    href: '/seo-company-in-nirman-vihar-delhi/',
+    accent: 'from-violet-500 to-purple-400',
+  },
+  {
+    hub: 'Area 07',
+    area: 'Shakarpur',
+    focus: 'SEO Company in Shakarpur',
+    pincode: 'Pin 110092',
+    desc: 'Bordering Laxmi Nagar, we structure fast mobile pages and local citations for government exam academies, computer training schools, legal documentation offices and accounting practices.',
+    cta: 'View Dedicated Shakarpur Page',
+    href: '/seo-company-in-shakarpur-delhi/',
+    accent: 'from-amber-500 to-orange-400',
+  },
+  {
+    hub: 'Area 08',
+    area: 'IP Extension',
+    focus: 'SEO Company in IP Extension',
+    pincode: 'Pin 110092',
+    desc: 'Surrounded by large group housing societies, our search campaigns build top map placement for family dental clinics, pathology labs, interior studios and property dealers across Patparganj.',
+    cta: 'View Dedicated IP Extension Page',
+    href: '/seo-company-in-ip-extension-delhi/',
+    accent: 'from-teal-500 to-emerald-400',
+  },
+  {
+    hub: 'Area 09',
+    area: 'Gandhi Nagar',
+    focus: 'SEO Company in Gandhi Nagar',
+    pincode: 'Pin 110031',
+    desc: 'In Asia’s largest readymade garment and textile wholesale market, we build B2B discovery systems for apparel manufacturers, fabric suppliers and bulk traders seeking buyers across India.',
+    cta: 'View Dedicated Gandhi Nagar Page',
+    href: '/seo-company-in-gandhi-nagar-delhi/',
+    accent: 'from-rose-500 to-pink-400',
+  },
+  {
+    hub: 'Area 10',
+    area: 'Krishna Nagar',
+    focus: 'SEO Company in Krishna Nagar',
+    pincode: 'Pin 110051',
+    desc: 'Focusing on the high footfall Lal Quarter retail hub, we drive shoppers and phone calls to ethnic apparel stores, optical retail chains, jewellery studios and specialist clinics.',
+    cta: 'View Dedicated Krishna Nagar Page',
+    href: '/seo-company-in-krishna-nagar-delhi/',
+    accent: 'from-sky-500 to-cyan-400',
+  },
+  {
+    hub: 'Area 11',
+    area: 'Vivek Vihar',
+    focus: 'SEO Company in Vivek Vihar',
+    pincode: 'Pin 110095',
+    desc: 'For elite builder floor promoters, chartered accountancy firms, private aesthetic centres and interior designers, we deliver selective search visibility matched to high net worth clients.',
+    cta: 'View Dedicated Vivek Vihar Page',
+    href: '/seo-company-in-vivek-vihar-delhi/',
+    accent: 'from-blue-500 to-indigo-400',
+  },
+  {
+    hub: 'Area 12',
+    area: 'Shahdara & Jhilmil',
+    focus: 'SEO Company in Shahdara',
+    pincode: 'Pin 110032',
+    desc: 'Targeting Jhilmil Industrial Area and Shahdara commercial belts, we generate inbound corporate leads for cable makers, metal engineering plants, wholesale distributors and trading firms.',
+    cta: 'View Dedicated Shahdara Page',
+    href: '/seo-company-in-shahdara-delhi/',
+    accent: 'from-fuchsia-500 to-rose-400',
+  },
+];
+
+const industries = [
+  {
+    sector: 'Luxury Builder Floors',
+    title: '4BHK Kothi & Builder Floor Developers',
+    focus: 'Ranking for luxury 4BHK builder floor in Vivek Vihar, park facing kothi in Yojana Vihar and stilt lift floor in Surajmal Vihar.',
+    outcome: 'Private site visit bookings from affluent business families without paying heavy broker portals.',
+    accentBorder: 'border-t-brand-500',
+    iconBg: 'bg-sky-50 border-sky-200 text-brand-600',
+    icon: `<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>`,
+  },
+  {
+    sector: 'CA & Tax Chambers',
+    title: 'Chartered Accountants & Wealth Advisors',
+    focus: 'Capturing searches for senior CA firm in Vivek Vihar, corporate tax audit consultant and family office wealth planner.',
+    outcome: 'Direct retainer inquiries from Jhilmil and Patparganj factory owners living in Vivek Vihar.',
+    accentBorder: 'border-t-violet-500',
+    iconBg: 'bg-violet-50 border-violet-200 text-accent-600',
+    icon: `<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>`,
+  },
+  {
+    sector: 'Aesthetic & Skin Clinics',
+    title: 'Dermatology, Laser & MedSpa Studios',
+    focus: 'Winning searches for laser skin clinic in Vivek Vihar, hydrafacial studio Yojana Vihar and anti ageing dermatologist near me.',
+    outcome: 'High value aesthetic package bookings from residents across Vivek Vihar and Savita Vihar.',
+    accentBorder: 'border-t-emerald-500',
+    iconBg: 'bg-emerald-50 border-emerald-200 text-emerald-600',
+    icon: `<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>`,
+  },
+  {
+    sector: 'Architecture & Interiors',
+    title: 'Turnkey Kothi Architects & Interior Studios',
+    focus: 'Ranking for luxury kothi architect in Vivek Vihar, turnkey villa interior designer and modular kitchen studio East Delhi.',
+    outcome: 'Full home design and civil turnkey contracts from plot and builder floor buyers.',
+    accentBorder: 'border-t-amber-500',
+    iconBg: 'bg-amber-50 border-amber-200 text-amber-600',
+    icon: `<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>`,
+  },
+  {
+    sector: 'Dental & Implant Clinics',
+    title: 'Smile Design, Aligners & Implant Centres',
+    focus: 'Capturing searches for invisible aligners in Vivek Vihar, painless dental implants Surajmal Vihar and pediatric dentist.',
+    outcome: 'Steady daily chair bookings for full mouth rehabilitation and cosmetic dentistry.',
+    accentBorder: 'border-t-indigo-500',
+    iconBg: 'bg-indigo-50 border-indigo-200 text-indigo-600',
+    icon: `<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>`,
+  },
+  {
+    sector: 'Boutique Law Chambers',
+    title: 'Property, Family Estate & Corporate Advocates',
+    focus: 'Ranking for freehold property lawyer in Vivek Vihar, family estate succession advocate and commercial dispute counsel.',
+    outcome: 'Confidential chamber consultations from property owners and company directors.',
+    accentBorder: 'border-t-rose-500',
+    iconBg: 'bg-rose-50 border-rose-200 text-rose-600',
+    icon: `<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"/></svg>`,
+  },
+  {
+    sector: 'Fine Jewellery & Couture',
+    title: 'Custom Diamond Studios & Bridal Boutiques',
+    focus: 'Winning searches for Polki diamond jeweller near Vivek Vihar, custom bridal couture studio and solitaire lounge.',
+    outcome: 'Private showroom appointments from wedding families across Vivek Vihar and Anand Vihar.',
+    accentBorder: 'border-t-cyan-500',
+    iconBg: 'bg-cyan-50 border-cyan-200 text-cyan-700',
+    icon: `<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>`,
+  },
+  {
+    sector: 'Study Abroad & SAT Prep',
+    title: 'Overseas Admissions, IELTS & IB Mentors',
+    focus: 'Capturing searches for UK and US university admissions advisor Vivek Vihar, SAT coaching Yojana Vihar and IELTS prep.',
+    outcome: 'Confirmed counselling sessions from parents planning overseas degrees for their children.',
+    accentBorder: 'border-t-purple-500',
+    iconBg: 'bg-purple-50 border-purple-200 text-purple-600',
+    icon: `<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"/></svg>`,
+  },
+  {
+    sector: 'Eye & Diagnostics',
+    title: 'Optical Boutiques & Preventive Health Labs',
+    focus: 'Ranking for progressive lens showroom Vivek Vihar, pediatric eye specialist and executive full body checkup at home.',
+    outcome: 'Daily walk ins for designer frames and morning home blood collection bookings.',
+    accentBorder: 'border-t-sky-500',
+    iconBg: 'bg-sky-50 border-sky-200 text-brand-600',
+    icon: `<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>`,
+  },
+  {
+    sector: 'Home Automation & Solar',
+    title: 'Smart Home Integrators, Elevators & Rooftop Solar',
+    focus: 'Winning searches for home lift installation Delhi, KNX smart home automation Vivek Vihar and kothi solar panel setup.',
+    outcome: 'High value site inspection requests from new builder floor and kothi projects.',
+    accentBorder: 'border-t-emerald-500',
+    iconBg: 'bg-emerald-50 border-emerald-200 text-emerald-600',
+    icon: `<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>`,
+  },
+  {
+    sector: 'Fine Dining & Banquets',
+    title: 'Boutique Cafes, Family Lounges & Roka Venues',
+    focus: 'Capturing searches for intimate roka venue near Vivek Vihar, fine dining family restaurant Surajmal Vihar and gourmet bakery.',
+    outcome: 'Direct table reservations and private family celebration bookings every weekend.',
+    accentBorder: 'border-t-amber-500',
+    iconBg: 'bg-amber-50 border-amber-200 text-amber-600',
+    icon: `<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 15.546c-.523 0-1.046.151-1.5.454a2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-1.5-.454M9 6v2m3-2v2m3-2v2M9 3h.01M12 3h.01M15 3h.01M21 21v-7a2 2 0 00-2-2H5a2 2 0 00-2 2v7h18z"/></svg>`,
+  },
+  {
+    sector: 'Luxury Auto Care',
+    title: 'PPF Coating, Ceramic Detailing & EV Charging Studios',
+    focus: 'Ranking for luxury car PPF studio near Vivek Vihar, ceramic coating East Delhi and home EV charger installer.',
+    outcome: 'Steady bay bookings from Mercedes, BMW and SUV owners across Vivek Vihar.',
+    accentBorder: 'border-t-indigo-500',
+    iconBg: 'bg-indigo-50 border-indigo-200 text-indigo-600',
+    icon: `<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>`,
+  },
+];
+
+const testimonials = [
+  {
+    name: 'Vikramaditya Puri',
+    title: 'Managing Director',
+    company: 'VP Infra',
+    sector: 'Custom Kothi & 4BHK Builder Floors • Block B Vivek Vihar',
+    logo: '/images/clients/vp-infra.webp',
+    quote: 'Buyers looking for 4BHK builder floors in Vivek Vihar and Surajmal Vihar want clear floor plans and genuine photos before they call. NK Digital Tech rebuilt our project pages with fast galleries and schema. We now book private site visits directly from Google every week.',
+    metrics: [
+      '3.7x jump in direct 4BHK floor site visit calls',
+      'Top 3 Google Map ranking across Vivek Vihar & Yojana Vihar',
+      'Named by ChatGPT for luxury builder floors in East Delhi',
+    ],
+  },
+  {
+    name: 'Dr. Nidhi Malhotra',
+    title: 'Clinical Director',
+    company: 'Vision',
+    sector: 'Aesthetic Skin, Laser & Eye Studio • Surajmal Vihar Link',
+    logo: '/images/clients/vision.webp',
+    quote: 'Patients from Yojana Vihar and Savita Vihar check Google reviews and AI treatment guides before booking laser skin or eye care. NK Digital Tech added doctor credentials and 50 word answer blocks that tripled our private consultation calls.',
+    metrics: [
+      '295% rise in aesthetic and eye consultation calls',
+      'Featured in Google AI Overviews for local skin and eye queries',
+      'Mobile treatment pages load in 1.4 seconds',
+    ],
+  },
+  {
+    name: 'Rituraj Singhania',
+    title: 'Principal Architect',
+    company: 'Aangan',
+    sector: 'Turnkey Villa & Kothi Interiors • Vivek Vihar Club Road',
+    logo: '/images/clients/aangan.webp',
+    quote: 'Our kothi elevation and interior portfolio used to load slowly and never appeared on Google. NK Digital Tech converted our renders to fast WebP and set up architect SEO in Vivek Vihar. Today plot owners call our studio directly for turnkey contracts.',
+    metrics: [
+      '3.3x growth in turnkey kothi interior design inquiries',
+      'Page one rankings for architect and interior terms in Pin 110095',
+      'Cited on Perplexity and Gemini for luxury home interiors',
+    ],
+  },
+  {
+    name: 'CA Siddharth Bansal',
+    title: 'Academic & Advisory Head',
+    company: 'Creative Academy',
+    sector: 'CA Foundation, Tax & SAT Prep Wing • Yojana Vihar',
+    logo: '/images/clients/creative-academy.webp',
+    quote: 'Whether it is factory promoters needing tax advisory or parents searching for CA Foundation and SAT mentoring in Vivek Vihar, our pages now show up first on Google Maps and ChatGPT. NK Digital Tech gave us clear fortnightly progress without empty jargon.',
+    metrics: [
+      '260% increase in advisory and student counselling calls',
+      'Top 3 Map Pack spots across Yojana Vihar & Vivek Vihar',
+      'Zero paid ad spend needed during peak admission months',
+    ],
+  },
+];
+
+const stages = [
+  {
+    step: '01',
+    num: 'Days 01 to 15',
+    title: 'Portfolio Speed, Crawl & Schema Setup',
+    body: 'We start by testing your site speed on mobile networks, converting heavy kothi renders and clinic photos into crisp WebP files, fixing indexing gaps and adding clean JSON LD schema for your Vivek Vihar address.',
+    accent: 'from-brand-600 to-sky-500',
+  },
+  {
+    step: '02',
+    num: 'Days 16 to 45',
+    title: 'Project, Practice & Enclave Page Creation',
+    body: 'Our writers and engineers build dedicated pages for luxury builder floors, CA tax services, aesthetic treatments and turnkey architecture tailored to Vivek Vihar Blocks A to D, Yojana Vihar and Surajmal Vihar.',
+    accent: 'from-violet-600 to-indigo-500',
+  },
+  {
+    step: '03',
+    num: 'Days 46 to 70',
+    title: 'Pin 110095 Map Pack & Professional Citations',
+    body: 'We optimize your Google Business Profile with real office and studio photos, Q&A responses, client review workflows and consistent citations across ICAI, Council of Architecture, Practo and Delhi directories.',
+    accent: 'from-emerald-600 to-teal-500',
+  },
+  {
+    step: '04',
+    num: 'Days 71 to 90+',
+    title: 'ChatGPT, Gemini & HNI Search Authority',
+    body: 'We publish llms.txt files, 50 word answer blocks and comparison tables so Google AI Overviews, ChatGPT, Gemini and Perplexity recommend your Vivek Vihar firm or studio first.',
+    accent: 'from-amber-600 to-orange-500',
+  },
+];
+
+const faqs = [
+  {
+    q: 'How much do SEO services in Vivek Vihar cost for a builder, clinic or CA firm?',
+    a: 'Monthly retainers for SEO services in Vivek Vihar generally range between INR 22,000 and INR 55,000 depending on how many project pages, treatment guides or advisory verticals you want to rank. Every plan includes technical speed fixes, Google Business Profile management, local content and AI search setup with fortnightly call reports.',
+  },
+  {
+    q: 'How does luxury builder floor SEO Delhi bring direct site visits without brokers?',
+    a: 'Affluent families searching for a 4BHK floor in Vivek Vihar, Yojana Vihar or Surajmal Vihar check plot sizes, stilt parking details and elevation photos on Google before calling. We build dedicated block wise pages with RealEstateAgent schema and WhatsApp scheduling so buyers contact your sales desk directly.',
+  },
+  {
+    q: 'Can you help our CA chamber or architecture studio get named on ChatGPT and Gemini?',
+    a: 'Yes. Through CA firm SEO in Vivek Vihar and architect SEO in Vivek Vihar, we add verified ICAI or Council of Architecture credentials, fee and project scope tables, llms.txt files and 50 word answers. When industrial promoters or kothi owners ask ChatGPT or Gemini for trusted specialists, your firm gets cited.',
+  },
+  {
+    q: 'How long does it take to reach the top three Google Map spots in Vivek Vihar?',
+    a: 'Most clinics, design studios and advisory offices see movement in Google Map rankings across Pin 110095 and Pin 110092 within 35 to 55 days. High intent organic searches for builder floors, aesthetic treatments and tax consultants typically reach page one within 75 to 90 days.',
+  },
+  {
+    q: 'What is included in clinic SEO services Vivek Vihar for skin and dental practices?',
+    a: 'Our clinic SEO services Vivek Vihar package covers individual pages for laser treatments, dental implants, aligners and eye care, along with doctor qualification schema, patient FAQ boxes and Google Business Profile review routines that bring daily appointment calls.',
+  },
+  {
+    q: 'Do you also cover Yojana Vihar, Surajmal Vihar, Savita Vihar and Ram Vihar?',
+    a: 'Yes. Families across these neighbouring gated enclaves share the same clubs, markets and schools. We structure your location signals and schema so your business ranks across Vivek Vihar Phases 1 and 2, Yojana Vihar, Surajmal Vihar, Savita Vihar and Vigyan Vihar together.',
+  },
+  {
+    q: 'Will we retain full ownership of our website code, photos and analytics accounts?',
+    a: 'Yes, 100 percent. Every floor plan page, interior gallery, schema script, Google Search Console property and Google Business Profile update lives inside your own accounts. You never face agency lock in.',
+  },
+  {
+    q: 'How do we start with the Best SEO Company in Vivek Vihar Delhi?',
+    a: 'Click the audit button on this page or email nkdigitaltech1@gmail.com with your website link and Vivek Vihar office address. Within 48 hours, our senior search team sends a clear review of your mobile speed, map pack standing and a 90 day growth plan.',
+  },
+];
+
+const trustStrip = [
+  'Blocks A to D & Club Road SEO',
+  'Page One Premium Google Spots',
+  'Yojana & Surajmal Vihar Maps',
+  'Cited on ChatGPT & Gemini',
+  'Clinic & Boutique Schema Setup',
+  'Clean Fee & Timing Answer Blocks',
+  'Under Two Second Mobile Load',
+  '100% Client Asset Ownership',
+];
+
+const seoVivekViharSchemaLocalBusiness = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "NK Digital Tech - Best SEO Company in Vivek Vihar Delhi",
+  "image": "https://www.nkdigitaltech.net/images/seo-vivek-vihar/hero-seo-company-vivek-vihar.webp",
+  "url": "https://www.nkdigitaltech.net/seo-company-in-vivek-vihar-delhi/",
+  "telephone": "+91-9990816111",
+  "email": "nkdigitaltech1@gmail.com",
+  "priceRange": "₹₹",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "301 A, 3rd Floor, Pocket E, Mayur Vihar Phase 2",
+    "addressLocality": "New Delhi",
+    "addressRegion": "DL",
+    "postalCode": "110091",
+    "addressCountry": "IN"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 28.6684,
+    "longitude": 77.3156
+  },
+  "areaServed": [
+    "Vivek Vihar",
+    "Vivek Vihar Phase 1",
+    "Vivek Vihar Phase 2",
+    "Yojana Vihar",
+    "Surajmal Vihar",
+    "Savita Vihar",
+    "Ram Vihar",
+    "Vigyan Vihar",
+    "East Delhi"
+  ],
+  "serviceType": [
+    "SEO Services in Vivek Vihar",
+    "Luxury Builder Floor SEO Delhi",
+    "CA Firm SEO in Vivek Vihar",
+    "Clinic SEO Services Vivek Vihar",
+    "Architect SEO in Vivek Vihar",
+    "High Net Worth Marketing Delhi"
+  ]
+});
+
+const seoVivekViharSchemaFAQ = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map((item) => ({
+    "@type": "Question",
+    "name": item.q,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": item.a
+    }
+  }))
+});
+---
+
+<Layout
+  title={pageTitle}
+  description={pageDescription}
+  canonical={pageCanonical}
+  ogImage="https://www.nkdigitaltech.net/images/seo-vivek-vihar/hero-seo-company-vivek-vihar.webp"
+  preloadImage="/images/seo-vivek-vihar/hero-seo-company-vivek-vihar.webp"
+  hideLocationsNav={false}
+  customSchemaLocalBusiness={seoVivekViharSchemaLocalBusiness}
+  customSchemaFAQ={seoVivekViharSchemaFAQ}
+  utilityTagline="Best SEO Company in Vivek Vihar Delhi • Builder Floors, CA Chambers, Clinics & Architects"
+  brandSubtitle="Vivek Vihar • Luxury & Advisory SEO"
+  footerBio="Premier SEO Company in Vivek Vihar Delhi helping luxury builder floor developers, CA firms, aesthetic skin clinics and turnkey architects win page one Google rankings, map calls and AI citations."
+  footerCoreDisciplines={[
+    { label: 'Best SEO Company in East Delhi', href: '/best-seo-company-in-east-delhi/' },
+    { label: 'Best SEO Company in Delhi', href: '/best-seo-company-in-delhi/' },
+    { label: 'Local SEO Services in Delhi', href: '/local-seo-services-in-delhi/' },
+    { label: 'AI SEO Company in Delhi', href: '/ai-seo-company-in-delhi/' },
+    { label: 'AEO Services in Delhi', href: '/aeo-services-in-delhi/' },
+    { label: 'GEO Services in Delhi', href: '/geo-services-in-delhi/' },
+    { label: 'Website Development Company in Delhi', href: '/website-development-company-in-delhi/' },
+  ]}
+  footerTagline="Best SEO Company in Vivek Vihar Delhi • Pin 110095 Kothi, Clinic & Advisory Growth"
+>
+
+  <!-- =====================================================================
+       SECTION 1: HERO (DARK SURFACE WITH UNIQUE VIVEK VIHAR SEO HERO IMAGE)
+  ===================================================================== -->
+  <section class="relative surface-dark overflow-hidden pt-5 pb-9 sm:pt-16 sm:pb-20 lg:pt-20 lg:pb-24 border-b border-slate-800/80">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="absolute inset-0 mesh-glow pointer-events-none"></div>
+    <div class="absolute -top-24 -left-24 sm:-top-36 sm:-left-36 w-56 h-56 sm:w-96 sm:h-96 bg-brand-500/20 rounded-full blur-[80px] sm:blur-[130px] pointer-events-none"></div>
+    <div class="absolute top-1/4 -right-24 sm:-right-36 w-56 h-56 sm:w-96 sm:h-96 bg-accent-500/20 rounded-full blur-[80px] sm:blur-[130px] pointer-events-none"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns: Headline & CTA -->
+        <div class="lg:col-span-7 text-left min-w-0">
+          <div class="badge-dark mb-3 sm:mb-6 py-1.5 px-2.5 sm:px-3.5">
+            <span class="w-2 h-2 rounded-full bg-brand-400 animate-ping flex-shrink-0"></span>
+            <span class="min-w-0 break-words">Blocks A to D &bull; Yojana Vihar &bull; Surajmal Vihar &bull; Savita Vihar</span>
+          </div>
+
+          <h1 class="font-display text-[clamp(1.75rem,7vw,2.4rem)] sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-[1.14] sm:leading-[1.1] mb-3.5 sm:mb-6 text-glow">
+            Best SEO Company in <br class="hidden sm:inline" />
+            <span class="gradient-text-light">Vivek Vihar Delhi</span>
+          </h1>
+
+          <p class="text-[13.5px] sm:text-base md:text-lg text-slate-300 leading-[1.68] sm:leading-relaxed mb-5 sm:mb-8 font-normal text-justify hyphens-auto [text-align-last:left]">
+            Partnering with a dedicated <strong class="text-white font-semibold">SEO Company in Vivek Vihar Delhi</strong> helps luxury builder floor developers, turnkey architects, Chartered Accountant chambers and banquet venues win direct client calls. We build fast portfolio websites, secure top Map Pack spots and earn AI citations.
+          </p>
+
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-4 mb-5 sm:mb-10">
+            <a href="#contact" class="btn-primary w-full sm:w-auto min-h-[50px] text-[13.5px] sm:text-base px-4 sm:px-8 py-3.5 sm:py-4">
+              <span>Get Your Free Vivek Vihar SEO Audit</span>
+              <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+              </svg>
+            </a>
+            <a href="#services" class="btn-secondary-dark w-full sm:w-auto min-h-[48px] text-[13.5px] sm:text-base px-4 sm:px-7 py-3.5 sm:py-4">
+              <span>View Vivek Vihar SEO Services</span>
+            </a>
+          </div>
+
+          <!-- Trust Verification Strip -->
+          <div class="pt-4 sm:pt-6 border-t border-slate-800/80">
+            <div class="grid grid-cols-2 sm:flex sm:flex-wrap items-stretch sm:items-center gap-2">
+              {trustStrip.map((item) => (
+                <span class="px-2.5 sm:px-3 py-2 sm:py-1.5 min-h-[42px] sm:min-h-0 rounded-lg bg-slate-900/90 border border-slate-800 text-[11px] sm:text-xs text-slate-300 font-medium flex items-center justify-center sm:justify-start text-center sm:text-left leading-tight break-words">
+                  {item}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Unique Vivek Vihar SEO Hero Image -->
+        <div class="lg:col-span-5 min-w-0">
+          <div class="relative rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-700/80 shadow-2xl shadow-brand-500/15 bg-slate-900 group">
+            <div class="relative">
+              <img
+                src="/images/seo-vivek-vihar/hero-seo-company-vivek-vihar.webp"
+                alt="Best SEO Company in Vivek Vihar Delhi Strategist Reviewing Luxury Real Estate and Clinic Rankings"
+                width="960"
+                height="540"
+                sizes="(max-width: 1024px) 100vw, 42vw"
+                fetchpriority="high"
+                decoding="async"
+                class="w-full aspect-[16/9] sm:aspect-auto sm:h-72 md:h-[380px] lg:h-[400px] object-cover object-center sm:group-hover:scale-105 transition-transform duration-500"
+              />
+              <div class="hidden sm:block absolute inset-0 bg-gradient-to-t from-[#050a14] via-transparent to-transparent opacity-80"></div>
+            </div>
+            <div class="relative sm:absolute sm:bottom-4 sm:left-4 sm:right-4 glass-card border-t sm:border border-slate-800 sm:rounded-2xl p-3.5 sm:p-4">
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-1">
+                <span class="text-xs font-bold text-white">Pin 110095 &amp; 110092 Enclave SEO</span>
+                <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-400">
+                  <span class="w-2 h-2 rounded-full bg-emerald-400 flex-shrink-0"></span>
+                  Verified HNI Inquiries
+                </span>
+              </div>
+              <p class="text-[11px] sm:text-xs text-slate-300 text-justify hyphens-auto [text-align-last:left] leading-relaxed">
+                Helping Vivek Vihar builder floor developers, CA firms, skin clinics and architects win map calls.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 2: INTRODUCTION (CRISP WHITE CONTRAST SECTION + TEAM IMAGE)
+  ===================================================================== -->
+  <section class="relative surface-white overflow-hidden py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns -->
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-light mb-3.5 sm:mb-4">Pin 110095 Luxury Residential &amp; Advisory Hub</div>
+          <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-4 sm:mb-6">
+            Why Founders Choose the Best SEO Company in Vivek Vihar Delhi <span class="gradient-text-dark">for High Value Leads</span>
+          </h2>
+          <div class="space-y-4 sm:space-y-5 text-slate-700 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            <p>
+              NK Digital Tech serves as the <strong>Best SEO Company in Vivek Vihar Delhi</strong> for 4BHK builder floor developers, senior CA chambers, aesthetic dermatology clinics and turnkey architects across Blocks A to D, Yojana Vihar and Surajmal Vihar. We build fast portfolio pages and clear answer blocks that attract affluent families.
+            </p>
+            <p>
+              Instead of relying on broker portals or generic ad vendors, your practice gets direct engineering from our regional hub as the <a href="/best-seo-company-in-east-delhi/" class="text-brand-600 font-semibold hover:underline">Best SEO Company in East Delhi</a> backed by our citywide team at the <a href="/best-seo-company-in-delhi/" class="text-brand-600 font-semibold hover:underline">Best SEO Company in Delhi</a> and <a href="/local-seo-services-in-delhi/" class="text-brand-600 font-semibold hover:underline">Local SEO Services in Delhi</a> for steady consultations.
+            </p>
+          </div>
+          <div class="mt-6 sm:mt-8 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
+            <a href="#contact" class="btn-primary w-full sm:w-auto min-h-[48px]">
+              <span>Talk to a Vivek Vihar SEO Expert</span>
+              <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+              </svg>
+            </a>
+            <a href="#why-us" class="btn-secondary-light w-full sm:w-auto min-h-[48px]">
+              <span>See How We Differ</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Unique Vivek Vihar SEO Team Image + Stats -->
+        <div class="lg:col-span-5 space-y-4 sm:space-y-5 min-w-0">
+          <div class="rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-200 shadow-lg bg-slate-100">
+            <img
+              src="/images/seo-vivek-vihar/seo-agency-team-vivek-vihar.webp"
+              alt="Local SEO Agency Vivek Vihar Team Planning Builder Floor and Clinic Search Campaigns"
+              width="800"
+              height="533"
+              sizes="(max-width: 1024px) 100vw, 42vw"
+              class="w-full aspect-[16/9] sm:aspect-auto sm:h-64 lg:h-72 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="grid grid-cols-2 gap-2.5 sm:gap-4">
+            {[
+              { val: '3.4x', label: 'HNI Inquiry Growth', sub: 'Across Vivek & Yojana Vihar' },
+              { val: '6 Sprints', label: '90 Day Execution', sub: 'Reported every two weeks' },
+              { val: 'Top 3', label: 'Enclave Map Rank', sub: 'Pin 110095 & Pin 110092' },
+              { val: '100%', label: 'Asset Ownership', sub: 'Your code, photos & data' },
+            ].map((stat) => (
+              <div class="elevated-card rounded-xl sm:rounded-2xl p-3 sm:p-4 min-w-0 flex flex-col justify-between">
+                <div class="font-display font-black text-[1.1rem] sm:text-2xl text-brand-600 mb-0.5 leading-tight break-words">{stat.val}</div>
+                <div class="text-[11px] sm:text-xs font-bold text-slate-900 leading-snug">{stat.label}</div>
+                <div class="text-[10.5px] sm:text-[11px] text-slate-500 leading-snug mt-0.5">{stat.sub}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 3: PROBLEM STATEMENT (DEEP INDIGO DARK CONTRAST SECTION)
+  ===================================================================== -->
+  <section class="relative surface-indigo py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="max-w-7xl mx-auto relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns -->
+        <div class="lg:col-span-7 min-w-0">
+          <div class="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-3.5 py-1 sm:py-1.5 rounded-full text-[10px] sm:text-xs font-bold uppercase tracking-wider sm:tracking-widest bg-amber-500/10 border border-amber-500/30 text-amber-300 max-w-full leading-snug mb-4 sm:mb-5">
+            <svg class="w-4 h-4 text-amber-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+            </svg>
+            <span>Why Boutique Firms Miss Affluent Clients</span>
+          </div>
+
+          <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-white tracking-tight leading-[1.22] sm:leading-tight mb-4 sm:mb-6">
+            Why Established Vivek Vihar Developers &amp; Practices Lose High Ticket Inquiries
+          </h2>
+
+          <div class="space-y-4 sm:space-y-5 text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            <p>
+              In Vivek Vihar, Yojana Vihar and Surajmal Vihar, many respected kothi builders, CA firms, skin clinics and architecture studios rely only on club circle word of mouth. Because their websites load slowly and lack block level pages or verified credentials, younger business families searching on Google Maps or ChatGPT book competing studios first.
+            </p>
+            <p>
+              Through our <a href="/ai-seo-company-in-delhi/" class="text-sky-300 font-semibold hover:underline">AI SEO Company in Delhi</a> and <a href="/aeo-services-in-delhi/" class="text-sky-300 font-semibold hover:underline">AEO Services in Delhi</a> frameworks, we speed up your mobile galleries, add verified professional schema and write concise answer blocks so affluent residents call your office directly.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Diagnostic Comparison Cards -->
+        <div class="lg:col-span-5 space-y-3.5 sm:space-y-4 min-w-0">
+          <div class="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6 border-l-4 border-l-rose-500">
+            <div class="flex flex-wrap items-center justify-between gap-1.5 mb-2">
+              <span class="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-rose-400">Typical Local Vendor</span>
+              <span class="text-[11px] sm:text-xs text-slate-400">Missed HNI Consultations</span>
+            </div>
+            <h3 class="font-display font-bold text-[15px] sm:text-base text-white mb-2 leading-snug">Heavy Uncompressed Renders, Weak Maps &amp; No Schema</h3>
+            <p class="text-xs text-slate-300 leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+              Fails to appear when a kothi owner in Block B or Surajmal Vihar searches Google Maps or asks ChatGPT for the best builder, architect or clinic.
+            </p>
+          </div>
+
+          <div class="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6 border-l-4 border-l-emerald-400">
+            <div class="flex flex-wrap items-center justify-between gap-1.5 mb-2">
+              <span class="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-emerald-400">NK Digital Tech System</span>
+              <span class="text-[11px] sm:text-xs text-brand-300">Direct Client Meetings</span>
+            </div>
+            <h3 class="font-display font-bold text-[15px] sm:text-base text-white mb-2 leading-snug">Crisp WebP Portfolios, Verified Credentials &amp; Top 3 Maps</h3>
+            <p class="text-xs text-slate-300 leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+              Combines fast mobile project pages, Pin 110095 map authority, JSON LD credentials and 50 word answers that win private appointments.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 4: SERVICES (LIGHT COOL ALABASTER CONTRAST + TECHNICAL IMAGE)
+  ===================================================================== -->
+  <section id="services" class="relative surface-cool overflow-hidden scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 items-center mb-9 sm:mb-16">
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-light mb-3">Six Luxury &amp; Advisory Pillars</div>
+          <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+            Complete SEO Services in Vivek Vihar
+          </h2>
+          <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            Our <strong>SEO services in Vivek Vihar</strong> bring together fast portfolio and clinic pages, Google Business Profile optimization, concise answer blocks and <a href="/geo-services-in-delhi/" class="text-brand-600 font-semibold hover:underline">GEO Services in Delhi</a> in one clear workflow. Every sprint pushes your pages higher on Google while earning citations on ChatGPT, Gemini and AI Overviews.
+          </p>
+        </div>
+        <div class="lg:col-span-5 min-w-0">
+          <div class="rounded-2xl overflow-hidden border border-slate-200 shadow-md bg-white">
+            <img
+              src="/images/seo-vivek-vihar/technical-ai-seo-services-vivek-vihar.webp"
+              alt="SEO Services in Vivek Vihar Engineers Auditing Luxury Real Estate and Clinic Schema"
+              width="800"
+              height="450"
+              sizes="(max-width: 1024px) 100vw, 42vw"
+              class="w-full aspect-[16/9] sm:aspect-auto sm:h-56 lg:h-64 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- 3 Columns x 2 Rows Grid Layout -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-7">
+        {services.map((s) => (
+          <div class="elevated-card rounded-2xl p-4 sm:p-7 flex flex-col justify-between group sm:hover:-translate-y-1 min-w-0">
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-4 sm:mb-6">
+                <div class={`w-11 h-11 sm:w-12 sm:h-12 rounded-xl border flex items-center justify-center flex-shrink-0 ${s.iconStyle}`}>
+                  <Fragment set:html={s.icon} />
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class={`text-[10.5px] sm:text-[11px] font-semibold px-2.5 py-1 rounded-md ${s.badgeColor}`}>
+                    {s.category}
+                  </span>
+                  <span class="font-display font-black text-base sm:text-lg text-slate-300">{s.num}</span>
+                </div>
+              </div>
+
+              <h3 class="font-display font-bold text-[17px] sm:text-xl text-slate-900 mb-2.5 sm:mb-3 leading-snug group-hover:text-brand-600 transition-colors">
+                {s.title}
+              </h3>
+
+              <p class="text-slate-600 text-[13px] sm:text-sm leading-relaxed mb-4 sm:mb-6 text-justify hyphens-auto [text-align-last:left]">
+                {s.body}
+              </p>
+            </div>
+
+            <div>
+              <div class={`rounded-xl border p-3.5 sm:p-4 mb-3.5 sm:mb-5 ${s.impactStyle}`}>
+                <div class="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-slate-900 mb-1">
+                  <svg class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                  </svg>
+                  <span>Vivek Vihar Impact</span>
+                </div>
+                <p class="text-xs text-slate-700 leading-relaxed font-medium text-justify hyphens-auto [text-align-last:left]">
+                  {s.impact}
+                </p>
+              </div>
+
+              <a href={s.href} class="w-full sm:w-auto inline-flex items-center justify-between sm:justify-start gap-2 rounded-xl sm:rounded-none bg-slate-50 active:bg-sky-50 sm:bg-transparent border border-slate-200/80 sm:border-0 px-3.5 sm:px-0 py-2.5 min-h-[46px] sm:min-h-0 text-xs font-bold text-brand-600 hover:text-brand-700 group-hover:gap-3 transition-all">
+                <span>{s.cta}</span>
+                <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 5: WHY NK DIGITAL TECH (CRISP WHITE CONTRAST SECTION)
+  ===================================================================== -->
+  <section id="why-us" class="relative surface-white overflow-hidden scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-14 text-left sm:text-center">
+        <div class="badge-light mb-3">Boutique Search Execution</div>
+        <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+          Why the Best SEO Company in Vivek Vihar Outperforms Generic Vendors
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed mb-4 text-justify hyphens-auto [text-align-last:left]">
+          Selecting the <strong>best SEO company in Vivek Vihar</strong> requires a partner that understands how affluent East Delhi families evaluate builders, doctors, CA firms and architects. At NK Digital Tech, senior specialists update your project galleries, practice pages and map listings directly.
+        </p>
+        <p class="text-slate-700 font-semibold text-xs sm:text-sm">
+          Side by side comparison of our Vivek Vihar delivery:
+        </p>
+      </div>
+
+      <!-- Desktop Comparison Matrix -->
+      <div class="hidden md:block overflow-hidden rounded-2xl border border-slate-200 shadow-lg">
+        <table class="w-full text-left border-collapse">
+          <thead>
+            <tr class="bg-slate-900 text-white">
+              <th class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-slate-300 w-1/4">
+                Comparison Factor
+              </th>
+              <th class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-rose-300 w-[37.5%] border-l border-slate-800">
+                Typical Local Vendor
+              </th>
+              <th class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-brand-300 w-[37.5%] border-l border-slate-800 bg-slate-950">
+                NK Digital Tech Vivek Vihar
+              </th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200 text-sm">
+            {comparison.map((row, idx) => (
+              <tr class={idx % 2 === 0 ? 'bg-white' : 'bg-slate-50/80'}>
+                <td class="py-5 px-6 font-display font-bold text-slate-900">
+                  {row.metric}
+                </td>
+                <td class="py-5 px-6 text-slate-600 border-l border-slate-200">
+                  <div class="flex items-start gap-2.5">
+                    <svg class="w-4 h-4 text-rose-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                    <span>{row.typical}</span>
+                  </div>
+                </td>
+                <td class="py-5 px-6 text-slate-900 font-medium border-l border-slate-200 bg-sky-50/40">
+                  <div class="flex items-start gap-2.5">
+                    <svg class="w-4 h-4 text-emerald-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span>{row.nk}</span>
+                  </div>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Mobile Comparison Cards -->
+      <div class="md:hidden space-y-3.5">
+        {comparison.map((row) => (
+          <div class="elevated-card rounded-2xl p-4 space-y-2.5 min-w-0">
+            <h3 class="font-display font-bold text-slate-900 text-[15px] leading-snug pb-2 border-b border-slate-100">{row.metric}</h3>
+            <div class="rounded-xl bg-rose-50 border border-rose-100 p-3">
+              <div class="flex items-center gap-1.5 mb-1">
+                <svg class="w-3.5 h-3.5 text-rose-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+                <p class="text-[10px] font-bold uppercase tracking-wider text-rose-600">Typical Local Vendor</p>
+              </div>
+              <p class="text-xs text-slate-700 leading-relaxed">{row.typical}</p>
+            </div>
+            <div class="rounded-xl bg-sky-50 border border-sky-200 p-3">
+              <div class="flex items-center gap-1.5 mb-1">
+                <svg class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                </svg>
+                <p class="text-[10px] font-bold uppercase tracking-wider text-brand-600">NK Digital Tech Vivek Vihar</p>
+              </div>
+              <p class="text-xs text-slate-900 font-semibold leading-relaxed">{row.nk}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 6: KEY BUSINESS DISTRICTS & COMMERCIAL HUBS WE COVER IN EAST DELHI
+  ===================================================================== -->
+  <section id="locations" class="relative surface-cool overflow-hidden scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-14 text-left sm:text-center">
+        <div class="badge-light mb-3">Twelve Commercial Corridors &amp; Industrial Zones</div>
+        <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+          Key Business Districts &amp; Commercial Hubs We Cover in East Delhi
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          Connecting luxury builder floor developers, turnkey architects and CA chambers in Vivek Vihar with Karkardooma, Preet Vihar, Krishna Nagar and Shahdara.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
+        {eastCorridors.map((c) => (
+          <div class="elevated-card rounded-2xl p-4 sm:p-5 flex flex-col justify-between min-w-0">
+            <div>
+              <div class={`h-1 w-full bg-gradient-to-r ${c.accent} rounded-full mb-3.5`}></div>
+              <div class="flex items-center justify-between gap-2 mb-2.5">
+                <span class="px-2 py-0.5 rounded-md bg-sky-50 border border-sky-200 text-[11px] font-bold uppercase tracking-wider text-brand-600">
+                  {c.hub}
+                </span>
+                <span class="text-[11px] font-semibold text-slate-500">
+                  {c.pincode}
+                </span>
+              </div>
+              <h3 class="font-display font-bold text-base sm:text-lg text-slate-900 mb-1 leading-snug">
+                {c.area}
+              </h3>
+              <p class="text-xs font-bold text-brand-600 mb-2">{c.focus}</p>
+              <p class="text-slate-600 text-[13px] leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+                {c.desc}
+              </p>
+            </div>
+            <div class="mt-3.5 sm:mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
+              <a href={c.href} class="w-full sm:w-auto min-h-[44px] sm:min-h-0 inline-flex items-center justify-between sm:justify-start gap-1.5 text-xs font-bold text-brand-600 hover:text-brand-700 group/link">
+                <span>{c.cta}</span>
+                <svg class="w-3.5 h-3.5 flex-shrink-0 transition-transform group-hover/link:translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div class="mt-8 text-center">
+        <a href="/best-seo-company-in-east-delhi/" class="inline-flex items-center gap-2 text-sm font-bold text-brand-600 hover:text-brand-700">
+          <span>Explore Complete East Delhi Regional Directory &amp; Strategy</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 7: OUR CLIENTS (DARK INDIGO CONTRAST SECTION)
+  ===================================================================== -->
+  <section id="clients" class="relative surface-indigo scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-14 text-left sm:text-center">
+        <div class="badge-dark mb-3">Vivek Vihar Track Record</div>
+        <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-white tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+          Vivek Vihar Developers, Clinics &amp; Studios Growing With Us
+        </h2>
+        <p class="text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          From 4BHK kothi developers in Blocks A to C and turnkey architects on Club Road to aesthetic skin clinics and CA mentors in Yojana Vihar, local founders rely on our search systems.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2.5 sm:gap-5">
+        {clients.map((client) => (
+          <div class="glass-card rounded-2xl p-3 sm:p-5 flex flex-col items-center text-center group sm:hover:-translate-y-1 last:col-span-2 sm:last:col-span-1 min-w-0">
+            <div class="w-full max-w-[200px] sm:max-w-none mx-auto h-14 sm:h-20 rounded-xl bg-white border border-slate-200 flex items-center justify-center p-2.5 sm:p-4 mb-2.5 sm:mb-4 shadow-sm">
+              <img
+                src={client.logo}
+                alt={`${client.name} Logo`}
+                width="130"
+                height="48"
+                class="max-h-9 sm:max-h-12 w-auto object-contain"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <h3 class="font-display font-bold text-sm sm:text-base text-white mb-1">{client.name}</h3>
+            <p class="text-[11px] sm:text-xs text-slate-300 leading-snug mb-2.5 sm:mb-3 flex-grow">{client.sector}</p>
+            <span class="w-full sm:w-auto inline-flex items-center justify-center gap-1 text-[10px] sm:text-[11px] font-semibold text-brand-300 bg-brand-500/15 border border-brand-500/30 px-2 sm:px-2.5 py-1.5 sm:py-1 rounded-md leading-tight max-w-full">
+              <svg class="w-2.5 h-2.5 sm:w-3 sm:h-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+              </svg>
+              <span class="text-center leading-tight break-words">{client.region}</span>
+            </span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 8: INDUSTRIES (LIGHT SLATE CONTRAST SECTION - 12 SECTORS)
+  ===================================================================== -->
+  <section id="industries" class="relative surface-slate overflow-hidden scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-16 text-left sm:text-center">
+        <div class="badge-light mb-3">Sector Specific Plans</div>
+        <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+          Twelve Vivek Vihar Luxury &amp; Professional Sectors We Rank
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          A 4BHK builder floor developer in Block B needs very different pages than a chartered accountant chamber or a laser skin clinic in Yojana Vihar. We build custom plans across twelve active Vivek Vihar categories.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-7">
+        {industries.map((ind) => (
+          <div class={`elevated-card rounded-2xl p-4 sm:p-7 border-t-4 ${ind.accentBorder} flex flex-col justify-between sm:hover:-translate-y-1 min-w-0`}>
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-4 sm:mb-5">
+                <div class={`w-10 h-10 sm:w-11 sm:h-11 rounded-xl border flex items-center justify-center flex-shrink-0 ${ind.iconBg}`}>
+                  <Fragment set:html={ind.icon} />
+                </div>
+                <span class="text-[11px] font-semibold text-slate-600 bg-slate-100 px-2.5 py-1 rounded-md">
+                  {ind.sector}
+                </span>
+              </div>
+
+              <h3 class="font-display font-bold text-[17px] sm:text-xl text-slate-900 mb-3 sm:mb-4 leading-snug">
+                {ind.title}
+              </h3>
+
+              <div class="mb-4 sm:mb-5">
+                <p class="text-[11px] font-bold uppercase tracking-wider text-brand-600 mb-1.5">
+                  Campaign Priority
+                </p>
+                <p class="text-slate-600 text-[13px] sm:text-sm leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+                  {ind.focus}
+                </p>
+              </div>
+            </div>
+
+            <div class="rounded-xl bg-emerald-50/70 border border-emerald-200/80 p-3.5 sm:p-4">
+              <p class="text-[11px] font-bold uppercase tracking-wider text-emerald-700 mb-1">
+                Business Outcome
+              </p>
+              <p class="text-slate-800 text-xs font-medium leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+                {ind.outcome}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 9: TESTIMONIALS (DEEP NAVY CONTRAST SECTION - 2x2 GRID)
+  ===================================================================== -->
+  <section id="testimonials" class="relative surface-dark scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="absolute inset-0 mesh-glow pointer-events-none opacity-60"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-16 text-left sm:text-center">
+        <div class="badge-dark mb-3">Verified Local Results</div>
+        <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-white tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+          What Vivek Vihar Developers, Doctors &amp; Architects Say
+        </h2>
+        <p class="text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          Real consultation growth, top three map rankings and AI citations shared by business owners across Vivek Vihar, Yojana Vihar and Surajmal Vihar.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-7">
+        {testimonials.map((t) => (
+          <div class="glass-card rounded-2xl p-4 sm:p-8 flex flex-col justify-between sm:hover:-translate-y-1 min-w-0">
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-4 sm:mb-5">
+                <div class="flex items-center gap-1">
+                  {[1, 2, 3, 4, 5].map(() => (
+                    <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                    </svg>
+                  ))}
+                </div>
+                <span class="text-[10px] sm:text-[11px] font-semibold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-1 rounded-md">
+                  Vivek Vihar Partner
+                </span>
+              </div>
+
+              <p class="text-slate-200 text-[13.5px] sm:text-base leading-relaxed italic mb-5 sm:mb-6 text-justify hyphens-auto [text-align-last:left]">
+                "{t.quote}"
+              </p>
+
+              <div class="rounded-xl bg-slate-900/90 border border-slate-700/80 p-3.5 sm:p-4 mb-5 sm:mb-6">
+                <p class="text-[11px] font-bold uppercase tracking-wider text-brand-400 mb-2 sm:mb-2.5">
+                  Recorded Results
+                </p>
+                <ul class="space-y-2">
+                  {t.metrics.map((m) => (
+                    <li class="flex items-start gap-2 text-xs text-slate-300 font-medium leading-snug">
+                      <svg class="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                      </svg>
+                      <span>{m}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3.5 sm:gap-4 pt-3.5 sm:pt-4 border-t border-slate-800">
+              <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-white p-2 flex items-center justify-center flex-shrink-0 shadow-sm">
+                <img
+                  src={t.logo}
+                  alt={`${t.company} Logo`}
+                  width="48"
+                  height="48"
+                  class="max-h-8 sm:max-h-10 w-auto object-contain"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="min-w-0">
+                <h3 class="font-display font-bold text-white text-sm sm:text-base leading-snug">{t.name}</h3>
+                <p class="text-xs text-slate-300 leading-snug">
+                  {t.title}, <strong class="text-brand-400 font-semibold">{t.company}</strong>
+                </p>
+                <p class="text-[10.5px] sm:text-[11px] text-slate-400 mt-0.5 leading-snug">{t.sector}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 10: HOW WE WORK (CRISP WHITE CONTRAST SECTION - 4 STAGES)
+  ===================================================================== -->
+  <section id="process" class="relative surface-white overflow-hidden scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-16 text-left sm:text-center">
+        <div class="badge-light mb-3">Four Stage Execution Plan</div>
+        <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+          Our Step by Step Process for Ranking Vivek Vihar Websites
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          We start by speeding up your mobile project galleries and fixing crawl errors, capture top three Google Map spots in Vivek Vihar and Yojana Vihar, and build lasting mentions on ChatGPT and Gemini.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-7">
+        {stages.map((s) => (
+          <div class="elevated-card rounded-2xl p-4 sm:p-8 relative overflow-hidden group sm:hover:-translate-y-1 min-w-0">
+            <div class="flex items-center justify-between gap-4 mb-3.5 sm:mb-5">
+              <span class={`inline-flex items-center px-2.5 sm:px-3 py-1 rounded-lg text-xs font-bold uppercase tracking-wider text-white bg-gradient-to-r ${s.accent}`}>
+                {s.num}
+              </span>
+              <span class="font-display font-black text-3xl sm:text-4xl text-slate-200 group-hover:text-slate-300 transition-colors">
+                {s.step}
+              </span>
+            </div>
+            <h3 class="font-display font-bold text-[17px] sm:text-xl text-slate-900 mb-2.5 sm:mb-3 leading-snug">
+              {s.title}
+            </h3>
+            <p class="text-slate-600 text-[13px] sm:text-sm leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+              {s.body}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 11: PARTNER WITH THE SEO COMPANY IN VIVEK VIHAR DELHI (CONCLUSION)
+  ===================================================================== -->
+  <section class="relative surface-indigo py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-7 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns -->
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-dark mb-3.5 sm:mb-4">Direct HNI Site Visits &amp; Consultations</div>
+          <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-white tracking-tight leading-[1.22] sm:leading-tight mb-4 sm:mb-6">
+            Grow Private Client Inquiries With the Best SEO Company in Vivek Vihar Delhi
+          </h2>
+          <div class="space-y-4 sm:space-y-5 text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            <p>
+              Attracting affluent families across Pin 110095 and Pin 110092 takes more than broker listings or social ads that stop delivering the moment you pause budget. Every week, kothi buyers, industrial promoters and families in Vivek Vihar, Yojana Vihar and Surajmal Vihar check Google Maps and AI answers before booking a site visit or consultation.
+            </p>
+            <p>
+              When you partner with NK Digital Tech as your <strong>SEO Company in Vivek Vihar Delhi</strong>, our senior search team and <a href="/website-development-company-in-delhi/" class="text-sky-300 font-semibold hover:underline">Website Development Company in Delhi</a> engineers compress your mobile portfolios, build block specific pages, verify directory citations and add schema markup directly. Request your free Vivek Vihar audit today for a clear 90 day roadmap.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Unique Vivek Vihar Growth Image -->
+        <div class="lg:col-span-5 min-w-0">
+          <div class="rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-700/80 shadow-2xl bg-slate-900">
+            <img
+              src="/images/seo-vivek-vihar/organic-search-growth-vivek-vihar.webp"
+              alt="SEO Company in Vivek Vihar Delhi Consulting With Builder Floor Developers and Clinic Directors"
+              width="800"
+              height="450"
+              sizes="(max-width: 1024px) 100vw, 42vw"
+              class="w-full aspect-[16/9] sm:aspect-auto sm:h-64 lg:h-72 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 12: FAQ (LIGHT COOL SLATE CONTRAST SECTION)
+  ===================================================================== -->
+  <section id="faq" class="relative surface-cool overflow-hidden scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-left sm:text-center mb-9 sm:mb-14">
+        <div class="badge-light mb-3">Vivek Vihar Client Questions</div>
+        <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+          Common Questions About Hiring an SEO Partner in Vivek Vihar
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          Clear answers about monthly retainers, ranking timelines, builder floor and clinic SEO, and ChatGPT visibility across Vivek Vihar.
+        </p>
+      </div>
+
+      <div class="space-y-3 sm:space-y-4">
+        {faqs.map((f, i) => (
+          <details class="elevated-card rounded-2xl group overflow-hidden" open={i === 0}>
+            <summary class="flex items-start sm:items-center justify-between gap-2.5 sm:gap-4 px-3.5 sm:px-6 py-4 sm:py-5 min-h-[56px] active:bg-sky-50/60 transition-colors select-none">
+              <div class="flex items-start sm:items-center gap-2.5 sm:gap-3.5 text-left min-w-0">
+                <span class="w-6 h-6 sm:w-7 sm:h-7 rounded-lg bg-sky-50 border border-sky-200 text-brand-600 font-display font-bold text-xs flex items-center justify-center flex-shrink-0 mt-0.5 sm:mt-0">
+                  0{i + 1}
+                </span>
+                <span class="font-display font-bold text-slate-900 text-[14px] sm:text-base md:text-lg leading-[1.4] sm:leading-snug break-words">
+                  {f.q}
+                </span>
+              </div>
+              <span class="faq-icon w-7 h-7 sm:w-8 sm:h-8 rounded-full border border-slate-200 text-slate-600 flex items-center justify-center flex-shrink-0 mt-0.5 sm:mt-0">
+                <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                </svg>
+              </span>
+            </summary>
+            <div class="px-3.5 sm:px-6 pb-4 sm:pb-6 pt-3 text-slate-600 text-[13.5px] sm:text-sm md:text-base leading-[1.68] sm:leading-relaxed border-t border-slate-100 text-justify hyphens-auto [text-align-last:left]">
+              {f.a}
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 13: CALL TO ACTION BANNER (LAST SECTION)
+  ===================================================================== -->
+  <section id="contact" class="relative surface-dark scroll-mt-16 sm:scroll-mt-20 pt-10 pb-12 sm:py-16 lg:py-20 px-4 sm:px-6 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-5xl mx-auto">
+      <div class="rounded-2xl sm:rounded-3xl bg-gradient-to-r from-brand-600 via-brand-700 to-accent-700 p-6 sm:p-10 md:p-12 text-center text-white shadow-2xl border border-white/15 relative overflow-hidden">
+        <div class="relative z-10 max-w-2xl mx-auto">
+          <h2 class="font-display font-black text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl md:text-4xl text-white tracking-tight leading-[1.22] sm:leading-snug mb-3 sm:mb-4">
+            Book Your Free Audit With the Best SEO Company in Vivek Vihar Delhi
+          </h2>
+
+          <p class="text-sky-50 text-[13px] sm:text-sm md:text-base leading-relaxed mb-6 sm:mb-8">
+            Get a clear review of your mobile speed, Google Map Pack rankings and ChatGPT mentions across Vivek Vihar Blocks A to D, Yojana Vihar and Surajmal Vihar.
+          </p>
+
+          <a
+            href="mailto:nkdigitaltech1@gmail.com"
+            class="inline-flex w-full sm:w-auto min-h-[48px] items-center justify-center gap-2 sm:gap-3 px-5 sm:px-8 py-3.5 sm:py-4 rounded-xl bg-white text-slate-950 hover:bg-sky-50 font-display font-bold text-sm sm:text-base shadow-xl transition-all duration-300 active:scale-95 text-center leading-snug"
+          >
+            <span>Request Vivek Vihar Website Audit</span>
+            <svg class="w-4 h-4 sm:w-5 sm:h-5 text-brand-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mobile Sticky Bottom Quick Action Bar -->
+  <div class="mobile-sticky-cta sm:hidden fixed bottom-0 inset-x-0 z-40 bg-[#050a14]/95 backdrop-blur-xl border-t border-slate-800 px-3 pt-2.5 pb-[max(0.7rem,env(safe-area-inset-bottom))] shadow-[0_-8px_24px_rgba(0,0,0,0.45)] transition-all duration-200">
+    <div class="flex items-center gap-2.5">
+      <a
+        href="mailto:nkdigitaltech1@gmail.com"
+        class="btn-primary flex-1 min-w-0 min-h-[48px] py-2.5 px-3 text-[12.5px] font-bold rounded-xl whitespace-nowrap"
+      >
+        <span class="truncate">Free Vivek Vihar SEO Audit</span>
+        <svg class="w-3.5 h-3.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+        </svg>
+      </a>
+      <a
+        href="#services"
+        class="btn-secondary-dark min-h-[48px] py-2.5 px-4 text-[12.5px] font-semibold rounded-xl flex-shrink-0 whitespace-nowrap"
+      >
+        <span>Services</span>
+      </a>
+    </div>
+  </div>
+
+  <style>
+    @media (max-width: 639px) {
+      .glass-card {
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+      }
+      #locations,
+      #why-us,
+      #clients,
+      #industries,
+      #testimonials,
+      #process,
+      #faq {
+        content-visibility: auto;
+        contain-intrinsic-size: auto 720px;
+      }
+      a,
+      button,
+      summary {
+        touch-action: manipulation;
+        -webkit-tap-highlight-color: transparent;
+      }
+    }
+  </style>
+
+</Layout>

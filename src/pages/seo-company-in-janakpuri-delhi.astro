@@ -1,0 +1,1415 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '../styles/global.css';
+
+const pageTitle = 'Best SEO Company in Janakpuri Delhi | NK Digital Tech';
+const pageDescription = 'NK Digital Tech is the Best SEO Company in Janakpuri Delhi. We help District Centre CA firms, IT companies, visa consultants and academies win daily calls.';
+const pageCanonical = 'https://www.nkdigitaltech.net/seo-company-in-janakpuri-delhi/';
+
+const clients = [
+  {
+    name: 'Propertyways',
+    sector: 'Corporate Office & Retail Leasing',
+    region: 'Janakpuri District Centre',
+    logo: '/images/clients/propertyways.webp',
+  },
+  {
+    name: 'Vision',
+    sector: 'Enterprise IT & Optical Hardware Systems',
+    region: 'District Centre & C4E Janakpuri',
+    logo: '/images/clients/vision.webp',
+  },
+  {
+    name: 'Creative Academy',
+    sector: 'IELTS, PTE & Study Abroad Hub',
+    region: 'Janakpuri West Metro & District Centre',
+    logo: '/images/clients/creative-academy.webp',
+  },
+  {
+    name: 'VP Infra',
+    sector: 'Builder Floors & Commercial Plots',
+    region: 'Blocks A, B, C & D Janakpuri',
+    logo: '/images/clients/vp-infra.webp',
+  },
+  {
+    name: 'Aangan',
+    sector: 'Festive & Bridal Apparel Studio',
+    region: 'Block B Community Centre',
+    logo: '/images/clients/aangan.webp',
+  },
+];
+
+const services = [
+  {
+    num: '01',
+    category: 'District Centre Page One',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>`,
+    iconStyle: 'bg-sky-50 border-sky-200 text-brand-600',
+    impactStyle: 'bg-sky-50/80 border-sky-200/80 text-slate-800',
+    badgeColor: 'text-brand-600 bg-sky-100/80',
+    title: 'Janakpuri District Centre SEO & Corporate Pages',
+    body: 'We deliver focused Janakpuri District Centre SEO and CA firm SEO in Janakpuri by building fast mobile service pages for tax chambers, IT companies, commercial leasing brokers and legal offices.',
+    impact: 'Daily corporate phone enquiries and office visit bookings across Pin 110058 towers.',
+    cta: 'Website Development Company in Delhi',
+    href: '/website-development-company-in-delhi/',
+  },
+  {
+    num: '02',
+    category: 'AI Visa & Corporate Prompts',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>`,
+    iconStyle: 'bg-violet-50 border-violet-200 text-accent-600',
+    impactStyle: 'bg-violet-50/80 border-violet-200/80 text-slate-800',
+    badgeColor: 'text-accent-600 bg-violet-100/80',
+    title: 'ChatGPT, Gemini & AI Overview Citations',
+    body: 'Students and business owners in West Delhi regularly ask AI tools which study visa consultant, IELTS academy, software vendor or Chartered Accountant in Janakpuri is dependable. We structure your fees and credentials into clean JSON LD.',
+    impact: 'Direct brand mentions when callers ask ChatGPT or Gemini for trusted Janakpuri professionals.',
+    cta: 'AI SEO Company in Delhi',
+    href: '/ai-seo-company-in-delhi/',
+  },
+  {
+    num: '03',
+    category: 'Pin 110058 Map Top 3',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>`,
+    iconStyle: 'bg-emerald-50 border-emerald-200 text-emerald-600',
+    impactStyle: 'bg-emerald-50/80 border-emerald-200/80 text-slate-800',
+    badgeColor: 'text-emerald-700 bg-emerald-100/80',
+    title: 'Google Map Ranking Janakpuri & Local Pack',
+    body: 'Operating as a dedicated local SEO agency Janakpuri businesses count on, we lift your Google Map ranking Janakpuri by tuning your Google Business Profile, matching tower and block addresses and growing real client reviews.',
+    impact: 'Steady direction clicks and reception calls from Janakpuri West and East Metro commuters.',
+    cta: 'Local SEO Services in Delhi',
+    href: '/local-seo-services-in-delhi/',
+  },
+  {
+    num: '04',
+    category: 'Fee & Batch Snippets',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>`,
+    iconStyle: 'bg-amber-50 border-amber-200 text-amber-600',
+    impactStyle: 'bg-amber-50/80 border-amber-200/80 text-slate-800',
+    badgeColor: 'text-amber-700 bg-amber-100/80',
+    title: 'Direct Answer Boxes & Cost Guide Setup',
+    body: 'We write concise 40 to 60 word answers right after questions on IELTS coaching fees, Canada study visa steps, District Centre office rent or company audit charges, backed by FAQPage schema.',
+    impact: 'Position zero visibility when students and corporate teams compare fees and timings on mobile.',
+    cta: 'AEO Services in Delhi',
+    href: '/aeo-services-in-delhi/',
+  },
+  {
+    num: '05',
+    category: 'IT & Visa Authority',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>`,
+    iconStyle: 'bg-indigo-50 border-indigo-200 text-indigo-600',
+    impactStyle: 'bg-indigo-50/80 border-indigo-200/80 text-slate-800',
+    badgeColor: 'text-indigo-700 bg-indigo-100/80',
+    title: 'IT Company SEO & Immigration Consultant SEO Janakpuri',
+    body: 'Combining IT company SEO in Janakpuri with immigration consultant SEO Janakpuri, we publish B2B software case studies, visa approval records, llms.txt guides and clean Indian directory citations.',
+    impact: 'Higher B2B and student enquiry trust across Blocks A, B, C and D and District Centre chambers.',
+    cta: 'GEO Services in Delhi',
+    href: '/geo-services-in-delhi/',
+  },
+  {
+    num: '06',
+    category: 'Coaching & Retail Leads',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"/></svg>`,
+    iconStyle: 'bg-cyan-50 border-cyan-200 text-cyan-700',
+    impactStyle: 'bg-cyan-50/80 border-cyan-200/80 text-slate-800',
+    badgeColor: 'text-cyan-700 bg-cyan-100/80',
+    title: 'IELTS Coaching SEO & Digital Marketing in Janakpuri',
+    body: 'Through practical IELTS coaching SEO Janakpuri and digital marketing in Janakpuri, we build syllabus calendars, demo booking forms and Course schema that fill seats ahead of every intake.',
+    impact: 'Consistent student walk ins and WhatsApp counselling chats across West Delhi.',
+    cta: 'Best SEO Company in West Delhi',
+    href: '/best-seo-company-in-west-delhi/',
+  },
+];
+
+const comparison = [
+  {
+    metric: 'District Centre & Block Depth',
+    typical: 'Broad Delhi pages that ignore District Centre tower searches or C4E Market retail queries',
+    nk: 'Dedicated pages tailored for Janakpuri District Centre, C4E Market, Jail Road and Blocks A, B, C and D',
+  },
+  {
+    metric: 'Who Executes Your Campaign',
+    typical: 'Junior account reps forward automated rank charts while your slow pages and map pin stay broken',
+    nk: 'Senior search specialists and developers repair your site speed, schema and map profile directly',
+  },
+  {
+    metric: 'AI Visa, Tax & B2B Mentions',
+    typical: 'Wordy blog posts without fee tables or professional credentials that ChatGPT and Gemini skip over',
+    nk: 'Crisp 50 word answers, fee comparison charts, Course and ProfessionalService schema and an llms.txt file',
+  },
+  {
+    metric: 'Metro Commuter Mobile Speed',
+    typical: 'Heavy script templates taking seven seconds to open on mobile networks near Janakpuri West Metro',
+    nk: 'Lightweight WebP pages loading in under two seconds for students and executives on Blue and Magenta Lines',
+  },
+  {
+    metric: 'Pin 110058 Citation Accuracy',
+    typical: 'Low quality foreign links that harm your domain standing during Google core updates',
+    nk: 'Clean Indian B2B, education, legal and corporate directory listings aligned to Pin 110058',
+  },
+  {
+    metric: 'Full Ownership of Assets',
+    typical: 'Vendor locks your website admin login, analytics or Google Business Profile under their agency account',
+    nk: 'You retain 100 percent primary owner control of all code, content, Search Console and map listings',
+  },
+];
+
+const westCorridors = [
+  {
+    "hub": "Area 01",
+    "area": "Rajouri Garden",
+    "focus": "SEO Company in Rajouri Garden",
+    "pincode": "Pin 110027",
+    "cta": "View Dedicated Rajouri Garden Page",
+    "href": "/seo-company-in-rajouri-garden-delhi/",
+    "accent": "from-brand-500 to-sky-400",
+    "desc": "Rajouri Garden bridal wear stores, diamond jewellers and commercial properties capture prime consumer consultations."
+  },
+  {
+    "hub": "Area 02",
+    "area": "Janakpuri",
+    "focus": "SEO Company in Janakpuri",
+    "pincode": "Pin 110058",
+    "cta": "View Dedicated Janakpuri Page",
+    "href": "/seo-company-in-janakpuri-delhi/",
+    "accent": "from-accent-500 to-violet-400",
+    "desc": "Janakpuri District Centre corporate advisory firms, visa agencies and IT teams capture dominant Google search rankings."
+  },
+  {
+    "hub": "Area 03",
+    "area": "Dwarka",
+    "focus": "SEO Company in Dwarka",
+    "pincode": "Pin 110075",
+    "cta": "View Dedicated Dwarka Page",
+    "href": "/seo-company-in-dwarka-delhi/",
+    "accent": "from-cyan-500 to-teal-400",
+    "desc": "Dwarka residential property consultants, legal chambers and retail brands achieve leading local Map Pack presence."
+  },
+  {
+    "hub": "Area 04",
+    "area": "Kirti Nagar",
+    "focus": "SEO Company in Kirti Nagar",
+    "pincode": "Pin 110015",
+    "cta": "View Dedicated Kirti Nagar Page",
+    "href": "/seo-company-in-kirti-nagar-delhi/",
+    "accent": "from-emerald-500 to-green-400",
+    "desc": "Kirti Nagar furniture flagships, modular kitchen makers and architectural studios gain consistent qualified visitors."
+  },
+  {
+    "hub": "Area 05",
+    "area": "Punjabi Bagh",
+    "focus": "SEO Company in Punjabi Bagh",
+    "pincode": "Pin 110026",
+    "cta": "View Dedicated Punjabi Bagh Page",
+    "href": "/seo-company-in-punjabi-bagh-delhi/",
+    "accent": "from-indigo-500 to-blue-400",
+    "desc": "Punjabi Bagh Club Road commercial hubs, wealth consultants and builder floor developers win verified client leads."
+  },
+  {
+    "hub": "Area 06",
+    "area": "Paschim Vihar",
+    "focus": "SEO Company in Paschim Vihar",
+    "pincode": "Pin 110063",
+    "cta": "View Dedicated Paschim Vihar Page",
+    "href": "/seo-company-in-paschim-vihar-delhi/",
+    "accent": "from-violet-500 to-purple-400",
+    "desc": "Paschim Vihar CA chambers, coaching centres, property developers and retail markets capture steady inbound calls."
+  },
+  {
+    "hub": "Area 07",
+    "area": "Tilak Nagar",
+    "focus": "SEO Company in Tilak Nagar",
+    "pincode": "Pin 110018",
+    "cta": "View Dedicated Tilak Nagar Page",
+    "href": "/seo-company-in-tilak-nagar-delhi/",
+    "accent": "from-amber-500 to-orange-400",
+    "desc": "Tilak Nagar Jail Road modular interior shops, visa advisors and coaching hubs capture top Google three pack ranks."
+  },
+  {
+    "hub": "Area 08",
+    "area": "Mayapuri Industrial Area",
+    "focus": "SEO Company in Mayapuri",
+    "pincode": "Pin 110064",
+    "cta": "View Dedicated Mayapuri Page",
+    "href": "/seo-company-in-mayapuri-delhi/",
+    "accent": "from-teal-500 to-emerald-400",
+    "desc": "Mayapuri Phase 1 and Phase 2 industrial workshops, tooling plants and packaging makers win steady vendor RFQs."
+  },
+  {
+    "hub": "Area 09",
+    "area": "Naraina",
+    "focus": "SEO Company in Naraina",
+    "pincode": "Pin 110028",
+    "cta": "View Dedicated Naraina Page",
+    "href": "/seo-company-in-naraina-delhi/",
+    "accent": "from-rose-500 to-pink-400",
+    "desc": "Naraina manufacturing units, industrial presses, steel merchants and corporate offices capture commercial orders."
+  },
+  {
+    "hub": "Area 10",
+    "area": "Vikaspuri",
+    "focus": "SEO Company in Vikaspuri",
+    "pincode": "Pin 110018",
+    "cta": "View Dedicated Vikaspuri Page",
+    "href": "/seo-company-in-vikaspuri-delhi/",
+    "accent": "from-sky-500 to-cyan-400",
+    "desc": "Vikaspuri coaching institutes, CA chambers, residential flat brokers and interior studios capture daily prospects."
+  },
+  {
+    "hub": "Area 11",
+    "area": "Uttam Nagar",
+    "focus": "SEO Company in Uttam Nagar",
+    "pincode": "Pin 110059",
+    "cta": "View Dedicated Uttam Nagar Page",
+    "href": "/seo-company-in-uttam-nagar-delhi/",
+    "accent": "from-blue-500 to-indigo-400",
+    "desc": "Uttam Nagar Najafgarh Road builder floor firms, education centres and local retailers secure qualified phone leads."
+  },
+  {
+    "hub": "Area 12",
+    "area": "Patel Nagar",
+    "focus": "SEO Company in Patel Nagar",
+    "pincode": "Pin 110008",
+    "cta": "View Dedicated Patel Nagar Page",
+    "href": "/seo-company-in-patel-nagar-delhi/",
+    "accent": "from-fuchsia-500 to-rose-400",
+    "desc": "Patel Nagar corporate offices, tax advisors, UPSC coaching academies and CA chambers capture leading page positions."
+  }
+];
+
+
+
+
+const industries = [
+  {
+    sector: 'Study Abroad & PR Visas',
+    title: 'Immigration & Overseas Education Firms',
+    focus: 'With targeted immigration consultant SEO Janakpuri and Janakpuri District Centre SEO, we rank country specific study visa guides, PR eligibility calculators and student reviews on Google page one.',
+    outcome: 'Daily student walk ins and verified passport holder counselling calls.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>`,
+    accentBorder: 'border-t-brand-500',
+    iconBg: 'bg-sky-50 text-brand-600 border-sky-200',
+  },
+  {
+    sector: 'IELTS, PTE & Exam Academies',
+    title: 'Language, Banking & CUET Coaching',
+    focus: 'Our IELTS coaching SEO Janakpuri playbook ranks batch schedules, mock test pages and fee structures so students travelling on the Blue and Magenta Lines pick your institute.',
+    outcome: 'Full classroom batches and daily WhatsApp admission enquiries.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"/></svg>`,
+    accentBorder: 'border-t-cyan-500',
+    iconBg: 'bg-cyan-50 text-cyan-700 border-cyan-200',
+  },
+  {
+    sector: 'B2B Export & Trading Houses',
+    title: 'Wholesale Distributors & Merchandisers',
+    focus: 'We build high speed product specification tables, bulk trade inquiry forms and export compliance pages for merchant exporters and wholesale distributors based in Janakpuri.',
+    outcome: 'Steady B2B bulk procurement RFQs from across India and overseas.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>`,
+    accentBorder: 'border-t-red-500',
+    iconBg: 'bg-red-50 text-red-600 border-red-200',
+  },
+  {
+    sector: 'CA, Audit & Tax Chambers',
+    title: 'Chartered Accountants & CS Firms',
+    focus: 'Using dedicated CA firm SEO in Janakpuri, we rank GST audit, company registration, trademark filing, NRI taxation and MSME loan advisory pages for District Centre firms.',
+    outcome: 'Recurring corporate tax retainers from West Delhi traders and factory owners.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>`,
+    accentBorder: 'border-t-indigo-500',
+    iconBg: 'bg-indigo-50 text-indigo-600 border-indigo-200',
+  },
+  {
+    sector: 'Coworking & Managed Offices',
+    title: 'Shared Desks, Virtual Offices & Meeting Rooms',
+    focus: 'We boost your Google Map ranking Janakpuri for GST virtual office registration, plug and play cabins, conference room bookings and coworking seats in District Centre.',
+    outcome: 'Daily workspace tour bookings and annual corporate cabin leases.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>`,
+    accentBorder: 'border-t-emerald-500',
+    iconBg: 'bg-emerald-50 text-emerald-600 border-emerald-200',
+  },
+  {
+    sector: 'Builder Floors & Office Leasing',
+    title: 'Property Dealers & Commercial Brokers',
+    focus: 'We build block wise floor plan pages for 3 BHK and 4 BHK builder floors across Blocks A, B, C and D along with commercial office leasing guides in Janakpuri District Centre.',
+    outcome: 'Direct family site visits and corporate tenant lease signups.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>`,
+    accentBorder: 'border-t-amber-500',
+    iconBg: 'bg-amber-50 text-amber-600 border-amber-200',
+  },
+  {
+    sector: 'IT, SaaS & Web Studios',
+    title: 'Software, ERP & Cloud Agencies',
+    focus: 'Many IT teams and software vendors operate from Janakpuri District Centre. Through focused IT company SEO in Janakpuri, we write B2B solution pages that win demo requests across India.',
+    outcome: 'Qualified inbound software demos and recurring IT support contracts.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>`,
+    accentBorder: 'border-t-violet-500',
+    iconBg: 'bg-violet-50 text-accent-600 border-violet-200',
+  },
+  {
+    sector: 'Legal & Registry Advocates',
+    title: 'Civil, Property & Corporate Lawyers',
+    focus: 'We publish Bar Council compliant practice pages for property registration, commercial contracts, civil disputes and arbitration chambers located in Janakpuri District Centre.',
+    outcome: 'First page Google visibility and booked client chamber consultations.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"/></svg>`,
+    accentBorder: 'border-t-teal-500',
+    iconBg: 'bg-teal-50 text-teal-700 border-teal-200',
+  },
+  {
+    sector: 'Jewellery, Boutiques & Salons',
+    title: 'C4E & Block B Retail Showrooms',
+    focus: 'We rank neighbourhood gold jewellers, designer boutiques, bridal makeup studios and optical shops in C4E Market and Block B Community Centre on Google Maps.',
+    outcome: 'Busy evening and weekend store footfall from Pin 110058 families.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>`,
+    accentBorder: 'border-t-pink-500',
+    iconBg: 'bg-pink-50 text-pink-600 border-pink-200',
+  },
+  {
+    sector: 'Jail Road Interiors & Modular',
+    title: 'Furniture & Home Renovation Studios',
+    focus: 'Along the Jail Road and Janakpuri border, we rank custom sofa showrooms, modular kitchen dealers and turnkey flat interior contractors for home renovation searches.',
+    outcome: 'Steady site measurement requests and residential interior projects.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"/></svg>`,
+    accentBorder: 'border-t-orange-500',
+    iconBg: 'bg-orange-50 text-orange-600 border-orange-200',
+  },
+  {
+    sector: 'Preschools, Daycare & Gyms',
+    title: 'Play Schools & Fitness Clubs',
+    focus: 'Young families in Janakpuri Blocks A to D search mobile maps for safe preschools, activity centres, yoga studios and gyms. We rank your facility in the top three map spots.',
+    outcome: 'Higher school admission tours and monthly gym membership signups.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>`,
+    accentBorder: 'border-t-rose-500',
+    iconBg: 'bg-rose-50 text-rose-600 border-rose-200',
+  },
+  {
+    sector: 'Cafes, Bakeries & Banquets',
+    title: 'District Centre Dining & Event Venues',
+    focus: 'We optimise menu pages, corporate party packages and banquet hall capacities across District Centre and Block B so local companies and families book directly.',
+    outcome: 'Increased weekend dining reservations and private event bookings.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>`,
+    accentBorder: 'border-t-purple-500',
+    iconBg: 'bg-purple-50 text-purple-600 border-purple-200',
+  },
+];
+
+const testimonials = [
+  {
+    name: 'Harpreet Singh Arora',
+    title: 'Senior Partner',
+    company: 'Propertyways',
+    sector: 'Corporate & Retail Leasing, Janakpuri District Centre',
+    metrics: [
+      '3.8x growth in verified District Centre office and shop enquiries',
+      'Top 3 Google Map Pack placement in Janakpuri District Centre',
+      'Regular brand citations on Perplexity and ChatGPT for rent queries',
+    ],
+    quote: 'Janakpuri District Centre has dozens of property brokers, and generic property portals were sending us low quality leads. NK Digital Tech executed focused Janakpuri District Centre SEO, built tower wise leasing pages and lifted our map pin into the top three. Corporate tenants now call us directly.',
+    logo: '/images/clients/propertyways.webp',
+  },
+  {
+    name: 'Rajeev Chhabra',
+    title: 'Managing Director',
+    company: 'Vision',
+    sector: 'Enterprise IT & Optical Hardware Systems, District Centre Janakpuri',
+    metrics: [
+      '280% rise in direct B2B hardware and IT procurement calls',
+      'Page one Google spots for 45 Janakpuri IT and commercial searches',
+      'Position zero answer boxes for enterprise hardware pricing queries',
+    ],
+    quote: 'Corporate offices and institutes across Janakpuri read Google reviews and AI Overviews before choosing a technology and hardware partner. NK Digital Tech delivered clean IT company SEO in Janakpuri with B2B solution guides and product schema, doubling our weekly RFQs inside sixteen weeks.',
+    logo: '/images/clients/vision.webp',
+  },
+  {
+    name: 'Gaurav Manchanda',
+    title: 'Academic Head',
+    company: 'Creative Academy',
+    sector: 'IELTS, PTE & Study Visa Hub, Janakpuri West Metro',
+    metrics: [
+      '260% jump in student demo class calls and visa profile checks',
+      'Top three map visibility near Janakpuri West Metro station',
+      'Named on ChatGPT when students compare West Delhi IELTS coaching',
+    ],
+    quote: 'Students riding the Blue and Magenta Lines search on their phones for IELTS batches and study visa advisors in Janakpuri. NK Digital Tech sped up our mobile site and added clear fee tables through IELTS coaching SEO Janakpuri, keeping our counselling cabins full every week.',
+    logo: '/images/clients/creative-academy.webp',
+  },
+  {
+    name: 'Sandeep Oberoi',
+    title: 'Director',
+    company: 'VP Infra',
+    sector: 'Builder Floors & Residential Advisory, Blocks A to D',
+    metrics: [
+      '3.1x increase in weekend 3 BHK and 4 BHK builder floor visits',
+      'First page rankings for Janakpuri residential property keywords',
+      'Direct buyer calls from upgrading West Delhi families',
+    ],
+    quote: 'Home buyers searching in Janakpuri look up specific blocks like Block B or C4E on Google. NK Digital Tech created fast block wise property pages that bring us serious family buyers every week without portal middlemen.',
+    logo: '/images/clients/vp-infra.webp',
+  },
+];
+
+const stages = [
+  {
+    num: 'Phase 01',
+    step: '01',
+    title: 'Technical Speed Audit & Pin 110058 SERP Benchmark',
+    body: 'We test your mobile page speed, crawl health and Google Business Profile accuracy while studying which CA firms, visa consultants, IT companies and coaching institutes hold top spots across Janakpuri District Centre and Blocks A to D.',
+    accent: 'from-brand-600 to-sky-500',
+  },
+  {
+    num: 'Phase 02',
+    step: '02',
+    title: 'Six Sprint District Centre, B2B & Block Keyword Plan',
+    body: 'You get a clear 90 day schedule divided into six fortnightly sprints. We map every advisory, visa, B2B and coaching keyword, block wise landing page, 50 word fee answer and JSON LD schema block.',
+    accent: 'from-accent-600 to-violet-500',
+  },
+  {
+    num: 'Phase 03',
+    step: '03',
+    title: 'In House Code Fixes, Expert Copy & Local Citations',
+    body: 'Our own developers and writers fix slow scripts, publish simple buyer and corporate guides, add LocalBusiness, Course and ProfessionalService schema, deploy llms.txt and align your Pin 110058 directory citations.',
+    accent: 'from-cyan-600 to-teal-500',
+  },
+  {
+    num: 'Phase 04',
+    step: '04',
+    title: 'Biweekly Call Reviews & Live AI Citation Tracking',
+    body: 'Every two weeks we review your Google Map direction clicks, reception phone calls, WhatsApp enquiries and live brand appearances on ChatGPT, Gemini and Google AI Overviews.',
+    accent: 'from-emerald-600 to-green-500',
+  },
+];
+
+const faqs = [
+  {
+    q: 'Why do B2B firms, CA offices and academies choose NK Digital Tech as their SEO Company in Janakpuri Delhi?',
+    a: 'Founders choose NK Digital Tech as their SEO Company in Janakpuri Delhi because we tie technical speed repairs, block specific service pages and Google Business Profile updates directly to reception phone calls and walk ins. Our senior team handles technical SEO, Google Map Pack work, AEO and GEO across Janakpuri District Centre, C4E Market and Blocks A, B, C and D.',
+  },
+  {
+    q: 'How much should I budget monthly for SEO services in Janakpuri?',
+    a: 'Monthly retainers for SEO services in Janakpuri typically run from ₹15,000 to ₹40,000 depending on your page count, current website health and competition. A CA chamber, interior studio or retail store in Block A or C4E fits comfortably in a focused local tier, while multi country visa consultancies, IT agencies and IELTS academies invest in broader campaigns.',
+  },
+  {
+    q: 'How does Janakpuri District Centre SEO help CA offices, IT firms and visa consultants?',
+    a: 'Janakpuri District Centre houses hundreds of offices competing for the same callers. Our Janakpuri District Centre SEO and immigration consultant SEO Janakpuri playbooks build fast service pages, transparent fee tables and top three map pins so clients reach your cabin first.',
+  },
+  {
+    q: 'How long does it take to improve our Google Map ranking Janakpuri?',
+    a: 'Cleaning up duplicate Pin 110058 directory citations, adding verified office or showroom photos and upgrading your Google Business Profile usually lifts your Google Map ranking Janakpuri within four to eight weeks. Competitive page one website rankings and AI citations build steadily over three to five months.',
+  },
+  {
+    q: 'How can our Janakpuri IT company, coaching centre or CA firm appear on ChatGPT and Gemini?',
+    a: 'AI engines like ChatGPT, Gemini and Google AI Overviews recommend Janakpuri businesses that load in under two seconds, answer fee and service questions in 40 to 60 words, display verified professional credentials, use JSON LD schema and host an llms.txt file.',
+  },
+  {
+    q: 'Do you offer specialized IT company SEO in Janakpuri and IELTS coaching SEO Janakpuri?',
+    a: 'Yes. We execute targeted IT company SEO in Janakpuri for software vendors, ERP consultants and B2B firms in District Centre alongside high converting IELTS coaching SEO Janakpuri for test prep and language academies near Janakpuri West Metro.',
+  },
+  {
+    q: 'Why work with a local SEO agency Janakpuri instead of relying only on paid ads?',
+    a: 'Paid ads stop generating calls the moment your daily budget runs out. Partnering with a dedicated local SEO agency Janakpuri for digital marketing in Janakpuri builds permanent page one rankings and map pack trust that bring daily enquiries year round.',
+  },
+  {
+    q: 'Will we retain 100% admin ownership of our website, content and Google Business Profile?',
+    a: 'Yes, always. Your domain registration, website code, published pages, Google Search Console and Google Business Profile stay 100% under your own primary admin account with zero lock in.',
+  },
+];
+
+const trustStrip = [
+  'District Centre & Blocks A to D',
+  'Page One Google Rankings',
+  'Janakpuri Map Pack Top 3',
+  'Cited on ChatGPT & Gemini',
+  'Corporate, Visa & Course Schema',
+  'Clear Fee & Timing Answers',
+  'Under Two Second Mobile Load',
+  '100% Client Admin Ownership',
+];
+
+const seoJanakpuriSchemaLocalBusiness = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "NK Digital Tech Best SEO Company in Janakpuri Delhi",
+  "url": "https://www.nkdigitaltech.net/seo-company-in-janakpuri-delhi/",
+  "logo": "https://www.nkdigitaltech.net/images/seo-janakpuri/hero-seo-company-janakpuri.webp",
+  "image": "https://www.nkdigitaltech.net/images/seo-janakpuri/hero-seo-company-janakpuri.webp",
+  "description": "NK Digital Tech is the Best SEO Company in Janakpuri Delhi delivering District Centre corporate SEO, visa and IELTS institute rankings, IT company SEO, Google Map Pack visibility, AEO and GEO across Pin 110058.",
+  "email": "nkdigitaltech1@gmail.com",
+  "priceRange": "₹15,000 to ₹40,000+",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Janakpuri",
+    "addressRegion": "Delhi",
+    "postalCode": "110058",
+    "addressCountry": "IN"
+  },
+  "areaServed": [
+    "Janakpuri",
+    "Janakpuri District Centre",
+    "Janakpuri Block A",
+    "Janakpuri Block B",
+    "Janakpuri Block C",
+    "C4E Market Janakpuri",
+    "Janakpuri Block D",
+    "Possangipur",
+    "West Delhi"
+  ],
+  "serviceType": [
+    "SEO Services in Janakpuri",
+    "Janakpuri District Centre SEO",
+    "Immigration Consultant SEO Janakpuri",
+    "IT Company SEO in Janakpuri",
+    "CA Firm SEO in Janakpuri",
+    "IELTS Coaching SEO Janakpuri"
+  ]
+});
+
+const seoJanakpuriSchemaFAQ = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map((item) => ({
+    "@type": "Question",
+    "name": item.q,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": item.a
+    }
+  }))
+});
+---
+
+<Layout
+  title={pageTitle}
+  description={pageDescription}
+  canonical={pageCanonical}
+  ogImage="https://www.nkdigitaltech.net/images/seo-janakpuri/hero-seo-company-janakpuri.webp"
+  preloadImage="/images/seo-janakpuri/hero-seo-company-janakpuri.webp"
+  hideLocationsNav={false}
+  customSchemaLocalBusiness={seoJanakpuriSchemaLocalBusiness}
+  customSchemaFAQ={seoJanakpuriSchemaFAQ}
+  utilityTagline="Best SEO Company in Janakpuri Delhi • District Centre, C4E Market & Blocks A to D"
+  brandSubtitle="Janakpuri • Corporate, B2B & Academy SEO"
+  footerBio="Leading SEO Company in Janakpuri Delhi helping District Centre CA firms, study visa consultants, IELTS academies, IT companies and property dealers win page one Google rankings, map calls and AI citations."
+  footerCoreDisciplines={[
+    { label: 'Best SEO Company in West Delhi', href: '/best-seo-company-in-west-delhi/' },
+    { label: 'Best SEO Company in Delhi', href: '/best-seo-company-in-delhi/' },
+    { label: 'Local SEO Services in Delhi', href: '/local-seo-services-in-delhi/' },
+    { label: 'AI SEO Company in Delhi', href: '/ai-seo-company-in-delhi/' },
+    { label: 'AEO Services in Delhi', href: '/aeo-services-in-delhi/' },
+    { label: 'GEO Services in Delhi', href: '/geo-services-in-delhi/' },
+    { label: 'Website Development Company in Delhi', href: '/website-development-company-in-delhi/' },
+  ]}
+  footerTagline="Best SEO Company in Janakpuri Delhi • Pin 110058 District Centre & Corporate Growth"
+>
+
+  <!-- =====================================================================
+       SECTION 1: HERO (DARK SURFACE WITH UNIQUE JANAKPURI SEO HERO IMAGE)
+  ===================================================================== -->
+  <section class="relative surface-dark overflow-hidden pt-5 pb-9 sm:pt-16 sm:pb-20 lg:pt-20 lg:pb-24 border-b border-slate-800/80">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="absolute inset-0 mesh-glow pointer-events-none"></div>
+    <div class="absolute -top-24 -left-24 sm:-top-36 sm:-left-36 w-56 h-56 sm:w-96 sm:h-96 bg-brand-500/20 rounded-full blur-[80px] sm:blur-[130px] pointer-events-none"></div>
+    <div class="absolute top-1/4 -right-24 sm:-right-36 w-56 h-56 sm:w-96 sm:h-96 bg-accent-500/20 rounded-full blur-[80px] sm:blur-[130px] pointer-events-none"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns: Headline & CTA -->
+        <div class="lg:col-span-7 text-left min-w-0">
+          <div class="badge-dark mb-3 sm:mb-6 py-1.5 px-2.5 sm:px-3.5">
+            <span class="w-2 h-2 rounded-full bg-brand-400 animate-ping flex-shrink-0"></span>
+            <span class="min-w-0 break-words">District Centre &bull; Blocks A to D &bull; C4E Market &bull; Metro Interchange</span>
+          </div>
+
+          <h1 class="font-display text-[clamp(1.75rem,7vw,2.4rem)] sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-[1.14] sm:leading-[1.1] mb-3.5 sm:mb-6 text-glow">
+            Best SEO Company in <br class="hidden sm:inline" />
+            <span class="gradient-text-light">Janakpuri Delhi</span>
+          </h1>
+
+          <p class="text-[13.5px] sm:text-base md:text-lg text-slate-300 leading-[1.68] sm:leading-relaxed mb-5 sm:mb-8 font-normal text-justify hyphens-auto [text-align-last:left]">
+            Partnering with a trusted <strong class="text-white font-semibold">SEO Company in Janakpuri Delhi</strong> helps District Centre CA firms, study visa consultants, IELTS academies, IT companies and property advisors win daily enquiries. We build fast websites, secure top Google Map rankings and get your firm cited on ChatGPT.
+          </p>
+
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-4 mb-5 sm:mb-10">
+            <a href="#contact" class="btn-primary w-full sm:w-auto min-h-[50px] text-[13.5px] sm:text-base px-4 sm:px-8 py-3.5 sm:py-4">
+              <span>Get Your Free Janakpuri SEO Audit</span>
+              <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+              </svg>
+            </a>
+            <a href="#services" class="btn-secondary-dark w-full sm:w-auto min-h-[48px] text-[13.5px] sm:text-base px-4 sm:px-7 py-3.5 sm:py-4">
+              <span>View Janakpuri SEO Services</span>
+            </a>
+          </div>
+
+          <!-- Trust Verification Strip -->
+          <div class="pt-4 sm:pt-6 border-t border-slate-800/80">
+            <div class="grid grid-cols-2 sm:flex sm:flex-wrap items-stretch sm:items-center gap-2">
+              {trustStrip.map((item) => (
+                <span class="px-2.5 sm:px-3 py-2 sm:py-1.5 min-h-[42px] sm:min-h-0 rounded-lg bg-slate-900/90 border border-slate-800 text-[11px] sm:text-xs text-slate-300 font-medium flex items-center justify-center sm:justify-start text-center sm:text-left leading-tight break-words">
+                  {item}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Unique Janakpuri SEO Hero Image -->
+        <div class="lg:col-span-5 min-w-0">
+          <div class="relative rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-700/80 shadow-2xl shadow-brand-500/15 bg-slate-900 group">
+            <div class="relative">
+              <img
+                src="/images/seo-janakpuri/hero-seo-company-janakpuri.webp"
+                alt="Best SEO Company in Janakpuri Delhi Consultants Reviewing District Centre Map Rankings"
+                width="960"
+                height="540"
+                sizes="(max-width: 1024px) 100vw, 42vw"
+                fetchpriority="high"
+                decoding="async"
+                class="w-full aspect-[16/9] sm:aspect-auto sm:h-72 md:h-[380px] lg:h-[400px] object-cover object-center sm:group-hover:scale-105 transition-transform duration-500"
+              />
+              <div class="hidden sm:block absolute inset-0 bg-gradient-to-t from-[#050a14] via-transparent to-transparent opacity-80"></div>
+            </div>
+            <div class="relative sm:absolute sm:bottom-4 sm:left-4 sm:right-4 glass-card border-t sm:border border-slate-800 sm:rounded-2xl p-3.5 sm:p-4">
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-1">
+                <span class="text-xs font-bold text-white">Pin 110058 Search &amp; Map Growth</span>
+                <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-400">
+                  <span class="w-2 h-2 rounded-full bg-emerald-400 flex-shrink-0"></span>
+                  Verified Daily Calls
+                </span>
+              </div>
+              <p class="text-[11px] sm:text-xs text-slate-300 text-justify hyphens-auto [text-align-last:left] leading-relaxed">
+                Helping District Centre firms, visa advisors, IELTS academies and IT offices win daily calls and walk ins.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 2: INTRODUCTION (CRISP WHITE CONTRAST SECTION + TEAM IMAGE)
+  ===================================================================== -->
+  <section class="relative surface-white overflow-hidden py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns -->
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-light mb-3.5 sm:mb-4">Pin 110058 Corporate &amp; Commercial Hub</div>
+          <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-4 sm:mb-6">
+            Why Local Founders Pick the Best SEO Company in Janakpuri Delhi <span class="gradient-text-dark">for Daily Client Calls</span>
+          </h2>
+          <div class="space-y-4 sm:space-y-5 text-slate-700 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            <p>
+              NK Digital Tech works as the <strong>Best SEO Company in Janakpuri Delhi</strong> for District Centre CA chambers, study abroad consultancies, IELTS institutes, IT companies and builder floor advisors across Blocks A, B, C and D. We combine fast mobile pages, verified map pins and clear fee answers so callers contact your reception first.
+            </p>
+            <p>
+              Instead of losing leads to cheap link vendors, your practice gets direct support from our regional hub as the <a href="/best-seo-company-in-west-delhi/" class="text-brand-600 font-semibold hover:underline">Best SEO Company in West Delhi</a> alongside our citywide systems from the <a href="/best-seo-company-in-delhi/" class="text-brand-600 font-semibold hover:underline">Best SEO Company in Delhi</a> and <a href="/local-seo-services-in-delhi/" class="text-brand-600 font-semibold hover:underline">Local SEO Services in Delhi</a> for steady daily enquiries.
+            </p>
+          </div>
+          <div class="mt-6 sm:mt-8 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
+            <a href="#contact" class="btn-primary w-full sm:w-auto min-h-[48px]">
+              <span>Talk to a Janakpuri SEO Specialist</span>
+              <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+              </svg>
+            </a>
+            <a href="#why-us" class="btn-secondary-light w-full sm:w-auto min-h-[48px]">
+              <span>See How We Differ</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Unique Janakpuri SEO Team Image + Stats -->
+        <div class="lg:col-span-5 space-y-4 sm:space-y-5 min-w-0">
+          <div class="rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-200 shadow-lg bg-slate-100">
+            <img
+              src="/images/seo-janakpuri/seo-agency-team-janakpuri.webp"
+              alt="Local SEO Agency Janakpuri Team Planning District Centre and B2B Campaigns"
+              width="800"
+              height="533"
+              sizes="(max-width: 1024px) 100vw, 42vw"
+              class="w-full aspect-[16/9] sm:aspect-auto sm:h-64 lg:h-72 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="grid grid-cols-2 gap-2.5 sm:gap-4">
+            {[
+              { val: '280%', label: 'Inbound Call Lift', sub: 'Across Pin 110058 offices' },
+              { val: '6 Sprints', label: '90 Day Work Plan', sub: 'Reviewed every fourteen days' },
+              { val: 'Top 3', label: 'Metro & Tower Maps', sub: 'District Centre to C4E Market' },
+              { val: '100%', label: 'Client Ownership', sub: 'Your code, listings & data' },
+            ].map((stat) => (
+              <div class="elevated-card rounded-xl sm:rounded-2xl p-3 sm:p-4 min-w-0 flex flex-col justify-between">
+                <div class="font-display font-black text-[1.1rem] sm:text-2xl text-brand-600 mb-0.5 leading-tight break-words">{stat.val}</div>
+                <div class="text-[11px] sm:text-xs font-bold text-slate-900 leading-snug">{stat.label}</div>
+                <div class="text-[10.5px] sm:text-[11px] text-slate-500 leading-snug mt-0.5">{stat.sub}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 3: PROBLEM STATEMENT (DEEP INDIGO DARK CONTRAST SECTION)
+  ===================================================================== -->
+  <section class="relative surface-indigo py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="max-w-7xl mx-auto relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns -->
+        <div class="lg:col-span-7 min-w-0">
+          <div class="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-3.5 py-1 sm:py-1.5 rounded-full text-[10px] sm:text-xs font-bold uppercase tracking-wider sm:tracking-widest bg-amber-500/10 border border-amber-500/30 text-amber-300 max-w-full leading-snug mb-4 sm:mb-5">
+            <svg class="w-4 h-4 text-amber-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+            </svg>
+            <span>Why Offices &amp; Showrooms Miss Callers</span>
+          </div>
+
+          <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-white tracking-tight leading-[1.22] sm:leading-tight mb-4 sm:mb-6">
+            Why Experienced Janakpuri Firms &amp; Showrooms Lose Out on Mobile Search
+          </h2>
+
+          <div class="space-y-4 sm:space-y-5 text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            <p>
+              Inside Janakpuri District Centre, Block B and C4E Market, dozens of skilled CA offices, visa consultancies, IELTS institutes and IT firms sit in the same towers or lanes. When your website loads slowly on mobile data and your Google Business Profile lacks verified reviews or clear fee answers, callers exiting Janakpuri West Metro pick competing listings first.
+            </p>
+            <p>
+              Using our <a href="/ai-seo-company-in-delhi/" class="text-sky-300 font-semibold hover:underline">AI SEO Company in Delhi</a> and <a href="/aeo-services-in-delhi/" class="text-sky-300 font-semibold hover:underline">AEO Services in Delhi</a> methods, we speed up your mobile pages, embed Course, ProfessionalService and LocalBusiness schema and publish clear fee guides so callers contact your desk first.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Diagnostic Comparison Cards -->
+        <div class="lg:col-span-5 space-y-3.5 sm:space-y-4 min-w-0">
+          <div class="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6 border-l-4 border-l-rose-500">
+            <div class="flex flex-wrap items-center justify-between gap-1.5 mb-2">
+              <span class="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-rose-400">Typical Local Vendor</span>
+              <span class="text-[11px] sm:text-xs text-slate-400">Missed Enquiries</span>
+            </div>
+            <h3 class="font-display font-bold text-[15px] sm:text-base text-white mb-2 leading-snug">Slow Pages, Vague Service Text &amp; Buried Map Pins</h3>
+            <p class="text-xs text-slate-300 leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+              Never shows up when a student or corporate buyer in Janakpuri checks Google Maps or asks ChatGPT for the best local advisor.
+            </p>
+          </div>
+
+          <div class="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6 border-l-4 border-l-emerald-400">
+            <div class="flex flex-wrap items-center justify-between gap-1.5 mb-2">
+              <span class="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-emerald-400">NK Digital Tech System</span>
+              <span class="text-[11px] sm:text-xs text-brand-300">Daily Reception Calls</span>
+            </div>
+            <h3 class="font-display font-bold text-[15px] sm:text-base text-white mb-2 leading-snug">Fast Mobile Pages, Clear Fee Tables &amp; Top 3 Maps</h3>
+            <p class="text-xs text-slate-300 leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+              Unites fast mobile engineering, verified Pin 110058 citations, structured schema and 50 word answers that drive daily calls.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 4: SERVICES (LIGHT COOL ALABASTER CONTRAST + TECHNICAL IMAGE)
+  ===================================================================== -->
+  <section id="services" class="relative surface-cool overflow-hidden scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 items-center mb-9 sm:mb-16">
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-light mb-3">Six Corporate &amp; B2B Pillars</div>
+          <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+            Complete SEO Services in Janakpuri
+          </h2>
+          <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            Our <strong>SEO services in Janakpuri</strong> combine technical speed fixes, Google Business Profile updates, direct fee answer blocks and <a href="/geo-services-in-delhi/" class="text-brand-600 font-semibold hover:underline">GEO Services in Delhi</a> in one clear 90 day plan. Every sprint moves your pages higher on Google while earning mentions on ChatGPT, Gemini and AI Overviews.
+          </p>
+        </div>
+        <div class="lg:col-span-5 min-w-0">
+          <div class="rounded-2xl overflow-hidden border border-slate-200 shadow-md bg-white">
+            <img
+              src="/images/seo-janakpuri/technical-ai-seo-services-janakpuri.webp"
+              alt="SEO Services in Janakpuri Engineers Auditing Mobile Speed and Structured Schema"
+              width="800"
+              height="450"
+              sizes="(max-width: 1024px) 100vw, 42vw"
+              class="w-full aspect-[16/9] sm:aspect-auto sm:h-56 lg:h-64 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- 3 Columns x 2 Rows Grid Layout -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-7">
+        {services.map((s) => (
+          <div class="elevated-card rounded-2xl p-4 sm:p-7 flex flex-col justify-between group sm:hover:-translate-y-1 min-w-0">
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-4 sm:mb-6">
+                <div class={`w-11 h-11 sm:w-12 sm:h-12 rounded-xl border flex items-center justify-center flex-shrink-0 ${s.iconStyle}`}>
+                  <Fragment set:html={s.icon} />
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class={`text-[10.5px] sm:text-[11px] font-semibold px-2.5 py-1 rounded-md ${s.badgeColor}`}>
+                    {s.category}
+                  </span>
+                  <span class="font-display font-black text-base sm:text-lg text-slate-300">{s.num}</span>
+                </div>
+              </div>
+
+              <h3 class="font-display font-bold text-[17px] sm:text-xl text-slate-900 mb-2.5 sm:mb-3 leading-snug group-hover:text-brand-600 transition-colors">
+                {s.title}
+              </h3>
+
+              <p class="text-slate-600 text-[13px] sm:text-sm leading-relaxed mb-4 sm:mb-6 text-justify hyphens-auto [text-align-last:left]">
+                {s.body}
+              </p>
+            </div>
+
+            <div>
+              <div class={`rounded-xl border p-3.5 sm:p-4 mb-3.5 sm:mb-5 ${s.impactStyle}`}>
+                <div class="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-slate-900 mb-1">
+                  <svg class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                  </svg>
+                  <span>Janakpuri Impact</span>
+                </div>
+                <p class="text-xs text-slate-700 leading-relaxed font-medium text-justify hyphens-auto [text-align-last:left]">
+                  {s.impact}
+                </p>
+              </div>
+
+              <a href={s.href} class="w-full sm:w-auto inline-flex items-center justify-between sm:justify-start gap-2 rounded-xl sm:rounded-none bg-slate-50 active:bg-sky-50 sm:bg-transparent border border-slate-200/80 sm:border-0 px-3.5 sm:px-0 py-2.5 min-h-[46px] sm:min-h-0 text-xs font-bold text-brand-600 hover:text-brand-700 group-hover:gap-3 transition-all">
+                <span>{s.cta}</span>
+                <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 5: WHY NK DIGITAL TECH (CRISP WHITE CONTRAST SECTION)
+  ===================================================================== -->
+  <section id="why-us" class="relative surface-white overflow-hidden scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-14 text-left sm:text-center">
+        <div class="badge-light mb-3">Direct Senior Accountability</div>
+        <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+          Why the Best SEO Company in Janakpuri Beats Cheap Vendors
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed mb-4 text-justify hyphens-auto [text-align-last:left]">
+          Choosing the <strong>best SEO company in Janakpuri</strong> comes down to who touches your website code and whether monthly work increases real reception calls. At NK Digital Tech, senior search specialists update your service pages, schema and map listing directly while you keep 100% ownership.
+        </p>
+        <p class="text-slate-700 font-semibold text-xs sm:text-sm">
+          Side by side look at how we run Janakpuri search campaigns:
+        </p>
+      </div>
+
+      <!-- Desktop Comparison Matrix -->
+      <div class="hidden md:block overflow-hidden rounded-2xl border border-slate-200 shadow-lg">
+        <table class="w-full text-left border-collapse">
+          <thead>
+            <tr class="bg-slate-900 text-white">
+              <th class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-slate-300 w-1/4">
+                Comparison Factor
+              </th>
+              <th class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-rose-300 w-[37.5%] border-l border-slate-800">
+                Typical Local Vendor
+              </th>
+              <th class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-brand-300 w-[37.5%] border-l border-slate-800 bg-slate-950">
+                NK Digital Tech Janakpuri
+              </th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200 text-sm">
+            {comparison.map((row, idx) => (
+              <tr class={idx % 2 === 0 ? 'bg-white' : 'bg-slate-50/80'}>
+                <td class="py-5 px-6 font-display font-bold text-slate-900">
+                  {row.metric}
+                </td>
+                <td class="py-5 px-6 text-slate-600 border-l border-slate-200">
+                  <div class="flex items-start gap-2.5">
+                    <svg class="w-4 h-4 text-rose-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                    <span>{row.typical}</span>
+                  </div>
+                </td>
+                <td class="py-5 px-6 text-slate-900 font-medium border-l border-slate-200 bg-sky-50/40">
+                  <div class="flex items-start gap-2.5">
+                    <svg class="w-4 h-4 text-emerald-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span>{row.nk}</span>
+                  </div>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Mobile Comparison Cards -->
+      <div class="md:hidden space-y-3.5">
+        {comparison.map((row) => (
+          <div class="elevated-card rounded-2xl p-4 space-y-2.5 min-w-0">
+            <h3 class="font-display font-bold text-slate-900 text-[15px] leading-snug pb-2 border-b border-slate-100">{row.metric}</h3>
+            <div class="rounded-xl bg-rose-50 border border-rose-100 p-3">
+              <div class="flex items-center gap-1.5 mb-1">
+                <svg class="w-3.5 h-3.5 text-rose-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+                <p class="text-[10px] font-bold uppercase tracking-wider text-rose-600">Typical Local Vendor</p>
+              </div>
+              <p class="text-xs text-slate-700 leading-relaxed">{row.typical}</p>
+            </div>
+            <div class="rounded-xl bg-sky-50 border border-sky-200 p-3">
+              <div class="flex items-center gap-1.5 mb-1">
+                <svg class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                </svg>
+                <p class="text-[10px] font-bold uppercase tracking-wider text-brand-600">NK Digital Tech Janakpuri</p>
+              </div>
+              <p class="text-xs text-slate-900 font-semibold leading-relaxed">{row.nk}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 6: WEST DELHI COMMERCIAL CORRIDORS COVERAGE
+  ===================================================================== -->
+  <section id="locations" class="relative surface-cool overflow-hidden scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-14 text-left sm:text-center">
+        <div class="badge-light mb-3">Sub City &amp; Market Belts</div>
+        <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+          Retail, Corporate &amp; Industrial Corridors We Rank in West Delhi
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          Whether you want an <strong>SEO company in Rajouri Garden</strong> for a bridal showroom, an <strong>SEO company in Janakpuri</strong> for a CA firm or District Centre consultancy, or sector level <strong>SEO services in Dwarka</strong> and Mayapuri, we build local authority tailored to your exact catchment.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
+        {westCorridors.map((c) => (
+          <div class="elevated-card rounded-2xl p-4 sm:p-5 flex flex-col justify-between min-w-0">
+            <div>
+              <div class={`h-1 w-full bg-gradient-to-r ${c.accent} rounded-full mb-3.5`}></div>
+              <div class="flex items-center justify-between gap-2 mb-2.5">
+                <span class="px-2 py-0.5 rounded-md bg-sky-50 border border-sky-200 text-[11px] font-bold uppercase tracking-wider text-brand-600">
+                  {c.hub}
+                </span>
+                <span class="text-[11px] font-semibold text-slate-500">
+                  {c.pincode}
+                </span>
+              </div>
+              <h3 class="font-display font-bold text-base sm:text-lg text-slate-900 mb-1 leading-snug">
+                {c.area}
+              </h3>
+              <p class="text-xs font-bold text-brand-600 mb-2">{c.focus}</p>
+              <p class="text-slate-600 text-[13px] leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+                {c.desc}
+              </p>
+            </div>
+            <div class="mt-3.5 sm:mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
+              <a href={c.href} class="w-full sm:w-auto min-h-[44px] sm:min-h-0 inline-flex items-center justify-between sm:justify-start gap-1.5 text-xs font-bold text-brand-600 hover:text-brand-700 group/link">
+                <span>{c.cta}</span>
+                <svg class="w-3.5 h-3.5 flex-shrink-0 transition-transform group-hover/link:translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 7: OUR CLIENTS (DARK INDIGO CONTRAST SECTION)
+  ===================================================================== -->
+  <section id="clients" class="relative surface-indigo scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-14 text-left sm:text-center">
+        <div class="badge-dark mb-3">Pin 110058 Track Record</div>
+        <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-white tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+          Janakpuri Firms, IT Offices &amp; Academies Growing With Organic Search
+        </h2>
+        <p class="text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          From commercial leasing firms and enterprise IT suppliers in District Centre to IELTS academies near Janakpuri West Metro and builder floor advisors in Block C, local founders count on our work.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2.5 sm:gap-5">
+        {clients.map((client) => (
+          <div class="glass-card rounded-2xl p-3 sm:p-5 flex flex-col items-center text-center group sm:hover:-translate-y-1 last:col-span-2 sm:last:col-span-1 min-w-0">
+            <div class="w-full max-w-[200px] sm:max-w-none mx-auto h-14 sm:h-20 rounded-xl bg-white border border-slate-200 flex items-center justify-center p-2.5 sm:p-4 mb-2.5 sm:mb-4 shadow-sm">
+              <img
+                src={client.logo}
+                alt={`${client.name} Logo`}
+                width="130"
+                height="48"
+                class="max-h-9 sm:max-h-12 w-auto object-contain"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <h3 class="font-display font-bold text-sm sm:text-base text-white mb-1">{client.name}</h3>
+            <p class="text-[11px] sm:text-xs text-slate-300 leading-snug mb-2.5 sm:mb-3 flex-grow">{client.sector}</p>
+            <span class="w-full sm:w-auto inline-flex items-center justify-center gap-1 text-[10px] sm:text-[11px] font-semibold text-brand-300 bg-brand-500/15 border border-brand-500/30 px-2 sm:px-2.5 py-1.5 sm:py-1 rounded-md leading-tight max-w-full">
+              <svg class="w-2.5 h-2.5 sm:w-3 sm:h-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+              </svg>
+              <span class="text-center leading-tight break-words">{client.region}</span>
+            </span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 8: INDUSTRIES (LIGHT SLATE CONTRAST SECTION - 12 SECTORS)
+  ===================================================================== -->
+  <section id="industries" class="relative surface-slate overflow-hidden scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-16 text-left sm:text-center">
+        <div class="badge-light mb-3">Sector Specific Playbooks</div>
+        <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+          Twelve Janakpuri Commercial &amp; Corporate Sectors We Rank
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          A study visa consultancy in District Centre needs very different pages than an IT vendor in Block A or a boutique in C4E Market. We build custom campaigns across twelve Janakpuri categories.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-7">
+        {industries.map((ind) => (
+          <div class={`elevated-card rounded-2xl p-4 sm:p-7 border-t-4 ${ind.accentBorder} flex flex-col justify-between sm:hover:-translate-y-1 min-w-0`}>
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-4 sm:mb-5">
+                <div class={`w-10 h-10 sm:w-11 sm:h-11 rounded-xl border flex items-center justify-center flex-shrink-0 ${ind.iconBg}`}>
+                  <Fragment set:html={ind.icon} />
+                </div>
+                <span class="text-[11px] font-semibold text-slate-600 bg-slate-100 px-2.5 py-1 rounded-md">
+                  {ind.sector}
+                </span>
+              </div>
+
+              <h3 class="font-display font-bold text-[17px] sm:text-xl text-slate-900 mb-3 sm:mb-4 leading-snug">
+                {ind.title}
+              </h3>
+
+              <div class="mb-4 sm:mb-5">
+                <p class="text-[11px] font-bold uppercase tracking-wider text-brand-600 mb-1.5">
+                  Campaign Priority
+                </p>
+                <p class="text-slate-600 text-[13px] sm:text-sm leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+                  {ind.focus}
+                </p>
+              </div>
+            </div>
+
+            <div class="rounded-xl bg-emerald-50/70 border border-emerald-200/80 p-3.5 sm:p-4">
+              <p class="text-[11px] font-bold uppercase tracking-wider text-emerald-700 mb-1">
+                Business Outcome
+              </p>
+              <p class="text-slate-800 text-xs font-medium leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+                {ind.outcome}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 9: TESTIMONIALS (DEEP NAVY CONTRAST SECTION - 2x2 GRID)
+  ===================================================================== -->
+  <section id="testimonials" class="relative surface-dark scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="absolute inset-0 mesh-glow pointer-events-none opacity-60"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-16 text-left sm:text-center">
+        <div class="badge-dark mb-3">Verified Local Results</div>
+        <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-white tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+          What Janakpuri Firms, Directors &amp; Academies Say
+        </h2>
+        <p class="text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          Real enquiry growth, top three map rankings and AI citations shared by business leaders across Janakpuri District Centre and Blocks A to D.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-7">
+        {testimonials.map((t) => (
+          <div class="glass-card rounded-2xl p-4 sm:p-8 flex flex-col justify-between sm:hover:-translate-y-1 min-w-0">
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-4 sm:mb-5">
+                <div class="flex items-center gap-1">
+                  {[1, 2, 3, 4, 5].map(() => (
+                    <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                    </svg>
+                  ))}
+                </div>
+                <span class="text-[10px] sm:text-[11px] font-semibold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-1 rounded-md">
+                  Janakpuri Partner
+                </span>
+              </div>
+
+              <p class="text-slate-200 text-[13.5px] sm:text-base leading-relaxed italic mb-5 sm:mb-6 text-justify hyphens-auto [text-align-last:left]">
+                "{t.quote}"
+              </p>
+
+              <div class="rounded-xl bg-slate-900/90 border border-slate-700/80 p-3.5 sm:p-4 mb-5 sm:mb-6">
+                <p class="text-[11px] font-bold uppercase tracking-wider text-brand-400 mb-2 sm:mb-2.5">
+                  Recorded Results
+                </p>
+                <ul class="space-y-2">
+                  {t.metrics.map((m) => (
+                    <li class="flex items-start gap-2 text-xs text-slate-300 font-medium leading-snug">
+                      <svg class="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                      </svg>
+                      <span>{m}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3.5 sm:gap-4 pt-3.5 sm:pt-4 border-t border-slate-800">
+              <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-white p-2 flex items-center justify-center flex-shrink-0 shadow-sm">
+                <img
+                  src={t.logo}
+                  alt={`${t.company} Logo`}
+                  width="48"
+                  height="48"
+                  class="max-h-8 sm:max-h-10 w-auto object-contain"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="min-w-0">
+                <h3 class="font-display font-bold text-white text-sm sm:text-base leading-snug">{t.name}</h3>
+                <p class="text-xs text-slate-300 leading-snug">
+                  {t.title}, <strong class="text-brand-400 font-semibold">{t.company}</strong>
+                </p>
+                <p class="text-[10.5px] sm:text-[11px] text-slate-400 mt-0.5 leading-snug">{t.sector}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 10: HOW WE WORK (CRISP WHITE CONTRAST SECTION - 4 STAGES)
+  ===================================================================== -->
+  <section id="process" class="relative surface-white overflow-hidden scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-16 text-left sm:text-center">
+        <div class="badge-light mb-3">Four Phase Sprint Plan</div>
+        <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+          Our Step by Step Process for Ranking Janakpuri Websites
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          We begin by fixing mobile speed and crawl bottlenecks, secure top three Google Map spots in District Centre and Blocks A to D, and build lasting mentions on ChatGPT and Gemini.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-7">
+        {stages.map((s) => (
+          <div class="elevated-card rounded-2xl p-4 sm:p-8 relative overflow-hidden group sm:hover:-translate-y-1 min-w-0">
+            <div class="flex items-center justify-between gap-4 mb-3.5 sm:mb-5">
+              <span class={`inline-flex items-center px-2.5 sm:px-3 py-1 rounded-lg text-xs font-bold uppercase tracking-wider text-white bg-gradient-to-r ${s.accent}`}>
+                {s.num}
+              </span>
+              <span class="font-display font-black text-3xl sm:text-4xl text-slate-200 group-hover:text-slate-300 transition-colors">
+                {s.step}
+              </span>
+            </div>
+            <h3 class="font-display font-bold text-[17px] sm:text-xl text-slate-900 mb-2.5 sm:mb-3 leading-snug">
+              {s.title}
+            </h3>
+            <p class="text-slate-600 text-[13px] sm:text-sm leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+              {s.body}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 11: PARTNER WITH THE SEO COMPANY IN JANAKPURI DELHI (CONCLUSION)
+  ===================================================================== -->
+  <section class="relative surface-indigo py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-7 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns -->
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-dark mb-3.5 sm:mb-4">Steady Reception Calls &amp; Walk Ins</div>
+          <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-white tracking-tight leading-[1.22] sm:leading-tight mb-4 sm:mb-6">
+            Grow Daily Enquiries With the Best SEO Company in Janakpuri Delhi
+          </h2>
+          <div class="space-y-4 sm:space-y-5 text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            <p>
+              Winning consistent corporate clients, students and retail buyers across Pin 110058 takes more than tower signboards or temporary social ads that stop delivering the day your budget pauses. Every day, businesses in District Centre and families in Blocks A to D check Google Maps and AI answers before choosing an IT firm, visa consultant or academy.
+            </p>
+            <p>
+              When you hire NK Digital Tech as your <strong>SEO Company in Janakpuri Delhi</strong>, our senior search specialists and <a href="/website-development-company-in-delhi/" class="text-sky-300 font-semibold hover:underline">Website Development Company in Delhi</a> developers speed up your mobile site, publish focused B2B and service pages, align directory records and embed schema directly. Request your free Janakpuri audit today for a clear 90 day plan.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Unique Janakpuri Growth Image -->
+        <div class="lg:col-span-5 min-w-0">
+          <div class="rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-700/80 shadow-2xl bg-slate-900">
+            <img
+              src="/images/seo-janakpuri/organic-search-growth-janakpuri.webp"
+              alt="SEO Company in Janakpuri Delhi Partnering With District Centre and B2B Founders"
+              width="800"
+              height="450"
+              sizes="(max-width: 1024px) 100vw, 42vw"
+              class="w-full aspect-[16/9] sm:aspect-auto sm:h-64 lg:h-72 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 12: FAQ (LIGHT COOL SLATE CONTRAST SECTION)
+  ===================================================================== -->
+  <section id="faq" class="relative surface-cool overflow-hidden scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-left sm:text-center mb-9 sm:mb-14">
+        <div class="badge-light mb-3">Janakpuri Buyer Questions</div>
+        <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+          Common Questions About Hiring an SEO Partner in Janakpuri
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          Clear answers on monthly retainers, ranking timelines, District Centre corporate and visa SEO, and ChatGPT visibility across Janakpuri.
+        </p>
+      </div>
+
+      <div class="space-y-3 sm:space-y-4">
+        {faqs.map((f, i) => (
+          <details class="elevated-card rounded-2xl group overflow-hidden" open={i === 0}>
+            <summary class="flex items-start sm:items-center justify-between gap-2.5 sm:gap-4 px-3.5 sm:px-6 py-4 sm:py-5 min-h-[56px] active:bg-sky-50/60 transition-colors select-none">
+              <div class="flex items-start sm:items-center gap-2.5 sm:gap-3.5 text-left min-w-0">
+                <span class="w-6 h-6 sm:w-7 sm:h-7 rounded-lg bg-sky-50 border border-sky-200 text-brand-600 font-display font-bold text-xs flex items-center justify-center flex-shrink-0 mt-0.5 sm:mt-0">
+                  0{i + 1}
+                </span>
+                <span class="font-display font-bold text-slate-900 text-[14px] sm:text-base md:text-lg leading-[1.4] sm:leading-snug break-words">
+                  {f.q}
+                </span>
+              </div>
+              <span class="faq-icon w-7 h-7 sm:w-8 sm:h-8 rounded-full border border-slate-200 text-slate-600 flex items-center justify-center flex-shrink-0 mt-0.5 sm:mt-0">
+                <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                </svg>
+              </span>
+            </summary>
+            <div class="px-3.5 sm:px-6 pb-4 sm:pb-6 pt-3 text-slate-600 text-[13.5px] sm:text-sm md:text-base leading-[1.68] sm:leading-relaxed border-t border-slate-100 text-justify hyphens-auto [text-align-last:left]">
+              {f.a}
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 13: FINAL CTA / CONTACT (DARK SURFACE)
+  ===================================================================== -->
+  <section id="contact" class="relative surface-dark scroll-mt-16 sm:scroll-mt-20 pt-10 pb-12 sm:py-16 lg:py-20 px-4 sm:px-6 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-5xl mx-auto">
+      <div class="rounded-2xl sm:rounded-3xl bg-gradient-to-r from-brand-600 via-brand-700 to-accent-700 p-6 sm:p-10 md:p-12 text-center text-white shadow-2xl border border-white/15 relative overflow-hidden">
+        <div class="relative z-10 max-w-2xl mx-auto">
+          <h2 class="font-display font-black text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl md:text-4xl text-white tracking-tight leading-[1.22] sm:leading-snug mb-3 sm:mb-4">
+            Book Your Free Audit With the Best SEO Company in Janakpuri Delhi
+          </h2>
+
+          <p class="text-sky-50 text-[13px] sm:text-sm md:text-base leading-relaxed mb-6 sm:mb-8">
+            Get a plain English review of your mobile speed, Google Map Pack pins and ChatGPT visibility across Janakpuri District Centre, C4E Market and Blocks A to D.
+          </p>
+
+          <a
+            href="mailto:nkdigitaltech1@gmail.com"
+            class="inline-flex w-full sm:w-auto min-h-[48px] items-center justify-center gap-2 sm:gap-3 px-5 sm:px-8 py-3.5 sm:py-4 rounded-xl bg-white text-slate-950 hover:bg-sky-50 font-display font-bold text-sm sm:text-base shadow-xl transition-all duration-300 active:scale-95 text-center leading-snug"
+          >
+            <span>Request Janakpuri Website Audit</span>
+            <svg class="w-4 h-4 sm:w-5 sm:h-5 text-brand-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mobile Sticky Bottom Quick Action Bar -->
+  <div class="mobile-sticky-cta sm:hidden fixed bottom-0 inset-x-0 z-40 bg-[#050a14]/95 backdrop-blur-xl border-t border-slate-800 px-3 pt-2.5 pb-[max(0.7rem,env(safe-area-inset-bottom))] shadow-[0_-8px_24px_rgba(0,0,0,0.45)] transition-all duration-200">
+    <div class="flex items-center gap-2.5">
+      <a
+        href="mailto:nkdigitaltech1@gmail.com"
+        class="btn-primary flex-1 min-w-0 min-h-[48px] py-2.5 px-3 text-[12.5px] font-bold rounded-xl whitespace-nowrap"
+      >
+        <span class="truncate">Free Janakpuri SEO Audit</span>
+        <svg class="w-3.5 h-3.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+        </svg>
+      </a>
+      <a
+        href="#services"
+        class="btn-secondary-dark min-h-[48px] py-2.5 px-4 text-[12.5px] font-semibold rounded-xl flex-shrink-0 whitespace-nowrap"
+      >
+        <span>Services</span>
+      </a>
+    </div>
+  </div>
+
+  <style>
+    @media (max-width: 639px) {
+      .glass-card {
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+      }
+      #locations,
+      #why-us,
+      #clients,
+      #industries,
+      #testimonials,
+      #process,
+      #faq {
+        content-visibility: auto;
+        contain-intrinsic-size: auto 720px;
+      }
+      a,
+      button,
+      summary {
+        touch-action: manipulation;
+        -webkit-tap-highlight-color: transparent;
+      }
+    }
+  </style>
+
+</Layout>
+

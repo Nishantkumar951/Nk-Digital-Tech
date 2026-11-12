@@ -1,0 +1,1468 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '../styles/global.css';
+
+const pageTitle = 'Best SEO Company in Shalimar Bagh Delhi | NK Digital Tech';
+const pageDescription = 'NK Digital Tech is the Best SEO Company in Shalimar Bagh Delhi. We help commercial builders, CA firms, turnkey architects and banquet venues win daily leads.';
+const pageCanonical = 'https://www.nkdigitaltech.net/seo-company-in-shalimar-bagh-delhi/';
+
+const clients = [
+  {
+    "name": "VP Infra",
+    "sector": "Luxury Builder Floors & Property Advisory",
+    "region": "AL Block Shalimar Bagh",
+    "logo": "/images/clients/vp-infra.webp"
+  },
+  {
+    "name": "Aangan",
+    "sector": "Modular Kitchens & Turnkey Interiors",
+    "region": "Central Market Shalimar Bagh",
+    "logo": "/images/clients/aangan.webp"
+  },
+  {
+    "name": "Creative Academy",
+    "sector": "Competitive Exam & Foundation Coaching",
+    "region": "BQ Block Shalimar Bagh",
+    "logo": "/images/clients/creative-academy.webp"
+  },
+  {
+    "name": "Vision Associates",
+    "sector": "Chartered Accountants & GST Advisory",
+    "region": "Outer Ring Road Shalimar Bagh",
+    "logo": "/images/clients/vision.webp"
+  },
+  {
+    "name": "PropertyWays",
+    "sector": "Commercial Leasing & Office Brokers",
+    "region": "Haiderpur Metro Corridor",
+    "logo": "/images/clients/propertyways.webp"
+  }
+];
+
+const services = [
+  {
+    "num": "01",
+    "category": "Technical Speed & UX",
+    "icon": "<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z\"/></svg>",
+    "iconStyle": "bg-sky-50 border-sky-200 text-brand-600",
+    "impactStyle": "bg-sky-50/80 border-sky-200/80 text-slate-800",
+    "badgeColor": "text-brand-600 bg-sky-100/80",
+    "title": "Core Web Vitals & Commercial Landing Architecture",
+    "body": "As your technical SEO company in Shalimar Bagh, we strip unused script bundles, convert heavy architectural photos into fast WebP assets, fix crawl traps and build conversion focused service pages for Pin 110088 firms.",
+    "impact": "Higher mobile inquiry conversion rates and lower bounce rates across Shalimar Bagh.",
+    "cta": "Website Development Company in Delhi",
+    "href": "/website-development-company-in-delhi/"
+  },
+  {
+    "num": "02",
+    "category": "AI Search Citations",
+    "icon": "<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z\"/></svg>",
+    "iconStyle": "bg-violet-50 border-violet-200 text-accent-600",
+    "impactStyle": "bg-violet-50/80 border-violet-200/80 text-slate-800",
+    "badgeColor": "text-accent-600 bg-violet-100/80",
+    "title": "ChatGPT, Perplexity & AI Overview Positioning",
+    "body": "Our AI SEO specialists structure your project portfolio, service rates and client testimonials into semantic entity blocks that generative engines cite when users ask for trusted providers in Shalimar Bagh.",
+    "impact": "Direct brand recommendations inside conversational AI prompts across North Delhi.",
+    "cta": "AI SEO Company in Delhi",
+    "href": "/ai-seo-company-in-delhi/"
+  },
+  {
+    "num": "03",
+    "category": "Pin 110088 Map Pack",
+    "icon": "<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z\"/><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M15 11a3 3 0 11-6 0 3 3 0 016 0z\"/></svg>",
+    "iconStyle": "bg-emerald-50 border-emerald-200 text-emerald-600",
+    "impactStyle": "bg-emerald-50/80 border-emerald-200/80 text-slate-800",
+    "badgeColor": "text-emerald-700 bg-emerald-100/80",
+    "title": "Google Business Profile & Block Level Citations",
+    "body": "Through targeted local SEO services in Shalimar Bagh, we calibrate your Google Business categories, align NAP records across Indian business directories and build steady review velocity across AL, BQ and BH Blocks.",
+    "impact": "Consistent phone calls and direction clicks from Central Market and Ring Road searchers.",
+    "cta": "Local SEO Services in Delhi",
+    "href": "/local-seo-services-in-delhi/"
+  },
+  {
+    "num": "04",
+    "category": "Zero Click Snippets",
+    "icon": "<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z\"/></svg>",
+    "iconStyle": "bg-amber-50 border-amber-200 text-amber-600",
+    "impactStyle": "bg-amber-50/80 border-amber-200/80 text-slate-800",
+    "badgeColor": "text-amber-700 bg-amber-100/80",
+    "title": "Answer Engine Optimization & Cost Tables",
+    "body": "We craft concise 45 word direct answer blocks, transparent construction and retainer fee tables, and validated FAQPage schema so your pages win featured snippets and voice queries.",
+    "impact": "Position zero visibility when prospective clients compare project budgets and timelines.",
+    "cta": "AEO Services in Delhi",
+    "href": "/aeo-services-in-delhi/"
+  },
+  {
+    "num": "05",
+    "category": "Entity Authority",
+    "icon": "<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M13 10V3L4 14h7v7l9-11h-7z\"/></svg>",
+    "iconStyle": "bg-indigo-50 border-indigo-200 text-indigo-600",
+    "impactStyle": "bg-indigo-50/80 border-indigo-200/80 text-slate-800",
+    "badgeColor": "text-indigo-700 bg-indigo-100/80",
+    "title": "Generative Engine Optimization & Digital PR",
+    "body": "LLMs verify external brand authority before recommending a business. We publish data backed case studies, configure llms.txt files and secure verified regional mentions across Delhi trade portals.",
+    "impact": "Higher citation frequency when corporate buyers research Shalimar Bagh vendors on AI tools.",
+    "cta": "GEO Services in Delhi",
+    "href": "/geo-services-in-delhi/"
+  },
+  {
+    "num": "06",
+    "category": "B2B Lead Funnels",
+    "icon": "<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4\"/></svg>",
+    "iconStyle": "bg-cyan-50 border-cyan-200 text-cyan-700",
+    "impactStyle": "bg-cyan-50/80 border-cyan-200/80 text-slate-800",
+    "badgeColor": "text-cyan-700 bg-cyan-100/80",
+    "title": "Commercial & B2B Search Engineering",
+    "body": "Serving as your growth partner in Shalimar Bagh, we build crawlable specification pages, interactive BOQ calculators and ProfessionalService schema tailored for B2B suppliers and advisory chambers.",
+    "impact": "Compounding inbound RFQs and consultation bookings without recurring ad spend.",
+    "cta": "Best SEO Company in North Delhi",
+    "href": "/best-seo-company-in-north-delhi/"
+  }
+];
+
+const comparison = [
+  {
+    "metric": "Campaign Engineering",
+    "typical": "Freelancers install generic plugins and mail automated rank PDFs with zero source code improvements",
+    "nk": "Senior North Delhi search engineers directly refactor HTML, WebP assets, schema graphs and landing copy"
+  },
+  {
+    "metric": "Success Benchmark",
+    "typical": "Celebrating vanity traffic spikes from unrelated cities that never convert into local meetings",
+    "nk": "Measuring verified phone calls, site visit bookings and signed retainers from Pin 110088 buyers"
+  },
+  {
+    "metric": "Generative AI Readiness",
+    "typical": "Repetitive keyword stuffed articles ignored by ChatGPT, Perplexity and Google AI Overviews",
+    "nk": "Structured 45 word answer blocks, transparent pricing tables, JSON LD entities and llms.txt indexing"
+  },
+  {
+    "metric": "Smartphone Page Speed",
+    "typical": "Bloated page builders that take six seconds to load over mobile data near Central Market",
+    "nk": "Sub two second mobile rendering engineered by our in house frontend development team"
+  },
+  {
+    "metric": "Local Citation Hygiene",
+    "typical": "Bulk Fiverr backlink packages that trigger Google spam filters and suppress map rankings",
+    "nk": "Clean Indian trade registries, verified Shalimar Bagh block citations and regional press mentions"
+  },
+  {
+    "metric": "Digital Asset Custody",
+    "typical": "Vendor retains admin control over analytics, schema or Google Business profiles during exit",
+    "nk": "You hold 100% administrative ownership of all code, content and search accounts from day one"
+  }
+];
+
+const northCorridors = [
+  {
+    "hub": "Area 01",
+    "area": "Netaji Subhash Place",
+    "focus": "SEO Company in Netaji Subhash Place",
+    "pincode": "Pin 110034",
+    "desc": "We rank CA practices, SaaS firms, wealth managers and tower leasing brokers on Google Search and Maps.",
+    "cta": "View Dedicated NSP Page",
+    "href": "/seo-company-in-netaji-subhash-place-delhi/",
+    "accent": "from-brand-500 to-sky-400"
+  },
+  {
+    "hub": "Area 02",
+    "area": "Pitampura",
+    "focus": "SEO Company in Pitampura",
+    "pincode": "Pin 110034",
+    "desc": "We rank commercial offices, builder floor developers, turnkey architects and CA chambers across Pitampura.",
+    "cta": "View Dedicated Pitampura Page",
+    "href": "/seo-company-in-pitampura-delhi/",
+    "accent": "from-accent-500 to-violet-400"
+  },
+  {
+    "hub": "Area 03",
+    "area": "Rohini",
+    "focus": "SEO Company in Rohini",
+    "pincode": "Pin 110085",
+    "desc": "Spanning Sectors 1 to 24, we help Court advocates, builders, IT studios and academies win top map spots.",
+    "cta": "View Dedicated Rohini Page",
+    "href": "/seo-company-in-rohini-delhi/",
+    "accent": "from-cyan-500 to-teal-400"
+  },
+  {
+    "hub": "Area 04",
+    "area": "Model Town",
+    "focus": "SEO Company in Model Town",
+    "pincode": "Pin 110009",
+    "desc": "Across Model Town Phases 1 to 3, we rank kothi builders, interior studios, wealth advisors and corporate firms.",
+    "cta": "View Dedicated Model Town Page",
+    "href": "/seo-company-in-model-town-delhi/",
+    "accent": "from-emerald-500 to-green-400"
+  },
+  {
+    "hub": "Area 05",
+    "area": "Shalimar Bagh",
+    "focus": "SEO Company in Shalimar Bagh",
+    "pincode": "Pin 110088",
+    "desc": "Around Central Market and Ring Road, we rank CA offices, floor builders, kitchen studios and banquet halls.",
+    "cta": "View Dedicated Shalimar Bagh Page",
+    "href": "/seo-company-in-shalimar-bagh-delhi/",
+    "accent": "from-indigo-500 to-blue-400"
+  },
+  {
+    "hub": "Area 06",
+    "area": "Ashok Vihar",
+    "focus": "SEO Company in Ashok Vihar",
+    "pincode": "Pin 110052",
+    "desc": "Covering Phases 1 to 4 and Deep Market, we rank corporate offices, kothi architects and tax consultants.",
+    "cta": "View Dedicated Ashok Vihar Page",
+    "href": "/seo-company-in-ashok-vihar-delhi/",
+    "accent": "from-violet-500 to-purple-400"
+  },
+  {
+    "hub": "Area 07",
+    "area": "Wazirpur Industrial Area",
+    "focus": "SEO Company in Wazirpur",
+    "pincode": "Pin 110052",
+    "desc": "We turn stainless steel rolling, sheet metal and CNC grade lists into fast HTML B2B specification catalogues.",
+    "cta": "View Dedicated Wazirpur Page",
+    "href": "/seo-company-in-wazirpur-delhi/",
+    "accent": "from-amber-500 to-orange-400"
+  },
+  {
+    "hub": "Area 08",
+    "area": "Mukherjee Nagar",
+    "focus": "SEO Company in Mukherjee Nagar",
+    "pincode": "Pin 110009",
+    "desc": "Across Mukherjee Nagar and GTB Nagar, we rank UPSC, IAS, PCS and judiciary academies for student calls.",
+    "cta": "View Dedicated Mukherjee Nagar Page",
+    "href": "/seo-company-in-mukherjee-nagar-delhi/",
+    "accent": "from-teal-500 to-emerald-400"
+  },
+  {
+    "hub": "Area 09",
+    "area": "Narela Industrial Area",
+    "focus": "SEO Company in Narela",
+    "pincode": "Pin 110040",
+    "desc": "In DSIIDC Narela Industrial Area, we rank food processing plants, plastics, packaging and machinery factories.",
+    "cta": "View Dedicated Narela Page",
+    "href": "/seo-company-in-narela-delhi/",
+    "accent": "from-rose-500 to-pink-400"
+  },
+  {
+    "hub": "Area 10",
+    "area": "Civil Lines",
+    "focus": "SEO Company in Civil Lines",
+    "pincode": "Pin 110054",
+    "desc": "Near Tis Hazari Courts, we rank Bar Council compliant law chambers, luxury bungalow advisors and family offices.",
+    "cta": "View Dedicated Civil Lines Page",
+    "href": "/seo-company-in-civil-lines-delhi/",
+    "accent": "from-sky-500 to-cyan-400"
+  },
+  {
+    "hub": "Area 11",
+    "area": "Bawana Industrial Area",
+    "focus": "SEO Company in Bawana",
+    "pincode": "Pin 110039",
+    "desc": "Across DSIIDC Sectors 1 to 5, we generate pan India B2B enquiries for plastic, moulding and packaging plants.",
+    "cta": "View Dedicated Bawana Page",
+    "href": "/seo-company-in-bawana-delhi/",
+    "accent": "from-blue-500 to-indigo-400"
+  },
+  {
+    "hub": "Area 12",
+    "area": "Azadpur",
+    "focus": "SEO Company in Azadpur",
+    "pincode": "Pin 110033",
+    "desc": "Along GT Karnal Road and Azadpur Complex, we rank cold chain units, fleet logistics and wholesale exporters.",
+    "cta": "View Dedicated Azadpur Page",
+    "href": "/seo-company-in-azadpur-delhi/",
+    "accent": "from-fuchsia-500 to-rose-400"
+  }
+];
+
+const industries = [
+  {
+    "sector": "Builder Floors SEO",
+    "title": "Real Estate & Property",
+    "focus": "Ranking independent builder floor developers and commercial property consultants across AL, BQ and BH Blocks for high intent buyer searches.",
+    "outcome": "Steady site walkthrough bookings, investor phone calls and direct floor sales.",
+    "accentBorder": "border-t-brand-500",
+    "iconBg": "bg-sky-50 text-brand-600 border-sky-200",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4\"/></svg>"
+  },
+  {
+    "sector": "Modular & Turnkey SEO",
+    "title": "Interior Design & Architecture",
+    "focus": "Building fast visual project galleries and BOQ cost guides for modular kitchen studios and turnkey architects around Central Market.",
+    "outcome": "Consistent bungalow and office renovation contracts across Shalimar Bagh.",
+    "accentBorder": "border-t-amber-500",
+    "iconBg": "bg-amber-50 text-amber-600 border-amber-200",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z\"/></svg>"
+  },
+  {
+    "sector": "Test Prep Academy SEO",
+    "title": "Education & Coaching Institutes",
+    "focus": "Structuring batch schedules, faculty credentials and fee comparison tables for competitive exam and foundation academies in Shalimar Bagh.",
+    "outcome": "Higher student counseling visits, demo class signups and seasonal enrollments.",
+    "accentBorder": "border-t-cyan-500",
+    "iconBg": "bg-cyan-50 text-cyan-700 border-cyan-200",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222\"/></svg>"
+  },
+  {
+    "sector": "Industrial Supplier SEO",
+    "title": "Manufacturing & Industrial Businesses",
+    "focus": "Converting static PDF product lists into crawlable HTML specification pages for light manufacturing and packaging units near Haiderpur.",
+    "outcome": "Qualified B2B procurement inquiries and wholesale supply contracts across NCR.",
+    "accentBorder": "border-t-emerald-500",
+    "iconBg": "bg-emerald-50 text-emerald-600 border-emerald-200",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z\"/><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M15 12a3 3 0 11-6 0 3 3 0 016 0z\"/></svg>"
+  },
+  {
+    "sector": "IT & Cloud Studio SEO",
+    "title": "SaaS & Technology Companies",
+    "focus": "Developing solution comparison pages and technical documentation hubs for software development agencies and ERP consultants in North Delhi.",
+    "outcome": "Recurring enterprise demo requests and commercial software deployment retainers.",
+    "accentBorder": "border-t-indigo-500",
+    "iconBg": "bg-indigo-50 text-indigo-600 border-indigo-200",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4\"/></svg>"
+  },
+  {
+    "sector": "Chartered Accountant SEO",
+    "title": "Accounting & Financial Services",
+    "focus": "Positioning CA chambers, GST compliance advisors and wealth managers near Central Market for corporate audit and taxation queries.",
+    "outcome": "Long term corporate accounting retainers from local traders and factory owners.",
+    "accentBorder": "border-t-rose-500",
+    "iconBg": "bg-rose-50 text-rose-600 border-rose-200",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z\"/></svg>"
+  },
+  {
+    "sector": "Property & Civil Law SEO",
+    "title": "Legal Services & Law Firms",
+    "focus": "Creating Bar Council compliant practice hubs for property registration counsel, civil litigators and corporate advisors in Shalimar Bagh.",
+    "outcome": "First page visibility for specialized legal queries and scheduled chamber appointments.",
+    "accentBorder": "border-t-accent-500",
+    "iconBg": "bg-violet-50 text-accent-600 border-violet-200",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3\"/></svg>"
+  },
+  {
+    "sector": "Banquet & Event Venue SEO",
+    "title": "Hospitality, Banquets & Catering",
+    "focus": "Optimizing capacity tables, virtual tour galleries and local map listings for luxury banquet halls and corporate caterers along Outer Ring Road.",
+    "outcome": "Direct wedding and corporate conference bookings without third party aggregator cuts.",
+    "accentBorder": "border-t-amber-500",
+    "iconBg": "bg-amber-50 text-amber-600 border-amber-200"
+  },
+  {
+    "sector": "Fleet & Cold Chain SEO",
+    "title": "Logistics, Warehousing & Transport",
+    "focus": "Ranking commercial transport operators, cold storage facilities and B2B freight forwarders operating along the Ring Road and GT Karnal bypass.",
+    "outcome": "Steady enterprise distribution contracts and regional fleet leasing inquiries.",
+    "accentBorder": "border-t-teal-500",
+    "iconBg": "bg-teal-50 text-teal-600 border-teal-200",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z\"/><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0\"/></svg>"
+  },
+  {
+    "sector": "Manpower & HR Agency SEO",
+    "title": "HR, Staffing & Corporate Services",
+    "focus": "Building role specific landing pages for technical recruitment agencies, industrial staffing firms and facility management providers.",
+    "outcome": "Consistent corporate hiring mandates from North Delhi commercial hubs.",
+    "accentBorder": "border-t-sky-500",
+    "iconBg": "bg-sky-50 text-sky-600 border-sky-200"
+  },
+  {
+    "sector": "Solar & Power EPC SEO",
+    "title": "Solar, Green Energy & EV Infrastructure",
+    "focus": "Publishing subsidy calculators and kilowatt ROI guides for rooftop solar EPC contractors serving Shalimar Bagh kothis and factories.",
+    "outcome": "Qualified residential and industrial solar installation leads every week.",
+    "accentBorder": "border-t-lime-500",
+    "iconBg": "bg-lime-50 text-lime-600 border-lime-200"
+  },
+  {
+    "sector": "B2B Machinery Trade SEO",
+    "title": "B2B Wholesale & Industrial Exporters",
+    "focus": "Engineering searchable technical catalogs with Product schema for commercial hardware stockists and industrial equipment distributors.",
+    "outcome": "Direct bulk order RFQs from institutional buyers across Northern India.",
+    "accentBorder": "border-t-orange-500",
+    "iconBg": "bg-orange-50 text-orange-600 border-orange-200"
+  }
+];
+
+const testimonials = [
+  {
+    "name": "Rajesh Malhotra",
+    "title": "Managing Partner",
+    "company": "Malhotra Buildtech",
+    "sector": "Luxury Builder Floors, AL Block Shalimar Bagh",
+    "metrics": [
+      "295% increase in direct buyer site visit calls",
+      "Top 3 Google Map ranking for builder floors Shalimar Bagh",
+      "Zero reliance on paid property listing aggregators"
+    ],
+    "quote": "Homebuyers looking for four bedroom builder floors in AL and BQ Block always check Google Maps and project specs first. NK Digital Tech compressed our floor plan galleries, added clear specification tables and ranked us in the top three map spots. We now close direct buyer deals every month.",
+    "logo": "/images/clients/vp-infra.webp"
+  },
+  {
+    "name": "Neha Kapoor",
+    "title": "Principal Designer",
+    "company": "Kapoor Modular & Interiors",
+    "sector": "Turnkey Interiors & Kitchens, Central Market Shalimar Bagh",
+    "metrics": [
+      "260% growth in turnkey bungalow interior consultations",
+      "Page one visibility for modular kitchen studio Shalimar Bagh",
+      "Recommended by ChatGPT for turnkey interior designers Pin 110088"
+    ],
+    "quote": "Homeowners and office founders want to review finish quality and transparent BOQ estimates before booking a visit. NK Digital Tech rebuilt our mobile portfolio pages and implemented structured schema. Our studio calendar is now consistently booked with high value turnkey projects.",
+    "logo": "/images/clients/aangan.webp"
+  },
+  {
+    "name": "Sandeep Garg",
+    "title": "Senior Partner",
+    "company": "Garg Sandeep & Associates",
+    "sector": "Chartered Accountants, BQ Block Shalimar Bagh",
+    "metrics": [
+      "3.4x surge in corporate GST and statutory audit inquiries",
+      "Dominant Map Pack presence across Shalimar Bagh Pin 110088",
+      "Featured answer snippets for company compliance queries"
+    ],
+    "quote": "Generic marketing vendors never understood how industrial promoters and traders search for accounting counsel. NK Digital Tech structured our tax advisory pages, aligned our directory citations and secured top map rankings. Serious business owners now call our office directly.",
+    "logo": "/images/clients/vision.webp"
+  },
+  {
+    "name": "Vikramjit Arora",
+    "title": "Director of Operations",
+    "company": "Grand Ring Road Banquets",
+    "sector": "Corporate Events & Luxury Banquets, Outer Ring Road Shalimar Bagh",
+    "metrics": [
+      "245% rise in direct corporate event and wedding inquiries",
+      "Top 3 Map Pack placement along Outer Ring Road North Delhi",
+      "Substantial savings on third party venue portal commissions"
+    ],
+    "quote": "Event planners and families search on mobile phones for hall capacities, parking counts and menu packages. NK Digital Tech accelerated our mobile site speed and embedded EventVenue schema, bringing us daily direct walk ins without paying heavy aggregator commissions.",
+    "logo": "/images/clients/propertyways.webp"
+  }
+];
+
+const stages = [
+  {
+    "num": "Milestone 01",
+    "step": "01",
+    "title": "Technical Baseline & Pin 110088 Competitor Audit",
+    "body": "We benchmark your mobile loading speed across Central Market and Ring Road networks, uncover indexation gaps and audit your Google Business Profile against top Shalimar Bagh competitors.",
+    "accent": "from-brand-600 to-sky-500"
+  },
+  {
+    "num": "Milestone 02",
+    "step": "02",
+    "title": "Block Level Intent Mapping & Content Blueprint",
+    "body": "Our strategists map high intent commercial queries across AL Block, BQ Block and Haiderpur, designing a 90 day sprint calendar of landing pages, cost tables and JSON LD schemas.",
+    "accent": "from-accent-600 to-violet-500"
+  },
+  {
+    "num": "Milestone 03",
+    "step": "03",
+    "title": "On Page Code Execution & Citation Alignment",
+    "body": "Working directly in your repository, we convert heavy media to WebP, publish authoritative commercial pages, inject ProfessionalService schema and standardize Indian directory citations.",
+    "accent": "from-cyan-600 to-teal-500"
+  },
+  {
+    "num": "Milestone 04",
+    "step": "04",
+    "title": "Fortnightly Call Attribution & AI Citation Scaling",
+    "body": "Every fourteen days, we review Search Console query growth, map direction taps and LLM citations on ChatGPT and Gemini, refining our sprint priorities to maximize qualified inquiries.",
+    "accent": "from-emerald-600 to-green-500"
+  }
+];
+
+const faqs = [
+  {
+    "q": "Why do Shalimar Bagh commercial firms choose NK Digital Tech over local freelancers?",
+    "a": "Established businesses in Shalimar Bagh partner with NK Digital Tech because we pair source code Core Web Vitals engineering with block level Google Business Profile optimization and AI citation architecture. We focus directly on verified phone inquiries and consultations across Central Market, AL Block, BQ Block and Outer Ring Road."
+  },
+  {
+    "q": "What is the monthly retainer investment for SEO services in Shalimar Bagh?",
+    "a": "Our monthly SEO retainers in Shalimar Bagh range between ₹16,000 and ₹44,000 depending on website complexity, competitive density and target sectors. A professional CA chamber or design studio typically selects a focused local sprint, while multi project builders invest ₹44,000 upward."
+  },
+  {
+    "q": "How soon can a Shalimar Bagh business expect measurable map and organic leads?",
+    "a": "Fixing mobile speed bottlenecks, aligning Pin 110088 directory citations and optimizing Google Business Profile attributes usually lifts map calls and direction requests within four to seven weeks. Competitive page one organic rankings and AI citations compound over three to six months."
+  },
+  {
+    "q": "How do you get Shalimar Bagh businesses cited inside ChatGPT and Perplexity?",
+    "a": "Conversational AI models extract facts from fast, well structured pages. We embed concise 45 word answer blocks, transparent rate tables, validated ProfessionalService JSON LD schema and consistent regional citations so LLMs confidently recommend your firm."
+  },
+  {
+    "q": "Do you cover AL Block, BQ Block, Central Market and Outer Ring Road?",
+    "a": "Yes. Whether your office operates in Central Market, AL Block, BQ Block, BH Block, West Shalimar Bagh or along the Outer Ring Road and Haiderpur Metro belt, we build hyper local landing signals tailored to your exact catchment."
+  },
+  {
+    "q": "Can you help industrial and B2B suppliers based near Shalimar Bagh win pan India RFQs?",
+    "a": "Yes. Many B2B suppliers and light manufacturers near Haiderpur and Ring Road lock product specifications inside static PDF brochures. We convert those catalogs into crawlable HTML specification pages with Product schema that rank for national procurement searches."
+  },
+  {
+    "q": "What warning signs should I avoid when hiring an SEO agency in Shalimar Bagh?",
+    "a": "Avoid vendors who promise overnight page one rankings or sell cheap automated backlink packages. Those tactics trigger algorithmic penalties that damage your domain. Always demand transparent biweekly code deliverables, clean citation building and full account ownership."
+  },
+  {
+    "q": "Do you lock Shalimar Bagh clients into rigid annual contracts?",
+    "a": "No. We operate on transparent month to month retainers backed by documented biweekly sprint deliverables. You retain 100% administrative ownership of your website code, analytics, schema markup and Google Business Profile at all times."
+  }
+];
+
+const trustStrip = [
+  "Central Market to Outer Ring Road",
+  "AL & BQ Block Map Prominence",
+  "Pin 110088 Top 3 Local Pack",
+  "Featured in ChatGPT & Gemini",
+  "45 Word Pricing Snippet Capture",
+  "Validated JSON LD Entity Markup",
+  "Sub Second Mobile WebP Pages",
+  "100% Client Asset Ownership"
+];
+
+const schemaLocalBusiness = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "NK Digital Tech Best SEO Company in Shalimar Bagh",
+  "url": "https://www.nkdigitaltech.net/seo-company-in-shalimar-bagh-delhi/",
+  "logo": "https://www.nkdigitaltech.net/images/seo-shalimar-bagh/hero-seo-company-shalimar-bagh.webp",
+  "image": "https://www.nkdigitaltech.net/images/seo-shalimar-bagh/hero-seo-company-shalimar-bagh.webp",
+  "description": "NK Digital Tech is the Best SEO Company in Shalimar Bagh Delhi delivering technical SEO, Google Map Pack rankings, AEO, GEO and ChatGPT citations for commercial builders, CA firms, turnkey architects and banquet venues.",
+  "email": "nkdigitaltech1@gmail.com",
+  "priceRange": "₹16,000 to ₹48,000+",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Shalimar Bagh",
+    "addressRegion": "Delhi",
+    "postalCode": "110088",
+    "addressCountry": "IN"
+  },
+  "areaServed": [
+    "Shalimar Bagh",
+    "Pitampura",
+    "Ashok Vihar",
+    "North Delhi",
+    "Delhi NCR"
+  ]
+});
+
+const schemaFAQ = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why do Shalimar Bagh commercial firms choose NK Digital Tech over local freelancers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Established businesses in Shalimar Bagh partner with NK Digital Tech because we pair source code Core Web Vitals engineering with block level Google Business Profile optimization and AI citation architecture. We focus directly on verified phone inquiries and consultations across Central Market, AL Block, BQ Block and Outer Ring Road."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the monthly retainer investment for SEO services in Shalimar Bagh?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Our monthly SEO retainers in Shalimar Bagh range between ₹16,000 and ₹44,000 depending on website complexity, competitive density and target sectors. A professional CA chamber or design studio typically selects a focused local sprint, while multi project builders invest ₹44,000 upward."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How soon can a Shalimar Bagh business expect measurable map and organic leads?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Fixing mobile speed bottlenecks, aligning Pin 110088 directory citations and optimizing Google Business Profile attributes usually lifts map calls and direction requests within four to seven weeks. Competitive page one organic rankings and AI citations compound over three to six months."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do you get Shalimar Bagh businesses cited inside ChatGPT and Perplexity?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Conversational AI models extract facts from fast, well structured pages. We embed concise 45 word answer blocks, transparent rate tables, validated ProfessionalService JSON LD schema and consistent regional citations so LLMs confidently recommend your firm."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you cover AL Block, BQ Block, Central Market and Outer Ring Road?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Whether your office operates in Central Market, AL Block, BQ Block, BH Block, West Shalimar Bagh or along the Outer Ring Road and Haiderpur Metro belt, we build hyper local landing signals tailored to your exact catchment."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you help industrial and B2B suppliers based near Shalimar Bagh win pan India RFQs?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Many B2B suppliers and light manufacturers near Haiderpur and Ring Road lock product specifications inside static PDF brochures. We convert those catalogs into crawlable HTML specification pages with Product schema that rank for national procurement searches."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What warning signs should I avoid when hiring an SEO agency in Shalimar Bagh?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Avoid vendors who promise overnight page one rankings or sell cheap automated backlink packages. Those tactics trigger algorithmic penalties that damage your domain. Always demand transparent biweekly code deliverables, clean citation building and full account ownership."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you lock Shalimar Bagh clients into rigid annual contracts?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. We operate on transparent month to month retainers backed by documented biweekly sprint deliverables. You retain 100% administrative ownership of your website code, analytics, schema markup and Google Business Profile at all times."
+      }
+    }
+  ]
+});
+---
+
+<Layout
+  title={pageTitle}
+  description={pageDescription}
+  canonical={pageCanonical}
+  ogImage="https://www.nkdigitaltech.net/images/seo-shalimar-bagh/hero-seo-company-shalimar-bagh.webp"
+  preloadImage="/images/seo-shalimar-bagh/hero-seo-company-shalimar-bagh.webp"
+  hideLocationsNav={false}
+  customSchemaLocalBusiness={schemaLocalBusiness}
+  customSchemaFAQ={schemaFAQ}
+  utilityTagline="Best SEO Company in Shalimar Bagh Delhi • Central Market, AL Block & Outer Ring Road"
+  brandSubtitle="Shalimar Bagh • Commercial & B2B SEO"
+  footerBio="Leading SEO Company in Shalimar Bagh Delhi helping builder floor developers, modular interior studios, Chartered Accountants, banquet venues and B2B offices win top Google spots and AI citations."
+  footerCoreDisciplines={[
+    { label: 'Best SEO Company in North Delhi', href: '/best-seo-company-in-north-delhi/' },
+    { label: 'Best SEO Company in Delhi', href: '/best-seo-company-in-delhi/' },
+    { label: 'Local SEO Services in Delhi', href: '/local-seo-services-in-delhi/' },
+    { label: 'AI SEO Company in Delhi', href: '/ai-seo-company-in-delhi/' },
+    { label: 'AEO Services in Delhi', href: '/aeo-services-in-delhi/' },
+    { label: 'GEO Services in Delhi', href: '/geo-services-in-delhi/' },
+    { label: 'Website Development Company in Delhi', href: '/website-development-company-in-delhi/' },
+  ]}
+  footerTagline="Best SEO Company in Shalimar Bagh Delhi • Pin 110088 Commercial Search Growth"
+>
+
+  <!-- =====================================================================
+       SECTION 1: HERO
+  ===================================================================== -->
+  <section class="relative surface-dark overflow-hidden pt-5 pb-9 sm:pt-16 sm:pb-20 lg:pt-20 lg:pb-24 border-b border-slate-800/80">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="absolute inset-0 mesh-glow pointer-events-none"></div>
+    <div class="absolute -top-24 -left-24 sm:-top-36 sm:-left-36 w-56 h-56 sm:w-96 sm:h-96 bg-brand-500/20 rounded-full blur-[80px] sm:blur-[130px] pointer-events-none"></div>
+    <div class="absolute top-1/4 -right-24 sm:-right-36 w-56 h-56 sm:w-96 sm:h-96 bg-accent-500/20 rounded-full blur-[80px] sm:blur-[130px] pointer-events-none"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns: Headline & CTA -->
+        <div class="lg:col-span-7 text-left min-w-0">
+          <div class="badge-dark mb-3 sm:mb-6 py-1.5 px-2.5 sm:px-3.5">
+            <span class="w-2 h-2 rounded-full bg-brand-400 animate-ping flex-shrink-0"></span>
+            <span class="min-w-0 break-words">Central Market &bull; AL &amp; BQ Block &bull; Outer Ring Road &bull; Haiderpur Belt</span>
+          </div>
+
+          <h1 class="font-display text-[clamp(1.75rem,7vw,2.4rem)] sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-[1.14] sm:leading-[1.1] mb-3.5 sm:mb-6 text-glow">
+            Best SEO Company in <br class="hidden sm:inline" /><span class="gradient-text-light">Shalimar Bagh</span>
+          </h1>
+
+          <p class="text-[13.5px] sm:text-base md:text-lg text-slate-300 leading-[1.68] sm:leading-relaxed mb-5 sm:mb-8 font-normal text-justify hyphens-auto [text-align-last:left]">
+            Partnering with a trusted <strong class="text-white font-semibold">SEO Company in Shalimar Bagh Delhi</strong> helps builder floor developers, turnkey architects, CA chambers and banquet venues win steady client enquiries. We build fast mobile websites, secure top Google Map rankings and earn brand citations on ChatGPT and Gemini.
+          </p>
+
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-4 mb-5 sm:mb-10">
+            <a href="#contact" class="btn-primary w-full sm:w-auto min-h-[50px] text-[13.5px] sm:text-base px-4 sm:px-8 py-3.5 sm:py-4">
+              <span>Claim Free Shalimar Bagh Audit</span>
+              <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+              </svg>
+            </a>
+            <a href="#services" class="btn-secondary-dark w-full sm:w-auto min-h-[48px] text-[13.5px] sm:text-base px-4 sm:px-7 py-3.5 sm:py-4">
+              <span>Explore Commercial SEO</span>
+            </a>
+          </div>
+
+          <!-- Trust Verification Strip -->
+          <div class="pt-4 sm:pt-6 border-t border-slate-800/80">
+            <div class="grid grid-cols-2 sm:flex sm:flex-wrap items-stretch sm:items-center gap-2">
+              {trustStrip.map((item) => (
+                <span class="px-2.5 sm:px-3 py-2 sm:py-1.5 min-h-[42px] sm:min-h-0 rounded-lg bg-slate-900/90 border border-slate-800 text-[11px] sm:text-xs text-slate-300 font-medium flex items-center justify-center sm:justify-start text-center sm:text-left leading-tight break-words">
+                  {item}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Hero Image -->
+        <div class="lg:col-span-5 min-w-0">
+          <div class="relative rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-700/80 shadow-2xl shadow-brand-500/15 bg-slate-900 group">
+            <div class="relative">
+              <img
+                src="/images/seo-shalimar-bagh/hero-seo-company-shalimar-bagh.webp"
+                alt="Best SEO Company in Shalimar Bagh Delhi Strategists Reviewing Builder and CA Rankings"
+                width="960"
+                height="540"
+                sizes="(max-width: 1024px) 100vw, 42vw"
+                fetchpriority="high"
+                decoding="async"
+                class="w-full aspect-[16/9] sm:aspect-auto sm:h-72 md:h-[380px] lg:h-[400px] object-cover object-center sm:group-hover:scale-105 transition-transform duration-500"
+              />
+              <div class="hidden sm:block absolute inset-0 bg-gradient-to-t from-[#050a14] via-transparent to-transparent opacity-80"></div>
+            </div>
+            <div class="relative sm:absolute sm:bottom-4 sm:left-4 sm:right-4 glass-card border-t sm:border border-slate-800 sm:rounded-2xl p-3.5 sm:p-4">
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-1">
+                <span class="text-xs font-bold text-white">Pin 110088 Commercial Growth</span>
+                <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-400">
+                  <span class="w-2 h-2 rounded-full bg-emerald-400 flex-shrink-0"></span>
+                  Verified Bookings
+                </span>
+              </div>
+              <p class="text-[11px] sm:text-xs text-slate-300 text-justify hyphens-auto [text-align-last:left] leading-relaxed">
+                Helping Central Market, AL Block and Ring Road firms win consistent inbound client calls.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 2: INTRODUCTION
+  ===================================================================== -->
+  <section class="relative surface-white overflow-hidden py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns -->
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-light mb-3.5 sm:mb-4">Pin 110088 Commercial &amp; Residential Hub</div>
+          <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-4 sm:mb-6">
+            How Shalimar Bagh Enterprises Capture High Value Local Contracts <span class="gradient-text-dark">Through Organic Search</span>
+          </h2>
+          <div class="space-y-4 sm:space-y-5 text-slate-700 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            <p>
+              Shalimar Bagh spans thriving commercial pockets around Central Market, AL Block, BQ Block and the Outer Ring Road corridor. As the trusted <strong>Best SEO Company in Shalimar Bagh Delhi</strong>, NK Digital Tech engineers fast loading service portals, verified block level map citations and structured entity markup that turn local searchers into retained clients.
+            </p>
+            <p>
+              Coordinating closely with our zone headquarters as the <a href="/best-seo-company-in-north-delhi/" class="text-brand-600 font-semibold hover:underline">Best SEO Company in North Delhi</a>, our strategists also deploy enterprise search frameworks from the <a href="/best-seo-company-in-delhi/" class="text-brand-600 font-semibold hover:underline">Best SEO Company in Delhi</a> alongside hyper local map calibration via <a href="/local-seo-services-in-delhi/" class="text-brand-600 font-semibold hover:underline">Local SEO Services in Delhi</a>.
+            </p>
+          </div>
+          <div class="mt-6 sm:mt-8 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
+            <a href="#contact" class="btn-primary w-full sm:w-auto min-h-[48px]">
+              <span>Consult a Shalimar Bagh Strategist</span>
+              <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+              </svg>
+            </a>
+            <a href="#why-us" class="btn-secondary-light w-full sm:w-auto min-h-[48px]">
+              <span>See How We Differ</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Team Image + Stats -->
+        <div class="lg:col-span-5 space-y-4 sm:space-y-5 min-w-0">
+          <div class="rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-200 shadow-lg bg-slate-100">
+            <img
+              src="/images/seo-shalimar-bagh/seo-agency-team-shalimar-bagh.webp"
+              alt="Local SEO Agency Shalimar Bagh Team Planning Central Market and Ring Road Campaigns"
+              width="800"
+              height="533"
+              sizes="(max-width: 1024px) 100vw, 42vw"
+              class="w-full aspect-[16/9] sm:aspect-auto sm:h-64 lg:h-72 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="grid grid-cols-2 gap-2.5 sm:gap-4">
+            {[
+  {
+    "val": "295%",
+    "label": "Qualified Call Volume",
+    "sub": "Central Market & Ring Road belts"
+  },
+  {
+    "val": "Biweekly",
+    "label": "Engineering Releases",
+    "sub": "Audited code & content sprints"
+  },
+  {
+    "val": "Top 3",
+    "label": "Shalimar Bagh Maps",
+    "sub": "AL Block to Haiderpur corridor"
+  },
+  {
+    "val": "Complete",
+    "label": "Client Data Custody",
+    "sub": "Unrestricted property & account rights"
+  }
+].map((stat) => (
+              <div class="elevated-card rounded-xl sm:rounded-2xl p-3 sm:p-4 min-w-0 flex flex-col justify-between">
+                <div class="font-display font-black text-[1.1rem] sm:text-2xl text-brand-600 mb-0.5 leading-tight break-words">{stat.val}</div>
+                <div class="text-[11px] sm:text-xs font-bold text-slate-900 leading-snug">{stat.label}</div>
+                <div class="text-[10.5px] sm:text-[11px] text-slate-500 leading-snug mt-0.5">{stat.sub}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 3: PROBLEM STATEMENT
+  ===================================================================== -->
+  <section class="relative surface-indigo py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="max-w-7xl mx-auto relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns -->
+        <div class="lg:col-span-7 min-w-0">
+          <div class="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-3.5 py-1 sm:py-1.5 rounded-full text-[10px] sm:text-xs font-bold uppercase tracking-wider sm:tracking-widest bg-amber-500/10 border border-amber-500/30 text-amber-300 max-w-full leading-snug mb-4 sm:mb-5">
+            <svg class="w-4 h-4 text-amber-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+            </svg>
+            <span>Why Pin 110088 Firms Lose Deals</span>
+          </div>
+
+          <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-white tracking-tight leading-[1.22] sm:leading-tight mb-4 sm:mb-6">
+            Why Established Shalimar Bagh Businesses Lose High Value Walk Ins to Rivals
+          </h2>
+
+          <div class="space-y-4 sm:space-y-5 text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            <p>
+              When affluent families or corporate procurement heads search for builder floor developers, modular interior contractors or statutory auditors in Shalimar Bagh, sluggish websites and unverified map pins push them toward competing chambers. Delaying mobile page rendering by even four seconds costs you direct phone inquiries.
+            </p>
+            <p>
+              Deploying specialized workflows from our <a href="/ai-seo-company-in-delhi/" class="text-sky-300 font-semibold hover:underline">AI SEO Company in Delhi</a> team and <a href="/aeo-services-in-delhi/" class="text-sky-300 font-semibold hover:underline">AEO Services in Delhi</a> engineers, we rebuild heavy project pages into crisp WebP hubs backed by validated LocalBusiness JSON LD.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Diagnostic Cards -->
+        <div class="lg:col-span-5 space-y-3.5 sm:space-y-4 min-w-0">
+          <div class="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6 border-l-4 border-l-rose-500">
+            <div class="flex flex-wrap items-center justify-between gap-1.5 mb-2">
+              <span class="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-rose-400">Typical Local Vendor</span>
+              <span class="text-[11px] sm:text-xs text-slate-400">Dormant Lead Pipelines</span>
+            </div>
+            <h3 class="font-display font-bold text-[15px] sm:text-base text-white mb-2 leading-snug">Heavy Uncompressed Galleries, Missing Block Pins & Generic Copy</h3>
+            <p class="text-xs text-slate-300 leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+              Leaves your practice unseen when property buyers or corporate hosts search Google Maps or prompt ChatGPT for reputable Shalimar Bagh partners.
+            </p>
+          </div>
+
+          <div class="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6 border-l-4 border-l-emerald-400">
+            <div class="flex flex-wrap items-center justify-between gap-1.5 mb-2">
+              <span class="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-emerald-400">NK Digital Tech System</span>
+              <span class="text-[11px] sm:text-xs text-brand-300">Predictable Inbound Calls</span>
+            </div>
+            <h3 class="font-display font-bold text-[15px] sm:text-base text-white mb-2 leading-snug">Sub Second Mobile Portals, Block Level Citations & Answer Snippets</h3>
+            <p class="text-xs text-slate-300 leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+              Combines instant WebP loading, verified Pin 110088 directory alignment, ProfessionalService schema and concise 45 word fee summaries.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 4: SERVICES
+  ===================================================================== -->
+  <section id="services" class="relative surface-cool overflow-hidden scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 items-center mb-9 sm:mb-16">
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-light mb-3">Six Commercial Growth Pillars</div>
+          <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+            Specialized SEO Services in Shalimar Bagh Delhi
+          </h2>
+          <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            Our custom <strong>SEO services in Shalimar Bagh</strong> integrate source code speed tuning, AL and BQ Block map prominence, conversational snippet capture and <a href="/geo-services-in-delhi/" class="text-brand-600 font-semibold hover:underline">GEO Services in Delhi</a> into a measurable 90 day sprint schedule.
+          </p>
+        </div>
+        <div class="lg:col-span-5 min-w-0">
+          <div class="rounded-2xl overflow-hidden border border-slate-200 shadow-md bg-white">
+            <img
+              src="/images/seo-shalimar-bagh/technical-ai-seo-services-shalimar-bagh.webp"
+              alt="SEO Services in Shalimar Bagh Engineers Auditing Core Web Vitals and Schema Markup"
+              width="800"
+              height="450"
+              sizes="(max-width: 1024px) 100vw, 42vw"
+              class="w-full aspect-[16/9] sm:aspect-auto sm:h-56 lg:h-64 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- 3 Columns x 2 Rows Grid Layout -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-7">
+        {services.map((s) => (
+          <div class="elevated-card rounded-2xl p-4 sm:p-7 flex flex-col justify-between group sm:hover:-translate-y-1 min-w-0">
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-4 sm:mb-6">
+                <div class={`w-11 h-11 sm:w-12 sm:h-12 rounded-xl border flex items-center justify-center flex-shrink-0 ${s.iconStyle}`}>
+                  <Fragment set:html={s.icon} />
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class={`text-[10.5px] sm:text-[11px] font-semibold px-2.5 py-1 rounded-md ${s.badgeColor}`}>
+                    {s.category}
+                  </span>
+                  <span class="font-display font-black text-base sm:text-lg text-slate-300">{s.num}</span>
+                </div>
+              </div>
+
+              <h3 class="font-display font-bold text-[17px] sm:text-xl text-slate-900 mb-2.5 sm:mb-3 leading-snug group-hover:text-brand-600 transition-colors">
+                {s.title}
+              </h3>
+
+              <p class="text-slate-600 text-[13px] sm:text-sm leading-relaxed mb-4 sm:mb-6 text-justify hyphens-auto [text-align-last:left]">
+                {s.body}
+              </p>
+            </div>
+
+            <div>
+              <div class={`rounded-xl border p-3.5 sm:p-4 mb-3.5 sm:mb-5 ${s.impactStyle}`}>
+                <div class="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-slate-900 mb-1">
+                  <svg class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                  </svg>
+                  <span>Shalimar Bagh Commercial Impact</span>
+                </div>
+                <p class="text-xs text-slate-700 leading-relaxed font-medium text-justify hyphens-auto [text-align-last:left]">
+                  {s.impact}
+                </p>
+              </div>
+
+              <a href={s.href} class="w-full sm:w-auto inline-flex items-center justify-between sm:justify-start gap-2 rounded-xl sm:rounded-none bg-slate-50 active:bg-sky-50 sm:bg-transparent border border-slate-200/80 sm:border-0 px-3.5 sm:px-0 py-2.5 min-h-[46px] sm:min-h-0 text-xs font-bold text-brand-600 hover:text-brand-700 group-hover:gap-3 transition-all">
+                <span>{s.cta}</span>
+                <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 5: WHY NK DIGITAL TECH
+  ===================================================================== -->
+  <section id="why-us" class="relative surface-white overflow-hidden scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-14 text-left sm:text-center">
+        <div class="badge-light mb-3">Senior Engineering Custody</div>
+        <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+          Why Shalimar Bagh Founders Retain NK Digital Tech Over Generic Agencies
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed mb-4 text-justify hyphens-auto [text-align-last:left]">
+          Ranking across competitive North West and North Delhi corridors requires senior developers who edit HTML templates, schema graphs and local citations firsthand. We never outsource your domain to junior freelancers.
+        </p>
+        <p class="text-slate-700 font-semibold text-xs sm:text-sm">
+          Side by side comparison contrasting typical vendor shortcuts with our Shalimar Bagh execution system:
+        </p>
+      </div>
+
+      <!-- Desktop Comparison Matrix -->
+      <div class="hidden md:block overflow-hidden rounded-2xl border border-slate-200 shadow-lg">
+        <table class="w-full text-left border-collapse">
+          <thead>
+            <tr class="bg-slate-900 text-white">
+              <th class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-slate-300 w-1/4">
+                Deliverable Dimension
+              </th>
+              <th class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-rose-300 w-[37.5%] border-l border-slate-800">
+                Typical Freelance Vendor
+              </th>
+              <th class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-brand-300 w-[37.5%] border-l border-slate-800 bg-slate-950">
+                NK Digital Tech Shalimar Bagh
+              </th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200 text-sm">
+            {comparison.map((row, idx) => (
+              <tr class={idx % 2 === 0 ? 'bg-white' : 'bg-slate-50/80'}>
+                <td class="py-5 px-6 font-display font-bold text-slate-900">
+                  {row.metric}
+                </td>
+                <td class="py-5 px-6 text-slate-600 border-l border-slate-200">
+                  <div class="flex items-start gap-2.5">
+                    <svg class="w-4 h-4 text-rose-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                    <span>{row.typical}</span>
+                  </div>
+                </td>
+                <td class="py-5 px-6 text-slate-900 font-medium border-l border-slate-200 bg-sky-50/40">
+                  <div class="flex items-start gap-2.5">
+                    <svg class="w-4 h-4 text-emerald-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span>{row.nk}</span>
+                  </div>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Mobile Comparison Cards -->
+      <div class="md:hidden space-y-3.5">
+        {comparison.map((row) => (
+          <div class="elevated-card rounded-2xl p-4 space-y-2.5 min-w-0">
+            <h3 class="font-display font-bold text-slate-900 text-[15px] leading-snug pb-2 border-b border-slate-100">{row.metric}</h3>
+            <div class="rounded-xl bg-rose-50 border border-rose-100 p-3">
+              <div class="flex items-center gap-1.5 mb-1">
+                <svg class="w-3.5 h-3.5 text-rose-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+                <p class="text-[10px] font-bold uppercase tracking-wider text-rose-600">Typical Freelance Vendor</p>
+              </div>
+              <p class="text-xs text-slate-700 leading-relaxed">{row.typical}</p>
+            </div>
+            <div class="rounded-xl bg-sky-50 border border-sky-200 p-3">
+              <div class="flex items-center gap-1.5 mb-1">
+                <svg class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                </svg>
+                <p class="text-[10px] font-bold uppercase tracking-wider text-brand-600">NK Digital Tech Shalimar Bagh</p>
+              </div>
+              <p class="text-xs text-slate-900 font-semibold leading-relaxed">{row.nk}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 6: KEY BUSINESS DISTRICTS & INDUSTRIAL ZONES WE COVER IN NORTH DELHI
+  ===================================================================== -->
+  <section id="locations" class="relative surface-cool overflow-hidden scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-14 text-left sm:text-center">
+        <div class="badge-light mb-3">North Delhi Coverage Network</div>
+        <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+          Key Business Districts &amp; Industrial Zones We Cover in North Delhi
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          From Central Market advisory chambers and Outer Ring Road banquet venues in Shalimar Bagh to surrounding North Delhi trade zones, our architecture builds durable regional authority.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
+        {northCorridors.map((c) => (
+          <div class="elevated-card rounded-2xl p-4 sm:p-5 flex flex-col justify-between min-w-0">
+            <div>
+              <div class={`h-1 w-full bg-gradient-to-r ${c.accent} rounded-full mb-3.5`}></div>
+              <div class="flex items-center justify-between gap-2 mb-2.5">
+                <span class="px-2 py-0.5 rounded-md bg-sky-50 border border-sky-200 text-[11px] font-bold uppercase tracking-wider text-brand-600">
+                  {c.hub}
+                </span>
+                <span class="text-[11px] font-semibold text-slate-500">
+                  {c.pincode}
+                </span>
+              </div>
+              <h3 class="font-display font-bold text-base sm:text-lg text-slate-900 mb-1 leading-snug">
+                {c.area}
+              </h3>
+              <p class="text-xs font-bold text-brand-600 mb-2">{c.focus}</p>
+              <p class="text-slate-600 text-[13px] leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+                {c.desc}
+              </p>
+            </div>
+            <div class="mt-3.5 sm:mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
+              <a href={c.href} class="w-full sm:w-auto min-h-[44px] sm:min-h-0 inline-flex items-center justify-between sm:justify-start gap-1.5 text-xs font-bold text-brand-600 hover:text-brand-700 group/link">
+                <span>{c.cta}</span>
+                <svg class="w-3.5 h-3.5 flex-shrink-0 transition-transform group-hover/link:translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 7: OUR CLIENTS
+  ===================================================================== -->
+  <section id="clients" class="relative surface-indigo scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-14 text-left sm:text-center">
+        <div class="badge-dark mb-3">Pin 110088 Client Roster</div>
+        <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-white tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+          Shalimar Bagh Builders, Interior Studios &amp; Advisory Firms Scaling Online
+        </h2>
+        <p class="text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          From luxury floor promoters in AL Block to corporate tax consultants near Central Market, established Shalimar Bagh leaders rely on our search engineering.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2.5 sm:gap-5">
+        {clients.map((client) => (
+          <div class="glass-card rounded-2xl p-3 sm:p-5 flex flex-col items-center text-center group sm:hover:-translate-y-1 last:col-span-2 sm:last:col-span-1 min-w-0">
+            <div class="w-full max-w-[200px] sm:max-w-none mx-auto h-14 sm:h-20 rounded-xl bg-white border border-slate-200 flex items-center justify-center p-2.5 sm:p-4 mb-2.5 sm:mb-4 shadow-sm">
+              <img
+                src={client.logo}
+                alt={`${client.name} Logo`}
+                width="130"
+                height="48"
+                class="max-h-9 sm:max-h-12 w-auto object-contain"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <h3 class="font-display font-bold text-sm sm:text-base text-white mb-1">{client.name}</h3>
+            <p class="text-[11px] sm:text-xs text-slate-300 leading-snug mb-2.5 sm:mb-3 flex-grow">{client.sector}</p>
+            <span class="w-full sm:w-auto inline-flex items-center justify-center gap-1 text-[10px] sm:text-[11px] font-semibold text-brand-300 bg-brand-500/15 border border-brand-500/30 px-2 sm:px-2.5 py-1.5 sm:py-1 rounded-md leading-tight max-w-full">
+              <svg class="w-2.5 h-2.5 sm:w-3 sm:h-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+              </svg>
+              <span class="text-center leading-tight break-words">{client.region}</span>
+            </span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 8: INDUSTRIES (12 B2B & CORPORATE SECTORS)
+  ===================================================================== -->
+  <section id="industries" class="relative surface-slate overflow-hidden scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-16 text-left sm:text-center">
+        <div class="badge-light mb-3">Twelve Commercial Verticals</div>
+        <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+          Twelve High Value Sectors We Rank Across Shalimar Bagh
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          A builder floor developer in BQ Block requires a completely different search funnel than a corporate banquet operator on Ring Road or a statutory CA practice. We tailor every campaign to local buyer behavior.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-7">
+        {industries.map((ind) => (
+          <div class={`elevated-card rounded-2xl p-4 sm:p-7 border-t-4 ${ind.accentBorder} flex flex-col justify-between sm:hover:-translate-y-1 min-w-0`}>
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-4 sm:mb-5">
+                <div class={`w-10 h-10 sm:w-11 sm:h-11 rounded-xl border flex items-center justify-center flex-shrink-0 ${ind.iconBg}`}>
+                  <Fragment set:html={ind.icon} />
+                </div>
+                <span class="text-[11px] font-semibold text-slate-600 bg-slate-100 px-2.5 py-1 rounded-md">
+                  {ind.sector}
+                </span>
+              </div>
+
+              <h3 class="font-display font-bold text-[17px] sm:text-xl text-slate-900 mb-3 sm:mb-4 leading-snug">
+                {ind.title}
+              </h3>
+
+              <div class="mb-4 sm:mb-5">
+                <p class="text-[11px] font-bold uppercase tracking-wider text-brand-600 mb-1.5">
+                  Execution Focus
+                </p>
+                <p class="text-slate-600 text-[13px] sm:text-sm leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+                  {ind.focus}
+                </p>
+              </div>
+            </div>
+
+            <div class="rounded-xl bg-emerald-50/70 border border-emerald-200/80 p-3.5 sm:p-4">
+              <p class="text-[11px] font-bold uppercase tracking-wider text-emerald-700 mb-1">
+                Target Outcome
+              </p>
+              <p class="text-slate-800 text-xs font-medium leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+                {ind.outcome}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 9: TESTIMONIALS
+  ===================================================================== -->
+  <section id="testimonials" class="relative surface-dark scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="absolute inset-0 mesh-glow pointer-events-none opacity-60"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-16 text-left sm:text-center">
+        <div class="badge-dark mb-3">Verified Pin 110088 Reviews</div>
+        <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-white tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+          What Shalimar Bagh Business Owners Say About Our Search Sprints
+        </h2>
+        <p class="text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          Recorded inquiry growth, top three map pack rankings and generative AI mentions earned by commercial founders across Shalimar Bagh.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-7">
+        {testimonials.map((t) => (
+          <div class="glass-card rounded-2xl p-4 sm:p-8 flex flex-col justify-between sm:hover:-translate-y-1 min-w-0">
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-4 sm:mb-5">
+                <div class="flex items-center gap-1">
+                  {[1, 2, 3, 4, 5].map(() => (
+                    <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                    </svg>
+                  ))}
+                </div>
+                <span class="text-[10px] sm:text-[11px] font-semibold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-1 rounded-md">
+                  Shalimar Bagh Client
+                </span>
+              </div>
+
+              <p class="text-slate-200 text-[13.5px] sm:text-base leading-relaxed italic mb-5 sm:mb-6 text-justify hyphens-auto [text-align-last:left]">
+                "{t.quote}"
+              </p>
+
+              <div class="rounded-xl bg-slate-900/90 border border-slate-700/80 p-3.5 sm:p-4 mb-5 sm:mb-6">
+                <p class="text-[11px] font-bold uppercase tracking-wider text-brand-400 mb-2 sm:mb-2.5">
+                  Documented Gains
+                </p>
+                <ul class="space-y-2">
+                  {t.metrics.map((m) => (
+                    <li class="flex items-start gap-2 text-xs text-slate-300 font-medium leading-snug">
+                      <svg class="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                      </svg>
+                      <span>{m}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3.5 sm:gap-4 pt-3.5 sm:pt-4 border-t border-slate-800">
+              <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-white p-2 flex items-center justify-center flex-shrink-0 shadow-sm">
+                <img
+                  src={t.logo}
+                  alt={`${t.company} Logo`}
+                  width="48"
+                  height="48"
+                  class="max-h-8 sm:max-h-10 w-auto object-contain"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="min-w-0">
+                <h3 class="font-display font-bold text-white text-sm sm:text-base leading-snug">{t.name}</h3>
+                <p class="text-xs text-slate-300 leading-snug">
+                  {t.title}, <strong class="text-brand-400 font-semibold">{t.company}</strong>
+                </p>
+                <p class="text-[10.5px] sm:text-[11px] text-slate-400 mt-0.5 leading-snug">{t.sector}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 10: HOW WE WORK (FOUR STAGES)
+  ===================================================================== -->
+  <section id="process" class="relative surface-white overflow-hidden scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-16 text-left sm:text-center">
+        <div class="badge-light mb-3">Four Stage Execution Plan</div>
+        <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+          Our Fourteen Day Sprint Methodology for Shalimar Bagh Brands
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          We audit mobile rendering bottlenecks, construct block specific landing pages, lock in top three Google Map placements across Pin 110088, and secure brand citations on ChatGPT and Perplexity.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-7">
+        {stages.map((s) => (
+          <div class="elevated-card rounded-2xl p-4 sm:p-8 relative overflow-hidden group sm:hover:-translate-y-1 min-w-0">
+            <div class="flex items-center justify-between gap-4 mb-3.5 sm:mb-5">
+              <span class={`inline-flex items-center px-2.5 sm:px-3 py-1 rounded-lg text-xs font-bold uppercase tracking-wider text-white bg-gradient-to-r ${s.accent}`}>
+                {s.num}
+              </span>
+              <span class="font-display font-black text-3xl sm:text-4xl text-slate-200 group-hover:text-slate-300 transition-colors">
+                {s.step}
+              </span>
+            </div>
+            <h3 class="font-display font-bold text-[17px] sm:text-xl text-slate-900 mb-2.5 sm:mb-3 leading-snug">
+              {s.title}
+            </h3>
+            <p class="text-slate-600 text-[13px] sm:text-sm leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+              {s.body}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 11: CONCLUSION / PARTNERSHIP
+  ===================================================================== -->
+  <section class="relative surface-indigo py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-7 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns -->
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-dark mb-3.5 sm:mb-4">Compounding Search Equity</div>
+          <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-white tracking-tight leading-[1.22] sm:leading-tight mb-4 sm:mb-6">
+            Grow Your Inbound Pipeline With the Best SEO Company in Shalimar Bagh Delhi
+          </h2>
+          <div class="space-y-4 sm:space-y-5 text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            <p>
+              Capturing consistent commercial contracts and high ticket consultations in Pin 110088 requires more than word of mouth referrals. Property investors, corporate event planners and company directors evaluate Google search results and AI overviews before contacting a firm in Shalimar Bagh.
+            </p>
+            <p>
+              Partnering with NK Digital Tech as your <strong>SEO Company in Shalimar Bagh Delhi</strong> connects your brand with senior search strategists and <a href="/website-development-company-in-delhi/" class="text-sky-300 font-semibold hover:underline">Website Development Company in Delhi</a> engineers who refine mobile Core Web Vitals, synchronize local citations and deploy clean schema markup. Claim your free Shalimar Bagh audit today.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Growth Image -->
+        <div class="lg:col-span-5 min-w-0">
+          <div class="rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-700/80 shadow-2xl bg-slate-900">
+            <img
+              src="/images/seo-shalimar-bagh/organic-search-growth-shalimar-bagh.webp"
+              alt="SEO Company in Shalimar Bagh Delhi Consulting With Commercial Developers and Founders"
+              width="800"
+              height="450"
+              sizes="(max-width: 1024px) 100vw, 42vw"
+              class="w-full aspect-[16/9] sm:aspect-auto sm:h-64 lg:h-72 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 12: FAQ
+  ===================================================================== -->
+  <section id="faq" class="relative surface-cool overflow-hidden scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-left sm:text-center mb-9 sm:mb-14">
+        <div class="badge-light mb-3">Shalimar Bagh Search FAQ</div>
+        <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+          Frequently Asked Questions About SEO Services in Shalimar Bagh
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          Clear answers covering monthly retainer investments, ranking timelines, local map pack mechanics and AI visibility for Shalimar Bagh enterprises.
+        </p>
+      </div>
+
+      <div class="space-y-3 sm:space-y-4">
+        {faqs.map((f, i) => (
+          <details class="elevated-card rounded-2xl group overflow-hidden" open={i === 0}>
+            <summary class="flex items-start sm:items-center justify-between gap-2.5 sm:gap-4 px-3.5 sm:px-6 py-4 sm:py-5 min-h-[56px] active:bg-sky-50/60 transition-colors select-none">
+              <div class="flex items-start sm:items-center gap-2.5 sm:gap-3.5 text-left min-w-0">
+                <span class="w-6 h-6 sm:w-7 sm:h-7 rounded-lg bg-sky-50 border border-sky-200 text-brand-600 font-display font-bold text-xs flex items-center justify-center flex-shrink-0 mt-0.5 sm:mt-0">
+                  0{i + 1}
+                </span>
+                <span class="font-display font-bold text-slate-900 text-[14px] sm:text-base md:text-lg leading-[1.4] sm:leading-snug break-words">
+                  {f.q}
+                </span>
+              </div>
+              <span class="faq-icon w-7 h-7 sm:w-8 sm:h-8 rounded-full border border-slate-200 text-slate-600 flex items-center justify-center flex-shrink-0 mt-0.5 sm:mt-0">
+                <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                </svg>
+              </span>
+            </summary>
+            <div class="px-3.5 sm:px-6 pb-4 sm:pb-6 pt-3 text-slate-600 text-[13.5px] sm:text-sm md:text-base leading-[1.68] sm:leading-relaxed border-t border-slate-100 text-justify hyphens-auto [text-align-last:left]">
+              {f.a}
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 13: FINAL CTA / CONTACT
+  ===================================================================== -->
+  <section id="contact" class="relative surface-dark scroll-mt-16 sm:scroll-mt-20 pt-10 pb-12 sm:py-16 lg:py-20 px-4 sm:px-6 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-5xl mx-auto">
+      <div class="rounded-2xl sm:rounded-3xl bg-gradient-to-r from-brand-600 via-brand-700 to-accent-700 p-6 sm:p-10 md:p-12 text-center text-white shadow-2xl border border-white/15 relative overflow-hidden">
+        <div class="relative z-10 max-w-2xl mx-auto">
+          <h2 class="font-display font-black text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl md:text-4xl text-white tracking-tight leading-[1.22] sm:leading-snug mb-3 sm:mb-4">
+            Request Your Free Shalimar Bagh SEO Audit Today
+          </h2>
+
+          <p class="text-sky-50 text-[13px] sm:text-sm md:text-base leading-relaxed mb-6 sm:mb-8">
+            Receive a clear technical breakdown of your mobile loading speed, Google Map Pack positions and ChatGPT citations across Central Market, AL Block, BQ Block and Outer Ring Road.
+          </p>
+
+          <a
+            href="mailto:nkdigitaltech1@gmail.com"
+            class="inline-flex w-full sm:w-auto min-h-[48px] items-center justify-center gap-2 sm:gap-3 px-5 sm:px-8 py-3.5 sm:py-4 rounded-xl bg-white text-slate-950 hover:bg-sky-50 font-display font-bold text-sm sm:text-base shadow-xl transition-all duration-300 active:scale-95 text-center leading-snug"
+          >
+            <span>Claim Free Shalimar Bagh Audit</span>
+            <svg class="w-4 h-4 sm:w-5 sm:h-5 text-brand-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mobile Sticky Bottom Quick Action Bar -->
+  <div class="mobile-sticky-cta sm:hidden fixed bottom-0 inset-x-0 z-40 bg-[#050a14]/95 backdrop-blur-xl border-t border-slate-800 px-3 pt-2.5 pb-[max(0.7rem,env(safe-area-inset-bottom))] shadow-[0_-8px_24px_rgba(0,0,0,0.45)] transition-all duration-200">
+    <div class="flex items-center gap-2.5">
+      <a
+        href="mailto:nkdigitaltech1@gmail.com"
+        class="btn-primary flex-1 min-w-0 min-h-[48px] py-2.5 px-3 text-[12.5px] font-bold rounded-xl whitespace-nowrap"
+      >
+        <span class="truncate">Free Shalimar Bagh Audit</span>
+        <svg class="w-3.5 h-3.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+        </svg>
+      </a>
+      <a
+        href="#services"
+        class="btn-secondary-dark min-h-[48px] py-2.5 px-4 text-[12.5px] font-semibold rounded-xl flex-shrink-0 whitespace-nowrap"
+      >
+        <span>Services</span>
+      </a>
+    </div>
+  </div>
+
+  <style>
+    @media (max-width: 639px) {
+      .glass-card {
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+      }
+      #locations,
+      #why-us,
+      #clients,
+      #industries,
+      #testimonials,
+      #process,
+      #faq {
+        content-visibility: auto;
+        contain-intrinsic-size: auto 720px;
+      }
+      a,
+      button,
+      summary {
+        touch-action: manipulation;
+        -webkit-tap-highlight-color: transparent;
+      }
+    }
+  </style>
+
+</Layout>

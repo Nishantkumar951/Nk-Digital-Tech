@@ -1,0 +1,1419 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '../styles/global.css';
+
+const pageTitle = 'Best SEO Company in Patparganj Delhi | NK Digital Tech';
+const pageDescription = 'NK Digital Tech is a trusted SEO Company in Patparganj Delhi. We rank B2B manufacturing plants, packaging exporters and corporate offices across FIE estate.';
+const pageCanonical = 'https://www.nkdigitaltech.net/seo-company-in-patparganj-delhi/';
+
+const clients = [
+  {
+    name: 'VP Infra',
+    sector: 'Industrial Shed & Factory Leasing',
+    region: 'FIE Patparganj Block A to E',
+    logo: '/images/clients/vp-infra.webp',
+  },
+  {
+    name: 'Propertyways',
+    sector: 'Warehouse & Corporate Suite Advisory',
+    region: 'Patparganj Industrial Area & Hasanpur',
+    logo: '/images/clients/propertyways.webp',
+  },
+  {
+    name: 'Vision',
+    sector: 'Precision Industrial Safety Optics',
+    region: 'FIE Patparganj & Anand Vihar Axis',
+    logo: '/images/clients/vision.webp',
+  },
+  {
+    name: 'Creative Academy',
+    sector: 'CAD, Automation & ERP Training',
+    region: 'Mandawali & West Vinod Nagar Link',
+    logo: '/images/clients/creative-academy.webp',
+  },
+  {
+    name: 'Aangan',
+    sector: 'Garment Export & Wholesale Unit',
+    region: 'Patparganj Plot Belt & Ghazipur Link',
+    logo: '/images/clients/aangan.webp',
+  },
+];
+
+const services = [
+  {
+    num: '01',
+    category: 'B2B Spec Sheet Page One',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>`,
+    iconStyle: 'bg-sky-50 border-sky-200 text-brand-600',
+    impactStyle: 'bg-sky-50/80 border-sky-200/80 text-slate-800',
+    badgeColor: 'text-brand-600 bg-sky-100/80',
+    title: 'Technical SEO Services Patparganj & Catalogue Silos',
+    body: 'Delivering focused technical SEO services Patparganj manufacturers rely on, we rebuild slow machinery and packaging catalogues into clean, indexable specification silos so procurement heads across India find your plant on Google page one.',
+    impact: 'Consistent bulk RFQ submissions from verified institutional buyers and OEM purchase managers.',
+    cta: 'Website Development Company in Delhi',
+    href: '/website-development-company-in-delhi/',
+  },
+  {
+    num: '02',
+    category: 'AI Procurement Prompts',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>`,
+    iconStyle: 'bg-violet-50 border-violet-200 text-accent-600',
+    impactStyle: 'bg-violet-50/80 border-violet-200/80 text-slate-800',
+    badgeColor: 'text-accent-600 bg-violet-100/80',
+    title: 'ChatGPT, Gemini & Vendor Shortlist Citations',
+    body: 'Purchase teams now ask AI engines to shortlist ISO certified corrugated box makers, garment units or electrical panel fabricators in East Delhi. We add MOQ tables, BIS certifications and Product JSON LD so AI tools recommend your factory.',
+    impact: 'Direct supplier citations when corporate buyers compare FIE Patparganj vendors on ChatGPT.',
+    cta: 'AI SEO Company in Delhi',
+    href: '/ai-seo-company-in-delhi/',
+  },
+  {
+    num: '03',
+    category: 'FIE Estate Map Top 3',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>`,
+    iconStyle: 'bg-emerald-50 border-emerald-200 text-emerald-600',
+    impactStyle: 'bg-emerald-50/80 border-emerald-200/80 text-slate-800',
+    badgeColor: 'text-emerald-700 bg-emerald-100/80',
+    title: 'Local SEO Services in Patparganj & Factory Pins',
+    body: 'Through accurate local SEO services in Patparganj, we verify plot numbers across FIE Block A to E, Hasanpur Depot and Anand Vihar Terminal, aligning Google Business categories, dispatch photos and trade directory records.',
+    impact: 'Daily direct calls and plant inspection visits from NCR distributors and wholesale dealers.',
+    cta: 'Local SEO Services in Delhi',
+    href: '/local-seo-services-in-delhi/',
+  },
+  {
+    num: '04',
+    category: 'MOQ & Lead Time Snippets',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>`,
+    iconStyle: 'bg-amber-50 border-amber-200 text-amber-600',
+    impactStyle: 'bg-amber-50/80 border-amber-200/80 text-slate-800',
+    badgeColor: 'text-amber-700 bg-amber-100/80',
+    title: 'Industrial Answer Snippets & Tender Specification FAQ',
+    body: 'We place crisp 40 to 60 word technical answers under buyer questions covering GSM strength, tolerance limits, HSN codes, minimum order quantities and dispatch timelines, backed by clean FAQPage schema.',
+    impact: 'Zero click featured snippets that establish engineering authority before competitors get called.',
+    cta: 'AEO Services in Delhi',
+    href: '/aeo-services-in-delhi/',
+  },
+  {
+    num: '05',
+    category: 'OEM & Export Entity Trust',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>`,
+    iconStyle: 'bg-indigo-50 border-indigo-200 text-indigo-600',
+    impactStyle: 'bg-indigo-50/80 border-indigo-200/80 text-slate-800',
+    badgeColor: 'text-indigo-700 bg-indigo-100/80',
+    title: 'B2B Industrial SEO Patparganj & Entity Signals',
+    body: 'Combining B2B industrial SEO Patparganj playbooks with our credentials as a manufacturing SEO company Delhi founders trust, we connect ISO certificates, export IEC data, llms.txt files and trade association profiles.',
+    impact: 'Stronger supplier trust inside Gemini, Perplexity and global B2B sourcing comparisons.',
+    cta: 'GEO Services in Delhi',
+    href: '/geo-services-in-delhi/',
+  },
+  {
+    num: '06',
+    category: 'Global Export & Dealer Leads',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>`,
+    iconStyle: 'bg-cyan-50 border-cyan-200 text-cyan-700',
+    impactStyle: 'bg-cyan-50/80 border-cyan-200/80 text-slate-800',
+    badgeColor: 'text-cyan-700 bg-cyan-100/80',
+    title: 'Export Company SEO Patparganj & Pan India Reach',
+    body: 'Through specialised export company SEO Patparganj campaigns, we build country specific private label pages, container load calculators and pan India distributor inquiry funnels without paying B2B portal commissions.',
+    impact: 'Direct container enquiries and state wise distributor signups arriving straight in your inbox.',
+    cta: 'Best SEO Company in East Delhi',
+    href: '/best-seo-company-in-east-delhi/',
+  },
+];
+
+const comparison = [
+  {
+    metric: 'Industrial & B2B Search Intent',
+    typical: 'Retail style blog posts that never match OEM part numbers, GSM grades or bulk MOQ searches',
+    nk: 'Dedicated specification silos built for FIE Patparganj manufacturers, exporters and wholesalers',
+  },
+  {
+    metric: 'Who Handles Your Website',
+    typical: 'Junior account reps forward generic PDF audits while your product pages stay unindexed',
+    nk: 'Senior search engineers and B2B writers fix crawl budgets, HTML tables and schema directly',
+  },
+  {
+    metric: 'AI Procurement Readiness',
+    typical: 'Locked PDF brochures that Google, ChatGPT and Gemini cannot parse or cite for buyers',
+    nk: 'HTML specification tables, ISO credential blocks, Product JSON LD and llms.txt discovery',
+  },
+  {
+    metric: 'Catalogue Speed & Core Vitals',
+    typical: 'Heavy uncompressed machinery images that stall on mobile networks at trade expos',
+    nk: 'Sub two second WebP product galleries engineered to pass Core Web Vitals on every device',
+  },
+  {
+    metric: 'B2B Backlink & Citation Quality',
+    typical: 'Cheap directory spam that damages domain trust and shares your leads with five rivals',
+    nk: 'Verified Indian industrial chambers, Pin 110092 citations and exclusive inbound RFQ forms',
+  },
+  {
+    metric: 'Portal Independence & Ownership',
+    typical: 'Endless dependency on paid B2B marketplace subscriptions where ten factories bid on one lead',
+    nk: '100% ownership of your domain, organic RFQ pipeline, Search Console and map listings',
+  },
+];
+
+const eastCorridors = [
+  {
+    hub: 'Area 01',
+    area: 'Laxmi Nagar',
+    focus: 'SEO Company in Laxmi Nagar',
+    pincode: 'Pin 110092',
+    desc: 'Home to premier CA, CS and CMA entrance institutes, tax consultancies and IT training centres. We rank fee structures, syllabus pages and local Google Business Profiles ahead of every exam admission cycle.',
+    cta: 'View Dedicated Laxmi Nagar Page',
+    href: '/seo-company-in-laxmi-nagar-delhi/',
+    accent: 'from-brand-500 to-sky-400',
+  },
+  {
+    hub: 'Area 02',
+    area: 'Preet Vihar',
+    focus: 'SEO Company in Preet Vihar',
+    pincode: 'Pin 110092',
+    desc: 'Lining the commercial Vikas Marg corridor, speciality eye and dental clinics, diagnostic labs, architectural practices and bridal flagships count on our search campaigns for high ticket consultations.',
+    cta: 'View Dedicated Preet Vihar Page',
+    href: '/seo-company-in-preet-vihar-delhi/',
+    accent: 'from-accent-500 to-violet-400',
+  },
+  {
+    hub: 'Area 03',
+    area: 'Mayur Vihar',
+    focus: 'SEO Company in Mayur Vihar',
+    pincode: 'Pin 110091',
+    desc: 'Covering Phases 1, 2 and 3, we help real estate consultants, diagnostic centres, preschools and aesthetic clinics win local three pack positions and inbound phone inquiries across dense residential pockets.',
+    cta: 'View Dedicated Mayur Vihar Page',
+    href: '/seo-company-in-mayur-vihar-delhi/',
+    accent: 'from-cyan-500 to-teal-400',
+  },
+  {
+    hub: 'Area 04',
+    area: 'Patparganj Industrial Area',
+    focus: 'SEO Company in Patparganj',
+    pincode: 'Pin 110092',
+    desc: 'We turn engineering catalogues and machinery specifications for packaging, electronics, printing and export units in FIE Patparganj into organic landing pages that pull verified commercial purchase orders.',
+    cta: 'View Dedicated Patparganj Page',
+    href: '/seo-company-in-patparganj-delhi/',
+    accent: 'from-emerald-500 to-green-400',
+  },
+  {
+    hub: 'Area 05',
+    area: 'Karkardooma',
+    focus: 'SEO Company in Karkardooma',
+    pincode: 'Pin 110092',
+    desc: 'Centered around Karkardooma District Courts and Community Centre, we position law chambers, corporate leasing advisories, commercial developers and financial consultants for targeted searches.',
+    cta: 'View Dedicated Karkardooma Page',
+    href: '/seo-company-in-karkardooma-delhi/',
+    accent: 'from-indigo-500 to-blue-400',
+  },
+  {
+    hub: 'Area 06',
+    area: 'Nirman Vihar',
+    focus: 'SEO Company in Nirman Vihar',
+    pincode: 'Pin 110092',
+    desc: 'Along the bustling V3S commercial stretch, we help high end jewellery showrooms, couture designers, wellness clinics and private consultancies win local footfall and premium walk in enquiries.',
+    cta: 'View Dedicated Nirman Vihar Page',
+    href: '/seo-company-in-nirman-vihar-delhi/',
+    accent: 'from-violet-500 to-purple-400',
+  },
+  {
+    hub: 'Area 07',
+    area: 'Shakarpur',
+    focus: 'SEO Company in Shakarpur',
+    pincode: 'Pin 110092',
+    desc: 'Bordering Laxmi Nagar, we structure fast mobile pages and local citations for government exam academies, computer training schools, legal documentation offices and accounting practices.',
+    cta: 'View Dedicated Shakarpur Page',
+    href: '/seo-company-in-shakarpur-delhi/',
+    accent: 'from-amber-500 to-orange-400',
+  },
+  {
+    hub: 'Area 08',
+    area: 'IP Extension',
+    focus: 'SEO Company in IP Extension',
+    pincode: 'Pin 110092',
+    desc: 'Surrounded by large group housing societies, our search campaigns build top map placement for family dental clinics, pathology labs, interior studios and property dealers across Patparganj.',
+    cta: 'View Dedicated IP Extension Page',
+    href: '/seo-company-in-ip-extension-delhi/',
+    accent: 'from-teal-500 to-emerald-400',
+  },
+  {
+    hub: 'Area 09',
+    area: 'Gandhi Nagar',
+    focus: 'SEO Company in Gandhi Nagar',
+    pincode: 'Pin 110031',
+    desc: 'In Asia’s largest readymade garment and textile wholesale market, we build B2B discovery systems for apparel manufacturers, fabric suppliers and bulk traders seeking buyers across India.',
+    cta: 'View Dedicated Gandhi Nagar Page',
+    href: '/seo-company-in-gandhi-nagar-delhi/',
+    accent: 'from-rose-500 to-pink-400',
+  },
+  {
+    hub: 'Area 10',
+    area: 'Krishna Nagar',
+    focus: 'SEO Company in Krishna Nagar',
+    pincode: 'Pin 110051',
+    desc: 'Focusing on the high footfall Lal Quarter retail hub, we drive shoppers and phone calls to ethnic apparel stores, optical retail chains, jewellery studios and specialist clinics.',
+    cta: 'View Dedicated Krishna Nagar Page',
+    href: '/seo-company-in-krishna-nagar-delhi/',
+    accent: 'from-sky-500 to-cyan-400',
+  },
+  {
+    hub: 'Area 11',
+    area: 'Vivek Vihar',
+    focus: 'SEO Company in Vivek Vihar',
+    pincode: 'Pin 110095',
+    desc: 'For elite builder floor promoters, chartered accountancy firms, private aesthetic centres and interior designers, we deliver selective search visibility matched to high net worth clients.',
+    cta: 'View Dedicated Vivek Vihar Page',
+    href: '/seo-company-in-vivek-vihar-delhi/',
+    accent: 'from-blue-500 to-indigo-400',
+  },
+  {
+    hub: 'Area 12',
+    area: 'Shahdara & Jhilmil',
+    focus: 'SEO Company in Shahdara',
+    pincode: 'Pin 110032',
+    desc: 'Targeting Jhilmil Industrial Area and Shahdara commercial belts, we generate inbound corporate leads for cable makers, metal engineering plants, wholesale distributors and trading firms.',
+    cta: 'View Dedicated Shahdara Page',
+    href: '/seo-company-in-shahdara-delhi/',
+    accent: 'from-fuchsia-500 to-rose-400',
+  },
+];
+
+const industries = [
+  {
+    sector: 'Packaging & Printing SEO',
+    title: 'Corrugated Box & Mono Carton Plants',
+    focus: 'As an experienced FIE Patparganj SEO agency, we convert static PDF brochures into searchable ply, GSM and custom die cut packaging pages that rank for bulk ecommerce and FMCG procurement terms.',
+    outcome: 'Recurring monthly truckload orders from NCR D2C brands and FMCG factories.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>`,
+    accentBorder: 'border-t-brand-500',
+    iconBg: 'bg-sky-50 text-brand-600 border-sky-200',
+  },
+  {
+    sector: 'Apparel & Textile Export SEO',
+    title: 'Garment Exporters & Buying Houses',
+    focus: 'Our export company SEO Patparganj playbooks build private label fabric specification pages, compliance certificate hubs and MOQ inquiry funnels targeting European, Middle East and domestic retail buyers.',
+    outcome: 'Direct international buyer sampling requests without third party agent cuts.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>`,
+    accentBorder: 'border-t-pink-500',
+    iconBg: 'bg-pink-50 text-pink-600 border-pink-200',
+  },
+  {
+    sector: 'Engineering & CNC SEO',
+    title: 'Electrical Panels & Sheet Metal Units',
+    focus: 'Operating as a dedicated manufacturing SEO company Delhi engineers count on, we structure LT and HT panel specs, CNC tolerance charts and BIS approvals for industrial procurement searches.',
+    outcome: 'Qualified tender invitations and EPC contractor enquiries across North India.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>`,
+    accentBorder: 'border-t-indigo-500',
+    iconBg: 'bg-indigo-50 text-indigo-600 border-indigo-200',
+  },
+  {
+    sector: 'Auto Service & Workshop SEO',
+    title: 'Authorized Service & Fleet Workshops',
+    focus: 'Patparganj Industrial Area hosts Delhi largest concentration of car workshops and EV service stations. We rank accidental repair, fleet AMC and periodic servicing pages on Google Maps.',
+    outcome: 'Daily service bay bookings and corporate fleet maintenance contracts.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>`,
+    accentBorder: 'border-t-amber-500',
+    iconBg: 'bg-amber-50 text-amber-600 border-amber-200',
+  },
+  {
+    sector: 'Industrial Property SEO',
+    title: 'Factory Shed & Warehouse Advisors',
+    focus: 'We rank DSIIDC lease transfer guides, floor load specs, fire NOC checklists and industrial plot listings for commercial property consultants in FIE Patparganj and Ghazipur.',
+    outcome: 'High value factory sale mandates and long lease corporate warehouse tenants.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>`,
+    accentBorder: 'border-t-cyan-500',
+    iconBg: 'bg-cyan-50 text-cyan-700 border-cyan-200',
+  },
+  {
+    sector: 'Pharma & Lab Supply SEO',
+    title: 'Diagnostic Equipment & Surgical Stockists',
+    focus: 'We optimise CDSCO licensed distributor catalogues, cold chain reagent specs and bulk inquiry forms for medical device and lab consumable suppliers in FIE Patparganj.',
+    outcome: 'Steady pathology lab supply contracts and regional dealer onboarding.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>`,
+    accentBorder: 'border-t-red-500',
+    iconBg: 'bg-red-50 text-red-600 border-red-200',
+  },
+  {
+    sector: 'Freight & Cold Chain SEO',
+    title: '3PL Warehousing & Transport Fleets',
+    focus: 'Positioned beside NH 24, Anand Vihar and Ghazipur, Patparganj logistics firms need route specific B2B pages. We rank part truckload, cold storage and customs clearing services.',
+    outcome: 'Recurring monthly dispatch contracts from Noida, Sahibabad and Delhi factories.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0"/></svg>`,
+    accentBorder: 'border-t-emerald-500',
+    iconBg: 'bg-emerald-50 text-emerald-600 border-emerald-200',
+  },
+  {
+    sector: 'Corporate Tax & Compliance SEO',
+    title: 'Factory Audit CAs & Labour Consultants',
+    focus: 'We rank MSME subsidy guides, factory license compliance pages, export GST refund checklists and trademark services for corporate chambers in Patparganj and IP Extension.',
+    outcome: 'Annual statutory audit retainers from manufacturing promoters and exporters.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>`,
+    accentBorder: 'border-t-rose-500',
+    iconBg: 'bg-rose-50 text-rose-600 border-rose-200',
+  },
+  {
+    sector: 'FMCG & Bakery Processing SEO',
+    title: 'Food Ingredients & Commercial Bakeries',
+    focus: 'We build FSSAI compliant bulk ingredient pages, HORECA supply catalogues and private label contract manufacturing silos for food units operating in Patparganj.',
+    outcome: 'Steady hotel chain, institutional canteen and supermarket supply contracts.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 21h18M5 21V7l8-4v18M19 21V11l-6-4M9 9v.01M9 12v.01M9 15v.01M9 18v.01"/></svg>`,
+    accentBorder: 'border-t-orange-500',
+    iconBg: 'bg-orange-50 text-orange-600 border-orange-200',
+  },
+  {
+    sector: 'ERP, CCTV & Industrial IT SEO',
+    title: 'Factory Automation, Solar & ERP Vendors',
+    focus: 'We rank rooftop industrial solar ROI calculators, biometric attendance systems, Tally ERP customization and warehouse CCTV installation services across East Delhi estates.',
+    outcome: 'High ticket B2B deployment projects across Patparganj, Sahibabad and Noida.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>`,
+    accentBorder: 'border-t-purple-500',
+    iconBg: 'bg-purple-50 text-purple-600 border-purple-200',
+  },
+  {
+    sector: 'Commercial Interior & Modular SEO',
+    title: 'Office Furniture & Turnkey Fitout Plants',
+    focus: 'Patparganj workstation and modular furniture manufacturers win architect mandates when their acoustic pod, conference table and chair catalogues rank on Google.',
+    outcome: 'Bulk workstation orders from corporate offices across NCR.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"/></svg>`,
+    accentBorder: 'border-t-teal-500',
+    iconBg: 'bg-teal-50 text-teal-700 border-teal-200',
+  },
+  {
+    sector: 'Banquet & Business Hotel SEO',
+    title: 'Corporate Banquets & Conference Venues',
+    focus: 'We rank dealer meet venues, exhibition halls and transit business hotels along the Patparganj and Anand Vihar corridor for direct event planner and wedding bookings.',
+    outcome: 'Commission free corporate AGM bookings and peak season wedding reservations.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>`,
+    accentBorder: 'border-t-accent-500',
+    iconBg: 'bg-violet-50 text-accent-600 border-violet-200',
+  },
+];
+
+const testimonials = [
+  {
+    name: 'Harshvardhan Goel',
+    title: 'Director',
+    company: 'VP Infra',
+    sector: 'Industrial Shed & Factory Advisory, FIE Patparganj',
+    metrics: [
+      '310% increase in verified factory plot and shed leasing calls',
+      'Top 3 Google Map Pack placement across FIE Patparganj Pin 110092',
+      'Direct citations on ChatGPT for East Delhi industrial estate queries',
+    ],
+    quote: 'Promoters relocating manufacturing units near NH 24 and Anand Vihar search Google for exact DSIIDC and FIE plot sizes. NK Digital Tech structured our industrial property pages and map profile cleanly. We now close direct factory leases without relying on broker portals.',
+    logo: '/images/clients/vp-infra.webp',
+  },
+  {
+    name: 'Sandeep Bansal',
+    title: 'Managing Partner',
+    company: 'Propertyways',
+    sector: 'Warehouse & Corporate Suite Leasing, Patparganj & Ghazipur',
+    metrics: [
+      '3.4x growth in corporate warehouse and cold chain space inquiries',
+      'Page one Google positions for 39 industrial real estate keywords',
+      'Featured inside Google AI Overviews for East Delhi warehouse searches',
+    ],
+    quote: 'Before hiring NK Digital Tech, our commercial inventory in Patparganj and Hasanpur never showed up for logistics companies searching online. Their technical SEO cleanup and specification tables brought steady institutional tenant inspections within ninety days.',
+    logo: '/images/clients/propertyways.webp',
+  },
+  {
+    name: 'Rituja Malhotra',
+    title: 'Export Head',
+    company: 'Aangan',
+    sector: 'Apparel Production & Wholesale Unit, FIE Patparganj',
+    metrics: [
+      '265% rise in private label bulk garment RFQ form submissions',
+      'First page rankings across domestic wholesale and export buyer terms',
+      'Zero paid B2B portal dependency for new boutique distributor leads',
+    ],
+    quote: 'We spent lakhs every year on B2B directory memberships where ten factories fought over the same buyer lead. NK Digital Tech converted our fabric and MOQ catalogue into fast HTML pages with schema. Today international and pan India buyers contact our Patparganj unit directly.',
+    logo: '/images/clients/aangan.webp',
+  },
+  {
+    name: 'Prashant Kulshrestha',
+    title: 'Centre Head',
+    company: 'Creative Academy',
+    sector: 'Industrial CAD, ERP & Automation Training, Patparganj Link',
+    metrics: [
+      '2.8x increase in engineering diploma and ERP trainee inquiries',
+      'Top three map visibility across Hasanpur, Mandawali and IP Extension',
+      'Consistent corporate upskilling enquiries from FIE estate plants',
+    ],
+    quote: 'Engineering graduates and factory accountants around Patparganj search mobile maps for practical CAD and Tally GST training. NK Digital Tech rebuilt our course pages and verified our reviews, keeping our weekday and weekend batches consistently full.',
+    logo: '/images/clients/creative-academy.webp',
+  },
+];
+
+const stages = [
+  {
+    num: 'Phase 01',
+    step: '01',
+    title: 'Catalogue Crawl Audit & Industrial Competitor Benchmark',
+    body: 'We inspect your mobile Core Web Vitals, unindexed PDF brochures, duplicate product URLs and Google Business Profile while benchmarking top ranking factories and suppliers across FIE Patparganj and NCR.',
+    accent: 'from-brand-600 to-sky-500',
+  },
+  {
+    num: 'Phase 02',
+    step: '02',
+    title: 'Six Sprint B2B Keyword, MOQ & Spec Sheet Architecture',
+    body: 'You receive a clear 90 day engineering plan divided into six two week sprints. Every OEM search term, technical specification silo, 50 word procurement answer and Product JSON LD block is mapped to drive RFQs.',
+    accent: 'from-accent-600 to-violet-500',
+  },
+  {
+    num: 'Phase 03',
+    step: '03',
+    title: 'In House Code Optimisation, Technical Copy & Trade Citations',
+    body: 'Our developers and B2B copywriters execute every sprint directly. We speed up product templates, convert PDFs into indexable HTML tables, deploy Organization and FAQPage schema, publish llms.txt and align Pin 110092 citations.',
+    accent: 'from-cyan-600 to-teal-500',
+  },
+  {
+    num: 'Phase 04',
+    step: '04',
+    title: 'Biweekly RFQ Tracking & AI Vendor Shortlist Reviews',
+    body: 'Every two weeks we review Search Console impressions, bulk quote form submissions, map calls and live supplier citations across ChatGPT, Gemini and Google AI Overviews to scale your highest margin product lines.',
+    accent: 'from-emerald-600 to-green-500',
+  },
+];
+
+const faqs = [
+  {
+    q: 'Why do factory owners choose NK Digital Tech as their SEO Company in Patparganj Delhi?',
+    a: 'Manufacturers, packaging plants and exporters pick NK Digital Tech as their SEO Company in Patparganj Delhi because we turn technical product catalogues into direct B2B RFQ pipelines. Unlike consumer agencies, our senior team understands MOQ tables, ISO certifications, HSN searches, Pin 110092 map rankings and AI vendor shortlists.',
+  },
+  {
+    q: 'How much do monthly SEO services in Patparganj cost for B2B and local firms?',
+    a: 'Structured SEO services in Patparganj typically range between ₹18,000 and ₹48,000 per month based on product SKU count, technical website condition and whether you target East Delhi, pan India distributors or international export markets.',
+  },
+  {
+    q: 'How can our FIE Patparganj factory stop relying on paid B2B lead portals?',
+    a: 'Paid B2B marketplaces sell the exact same buyer inquiry to eight competing factories at once, forcing price wars. Working with an experienced FIE Patparganj SEO agency ranks your own domain on Google page one and ChatGPT so procurement managers submit RFQs exclusively to your sales team.',
+  },
+  {
+    q: 'How long does B2B industrial SEO Patparganj take to generate bulk inquiries?',
+    a: 'Fixing crawl errors, converting locked PDF brochures into HTML product pages and verifying your FIE Patparganj Google Business Profile usually lifts local dealer calls within four to eight weeks. Competitive national OEM keywords and steady AI citations compound across twelve to twenty weeks.',
+  },
+  {
+    q: 'How do ChatGPT, Gemini and Google AI Overviews shortlist Patparganj manufacturers?',
+    a: 'AI procurement assistants cite suppliers whose websites load fast, publish clear 40 to 60 word technical specifications, list ISO or BIS credentials, include nested Product and Organization JSON LD schema and maintain an llms.txt file. We build all of these elements directly into your site.',
+  },
+  {
+    q: 'Can an SEO consultant in Patparganj help export units win overseas buyers?',
+    a: 'Yes. Through targeted export company SEO Patparganj campaigns, our senior SEO consultant in Patparganj builds private label specification pages, compliance documentation hubs and international search silos that attract overseas buying houses without middlemen.',
+  },
+  {
+    q: 'Do you also serve service businesses near Hasanpur, IP Extension and Anand Vihar?',
+    a: 'Yes. Alongside industrial plants, we work as a full search focused digital marketing agency Patparganj workshops, logistics fleets, corporate CA firms, banquet halls and showrooms rely on across Hasanpur, Anand Vihar, Ghazipur and IP Extension.',
+  },
+  {
+    q: 'Do we keep full ownership of our product pages, domain and analytics?',
+    a: 'Yes, 100 percent. Every HTML specification page, schema block, Google Search Console property, analytics account and Google Business Profile remains permanently under your company direct admin ownership.',
+  },
+];
+
+const trustStrip = [
+  'FIE Patparganj Block A to E',
+  'B2B & OEM Page One Rankings',
+  'Pin 110092 Map Pack Top 3',
+  'Cited on ChatGPT & Gemini',
+  'Product & ISO Schema Setup',
+  'Direct Exclusive RFQ Funnels',
+  'Fast HTML Spec Sheet Silos',
+  '100% Client Admin Ownership',
+];
+
+const seoPatparganjSchemaLocalBusiness = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "NK Digital Tech SEO Company in Patparganj Delhi",
+  "url": "https://www.nkdigitaltech.net/seo-company-in-patparganj-delhi/",
+  "logo": "https://www.nkdigitaltech.net/images/seo-patparganj/hero-seo-company-patparganj.webp",
+  "image": "https://www.nkdigitaltech.net/images/seo-patparganj/hero-seo-company-patparganj.webp",
+  "description": "NK Digital Tech is a trusted SEO Company in Patparganj Delhi delivering B2B industrial SEO, technical catalogue optimisation, Local Map Pack rankings, AEO and GEO across FIE Patparganj and Anand Vihar.",
+  "email": "nkdigitaltech1@gmail.com",
+  "priceRange": "₹18,000 to ₹48,000+",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Patparganj",
+    "addressRegion": "Delhi",
+    "postalCode": "110092",
+    "addressCountry": "IN"
+  },
+  "areaServed": [
+    "FIE Patparganj",
+    "Patparganj Industrial Area",
+    "Hasanpur",
+    "Anand Vihar",
+    "Ghazipur",
+    "IP Extension",
+    "Mandawali",
+    "East Delhi"
+  ],
+  "serviceType": [
+    "SEO Services in Patparganj",
+    "B2B Industrial SEO Patparganj",
+    "FIE Patparganj SEO Agency",
+    "Technical SEO Services Patparganj",
+    "Export Company SEO Patparganj",
+    "Local SEO Services in Patparganj"
+  ]
+});
+
+const seoPatparganjSchemaFAQ = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map((item) => ({
+    "@type": "Question",
+    "name": item.q,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": item.a
+    }
+  }))
+});
+---
+
+<Layout
+  title={pageTitle}
+  description={pageDescription}
+  canonical={pageCanonical}
+  ogImage="https://www.nkdigitaltech.net/images/seo-patparganj/hero-seo-company-patparganj.webp"
+  preloadImage="/images/seo-patparganj/hero-seo-company-patparganj.webp"
+  hideLocationsNav={false}
+  customSchemaLocalBusiness={seoPatparganjSchemaLocalBusiness}
+  customSchemaFAQ={seoPatparganjSchemaFAQ}
+  utilityTagline="SEO Company in Patparganj Delhi • FIE Industrial Area, Hasanpur & Anand Vihar"
+  brandSubtitle="Patparganj • B2B & AI Search"
+  footerBio="Trusted SEO Company in Patparganj Delhi helping FIE manufacturing units, packaging plants, garment exporters, auto workshops and corporate offices capture exclusive Google RFQs and AI citations."
+  footerCoreDisciplines={[
+    { label: 'Best SEO Company in East Delhi', href: '/best-seo-company-in-east-delhi/' },
+    { label: 'Best SEO Company in Delhi', href: '/best-seo-company-in-delhi/' },
+    { label: 'Local SEO Services in Delhi', href: '/local-seo-services-in-delhi/' },
+    { label: 'AI SEO Company in Delhi', href: '/ai-seo-company-in-delhi/' },
+    { label: 'AEO Services in Delhi', href: '/aeo-services-in-delhi/' },
+    { label: 'GEO Services in Delhi', href: '/geo-services-in-delhi/' },
+    { label: 'Website Development Company in Delhi', href: '/website-development-company-in-delhi/' },
+  ]}
+  footerTagline="SEO Company in Patparganj Delhi • FIE Estate & Pin 110092 Search Growth"
+>
+
+  <!-- =====================================================================
+       SECTION 1: HERO (DARK SURFACE WITH UNIQUE PATPARGANJ SEO HERO IMAGE)
+  ===================================================================== -->
+  <section class="relative surface-dark overflow-hidden pt-5 pb-9 sm:pt-16 sm:pb-20 lg:pt-20 lg:pb-24 border-b border-slate-800/80">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="absolute inset-0 mesh-glow pointer-events-none"></div>
+    <div class="absolute -top-24 -left-24 sm:-top-36 sm:-left-36 w-56 h-56 sm:w-96 sm:h-96 bg-brand-500/20 rounded-full blur-[80px] sm:blur-[130px] pointer-events-none"></div>
+    <div class="absolute top-1/4 -right-24 sm:-right-36 w-56 h-56 sm:w-96 sm:h-96 bg-accent-500/20 rounded-full blur-[80px] sm:blur-[130px] pointer-events-none"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns: Headline & CTA -->
+        <div class="lg:col-span-7 text-left min-w-0">
+          <div class="badge-dark mb-3 sm:mb-6 py-1.5 px-2.5 sm:px-3.5">
+            <span class="w-2 h-2 rounded-full bg-brand-400 animate-ping flex-shrink-0"></span>
+            <span class="min-w-0 break-words">FIE Patparganj &bull; Hasanpur &bull; Anand Vihar &bull; Ghazipur</span>
+          </div>
+
+          <h1 class="font-display text-[clamp(1.75rem,7vw,2.4rem)] sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-[1.14] sm:leading-[1.1] mb-3.5 sm:mb-6 text-glow">
+            Best SEO Company in <br class="hidden sm:inline" />
+            <span class="gradient-text-light">Patparganj Delhi</span>
+          </h1>
+
+          <p class="text-[13.5px] sm:text-base md:text-lg text-slate-300 leading-[1.68] sm:leading-relaxed mb-5 sm:mb-8 font-normal text-justify hyphens-auto [text-align-last:left]">
+            Partnering with an industrial <strong class="text-white font-semibold">SEO Company in Patparganj Delhi</strong> helps FIE manufacturing plants, offset packaging presses, engineering units and corporate offices win direct B2B RFQs. We build fast HTML specification pages, secure top Google Map rankings and earn ChatGPT citations.
+          </p>
+
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-4 mb-5 sm:mb-10">
+            <a href="#contact" class="btn-primary w-full sm:w-auto min-h-[50px] text-[13.5px] sm:text-base px-4 sm:px-8 py-3.5 sm:py-4">
+              <span>Get Your Free Patparganj SEO Audit</span>
+              <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+              </svg>
+            </a>
+            <a href="#services" class="btn-secondary-dark w-full sm:w-auto min-h-[48px] text-[13.5px] sm:text-base px-4 sm:px-7 py-3.5 sm:py-4">
+              <span>View Patparganj SEO Services</span>
+            </a>
+          </div>
+
+          <!-- Trust Verification Strip -->
+          <div class="pt-4 sm:pt-6 border-t border-slate-800/80">
+            <div class="grid grid-cols-2 sm:flex sm:flex-wrap items-stretch sm:items-center gap-2">
+              {trustStrip.map((item) => (
+                <span class="px-2.5 sm:px-3 py-2 sm:py-1.5 min-h-[42px] sm:min-h-0 rounded-lg bg-slate-900/90 border border-slate-800 text-[11px] sm:text-xs text-slate-300 font-medium flex items-center justify-center sm:justify-start text-center sm:text-left leading-tight break-words">
+                  {item}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Unique Patparganj SEO Hero Image -->
+        <div class="lg:col-span-5 min-w-0">
+          <div class="relative rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-700/80 shadow-2xl shadow-brand-500/15 bg-slate-900 group">
+            <div class="relative">
+              <img
+                src="/images/seo-patparganj/hero-seo-company-patparganj.webp"
+                alt="SEO Company in Patparganj Delhi Indian B2B Search Strategists Reviewing Industrial RFQ Growth"
+                width="960"
+                height="540"
+                sizes="(max-width: 1024px) 100vw, 42vw"
+                fetchpriority="high"
+                decoding="async"
+                class="w-full aspect-[16/9] sm:aspect-auto sm:h-72 md:h-[380px] lg:h-[400px] object-cover object-center sm:group-hover:scale-105 transition-transform duration-500"
+              />
+              <div class="hidden sm:block absolute inset-0 bg-gradient-to-t from-[#050a14] via-transparent to-transparent opacity-80"></div>
+            </div>
+            <div class="relative sm:absolute sm:bottom-4 sm:left-4 sm:right-4 glass-card border-t sm:border border-slate-800 sm:rounded-2xl p-3.5 sm:p-4">
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-1">
+                <span class="text-xs font-bold text-white">FIE Patparganj B2B Search Engine</span>
+                <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-400">
+                  <span class="w-2 h-2 rounded-full bg-emerald-400 flex-shrink-0"></span>
+                  Verified Daily Calls
+                </span>
+              </div>
+              <p class="text-[11px] sm:text-xs text-slate-300 text-justify hyphens-auto [text-align-last:left] leading-relaxed">
+                Helping FIE Block A to E plants, exporters and corporate suites win exclusive RFQs and AI vendor citations.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 2: INTRODUCTION (CRISP WHITE CONTRAST SECTION + TEAM IMAGE)
+  ===================================================================== -->
+  <section class="relative surface-white overflow-hidden py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns -->
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-light mb-3.5 sm:mb-4">FIE Industrial Estate &amp; Pin 110092 Authority</div>
+          <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-4 sm:mb-6">
+            Why Industrial Promoters Pick the Best SEO Company in Patparganj Delhi <span class="gradient-text-dark">for Direct B2B RFQs</span>
+          </h2>
+          <div class="space-y-4 sm:space-y-5 text-slate-700 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            <p>
+              NK Digital Tech serves as the <strong>Best SEO Company in Patparganj Delhi</strong> for FIE manufacturing plants, corrugated packaging units, garment exporters and corporate offices. We convert technical catalogues into fast specification pages and Pin 110092 map rankings for direct B2B orders.
+            </p>
+            <p>
+              Rather than locking you into shared portal leads, every senior <strong>SEO consultant in Patparganj</strong> on our team combines regional authority as the <a href="/best-seo-company-in-east-delhi/" class="text-brand-600 font-semibold hover:underline">Best SEO Company in East Delhi</a> with enterprise systems from the <a href="/best-seo-company-in-delhi/" class="text-brand-600 font-semibold hover:underline">Best SEO Company in Delhi</a> and <a href="/local-seo-services-in-delhi/" class="text-brand-600 font-semibold hover:underline">Local SEO Services in Delhi</a> to win exclusive OEM enquiries.
+            </p>
+          </div>
+          <div class="mt-6 sm:mt-8 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
+            <a href="#contact" class="btn-primary w-full sm:w-auto min-h-[48px]">
+              <span>Speak With a Patparganj B2B SEO Specialist</span>
+              <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+              </svg>
+            </a>
+            <a href="#why-us" class="btn-secondary-light w-full sm:w-auto min-h-[48px]">
+              <span>Compare Our B2B Execution</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Unique Patparganj SEO Team Image + Stats -->
+        <div class="lg:col-span-5 space-y-4 sm:space-y-5 min-w-0">
+          <div class="rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-200 shadow-lg bg-slate-100">
+            <img
+              src="/images/seo-patparganj/seo-agency-team-patparganj.webp"
+              alt="FIE Patparganj SEO Agency Team Structuring B2B Manufacturing and Export Search Funnels"
+              width="800"
+              height="533"
+              sizes="(max-width: 1024px) 100vw, 42vw"
+              class="w-full aspect-[16/9] sm:aspect-auto sm:h-64 lg:h-72 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="grid grid-cols-2 gap-2.5 sm:gap-4">
+            {[
+              { val: '310%', label: 'B2B RFQ Growth', sub: 'Across FIE & industrial plots' },
+              { val: '6 Sprints', label: '90 Day Work Plan', sub: 'Reviewed every fourteen days' },
+              { val: 'Top 3', label: 'Estate Map Focus', sub: 'Pin 110092 & NH 24 corridor' },
+              { val: '100%', label: 'Exclusive Leads', sub: 'Zero shared portal bidding' },
+            ].map((stat) => (
+              <div class="elevated-card rounded-xl sm:rounded-2xl p-3 sm:p-4 min-w-0 flex flex-col justify-between">
+                <div class="font-display font-black text-[1.1rem] sm:text-2xl text-brand-600 mb-0.5 leading-tight break-words">{stat.val}</div>
+                <div class="text-[11px] sm:text-xs font-bold text-slate-900 leading-snug">{stat.label}</div>
+                <div class="text-[10.5px] sm:text-[11px] text-slate-500 leading-snug mt-0.5">{stat.sub}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 3: PROBLEM STATEMENT (DEEP INDIGO DARK CONTRAST SECTION)
+  ===================================================================== -->
+  <section class="relative surface-indigo py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="max-w-7xl mx-auto relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns -->
+        <div class="lg:col-span-7 min-w-0">
+          <div class="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-3.5 py-1 sm:py-1.5 rounded-full text-[10px] sm:text-xs font-bold uppercase tracking-wider sm:tracking-widest bg-amber-500/10 border border-amber-500/30 text-amber-300 max-w-full leading-snug mb-4 sm:mb-5">
+            <svg class="w-4 h-4 text-amber-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+            </svg>
+            <span>Why Industrial Websites Miss Bulk Orders</span>
+          </div>
+
+          <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-white tracking-tight leading-[1.22] sm:leading-tight mb-4 sm:mb-6">
+            Why High Capacity Patparganj Plants Lose Buyers to Middlemen &amp; Portals
+          </h2>
+
+          <div class="space-y-4 sm:space-y-5 text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            <p>
+              Inside FIE Patparganj and the surrounding industrial plots, ISO certified factories run modern production lines yet rely on five page brochure websites built years ago. Vital product tolerances, GSM charts and machinery capacities sit trapped inside unindexed PDF downloads, leaving traders and B2B directories to rank above the actual manufacturer and resell leads back at high markups.
+            </p>
+            <p>
+              Deploying our <a href="/ai-seo-company-in-delhi/" class="text-sky-300 font-semibold hover:underline">AI SEO Company in Delhi</a> and <a href="/aeo-services-in-delhi/" class="text-sky-300 font-semibold hover:underline">AEO Services in Delhi</a> architecture, we convert static brochures into fast HTML specification silos with Product and FAQPage schema so institutional buyers reach your plant floor directly.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Diagnostic Comparison Cards -->
+        <div class="lg:col-span-5 space-y-3.5 sm:space-y-4 min-w-0">
+          <div class="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6 border-l-4 border-l-rose-500">
+            <div class="flex flex-wrap items-center justify-between gap-1.5 mb-2">
+              <span class="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-rose-400">Old Brochure &amp; Portal Model</span>
+              <span class="text-[11px] sm:text-xs text-slate-400">Shared Price War Leads</span>
+            </div>
+            <h3 class="font-display font-bold text-[15px] sm:text-base text-white mb-2 leading-snug">Locked PDF Catalogues, Slow Pages &amp; Directory Fees</h3>
+            <p class="text-xs text-slate-300 leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+              Invisible when procurement engineers search Google or prompt ChatGPT for verified East Delhi OEM manufacturers.
+            </p>
+          </div>
+
+          <div class="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6 border-l-4 border-l-emerald-400">
+            <div class="flex flex-wrap items-center justify-between gap-1.5 mb-2">
+              <span class="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-emerald-400">NK Digital Tech B2B Engine</span>
+              <span class="text-[11px] sm:text-xs text-brand-300">Exclusive Direct RFQs</span>
+            </div>
+            <h3 class="font-display font-bold text-[15px] sm:text-base text-white mb-2 leading-snug">HTML Spec Tables, Pin 110092 Authority &amp; ISO Schema</h3>
+            <p class="text-xs text-slate-300 leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+              Connects fast product pages, MOQ answer blocks, verified factory map pins and llms.txt files for direct buyer inquiries.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 4: SERVICES (LIGHT COOL ALABASTER CONTRAST + TECHNICAL IMAGE)
+  ===================================================================== -->
+  <section id="services" class="relative surface-cool overflow-hidden scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 items-center mb-9 sm:mb-16">
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-light mb-3">Six Industrial &amp; Commercial Pillars</div>
+          <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+            Complete SEO Services in Patparganj
+          </h2>
+          <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            Our <strong>SEO services in Patparganj</strong> unite industrial catalogue architecture, factory map verification, procurement snippet formatting and <a href="/geo-services-in-delhi/" class="text-brand-600 font-semibold hover:underline">GEO Services in Delhi</a> under one accountable sprint plan. More than a general <strong>digital marketing agency Patparganj</strong> units outgrow, we engineer every page for direct RFQs on Google and AI search.
+          </p>
+        </div>
+        <div class="lg:col-span-5 min-w-0">
+          <div class="rounded-2xl overflow-hidden border border-slate-200 shadow-md bg-white">
+            <img
+              src="/images/seo-patparganj/technical-ai-seo-services-patparganj.webp"
+              alt="Technical SEO Services Patparganj Engineers Auditing B2B Product Schema and Crawl Health"
+              width="800"
+              height="450"
+              sizes="(max-width: 1024px) 100vw, 42vw"
+              class="w-full aspect-[16/9] sm:aspect-auto sm:h-56 lg:h-64 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- 3 Columns x 2 Rows Grid Layout -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-7">
+        {services.map((s) => (
+          <div class="elevated-card rounded-2xl p-4 sm:p-7 flex flex-col justify-between group sm:hover:-translate-y-1 min-w-0">
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-4 sm:mb-6">
+                <div class={`w-11 h-11 sm:w-12 sm:h-12 rounded-xl border flex items-center justify-center flex-shrink-0 ${s.iconStyle}`}>
+                  <Fragment set:html={s.icon} />
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class={`text-[10.5px] sm:text-[11px] font-semibold px-2.5 py-1 rounded-md ${s.badgeColor}`}>
+                    {s.category}
+                  </span>
+                  <span class="font-display font-black text-base sm:text-lg text-slate-300">{s.num}</span>
+                </div>
+              </div>
+
+              <h3 class="font-display font-bold text-[17px] sm:text-xl text-slate-900 mb-2.5 sm:mb-3 leading-snug group-hover:text-brand-600 transition-colors">
+                {s.title}
+              </h3>
+
+              <p class="text-slate-600 text-[13px] sm:text-sm leading-relaxed mb-4 sm:mb-6 text-justify hyphens-auto [text-align-last:left]">
+                {s.body}
+              </p>
+            </div>
+
+            <div>
+              <div class={`rounded-xl border p-3.5 sm:p-4 mb-3.5 sm:mb-5 ${s.impactStyle}`}>
+                <div class="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-slate-900 mb-1">
+                  <svg class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                  </svg>
+                  <span>Patparganj Impact</span>
+                </div>
+                <p class="text-xs text-slate-700 leading-relaxed font-medium text-justify hyphens-auto [text-align-last:left]">
+                  {s.impact}
+                </p>
+              </div>
+
+              <a href={s.href} class="w-full sm:w-auto inline-flex items-center justify-between sm:justify-start gap-2 rounded-xl sm:rounded-none bg-slate-50 active:bg-sky-50 sm:bg-transparent border border-slate-200/80 sm:border-0 px-3.5 sm:px-0 py-2.5 min-h-[46px] sm:min-h-0 text-xs font-bold text-brand-600 hover:text-brand-700 group-hover:gap-3 transition-all">
+                <span>{s.cta}</span>
+                <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 5: WHY NK DIGITAL TECH (CRISP WHITE CONTRAST SECTION)
+  ===================================================================== -->
+  <section id="why-us" class="relative surface-white overflow-hidden scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-14 text-left sm:text-center">
+        <div class="badge-light mb-3">Direct Engineering Accountability</div>
+        <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+          How the Best SEO Company in Patparganj Outperforms Portal Subscriptions
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed mb-4 text-justify hyphens-auto [text-align-last:left]">
+          Selecting the <strong>best SEO company in Patparganj</strong> comes down to technical B2B depth and exclusive lead ownership. At NK Digital Tech, senior engineers and industrial writers convert your product specs into top ranking assets while every login stays in your hands.
+        </p>
+        <p class="text-slate-700 font-semibold text-xs sm:text-sm">
+          Side by side comparison for FIE Patparganj and commercial founders:
+        </p>
+      </div>
+
+      <!-- Desktop Comparison Matrix -->
+      <div class="hidden md:block overflow-hidden rounded-2xl border border-slate-200 shadow-lg">
+        <table class="w-full text-left border-collapse">
+          <thead>
+            <tr class="bg-slate-900 text-white">
+              <th class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-slate-300 w-1/4">
+                Comparison Factor
+              </th>
+              <th class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-rose-300 w-[37.5%] border-l border-slate-800">
+                Typical Local Vendor or Portal
+              </th>
+              <th class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-brand-300 w-[37.5%] border-l border-slate-800 bg-slate-950">
+                NK Digital Tech Patparganj
+              </th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200 text-sm">
+            {comparison.map((row, idx) => (
+              <tr class={idx % 2 === 0 ? 'bg-white' : 'bg-slate-50/80'}>
+                <td class="py-5 px-6 font-display font-bold text-slate-900">
+                  {row.metric}
+                </td>
+                <td class="py-5 px-6 text-slate-600 border-l border-slate-200">
+                  <div class="flex items-start gap-2.5">
+                    <svg class="w-4 h-4 text-rose-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                    <span>{row.typical}</span>
+                  </div>
+                </td>
+                <td class="py-5 px-6 text-slate-900 font-medium border-l border-slate-200 bg-sky-50/40">
+                  <div class="flex items-start gap-2.5">
+                    <svg class="w-4 h-4 text-emerald-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span>{row.nk}</span>
+                  </div>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Mobile Comparison Cards -->
+      <div class="md:hidden space-y-3.5">
+        {comparison.map((row) => (
+          <div class="elevated-card rounded-2xl p-4 space-y-2.5 min-w-0">
+            <h3 class="font-display font-bold text-slate-900 text-[15px] leading-snug pb-2 border-b border-slate-100">{row.metric}</h3>
+            <div class="rounded-xl bg-rose-50 border border-rose-100 p-3">
+              <div class="flex items-center gap-1.5 mb-1">
+                <svg class="w-3.5 h-3.5 text-rose-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+                <p class="text-[10px] font-bold uppercase tracking-wider text-rose-600">Typical Local Vendor or Portal</p>
+              </div>
+              <p class="text-xs text-slate-700 leading-relaxed">{row.typical}</p>
+            </div>
+            <div class="rounded-xl bg-sky-50 border border-sky-200 p-3">
+              <div class="flex items-center gap-1.5 mb-1">
+                <svg class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                </svg>
+                <p class="text-[10px] font-bold uppercase tracking-wider text-brand-600">NK Digital Tech Patparganj</p>
+              </div>
+              <p class="text-xs text-slate-900 font-semibold leading-relaxed">{row.nk}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 6: KEY BUSINESS DISTRICTS & COMMERCIAL HUBS WE COVER IN EAST DELHI
+  ===================================================================== -->
+  <section id="locations" class="relative surface-cool overflow-hidden scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-14 text-left sm:text-center">
+        <div class="badge-light mb-3">Twelve Commercial Corridors &amp; Industrial Zones</div>
+        <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+          Key Business Districts &amp; Commercial Hubs We Cover in East Delhi
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          Connecting FIE manufacturing units, packaging plants and exporters in Patparganj Industrial Area with IP Extension, Karkardooma, Mayur Vihar and Shahdara.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
+        {eastCorridors.map((c) => (
+          <div class="elevated-card rounded-2xl p-4 sm:p-5 flex flex-col justify-between min-w-0">
+            <div>
+              <div class={`h-1 w-full bg-gradient-to-r ${c.accent} rounded-full mb-3.5`}></div>
+              <div class="flex items-center justify-between gap-2 mb-2.5">
+                <span class="px-2 py-0.5 rounded-md bg-sky-50 border border-sky-200 text-[11px] font-bold uppercase tracking-wider text-brand-600">
+                  {c.hub}
+                </span>
+                <span class="text-[11px] font-semibold text-slate-500">
+                  {c.pincode}
+                </span>
+              </div>
+              <h3 class="font-display font-bold text-base sm:text-lg text-slate-900 mb-1 leading-snug">
+                {c.area}
+              </h3>
+              <p class="text-xs font-bold text-brand-600 mb-2">{c.focus}</p>
+              <p class="text-slate-600 text-[13px] leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+                {c.desc}
+              </p>
+            </div>
+            <div class="mt-3.5 sm:mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
+              <a href={c.href} class="w-full sm:w-auto min-h-[44px] sm:min-h-0 inline-flex items-center justify-between sm:justify-start gap-1.5 text-xs font-bold text-brand-600 hover:text-brand-700 group/link">
+                <span>{c.cta}</span>
+                <svg class="w-3.5 h-3.5 flex-shrink-0 transition-transform group-hover/link:translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div class="mt-8 text-center">
+        <a href="/best-seo-company-in-east-delhi/" class="inline-flex items-center gap-2 text-sm font-bold text-brand-600 hover:text-brand-700">
+          <span>Explore Complete East Delhi Regional Directory &amp; Strategy</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 7: OUR CLIENTS (DARK INDIGO CONTRAST SECTION)
+  ===================================================================== -->
+  <section id="clients" class="relative surface-indigo scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-14 text-left sm:text-center">
+        <div class="badge-dark mb-3">Industrial &amp; Commercial Track Record</div>
+        <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-white tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+          Patparganj Enterprises Scaling Through Organic Search
+        </h2>
+        <p class="text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          From factory shed advisors and garment production houses in FIE Patparganj to safety optical suppliers, warehouse consultants and CAD institutes near Hasanpur, founders rely on our B2B search execution.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2.5 sm:gap-5">
+        {clients.map((client) => (
+          <div class="glass-card rounded-2xl p-3 sm:p-5 flex flex-col items-center text-center group sm:hover:-translate-y-1 last:col-span-2 sm:last:col-span-1 min-w-0">
+            <div class="w-full max-w-[200px] sm:max-w-none mx-auto h-14 sm:h-20 rounded-xl bg-white border border-slate-200 flex items-center justify-center p-2.5 sm:p-4 mb-2.5 sm:mb-4 shadow-sm">
+              <img
+                src={client.logo}
+                alt={`${client.name} Logo`}
+                width="130"
+                height="48"
+                class="max-h-9 sm:max-h-12 w-auto object-contain"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <h3 class="font-display font-bold text-sm sm:text-base text-white mb-1">{client.name}</h3>
+            <p class="text-[11px] sm:text-xs text-slate-300 leading-snug mb-2.5 sm:mb-3 flex-grow">{client.sector}</p>
+            <span class="w-full sm:w-auto inline-flex items-center justify-center gap-1 text-[10px] sm:text-[11px] font-semibold text-brand-300 bg-brand-500/15 border border-brand-500/30 px-2 sm:px-2.5 py-1.5 sm:py-1 rounded-md leading-tight max-w-full">
+              <svg class="w-2.5 h-2.5 sm:w-3 sm:h-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+              </svg>
+              <span class="text-center leading-tight break-words">{client.region}</span>
+            </span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 8: INDUSTRIES (LIGHT SLATE CONTRAST SECTION - 12 SECTORS)
+  ===================================================================== -->
+  <section id="industries" class="relative surface-slate overflow-hidden scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-16 text-left sm:text-center">
+        <div class="badge-light mb-3">Industrial &amp; B2B Playbooks</div>
+        <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+          Twelve Patparganj Industrial &amp; Commercial Sectors We Rank
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          A corrugated box plant in FIE Block C needs completely different search pages than an authorized fleet workshop or a cold chain operator near Ghazipur. We deploy custom playbooks across twelve high value sectors.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-7">
+        {industries.map((ind) => (
+          <div class={`elevated-card rounded-2xl p-4 sm:p-7 border-t-4 ${ind.accentBorder} flex flex-col justify-between sm:hover:-translate-y-1 min-w-0`}>
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-4 sm:mb-5">
+                <div class={`w-10 h-10 sm:w-11 sm:h-11 rounded-xl border flex items-center justify-center flex-shrink-0 ${ind.iconBg}`}>
+                  <Fragment set:html={ind.icon} />
+                </div>
+                <span class="text-[11px] font-semibold text-slate-600 bg-slate-100 px-2.5 py-1 rounded-md">
+                  {ind.sector}
+                </span>
+              </div>
+
+              <h3 class="font-display font-bold text-[17px] sm:text-xl text-slate-900 mb-3 sm:mb-4 leading-snug">
+                {ind.title}
+              </h3>
+
+              <div class="mb-4 sm:mb-5">
+                <p class="text-[11px] font-bold uppercase tracking-wider text-brand-600 mb-1.5">
+                  Campaign Priority
+                </p>
+                <p class="text-slate-600 text-[13px] sm:text-sm leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+                  {ind.focus}
+                </p>
+              </div>
+            </div>
+
+            <div class="rounded-xl bg-emerald-50/70 border border-emerald-200/80 p-3.5 sm:p-4">
+              <p class="text-[11px] font-bold uppercase tracking-wider text-emerald-700 mb-1">
+                Business Outcome
+              </p>
+              <p class="text-slate-800 text-xs font-medium leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+                {ind.outcome}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 9: TESTIMONIALS (DEEP NAVY CONTRAST SECTION - 2x2 GRID)
+  ===================================================================== -->
+  <section id="testimonials" class="relative surface-dark scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="absolute inset-0 mesh-glow pointer-events-none opacity-60"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-16 text-left sm:text-center">
+        <div class="badge-dark mb-3">Verified Industrial RFQ Growth</div>
+        <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-white tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+          Results Reported by Patparganj Exporters, Plants &amp; Advisors
+        </h2>
+        <p class="text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          Direct RFQ growth, Pin 110092 map pack placements and ChatGPT vendor citations shared by enterprises operating across FIE Patparganj, Hasanpur and Ghazipur.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-7">
+        {testimonials.map((t) => (
+          <div class="glass-card rounded-2xl p-4 sm:p-8 flex flex-col justify-between sm:hover:-translate-y-1 min-w-0">
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-4 sm:mb-5">
+                <div class="flex items-center gap-1">
+                  {[1, 2, 3, 4, 5].map(() => (
+                    <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                    </svg>
+                  ))}
+                </div>
+                <span class="text-[10px] sm:text-[11px] font-semibold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-1 rounded-md">
+                  Patparganj Partner
+                </span>
+              </div>
+
+              <p class="text-slate-200 text-[13.5px] sm:text-base leading-relaxed italic mb-5 sm:mb-6 text-justify hyphens-auto [text-align-last:left]">
+                "{t.quote}"
+              </p>
+
+              <div class="rounded-xl bg-slate-900/90 border border-slate-700/80 p-3.5 sm:p-4 mb-5 sm:mb-6">
+                <p class="text-[11px] font-bold uppercase tracking-wider text-brand-400 mb-2 sm:mb-2.5">
+                  Recorded Results
+                </p>
+                <ul class="space-y-2">
+                  {t.metrics.map((m) => (
+                    <li class="flex items-start gap-2 text-xs text-slate-300 font-medium leading-snug">
+                      <svg class="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                      </svg>
+                      <span>{m}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3.5 sm:gap-4 pt-3.5 sm:pt-4 border-t border-slate-800">
+              <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-white p-2 flex items-center justify-center flex-shrink-0 shadow-sm">
+                <img
+                  src={t.logo}
+                  alt={`${t.company} Logo`}
+                  width="48"
+                  height="48"
+                  class="max-h-8 sm:max-h-10 w-auto object-contain"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="min-w-0">
+                <h3 class="font-display font-bold text-white text-sm sm:text-base leading-snug">{t.name}</h3>
+                <p class="text-xs text-slate-300 leading-snug">
+                  {t.title}, <strong class="text-brand-400 font-semibold">{t.company}</strong>
+                </p>
+                <p class="text-[10.5px] sm:text-[11px] text-slate-400 mt-0.5 leading-snug">{t.sector}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 10: HOW WE WORK (CRISP WHITE CONTRAST SECTION - 4 STAGES)
+  ===================================================================== -->
+  <section id="process" class="relative surface-white overflow-hidden scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-16 text-left sm:text-center">
+        <div class="badge-light mb-3">Four Phase B2B Sprint Process</div>
+        <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+          Our Step by Step System for Ranking Patparganj Websites
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          We start by indexing locked product catalogues and repairing mobile speed, secure Pin 110092 map pack visibility, and build lasting supplier authority inside AI procurement engines.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-7">
+        {stages.map((s) => (
+          <div class="elevated-card rounded-2xl p-4 sm:p-8 relative overflow-hidden group sm:hover:-translate-y-1 min-w-0">
+            <div class="flex items-center justify-between gap-4 mb-3.5 sm:mb-5">
+              <span class={`inline-flex items-center px-2.5 sm:px-3 py-1 rounded-lg text-xs font-bold uppercase tracking-wider text-white bg-gradient-to-r ${s.accent}`}>
+                {s.num}
+              </span>
+              <span class="font-display font-black text-3xl sm:text-4xl text-slate-200 group-hover:text-slate-300 transition-colors">
+                {s.step}
+              </span>
+            </div>
+            <h3 class="font-display font-bold text-[17px] sm:text-xl text-slate-900 mb-2.5 sm:mb-3 leading-snug">
+              {s.title}
+            </h3>
+            <p class="text-slate-600 text-[13px] sm:text-sm leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+              {s.body}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 11: PARTNER WITH THE SEO COMPANY IN PATPARGANJ DELHI (CONCLUSION)
+  ===================================================================== -->
+  <section class="relative surface-indigo py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-7 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns -->
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-dark mb-3.5 sm:mb-4">Compounding B2B &amp; Export Pipeline</div>
+          <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-white tracking-tight leading-[1.22] sm:leading-tight mb-4 sm:mb-6">
+            Win Exclusive Orders With the Best SEO Company in Patparganj Delhi
+          </h2>
+          <div class="space-y-4 sm:space-y-5 text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            <p>
+              Scaling factory capacity and wholesale dispatch across Pin 110092 requires an organic RFQ engine you own outright rather than rented directory memberships where margins erode in multi vendor bidding. Every single day, institutional buyers, export sourcing agents and NCR distributors check Google page one and AI procurement summaries before requesting quotes.
+            </p>
+            <p>
+              When you choose NK Digital Tech as your <strong>SEO Company in Patparganj Delhi</strong>, our senior B2B search strategists and <a href="/website-development-company-in-delhi/" class="text-sky-300 font-semibold hover:underline">Website Development Company in Delhi</a> engineers upgrade your catalogue speed, specification silos, industrial citations and Product JSON LD directly. Book your free Patparganj audit today for a clear 90 day roadmap.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Unique Patparganj Growth Image -->
+        <div class="lg:col-span-5 min-w-0">
+          <div class="rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-700/80 shadow-2xl bg-slate-900">
+            <img
+              src="/images/seo-patparganj/organic-search-growth-patparganj.webp"
+              alt="SEO Company in Patparganj Delhi Partnering With FIE Industrial and Export Founders"
+              width="800"
+              height="450"
+              sizes="(max-width: 1024px) 100vw, 42vw"
+              class="w-full aspect-[16/9] sm:aspect-auto sm:h-64 lg:h-72 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 12: FAQ (LIGHT COOL SLATE CONTRAST SECTION)
+  ===================================================================== -->
+  <section id="faq" class="relative surface-cool overflow-hidden scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-left sm:text-center mb-9 sm:mb-14">
+        <div class="badge-light mb-3">Patparganj Industrial &amp; B2B FAQs</div>
+        <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+          Common Questions About Hiring an SEO Partner in Patparganj
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          Direct answers covering monthly B2B retainers, portal independence, ranking timelines and AI supplier citations across FIE Patparganj, Hasanpur and Anand Vihar.
+        </p>
+      </div>
+
+      <div class="space-y-3 sm:space-y-4">
+        {faqs.map((f, i) => (
+          <details class="elevated-card rounded-2xl group overflow-hidden" open={i === 0}>
+            <summary class="flex items-start sm:items-center justify-between gap-2.5 sm:gap-4 px-3.5 sm:px-6 py-4 sm:py-5 min-h-[56px] active:bg-sky-50/60 transition-colors select-none">
+              <div class="flex items-start sm:items-center gap-2.5 sm:gap-3.5 text-left min-w-0">
+                <span class="w-6 h-6 sm:w-7 sm:h-7 rounded-lg bg-sky-50 border border-sky-200 text-brand-600 font-display font-bold text-xs flex items-center justify-center flex-shrink-0 mt-0.5 sm:mt-0">
+                  0{i + 1}
+                </span>
+                <span class="font-display font-bold text-slate-900 text-[14px] sm:text-base md:text-lg leading-[1.4] sm:leading-snug break-words">
+                  {f.q}
+                </span>
+              </div>
+              <span class="faq-icon w-7 h-7 sm:w-8 sm:h-8 rounded-full border border-slate-200 text-slate-600 flex items-center justify-center flex-shrink-0 mt-0.5 sm:mt-0">
+                <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                </svg>
+              </span>
+            </summary>
+            <div class="px-3.5 sm:px-6 pb-4 sm:pb-6 pt-3 text-slate-600 text-[13.5px] sm:text-sm md:text-base leading-[1.68] sm:leading-relaxed border-t border-slate-100 text-justify hyphens-auto [text-align-last:left]">
+              {f.a}
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 13: CALL TO ACTION BANNER (LAST SECTION)
+  ===================================================================== -->
+  <section id="contact" class="relative surface-dark scroll-mt-16 sm:scroll-mt-20 pt-10 pb-12 sm:py-16 lg:py-20 px-4 sm:px-6 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-5xl mx-auto">
+      <div class="rounded-2xl sm:rounded-3xl bg-gradient-to-r from-brand-600 via-brand-700 to-accent-700 p-6 sm:p-10 md:p-12 text-center text-white shadow-2xl border border-white/15 relative overflow-hidden">
+        <div class="relative z-10 max-w-2xl mx-auto">
+          <h2 class="font-display font-black text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl md:text-4xl text-white tracking-tight leading-[1.22] sm:leading-snug mb-3 sm:mb-4">
+            Book Your Free Audit With the Best SEO Company in Patparganj Delhi
+          </h2>
+
+          <p class="text-sky-50 text-[13px] sm:text-sm md:text-base leading-relaxed mb-6 sm:mb-8">
+            Get a plain English review of your catalogue speed, Pin 110092 Google Map Pack rankings and ChatGPT supplier citations across FIE Patparganj, Hasanpur, Anand Vihar and Ghazipur.
+          </p>
+
+          <a
+            href="mailto:nkdigitaltech1@gmail.com"
+            class="inline-flex w-full sm:w-auto min-h-[48px] items-center justify-center gap-2 sm:gap-3 px-5 sm:px-8 py-3.5 sm:py-4 rounded-xl bg-white text-slate-950 hover:bg-sky-50 font-display font-bold text-sm sm:text-base shadow-xl transition-all duration-300 active:scale-95 text-center leading-snug"
+          >
+            <span>Request Patparganj B2B Website Audit</span>
+            <svg class="w-4 h-4 sm:w-5 sm:h-5 text-brand-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mobile Sticky Bottom Quick Action Bar -->
+  <div class="mobile-sticky-cta sm:hidden fixed bottom-0 inset-x-0 z-40 bg-[#050a14]/95 backdrop-blur-xl border-t border-slate-800 px-3 pt-2.5 pb-[max(0.7rem,env(safe-area-inset-bottom))] shadow-[0_-8px_24px_rgba(0,0,0,0.45)] transition-all duration-200">
+    <div class="flex items-center gap-2.5">
+      <a
+        href="mailto:nkdigitaltech1@gmail.com"
+        class="btn-primary flex-1 min-w-0 min-h-[48px] py-2.5 px-3 text-[12.5px] font-bold rounded-xl whitespace-nowrap"
+      >
+        <span class="truncate">Free Patparganj SEO Audit</span>
+        <svg class="w-3.5 h-3.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+        </svg>
+      </a>
+      <a
+        href="#services"
+        class="btn-secondary-dark min-h-[48px] py-2.5 px-4 text-[12.5px] font-semibold rounded-xl flex-shrink-0 whitespace-nowrap"
+      >
+        <span>Services</span>
+      </a>
+    </div>
+  </div>
+
+  <style>
+    @media (max-width: 639px) {
+      .glass-card {
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+      }
+      #locations,
+      #why-us,
+      #clients,
+      #industries,
+      #testimonials,
+      #process,
+      #faq {
+        content-visibility: auto;
+        contain-intrinsic-size: auto 720px;
+      }
+      a,
+      button,
+      summary {
+        touch-action: manipulation;
+        -webkit-tap-highlight-color: transparent;
+      }
+    }
+  </style>
+
+</Layout>

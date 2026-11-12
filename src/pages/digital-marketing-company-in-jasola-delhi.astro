@@ -1,0 +1,1465 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '../styles/global.css';
+
+const pageTitle = 'Digital Marketing Company in Jasola | NK Digital Tech';
+const pageDescription = 'NK Digital Tech is a premier Digital Marketing Company in Jasola (110025) delivering SEO, AI SEO, Google Map Packs, AEO, GEO and custom websites for B2B leads.';
+const pageCanonical = 'https://www.nkdigitaltech.net/digital-marketing-company-in-jasola-delhi/';
+
+const clients = [
+  {
+    name: 'Aangan',
+    sector: 'Luxury Couture & Bespoke Jewellery',
+    region: 'Jasola & Greater Kailash',
+    logo: '/images/clients/aangan.webp',
+  },
+  {
+    name: 'Vision',
+    sector: 'B2B Cloud, Cybersecurity & ERP Solutions',
+    region: 'Jasola & Saket',
+    logo: '/images/clients/vision.webp',
+  },
+  {
+    name: 'VP Infra',
+    sector: 'Bespoke Architecture & Turnkey EPC',
+    region: 'Jasola & MG Road',
+    logo: '/images/clients/vp-infra.webp',
+  },
+  {
+    name: 'Creative Academy',
+    sector: 'IIT JEE, GATE & Global MBA Prep',
+    region: 'Jasola & Hauz Khas',
+    logo: '/images/clients/creative-academy.webp',
+  },
+  {
+    name: 'Propertyways',
+    sector: 'Grade A Corporate & Industrial Leasing',
+    region: 'Jasola & South Delhi',
+    logo: '/images/clients/propertyways.webp',
+  },
+];
+
+const services = [
+  {
+    num: '01',
+    category: 'high value Organic Search',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>`,
+    iconStyle: 'bg-sky-50 border-sky-200 text-brand-600',
+    impactStyle: 'bg-sky-50/80 border-sky-200/80 text-slate-800',
+    badgeColor: 'text-brand-600 bg-sky-100/80',
+    title: 'Search Engine Optimisation (SEO)',
+    body: 'As a premier digital marketing company in Jasola, we refine technical crawl paths, accelerate mobile Core Web Vitals and publish authoritative service hubs that win page one Google rankings across Jasola (110025).',
+    impact: 'Consistent enterprise RFQs, corporate advisory calls and luxury showroom visits across Jasola District Centre, DLF Towers A and B, Splendor Forum, Baani Corporate One, Copernican Tower and Mohan Cooperative Industrial Estate.',
+    cta: 'SEO Company in Jasola',
+    href: '/seo-company-in-jasola/',
+  },
+  {
+    num: '02',
+    category: 'ChatGPT, Gemini & Perplexity',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>`,
+    iconStyle: 'bg-violet-50 border-violet-200 text-accent-600',
+    impactStyle: 'bg-violet-50/80 border-violet-200/80 text-slate-800',
+    badgeColor: 'text-accent-600 bg-violet-100/80',
+    title: 'AI SEO & Entity Verification',
+    body: 'We verify your leadership credentials, pricing matrices and industry authority using nested JSON LD schema so Google AI Overviews, ChatGPT, Gemini and Perplexity recommend your Jasola brand first.',
+    impact: 'Primary AI citations for Jasola corporate offices, legal chambers, B2B consultancies and design flagships.',
+    cta: 'AI SEO Company in Delhi',
+    href: '/ai-seo-company-in-delhi/',
+  },
+  {
+    num: '03',
+    category: 'Outer Ring & Magenta Maps',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>`,
+    iconStyle: 'bg-emerald-50 border-emerald-200 text-emerald-600',
+    impactStyle: 'bg-emerald-50/80 border-emerald-200/80 text-slate-800',
+    badgeColor: 'text-emerald-700 bg-emerald-100/80',
+    title: 'Local SEO & Google Business Profile',
+    body: 'Our digital marketing services in Jasola strengthen your Google Business Profile signals, local directory NAP alignment and client review velocity across Jasola District Centre, DLF Towers A and B, Splendor Forum, Baani Corporate One, Copernican Tower and Mohan Cooperative Industrial Estate.',
+    impact: 'Top three Google Map Pack placement generating high value phone calls, route clicks and boutique walk ins in Jasola.',
+    cta: 'Local SEO Services in Delhi',
+    href: '/local-seo-services-in-delhi/',
+  },
+  {
+    num: '04',
+    category: 'Direct Answer Snippets',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>`,
+    iconStyle: 'bg-amber-50 border-amber-200 text-amber-600',
+    impactStyle: 'bg-amber-50/80 border-amber-200/80 text-slate-800',
+    badgeColor: 'text-amber-700 bg-amber-100/80',
+    title: 'Answer Engine Optimisation (AEO)',
+    body: 'We craft concise 45 to 60 word executive answer blocks, consultation or retainer fee tables and FAQPage schema so Google featured snippets and voice assistants quote your Jasola practice directly.',
+    impact: 'Zero click authority that wins HNI and corporate buyer trust in Jasola before they contact competitors.',
+    cta: 'AEO Services in Delhi',
+    href: '/aeo-services-in-delhi/',
+  },
+  {
+    num: '05',
+    category: 'Generative Citation Share',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>`,
+    iconStyle: 'bg-indigo-50 border-indigo-200 text-indigo-600',
+    impactStyle: 'bg-indigo-50/80 border-indigo-200/80 text-slate-800',
+    badgeColor: 'text-indigo-700 bg-indigo-100/80',
+    title: 'Generative Engine Optimisation (GEO)',
+    body: 'We publish data backed solution comparison matrices, structured specification sheets, llms.txt discovery files and verified industry citations that anchor your Jasola brand inside generative AI models.',
+    impact: 'Sustained recommendation share when founders, diplomats and families evaluate Jasola providers on AI tools.',
+    cta: 'GEO Services in Delhi',
+    href: '/geo-services-in-delhi/',
+  },
+  {
+    num: '06',
+    category: 'Bespoke Web Engineering',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>`,
+    iconStyle: 'bg-cyan-50 border-cyan-200 text-cyan-700',
+    impactStyle: 'bg-cyan-50/80 border-cyan-200/80 text-slate-800',
+    badgeColor: 'text-cyan-700 bg-cyan-100/80',
+    title: 'Website Design & Development',
+    body: 'Our in house web engineers build ultra fast corporate portals, luxury D2C lookbooks and B2B industrial catalogues that pass Core Web Vitals and convert discerning Jasola visitors into enquiries.',
+    impact: 'Elevated brand perception and higher enquiry conversion rates across Jasola District Centre, DLF Towers A and B, Splendor Forum, Baani Corporate One, Copernican Tower and Mohan Cooperative Industrial Estate.',
+    cta: 'Website Development Company in Delhi',
+    href: '/website-development-company-in-delhi/',
+  },
+];
+
+const comparison = [
+  {
+    metric: 'Strategic Execution',
+    typical: 'Delegated to junior account coordinators managing dozens of generic retainers',
+    nk: 'Senior search, AI and web engineers lead your Jasola growth campaign directly',
+  },
+  {
+    metric: 'Success Attribution',
+    typical: 'Monthly PDFs highlighting vanity social media reach and non buyer clicks',
+    nk: 'Verified consultation calls, WhatsApp messages, showroom visits and B2B RFQs in Jasola',
+  },
+  {
+    metric: 'AI & LLM Search Presence',
+    typical: 'Generic blog posts that ChatGPT, Gemini and Perplexity ignore',
+    nk: 'Structured AEO answer blocks, GEO comparison tables, JSON LD schema and llms.txt feeds',
+  },
+  {
+    metric: 'Web Speed & UX Polish',
+    typical: 'Slow page builder themes that hurt luxury and enterprise brand credibility',
+    nk: 'Custom semantic HTML engineered in house for sub two second mobile load times',
+  },
+  {
+    metric: 'Micro Market Precision',
+    typical: 'Single generic page trying to rank across Jasola, Nehru Place and GK at once',
+    nk: 'Tailored corridor funnels built for Jasola (110025) corporate, luxury and industrial hubs',
+  },
+  {
+    metric: 'Asset & Code Ownership',
+    typical: 'Agency holds administrative lock over your website, hosting or analytics',
+    nk: 'You retain 100% administrative ownership of all website code, content and analytics',
+  },
+];
+
+const southCorridors = [
+  {
+    "hub": "Area 01",
+    "area": "Nehru Place",
+    "focus": "Digital Marketing Company in Nehru Place",
+    "pincode": "Pin 110019",
+    "desc": "Across Nehru Place corporate towers and IT hardware exchanges, we help SaaS companies, enterprise IT distributors, Chartered Accountants and B2B consultancies win page one rankings and ChatGPT citations.",
+    "cta": "Explore Nehru Place Digital Marketing",
+    "href": "/digital-marketing-company-in-nehru-place-delhi/",
+    "accent": "from-brand-500 to-sky-400"
+  },
+  {
+    "hub": "Area 02",
+    "area": "Okhla Industrial Estate",
+    "focus": "Digital Marketing Company in Okhla",
+    "pincode": "Pin 110020",
+    "desc": "Spanning Okhla Phases I, II and III, we engineer B2B product catalogues, technical SEO and AI procurement visibility for garment exporters, SaaS studios, printing presses, packaging units and luxury auto showrooms.",
+    "cta": "Explore Okhla Digital Marketing",
+    "href": "/digital-marketing-company-in-okhla-delhi/",
+    "accent": "from-accent-500 to-violet-400"
+  },
+  {
+    "hub": "Area 03",
+    "area": "Saket",
+    "focus": "Digital Marketing Company in Saket",
+    "pincode": "Pin 110017",
+    "desc": "Around Saket District Centre, Press Enclave Road and MGF Metropolitan, we build high converting search, map pack and AI citation funnels for corporate offices, law chambers, B2B consultancies and retail flagships.",
+    "cta": "Explore Saket Digital Marketing",
+    "href": "/digital-marketing-company-in-saket-delhi/",
+    "accent": "from-cyan-500 to-teal-400"
+  },
+  {
+    "hub": "Area 04",
+    "area": "Greater Kailash (GK 1 & 2)",
+    "focus": "Digital Marketing Company in Greater Kailash",
+    "pincode": "Pin 110048",
+    "desc": "Across M Block and N Block markets, Pamposh Enclave and Masjid Moth, we position turnkey interior studios, CA chambers, luxury couture designers, wealth advisors and fine dining venues in the top three Map Pack.",
+    "cta": "Explore Greater Kailash Digital Marketing",
+    "href": "/digital-marketing-company-in-greater-kailash-delhi/",
+    "accent": "from-emerald-500 to-green-400"
+  },
+  {
+    "hub": "Area 05",
+    "area": "Hauz Khas",
+    "focus": "Digital Marketing Company in Hauz Khas",
+    "pincode": "Pin 110016",
+    "desc": "Along Aurobindo Marg, SDA Market and Hauz Khas Enclave, we help IIT JEE and GATE coaching academies, design studios, IT consultancies and hospitality brands capture daily organic calls and AI recommendations.",
+    "cta": "Explore Hauz Khas Digital Marketing",
+    "href": "/digital-marketing-company-in-hauz-khas-delhi/",
+    "accent": "from-indigo-500 to-blue-400"
+  },
+  {
+    "hub": "Area 06",
+    "area": "Defence Colony",
+    "focus": "Digital Marketing Company in Defence Colony",
+    "pincode": "Pin 110024",
+    "desc": "For Senior Advocates, arbitration chambers, wealth advisory practices, luxury builder floor developers and fine dining venues in Defence Colony, we engineer authoritative websites and entity verified SEO.",
+    "cta": "Explore Defence Colony Digital Marketing",
+    "href": "/digital-marketing-company-in-defence-colony-delhi/",
+    "accent": "from-violet-500 to-purple-400"
+  },
+  {
+    "hub": "Area 07",
+    "area": "Lajpat Nagar",
+    "focus": "Digital Marketing Company in Lajpat Nagar",
+    "pincode": "Pin 110024",
+    "desc": "Covering Central Market, Ring Road Phases I to IV and Amar Colony furniture/apparel lanes, we drive showroom walk ins and pan India D2C orders for bridal couture brands, jewellers, interior stores and B2B traders.",
+    "cta": "Explore Lajpat Nagar Digital Marketing",
+    "href": "/digital-marketing-company-in-lajpat-nagar-delhi/",
+    "accent": "from-amber-500 to-orange-400"
+  },
+  {
+    "hub": "Area 08",
+    "area": "Vasant Vihar",
+    "focus": "Digital Marketing Company in Vasant Vihar",
+    "pincode": "Pin 110057",
+    "desc": "Around Basant Lok Priory Market and diplomatic residential enclaves, we build discreet, high trust digital authority for embassy facing consultancies, luxury realtors, wealth advisory firms and bespoke architects.",
+    "cta": "Explore Vasant Vihar Digital Marketing",
+    "href": "/digital-marketing-company-in-vasant-vihar-delhi/",
+    "accent": "from-teal-500 to-emerald-400"
+  },
+  {
+    "hub": "Area 09",
+    "area": "Jasola District Centre",
+    "focus": "Digital Marketing Company in Jasola",
+    "pincode": "Pin 110025",
+    "desc": "Across DLF Towers A & B, Baani Corporate One and Splendor Forum, we help multinational offices, EPC contractors, logistics firms, CA practices and commercial realtors capture B2B corporate enquiries.",
+    "cta": "Explore Jasola Digital Marketing",
+    "href": "/digital-marketing-company-in-jasola-delhi/",
+    "accent": "from-rose-500 to-pink-400"
+  },
+  {
+    "hub": "Area 10",
+    "area": "Malviya Nagar",
+    "focus": "Digital Marketing Company in Malviya Nagar",
+    "pincode": "Pin 110017",
+    "desc": "Serving Shivalik Road, Geetanjali Enclave and Sarvapriya Vihar, we deliver top three Google Map Pack rankings and fast inquiry portals for corporate consultancies, coaching centres, design studios and boutique retailers.",
+    "cta": "Explore Malviya Nagar Digital Marketing",
+    "href": "/digital-marketing-company-in-malviya-nagar-delhi/",
+    "accent": "from-sky-500 to-cyan-400"
+  },
+  {
+    "hub": "Area 11",
+    "area": "Green Park",
+    "focus": "Digital Marketing Company in Green Park",
+    "pincode": "Pin 110016",
+    "desc": "Around Green Park Main Market, Yusuf Sarai and Gulmohar Park, we build B2B consulting SEO, architect portfolio sites and professional advisory funnels that generate daily phone consultations.",
+    "cta": "Explore Green Park Digital Marketing",
+    "href": "/digital-marketing-company-in-green-park-delhi/",
+    "accent": "from-blue-500 to-indigo-400"
+  },
+  {
+    "hub": "Area 12",
+    "area": "Chhatarpur & MG Road",
+    "focus": "Digital Marketing Company in Chhatarpur",
+    "pincode": "Pin 110074",
+    "desc": "Along MG Road Design Mile, 100 Feet Road and Chhatarpur Farms, we build visual lookbooks, commission free wedding venue pages and luxury real estate funnels for marble galleries, interior flagships and resorts.",
+    "cta": "Explore Chhatarpur Digital Marketing",
+    "href": "/digital-marketing-company-in-chhatarpur-delhi/",
+    "accent": "from-fuchsia-500 to-rose-400"
+  }
+];
+
+const siblingZonalHubs = [
+  {
+    zone: 'South Delhi Parent Hub',
+    title: 'Digital Marketing Company in South Delhi',
+    corridors: 'Nehru Place, Okhla, Saket, Greater Kailash, Hauz Khas & Vasant Vihar',
+    href: '/digital-marketing-company-in-south-delhi/',
+  },
+  {
+    zone: 'West Delhi Hub',
+    title: 'Digital Marketing Company in West Delhi',
+    corridors: 'Rajouri Garden, Janakpuri, Dwarka, Kirti Nagar, Punjabi Bagh & Mayapuri',
+    href: '/digital-marketing-company-in-west-delhi/',
+  },
+  {
+    zone: 'North Delhi Hub',
+    title: 'Digital Marketing Company in North Delhi',
+    corridors: 'Netaji Subhash Place, Pitampura, Rohini, Model Town, Mukherjee Nagar & Wazirpur',
+    href: '/digital-marketing-company-in-north-delhi/',
+  },
+];
+
+const industries = [
+  {
+    sector: 'SaaS, Cloud & IT Hardware',
+    title: 'Enterprise Software & Technology Firms',
+    focus: 'Solution comparison SEO, ChatGPT and Perplexity entity verification and ultra fast product landing pages for SaaS studios, ERP vendors and IT distributors in Jasola, Nehru Place, Okhla and Jasola.',
+    outcome: 'Consistent enterprise demo bookings, annual AMC contracts and B2B procurement leads.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>`,
+    accentBorder: 'border-t-indigo-500',
+    iconBg: 'bg-indigo-50 text-indigo-600 border-indigo-200',
+  },
+  {
+    sector: 'Management & Strategy Advisory',
+    title: 'Corporate Consulting, HR & Advisory Firms',
+    focus: 'ProfessionalService schema, partner authority pages, consulting retainer guides and top three Google Map Pack rankings across Jasola, Greater Kailash, Defence Colony, Saket and Green Park.',
+    outcome: 'high value enterprise consulting mandates, multinational retainers and daily B2B discovery calls.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>`,
+    accentBorder: 'border-t-red-500',
+    iconBg: 'bg-red-50 text-red-600 border-red-200',
+  },
+  {
+    sector: 'Supreme & High Court Chambers',
+    title: 'Law Firms, Arbitration & Senior Advocates',
+    focus: 'Bar Council compliant chamber websites, LegalService schema, corporate law insight hubs and AI entity verification across Jasola, Defence Colony, Greater Kailash, Saket District Courts and Vasant Vihar.',
+    outcome: 'Direct corporate retainers, cross border arbitration mandates and HNI legal consultations.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"/></svg>`,
+    accentBorder: 'border-t-accent-500',
+    iconBg: 'bg-violet-50 text-accent-600 border-violet-200',
+  },
+  {
+    sector: 'Luxury Floors & Grade A Offices',
+    title: 'Real Estate, Builder Floors & Farmhouses',
+    focus: 'Bespoke property microsites, Grade A office leasing SEO and AI property citations across Jasola, Vasant Vihar, Greater Kailash, Defence Colony, Jasola and Chhatarpur.',
+    outcome: 'Verified HNI buyer site visits, diplomatic leases and corporate tower mandates.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>`,
+    accentBorder: 'border-t-brand-500',
+    iconBg: 'bg-sky-50 text-brand-600 border-sky-200',
+  },
+  {
+    sector: 'Design Mile & Turnkey Studios',
+    title: 'Architects, Luxury Interiors & Marble Galleries',
+    focus: 'High resolution visual portfolios, turnkey renovation guides, Google Maps showroom velocity and AI citations across Jasola, MG Road Chhatarpur, Amar Colony Lajpat Nagar and GK.',
+    outcome: 'Steady bungalow architecture mandates, showroom walk ins and bespoke interior contracts.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"/></svg>`,
+    accentBorder: 'border-t-amber-500',
+    iconBg: 'bg-amber-50 text-amber-600 border-amber-200',
+  },
+  {
+    sector: 'Couture, Fine Jewellery & D2C',
+    title: 'Designer Flagships, Jewellers & Ecommerce',
+    focus: 'Sub second Shopify/custom lookbooks, Product schema, international D2C SEO and local boutique map rankings across Jasola, Defence Colony, GK M/N Block, Lajpat Nagar and Chhatarpur.',
+    outcome: 'Private bridal trial bookings, flagship footfall and global online checkout orders.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>`,
+    accentBorder: 'border-t-pink-500',
+    iconBg: 'bg-pink-50 text-pink-600 border-pink-200',
+  },
+  {
+    sector: 'Export Houses & Industrial OEMs',
+    title: 'Okhla Exporters, Printing & Manufacturing',
+    focus: 'Searchable B2B specification catalogues, global buyer SEO and AI procurement citations for apparel export houses, packaging plants and engineering units across Jasola and Okhla Phases I, II and III.',
+    outcome: 'Direct international buyer inquiries, institutional RFQs and pan India supply contracts.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>`,
+    accentBorder: 'border-t-emerald-500',
+    iconBg: 'bg-emerald-50 text-emerald-600 border-emerald-200',
+  },
+  {
+    sector: 'CA, Tax & Wealth Advisory',
+    title: 'Chartered Accountants, FEMA & Virtual CFOs',
+    focus: 'cross border taxation, FEMA compliance, M&A audit and wealth advisory hubs backed by AccountingService schema across Jasola, Nehru Place, Jasola, Defence Colony and Greater Kailash.',
+    outcome: 'Steady multinational tax retainers, startup CFO mandates and HNI advisory clients.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>`,
+    accentBorder: 'border-t-rose-500',
+    iconBg: 'bg-rose-50 text-rose-600 border-rose-200',
+  },
+  {
+    sector: 'IIT JEE, GATE & Global Ed',
+    title: 'Coaching Academies & Study Abroad Advisors',
+    focus: 'Course comparison pages, AEO fee snippets, ChatGPT citations and local map dominance across Jasola, Kalu Sarai Hauz Khas, Jia Sarai, Malviya Nagar and Nehru Place.',
+    outcome: 'Predictable student counseling calls, batch admissions and overseas university applications.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"/></svg>`,
+    accentBorder: 'border-t-cyan-500',
+    iconBg: 'bg-cyan-50 text-cyan-700 border-cyan-200',
+  },
+  {
+    sector: 'Destination Weddings & Dining',
+    title: 'Chhatarpur Venues, Boutique Hotels & Dining',
+    focus: 'Commission free wedding venue microsites, Google Map Pack review velocity and AI hospitality citations across Jasola, Chhatarpur Farms, Hauz Khas, Saket, GK 2 and Defence Colony.',
+    outcome: 'Direct luxury wedding bookings, corporate offsite reservations and dining footfall.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>`,
+    accentBorder: 'border-t-purple-500',
+    iconBg: 'bg-purple-50 text-purple-600 border-purple-200',
+  },
+  {
+    sector: 'EPC, Solar & Infrastructure',
+    title: 'Turnkey Contractors & Engineering Consultants',
+    focus: 'Technical capability portals, tender specification SEO and AI corporate verification for EPC, solar and civil infrastructure firms in Jasola, Jasola, Okhla and Nehru Place.',
+    outcome: 'Qualified institutional tenders, industrial solar mandates and B2B engineering contracts.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 21h18M5 21V7l8-4v18M19 21V11l-6-4M9 9v.01M9 12v.01M9 15v.01M9 18v.01"/></svg>`,
+    accentBorder: 'border-t-orange-500',
+    iconBg: 'bg-orange-50 text-orange-600 border-orange-200',
+  },
+  {
+    sector: 'Diplomatic & B2B Services',
+    title: 'Coworking, Expat Relocation & Advisory',
+    focus: 'Executive workspace comparison pages, expat service guides, local map pack authority and fast lead capture across Jasola, Vasant Vihar, Saket, Nehru Place and Okhla.',
+    outcome: 'Enterprise managed office leases, embassy advisory retainers and corporate contracts.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>`,
+    accentBorder: 'border-t-teal-500',
+    iconBg: 'bg-teal-50 text-teal-700 border-teal-200',
+  },
+];
+
+const testimonials = [
+  {
+    name: 'Arjun Malhotra',
+    title: 'Managing Partner',
+    company: 'Propertyways',
+    sector: 'Grade A Corporate & Industrial Leasing, Jasola & South Delhi',
+    metrics: [
+      '4.3x increase in verified corporate office & industrial lease inquiries',
+      'Page one rankings for Jasola & South Delhi commercial property terms',
+      'Direct citations on ChatGPT and Perplexity for South Delhi office leasing',
+    ],
+    quote: 'Founders and multinational teams looking for Grade A office suites in Jasola, Nehru Place, Jasola or Okhla evaluate advisors on Google and ChatGPT before scheduling site visits. NK Digital Tech built dedicated corridor pages that bring us high ticket B2B mandates every week.',
+    logo: '/images/clients/propertyways.webp',
+  },
+  {
+    name: 'Avantika Sen',
+    title: 'Enterprise Practice Director',
+    company: 'Vision',
+    sector: 'B2B Cloud, Cybersecurity & ERP Solutions, Jasola & Saket',
+    metrics: [
+      '320% growth in direct corporate consultation phone bookings',
+      'Top 3 Google Map Pack placement across Jasola, GK 1 & Saket',
+      '1.1 second mobile load speed across all B2B solution guides',
+    ],
+    quote: 'Enterprise CTOs across Jasola, Greater Kailash, Defence Colony and Saket research vendor credentials on AI answer engines and Google Maps. NK Digital Tech structured our solution schema and landing pages, tripling our B2B discovery calls.',
+    logo: '/images/clients/vision.webp',
+  },
+  {
+    name: 'Kabir Oberoi',
+    title: 'Principal Director',
+    company: 'VP Infra',
+    sector: 'Bespoke Architecture & Turnkey Interiors, Jasola & MG Road',
+    metrics: [
+      '3.9x growth in luxury bungalow & builder floor turnkey inquiries',
+      'Top 3 Map Pack visibility across Jasola & South Delhi',
+      'Cited by Gemini and Google AI Overviews for South Delhi architecture',
+    ],
+    quote: 'Homeowners rebuilding in Jasola, Vasant Vihar, Defence Colony or Chhatarpur shortlist architects through visual search and AI recommendations. NK Digital Tech engineered a sub second portfolio site and local SEO strategy that connects us with discerning HNI clients.',
+    logo: '/images/clients/vp-infra.webp',
+  },
+  {
+    name: 'Meenakshi Khanna',
+    title: 'Founder & Creative Director',
+    company: 'Aangan',
+    sector: 'Luxury Bridal Couture & Fine Jewellery, Jasola & GK',
+    metrics: [
+      '3.8x increase in private bridal appointment requests',
+      'Page one rankings for Jasola designer couture & jewellery queries',
+      '45% increase in international and NRI D2C checkout orders',
+    ],
+    quote: 'South Delhi and NRI families in Jasola plan wedding trousseaus months in advance on Google and ChatGPT. NK Digital Tech optimised our lookbook speed, Product schema and local Map Pack presence, keeping our studio booked year round.',
+    logo: '/images/clients/aangan.webp',
+  },
+];
+
+const stages = [
+  {
+    num: 'Stage 01',
+    step: '01',
+    title: 'Jasola Website, Map Pack & Entity Audit',
+    body: 'We evaluate your mobile Core Web Vitals, technical crawl health, Google Business Profile authority and AI search citations against the top three competitors in Jasola (110025).',
+    accent: 'from-brand-600 to-sky-500',
+  },
+  {
+    num: 'Stage 02',
+    step: '02',
+    title: '90 day Search, Map Pack & AI Citation Sprint Plan',
+    body: 'You receive a clear two week sprint roadmap outlining commercial service pages, Jasola corridor landing pages, JSON LD schema, AEO comparison tables and UX conversion upgrades tailored to local buyers.',
+    accent: 'from-accent-600 to-violet-500',
+  },
+  {
+    num: 'Stage 03',
+    step: '03',
+    title: 'In house Code, Content & Local Profile Execution',
+    body: 'Our engineers, writers and SEO specialists implement every upgrade directly, accelerating mobile HTML speed, publishing authoritative guides, embedding schema markup and verifying directory citations.',
+    accent: 'from-cyan-600 to-teal-500',
+  },
+  {
+    num: 'Stage 04',
+    step: '04',
+    title: 'Lead Attribution, AI Citation Tracking & Scaling',
+    body: 'Every two weeks we review your commercial keyword gains, Google Map phone calls, WhatsApp inquiries and brand citations across ChatGPT, Gemini and Google AI Overviews in Jasola.',
+    accent: 'from-emerald-600 to-green-500',
+  },
+];
+
+const faqs = [
+  {
+    q: 'What makes NK Digital Tech a premier Digital Marketing Company in Jasola?',
+    a: 'NK Digital Tech is a premier Digital Marketing Company in Jasola because we engineer campaigns around verified commercial outcomes, enterprise RFQs, private consultation calls, WhatsApp inquiries and showroom appointments. Our senior in house specialists unite technical SEO, Google Map Pack authority, AI SEO (AEO & GEO) and bespoke web development.',
+  },
+  {
+    q: 'Which commercial pockets in Jasola and South Delhi do you cover?',
+    a: 'Our digital marketing services in Jasola cover Jasola District Centre, DLF Towers A and B, Splendor Forum, Baani Corporate One, Copernican Tower and Mohan Cooperative Industrial Estate (110025), alongside all 12 South Delhi prime micro markets: Nehru Place, Okhla Industrial Estate, Saket, Greater Kailash (GK 1 & 2), Hauz Khas, Defence Colony, Lajpat Nagar, Vasant Vihar, Jasola District Centre, Malviya Nagar, Green Park and Chhatarpur (MG Road).',
+  },
+  {
+    q: 'How do you help Jasola corporate consultancies, law firms and SaaS companies get cited on ChatGPT and Gemini?',
+    a: 'AI engines like ChatGPT, Gemini, Perplexity and Google AI Overviews cite brands that publish concise 45 to 60 word direct answers, structured comparison matrices, nested JSON LD schema (ProfessionalService, LegalService, SoftwareApplication), llms.txt files and verified credentials. We build all of these into your Jasola site.',
+  },
+  {
+    q: 'How quickly can we expect more phone calls, consultations and B2B leads in Jasola?',
+    a: 'Technical mobile speed upgrades and Google Business Profile optimisation across Jasola (110025) typically increase map pack calls and direction clicks within four to eight weeks. Competitive page one rankings and multi platform AI citations compound steadily over three to six months.',
+  },
+  {
+    q: 'Do you build custom websites for Jasola luxury showrooms and B2B enterprises?',
+    a: 'Yes. For luxury interior, marble and couture flagships in Jasola and South Delhi, we build sub second visual lookbooks. For B2B manufacturers, SaaS companies and exporters in Jasola, Okhla and Jasola, we build searchable HTML specification catalogues that capture institutional RFQs.',
+  },
+  {
+    q: 'What is the monthly investment for digital marketing services in Jasola?',
+    a: 'Our Jasola digital marketing retainers range from ₹15,000 to ₹50,000+ per month depending on your sector competitiveness, number of target corridors or service lines, and whether custom website or D2C ecommerce engineering is included.',
+  },
+  {
+    q: 'How is NK Digital Tech different from a typical digital marketing agency in Jasola?',
+    a: 'Unlike a typical digital marketing agency in Jasola that charges high retainers for junior account coordination and vanity social reach, we put senior search and web engineers directly on your account, grant you 100% ownership of all code and analytics, and report on verified enquiries.',
+  },
+  {
+    q: 'Can you maintain strict Bar Council or ICAI compliance for Jasola professional practices?',
+    a: 'Yes. For Senior Advocates, law firms, Chartered Accountants and corporate advisory firms in Jasola, we publish informative, non solicitous educational guides and verified schema markup that comply fully with professional standards.',
+  },
+];
+
+const trustStrip = [
+  'Jasola (110025) Coverage',
+  'Page One Google Rankings',
+  'Jasola Map Pack Top 3',
+  'ChatGPT & Gemini Citations',
+  'Google AI Overview Answers',
+  'Technical AEO, GEO & Schema',
+  'Sub Second Custom Websites',
+  '100% Client Asset Ownership',
+];
+
+const dmAreaSchemaLocalBusiness = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "NK Digital Tech: Digital Marketing Company in Jasola",
+  "url": "https://www.nkdigitaltech.net/digital-marketing-company-in-jasola-delhi/",
+  "logo": "https://www.nkdigitaltech.net/images/dm-jasola/hero-digital-marketing-company-jasola.webp",
+  "image": "https://www.nkdigitaltech.net/images/dm-jasola/hero-digital-marketing-company-jasola.webp",
+  "description": "NK Digital Tech is a premier Digital Marketing Company in Jasola (110025) delivering SEO, AI SEO, Google Map Packs, AEO, GEO and custom websites across Jasola District Centre, DLF Towers A and B, Splendor Forum, Baani Corporate One, Copernican Tower and Mohan Cooperative Industrial Estate.",
+  "telephone": "+91-8052189051",
+  "email": "nkdigitaltech1@gmail.com",
+  "priceRange": "₹15,000 to ₹50,000+",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Jasola, South Delhi",
+    "postalCode": "110025",
+    "addressRegion": "Delhi",
+    "addressCountry": "IN"
+  },
+  "areaServed": [
+    "Jasola",
+    "South Delhi",
+    "Nehru Place",
+    "Okhla",
+    "Saket",
+    "Greater Kailash",
+    "Hauz Khas",
+    "Defence Colony",
+    "Lajpat Nagar",
+    "Vasant Vihar",
+    "Jasola",
+    "Malviya Nagar",
+    "Green Park",
+    "Chhatarpur"
+  ],
+  "serviceType": [
+    "Digital Marketing Services in Jasola",
+    "Search Engine Optimisation (SEO)",
+    "AI SEO & ChatGPT Citation Optimisation",
+    "Local SEO & Google Business Profile",
+    "Answer Engine Optimisation (AEO)",
+    "Generative Engine Optimisation (GEO)",
+    "Website Design and Development"
+  ]
+});
+
+const dmAreaSchemaFAQ = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map((item) => ({
+    "@type": "Question",
+    "name": item.q,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": item.a
+    }
+  }))
+});
+---
+
+<Layout
+  title={pageTitle}
+  description={pageDescription}
+  canonical={pageCanonical}
+  ogImage="https://www.nkdigitaltech.net/images/dm-jasola/hero-digital-marketing-company-jasola.webp"
+  preloadImage="/images/dm-jasola/hero-digital-marketing-company-jasola.webp"
+  hideLocationsNav={false}
+  customSchemaLocalBusiness={dmAreaSchemaLocalBusiness}
+  customSchemaFAQ={dmAreaSchemaFAQ}
+  utilityTagline="Digital Marketing Company in Jasola • DLF Towers A & B, Splendor Forum & South Delhi"
+  brandSubtitle="Jasola • Search, AI & Web Growth"
+  footerBio="Digital Marketing Company in Jasola (110025) helping local corporate offices, B2B enterprises, legal chambers, consultancies and luxury showrooms win Google rankings, Map Pack calls and AI citations."
+  footerCoreDisciplines={[
+    { label: 'Digital Marketing Company in South Delhi', href: '/digital-marketing-company-in-south-delhi/' },
+    { label: 'SEO Company in Jasola', href: '/seo-company-in-jasola/' },
+    { label: 'Best Digital Marketing Agency in Delhi', href: '/best-digital-marketing-agency-in-delhi/' },
+    { label: 'AI SEO Company in Delhi', href: '/ai-seo-company-in-delhi/' },
+    { label: 'Local SEO Services in Delhi', href: '/local-seo-services-in-delhi/' },
+    { label: 'AEO Services in Delhi', href: '/aeo-services-in-delhi/' },
+    { label: 'Website Development Company in Delhi', href: '/website-development-company-in-delhi/' },
+  ]}
+  footerTagline="Digital Marketing Company in Jasola • full funnel Search & AI Growth"
+>
+
+  <!-- =====================================================================
+       SECTION 1: HERO (DARK SURFACE WITH UNIQUE JASOLA DM HERO IMAGE)
+  ===================================================================== -->
+  <section class="relative surface-dark overflow-hidden pt-5 pb-9 sm:pt-16 sm:pb-20 lg:pt-20 lg:pb-24 border-b border-slate-800/80">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="absolute inset-0 mesh-glow pointer-events-none"></div>
+    <div class="absolute -top-24 -left-24 sm:-top-36 sm:-left-36 w-56 h-56 sm:w-96 sm:h-96 bg-brand-500/20 rounded-full blur-[80px] sm:blur-[130px] pointer-events-none"></div>
+    <div class="absolute top-1/4 -right-24 sm:-right-36 w-56 h-56 sm:w-96 sm:h-96 bg-accent-500/20 rounded-full blur-[80px] sm:blur-[130px] pointer-events-none"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns: Headline & CTA -->
+        <div class="lg:col-span-7 text-left min-w-0">
+          <div class="badge-dark mb-3 sm:mb-6 py-1.5 px-2.5 sm:px-3.5">
+            <span class="w-2 h-2 rounded-full bg-brand-400 animate-ping flex-shrink-0"></span>
+            <span class="min-w-0 break-words">DLF Towers A & B &bull; Splendor Forum &bull; Baani Corporate One &bull; Pin 110025</span>
+          </div>
+
+          <h1 class="font-display text-[clamp(1.62rem,6.5vw,2.35rem)] sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-[1.15] sm:leading-[1.1] mb-3.5 sm:mb-6 text-glow break-words">
+            Digital Marketing Company <br />
+            <span class="gradient-text-light">in Jasola</span>
+          </h1>
+
+          <p class="text-[13.5px] sm:text-base md:text-lg text-slate-300 leading-[1.68] sm:leading-relaxed mb-5 sm:mb-8 font-normal text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+            NK Digital Tech is a full service <strong class="text-white font-semibold">Digital Marketing Company in Jasola</strong> that helps corporate headquarters, EPC contractors, B2B logistics firms, CA practices and commercial realtors generate enterprise enquiries. We provide Search Engine Optimisation (SEO), Local SEO for Google Map Pack top three rankings, AI SEO (AEO &amp; GEO) for ChatGPT and Gemini citations, and B2B website development.
+          </p>
+
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-4 mb-5 sm:mb-10">
+            <a href="/contact-us/" class="btn-primary w-full sm:w-auto min-h-[50px] text-[13.5px] sm:text-base px-4 sm:px-8 py-3.5 sm:py-4">
+              <span>Claim Your Jasola Growth Audit</span>
+              <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+              </svg>
+            </a>
+            <a href="#services" class="btn-secondary-dark w-full sm:w-auto min-h-[48px] text-[13.5px] sm:text-base px-4 sm:px-7 py-3.5 sm:py-4">
+              <span>Explore Our Six Core Services</span>
+            </a>
+          </div>
+
+          <!-- Trust Verification Strip -->
+          <div class="pt-4 sm:pt-6 border-t border-slate-800/80">
+            <div class="grid grid-cols-2 sm:flex sm:flex-wrap items-stretch sm:items-center gap-2">
+              {trustStrip.map((item) => (
+                <span class="px-2.5 sm:px-3 py-2 sm:py-1.5 min-h-[42px] sm:min-h-0 rounded-lg bg-slate-900/90 border border-slate-800 text-[11px] sm:text-xs text-slate-300 font-medium flex items-center justify-center sm:justify-start text-center sm:text-left leading-tight break-words">
+                  {item}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Unique Jasola DM Hero Image -->
+        <div class="lg:col-span-5 min-w-0">
+          <div class="relative rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-700/80 shadow-2xl shadow-brand-500/15 bg-slate-900 group">
+            <div class="relative">
+              <img
+                src="/images/dm-jasola/hero-digital-marketing-company-jasola.webp"
+                alt="Digital Marketing Company in Jasola Strategists Reviewing Enterprise Search and AI Analytics"
+                width="960"
+                height="540"
+                sizes="(max-width: 1024px) 100vw, 42vw"
+                fetchpriority="high"
+                decoding="async"
+                class="w-full aspect-[16/9] sm:aspect-auto sm:h-72 md:h-[380px] lg:h-[400px] object-cover object-center sm:group-hover:scale-105 transition-transform duration-500"
+              />
+              <div class="hidden sm:block absolute inset-0 bg-gradient-to-t from-[#050a14] via-transparent to-transparent opacity-80"></div>
+            </div>
+            <div class="relative sm:absolute sm:bottom-4 sm:left-4 sm:right-4 glass-card border-t sm:border border-slate-800 sm:rounded-2xl p-3.5 sm:p-4">
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-1">
+                <span class="text-xs font-bold text-white">Jasola Search &amp; AI Authority</span>
+                <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-400">
+                  <span class="w-2 h-2 rounded-full bg-emerald-400 flex-shrink-0"></span>
+                  Verified Enterprise &amp; HNI Leads
+                </span>
+              </div>
+              <p class="text-[11px] sm:text-xs text-slate-300 text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left] leading-relaxed">
+                Scaling Jasola District Centre, DLF Towers A and B, Splendor Forum, Baani Corporate One, Copernican Tower and Mohan Cooperative Industrial Estate brands across Google Search, Map Packs and AI answers.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 2: INTRODUCTION (CRISP WHITE CONTRAST SECTION + TEAM IMAGE)
+  ===================================================================== -->
+  <section class="relative surface-white overflow-hidden py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns -->
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-light mb-3.5 sm:mb-4">Jasola Commercial &amp; Luxury Growth Partner</div>
+          <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-4 sm:mb-6">
+            Why Jasola Enterprises &amp; Flagships Choose Our <span class="gradient-text-dark">Digital Marketing Company</span>
+          </h2>
+          <div class="space-y-4 sm:space-y-5 text-slate-700 text-[13.5px] sm:text-base leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+            <p>
+              Jasola District Centre (110025) across DLF Towers A and B, Splendor Forum, Baani Corporate One and nearby Mohan Cooperative Industrial Estate is a major hub for multinational offices, infrastructure contractors and B2B enterprises. Corporate procurement teams evaluating vendors in Jasola rely on Google Search, Map Packs and AI platforms to shortlist credible partners.
+            </p>
+            <p>
+              As your dedicated <strong>Digital Marketing Company in Jasola</strong> backed by our <a href="/digital-marketing-company-in-south-delhi/" class="text-brand-600 font-semibold hover:underline">Digital Marketing Company in South Delhi</a> hub and <a href="/best-digital-marketing-agency-in-delhi/" class="text-brand-600 font-semibold hover:underline">Best Digital Marketing Agency in Delhi</a> team, NK Digital Tech builds fast B2B capability portals, captures page one commercial keywords and secures AI citations that drive direct RFQs and office lease leads.
+            </p>
+          </div>
+          <div class="mt-6 sm:mt-8 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
+            <a href="/contact-us/" class="btn-primary w-full sm:w-auto min-h-[48px]">
+              <span>Speak With a Jasola Strategist</span>
+              <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+              </svg>
+            </a>
+            <a href="#why-us" class="btn-secondary-light w-full sm:w-auto min-h-[48px]">
+              <span>Compare Our Execution Model</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Unique Jasola Team Image + Stats -->
+        <div class="lg:col-span-5 space-y-4 sm:space-y-5 min-w-0">
+          <div class="rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-200 shadow-lg bg-slate-100">
+            <img
+              src="/images/dm-jasola/digital-marketing-team-jasola.webp"
+              alt="Digital Marketing Agency in Jasola Team Designing Enterprise and Luxury Growth Funnels"
+              width="800"
+              height="533"
+              sizes="(max-width: 1024px) 100vw, 42vw"
+              class="w-full aspect-[16/9] sm:aspect-auto sm:h-64 lg:h-72 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="grid grid-cols-2 gap-2.5 sm:gap-4">
+            {[
+              { val: '4.3x', label: 'Qualified Pipeline Lift', sub: 'Across Jasola (110025)' },
+              { val: '90 Days', label: 'Sprint Architecture', sub: 'Biweekly executive reviews' },
+              { val: 'Top 3', label: 'Map Pack Authority', sub: 'DLF Towers, Splendor & Baani One' },
+              { val: '100%', label: 'Asset Ownership', sub: 'You own code & analytics' },
+            ].map((stat) => (
+              <div class="elevated-card rounded-xl sm:rounded-2xl p-3 sm:p-4 min-w-0 flex flex-col justify-between">
+                <div class="font-display font-black text-[1.1rem] sm:text-2xl text-brand-600 mb-0.5 leading-tight break-words">{stat.val}</div>
+                <div class="text-[11px] sm:text-xs font-bold text-slate-900 leading-snug">{stat.label}</div>
+                <div class="text-[10.5px] sm:text-[11px] text-slate-500 leading-snug mt-0.5">{stat.sub}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 3: PROBLEM STATEMENT (DEEP INDIGO DARK CONTRAST SECTION)
+  ===================================================================== -->
+  <section class="relative surface-indigo py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="max-w-7xl mx-auto relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns -->
+        <div class="lg:col-span-7 min-w-0">
+          <div class="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-3.5 py-1 sm:py-1.5 rounded-full text-[10px] sm:text-xs font-bold uppercase tracking-wider sm:tracking-widest bg-amber-500/10 border border-amber-500/30 text-amber-300 max-w-full leading-snug mb-4 sm:mb-5">
+            <svg class="w-4 h-4 text-amber-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+            </svg>
+            <span>Why Jasola Brands Lose high ticket Leads</span>
+          </div>
+
+          <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-white tracking-tight leading-[1.22] sm:leading-tight mb-4 sm:mb-6">
+            Why Prestigious Jasola Firms, Consultancies &amp; Showrooms Miss high intent Buyers Online
+          </h2>
+
+          <div class="space-y-4 sm:space-y-5 text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+            <p>
+              In Jasola, offline reputation across Jasola District Centre, DLF Towers A and B, Splendor Forum, Baani Corporate One, Copernican Tower and Mohan Cooperative Industrial Estate no longer guarantees digital discovery. When a corporate founder asks ChatGPT for the top advisor in Jasola, a family searches Google Maps for showrooms or studios nearby, or a procurement lead compares B2B vendors online, they contact the brands that appear with verified authority at the top of the screen.
+            </p>
+            <p>
+              Slow, design heavy websites without structured data or corridor specific pages fail both Google’s Core Web Vitals and LLM retrieval checks. Powered by our <a href="/ai-seo-company-in-delhi/" class="text-sky-300 font-semibold hover:underline">AI SEO Company in Delhi</a> and <a href="/website-development-company-in-delhi/" class="text-sky-300 font-semibold hover:underline">Website Development Company in Delhi</a> engineering, we turn your Jasola digital footprint into a compounding client acquisition asset.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Execution Comparison Cards -->
+        <div class="lg:col-span-5 space-y-3.5 sm:space-y-4 min-w-0">
+          <div class="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6 border-l-4 border-l-rose-500">
+            <div class="flex flex-wrap items-center justify-between gap-1.5 mb-2">
+              <span class="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-rose-400">Conventional Retainer Agency</span>
+              <span class="text-[11px] sm:text-xs text-slate-400">Aesthetics Without Pipeline</span>
+            </div>
+            <h3 class="font-display font-bold text-[15px] sm:text-base text-white mb-2 leading-snug">Slow Visual Sites, Generic Blogs &amp; Unverified Entities</h3>
+            <p class="text-xs text-slate-300 leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+              Overlooked when buyers across Jasola District Centre, DLF Towers A and B, Splendor Forum, Baani Corporate One, Copernican Tower and Mohan Cooperative Industrial Estate consult Google Map Packs, ChatGPT or Perplexity.
+            </p>
+          </div>
+
+          <div class="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6 border-l-4 border-l-emerald-400">
+            <div class="flex flex-wrap items-center justify-between gap-1.5 mb-2">
+              <span class="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-emerald-400">NK Digital Tech Architecture</span>
+              <span class="text-[11px] sm:text-xs text-brand-300">Enterprise RFQs &amp; HNI Consultations</span>
+            </div>
+            <h3 class="font-display font-bold text-[15px] sm:text-base text-white mb-2 leading-snug">Sub Second Web Engineering, Jasola Map Authority &amp; AI Citations</h3>
+            <p class="text-xs text-slate-300 leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+              Combines fast custom HTML, verified Google Business Profiles, nested JSON LD schema and executive AEO tables that convert discerning Jasola buyers.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 4: SERVICES (LIGHT COOL ALABASTER CONTRAST + TECHNICAL IMAGE)
+  ===================================================================== -->
+  <section id="services" class="relative surface-cool overflow-hidden scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 items-center mb-9 sm:mb-16">
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-light mb-3">Six Integrated Growth Pillars</div>
+          <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+            Comprehensive Digital Marketing Services in Jasola
+          </h2>
+          <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+            Our <strong>digital marketing services in Jasola</strong> unite organic <a href="/seo-company-in-jasola/" class="text-brand-600 font-semibold hover:underline">SEO Company in Jasola</a> authority, local Map Pack rankings, <a href="/aeo-services-in-delhi/" class="text-brand-600 font-semibold hover:underline">AEO Services in Delhi</a>, <a href="/geo-services-in-delhi/" class="text-brand-600 font-semibold hover:underline">GEO Services in Delhi</a> and custom web engineering into one seamless growth system.
+          </p>
+        </div>
+        <div class="lg:col-span-5 min-w-0">
+          <div class="rounded-2xl overflow-hidden border border-slate-200 shadow-md bg-white">
+            <img
+              src="/images/dm-jasola/technical-digital-marketing-jasola.webp"
+              alt="Digital Marketing Company in Jasola Engineers Optimising Structured Data and Web Performance"
+              width="800"
+              height="450"
+              sizes="(max-width: 1024px) 100vw, 42vw"
+              class="w-full aspect-[16/9] sm:aspect-auto sm:h-56 lg:h-64 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- 3 Columns x 2 Rows Grid Layout -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-7">
+        {services.map((s) => (
+          <div class="elevated-card rounded-2xl p-4 sm:p-7 flex flex-col justify-between group sm:hover:-translate-y-1 min-w-0">
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-4 sm:mb-6">
+                <div class={`w-11 h-11 sm:w-12 sm:h-12 rounded-xl border flex items-center justify-center flex-shrink-0 ${s.iconStyle}`}>
+                  <Fragment set:html={s.icon} />
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class={`text-[10.5px] sm:text-[11px] font-semibold px-2.5 py-1 rounded-md ${s.badgeColor}`}>
+                    {s.category}
+                  </span>
+                  <span class="font-display font-black text-base sm:text-lg text-slate-300">{s.num}</span>
+                </div>
+              </div>
+
+              <h3 class="font-display font-bold text-[17px] sm:text-xl text-slate-900 mb-2.5 sm:mb-3 leading-snug group-hover:text-brand-600 transition-colors">
+                {s.title}
+              </h3>
+
+              <p class="text-slate-600 text-[13px] sm:text-sm leading-relaxed mb-4 sm:mb-6 text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+                {s.body}
+              </p>
+            </div>
+
+            <div>
+              <div class={`rounded-xl border p-3.5 sm:p-4 mb-3.5 sm:mb-5 ${s.impactStyle}`}>
+                <div class="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-slate-900 mb-1">
+                  <svg class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                  </svg>
+                  <span>Jasola Impact</span>
+                </div>
+                <p class="text-xs text-slate-700 leading-relaxed font-medium text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+                  {s.impact}
+                </p>
+              </div>
+
+              <a href={s.href} class="w-full sm:w-auto inline-flex items-center justify-between sm:justify-start gap-2 rounded-xl sm:rounded-none bg-slate-50 active:bg-sky-50 sm:bg-transparent border border-slate-200/80 sm:border-0 px-3.5 sm:px-0 py-2.5 min-h-[46px] sm:min-h-0 text-xs font-bold text-brand-600 hover:text-brand-700 group-hover:gap-3 transition-all">
+                <span>{s.cta}</span>
+                <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 5: WHY NK DIGITAL TECH (CRISP WHITE CONTRAST SECTION)
+  ===================================================================== -->
+  <section id="why-us" class="relative surface-white overflow-hidden scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-14 text-left sm:text-center">
+        <div class="badge-light mb-3">Transparent Engineering</div>
+        <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+          Why NK Digital Tech Is the Preferred Digital Marketing Company in Jasola
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed mb-4 text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+          Selecting a <strong>Digital Marketing Company in Jasola</strong> requires looking past polished sales decks to see who actually engineers your search, AI and web presence. At NK Digital Tech, senior specialists manage your account directly and you retain 100% ownership of all digital assets.
+        </p>
+        <p class="text-slate-700 font-semibold text-xs sm:text-sm">
+          Compare our Jasola execution model against a conventional retainer agency:
+        </p>
+      </div>
+
+      <!-- Desktop Comparison Matrix -->
+      <div class="hidden md:block overflow-hidden rounded-2xl border border-slate-200 shadow-lg">
+        <table class="w-full text-left border-collapse">
+          <thead>
+            <tr class="bg-slate-900 text-white">
+              <th class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-slate-300 w-1/4">
+                Evaluation Factor
+              </th>
+              <th class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-rose-300 w-[37.5%] border-l border-slate-800">
+                Typical Jasola Agency
+              </th>
+              <th class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-brand-300 w-[37.5%] border-l border-slate-800 bg-slate-950">
+                NK Digital Tech Jasola
+              </th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200 text-sm">
+            {comparison.map((row, idx) => (
+              <tr class={idx % 2 === 0 ? 'bg-white' : 'bg-slate-50/80'}>
+                <td class="py-5 px-6 font-display font-bold text-slate-900">
+                  {row.metric}
+                </td>
+                <td class="py-5 px-6 text-slate-600 border-l border-slate-200">
+                  <div class="flex items-start gap-2.5">
+                    <svg class="w-4 h-4 text-rose-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                    <span>{row.typical}</span>
+                  </div>
+                </td>
+                <td class="py-5 px-6 text-slate-900 font-medium border-l border-slate-200 bg-sky-50/40">
+                  <div class="flex items-start gap-2.5">
+                    <svg class="w-4 h-4 text-emerald-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span>{row.nk}</span>
+                  </div>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Mobile Comparison Cards -->
+      <div class="md:hidden space-y-3.5">
+        {comparison.map((row) => (
+          <div class="elevated-card rounded-2xl p-4 space-y-2.5 min-w-0">
+            <h3 class="font-display font-bold text-slate-900 text-[15px] leading-snug pb-2 border-b border-slate-100">{row.metric}</h3>
+            <div class="rounded-xl bg-rose-50 border border-rose-100 p-3">
+              <div class="flex items-center gap-1.5 mb-1">
+                <svg class="w-3.5 h-3.5 text-rose-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+                <p class="text-[10px] font-bold uppercase tracking-wider text-rose-600">Typical Jasola Agency</p>
+              </div>
+              <p class="text-xs text-slate-700 leading-relaxed">{row.typical}</p>
+            </div>
+            <div class="rounded-xl bg-sky-50 border border-sky-200 p-3">
+              <div class="flex items-center gap-1.5 mb-1">
+                <svg class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                </svg>
+                <p class="text-[10px] font-bold uppercase tracking-wider text-brand-600">NK Digital Tech Jasola</p>
+              </div>
+              <p class="text-xs text-slate-900 font-semibold leading-relaxed">{row.nk}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 6: 12 SOUTH DELHI COMMERCIAL CORRIDORS COVERAGE
+  ===================================================================== -->
+  <section id="locations" class="relative surface-cool overflow-hidden scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-14 text-left sm:text-center">
+        <div class="badge-light mb-3">12 South Delhi Micro-Markets</div>
+        <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+          Dedicated Digital Marketing Across Jasola &amp; All 12 South Delhi Commercial Corridors
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+          Alongside our dedicated campaign execution in Jasola (110025), we engineer hyper local search, map and AI funnels across all twelve South Delhi commercial, corporate and luxury corridors.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
+        {southCorridors.map((c) => (
+          <div class="elevated-card rounded-2xl p-4 sm:p-5 flex flex-col justify-between min-w-0">
+            <div>
+              <div class={`h-1 w-full bg-gradient-to-r ${c.accent} rounded-full mb-3.5`}></div>
+              <div class="flex items-center justify-between gap-2 mb-2.5">
+                <span class="px-2 py-0.5 rounded-md bg-sky-50 border border-sky-200 text-[11px] font-bold uppercase tracking-wider text-brand-600">
+                  {c.hub}
+                </span>
+                <span class="text-[11px] font-semibold text-slate-500">
+                  {c.pincode}
+                </span>
+              </div>
+              <h3 class="font-display font-bold text-base sm:text-lg text-slate-900 mb-1 leading-snug">
+                {c.area}
+              </h3>
+              <p class="text-xs font-bold text-brand-600 mb-2">{c.focus}</p>
+              <p class="text-slate-600 text-[13px] leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+                {c.desc}
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
+              <a href={c.href} class="w-full sm:w-auto min-h-[44px] sm:min-h-0 px-3 sm:px-0 py-2 sm:py-0 rounded-xl sm:rounded-none bg-slate-50 active:bg-sky-50 sm:bg-transparent border border-slate-200/80 sm:border-0 text-xs font-bold text-brand-600 hover:text-brand-700 inline-flex items-center justify-between sm:justify-start gap-1.5 group/link transition-all">
+                <span class="leading-snug">{c.cta}</span>
+                <svg class="w-3.5 h-3.5 flex-shrink-0 transition-transform group-hover/link:translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <!-- Sibling Zonal Digital Marketing Hubs Directory -->
+      <div class="mt-10 sm:mt-14 pt-8 sm:pt-10 border-t border-slate-200/90">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-5">
+          <h3 class="font-display font-bold text-base sm:text-lg text-slate-900">
+            Explore South Delhi &amp; Other Delhi Zonal Digital Marketing Hubs
+          </h3>
+          <a href="/best-digital-marketing-agency-in-delhi/" class="min-h-[40px] sm:min-h-0 py-1.5 sm:py-0 text-xs font-bold text-brand-600 hover:text-brand-700 inline-flex items-center gap-1.5">
+            <span>View All New Delhi Districts</span>
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+            </svg>
+          </a>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          {siblingZonalHubs.map((hub) => (
+            <a href={hub.href} class="elevated-card rounded-xl p-4 hover:border-brand-400 transition-all group block">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-brand-600 block mb-1">{hub.zone}</span>
+              <div class="font-display font-bold text-sm sm:text-base text-slate-900 group-hover:text-brand-600 transition-colors mb-1">
+                {hub.title}
+              </div>
+              <p class="text-xs text-slate-500 leading-relaxed">{hub.corridors}</p>
+            </a>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 7: OUR CLIENTS (DARK INDIGO CONTRAST SECTION)
+  ===================================================================== -->
+  <section id="clients" class="relative surface-indigo scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-14 text-left sm:text-center">
+        <div class="badge-dark mb-3">Jasola Track Record</div>
+        <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-white tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+          Jasola &amp; South Delhi Brands Scaling Through Search &amp; AI Authority
+        </h2>
+        <p class="text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+          From luxury couture studios and B2B cloud consultancies to architectural practices and corporate leasing advisors across Jasola and South Delhi, industry leaders partner with NK Digital Tech.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2.5 sm:gap-5">
+        {clients.map((client) => (
+          <div class="glass-card rounded-2xl p-3 sm:p-5 flex flex-col items-center text-center group sm:hover:-translate-y-1 last:col-span-2 sm:last:col-span-1 min-w-0">
+            <div class="w-full max-w-[200px] sm:max-w-none mx-auto h-14 sm:h-20 rounded-xl bg-white border border-slate-200 flex items-center justify-center p-2.5 sm:p-4 mb-2.5 sm:mb-4 shadow-sm">
+              <img
+                src={client.logo}
+                alt={`${client.name} Logo`}
+                width="130"
+                height="48"
+                class="max-h-9 sm:max-h-12 w-auto object-contain"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <h3 class="font-display font-bold text-sm sm:text-base text-white mb-1">{client.name}</h3>
+            <p class="text-[11px] sm:text-xs text-slate-300 leading-snug mb-2.5 sm:mb-3 flex-grow">{client.sector}</p>
+            <span class="w-full sm:w-auto inline-flex items-center justify-center gap-1 text-[10px] sm:text-[11px] font-semibold text-brand-300 bg-brand-500/15 border border-brand-500/30 px-2 sm:px-2.5 py-1.5 sm:py-1 rounded-md leading-tight max-w-full">
+              <svg class="w-2.5 h-2.5 sm:w-3 sm:h-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+              </svg>
+              <span class="text-center leading-tight break-words">{client.region}</span>
+            </span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 8: INDUSTRIES (LIGHT SLATE CONTRAST SECTION - 12 SECTORS)
+  ===================================================================== -->
+  <section id="industries" class="relative surface-slate overflow-hidden scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-16 text-left sm:text-center">
+        <div class="badge-light mb-3">Sector Specific Growth Playbooks</div>
+        <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+          Twelve Jasola Commercial &amp; Luxury Sectors We Scale
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+          We calibrate our <strong>digital marketing services in Jasola</strong> around the enterprise procurement cycles, corporate advisory journeys, legal compliance rules and luxury showroom habits of twelve key sectors.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-7">
+        {industries.map((ind) => (
+          <div class={`elevated-card rounded-2xl p-4 sm:p-7 border-t-4 ${ind.accentBorder} flex flex-col justify-between sm:hover:-translate-y-1 min-w-0`}>
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-4 sm:mb-5">
+                <div class={`w-10 h-10 sm:w-11 sm:h-11 rounded-xl border flex items-center justify-center flex-shrink-0 ${ind.iconBg}`}>
+                  <Fragment set:html={ind.icon} />
+                </div>
+                <span class="text-[11px] font-semibold text-slate-600 bg-slate-100 px-2.5 py-1 rounded-md">
+                  {ind.sector}
+                </span>
+              </div>
+
+              <h3 class="font-display font-bold text-[17px] sm:text-xl text-slate-900 mb-3 sm:mb-4 leading-snug">
+                {ind.title}
+              </h3>
+
+              <div class="mb-4 sm:mb-5">
+                <p class="text-[11px] font-bold uppercase tracking-wider text-brand-600 mb-1.5">
+                  Campaign Priority
+                </p>
+                <p class="text-slate-600 text-[13px] sm:text-sm leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+                  {ind.focus}
+                </p>
+              </div>
+            </div>
+
+            <div class="rounded-xl bg-emerald-50/70 border border-emerald-200/80 p-3.5 sm:p-4">
+              <p class="text-[11px] font-bold uppercase tracking-wider text-emerald-700 mb-1">
+                Business Outcome
+              </p>
+              <p class="text-slate-800 text-xs font-medium leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+                {ind.outcome}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 9: TESTIMONIALS (DEEP NAVY CONTRAST SECTION - 2x2 GRID)
+  ===================================================================== -->
+  <section id="testimonials" class="relative surface-dark scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="absolute inset-0 mesh-glow pointer-events-none opacity-60"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-16 text-left sm:text-center">
+        <div class="badge-dark mb-3">Verified Client Outcomes</div>
+        <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-white tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+          Endorsements From Jasola Enterprises, Consultancies &amp; Studios
+        </h2>
+        <p class="text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+          Verified pipeline growth, Map Pack leadership and AI citations reported by founders and directors across Jasola (110025) and neighbouring South Delhi hubs.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-7">
+        {testimonials.map((t) => (
+          <div class="glass-card rounded-2xl p-4 sm:p-8 flex flex-col justify-between sm:hover:-translate-y-1 min-w-0">
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-4 sm:mb-5">
+                <div class="flex items-center gap-1">
+                  {[1, 2, 3, 4, 5].map(() => (
+                    <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                    </svg>
+                  ))}
+                </div>
+                <span class="text-[10px] sm:text-[11px] font-semibold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-1 rounded-md">
+                  Jasola Partner
+                </span>
+              </div>
+
+              <p class="text-slate-200 text-[13.5px] sm:text-base leading-relaxed italic mb-5 sm:mb-6 text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+                "{t.quote}"
+              </p>
+
+              <div class="rounded-xl bg-slate-900/90 border border-slate-700/80 p-3.5 sm:p-4 mb-5 sm:mb-6">
+                <p class="text-[11px] font-bold uppercase tracking-wider text-brand-400 mb-2 sm:mb-2.5">
+                  Recorded Results
+                </p>
+                <ul class="space-y-2">
+                  {t.metrics.map((m) => (
+                    <li class="flex items-start gap-2 text-xs text-slate-300 font-medium leading-snug">
+                      <svg class="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                      </svg>
+                      <span>{m}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3.5 sm:gap-4 pt-3.5 sm:pt-4 border-t border-slate-800">
+              <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-white p-2 flex items-center justify-center flex-shrink-0 shadow-sm">
+                <img
+                  src={t.logo}
+                  alt={`${t.company} Logo`}
+                  width="48"
+                  height="48"
+                  class="max-h-8 sm:max-h-10 w-auto object-contain"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="min-w-0">
+                <h3 class="font-display font-bold text-white text-sm sm:text-base leading-snug">{t.name}</h3>
+                <p class="text-xs text-slate-300 leading-snug">
+                  {t.title}, <strong class="text-brand-400 font-semibold">{t.company}</strong>
+                </p>
+                <p class="text-[10.5px] sm:text-[11px] text-slate-400 mt-0.5 leading-snug">{t.sector}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 10: HOW WE WORK (CRISP WHITE CONTRAST SECTION - 4 STAGES)
+  ===================================================================== -->
+  <section id="process" class="relative surface-white overflow-hidden scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-16 text-left sm:text-center">
+        <div class="badge-light mb-3">Four Stage Execution Model</div>
+        <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+          How We Engineer &amp; Scale Your Jasola Digital Marketing Campaign
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+          We execute in focused 90 day sprints, upgrading mobile web speed and local Map Pack authority in month one while compounding page one rankings and AI citations across Jasola (110025).
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-7">
+        {stages.map((s) => (
+          <div class="elevated-card rounded-2xl p-4 sm:p-8 relative overflow-hidden group sm:hover:-translate-y-1 min-w-0">
+            <div class="flex items-center justify-between gap-4 mb-3.5 sm:mb-5">
+              <span class={`inline-flex items-center px-2.5 sm:px-3 py-1 rounded-lg text-xs font-bold uppercase tracking-wider text-white bg-gradient-to-r ${s.accent}`}>
+                {s.num}
+              </span>
+              <span class="font-display font-black text-3xl sm:text-4xl text-slate-200 group-hover:text-slate-300 transition-colors">
+                {s.step}
+              </span>
+            </div>
+            <h3 class="font-display font-bold text-[17px] sm:text-xl text-slate-900 mb-2.5 sm:mb-3 leading-snug">
+              {s.title}
+            </h3>
+            <p class="text-slate-600 text-[13px] sm:text-sm leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+              {s.body}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 11: CONCLUSION SECTION (INDIGO CONTRAST + GROWTH IMAGE)
+  ===================================================================== -->
+  <section class="relative surface-indigo py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-7 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns -->
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-dark mb-3.5 sm:mb-4">Compounding Commercial &amp; Luxury Pipeline</div>
+          <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-white tracking-tight leading-[1.22] sm:leading-tight mb-4 sm:mb-6">
+            Elevate Your Brand With a Premier Digital Marketing Company in Jasola
+          </h2>
+          <div class="space-y-4 sm:space-y-5 text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+            <p>
+              Winning high ticket clients across Jasola (110025) demands more than occasional social media posts or a slow brochure site. Every day, decision makers across Jasola District Centre, DLF Towers A and B, Splendor Forum, Baani Corporate One, Copernican Tower and Mohan Cooperative Industrial Estate evaluate providers on Google, local Map Packs, ChatGPT and Gemini.
+            </p>
+            <p>
+              When you choose NK Digital Tech as your <strong>Digital Marketing Company in Jasola</strong>, our senior <a href="/seo-company-in-jasola/" class="text-sky-300 font-semibold hover:underline">SEO Company in Jasola</a> strategists and <a href="/website-development-company-in-delhi/" class="text-sky-300 font-semibold hover:underline">Website Development Company in Delhi</a> engineers upgrade your web performance, corridor landing pages, local citations and schema markup directly. Schedule your free Jasola audit today.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Unique Jasola Growth Image -->
+        <div class="lg:col-span-5 min-w-0">
+          <div class="rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-700/80 shadow-2xl bg-slate-900">
+            <img
+              src="/images/dm-jasola/digital-marketing-growth-jasola.webp"
+              alt="Digital Marketing Company in Jasola Reviewing Client Pipeline and Revenue Growth"
+              width="800"
+              height="450"
+              sizes="(max-width: 1024px) 100vw, 42vw"
+              class="w-full aspect-[16/9] sm:aspect-auto sm:h-64 lg:h-72 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 12: FAQ (LIGHT COOL SLATE CONTRAST SECTION)
+  ===================================================================== -->
+  <section id="faq" class="relative surface-cool overflow-hidden scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-left sm:text-center mb-9 sm:mb-14">
+        <div class="badge-light mb-3">Jasola FAQs</div>
+        <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+          Frequently Asked Questions: Digital Marketing in Jasola
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+          Direct answers covering deliverables, timelines, AI search citations, custom web engineering and monthly retainers across Jasola (110025).
+        </p>
+      </div>
+
+      <div class="space-y-3 sm:space-y-4">
+        {faqs.map((f, i) => (
+          <details class="elevated-card rounded-2xl group overflow-hidden" open={i === 0}>
+            <summary class="flex items-start sm:items-center justify-between gap-2.5 sm:gap-4 px-3.5 sm:px-6 py-4 sm:py-5 min-h-[56px] active:bg-sky-50/60 transition-colors select-none">
+              <div class="flex items-start sm:items-center gap-2.5 sm:gap-3.5 text-left min-w-0">
+                <span class="w-6 h-6 sm:w-7 sm:h-7 rounded-lg bg-sky-50 border border-sky-200 text-brand-600 font-display font-bold text-xs flex items-center justify-center flex-shrink-0 mt-0.5 sm:mt-0">
+                  0{i + 1}
+                </span>
+                <span class="font-display font-bold text-slate-900 text-[14px] sm:text-base md:text-lg leading-[1.4] sm:leading-snug break-words">
+                  {f.q}
+                </span>
+              </div>
+              <span class="faq-icon w-7 h-7 sm:w-8 sm:h-8 rounded-full border border-slate-200 text-slate-600 flex items-center justify-center flex-shrink-0 mt-0.5 sm:mt-0">
+                <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                </svg>
+              </span>
+            </summary>
+            <div class="px-3.5 sm:px-6 pb-4 sm:pb-6 pt-3 text-slate-600 text-[13.5px] sm:text-sm md:text-base leading-[1.68] sm:leading-relaxed border-t border-slate-100 text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+              {f.a}
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 13: CALL TO ACTION BANNER (LAST SECTION)
+  ===================================================================== -->
+  <section id="contact" class="relative surface-dark scroll-mt-16 sm:scroll-mt-20 pt-10 pb-12 sm:py-16 lg:py-20 px-4 sm:px-6 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-5xl mx-auto">
+      <div class="rounded-2xl sm:rounded-3xl bg-gradient-to-r from-brand-600 via-brand-700 to-accent-700 p-6 sm:p-10 md:p-12 text-center text-white shadow-2xl border border-white/15 relative overflow-hidden">
+        <div class="relative z-10 max-w-2xl mx-auto">
+          <h2 class="font-display font-black text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl md:text-4xl text-white tracking-tight leading-[1.22] sm:leading-snug mb-3 sm:mb-4">
+            Ready to Scale With a Premier Digital Marketing Company in Jasola?
+          </h2>
+
+          <p class="text-sky-50 text-[13px] sm:text-sm md:text-base leading-relaxed mb-6 sm:mb-8">
+            Schedule your free website, Google Map Pack and AI visibility audit across Jasola District Centre, DLF Towers A and B, Splendor Forum, Baani Corporate One, Copernican Tower and Mohan Cooperative Industrial Estate (110025).
+          </p>
+
+          <a
+            href="/contact-us/"
+            class="inline-flex w-full sm:w-auto min-h-[48px] items-center justify-center gap-2 sm:gap-3 px-4 sm:px-8 py-3.5 sm:py-4 rounded-xl bg-white text-slate-950 hover:bg-sky-50 font-display font-bold text-[13.5px] sm:text-base shadow-xl transition-all duration-300 active:scale-95 text-center leading-snug"
+          >
+            <span>Request Your Jasola Digital Audit</span>
+            <svg class="w-4 h-4 sm:w-5 sm:h-5 text-brand-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mobile Sticky Bottom Quick Action Bar -->
+  <div class="mobile-sticky-cta sm:hidden fixed bottom-0 inset-x-0 z-40 bg-[#050a14]/95 backdrop-blur-xl border-t border-slate-800 px-3 pt-2.5 pb-[max(0.7rem,env(safe-area-inset-bottom))] shadow-[0_-8px_24px_rgba(0,0,0,0.45)] transition-all duration-200">
+    <div class="flex items-center gap-2 min-w-0">
+      <a
+        href="/contact-us/"
+        class="btn-primary flex-1 min-w-0 min-h-[48px] py-2.5 px-3 text-[12px] font-bold rounded-xl"
+      >
+        <span class="truncate">Free Jasola Audit</span>
+        <svg class="w-3.5 h-3.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+        </svg>
+      </a>
+      <a
+        href="#services"
+        class="btn-secondary-dark min-h-[48px] py-2.5 px-3.5 text-[12px] font-semibold rounded-xl flex-shrink-0 whitespace-nowrap"
+      >
+        <span>Services</span>
+      </a>
+    </div>
+  </div>
+
+  <style>
+    @media (max-width: 639px) {
+      .glass-card {
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+      }
+      #locations,
+      #why-us,
+      #clients,
+      #industries,
+      #testimonials,
+      #process,
+      #faq {
+        content-visibility: auto;
+        contain-intrinsic-size: auto 720px;
+      }
+      a,
+      button,
+      summary {
+        touch-action: manipulation;
+        -webkit-tap-highlight-color: transparent;
+      }
+    }
+  </style>
+
+</Layout>

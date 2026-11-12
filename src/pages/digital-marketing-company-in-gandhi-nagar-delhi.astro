@@ -1,0 +1,1458 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '../styles/global.css';
+
+const pageTitle = 'Digital Marketing Company in Gandhi Nagar | NK Digital Tech';
+const pageDescription = 'NK Digital Tech is a leading Digital Marketing Company in Gandhi Nagar offering B2B SEO, AI SEO, Local Map Packs, AEO, GEO and wholesale websites for garment hubs.';
+const pageCanonical = 'https://www.nkdigitaltech.net/digital-marketing-company-in-gandhi-nagar-delhi/';
+
+const clients = [
+  {
+    name: 'Aangan',
+    sector: 'Wholesale Readymade Garments & Ethnic Wear',
+    region: 'Subhash Road, Ashok Gali & Ram Nagar Market',
+    logo: '/images/clients/aangan.webp',
+  },
+  {
+    name: 'VP Infra',
+    sector: 'Wholesale Godowns, Showrooms & Factory Floors',
+    region: 'Pushta Road, Shastri Park & Kailash Nagar',
+    logo: '/images/clients/vp-infra.webp',
+  },
+  {
+    name: 'Propertyways',
+    sector: 'Commercial Gaddi & Textile Warehouse Leasing',
+    region: 'Main Gandhi Nagar Bazar & Geeta Colony Link',
+    logo: '/images/clients/propertyways.webp',
+  },
+  {
+    name: 'Vision',
+    sector: 'B2B Inventory Software & Barcode Systems',
+    region: 'Kailash Nagar & Mahila Colony Gandhi Nagar',
+    logo: '/images/clients/vision.webp',
+  },
+  {
+    name: 'Creative Academy',
+    sector: 'Tally GST, Export Documentation & ecommerce Training',
+    region: 'Seelampur Metro & Gandhi Nagar Link Road',
+    logo: '/images/clients/creative-academy.webp',
+  },
+];
+
+const services = [
+  {
+    num: '01',
+    category: 'Pan India Wholesale B2B SEO',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>`,
+    iconStyle: 'bg-sky-50 border-sky-200 text-brand-600',
+    impactStyle: 'bg-sky-50/80 border-sky-200/80 text-slate-800',
+    badgeColor: 'text-brand-600 bg-sky-100/80',
+    title: 'Search Engine Optimisation (SEO)',
+    body: 'Operating as a specialised digital marketing company in Gandhi Nagar, we build searchable B2B wholesale catalogues, MOQ and GSM fabric specification pages, and private-label garment hubs that rank on page one of Google across India.',
+    impact: 'Daily bulk carton inquiries, distributor applications and export RFQs from retail buyers across 28 Indian states.',
+    cta: 'Best SEO Company in Gandhi Nagar',
+    href: '/seo-company-in-gandhi-nagar/',
+  },
+  {
+    num: '02',
+    category: 'ChatGPT & Gemini B2B Citations',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>`,
+    iconStyle: 'bg-violet-50 border-violet-200 text-accent-600',
+    impactStyle: 'bg-violet-50/80 border-violet-200/80 text-slate-800',
+    badgeColor: 'text-accent-600 bg-violet-100/80',
+    title: 'AI SEO & Conversational Visibility',
+    body: 'Apparel store owners, D2C founders and overseas buyers ask AI tools which denim manufacturer, kidswear factory or fabric stockist in Gandhi Nagar Delhi offers verified MOQs and GST billing. We embed Organization and Product schema so ChatGPT and Gemini cite you.',
+    impact: 'Direct AI recommendations when pan India retailers and D2C brands shortlist Gandhi Nagar manufacturers.',
+    cta: 'AI SEO Company in Delhi',
+    href: '/ai-seo-company-in-delhi/',
+  },
+  {
+    num: '03',
+    category: 'Subhash Road & Gali Map Packs',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>`,
+    iconStyle: 'bg-emerald-50 border-emerald-200 text-emerald-600',
+    impactStyle: 'bg-emerald-50/80 border-emerald-200/80 text-slate-800',
+    badgeColor: 'text-emerald-700 bg-emerald-100/80',
+    title: 'Local SEO & Google Business Profile',
+    body: 'Our digital marketing services in Gandhi Nagar calibrate your Google Business Profile categories, exact gali/floor pin accuracy and wholesale buyer review velocity across Subhash Road, Ashok Gali, Ram Nagar, Nehru Gali, Kailash Nagar and Pushta Road.',
+    impact: 'Top three Google Map Pack placement guiding outstation buyers straight from Seelampur and Shastri Park Metro to your gaddi.',
+    cta: 'Local SEO Services in Delhi',
+    href: '/local-seo-services-in-delhi/',
+  },
+  {
+    num: '04',
+    category: 'MOQ, GSM & Rate Snippets',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>`,
+    iconStyle: 'bg-amber-50 border-amber-200 text-amber-600',
+    impactStyle: 'bg-amber-50/80 border-amber-200/80 text-slate-800',
+    badgeColor: 'text-amber-700 bg-amber-100/80',
+    title: 'Answer Engine Optimisation (AEO)',
+    body: 'We format 45 to 60 word direct answers under question headings, publish size-set breakdowns, fabric GSM charts, minimum order quantities and transport dispatch timelines with FAQPage schema to win Google featured snippets.',
+    impact: 'Position Zero snippets when wholesale buyers search for factory-direct garment rates and MOQs on mobile.',
+    cta: 'AEO Services in Delhi',
+    href: '/aeo-services-in-delhi/',
+  },
+  {
+    num: '05',
+    category: 'Generative Entity Authority',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>`,
+    iconStyle: 'bg-indigo-50 border-indigo-200 text-indigo-600',
+    impactStyle: 'bg-indigo-50/80 border-indigo-200/80 text-slate-800',
+    badgeColor: 'text-indigo-700 bg-indigo-100/80',
+    title: 'Generative Engine Optimisation (GEO)',
+    body: 'We publish structured factory capacity matrices, llms.txt discovery feeds and verified Indian textile and trade directory citations that establish your Gandhi Nagar factory or wholesale house inside LLM knowledge graphs.',
+    impact: 'Higher recommendation share across ChatGPT, Perplexity and Gemini B2B apparel sourcing prompts.',
+    cta: 'GEO Services in Delhi',
+    href: '/geo-services-in-delhi/',
+  },
+  {
+    num: '06',
+    category: 'Sub Second B2B & D2C Websites',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>`,
+    iconStyle: 'bg-cyan-50 border-cyan-200 text-cyan-700',
+    impactStyle: 'bg-cyan-50/80 border-cyan-200/80 text-slate-800',
+    badgeColor: 'text-cyan-700 bg-cyan-100/80',
+    title: 'Website Design & Development',
+    body: 'Our in house web developers build fast B2B wholesale lookbook portals, set-wise WhatsApp order systems and D2C ecommerce storefronts that load in under two seconds even inside congested Gandhi Nagar market lanes.',
+    impact: 'More direct WhatsApp sample orders, video-call gaddi previews and nationwide distributor signups.',
+    cta: 'Website Development Company in Delhi',
+    href: '/website-development-company-in-delhi/',
+  },
+];
+
+const comparison = [
+  {
+    metric: 'Who Runs Your Campaign',
+    typical: 'Shared B2B directory reps selling the same inquiry to 10 competing Gandhi Nagar traders',
+    nk: 'Senior digital marketing engineers build your exclusive wholesale website, search and AI funnel',
+  },
+  {
+    metric: 'How Results Are Tracked',
+    typical: 'Single-piece retail spam calls or shared marketplace leads with razor-thin margins',
+    nk: '100% exclusive set-wise/carton-wise wholesale inquiries, WhatsApp catalogue requests and gaddi walk ins',
+  },
+  {
+    metric: 'ChatGPT & AI Search Readiness',
+    typical: 'Unindexed WhatsApp PDFs and social reels invisible to ChatGPT, Gemini and Google AI Overviews',
+    nk: 'Searchable HTML specification tables, MOQ/GSM matrices, Product/Organization schema and llms.txt feeds',
+  },
+  {
+    metric: 'Mobile Catalogue Speed',
+    typical: 'Slow, bloated ecommerce templates taking 8+ seconds to open on mobile networks',
+    nk: 'Sub-two second WebP wholesale lookbooks engineered in house for instant mobile browsing',
+  },
+  {
+    metric: 'Gali & Pan India Precision',
+    typical: 'Generic local pages that fail to rank for Subhash Road, Ashok Gali or pan India wholesale terms',
+    nk: 'Dual-layer strategy combining Gandhi Nagar Map Pack dominance with nationwide B2B category rankings',
+  },
+  {
+    metric: 'Code & Buyer Data Ownership',
+    typical: 'Directory portal owns the domain, traffic and buyer contact database',
+    nk: 'You retain 100% ownership of your website code, wholesale buyer leads and analytics',
+  },
+];
+
+const eastCorridors = [
+  {
+    hub: 'Area 01',
+    area: 'Laxmi Nagar',
+    focus: 'Digital Marketing Company in Laxmi Nagar',
+    pincode: 'Pin 110092',
+    desc: 'Along Vikas Marg, Vijay Block and Subhash Chowk, we help CA/CS coaching academies, tax consultants, computer training schools, PGs and corporate service firms win page one rankings, Map Pack calls and AI citations.',
+    cta: 'Explore Laxmi Nagar Digital Marketing',
+    href: '/digital-marketing-company-in-laxmi-nagar-delhi/',
+    accent: 'from-brand-500 to-sky-400',
+  },
+  {
+    hub: 'Area 02',
+    area: 'Preet Vihar',
+    focus: 'Digital Marketing Company in Preet Vihar',
+    pincode: 'Pin 110092',
+    desc: 'Serving the Preet Vihar commercial corridor along Vikas Marg, we build high converting websites, top three Google Map Pack placement and AI authority for corporate consultancies, luxury showrooms and jewellers.',
+    cta: 'Explore Preet Vihar Digital Marketing',
+    href: '/digital-marketing-company-in-preet-vihar-delhi/',
+    accent: 'from-accent-500 to-violet-400',
+  },
+  {
+    hub: 'Area 03',
+    area: 'Mayur Vihar (Phases 1, 2 & 3)',
+    focus: 'Digital Marketing Company in Mayur Vihar',
+    pincode: 'Pin 110091',
+    desc: 'Across Mayur Vihar Phases 1, 2 and 3 and Acharya Niketan, we drive local map pack calls, fast inquiry websites and ChatGPT recommendations for IT firms, preschools, realtors and retail stores.',
+    cta: 'Explore Mayur Vihar Digital Marketing',
+    href: '/digital-marketing-company-in-mayur-vihar-delhi/',
+    accent: 'from-cyan-500 to-teal-400',
+  },
+  {
+    hub: 'Area 04',
+    area: 'Patparganj Industrial Area',
+    focus: 'Digital Marketing Company in Patparganj',
+    pincode: 'Pin 110092',
+    desc: 'For B2B manufacturers, packaging units, printing presses and auto ancillary exporters in FIE Patparganj, we engineer searchable HTML specification catalogues and AI procurement citations.',
+    cta: 'Explore Patparganj Digital Marketing',
+    href: '/digital-marketing-company-in-patparganj-delhi/',
+    accent: 'from-emerald-500 to-green-400',
+  },
+  {
+    hub: 'Area 05',
+    area: 'Karkardooma',
+    focus: 'Digital Marketing Company in Karkardooma',
+    pincode: 'Pin 110092',
+    desc: 'Around Karkardooma District Courts and Community Centre, we position law chambers, commercial property consultants, CA offices and corporate advisory practices for high intent client inquiries.',
+    cta: 'Explore Karkardooma Digital Marketing',
+    href: '/digital-marketing-company-in-karkardooma-delhi/',
+    accent: 'from-indigo-500 to-blue-400',
+  },
+  {
+    hub: 'Area 06',
+    area: 'Nirman Vihar',
+    focus: 'Digital Marketing Company in Nirman Vihar',
+    pincode: 'Pin 110092',
+    desc: 'Adjacent to V3S Mall and Nirman Vihar Metro, we help fine jewellery showrooms, bridal boutiques, corporate offices and interior studios capture top Map Pack footfall and WhatsApp bookings.',
+    cta: 'Explore Nirman Vihar Digital Marketing',
+    href: '/digital-marketing-company-in-nirman-vihar-delhi/',
+    accent: 'from-violet-500 to-purple-400',
+  },
+  {
+    hub: 'Area 07',
+    area: 'Shakarpur',
+    focus: 'Digital Marketing Company in Shakarpur',
+    pincode: 'Pin 110092',
+    desc: 'Across School Block and Ganesh Nagar in Shakarpur, we build mobile first course pages and local map visibility for SSC/banking academies, GST practitioners, laptop repair hubs and hostels.',
+    cta: 'Explore Shakarpur Digital Marketing',
+    href: '/digital-marketing-company-in-shakarpur-delhi/',
+    accent: 'from-amber-500 to-orange-400',
+  },
+  {
+    hub: 'Area 08',
+    area: 'IP Extension',
+    focus: 'Digital Marketing Company in IP Extension',
+    pincode: 'Pin 110092',
+    desc: 'Serving over 120 group housing societies in IP Extension, we help CA chambers, IT consultancies, home interior designers and property advisors win daily society resident and corporate calls.',
+    cta: 'Explore IP Extension Digital Marketing',
+    href: '/digital-marketing-company-in-ip-extension-delhi/',
+    accent: 'from-teal-500 to-emerald-400',
+  },
+  {
+    hub: 'Area 09',
+    area: 'Gandhi Nagar Market',
+    focus: 'Digital Marketing Company in Gandhi Nagar',
+    pincode: 'Pin 110031',
+    desc: 'In Asia’s largest wholesale readymade garment and textile market, we build B2B wholesale websites and pan India distributor SEO for denim factories, kidswear brands and fabric stockists.',
+    cta: 'Current Hub: Gandhi Nagar',
+    href: '/digital-marketing-company-in-gandhi-nagar-delhi/',
+    accent: 'from-rose-500 to-pink-400',
+  },
+  {
+    hub: 'Area 10',
+    area: 'Krishna Nagar',
+    focus: 'Digital Marketing Company in Krishna Nagar',
+    pincode: 'Pin 110051',
+    desc: 'Focused on Lal Quarter Market and Mandir Marg, we grow bridal lehengas stores, jewellers, electronics showrooms, interior studios and coaching centres through local Map Packs and fast lookbooks.',
+    cta: 'Explore Krishna Nagar Digital Marketing',
+    href: '/digital-marketing-company-in-krishna-nagar-delhi/',
+    accent: 'from-sky-500 to-cyan-400',
+  },
+  {
+    hub: 'Area 11',
+    area: 'Vivek Vihar',
+    focus: 'Digital Marketing Company in Vivek Vihar',
+    pincode: 'Pin 110095',
+    desc: 'Across Vivek Vihar, Surajmal Vihar and Yojana Vihar, we position luxury builder floor developers, turnkey architects, CA firms and corporate wealth advisors for HNI enquiries.',
+    cta: 'Explore Vivek Vihar Digital Marketing',
+    href: '/digital-marketing-company-in-vivek-vihar-delhi/',
+    accent: 'from-blue-500 to-indigo-400',
+  },
+  {
+    hub: 'Area 12',
+    area: 'Shahdara & Jhilmil',
+    focus: 'Digital Marketing Company in Shahdara',
+    pincode: 'Pin 110032',
+    desc: 'Covering Jhilmil Industrial Area, Friends Colony and Rohtash Nagar, we engineer B2B product catalogues and local search funnels for wire/cable OEMs, metal fabricators and wholesale traders.',
+    cta: 'Explore Shahdara Digital Marketing',
+    href: '/digital-marketing-company-in-shahdara-delhi/',
+    accent: 'from-fuchsia-500 to-rose-400',
+  },
+];
+
+const siblingZonalHubs = [
+  {
+    zone: 'East Delhi Parent Hub',
+    title: 'Digital Marketing Company in East Delhi',
+    corridors: 'Complete East Delhi Hub: All 12 Commercial & Industrial Corridors',
+    href: '/digital-marketing-company-in-east-delhi/',
+  },
+  {
+    zone: 'West Delhi Hub',
+    title: 'Digital Marketing Company in West Delhi',
+    corridors: 'Rajouri Garden, Janakpuri, Dwarka, Kirti Nagar, Punjabi Bagh & Mayapuri',
+    href: '/digital-marketing-company-in-west-delhi/',
+  },
+  {
+    zone: 'South Delhi Hub',
+    title: 'Digital Marketing Company in South Delhi',
+    corridors: 'Nehru Place, Okhla, Saket, Greater Kailash, Hauz Khas & Vasant Vihar',
+    href: '/digital-marketing-company-in-south-delhi/',
+  },
+];
+
+const industries = [
+  {
+    sector: 'Denim & Bottomwear OEMs',
+    title: 'Jeans, Trousers & Cargo Manufacturers',
+    focus: 'B2B wholesale lookbooks, wash/ounce specification tables and pan India distributor SEO for denim factories across Subhash Road, Ashok Gali and Kailash Nagar.',
+    outcome: 'Exclusive carton-wise orders from multi-brand outlets across Bihar, UP, Rajasthan, MP and South India.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>`,
+    accentBorder: 'border-t-brand-500',
+    iconBg: 'bg-sky-50 text-brand-600 border-sky-200',
+  },
+  {
+    sector: 'Menswear Shirts & T-Shirts',
+    title: 'Casual Shirts, Polos & Winterwear Brands',
+    focus: 'Seasonal catalogue hubs, size-ratio tables and WhatsApp sample booking funnels for menswear manufacturers in Ram Nagar and Nehru Gali.',
+    outcome: 'Steady regional distributor appointments and festive bulk booking orders.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>`,
+    accentBorder: 'border-t-indigo-500',
+    iconBg: 'bg-indigo-50 text-indigo-600 border-indigo-200',
+  },
+  {
+    sector: 'Kidswear & Infant Apparel',
+    title: 'Kids Ethnic, Baba Suits & Partywear Units',
+    focus: 'Age-group wholesale galleries, MOQ price brackets and Google Map Pack dominance for kidswear showrooms in Gandhi Nagar.',
+    outcome: 'Daily outstation retailer walk ins and WhatsApp video-call selection orders.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>`,
+    accentBorder: 'border-t-pink-500',
+    iconBg: 'bg-pink-50 text-pink-600 border-pink-200',
+  },
+  {
+    sector: 'Kurtis, Suits & Ethnic Wholesale',
+    title: 'Women’s Kurti, Leggings & Gown Wholesalers',
+    focus: 'Fast WebP catalogue portals, boutique reseller programs and AI search citations for women’s ethnic garment makers.',
+    outcome: 'Direct bulk orders from boutique owners, Myntra/Flipkart sellers and regional wholesalers.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>`,
+    accentBorder: 'border-t-rose-500',
+    iconBg: 'bg-rose-50 text-rose-600 border-rose-200',
+  },
+  {
+    sector: 'Thaan & Roll Stockists',
+    title: 'Cotton, Lycra,Hosiery & Imported Fabrics',
+    focus: 'GSM/width/count technical specification pages, shade-card downloads and B2B procurement SEO for fabric traders on Pushta Road and Shastri Park.',
+    outcome: 'Recurring fabric roll orders from garment factories and export buying houses.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"/></svg>`,
+    accentBorder: 'border-t-amber-500',
+    iconBg: 'bg-amber-50 text-amber-600 border-amber-200',
+  },
+  {
+    sector: 'Private-Label & White-Label',
+    title: 'D2C Third-Party Garment Manufacturers',
+    focus: 'Custom sampling guides, tech-pack inquiry forms and ChatGPT/Perplexity authority for private-label clothing factories in Gandhi Nagar.',
+    outcome: 'high margin third-party manufacturing contracts from D2C fashion brands and corporate buyers.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>`,
+    accentBorder: 'border-t-emerald-500',
+    iconBg: 'bg-emerald-50 text-emerald-600 border-emerald-200',
+  },
+  {
+    sector: 'Buttons, Zippers & Labels',
+    title: 'Garment Trims, Tags & Polybag Suppliers',
+    focus: 'Custom woven label, metal button, YKK-type zipper and printed polybag specification pages targeting Delhi NCR apparel units.',
+    outcome: 'Consistent B2B bulk trim and packaging supply contracts.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>`,
+    accentBorder: 'border-t-cyan-500',
+    iconBg: 'bg-cyan-50 text-cyan-700 border-cyan-200',
+  },
+  {
+    sector: 'Stitching & CAD Machinery',
+    title: 'Industrial Sewing, Embroidery & Laser Machines',
+    focus: 'Machine model specification pages, spare-part catalogues and local Map Pack visibility for dealers in Gandhi Nagar and Raghubarpura.',
+    outcome: 'Direct factory floor machine sales and annual maintenance contracts.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>`,
+    accentBorder: 'border-t-orange-500',
+    iconBg: 'bg-orange-50 text-orange-600 border-orange-200',
+  },
+  {
+    sector: 'Bale & Carton Logistics',
+    title: 'Transport, Cargo & Courier Booking Hubs',
+    focus: 'State-wise transport route pages, per-bale freight rate tables and top three Google Map Pack placement along Pushta Road.',
+    outcome: 'Daily garment bale bookings to railway parcels and pan India transport hubs.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/></svg>`,
+    accentBorder: 'border-t-teal-500',
+    iconBg: 'bg-teal-50 text-teal-700 border-teal-200',
+  },
+  {
+    sector: 'Textile GST & Trademark',
+    title: 'CA Firms, E-Way Bill & Brand Registration',
+    focus: 'Apparel Class-25 trademark registration guides, textile GST audit hubs and AccountingService schema for consultants in Gandhi Nagar.',
+    outcome: 'Steady GST retainers and clothing brand trademark applications.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>`,
+    accentBorder: 'border-t-accent-500',
+    iconBg: 'bg-violet-50 text-accent-600 border-violet-200',
+  },
+  {
+    sector: 'Gaddi, Godown & Factory Realty',
+    title: 'Commercial Showroom & Warehouse Realtors',
+    focus: 'Wholesale shop (gaddi) lease/sale listings, Raghubarpura/Kailash Nagar factory floor pages and local search authority.',
+    outcome: 'Verified garment trader property transactions and godown leases.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 21h18M5 21V7l8-4v18M19 21V11l-6-4M9 9v.01M9 12v.01M9 15v.01M9 18v.01"/></svg>`,
+    accentBorder: 'border-t-purple-500',
+    iconBg: 'bg-purple-50 text-purple-600 border-purple-200',
+  },
+  {
+    sector: 'Garment Packaging & Printing',
+    title: 'Cartons, Tags, Polybags & Printing Presses',
+    focus: 'Product specification tables, bulk MOQs, GST invoicing schema and top three Map Pack rankings across Kailash Nagar, Mahila Colony and Geeta Colony link.',
+    outcome: 'Daily bulk carton and hangtag orders from Gandhi Nagar textile factories.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>`,
+    accentBorder: 'border-t-indigo-500',
+    iconBg: 'bg-indigo-50 text-indigo-600 border-indigo-200',
+  },
+];
+
+const testimonials = [
+  {
+    name: 'Neha Rastogi',
+    title: 'Director of Wholesale Operations',
+    company: 'Aangan',
+    sector: 'Wholesale Readymade Garments & Ethnic Wear, Subhash Road Gandhi Nagar',
+    metrics: [
+      '340% increase in direct pan India wholesale carton inquiries',
+      'Page one Google rankings for Gandhi Nagar wholesale garment keywords',
+      'Direct manufacturer citations on ChatGPT and Google AI Overviews',
+    ],
+    quote: 'Retailers from UP, Bihar, MP and Maharashtra search Google and ChatGPT for factory-direct Gandhi Nagar garment manufacturers before boarding a train to Delhi. NK Digital Tech built our fast B2B wholesale lookbook and AEO MOQ tables, bringing us daily set-wise orders without middlemen.',
+    logo: '/images/clients/aangan.webp',
+  },
+  {
+    name: 'Sandeep Arora',
+    title: 'Managing Director',
+    company: 'VP Infra',
+    sector: 'Wholesale Showrooms & Factory Floors, Pushta Road & Kailash Nagar',
+    metrics: [
+      '3.8x growth in verified gaddi & godown buyer inquiries',
+      'Top 3 Google Map Pack placement across Gandhi Nagar & Kailash Nagar',
+      '46% lower cost per qualified commercial site visit',
+    ],
+    quote: 'Garment manufacturers expanding their production units in Kailash Nagar and Raghubarpura or seeking main-road showrooms on Subhash Road search online first. NK Digital Tech engineered our commercial property pages to generate direct trader calls every week.',
+    logo: '/images/clients/vp-infra.webp',
+  },
+  {
+    name: 'Vikramaditya Singh',
+    title: 'Principal Partner',
+    company: 'Propertyways',
+    sector: 'Commercial Gaddi & Textile Warehouse Leasing, Main Gandhi Nagar Bazar',
+    metrics: [
+      '290% surge in direct textile showroom & warehouse lease calls',
+      'Featured snippets for Gandhi Nagar commercial shop rent queries',
+      'Verified citations on Perplexity and Gemini',
+    ],
+    quote: 'Finding the right gaddi or ground-floor showroom in Ashok Gali or Ram Nagar is high-stakes for apparel brands. NK Digital Tech structured our market inventory with LocalBusiness schema, making our website the top lead source for Gandhi Nagar commercial leasing.',
+    logo: '/images/clients/propertyways.webp',
+  },
+  {
+    name: 'Rohit Malhotra',
+    title: 'Managing Director',
+    company: 'Vision',
+    sector: 'B2B Inventory Software & Barcode Solutions, Kailash Nagar',
+    metrics: [
+      '3.5x increase in inbound ERP inquiries & demo consultations',
+      'Top 3 Map Pack visibility across Kailash Nagar & Mahila Colony',
+      '1.1 second mobile page load speed across all solution pages',
+    ],
+    quote: 'Garment manufacturers and wholesale traders in Kailash Nagar and Subhash Road need real time billing and inventory software. NK Digital Tech optimised our Google Business Profile and mobile website speed, tripling our inbound software retainers and demo bookings.',
+    logo: '/images/clients/vision.webp',
+  },
+];
+
+const stages = [
+  {
+    num: 'Stage 01',
+    step: '01',
+    title: 'Gandhi Nagar Wholesale Catalogue, Map & Competitor Audit',
+    body: 'We benchmark your mobile page speed, B2B keyword gaps, Google Business Profile signals and AI search citations against the top wholesale competitors in Gandhi Nagar and pan India B2B portals.',
+    accent: 'from-brand-600 to-sky-500',
+  },
+  {
+    num: 'Stage 02',
+    step: '02',
+    title: '90 day B2B Search, Map Pack & AI Citation Sprint Plan',
+    body: 'You get a clear two week sprint roadmap covering wholesale category pages, MOQ/GSM specification tables, gali-level Map Pack signals, FAQPage schema and WhatsApp bulk-inquiry triggers for Pin 110031.',
+    accent: 'from-accent-600 to-violet-500',
+  },
+  {
+    num: 'Stage 03',
+    step: '03',
+    title: 'In house Code, Catalogue & Local Profile Execution',
+    body: 'Our developers, copywriters and SEO engineers execute every deliverable in house, building sub second WebP lookbooks, publishing answer first B2B pages, embedding JSON LD schema and syncing verified Indian trade directories.',
+    accent: 'from-cyan-600 to-teal-500',
+  },
+  {
+    num: 'Stage 04',
+    step: '04',
+    title: 'Bulk Lead Verification, AI Citation Tracking & Scaling',
+    body: 'Every two weeks we review your pan India keyword rankings, Google Map route logs, WhatsApp sample requests and brand mentions across ChatGPT, Gemini and Google AI Overviews, scaling your highest-margin garment lines.',
+    accent: 'from-emerald-600 to-green-500',
+  },
+];
+
+const faqs = [
+  {
+    q: 'Why is NK Digital Tech the trusted Digital Marketing Company in Gandhi Nagar?',
+    a: 'NK Digital Tech is a trusted Digital Marketing Company in Gandhi Nagar because we engineer campaigns around exclusive carton-wise and set-wise wholesale inquiries, pan India distributor signups and direct gaddi visits rather than shared marketplace leads. Our in house team unites B2B SEO, Google Map Pack authority, AI SEO (AEO & GEO) and fast wholesale catalogue websites.',
+  },
+  {
+    q: 'Which galis, sub-markets and industrial pockets in Gandhi Nagar do you cover?',
+    a: 'Our digital marketing services in Gandhi Nagar cover all wholesale and manufacturing pockets across Pin 110031: Subhash Road, Ashok Gali, Ram Nagar Market, Nehru Gali, Pratap Gali, Pushta Road, Kailash Nagar, Raghubarpura, Mahila Colony, Shastri Park and Seelampur link corridors.',
+  },
+  {
+    q: 'How do you filter out single-piece retail callers so we only get bulk B2B wholesale buyers?',
+    a: 'We structure your category pages, meta titles, AEO tables and WhatsApp inquiry forms with clear B2B qualifiers, such as "Minimum Order 1 Carton / 50 Pieces", "Set-Wise Wholesale Only" and "GST Number Required", so retail shoppers self-filter while serious shopkeepers and distributors contact your sales team.',
+  },
+  {
+    q: 'How do you help Gandhi Nagar garment manufacturers get recommended by ChatGPT and Gemini?',
+    a: 'AI platforms like ChatGPT, Gemini, Perplexity and Google AI Overviews cite manufacturers that publish searchable HTML tables with fabric GSM, size ratios, MOQ brackets, private-label capabilities, Product/Organization JSON LD schema and llms.txt files. We engineer all of these into your website.',
+  },
+  {
+    q: 'How soon can a Gandhi Nagar wholesale house or factory see more direct buyer calls?',
+    a: 'Google Business Profile optimisation and mobile catalogue speed upgrades around Subhash Road and Seelampur/Shastri Park Metro typically lift Map Pack calls and route clicks within four to eight weeks. Pan India page one wholesale rankings compound steadily over three to six months.',
+  },
+  {
+    q: 'What is the monthly retainer for digital marketing services in Gandhi Nagar?',
+    a: 'Our Gandhi Nagar digital marketing retainers range from ₹15,000 to ₹50,000+ per month depending on the number of apparel or fabric categories, pan India/export keyword scope, and whether custom B2B wholesale or D2C ecommerce development is included.',
+  },
+  {
+    q: 'How is NK Digital Tech different from a typical digital marketing agency in Gandhi Nagar or B2B portal?',
+    a: 'Unlike B2B directories that sell the same buyer inquiry to ten competing traders, or a typical digital marketing agency in Gandhi Nagar that only posts social media reels, we build your own high speed wholesale website and search authority, giving you 100% exclusive leads and full ownership of your code.',
+  },
+  {
+    q: 'Can you build a fast B2B wholesale lookbook with WhatsApp set-wise ordering?',
+    a: 'Yes. Our in house developers build sub second WebP wholesale lookbook websites where pan India buyers can browse designs by fabric, GSM and size set and send an instant WhatsApp bulk inquiry directly to your gaddi team.',
+  },
+];
+
+const trustStrip = [
+  'Subhash Road & Ashok Gali Focus',
+  'Pan India B2B Wholesale SEO',
+  'Gandhi Nagar Map Pack Top 3',
+  'ChatGPT & Gemini B2B Citations',
+  'Google AI Overview Answers',
+  'MOQ & GSM Schema Engineering',
+  'Sub Second Wholesale Catalogues',
+  '100% Exclusive Buyer Leads',
+];
+
+const dmGandhiNagarSchemaLocalBusiness = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "NK Digital Tech: Digital Marketing Company in Gandhi Nagar",
+  "url": "https://www.nkdigitaltech.net/digital-marketing-company-in-gandhi-nagar-delhi/",
+  "logo": "https://www.nkdigitaltech.net/images/dm-gandhi-nagar/hero-digital-marketing-company-gandhi-nagar.webp",
+  "image": "https://www.nkdigitaltech.net/images/dm-gandhi-nagar/hero-digital-marketing-company-gandhi-nagar.webp",
+  "description": "NK Digital Tech is a leading Digital Marketing Company in Gandhi Nagar offering B2B SEO, AI SEO, Local Map Packs, AEO, GEO and fast wholesale websites across Subhash Road, Ashok Gali and Kailash Nagar.",
+  "telephone": "+91-8052189051",
+  "email": "nkdigitaltech1@gmail.com",
+  "priceRange": "₹15,000 to ₹50,000+",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Subhash Road & Ashok Gali Wholesale Corridor, Gandhi Nagar",
+    "addressLocality": "East Delhi",
+    "postalCode": "110031",
+    "addressRegion": "Delhi",
+    "addressCountry": "IN"
+  },
+  "areaServed": [
+    "Gandhi Nagar",
+    "Subhash Road Gandhi Nagar",
+    "Ashok Gali",
+    "Ram Nagar Market",
+    "Nehru Gali",
+    "Kailash Nagar",
+    "Raghubarpura",
+    "Pushta Road",
+    "Shastri Park",
+    "East Delhi"
+  ],
+  "serviceType": [
+    "Digital Marketing Services in Gandhi Nagar",
+    "B2B Wholesale Search Engine Optimisation (SEO)",
+    "AI SEO & ChatGPT Citation Optimisation",
+    "Local SEO & Google Business Profile",
+    "Answer Engine Optimisation (AEO)",
+    "Generative Engine Optimisation (GEO)",
+    "Wholesale & D2C Website Development"
+  ]
+});
+
+const dmGandhiNagarSchemaFAQ = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map((item) => ({
+    "@type": "Question",
+    "name": item.q,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": item.a
+    }
+  }))
+});
+---
+
+<Layout
+  title={pageTitle}
+  description={pageDescription}
+  canonical={pageCanonical}
+  ogImage="https://www.nkdigitaltech.net/images/dm-gandhi-nagar/hero-digital-marketing-company-gandhi-nagar.webp"
+  preloadImage="/images/dm-gandhi-nagar/hero-digital-marketing-company-gandhi-nagar.webp"
+  hideLocationsNav={false}
+  customSchemaLocalBusiness={dmGandhiNagarSchemaLocalBusiness}
+  customSchemaFAQ={dmGandhiNagarSchemaFAQ}
+  utilityTagline="Digital Marketing Company in Gandhi Nagar • Subhash Road, Ashok Gali & Kailash Nagar (Pin 110031)"
+  brandSubtitle="Gandhi Nagar • B2B Wholesale, AI & Web Growth"
+  footerBio="Digital Marketing Company in Gandhi Nagar helping readymade garment manufacturers, denim factories, fabric stockists and wholesale traders win pan India Google rankings, Map Pack calls and AI citations."
+  footerCoreDisciplines={[
+    { label: 'Best Digital Marketing Agency in Delhi', href: '/best-digital-marketing-agency-in-delhi/' },
+    { label: 'Digital Marketing Company in East Delhi', href: '/digital-marketing-company-in-east-delhi/' },
+    { label: 'Best SEO Company in Gandhi Nagar', href: '/seo-company-in-gandhi-nagar/' },
+    { label: 'AI SEO Company in Delhi', href: '/ai-seo-company-in-delhi/' },
+    { label: 'Local SEO Services in Delhi', href: '/local-seo-services-in-delhi/' },
+    { label: 'AEO Services in Delhi', href: '/aeo-services-in-delhi/' },
+    { label: 'GEO Services in Delhi', href: '/geo-services-in-delhi/' },
+    { label: 'Website Development Company in Delhi', href: '/website-development-company-in-delhi/' },
+  ]}
+  footerTagline="Digital Marketing Company in Gandhi Nagar • B2B Apparel & full funnel Search Growth"
+>
+
+  <!-- =====================================================================
+       SECTION 1: HERO (DARK SURFACE WITH UNIQUE GANDHI NAGAR DM HERO IMAGE)
+  ===================================================================== -->
+  <section class="relative surface-dark overflow-hidden pt-5 pb-9 sm:pt-16 sm:pb-20 lg:pt-20 lg:pb-24 border-b border-slate-800/80">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="absolute inset-0 mesh-glow pointer-events-none"></div>
+    <div class="absolute -top-24 -left-24 sm:-top-36 sm:-left-36 w-56 h-56 sm:w-96 sm:h-96 bg-brand-500/20 rounded-full blur-[80px] sm:blur-[130px] pointer-events-none"></div>
+    <div class="absolute top-1/4 -right-24 sm:-right-36 w-56 h-56 sm:w-96 sm:h-96 bg-accent-500/20 rounded-full blur-[80px] sm:blur-[130px] pointer-events-none"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns: Headline & CTA -->
+        <div class="lg:col-span-7 text-left min-w-0">
+          <div class="badge-dark mb-3 sm:mb-6 py-1.5 px-2.5 sm:px-3.5">
+            <span class="w-2 h-2 rounded-full bg-brand-400 animate-ping flex-shrink-0"></span>
+            <span class="min-w-0 break-words">Subhash Road &bull; Ashok Gali &bull; Kailash Nagar &bull; Pin 110031</span>
+          </div>
+
+          <h1 class="font-display text-[clamp(1.62rem,6.5vw,2.35rem)] sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-[1.15] sm:leading-[1.1] mb-3.5 sm:mb-6 text-glow break-words">
+            Digital Marketing Company <br />
+            <span class="gradient-text-light">in Gandhi Nagar</span>
+          </h1>
+
+          <p class="text-[13.5px] sm:text-base md:text-lg text-slate-300 leading-[1.68] sm:leading-relaxed mb-5 sm:mb-8 font-normal text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+            Win exclusive pan India carton orders, distributor appointments and gaddi walk ins with a B2B-focused <strong class="text-white font-semibold">Digital Marketing Company in Gandhi Nagar</strong>. We engineer page one Google rankings, top three Map Pack placement, ChatGPT and Gemini manufacturer citations, and sub second wholesale lookbook websites across Subhash Road, Ashok Gali, Ram Nagar and Kailash Nagar.
+          </p>
+
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-4 mb-5 sm:mb-10">
+            <a href="/contact-us/" class="btn-primary w-full sm:w-auto min-h-[50px] text-[13.5px] sm:text-base px-4 sm:px-8 py-3.5 sm:py-4">
+              <span>Claim Your Gandhi Nagar B2B Audit</span>
+              <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+              </svg>
+            </a>
+            <a href="#services" class="btn-secondary-dark w-full sm:w-auto min-h-[48px] text-[13.5px] sm:text-base px-4 sm:px-7 py-3.5 sm:py-4">
+              <span>Explore Our Six Core Services</span>
+            </a>
+          </div>
+
+          <!-- Trust Verification Strip -->
+          <div class="pt-4 sm:pt-6 border-t border-slate-800/80">
+            <div class="grid grid-cols-2 sm:flex sm:flex-wrap items-stretch sm:items-center gap-2">
+              {trustStrip.map((item) => (
+                <span class="px-2.5 sm:px-3 py-2 sm:py-1.5 min-h-[42px] sm:min-h-0 rounded-lg bg-slate-900/90 border border-slate-800 text-[11px] sm:text-xs text-slate-300 font-medium flex items-center justify-center sm:justify-start text-center sm:text-left leading-tight break-words">
+                  {item}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Unique Gandhi Nagar DM Hero Image -->
+        <div class="lg:col-span-5 min-w-0">
+          <div class="relative rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-700/80 shadow-2xl shadow-brand-500/15 bg-slate-900 group">
+            <div class="relative">
+              <img
+                src="/images/dm-gandhi-nagar/hero-digital-marketing-company-gandhi-nagar.webp"
+                alt="Digital Marketing Company in Gandhi Nagar Strategists Reviewing B2B Textile and Garment Search Growth"
+                width="960"
+                height="540"
+                sizes="(max-width: 1024px) 100vw, 42vw"
+                fetchpriority="high"
+                decoding="async"
+                class="w-full aspect-[16/9] sm:aspect-auto sm:h-72 md:h-[380px] lg:h-[400px] object-cover object-center sm:group-hover:scale-105 transition-transform duration-500"
+              />
+              <div class="hidden sm:block absolute inset-0 bg-gradient-to-t from-[#050a14] via-transparent to-transparent opacity-80"></div>
+            </div>
+            <div class="relative sm:absolute sm:bottom-4 sm:left-4 sm:right-4 glass-card border-t sm:border border-slate-800 sm:rounded-2xl p-3.5 sm:p-4">
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-1">
+                <span class="text-xs font-bold text-white">Gandhi Nagar B2B Wholesale Growth</span>
+                <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-400">
+                  <span class="w-2 h-2 rounded-full bg-emerald-400 flex-shrink-0"></span>
+                  Pan India Bulk Orders
+                </span>
+              </div>
+              <p class="text-[11px] sm:text-xs text-slate-300 text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left] leading-relaxed">
+                Scaling garment manufacturers, denim OEMs and fabric stockists across Subhash Road, Ashok Gali &amp; Kailash Nagar.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 2: INTRODUCTION (CRISP WHITE CONTRAST SECTION + TEAM IMAGE)
+  ===================================================================== -->
+  <section class="relative surface-white overflow-hidden py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns -->
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-light mb-3.5 sm:mb-4">Asia’s Largest Garment &amp; Textile Hub Partner</div>
+          <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-4 sm:mb-6">
+            Why Gandhi Nagar Manufacturers &amp; Traders Choose Our <span class="gradient-text-dark">Digital Marketing Company</span>
+          </h2>
+          <div class="space-y-4 sm:space-y-5 text-slate-700 text-[13.5px] sm:text-base leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+            <p>
+              Housing more than 12,000 wholesale showrooms, fabric stockists and manufacturing units across Subhash Road, Ashok Bazar and Mahavir Gali, Gandhi Nagar is Asia's largest readymade garment market. When garment retailers, boutique owners and corporate buyers across India source apparel, they search Google and AI engines for verified manufacturers.
+            </p>
+            <p>
+              As an accountable <strong>Digital Marketing Company in Gandhi Nagar</strong> backed by our <a href="/digital-marketing-company-in-east-delhi/" class="text-brand-600 font-semibold hover:underline">Digital Marketing Company in East Delhi</a> hub, NK Digital Tech connects wholesale manufacturers directly with high volume buyers.
+            </p>
+          </div>
+          <div class="mt-6 sm:mt-8 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
+            <a href="/contact-us/" class="btn-primary w-full sm:w-auto min-h-[48px]">
+              <span>Speak With a Gandhi Nagar Strategist</span>
+              <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+              </svg>
+            </a>
+            <a href="#why-us" class="btn-secondary-light w-full sm:w-auto min-h-[48px]">
+              <span>Compare Our Execution Model</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Unique Gandhi Nagar Team Image + Stats -->
+        <div class="lg:col-span-5 space-y-4 sm:space-y-5 min-w-0">
+          <div class="rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-200 shadow-lg bg-slate-100">
+            <img
+              src="/images/dm-gandhi-nagar/digital-marketing-team-gandhi-nagar.webp"
+              alt="Digital Marketing Agency in Gandhi Nagar Team Planning Apparel Catalogue and B2B Search Funnels"
+              width="800"
+              height="533"
+              sizes="(max-width: 1024px) 100vw, 42vw"
+              class="w-full aspect-[16/9] sm:aspect-auto sm:h-64 lg:h-72 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="grid grid-cols-2 gap-2.5 sm:gap-4">
+            {[
+              { val: '4.1x', label: 'Wholesale Lead Lift', sub: 'Pan India & Export RFQs' },
+              { val: '90 Days', label: 'Sprint Roadmap', sub: 'Biweekly milestone reviews' },
+              { val: 'Top 3', label: 'Market Map Pack', sub: 'Subhash Rd & Ashok Gali' },
+              { val: '100%', label: 'Lead Exclusivity', sub: 'Zero shared portal leads' },
+            ].map((stat) => (
+              <div class="elevated-card rounded-xl sm:rounded-2xl p-3 sm:p-4 min-w-0 flex flex-col justify-between">
+                <div class="font-display font-black text-[1.1rem] sm:text-2xl text-brand-600 mb-0.5 leading-tight break-words">{stat.val}</div>
+                <div class="text-[11px] sm:text-xs font-bold text-slate-900 leading-snug">{stat.label}</div>
+                <div class="text-[10.5px] sm:text-[11px] text-slate-500 leading-snug mt-0.5">{stat.sub}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 3: PROBLEM STATEMENT (DEEP INDIGO DARK CONTRAST SECTION)
+  ===================================================================== -->
+  <section class="relative surface-indigo py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="max-w-7xl mx-auto relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns -->
+        <div class="lg:col-span-7 min-w-0">
+          <div class="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-3.5 py-1 sm:py-1.5 rounded-full text-[10px] sm:text-xs font-bold uppercase tracking-wider sm:tracking-widest bg-amber-500/10 border border-amber-500/30 text-amber-300 max-w-full leading-snug mb-4 sm:mb-5">
+            <svg class="w-4 h-4 text-amber-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+            </svg>
+            <span>Why Gandhi Nagar Wholesale Leads Leak</span>
+          </div>
+
+          <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-white tracking-tight leading-[1.22] sm:leading-tight mb-4 sm:mb-6">
+            Why Established Gandhi Nagar Garment Factories Lose high volume Buyers to Digital Competitors
+          </h2>
+
+          <div class="space-y-4 sm:space-y-5 text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+            <p>
+              Many veteran manufacturers in Subhash Road, Ashok Gali and Ram Nagar still rely on walk in agents, WhatsApp PDF broadcasts or shared B2B directory subscriptions. Meanwhile, modern retail chain buyers and D2C brand founders search Google and ask ChatGPT for verified Gandhi Nagar manufacturers with clear GSM specifications, size sets and factory pricing.
+            </p>
+            <p>
+              If your catalogue is locked inside unindexed PDFs or you only have a shared directory listing, you end up fighting price wars over low-quality inquiries. Backed by our <a href="/ai-seo-company-in-delhi/" class="text-sky-300 font-semibold hover:underline">AI SEO Company in Delhi</a> and <a href="/website-development-company-in-delhi/" class="text-sky-300 font-semibold hover:underline">Website Development Company in Delhi</a> engineering, we turn your own website into a pan India wholesale order engine.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Diagnostic Comparison Cards -->
+        <div class="lg:col-span-5 space-y-3.5 sm:space-y-4 min-w-0">
+          <div class="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6 border-l-4 border-l-rose-500">
+            <div class="flex flex-wrap items-center justify-between gap-1.5 mb-2">
+              <span class="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-rose-400">Shared B2B Portal Trap</span>
+              <span class="text-[11px] sm:text-xs text-slate-400">Price Wars &amp; 1-Piece Spam</span>
+            </div>
+            <h3 class="font-display font-bold text-[15px] sm:text-base text-white mb-2 leading-snug">Shared Leads, Unindexed PDFs &amp; Missing MOQ Filters</h3>
+            <p class="text-xs text-slate-300 leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+              Forces your sales team to compete with 10 other traders on the same lead while ChatGPT and Google ignore your brand.
+            </p>
+          </div>
+
+          <div class="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6 border-l-4 border-l-emerald-400">
+            <div class="flex flex-wrap items-center justify-between gap-1.5 mb-2">
+              <span class="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-emerald-400">NK Digital Tech System</span>
+              <span class="text-[11px] sm:text-xs text-brand-300">Exclusive Carton &amp; Distributor Orders</span>
+            </div>
+            <h3 class="font-display font-bold text-[15px] sm:text-base text-white mb-2 leading-snug">Searchable HTML Catalogues, MOQ Schema &amp; AI Citations</h3>
+            <p class="text-xs text-slate-300 leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+              Combines fast WebP wholesale portals, verified Google Map pins, Product/Organization schema and set-wise WhatsApp funnels.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 4: SERVICES (LIGHT COOL ALABASTER CONTRAST + TECHNICAL IMAGE)
+  ===================================================================== -->
+  <section id="services" class="relative surface-cool overflow-hidden scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 items-center mb-9 sm:mb-16">
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-light mb-3">Six Integrated Growth Pillars</div>
+          <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+            Complete Digital Marketing Services in Gandhi Nagar
+          </h2>
+          <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+            Our <strong>digital marketing services in Gandhi Nagar</strong> unite B2B organic search rankings, Google Business Profile dominance, <a href="/aeo-services-in-delhi/" class="text-brand-600 font-semibold hover:underline">AEO Services in Delhi</a>, <a href="/geo-services-in-delhi/" class="text-brand-600 font-semibold hover:underline">GEO Services in Delhi</a> and fast wholesale web development across Pin 110031.
+          </p>
+        </div>
+        <div class="lg:col-span-5 min-w-0">
+          <div class="rounded-2xl overflow-hidden border border-slate-200 shadow-md bg-white">
+            <img
+              src="/images/dm-gandhi-nagar/technical-digital-marketing-gandhi-nagar.webp"
+              alt="Digital Marketing Company in Gandhi Nagar Engineer Optimizing Product Schema and Analytics"
+              width="800"
+              height="450"
+              sizes="(max-width: 1024px) 100vw, 42vw"
+              class="w-full aspect-[16/9] sm:aspect-auto sm:h-56 lg:h-64 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- 3 Columns x 2 Rows Grid Layout -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-7">
+        {services.map((s) => (
+          <div class="elevated-card rounded-2xl p-4 sm:p-7 flex flex-col justify-between group sm:hover:-translate-y-1 min-w-0">
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-4 sm:mb-6">
+                <div class={`w-11 h-11 sm:w-12 sm:h-12 rounded-xl border flex items-center justify-center flex-shrink-0 ${s.iconStyle}`}>
+                  <Fragment set:html={s.icon} />
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class={`text-[10.5px] sm:text-[11px] font-semibold px-2.5 py-1 rounded-md ${s.badgeColor}`}>
+                    {s.category}
+                  </span>
+                  <span class="font-display font-black text-base sm:text-lg text-slate-300">{s.num}</span>
+                </div>
+              </div>
+
+              <h3 class="font-display font-bold text-[17px] sm:text-xl text-slate-900 mb-2.5 sm:mb-3 leading-snug group-hover:text-brand-600 transition-colors">
+                {s.title}
+              </h3>
+
+              <p class="text-slate-600 text-[13px] sm:text-sm leading-relaxed mb-4 sm:mb-6 text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+                {s.body}
+              </p>
+            </div>
+
+            <div>
+              <div class={`rounded-xl border p-3.5 sm:p-4 mb-3.5 sm:mb-5 ${s.impactStyle}`}>
+                <div class="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-slate-900 mb-1">
+                  <svg class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                  </svg>
+                  <span>Gandhi Nagar Impact</span>
+                </div>
+                <p class="text-xs text-slate-700 leading-relaxed font-medium text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+                  {s.impact}
+                </p>
+              </div>
+
+              <a href={s.href} class="w-full sm:w-auto inline-flex items-center justify-between sm:justify-start gap-2 rounded-xl sm:rounded-none bg-slate-50 active:bg-sky-50 sm:bg-transparent border border-slate-200/80 sm:border-0 px-3.5 sm:px-0 py-2.5 min-h-[46px] sm:min-h-0 text-xs font-bold text-brand-600 hover:text-brand-700 group-hover:gap-3 transition-all">
+                <span>{s.cta}</span>
+                <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 5: WHY NK DIGITAL TECH (CRISP WHITE CONTRAST SECTION)
+  ===================================================================== -->
+  <section id="why-us" class="relative surface-white overflow-hidden scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-14 text-left sm:text-center">
+        <div class="badge-light mb-3">Transparent B2B Execution</div>
+        <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+          Why NK Digital Tech Is the Preferred Digital Marketing Company in Gandhi Nagar
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed mb-4 text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+          Selecting a <strong>Digital Marketing Company in Gandhi Nagar</strong> comes down to whether you want shared portal leads or your own pan India wholesale asset. At NK Digital Tech, senior engineers build your campaign directly and you retain 100% ownership of all code and buyer data.
+        </p>
+        <p class="text-slate-700 font-semibold text-xs sm:text-sm">
+          Compare our Gandhi Nagar B2B model against a typical vendor or shared directory:
+        </p>
+      </div>
+
+      <!-- Desktop Comparison Matrix -->
+      <div class="hidden md:block overflow-hidden rounded-2xl border border-slate-200 shadow-lg">
+        <table class="w-full text-left border-collapse">
+          <thead>
+            <tr class="bg-slate-900 text-white">
+              <th class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-slate-300 w-1/4">
+                Evaluation Factor
+              </th>
+              <th class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-rose-300 w-[37.5%] border-l border-slate-800">
+                Typical Vendor / Shared Portal
+              </th>
+              <th class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-brand-300 w-[37.5%] border-l border-slate-800 bg-slate-950">
+                NK Digital Tech Gandhi Nagar
+              </th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200 text-sm">
+            {comparison.map((row, idx) => (
+              <tr class={idx % 2 === 0 ? 'bg-white' : 'bg-slate-50/80'}>
+                <td class="py-5 px-6 font-display font-bold text-slate-900">
+                  {row.metric}
+                </td>
+                <td class="py-5 px-6 text-slate-600 border-l border-slate-200">
+                  <div class="flex items-start gap-2.5">
+                    <svg class="w-4 h-4 text-rose-500 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                    <span>{row.typical}</span>
+                  </div>
+                </td>
+                <td class="py-5 px-6 text-slate-900 font-semibold border-l border-slate-200 bg-sky-50/40">
+                  <div class="flex items-start gap-2.5">
+                    <svg class="w-4 h-4 text-emerald-600 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span>{row.nk}</span>
+                  </div>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Mobile Responsive Comparison Cards -->
+      <div class="md:hidden space-y-3.5">
+        {comparison.map((row) => (
+          <div class="elevated-card rounded-2xl p-4 min-w-0">
+            <div class="font-display font-bold text-[15px] text-slate-900 mb-3 pb-2 border-b border-slate-200 leading-snug">
+              {row.metric}
+            </div>
+            <div class="space-y-3 text-xs">
+              <div class="rounded-xl bg-rose-50/60 border border-rose-200/80 p-3">
+                <div class="font-bold text-rose-600 uppercase tracking-wider text-[10px] mb-1">Typical Vendor</div>
+                <p class="text-slate-600 leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">{row.typical}</p>
+              </div>
+              <div class="rounded-xl bg-sky-50/80 border border-sky-200 p-3">
+                <div class="font-bold text-brand-600 uppercase tracking-wider text-[10px] mb-1">NK Digital Tech</div>
+                <p class="text-slate-900 font-semibold leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">{row.nk}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 6: GANDHI NAGAR & NEIGHBOURING EAST DELHI CORRIDORS
+  ===================================================================== -->
+  <section id="locations" class="relative surface-cool overflow-hidden scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-14 text-left sm:text-center">
+        <div class="badge-light mb-3">East Delhi Micro Market Network</div>
+        <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+          Gandhi Nagar &amp; Neighbouring East Delhi Commercial Corridors We Serve
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+          Alongside our wholesale and factory work in Gandhi Nagar (Subhash Road, Ashok Gali, Ram Nagar, Kailash Nagar and Raghubarpura), we connect your brand with buyers across all 12 East Delhi commercial hubs.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
+        {eastCorridors.map((c) => (
+          <div class="elevated-card rounded-2xl p-4 sm:p-5 flex flex-col justify-between min-w-0">
+            <div>
+              <div class={`h-1 w-full bg-gradient-to-r ${c.accent} rounded-full mb-3.5`}></div>
+              <div class="flex items-center justify-between gap-2 mb-2.5">
+                <span class="px-2 py-0.5 rounded-md bg-sky-50 border border-sky-200 text-[11px] font-bold uppercase tracking-wider text-brand-600">
+                  {c.hub}
+                </span>
+                <span class="text-[11px] font-semibold text-slate-500">
+                  {c.pincode}
+                </span>
+              </div>
+              <h3 class="font-display font-bold text-base sm:text-lg text-slate-900 mb-1 leading-snug">
+                {c.area}
+              </h3>
+              <p class="text-xs font-bold text-brand-600 mb-2">{c.focus}</p>
+              <p class="text-slate-600 text-[13px] leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+                {c.desc}
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
+              <a href={c.href} class="w-full sm:w-auto min-h-[44px] sm:min-h-0 px-3 sm:px-0 py-2 sm:py-0 rounded-xl sm:rounded-none bg-slate-50 active:bg-sky-50 sm:bg-transparent border border-slate-200/80 sm:border-0 text-xs font-bold text-brand-600 hover:text-brand-700 inline-flex items-center justify-between sm:justify-start gap-1.5 group/link transition-all">
+                <span class="leading-snug">{c.cta}</span>
+                <svg class="w-3.5 h-3.5 flex-shrink-0 transition-transform group-hover/link:translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <!-- Sibling Zonal Digital Marketing Hubs Directory -->
+      <div class="mt-10 sm:mt-14 pt-8 sm:pt-10 border-t border-slate-200/90">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-5">
+          <h3 class="font-display font-bold text-base sm:text-lg text-slate-900">
+            Explore East Delhi &amp; Other Delhi Zonal Digital Marketing Hubs
+          </h3>
+          <a href="/best-digital-marketing-agency-in-delhi/" class="min-h-[40px] sm:min-h-0 py-1.5 sm:py-0 text-xs font-bold text-brand-600 hover:text-brand-700 inline-flex items-center gap-1.5">
+            <span>View All New Delhi Districts</span>
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+            </svg>
+          </a>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          {siblingZonalHubs.map((hub) => (
+            <a href={hub.href} class="elevated-card rounded-xl p-4 hover:border-brand-400 transition-all group block">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-brand-600 block mb-1">{hub.zone}</span>
+              <div class="font-display font-bold text-sm sm:text-base text-slate-900 group-hover:text-brand-600 transition-colors mb-1">
+                {hub.title}
+              </div>
+              <p class="text-xs text-slate-500 leading-relaxed">{hub.corridors}</p>
+            </a>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 7: OUR CLIENTS (DARK INDIGO CONTRAST SECTION)
+  ===================================================================== -->
+  <section id="clients" class="relative surface-indigo scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-14 text-left sm:text-center">
+        <div class="badge-dark mb-3">Gandhi Nagar Track Record</div>
+        <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-white tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+          Gandhi Nagar Garment &amp; Commercial Brands Scaling Through Search &amp; AI
+        </h2>
+        <p class="text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+          From wholesale garment manufacturers on Subhash Road and factory developers in Kailash Nagar to commercial gaddi consultants and software providers, Gandhi Nagar businesses trust NK Digital Tech.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2.5 sm:gap-5">
+        {clients.map((client) => (
+          <div class="glass-card rounded-2xl p-3 sm:p-5 flex flex-col items-center text-center group sm:hover:-translate-y-1 last:col-span-2 sm:last:col-span-1 min-w-0">
+            <div class="w-full max-w-[200px] sm:max-w-none mx-auto h-14 sm:h-20 rounded-xl bg-white border border-slate-200 flex items-center justify-center p-2.5 sm:p-4 mb-2.5 sm:mb-4 shadow-sm">
+              <img
+                src={client.logo}
+                alt={`${client.name} Logo`}
+                width="130"
+                height="48"
+                class="max-h-9 sm:max-h-12 w-auto object-contain"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <h3 class="font-display font-bold text-sm sm:text-base text-white mb-1">{client.name}</h3>
+            <p class="text-[11px] sm:text-xs text-slate-300 leading-snug mb-2.5 sm:mb-3 flex-grow">{client.sector}</p>
+            <span class="w-full sm:w-auto inline-flex items-center justify-center gap-1 text-[10px] sm:text-[11px] font-semibold text-brand-300 bg-brand-500/15 border border-brand-500/30 px-2 sm:px-2.5 py-1.5 sm:py-1 rounded-md leading-tight max-w-full">
+              <svg class="w-2.5 h-2.5 sm:w-3 sm:h-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+              </svg>
+              <span class="text-center leading-tight break-words">{client.region}</span>
+            </span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 8: INDUSTRIES (LIGHT SLATE CONTRAST SECTION - 12 SECTORS)
+  ===================================================================== -->
+  <section id="industries" class="relative surface-slate overflow-hidden scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-16 text-left sm:text-center">
+        <div class="badge-light mb-3">Sector Specific Growth Playbooks</div>
+        <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+          Twelve Gandhi Nagar Garment, Textile &amp; B2B Sectors We Scale
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+          We tailor our <strong>digital marketing services in Gandhi Nagar</strong> around pre-festive wholesale buying cycles, pan India distributor onboarding, fabric roll procurement and D2C private-label manufacturing across twelve core industries.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-7">
+        {industries.map((ind) => (
+          <div class={`elevated-card rounded-2xl p-4 sm:p-7 border-t-4 ${ind.accentBorder} flex flex-col justify-between sm:hover:-translate-y-1 min-w-0`}>
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-4 sm:mb-5">
+                <div class={`w-10 h-10 sm:w-11 sm:h-11 rounded-xl border flex items-center justify-center flex-shrink-0 ${ind.iconBg}`}>
+                  <Fragment set:html={ind.icon} />
+                </div>
+                <span class="text-[11px] font-semibold text-slate-600 bg-slate-100 px-2.5 py-1 rounded-md">
+                  {ind.sector}
+                </span>
+              </div>
+
+              <h3 class="font-display font-bold text-[17px] sm:text-xl text-slate-900 mb-3 sm:mb-4 leading-snug">
+                {ind.title}
+              </h3>
+
+              <div class="mb-4 sm:mb-5">
+                <p class="text-[11px] font-bold uppercase tracking-wider text-brand-600 mb-1.5">
+                  Campaign Priority
+                </p>
+                <p class="text-slate-600 text-[13px] sm:text-sm leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+                  {ind.focus}
+                </p>
+              </div>
+            </div>
+
+            <div class="rounded-xl bg-emerald-50/70 border border-emerald-200/80 p-3.5 sm:p-4">
+              <p class="text-[11px] font-bold uppercase tracking-wider text-emerald-700 mb-1">
+                Business Outcome
+              </p>
+              <p class="text-slate-800 text-xs font-medium leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+                {ind.outcome}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 9: TESTIMONIALS (DEEP NAVY CONTRAST SECTION - 2x2 GRID)
+  ===================================================================== -->
+  <section id="testimonials" class="relative surface-dark scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="absolute inset-0 mesh-glow pointer-events-none opacity-60"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-16 text-left sm:text-center">
+        <div class="badge-dark mb-3">Verified Client Outcomes</div>
+        <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-white tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+          Feedback From Gandhi Nagar Manufacturers, Traders &amp; Businesses
+        </h2>
+        <p class="text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+          Measured pan India wholesale inquiry growth, Map Pack dominance and AI citations reported by business owners across Subhash Road, Ashok Gali and Kailash Nagar.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-7">
+        {testimonials.map((t) => (
+          <div class="glass-card rounded-2xl p-4 sm:p-8 flex flex-col justify-between sm:hover:-translate-y-1 min-w-0">
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-4 sm:mb-5">
+                <div class="flex items-center gap-1">
+                  {[1, 2, 3, 4, 5].map(() => (
+                    <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                    </svg>
+                  ))}
+                </div>
+                <span class="text-[10px] sm:text-[11px] font-semibold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-1 rounded-md">
+                  Gandhi Nagar Partner
+                </span>
+              </div>
+
+              <p class="text-slate-200 text-[13.5px] sm:text-base leading-relaxed italic mb-5 sm:mb-6 text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+                "{t.quote}"
+              </p>
+
+              <div class="rounded-xl bg-slate-900/90 border border-slate-700/80 p-3.5 sm:p-4 mb-5 sm:mb-6">
+                <p class="text-[11px] font-bold uppercase tracking-wider text-brand-400 mb-2 sm:mb-2.5">
+                  Recorded Results
+                </p>
+                <ul class="space-y-2">
+                  {t.metrics.map((m) => (
+                    <li class="flex items-start gap-2 text-xs text-slate-300 font-medium leading-snug">
+                      <svg class="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                      </svg>
+                      <span>{m}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3.5 sm:gap-4 pt-3.5 sm:pt-4 border-t border-slate-800">
+              <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-white p-2 flex items-center justify-center flex-shrink-0 shadow-sm">
+                <img
+                  src={t.logo}
+                  alt={`${t.company} Logo`}
+                  width="48"
+                  height="48"
+                  class="max-h-8 sm:max-h-10 w-auto object-contain"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="min-w-0">
+                <h3 class="font-display font-bold text-white text-sm sm:text-base leading-snug">{t.name}</h3>
+                <p class="text-xs text-slate-300 leading-snug">
+                  {t.title}, <strong class="text-brand-400 font-semibold">{t.company}</strong>
+                </p>
+                <p class="text-[10.5px] sm:text-[11px] text-slate-400 mt-0.5 leading-snug">{t.sector}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 10: HOW WE WORK (CRISP WHITE CONTRAST SECTION - 4 STAGES)
+  ===================================================================== -->
+  <section id="process" class="relative surface-white overflow-hidden scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-16 text-left sm:text-center">
+        <div class="badge-light mb-3">Four Stage Execution Model</div>
+        <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+          How We Launch &amp; Scale Your Gandhi Nagar Digital Marketing Campaign
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+          We operate in structured 90 day sprints, accelerating mobile catalogue speed and Gandhi Nagar Map Pack rankings first while compounding pan India wholesale authority and AI citations across Pin 110031.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-7">
+        {stages.map((s) => (
+          <div class="elevated-card rounded-2xl p-4 sm:p-8 relative overflow-hidden group sm:hover:-translate-y-1 min-w-0">
+            <div class="flex items-center justify-between gap-4 mb-3.5 sm:mb-5">
+              <span class={`inline-flex items-center px-2.5 sm:px-3 py-1 rounded-lg text-xs font-bold uppercase tracking-wider text-white bg-gradient-to-r ${s.accent}`}>
+                {s.num}
+              </span>
+              <span class="font-display font-black text-3xl sm:text-4xl text-slate-200 group-hover:text-slate-300 transition-colors">
+                {s.step}
+              </span>
+            </div>
+            <h3 class="font-display font-bold text-[17px] sm:text-xl text-slate-900 mb-2.5 sm:mb-3 leading-snug">
+              {s.title}
+            </h3>
+            <p class="text-slate-600 text-[13px] sm:text-sm leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+              {s.body}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 11: CONCLUSION SECTION (INDIGO CONTRAST + GROWTH IMAGE)
+  ===================================================================== -->
+  <section class="relative surface-indigo py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-7 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns -->
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-dark mb-3.5 sm:mb-4">Compounding Pan India Wholesale Orders</div>
+          <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-white tracking-tight leading-[1.22] sm:leading-tight mb-4 sm:mb-6">
+            Scale Your Brand With a Trusted Digital Marketing Company in Gandhi Nagar
+          </h2>
+          <div class="space-y-4 sm:space-y-5 text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+            <p>
+              Winning pan India distributor accounts and bulk carton orders in Gandhi Nagar takes more than waiting for commission agents on Subhash Road. Every day, thousands of garment retailers, D2C founders and export buyers search Google, check Map Packs and consult ChatGPT or Gemini to find verified Gandhi Nagar manufacturers.
+            </p>
+            <p>
+              When you partner with NK Digital Tech as your <strong>Digital Marketing Company in Gandhi Nagar</strong>, our senior search specialists and <a href="/website-development-company-in-delhi/" class="text-sky-300 font-semibold hover:underline">Website Development Company in Delhi</a> engineers build your wholesale lookbook, MOQ/GSM specification pages, local map signals and schema markup directly. Claim your free Gandhi Nagar B2B audit today.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Unique Gandhi Nagar Growth Image -->
+        <div class="lg:col-span-5 min-w-0">
+          <div class="rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-700/80 shadow-2xl bg-slate-900">
+            <img
+              src="/images/dm-gandhi-nagar/digital-marketing-growth-gandhi-nagar.webp"
+              alt="Digital Marketing Company in Gandhi Nagar Reviewing B2B Wholesale Inquiry and Revenue Growth"
+              width="800"
+              height="450"
+              sizes="(max-width: 1024px) 100vw, 42vw"
+              class="w-full aspect-[16/9] sm:aspect-auto sm:h-64 lg:h-72 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 12: FAQ (LIGHT COOL SLATE CONTRAST SECTION)
+  ===================================================================== -->
+  <section id="faq" class="relative surface-cool overflow-hidden scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-left sm:text-center mb-9 sm:mb-14">
+        <div class="badge-light mb-3">Gandhi Nagar FAQs</div>
+        <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+          Frequently Asked Questions: Digital Marketing in Gandhi Nagar
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+          Direct answers covering B2B MOQ filtering, pan India wholesale SEO, AI search citations, lookbook websites and monthly retainers across Gandhi Nagar (Pin 110031).
+        </p>
+      </div>
+
+      <div class="space-y-3 sm:space-y-4">
+        {faqs.map((f, i) => (
+          <details class="elevated-card rounded-2xl group overflow-hidden" open={i === 0}>
+            <summary class="flex items-start sm:items-center justify-between gap-2.5 sm:gap-4 px-3.5 sm:px-6 py-4 sm:py-5 min-h-[56px] active:bg-sky-50/60 transition-colors select-none">
+              <div class="flex items-start sm:items-center gap-2.5 sm:gap-3.5 text-left min-w-0">
+                <span class="w-6 h-6 sm:w-7 sm:h-7 rounded-lg bg-sky-50 border border-sky-200 text-brand-600 font-display font-bold text-xs flex items-center justify-center flex-shrink-0 mt-0.5 sm:mt-0">
+                  0{i + 1}
+                </span>
+                <span class="font-display font-bold text-slate-900 text-[14px] sm:text-base md:text-lg leading-[1.4] sm:leading-snug break-words">
+                  {f.q}
+                </span>
+              </div>
+              <span class="faq-icon w-7 h-7 sm:w-8 sm:h-8 rounded-full border border-slate-200 text-slate-600 flex items-center justify-center flex-shrink-0 mt-0.5 sm:mt-0">
+                <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                </svg>
+              </span>
+            </summary>
+            <div class="px-3.5 sm:px-6 pb-4 sm:pb-6 pt-3 text-slate-600 text-[13.5px] sm:text-sm md:text-base leading-[1.68] sm:leading-relaxed border-t border-slate-100 text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+              {f.a}
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 13: CALL TO ACTION BANNER (LAST SECTION)
+  ===================================================================== -->
+  <section id="contact" class="relative surface-dark scroll-mt-16 sm:scroll-mt-20 pt-10 pb-12 sm:py-16 lg:py-20 px-4 sm:px-6 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-5xl mx-auto">
+      <div class="rounded-2xl sm:rounded-3xl bg-gradient-to-r from-brand-600 via-brand-700 to-accent-700 p-6 sm:p-10 md:p-12 text-center text-white shadow-2xl border border-white/15 relative overflow-hidden">
+        <div class="relative z-10 max-w-2xl mx-auto">
+          <h2 class="font-display font-black text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl md:text-4xl text-white tracking-tight leading-[1.22] sm:leading-snug mb-3 sm:mb-4">
+            Ready to Grow With a Leading Digital Marketing Company in Gandhi Nagar?
+          </h2>
+
+          <p class="text-sky-50 text-[13px] sm:text-sm md:text-base leading-relaxed mb-6 sm:mb-8">
+            Schedule your free B2B wholesale website, Google Map Pack and AI visibility audit across Subhash Road, Ashok Gali, Ram Nagar, Kailash Nagar and Pushta Road.
+          </p>
+
+          <a
+            href="/contact-us/"
+            class="inline-flex w-full sm:w-auto min-h-[48px] items-center justify-center gap-2 sm:gap-3 px-4 sm:px-8 py-3.5 sm:py-4 rounded-xl bg-white text-slate-950 hover:bg-sky-50 font-display font-bold text-[13.5px] sm:text-base shadow-xl transition-all duration-300 active:scale-95 text-center leading-snug"
+          >
+            <span>Request Your Gandhi Nagar B2B Audit</span>
+            <svg class="w-4 h-4 sm:w-5 sm:h-5 text-brand-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mobile Sticky Bottom Quick Action Bar -->
+  <div class="mobile-sticky-cta sm:hidden fixed bottom-0 inset-x-0 z-40 bg-[#050a14]/95 backdrop-blur-xl border-t border-slate-800 px-3 pt-2.5 pb-[max(0.7rem,env(safe-area-inset-bottom))] shadow-[0_-8px_24px_rgba(0,0,0,0.45)] transition-all duration-200">
+    <div class="flex items-center gap-2 min-w-0">
+      <a
+        href="/contact-us/"
+        class="btn-primary flex-1 min-w-0 min-h-[48px] py-2.5 px-3 text-[12px] font-bold rounded-xl"
+      >
+        <span class="truncate">Free Gandhi Nagar Audit</span>
+        <svg class="w-3.5 h-3.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+        </svg>
+      </a>
+      <a
+        href="#services"
+        class="btn-secondary-dark min-h-[48px] py-2.5 px-3.5 text-[12px] font-semibold rounded-xl flex-shrink-0 whitespace-nowrap"
+      >
+        <span>Services</span>
+      </a>
+    </div>
+  </div>
+
+  <style>
+    @media (max-width: 639px) {
+      .glass-card {
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+      }
+      #locations,
+      #why-us,
+      #clients,
+      #industries,
+      #testimonials,
+      #process,
+      #faq {
+        content-visibility: auto;
+        contain-intrinsic-size: auto 720px;
+      }
+      a,
+      button,
+      summary {
+        touch-action: manipulation;
+        -webkit-tap-highlight-color: transparent;
+      }
+    }
+  </style>
+
+</Layout>
+

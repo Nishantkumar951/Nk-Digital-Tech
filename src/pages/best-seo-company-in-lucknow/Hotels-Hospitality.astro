@@ -1,0 +1,1072 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import '../../styles/global.css';
+
+const pageTitle = "Best SEO for Hotels in Lucknow | NK Digital Tech";
+const pageDescription = "Need SEO for Hotels in Lucknow? NK Digital Tech drives direct room bookings, corporate banquet events, Google Map Pack rankings and ChatGPT citations.";
+const pageCanonical = "https://www.nkdigitaltech.net/best-seo-company-in-lucknow/Hotels-Hospitality/";
+
+const services = [
+  {
+    "num": "01",
+    "category": "Direct Booking SEO",
+    "icon": "<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4\"/></svg>",
+    "iconStyle": "bg-sky-50 border-sky-200 text-brand-600",
+    "impactStyle": "bg-sky-50/80 border-sky-200/80 text-slate-800",
+    "badgeColor": "text-brand-600 bg-sky-100/80",
+    "title": "Direct Room Booking & Brand Protection SEO",
+    "body": "We reclaim your hotel's organic brand dominance, outranking OTAs for branded queries and capturing non-brand searches for luxury business stays in Lucknow.",
+    "impact": "Elimination of 20% OTA commission deductions on direct guest bookings.",
+    "cta": "Explore Direct Booking SEO",
+    "href": "/best-seo-company-in-lucknow/"
+  },
+  {
+    "num": "02",
+    "category": "Google Map Pack",
+    "icon": "<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z\"/><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M15 11a3 3 0 11-6 0 3 3 0 016 0z\"/></svg>",
+    "iconStyle": "bg-emerald-50 border-emerald-200 text-emerald-600",
+    "impactStyle": "bg-emerald-50/80 border-emerald-200/80 text-slate-800",
+    "badgeColor": "text-emerald-700 bg-emerald-100/80",
+    "title": "Hotel & Resort Google Map Pack Domination",
+    "body": "We position your hotel in the top 3 on Google Maps across key business districts including Summit Building, Amar Shaheed Path, and NH-48.",
+    "impact": "Immediate mobile navigation requests and direct telephone front-desk reservations.",
+    "cta": "Discover Hotel Map SEO",
+    "href": "/local-seo-services-in-lucknow/"
+  },
+  {
+    "num": "03",
+    "category": "GEO & AI Search",
+    "icon": "<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M13 10V3L4 14h7v7l9-11h-7z\"/></svg>",
+    "iconStyle": "bg-purple-50 border-purple-200 text-purple-600",
+    "impactStyle": "bg-purple-50/80 border-purple-200/80 text-slate-800",
+    "badgeColor": "text-purple-700 bg-purple-100/80",
+    "title": "Generative Engine Optimization (GEO)",
+    "body": "When business executives ask ChatGPT or Gemini for top luxury hotels near Vibhuti Khand, our semantic markup ensures your property is recommended first.",
+    "impact": "Authoritative hotel recommendations in conversational AI travel workflows.",
+    "cta": "Learn AI Hospitality SEO",
+    "href": "/geo-services-in-lucknow/"
+  },
+  {
+    "num": "04",
+    "category": "MICE & Weddings",
+    "icon": "<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z\"/></svg>",
+    "iconStyle": "bg-amber-50 border-amber-200 text-amber-600",
+    "impactStyle": "bg-amber-50/80 border-amber-200/80 text-slate-800",
+    "badgeColor": "text-amber-700 bg-amber-100/80",
+    "title": "Banquet Halls & Destination Wedding SEO",
+    "body": "We build dedicated landing pages for wedding lawn venues, corporate annual meetings, and banquet capacities across Lucknow resort belts.",
+    "impact": "Multi-lakh banquet bookings and recurring corporate conference venue retainers.",
+    "cta": "Explore Banquet SEO Solutions",
+    "href": "/best-digital-marketing-company-in-lucknow/"
+  },
+  {
+    "num": "05",
+    "category": "Hotel Schema",
+    "icon": "<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4\"/></svg>",
+    "iconStyle": "bg-blue-50 border-blue-200 text-blue-600",
+    "impactStyle": "bg-blue-50/80 border-blue-200/80 text-slate-800",
+    "badgeColor": "text-blue-700 bg-blue-100/80",
+    "title": "Hotel, LodgingBusiness & EventVenue Schema",
+    "body": "We deploy structured schemas for room types, check-in policies, star ratings, dining menus, and swimming pool amenities.",
+    "impact": "Rich snippet carousels in Google Hotel search results and instant mobile indexing.",
+    "cta": "Review Hospitality Schema",
+    "href": "/website-development-company-in-lucknow/"
+  },
+  {
+    "num": "06",
+    "category": "AEO & Amenities",
+    "icon": "<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z\"/></svg>",
+    "iconStyle": "bg-rose-50 border-rose-200 text-rose-600",
+    "impactStyle": "bg-rose-50/80 border-rose-200/80 text-slate-800",
+    "badgeColor": "text-rose-700 bg-rose-100/80",
+    "title": "AEO Answer Snippets for Hotel Amenities",
+    "body": "We capture high-intent question searches around airport transfer times, pet-friendly stay policies, buffet breakfast hours, and gym facilities in Lucknow.",
+    "impact": "Featured snippet authority answering traveler queries before OTA listings appear.",
+    "cta": "See AEO Hospitality Strategy",
+    "href": "/aeo-services-in-lucknow/"
+  }
+];
+
+const cities = [
+  {
+    "hub": "Corridor 01",
+    "city": "Gomti Nagar & Vibhuti Khand",
+    "corridor": "Vibhuti Khand • Gomti Nagar • Riverside Mall • Indira Gandhi Pratishthan",
+    "keyword": "5-Star Business Hotel & Executive Stays SEO",
+    "desc": "We help premier business hotels and luxury serviced apartments rank for executive corporate visits, MICE conferences, and VIP delegations across Gomti Nagar commercial center.",
+    "cta": "Audit Business Hotel Rankings",
+    "href": "#contact",
+    "accent": "from-brand-500 to-sky-400"
+  },
+  {
+    "hub": "Corridor 02",
+    "city": "Hazratganj & MG Marg Central",
+    "corridor": "Hazratganj • MG Marg • KD Singh Babu Stadium • Residency Belt",
+    "keyword": "Heritage Boutique Hotel & Cultural Tourism SEO",
+    "desc": "Capturing national and international heritage tourists, leisure vacationers, and culinary enthusiasts searching for authentic royal Awadhi boutique hospitality.",
+    "cta": "Explore Heritage Tourism Leads",
+    "href": "#contact",
+    "accent": "from-accent-500 to-violet-400"
+  },
+  {
+    "hub": "Corridor 03",
+    "city": "Amar Shaheed Path & Sultanpur Road",
+    "corridor": "Shaheed Path • Sultanpur Road • Ekana Stadium • Phoenix Palassio",
+    "keyword": "Destination Wedding Resort & Grand Banquet Lawn SEO",
+    "desc": "Dominating search rankings for lavish destination weddings, multi-day royal marriage celebrations, corporate product launches, and grand outdoor banquet receptions.",
+    "cta": "Scale Wedding Venue Bookings",
+    "href": "#contact",
+    "accent": "from-cyan-500 to-teal-400"
+  },
+  {
+    "hub": "Corridor 04",
+    "city": "Charbagh & Airport Road Transit Hubs",
+    "corridor": "Charbagh Railway Station • Airport Road • Alambagh • Kanpur Road",
+    "keyword": "Transit Hotel & Short-Stay Accommodation SEO",
+    "desc": "Attracting high-volume business travelers, medical tourists visiting SGPGI/Medanta, and railway and airport passengers needing trusted premium stays.",
+    "cta": "Capture Transit Bookings",
+    "href": "#contact",
+    "accent": "from-emerald-500 to-green-400"
+  }
+];
+
+const comparison = [
+  {
+    "metric": "Booking Channel Focus",
+    "typical": "Allowing OTAs like MakeMyTrip to dominate search results and claim 20% commissions on every room.",
+    "nk": "Reclaiming direct organic brand dominance to drive commission-free direct bookings through your website."
+  },
+  {
+    "metric": "Google Map Pack Strategy",
+    "typical": "Neglected Google Business listing with unaddressed guest reviews and missing amenity attributes.",
+    "nk": "Top-3 Google Map Pack placement with comprehensive room photos, direct booking links, and review workflows."
+  },
+  {
+    "metric": "Generative AI Discovery",
+    "typical": "Completely invisible on ChatGPT and Gemini when travelers ask for hotel recommendations in Lucknow.",
+    "nk": "Structured entity schemas that ensure AI platforms cite your property for luxury stays and conference events."
+  },
+  {
+    "metric": "MICE & Banquet Revenue",
+    "typical": "Focusing solely on room nights while ignoring multi-lakh corporate conferences and wedding banquets.",
+    "nk": "Dedicated landing pages capturing corporate annual meetings, MICE events, and destination wedding bookings."
+  },
+  {
+    "metric": "Mobile User Experience",
+    "typical": "Clumsy, slow mobile booking engines with confusing navigation that cause guest abandonment.",
+    "nk": "Lightning-fast mobile experiences with streamlined two-click direct booking engines and WhatsApp concierges."
+  },
+  {
+    "metric": "Commercial Accountability",
+    "typical": "Reporting impressions without measuring actual booked room nights or event revenue.",
+    "nk": "Transparent tracking connecting organic traffic directly to direct reservation revenues and banquet contract values."
+  }
+];
+
+const propertySegments = [
+  {
+    "sector": "Corporate Business Hotels",
+    "title": "Business Hotels near Vibhuti Khand & NH-48",
+    "focus": "Visiting corporate executives and IT consultants search for high-speed Wi-Fi, express laundry, conference rooms, and proximity to DLF Vibhuti Khand.",
+    "outcome": "Consistent high-occupancy weekday room bookings and corporate negotiated corporate rate agreements.",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4\"/></svg>",
+    "accentBorder": "border-t-brand-500",
+    "iconBg": "bg-sky-50 text-brand-600 border-sky-200"
+  },
+  {
+    "sector": "Destination Weddings",
+    "title": "Luxury Resorts & Sprawling Lawns",
+    "focus": "Couples and wedding planners search for 1,000+ guest capacity lawns, luxury guest rooms, poolside cocktail venues, and customized wedding catering on Sohna Road.",
+    "outcome": "Multi-lakh residential wedding buyouts and high-margin banquet catering contracts.",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z\"/></svg>",
+    "accentBorder": "border-t-purple-500",
+    "iconBg": "bg-purple-50 text-purple-600 border-purple-200"
+  },
+  {
+    "sector": "Boutique Stays",
+    "title": "Heritage & Design-Forward Stays",
+    "focus": "Leisure travelers and professionals search for custom boutique interiors, fresh organic dining, and private plunge pools.",
+    "outcome": "High weekend ADRs (Average Daily Rates) and strong word-of-mouth lifestyle brand loyalty.",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6\"/></svg>",
+    "accentBorder": "border-t-emerald-500",
+    "iconBg": "bg-emerald-50 text-emerald-600 border-emerald-200"
+  },
+  {
+    "sector": "MICE & Conferences",
+    "title": "Convention Centers & Event Spaces",
+    "focus": "Corporate event managers and trade associations search for pillar-less auditoriums, audio-visual setups, breakout rooms, and banquet dining in Lucknow.",
+    "outcome": "High-value corporate conference bookings and recurring industry seminar mandates.",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z\"/></svg>",
+    "accentBorder": "border-t-amber-500",
+    "iconBg": "bg-amber-50 text-amber-600 border-amber-200"
+  },
+  {
+    "sector": "Fine Dining & Lounges",
+    "title": "Hotel Specialty Restaurants & Bars",
+    "focus": "Local food connoisseurs in DLF Phase 5 and Summit Building search for Sunday brunches, rooftop cocktails, authentic pan-Asian cuisine, and private dining rooms.",
+    "outcome": "Consistent Food & Beverage (F&B) revenue and full restaurant seat occupancy on weekends.",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z\"/></svg>",
+    "accentBorder": "border-t-blue-500",
+    "iconBg": "bg-blue-50 text-blue-600 border-blue-200"
+  },
+  {
+    "sector": "Wellness & Spa",
+    "title": "Ayurvedic Retreats & Weekend Wellness",
+    "focus": "Urban professionals seeking stress relief search for authentic Kerala Ayurveda therapies, hydrotherapy pools, wellness detox weekends, and yoga retreats near Lucknow.",
+    "outcome": "High-ticket wellness residential packages with exceptional gross margins.",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z\"/></svg>",
+    "accentBorder": "border-t-rose-500",
+    "iconBg": "bg-rose-50 text-rose-600 border-rose-200"
+  }
+];
+
+const stages = [
+  {
+    "num": "01",
+    "step": "AUDIT",
+    "title": "Distribution & Direct Booking Diagnostic",
+    "body": "We audit your direct booking process, measure room bookings lost to third-party travel portals, check Google Map rankings, and benchmark competitor rates.",
+    "accent": "from-brand-600 to-sky-500"
+  },
+  {
+    "num": "02",
+    "step": "FOUNDATION",
+    "title": "Amenity Architecture & Hotel Schema",
+    "body": "We create specialized landing pages for room categories, banquet halls, and dining venues, deploying Hotel, LodgingBusiness, and EventVenue schemas.",
+    "accent": "from-accent-600 to-violet-500"
+  },
+  {
+    "num": "03",
+    "step": "EXPANSION",
+    "title": "Google Map Pack Dominance & AI Hotel Citations",
+    "body": "We optimize your property on Google Maps, build authoritative hospitality citations, and ensure ChatGPT and Gemini recommend your hotel for business and leisure stays.",
+    "accent": "from-emerald-600 to-teal-500"
+  },
+  {
+    "num": "04",
+    "step": "SCALE",
+    "title": "Direct RevPAR Scaling & Event Attribution",
+    "body": "We monitor direct booking revenue, banquet inquiry submissions, and phone calls, continuously refining search funnels to maximize room yields.",
+    "accent": "from-amber-600 to-rose-500"
+  }
+];
+
+const faqs = [
+  {
+    "q": "How does hotel SEO help reduce reliance on Online Travel Agencies (OTAs)?",
+    "a": "OTAs take 18% to 25% commission on every room night. Hotel SEO optimizes your website for both branded searches and non-brand queries like 'business hotel near DLF Vibhuti Khand'. This captures travelers directly on your site, allowing them to book without OTA intermediary fees."
+  },
+  {
+    "q": "Can a standalone hotel in Lucknow outrank major hotel chains on Google Maps?",
+    "a": "Yes. Google Map Pack rankings heavily weigh local proximity, verified guest review velocity, complete profile attributes, and localized schema markup. An agile standalone hotel or resort with an optimized Google Business Profile frequently outranks generic chain listings in local search."
+  },
+  {
+    "q": "How do you optimize a hotel for ChatGPT, Gemini, and Perplexity?",
+    "a": "Generative Engine Optimization (GEO) for hotels involves structuring entity data regarding room amenities, conference capacities, dining menus, and location advantages so AI models cite your property as the recommended choice for business or leisure travel in Lucknow."
+  },
+  {
+    "q": "How important are guest reviews for hotel search rankings?",
+    "a": "They are crucial. Review ratings, review frequency, and owner response rates directly impact both Google Map Pack positions and consumer booking decisions. We implement automated review curation workflows to encourage satisfied guests to leave authentic positive feedback."
+  },
+  {
+    "q": "How do you drive high-value banquet and corporate MICE inquiries?",
+    "a": "We build dedicated landing pages optimized for corporate event queries like 'conference venues in Lucknow' and 'wedding banquets Sohna Road', featuring floor plans, seating capacities, catering menus, and direct RFP quote request forms."
+  },
+  {
+    "q": "How long does it take for a hotel to see measurable direct booking increases?",
+    "a": "Local Google Map Pack enhancements and branded search reclamation typically produce noticeable direct booking increases within 60 to 90 days. Competitive non-brand keywords reach full velocity within 4 to 6 months."
+  },
+  {
+    "q": "Do you optimize for hotel restaurants and weekend brunches?",
+    "a": "Yes. We create specialized culinary landing pages and local dining schemas for your in-house restaurants, bars, and weekend brunches, driving consistent F&B footfalls from local Lucknow residents."
+  },
+  {
+    "q": "What key metrics do you track to evaluate hotel SEO success?",
+    "a": "We track direct website room bookings, commission savings, banquet RFP submissions, phone calls from Google Maps, and overall Revenue Per Available Room (RevPAR) growth."
+  }
+];
+
+const trustStrip = [
+  "Zero Commission Direct Bookings",
+  "Gomti Nagar Hotel Dominance",
+  "Shaheed Path Wedding Lawns",
+  "Google Map Pack Top 3",
+  "ChatGPT & Gemini Citations",
+  "High-Revenue MICE Funnels",
+  "Zero Third-Party OTA Dependency",
+  "Verified Inbound Event Inquiries"
+];
+
+const sectorSchemaService = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "SEO for Hotels in Lucknow",
+  "serviceType": "Hospitality & Hotel SEO Services",
+  "provider": {
+    "@type": "ProfessionalService",
+    "name": "NK Digital Tech",
+    "url": "https://www.nkdigitaltech.net/",
+    "email": "nkdigitaltech1@gmail.com",
+    "telephone": "+91-80521-89051",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Lucknow",
+      "addressRegion": "Uttar Pradesh",
+      "addressCountry": "IN"
+    }
+  },
+  "areaServed": [
+    "Lucknow",
+    "Gomti Nagar",
+    "Vibhuti Khand",
+    "Hazratganj",
+    "Amar Shaheed Path",
+    "Charbagh",
+    "Airport Road",
+    "Uttar Pradesh"
+],
+  "description": pageDescription,
+  "url": pageCanonical
+});
+
+const sectorSchemaFAQ = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map((item) => ({
+    "@type": "Question",
+    "name": item.q,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": item.a
+    }
+  }))
+});
+
+const sectorSchemaBreadcrumb = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.nkdigitaltech.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Best SEO Company in Lucknow",
+      "item": "https://www.nkdigitaltech.net/best-seo-company-in-lucknow/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "SEO for Hotels in Lucknow",
+      "item": pageCanonical
+    }
+  ]
+});
+---
+
+<Layout
+  title={pageTitle}
+  description={pageDescription}
+  canonical={pageCanonical}
+  ogImage="https://www.nkdigitaltech.net/images/lucknow-hotels-seo/hero-hotels-seo-lucknow.webp"
+  preloadImage="/images/lucknow-hotels-seo/hero-hotels-seo-lucknow.webp"
+  hideLocationsNav={false}
+  customSchemaLocalBusiness={sectorSchemaService}
+  customSchemaFAQ={sectorSchemaFAQ}
+  customSchemaBreadcrumb={sectorSchemaBreadcrumb}
+  utilityTagline="Award-Winning Hospitality & Hotel SEO Agency in Lucknow"
+  brandSubtitle="SEO, AEO & GEO Solutions for Luxury Hotels, Resorts & Banquet Venues"
+  footerBio="NK Digital Tech delivers specialized search engine optimization, Answer Engine Optimization (AEO), and Generative Engine Optimization (GEO) for luxury hotels, Awadhi heritage properties, boutique resorts, and grand banquet venues across Lucknow and Uttar Pradesh."
+  footerCoreDisciplines={[
+    { label: 'Best Digital Marketing Company in Lucknow', href: '/best-digital-marketing-company-in-lucknow/' },
+    { label: 'Best SEO Company in Lucknow', href: '/best-seo-company-in-lucknow/' },
+    { label: 'Local SEO Services in Lucknow', href: '/local-seo-services-in-lucknow/' },
+    { label: 'AI SEO Company in Lucknow', href: '/ai-seo-company-in-lucknow/' },
+    { label: 'AEO Services in Lucknow', href: '/aeo-services-in-lucknow/' },
+    { label: 'Website Development Company in Lucknow', href: '/website-development-company-in-lucknow/' },
+  ]}
+  footerTagline="Dominating Google Search, Google Map Pack & AI Answers for Lucknow Hotels"
+>
+
+  <!-- =====================================================================
+       SECTION 1: HERO (DARK SURFACE WITH UNIQUE SECTOR SEO HERO IMAGE)
+  ===================================================================== -->
+  <section class="relative surface-dark overflow-hidden pt-8 pb-12 sm:pt-16 sm:pb-20 lg:pt-20 lg:pb-24 border-b border-slate-800/80">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="absolute inset-0 mesh-glow pointer-events-none"></div>
+    <div class="absolute -top-36 -left-36 w-96 h-96 bg-brand-500/20 rounded-full blur-[130px] pointer-events-none"></div>
+    <div class="absolute top-1/4 -right-36 w-96 h-96 bg-accent-500/20 rounded-full blur-[130px] pointer-events-none"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-7 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns: Headline & CTA -->
+        <div class="lg:col-span-7 text-left min-w-0">
+          <div class="badge-dark mb-4 sm:mb-6">
+            <span class="w-2 h-2 rounded-full bg-brand-400 animate-ping flex-shrink-0"></span>
+            <span class="min-w-0">Rank #1 on Google, Maps & AI Engines for Lucknow Hotels & Venues</span>
+          </div>
+
+          <h1 class="font-display text-[1.95rem] sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-[1.15] sm:leading-[1.1] mb-4 sm:mb-6 text-glow">
+            SEO for Hotels <br />
+            <span class="gradient-text-light">in Lucknow</span>
+          </h1>
+
+          <p class="text-[13.5px] sm:text-base md:text-lg text-slate-300 leading-relaxed mb-6 sm:mb-8 font-normal text-justify hyphens-auto [text-align-last:left]">
+            Looking for high-return <strong class="text-white font-semibold">SEO for Hotels in Lucknow</strong>? NK Digital Tech drives direct guest bookings and high-value banquet inquiries through three proven channels: <strong class="text-white font-semibold">SEO</strong> for top Google and Map Pack rankings, <strong class="text-white font-semibold">AEO</strong> for direct voice answer snippets, and <strong class="text-white font-semibold">GEO</strong> so ChatGPT and Gemini recommend your property first.
+          </p>
+
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 mb-7 sm:mb-10">
+            <a href="#contact" class="btn-primary w-full sm:w-auto min-h-[48px] text-sm sm:text-base px-5 sm:px-8 py-3.5 sm:py-4">
+              <span>Book Hotel SEO Audit</span>
+              <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+              </svg>
+            </a>
+            <a href="#services" class="btn-secondary-dark w-full sm:w-auto min-h-[48px] text-sm sm:text-base px-5 sm:px-7 py-3.5 sm:py-4">
+              <span>Explore Hospitality SEO</span>
+            </a>
+          </div>
+
+          <!-- Trust Verification Strip (2x4 Grid on Mobile, Flex Pills on Desktop) -->
+          <div class="pt-5 sm:pt-6 border-t border-slate-800/80">
+            <div class="grid grid-cols-2 sm:flex sm:flex-wrap items-stretch sm:items-center gap-2">
+              {trustStrip.map((item) => (
+                <span class="px-2.5 sm:px-3 py-2 sm:py-1.5 rounded-lg bg-slate-900/90 border border-slate-800 text-[11px] sm:text-xs text-slate-300 font-medium flex items-center justify-center sm:justify-start text-center sm:text-left leading-tight">
+                  {item}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Unique Sector Hero Image -->
+        <div class="lg:col-span-5 min-w-0">
+          <div class="relative rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-700/80 shadow-2xl shadow-brand-500/15 bg-slate-900 group">
+            <div class="relative">
+              <img
+                src="/images/lucknow-hotels-seo/hero-hotels-seo-lucknow.webp"
+                alt="NK Digital Tech hotel SEO analytics dashboard displaying direct room booking growth and banquet inquiries for luxury Lucknow hotel"
+                width="960"
+                height="540"
+                fetchpriority="high"
+                decoding="async"
+                class="w-full aspect-[16/10] sm:aspect-auto sm:h-72 md:h-[380px] lg:h-[400px] object-cover object-center group-hover:scale-105 transition-transform duration-500"
+              />
+              <div class="hidden sm:block absolute inset-0 bg-gradient-to-t from-[#050a14] via-transparent to-transparent opacity-80"></div>
+            </div>
+            <div class="relative sm:absolute sm:bottom-4 sm:left-4 sm:right-4 glass-card border-t sm:border border-slate-800 sm:rounded-2xl p-3.5 sm:p-4">
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-1">
+                <span class="text-xs font-bold text-white">Direct Booking Engine</span>
+                <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-400">
+                  <span class="w-2 h-2 rounded-full bg-emerald-400 flex-shrink-0"></span>
+                  +320% Direct Bookings
+                </span>
+              </div>
+              <p class="text-[11px] sm:text-xs text-slate-300 text-justify hyphens-auto [text-align-last:left] leading-relaxed">
+                High-margin direct guest reservations and corporate conference inquiries across NH-48 and Summit Building hospitality corridors.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 2: INTRODUCTION (CRISP WHITE CONTRAST SECTION + TEAM IMAGE)
+  ===================================================================== -->
+  <section class="relative surface-white py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns: Concise 2-Paragraph Unique Copy -->
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-light mb-3.5 sm:mb-4">Hospitality Search Authority</div>
+          <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-snug sm:leading-tight mb-4 sm:mb-6">
+            Maximize Commission-Free Direct Bookings & Banquet Events Across <span class="gradient-text-dark">Lucknow's Premier Hospitality Belts</span>
+          </h2>
+          <div class="space-y-4 sm:space-y-5 text-slate-700 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            <p>
+              Lucknow is India's corporate business capital, attracting business travelers alongside lavish destination weddings along Sohna Road. Yet many hotel owners and banquet managers forfeit 18% to 25% of their revenue to Online Travel Agencies (OTAs) like MakeMyTrip while their proprietary websites remain under-optimized.
+            </p>
+            <p>
+              NK Digital Tech helps Lucknow hotels and wedding venues maximize direct room bookings. When business travelers search for stays near Vibhuti Khand or couples plan weddings, our Google Map optimization and structured hotel details drive direct reservations and event inquiries straight to your front desk.
+            </p>
+          </div>
+          <div class="mt-6 sm:mt-8 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
+            <a href="#contact" class="btn-primary w-full sm:w-auto min-h-[48px]">
+              <span>Scale Direct Bookings</span>
+              <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+              </svg>
+            </a>
+            <a href="#why-us" class="btn-secondary-light w-full sm:w-auto min-h-[48px]">
+              <span>Why NK Digital Tech</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Unique Team Image + Stats -->
+        <div class="lg:col-span-5 space-y-4 sm:space-y-5 min-w-0">
+          <div class="rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-200 shadow-lg bg-slate-100">
+            <img
+              src="/images/lucknow-hotels-seo/team-hotels-seo-lucknow.webp"
+              alt="NK Digital Tech hospitality marketing team analyzing hotel search behavior and direct booking conversion rates in Lucknow"
+              width="800"
+              height="533"
+              class="w-full aspect-[16/10] sm:aspect-auto sm:h-64 lg:h-72 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="grid grid-cols-2 gap-3 sm:gap-4">
+            {[{"val":"320%+","label":"Direct Bookings","sub":"Commission-free room revenue"},{"val":"Top 3","label":"Map Pack Rank","sub":"Local hotel & banquet search"},{"val":"22%","label":"OTA Commission Savings","sub":"Higher net operating margins"},{"val":"4.8★","label":"Review Optimization","sub":"Verified guest sentiment signals"}].map((stat) => (
+              <div class="elevated-card rounded-xl sm:rounded-2xl p-3.5 sm:p-4 min-w-0">
+                <div class="font-display font-black text-xl sm:text-2xl text-brand-600 mb-0.5">{stat.val}</div>
+                <div class="text-[11px] sm:text-xs font-bold text-slate-900 leading-snug">{stat.label}</div>
+                <div class="text-[10.5px] sm:text-[11px] text-slate-500 leading-snug mt-0.5">{stat.sub}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 3: PROBLEM STATEMENT (DEEP INDIGO DARK CONTRAST SECTION)
+  ===================================================================== -->
+  <section class="relative surface-indigo py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="max-w-7xl mx-auto relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns: Problem Statement Justified Copy -->
+        <div class="lg:col-span-7 min-w-0">
+          <div class="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-3.5 py-1 sm:py-1.5 rounded-full text-[10px] sm:text-xs font-bold uppercase tracking-wider sm:tracking-widest bg-amber-500/10 border border-amber-500/30 text-amber-300 max-w-full leading-snug mb-4 sm:mb-5">
+            <svg class="w-4 h-4 text-amber-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+            </svg>
+            <span>The Hospitality Revenue Challenge</span>
+          </div>
+
+          <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-white tracking-tight leading-snug sm:leading-tight mb-4 sm:mb-6">
+            Why Depending Exclusively on OTAs Erodes Hotel Profitability
+          </h2>
+
+          <div class="space-y-4 sm:space-y-5 text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            <p>
+              Online Travel Agencies (OTAs) charge high 18% to 25% commissions on every room booked. Even worse, OTAs run ads on your hotel name in search engines, diverting guests who were looking for you directly and cutting into your room profits.
+            </p>
+            <p>
+              Business guests and wedding planners research hotel rooms and banquet halls on Google Maps and AI tools. If your hotel lacks strong Google Map visibility and clear room details online, guests end up booking through third-party portals, cutting your profit margins.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Diagnostic Comparison Cards -->
+        <div class="lg:col-span-5 space-y-3.5 sm:space-y-4 min-w-0">
+          <div class="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6 border-l-4 border-l-rose-500">
+            <div class="flex flex-wrap items-center justify-between gap-1.5 mb-2">
+              <span class="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-rose-400">Heavy OTA Dependency</span>
+              <span class="text-[11px] sm:text-xs text-slate-400">Hefty 20%+ Commissions</span>
+            </div>
+            <h3 class="font-display font-bold text-[15px] sm:text-base text-white mb-2 leading-snug">Brand Interception & Squeezed Margins</h3>
+            <p class="text-xs text-slate-300 leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+              Allowing third-party travel aggregators to bid on your hotel brand name, capturing your direct guests while claiming high commissions on every room.
+            </p>
+          </div>
+
+          <div class="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6 border-l-4 border-l-emerald-400">
+            <div class="flex flex-wrap items-center justify-between gap-1.5 mb-2">
+              <span class="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-emerald-400">NK Digital Tech System</span>
+              <span class="text-[11px] sm:text-xs text-brand-300">Direct Hotel Organic Engine</span>
+            </div>
+            <h3 class="font-display font-bold text-[15px] sm:text-base text-white mb-2 leading-snug">Commission-Free Direct Reservations</h3>
+            <p class="text-xs text-slate-300 leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+              Dominating local Google Map searches and AI recommendations to capture direct room bookings, MICE corporate conferences, and wedding banquets.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 4: SERVICES (LIGHT COOL ALABASTER CONTRAST + SERVICES IMAGE)
+  ===================================================================== -->
+  <section id="services" class="relative surface-cool py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <!-- Services Header with Unique Services Image -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 items-center mb-9 sm:mb-16">
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-light mb-3">Tailored Lucknow Hospitality SEO Disciplines</div>
+          <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-snug sm:leading-tight mb-3 sm:mb-4">
+            Full-Funnel Organic Search Architecture for Hotels & Banquets
+          </h2>
+          <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            We tailor hospitality search strategies to business travel corridors, corporate event planning cycles, and luxury wedding seasons.
+          </p>
+        </div>
+        <div class="lg:col-span-5 min-w-0">
+          <div class="rounded-2xl overflow-hidden border border-slate-200 shadow-md bg-white">
+            <img
+              src="/images/lucknow-hotels-seo/services-hotels-seo-lucknow.webp"
+              alt="NK Digital Tech technical developers deploying Hotel schema and room booking optimization for luxury Lucknow hotel"
+              width="800"
+              height="450"
+              class="w-full aspect-[16/9] sm:aspect-auto sm:h-56 lg:h-64 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- 3 Columns x 2 Rows Grid Layout -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-7">
+        {services.map((s) => (
+          <div class="elevated-card rounded-2xl p-5 sm:p-7 flex flex-col justify-between group sm:hover:-translate-y-1">
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-4 sm:mb-6">
+                <div class={`w-11 h-11 sm:w-12 sm:h-12 rounded-xl border flex items-center justify-center flex-shrink-0 ${s.iconStyle}`}>
+                  <Fragment set:html={s.icon} />
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class={`text-[10.5px] sm:text-[11px] font-semibold px-2.5 py-1 rounded-md ${s.badgeColor}`}>
+                    {s.category}
+                  </span>
+                  <span class="font-display font-black text-base sm:text-lg text-slate-300">{s.num}</span>
+                </div>
+              </div>
+
+              <h3 class="font-display font-bold text-[17px] sm:text-xl text-slate-900 mb-2.5 sm:mb-3 leading-snug group-hover:text-brand-600 transition-colors">
+                {s.title}
+              </h3>
+
+              <p class="text-slate-600 text-[13px] sm:text-sm leading-relaxed mb-4 sm:mb-6 text-justify hyphens-auto [text-align-last:left]">
+                {s.body}
+              </p>
+            </div>
+
+            <div>
+              <div class={`rounded-xl border p-3.5 sm:p-4 mb-3.5 sm:mb-5 ${s.impactStyle}`}>
+                <div class="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-slate-900 mb-1">
+                  <svg class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                  </svg>
+                  <span>Commercial Impact</span>
+                </div>
+                <p class="text-xs text-slate-700 leading-relaxed font-medium text-justify hyphens-auto [text-align-last:left]">
+                  {s.impact}
+                </p>
+              </div>
+
+              <a href={s.href} class="inline-flex items-center gap-2 py-2 min-h-[40px] text-xs font-bold text-brand-600 hover:text-brand-700 no-underline hover:no-underline group-hover:gap-3 transition-all">
+                <span>{s.cta}</span>
+                <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 5: REGIONAL LOCATIONS (DARK NAVY + LUCKNOW CORRIDORS)
+  ===================================================================== -->
+  <section id="locations" class="relative surface-navy py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <!-- Regional Header with Unique Locations Image -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 items-center mb-9 sm:mb-16">
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-dark mb-3">Lucknow Hospitality Corridors</div>
+          <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-white tracking-tight leading-snug sm:leading-tight mb-3 sm:mb-4">
+            Dominating Key Hotel & Resort Belts Across Lucknow
+          </h2>
+          <p class="text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            We develop localized search funnels across Lucknow's prime corporate hotel zones, luxury wedding belts, and dining corridors.
+          </p>
+        </div>
+        <div class="lg:col-span-5 min-w-0">
+          <div class="rounded-2xl overflow-hidden border border-slate-700/80 shadow-xl bg-slate-900">
+            <img
+              src="/images/lucknow-hotels-seo/locations-hotels-seo-lucknow.webp"
+              alt="Map of Lucknow highlighting key hospitality corridors including NH-48 and Sohna Road luxury resort zones"
+              width="800"
+              height="450"
+              class="w-full aspect-[16/9] sm:aspect-auto sm:h-56 lg:h-64 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- 1 Row x 4 Columns Responsive Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+        {cities.map((c) => (
+          <div class="glass-card rounded-2xl p-5 sm:p-6 flex flex-col justify-between group sm:hover:-translate-y-1">
+            <div>
+              <div class={`h-1 w-full bg-gradient-to-r ${c.accent} rounded-full mb-4 sm:mb-5`}></div>
+
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-3.5 sm:mb-4">
+                <span class="px-2.5 py-1 rounded-md bg-slate-800 border border-slate-700 text-[11px] font-bold uppercase tracking-wider text-brand-300">
+                  {c.hub}
+                </span>
+                <span class="text-xs font-semibold text-slate-400">{c.city}</span>
+              </div>
+
+              <h3 class="font-display font-bold text-base sm:text-lg text-white mb-2.5 sm:mb-3 leading-snug">
+                <a href={c.href} class="hover:text-brand-300 no-underline hover:no-underline transition-colors">{c.keyword}</a>
+              </h3>
+
+              <p class="text-slate-300 text-[13px] sm:text-sm leading-relaxed mb-4 sm:mb-5 text-justify hyphens-auto [text-align-last:left]">
+                {c.desc}
+              </p>
+            </div>
+
+            <div class="pt-3.5 sm:pt-4 border-t border-slate-800">
+              <p class="text-[11px] text-slate-400 mb-3 sm:mb-4 leading-normal">
+                <strong class="text-slate-300">Key Corridors:</strong> {c.corridor}
+              </p>
+              <a href={c.href} class="inline-flex items-center gap-1.5 py-2 min-h-[40px] text-xs font-bold text-brand-400 hover:text-brand-300 no-underline hover:no-underline group-hover:gap-2.5 transition-all">
+                <span>{c.cta}</span>
+                <svg class="w-3.5 h-3.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 6: WHY NK DIGITAL TECH (CRISP WHITE CONTRAST SECTION)
+  ===================================================================== -->
+  <section id="why-us" class="relative surface-white py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-14 text-left sm:text-center">
+        <div class="badge-light mb-3">The NK Digital Tech Advantage</div>
+        <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-snug sm:leading-tight mb-3 sm:mb-4">
+          Why Lucknow Hotels Partner with NK Digital Tech
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed mb-4 text-justify hyphens-auto [text-align-last:left]">
+          We do not sell generic traffic. We build compounding direct booking engines that reduce OTA commission leakage and maximize RevPAR across rooms and banquets.
+        </p>
+        <p class="text-slate-700 font-semibold text-xs sm:text-sm">
+          Comparing Generic Agencies Against NK Digital Tech Hospitality Search Strategy
+        </p>
+      </div>
+
+      <!-- Desktop Comparison Matrix -->
+      <div class="hidden md:block overflow-hidden rounded-2xl border border-slate-200 shadow-lg">
+        <table class="w-full text-left border-collapse">
+          <thead>
+            <tr class="bg-slate-900 text-white">
+              <th class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-slate-300 w-1/4">
+                Evaluation Criteria
+              </th>
+              <th class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-rose-300 w-[37.5%] border-l border-slate-800">
+                Typical Agency Approach
+              </th>
+              <th class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-brand-300 w-[37.5%] border-l border-slate-800 bg-slate-950">
+                NK Digital Tech Hospitality Engine
+              </th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200 text-sm">
+            {comparison.map((row, idx) => (
+              <tr class={idx % 2 === 0 ? 'bg-white' : 'bg-slate-50/80'}>
+                <td class="py-5 px-6 font-display font-bold text-slate-900">
+                  {row.metric}
+                </td>
+                <td class="py-5 px-6 text-slate-600 border-l border-slate-200">
+                  <div class="flex items-start gap-2.5">
+                    <svg class="w-4 h-4 text-rose-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                    <span class="text-justify">{row.typical}</span>
+                  </div>
+                </td>
+                <td class="py-5 px-6 text-slate-900 font-medium border-l border-slate-200 bg-sky-50/40">
+                  <div class="flex items-start gap-2.5">
+                    <svg class="w-4 h-4 text-emerald-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span class="text-justify">{row.nk}</span>
+                  </div>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Mobile Comparison Cards -->
+      <div class="md:hidden space-y-3.5">
+        {comparison.map((row) => (
+          <div class="elevated-card rounded-2xl p-4 space-y-2.5">
+            <h3 class="font-display font-bold text-slate-900 text-[15px] leading-snug">{row.metric}</h3>
+            <div class="rounded-xl bg-rose-50 border border-rose-100 p-3">
+              <div class="flex items-center gap-1.5 mb-1">
+                <svg class="w-3.5 h-3.5 text-rose-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+                <p class="text-[10px] font-bold uppercase tracking-wider text-rose-600">Typical Agency Approach</p>
+              </div>
+              <p class="text-xs text-slate-700 leading-relaxed text-justify hyphens-auto [text-align-last:left]">{row.typical}</p>
+            </div>
+            <div class="rounded-xl bg-sky-50 border border-sky-200 p-3">
+              <div class="flex items-center gap-1.5 mb-1">
+                <svg class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                </svg>
+                <p class="text-[10px] font-bold uppercase tracking-wider text-brand-600">NK Digital Tech Hospitality Engine</p>
+              </div>
+              <p class="text-xs text-slate-900 font-semibold leading-relaxed text-justify hyphens-auto [text-align-last:left]">{row.nk}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 7: SECTOR VERTICALS WE SCALE (LIGHT SLATE 3x2 GRID)
+  ===================================================================== -->
+  <section id="industries" class="relative surface-slate py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-16 text-left sm:text-center">
+        <div class="badge-light mb-3">Hospitality Specialization</div>
+        <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-snug sm:leading-tight mb-3 sm:mb-4">
+          Tailored SEO Roadmaps for Every Hospitality Vertical
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          Different hospitality properties cater to distinct guest demographics and booking lead times. Here is how we optimize each hotel vertical in Lucknow.
+        </p>
+      </div>
+
+      <!-- 3 Columns x 2 Rows Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-7">
+        {propertySegments.map((ind) => (
+          <div class={`elevated-card rounded-2xl p-5 sm:p-7 border-t-4 ${ind.accentBorder} flex flex-col justify-between sm:hover:-translate-y-1`}>
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-4 sm:mb-5">
+                <div class={`w-10 h-10 sm:w-11 sm:h-11 rounded-xl border flex items-center justify-center flex-shrink-0 ${ind.iconBg}`}>
+                  <Fragment set:html={ind.icon} />
+                </div>
+                <span class="text-[11px] font-semibold text-slate-600 bg-slate-100 px-2.5 py-1 rounded-md">
+                  {ind.sector}
+                </span>
+              </div>
+
+              <h3 class="font-display font-bold text-[17px] sm:text-xl text-slate-900 mb-3 sm:mb-4 leading-snug">
+                {ind.title}
+              </h3>
+
+              <div class="mb-4 sm:mb-5">
+                <p class="text-[11px] font-bold uppercase tracking-wider text-brand-600 mb-1.5">
+                  Search &amp; AI Strategy
+                </p>
+                <p class="text-slate-600 text-[13px] sm:text-sm leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+                  {ind.focus}
+                </p>
+              </div>
+            </div>
+
+            <div class="rounded-xl bg-emerald-50/70 border border-emerald-200/80 p-3.5 sm:p-4">
+              <p class="text-[11px] font-bold uppercase tracking-wider text-emerald-700 mb-1">
+                Commercial Result
+              </p>
+              <p class="text-slate-800 text-xs font-medium leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+                {ind.outcome}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 8: HOW WE WORK (CRISP WHITE CONTRAST SECTION - 4 STAGES)
+  ===================================================================== -->
+  <section class="relative surface-white py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-16 text-left sm:text-center">
+        <div class="badge-light mb-3">Our 4 Stage Execution</div>
+        <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-snug sm:leading-tight mb-3 sm:mb-4">
+          Our 4-Stage Hospitality SEO Roadmap
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          From initial distribution audit to ongoing direct booking optimization, here is how we build compounding guest revenue for your Lucknow hotel.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-7">
+        {stages.map((s) => (
+          <div class="elevated-card rounded-2xl p-5 sm:p-8 relative overflow-hidden group sm:hover:-translate-y-1">
+            <div class="flex items-center justify-between gap-4 mb-3.5 sm:mb-5">
+              <span class={`inline-flex items-center px-2.5 sm:px-3 py-1 rounded-lg text-xs font-bold uppercase tracking-wider text-white bg-gradient-to-r ${s.accent}`}>
+                {s.num}
+              </span>
+              <span class="font-display font-black text-3xl sm:text-4xl text-slate-200 group-hover:text-slate-300 transition-colors">
+                {s.step}
+              </span>
+            </div>
+            <h3 class="font-display font-bold text-[17px] sm:text-xl text-slate-900 mb-2.5 sm:mb-3 leading-snug">
+              {s.title}
+            </h3>
+            <p class="text-slate-600 text-[13px] sm:text-sm leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+              {s.body}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 9: CONCLUSION / PARTNER SECTION (DARK INDIGO + GROWTH IMAGE)
+  ===================================================================== -->
+  <section class="relative surface-indigo py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-7 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns: Conclusion Paragraphs (Justified) -->
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-dark mb-3.5 sm:mb-4">Elevate Your Hospitality Asset</div>
+          <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-white tracking-tight leading-snug sm:leading-tight mb-4 sm:mb-6">
+            Command High-Margin Direct Bookings Across Lucknow
+          </h2>
+          <div class="space-y-4 sm:space-y-5 text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            <p>
+              Relying on third-party booking portals cuts into your hotel profits and weakens direct guest relationships. When corporate travelers and wedding planners search for venues, a strong presence on Google and AI tools ensures direct reservations with zero commission deductions.
+            </p>
+            <p>
+              NK Digital Tech helps you lead local Google Map searches and drive consistent room and banquet bookings. Partner with our team to protect your hotel profitability.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Unique Growth Image -->
+        <div class="lg:col-span-5 min-w-0">
+          <div class="rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-700/80 shadow-2xl bg-slate-900">
+            <img
+              src="/images/lucknow-hotels-seo/growth-hotels-seo-lucknow.webp"
+              alt="NK Digital Tech hotel SEO case study showing substantial growth in direct room bookings and banquet reservations in Lucknow"
+              width="800"
+              height="450"
+              class="w-full aspect-[16/10] sm:aspect-auto sm:h-64 lg:h-72 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 10: FAQ (LIGHT COOL SLATE CONTRAST SECTION)
+  ===================================================================== -->
+  <section id="faq" class="relative surface-cool py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-left sm:text-center mb-9 sm:mb-14">
+        <div class="badge-light mb-3">Questions Asked on Google, ChatGPT &amp; Gemini</div>
+        <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-snug sm:leading-tight mb-3 sm:mb-4">
+          Frequently Asked Hotel SEO Questions
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          Clear, factual answers regarding search strategy, direct booking funnels, and commercial outcomes for Lucknow hotels and banquets.
+        </p>
+      </div>
+
+      <div class="space-y-3 sm:space-y-4">
+        {faqs.map((f, i) => (
+          <details class="elevated-card rounded-2xl group overflow-hidden" open={i === 0}>
+            <summary class="flex items-start sm:items-center justify-between gap-3 sm:gap-4 px-4 sm:px-6 py-4 sm:py-5 min-h-[54px] select-none">
+              <div class="flex items-start sm:items-center gap-2.5 sm:gap-3.5 text-left min-w-0">
+                <span class="w-6 h-6 sm:w-7 sm:h-7 rounded-lg bg-sky-50 border border-sky-200 text-brand-600 font-display font-bold text-xs flex items-center justify-center flex-shrink-0 mt-0.5 sm:mt-0">
+                  0{i + 1}
+                </span>
+                <span class="font-display font-bold text-slate-900 text-[14px] sm:text-base md:text-lg leading-snug">
+                  {f.q}
+                </span>
+              </div>
+              <span class="faq-icon w-7 h-7 sm:w-8 sm:h-8 rounded-full border border-slate-200 text-slate-600 flex items-center justify-center flex-shrink-0 mt-0.5 sm:mt-0">
+                <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                </svg>
+              </span>
+            </summary>
+            <div class="px-4 sm:px-6 pb-5 sm:pb-6 pt-3 text-slate-600 text-[13px] sm:text-sm md:text-base leading-relaxed border-t border-slate-100 text-justify hyphens-auto [text-align-last:left]">
+              {f.a}
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 11: SHORT 2 TO 3 LINE CALL TO ACTION BANNER (LAST SECTION)
+  ===================================================================== -->
+  <section id="contact" class="relative surface-dark py-12 pb-24 sm:py-16 lg:py-20 px-4 sm:px-6 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-5xl mx-auto">
+      <div class="rounded-2xl sm:rounded-3xl bg-gradient-to-r from-brand-600 via-brand-700 to-accent-700 p-6 sm:p-10 md:p-12 text-center text-white shadow-2xl border border-white/15 relative overflow-hidden">
+        <div class="relative z-10 max-w-2xl mx-auto">
+          <h2 class="font-display font-black text-[1.45rem] sm:text-3xl md:text-4xl text-white tracking-tight leading-snug mb-3 sm:mb-4">
+            Ready to Scale Your Direct Hotel Bookings in Lucknow?
+          </h2>
+
+          <p class="text-sky-50 text-[13px] sm:text-sm md:text-base leading-relaxed mb-6 sm:mb-8">
+            Partner with NK Digital Tech to capture commission-free room bookings, command Google Map rankings, and dominate AI recommendations across Lucknow.
+          </p>
+
+          <a
+            href="/contact-us/"
+            class="inline-flex w-full sm:w-auto min-h-[48px] items-center justify-center gap-2 sm:gap-3 px-5 sm:px-8 py-3.5 sm:py-4 rounded-xl bg-white text-slate-950 hover:bg-sky-50 no-underline hover:no-underline font-display font-bold text-sm sm:text-base shadow-xl transition-all duration-300 active:scale-95 text-center leading-snug"
+          >
+            <span>Claim Your Free Hotel SEO Audit</span>
+            <svg class="w-4 h-4 sm:w-5 sm:h-5 text-brand-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mobile Sticky Bottom Quick Action Bar -->
+  <div class="sm:hidden fixed bottom-0 inset-x-0 z-40 bg-[#050a14]/95 backdrop-blur-xl border-t border-slate-800 px-3.5 pt-2.5 pb-[max(0.625rem,env(safe-area-inset-bottom))] shadow-[0_-8px_24px_rgba(0,0,0,0.45)]">
+    <div class="flex items-center gap-2.5">
+      <a
+        href="/contact-us/"
+        class="btn-primary flex-1 min-h-[44px] py-2.5 px-4 text-xs font-bold rounded-xl no-underline hover:no-underline"
+      >
+        <span>Book Hotel SEO Audit</span>
+        <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+        </svg>
+      </a>
+      <a
+        href="#services"
+        class="btn-secondary-dark min-h-[44px] py-2.5 px-3.5 text-xs font-semibold rounded-xl flex-shrink-0 no-underline hover:no-underline"
+      >
+        <span>Services</span>
+      </a>
+    </div>
+  </div>
+
+</Layout>

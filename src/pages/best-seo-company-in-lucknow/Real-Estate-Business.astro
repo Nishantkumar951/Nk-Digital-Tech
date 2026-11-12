@@ -1,0 +1,1073 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import '../../styles/global.css';
+
+const pageTitle = "Best SEO for Real Estate Company in Lucknow | NK Digital Tech";
+const pageDescription = "Need SEO for Real Estate Company in Lucknow? NK Digital Tech drives verified buyer calls, site visits, Google Map rankings and ChatGPT citations across Lucknow.";
+const pageCanonical = "https://www.nkdigitaltech.net/best-seo-company-in-lucknow/Real-Estate-Business/";
+
+const services = [
+  {
+    "num": "01",
+    "category": "Corridor SEO",
+    "icon": "<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z\"/><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M15 11a3 3 0 11-6 0 3 3 0 016 0z\"/></svg>",
+    "iconStyle": "bg-sky-50 border-sky-200 text-brand-600",
+    "impactStyle": "bg-sky-50/80 border-sky-200/80 text-slate-800",
+    "badgeColor": "text-brand-600 bg-sky-100/80",
+    "title": "Micro-Market & Corridor Keyword Domination",
+    "body": "We structure dedicated search sections for high-demand corridors including Amar Shaheed Path, Gomti Nagar Extension, Sultanpur Road Corridor, Faizabad Road Corridor, and New Lucknow sectors.",
+    "impact": "Direct HNI buyer inquiries for 3, 4, and 5 BHK penthouses and luxury floors.",
+    "cta": "Explore Corridor SEO Strategy",
+    "href": "/best-seo-company-in-lucknow/"
+  },
+  {
+    "num": "02",
+    "category": "Map Pack SEO",
+    "icon": "<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7\"/></svg>",
+    "iconStyle": "bg-emerald-50 border-emerald-200 text-emerald-600",
+    "impactStyle": "bg-emerald-50/80 border-emerald-200/80 text-slate-800",
+    "badgeColor": "text-emerald-700 bg-emerald-100/80",
+    "title": "Site Office & Experience Center Map SEO",
+    "body": "We optimize your sales galleries and project site offices for top 3 Google Map Pack positions across Lucknow, driving walk-in navigation and direct phone calls.",
+    "impact": "High-intent site visit navigations from qualified local families and corporate executives.",
+    "cta": "Discover Local Map Optimization",
+    "href": "/local-seo-services-in-lucknow/"
+  },
+  {
+    "num": "03",
+    "category": "GEO & AI Search",
+    "icon": "<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M13 10V3L4 14h7v7l9-11h-7z\"/></svg>",
+    "iconStyle": "bg-purple-50 border-purple-200 text-purple-600",
+    "impactStyle": "bg-purple-50/80 border-purple-200/80 text-slate-800",
+    "badgeColor": "text-purple-700 bg-purple-100/80",
+    "title": "Generative Engine Optimization (GEO)",
+    "body": "When affluent buyers ask ChatGPT, Perplexity, or Gemini for the safest luxury developer in Lucknow, our knowledge graph optimizations place your brand as the cited answer.",
+    "impact": "Exclusive brand recommendations in conversational AI prompts for high-ticket property seekers.",
+    "cta": "Learn Generative Engine Search",
+    "href": "/geo-services-in-lucknow/"
+  },
+  {
+    "num": "04",
+    "category": "Technical Architecture",
+    "icon": "<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4\"/></svg>",
+    "iconStyle": "bg-amber-50 border-amber-200 text-amber-600",
+    "impactStyle": "bg-amber-50/80 border-amber-200/80 text-slate-800",
+    "badgeColor": "text-amber-700 bg-amber-100/80",
+    "title": "RealEstateListing Schema & Core Web Vitals",
+    "body": "We implement advanced RealEstateAgent, SingleFamilyResidence, and Place schemas alongside sub-second mobile loading speeds for 3D walkthroughs and floor plans.",
+    "impact": "Rich snippet badges, property carousel indexing, and smooth, fast mobile user experiences.",
+    "cta": "Review Technical SEO Solutions",
+    "href": "/website-development-company-in-lucknow/"
+  },
+  {
+    "num": "05",
+    "category": "NRI & Investor Funnels",
+    "icon": "<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z\"/></svg>",
+    "iconStyle": "bg-blue-50 border-blue-200 text-blue-600",
+    "impactStyle": "bg-blue-50/80 border-blue-200/80 text-slate-800",
+    "badgeColor": "text-blue-700 bg-blue-100/80",
+    "title": "Global NRI Real Estate Investor Acquisition",
+    "body": "We optimize international search pathways targeting expatriates in Dubai, Singapore, London, and the USA seeking rental yields and capital growth in Lucknow.",
+    "impact": "High-margin NRI transactions with direct digital booking deposits and video walkthroughs.",
+    "cta": "Explore NRI Lead Funnels",
+    "href": "/best-digital-marketing-company-in-lucknow/"
+  },
+  {
+    "num": "06",
+    "category": "Answer Engine SEO",
+    "icon": "<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z\"/></svg>",
+    "iconStyle": "bg-rose-50 border-rose-200 text-rose-600",
+    "impactStyle": "bg-rose-50/80 border-rose-200/80 text-slate-800",
+    "badgeColor": "text-rose-700 bg-rose-100/80",
+    "title": "AEO for Voice & Featured Snippets",
+    "body": "We capture high-intent question searches around UP RERA verification, possession timelines, circle rates, and property maintenance charges across Lucknow.",
+    "impact": "Zero-click featured snippets that position your firm as the foremost advisor before buyer decisions.",
+    "cta": "See AEO Voice Optimization",
+    "href": "/aeo-services-in-lucknow/"
+  }
+];
+
+const cities = [
+  {
+    "hub": "Corridor 01",
+    "city": "Amar Shaheed Path & Gomti Nagar Extension",
+    "corridor": "Gomti Nagar Extension • Shaheed Path • Shalimar OneWorld • Omaxe Waterscapes",
+    "keyword": "Luxury High-Rise & Waterfront Penthouse SEO",
+    "desc": "We help premier developers and elite channel partners rank for luxury residential searches valued at ₹1.5 Crore to ₹10 Crore in Lucknow's fastest-growing prime corridor.",
+    "cta": "Audit Shaheed Path Rankings",
+    "href": "#contact",
+    "accent": "from-brand-500 to-sky-400"
+  },
+  {
+    "hub": "Corridor 02",
+    "city": "Vibhuti Khand & Hazratganj Central",
+    "corridor": "Vibhuti Khand • Hazratganj • Rana Pratap Marg • Gomti Riverfront",
+    "keyword": "Commercial Office Spaces & Prime Retail SEO",
+    "desc": "Capturing corporate occupiers, high-net-worth investors, and commercial buyers searching for Grade-A office spaces and prime retail SCOs across central business hubs.",
+    "cta": "Explore Vibhuti Khand Growth",
+    "href": "#contact",
+    "accent": "from-accent-500 to-violet-400"
+  },
+  {
+    "hub": "Corridor 03",
+    "city": "Sultanpur Road & IT City Corridor",
+    "corridor": "Sultanpur Road • Chak Ganjaria • HCL IT City • Sushant Golf City",
+    "keyword": "Golf Villa & Integrated Township SEO",
+    "desc": "Dominating search results for new high-velocity residential township launches, luxury golf villas, and gated community investments connecting Lucknow to Purvanchal Expressway.",
+    "cta": "Scale Sultanpur Road Inquiries",
+    "href": "#contact",
+    "accent": "from-cyan-500 to-teal-400"
+  },
+  {
+    "hub": "Corridor 04",
+    "city": "Faizabad Road & Raebareli Road Corridors",
+    "corridor": "Faizabad Road • Ayodhya Highway • Raebareli Road • SGPGI Belt",
+    "keyword": "Plotted Developments & Gated Communities SEO",
+    "desc": "Attracting end-users and long-term land investors searching for premium LDA-approved plots, independent villas, and gated residential colonies across outer growth corridors.",
+    "cta": "Capture Growth Corridor Inquiries",
+    "href": "#contact",
+    "accent": "from-emerald-500 to-green-400"
+  }
+];
+
+const comparison = [
+  {
+    "metric": "Target Keyword Intent",
+    "typical": "Generic national terms like 'flats in India' that bring zero footfalls to your Lucknow sales gallery.",
+    "nk": "Corridor-specific terms like '4 BHK luxury apartments Gomti Nagar Extension' and 'UP RERA registered commercial SCO plots'."
+  },
+  {
+    "metric": "Google Map Pack Strategy",
+    "typical": "Single static Google profile with infrequent updates, missing opening hours, and ignored buyer reviews.",
+    "nk": "Multi-point Map Pack optimization for site sales galleries, experience centers, and corporate broker offices across Lucknow."
+  },
+  {
+    "metric": "AI & Generative Search",
+    "typical": "Zero visibility on ChatGPT, Perplexity, or Gemini when prospective buyers ask for top Lucknow developers.",
+    "nk": "Structured entity schemas and knowledge graph citations that ensure AI engines recommend your brand first."
+  },
+  {
+    "metric": "Lead Exclusivity",
+    "typical": "Shared aggregator portal leads distributed simultaneously to dozens of rival brokers at escalating bidding costs.",
+    "nk": "100% proprietary organic search assets where every telephone call, WhatsApp inquiry, and site visit belongs solely to you."
+  },
+  {
+    "metric": "Regulatory Compliance",
+    "typical": "Unchecked claims, missing UP RERA registration numbers, and risky promotions vulnerable to regulatory fines.",
+    "nk": "Strict adherence to Uttar Pradesh Real Estate Regulatory Authority disclosure standards on every project landing page."
+  },
+  {
+    "metric": "Business Outcome",
+    "typical": "Monthly PDF reports tracking keyword impressions with zero correlation to actual booked unit inventory.",
+    "nk": "Transparent tracking connecting organic organic sessions directly to verified site visits and signed allotment letters."
+  }
+];
+
+const propertySegments = [
+  {
+    "sector": "Ultra-Luxury",
+    "title": "Amar Shaheed Path Penthouses & Villas",
+    "focus": "High-net-worth buyers spending ₹15 Crore to ₹80 Crore verify builder credentials, construction quality, concierge services, and panoramic views on Google and AI tools before requesting private viewings.",
+    "outcome": "Exclusive private sales gallery appointments with corporate business heads, industrialists, and global NRI families.",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4\"/></svg>",
+    "accentBorder": "border-t-brand-500",
+    "iconBg": "bg-sky-50 text-brand-600 border-sky-200"
+  },
+  {
+    "sector": "Commercial & Retail",
+    "title": "Grade A Office Towers & SCO Plots",
+    "focus": "Institutional funds, retail brand operators, and wealth managers search for commercial yields, anchor tenant profiles, and footfall metrics along Vibhuti Khand, Golf Course Ext, and Sultanpur Road Corridor.",
+    "outcome": "Direct leasing inquiries and bulk floor plate acquisitions from multinational corporations and retail chains.",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z\"/></svg>",
+    "accentBorder": "border-t-accent-500",
+    "iconBg": "bg-purple-50 text-purple-600 border-purple-200"
+  },
+  {
+    "sector": "High-Rise Residential",
+    "title": "Gated Communities on Sultanpur Road Corridor",
+    "focus": "Young corporate couples and relocating professionals search for 3 BHK apartments with clubhouse amenities, green open spaces, school proximities, and seamless highway connectivity.",
+    "outcome": "Consistent weekend site visit walk-ins and accelerated inventory absorption for newly launched towers.",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6\"/></svg>",
+    "accentBorder": "border-t-emerald-500",
+    "iconBg": "bg-emerald-50 text-emerald-600 border-emerald-200"
+  },
+  {
+    "sector": "Independent Living",
+    "title": "Luxury Builder Floors in DLF Phases",
+    "focus": "Families seeking prompt possession, private terraces, stilt parking, and independent land share search for verified builder floors in DLF Phase 1, 2, 3, 4, and Sushant Lok.",
+    "outcome": "Direct phone inquiries and immediate buyer visits with zero commission leakage to intermediaries.",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z\"/></svg>",
+    "accentBorder": "border-t-amber-500",
+    "iconBg": "bg-amber-50 text-amber-600 border-amber-200"
+  },
+  {
+    "sector": "Plotted Townships",
+    "title": "Deen Dayal Awas & Freehold Plots",
+    "focus": "Individual investors looking for capital appreciation and custom construction freedom search for government-approved plotted developments along Sohna Road and New Lucknow.",
+    "outcome": "Rapid plot sales and high conversion rates for newly registered freehold residential layouts.",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7\"/></svg>",
+    "accentBorder": "border-t-blue-500",
+    "iconBg": "bg-blue-50 text-blue-600 border-blue-200"
+  },
+  {
+    "sector": "Channel Partners",
+    "title": "Elite Advisory & Brokerage Networks",
+    "focus": "Multi-crore real estate advisory firms need branded search dominance to build authority, win developer mandates, and recruit top sales talent across the Uttar Pradesh region.",
+    "outcome": "Prestige brand equity, exclusive project marketing mandates, and steady inbound investor referrals.",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z\"/></svg>",
+    "accentBorder": "border-t-rose-500",
+    "iconBg": "bg-rose-50 text-rose-600 border-rose-200"
+  }
+];
+
+const stages = [
+  {
+    "num": "01",
+    "step": "AUDIT",
+    "title": "Corridor & Entity Authority Diagnostic",
+    "body": "We benchmark your existing search visibility against rival developers across Amar Shaheed Path, Sultanpur Road Corridor, and New Lucknow, auditing UP RERA disclosures, technical speed, and Google Map profiles.",
+    "accent": "from-brand-600 to-sky-500"
+  },
+  {
+    "num": "02",
+    "step": "FOUNDATION",
+    "title": "Hyper-Local Content & Schema Architecture",
+    "body": "We construct high-converting corridor landing pages, publish verified project specifications, and deploy RealEstateAgent, Place, and LocalBusiness schema markups.",
+    "accent": "from-accent-600 to-violet-500"
+  },
+  {
+    "num": "03",
+    "step": "EXPANSION",
+    "title": "Map Pack & Generative Engine Optimization",
+    "body": "We optimize your sales galleries for top 3 Google Map positions, generate verified review signals, and inject structured brand citations into ChatGPT, Perplexity, and Gemini knowledge repositories.",
+    "accent": "from-emerald-600 to-teal-500"
+  },
+  {
+    "num": "04",
+    "step": "SCALE",
+    "title": "HNI Inbound Funnel Scaling & Conversion Tracking",
+    "body": "We scale high-intent organic rankings, track telephone calls and WhatsApp inquiries, and continuously optimize landing pages to maximize qualified site visits and bookings.",
+    "accent": "from-amber-600 to-rose-500"
+  }
+];
+
+const faqs = [
+  {
+    "q": "How does real estate SEO in Lucknow differ from standard digital marketing?",
+    "a": "Standard digital marketing relies heavily on generic social media ads and expensive pay-per-click auctions where costs escalate continuously. Real estate SEO builds permanent organic search assets tailored to specific Lucknow corridors like Amar Shaheed Path and Sultanpur Road Corridor. It captures buyers at the exact moment of high intent when they search for specific configurations, verified UP RERA projects, or investment returns."
+  },
+  {
+    "q": "Can a Lucknow developer outrank 99acres and Magicbricks on Google?",
+    "a": "Yes. While aggregator portals dominate broad generic keywords, they cannot match the hyper-local depth, authentic project media, virtual tours, and localized schema of a dedicated developer or exclusive channel partner. By optimizing for corridor-specific long-tail queries and dominating the local Google Map Pack, our clients routinely rank above major portals for high-converting buyer searches."
+  },
+  {
+    "q": "How do you optimize luxury properties for ChatGPT, Perplexity, and Gemini?",
+    "a": "Generative Engine Optimization (GEO) involves structuring your digital footprint with clear entity data, authoritative press mentions, verified UP RERA disclosures, and comprehensive FAQs. When AI models crawl the web to answer prompts like 'Which is the best luxury residential project on Amar Shaheed Path Lucknow?', our semantic markup ensures your property is cited as the primary recommendation."
+  },
+  {
+    "q": "How important is Google Map Pack optimization for Lucknow sales offices?",
+    "a": "It is critical. Over 60% of high-intent property inquiries originate from local mobile searches where prospective buyers look for site offices, experience centers, or sample flats near them. Top 3 placement in the Google Map Pack drives direct navigation requests, immediate telephone inquiries, and weekend walk-in traffic."
+  },
+  {
+    "q": "How do you ensure UP RERA compliance in your real estate SEO campaigns?",
+    "a": "Every project landing page, meta description, and content asset developed by NK Digital Tech displays verified Uttar Pradesh Real Estate Regulatory Authority (UP RERA) registration numbers, approved master plans, and mandatory statutory disclosures, safeguarding your brand against regulatory penalties."
+  },
+  {
+    "q": "How long does it take to see measurable results from real estate SEO in Lucknow?",
+    "a": "Initial improvements in local Map Pack visibility and long-tail corridor rankings typically manifest within 60 to 90 days. Competitive high-volume terms such as luxury apartments in Lucknow achieve top rankings within 4 to 6 months as domain authority and contextual backlinks accumulate."
+  },
+  {
+    "q": "Do you also generate international NRI property inquiries for Lucknow projects?",
+    "a": "Yes. We create specialized international search funnels targeting affluent non-resident Indians in the UAE, United States, United Kingdom, and Singapore who seek high-yielding commercial assets and luxury residences in Lucknow."
+  },
+  {
+    "q": "What metrics do you track to measure real estate SEO success?",
+    "a": "We look beyond basic rankings to monitor commercial KPIs including organic phone calls, WhatsApp inquiry submissions, site visit navigation requests on Google Maps, and verified sales gallery appointments."
+  }
+];
+
+const trustStrip = [
+  "UP RERA Lucknow Compliant",
+  "Amar Shaheed Path Dominance",
+  "Gomti Nagar Extension Growth",
+  "Google Map Pack Top 3",
+  "ChatGPT & Gemini Citations",
+  "High Net Worth Investor Funnels",
+  "Zero Portal Dependency",
+  "Real-Time Lead Tracking"
+];
+
+const sectorSchemaService = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "SEO for Real Estate Company in Lucknow",
+  "serviceType": "Real Estate SEO Services",
+  "provider": {
+    "@type": "ProfessionalService",
+    "name": "NK Digital Tech",
+    "url": "https://www.nkdigitaltech.net/",
+    "email": "nkdigitaltech1@gmail.com",
+    "telephone": "+91-80521-89051",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Lucknow",
+      "addressRegion": "Uttar Pradesh",
+      "addressCountry": "IN"
+    }
+  },
+  "areaServed": [
+    "Lucknow",
+    "Amar Shaheed Path",
+    "Gomti Nagar Extension",
+    "Vibhuti Khand",
+    "Sultanpur Road",
+    "Faizabad Road",
+    "Raebareli Road",
+    "Hazratganj",
+    "Uttar Pradesh"
+],
+  "description": pageDescription,
+  "url": pageCanonical
+});
+
+const sectorSchemaFAQ = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map((item) => ({
+    "@type": "Question",
+    "name": item.q,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": item.a
+    }
+  }))
+});
+
+const sectorSchemaBreadcrumb = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.nkdigitaltech.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Best SEO Company in Lucknow",
+      "item": "https://www.nkdigitaltech.net/best-seo-company-in-lucknow/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "SEO for Real Estate Company in Lucknow",
+      "item": pageCanonical
+    }
+  ]
+});
+---
+
+<Layout
+  title={pageTitle}
+  description={pageDescription}
+  canonical={pageCanonical}
+  ogImage="https://www.nkdigitaltech.net/images/lucknow-real-estate-seo/hero-real-estate-seo-lucknow.webp"
+  preloadImage="/images/lucknow-real-estate-seo/hero-real-estate-seo-lucknow.webp"
+  hideLocationsNav={false}
+  customSchemaLocalBusiness={sectorSchemaService}
+  customSchemaFAQ={sectorSchemaFAQ}
+  customSchemaBreadcrumb={sectorSchemaBreadcrumb}
+  utilityTagline="Award-Winning Real Estate SEO Agency in Lucknow"
+  brandSubtitle="SEO, AEO & GEO Solutions for Luxury Developers & Channel Partners"
+  footerBio="NK Digital Tech delivers specialized search engine optimization, Answer Engine Optimization (AEO), and Generative Engine Optimization (GEO) for real estate developers, luxury channel partners, and commercial property brokerages across Lucknow and Uttar Pradesh."
+  footerCoreDisciplines={[
+    { label: 'Best Digital Marketing Company in Lucknow', href: '/best-digital-marketing-company-in-lucknow/' },
+    { label: 'Best SEO Company in Lucknow', href: '/best-seo-company-in-lucknow/' },
+    { label: 'Local SEO Services in Lucknow', href: '/local-seo-services-in-lucknow/' },
+    { label: 'AI SEO Company in Lucknow', href: '/ai-seo-company-in-lucknow/' },
+    { label: 'AEO Services in Lucknow', href: '/aeo-services-in-lucknow/' },
+    { label: 'Website Development Company in Lucknow', href: '/website-development-company-in-lucknow/' },
+  ]}
+  footerTagline="Dominating Google Search, Google Map Pack & AI Answers for Lucknow Real Estate"
+>
+
+  <!-- =====================================================================
+       SECTION 1: HERO (DARK SURFACE WITH UNIQUE SECTOR SEO HERO IMAGE)
+  ===================================================================== -->
+  <section class="relative surface-dark overflow-hidden pt-8 pb-12 sm:pt-16 sm:pb-20 lg:pt-20 lg:pb-24 border-b border-slate-800/80">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="absolute inset-0 mesh-glow pointer-events-none"></div>
+    <div class="absolute -top-36 -left-36 w-96 h-96 bg-brand-500/20 rounded-full blur-[130px] pointer-events-none"></div>
+    <div class="absolute top-1/4 -right-36 w-96 h-96 bg-accent-500/20 rounded-full blur-[130px] pointer-events-none"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-7 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns: Headline & CTA -->
+        <div class="lg:col-span-7 text-left min-w-0">
+          <div class="badge-dark mb-4 sm:mb-6">
+            <span class="w-2 h-2 rounded-full bg-brand-400 animate-ping flex-shrink-0"></span>
+            <span class="min-w-0">Rank #1 on Google, Maps & AI Engines for Lucknow Real Estate</span>
+          </div>
+
+          <h1 class="font-display text-[1.95rem] sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-[1.15] sm:leading-[1.1] mb-4 sm:mb-6 text-glow">
+            SEO for Real Estate Company <br />
+            <span class="gradient-text-light">in Lucknow</span>
+          </h1>
+
+          <p class="text-[13.5px] sm:text-base md:text-lg text-slate-300 leading-relaxed mb-6 sm:mb-8 font-normal text-justify hyphens-auto [text-align-last:left]">
+            Looking for premium <strong class="text-white font-semibold">SEO for Real Estate Company in Lucknow</strong>? NK Digital Tech drives verified buyer visits and direct investor inquiries through three proven channels: <strong class="text-white font-semibold">SEO</strong> for top Google and Map Pack rankings, <strong class="text-white font-semibold">AEO</strong> for direct voice answer snippets, and <strong class="text-white font-semibold">GEO</strong> so ChatGPT and Gemini recommend your projects first.
+          </p>
+
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 mb-7 sm:mb-10">
+            <a href="#contact" class="btn-primary w-full sm:w-auto min-h-[48px] text-sm sm:text-base px-5 sm:px-8 py-3.5 sm:py-4">
+              <span>Book Lucknow Property SEO Audit</span>
+              <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+              </svg>
+            </a>
+            <a href="#services" class="btn-secondary-dark w-full sm:w-auto min-h-[48px] text-sm sm:text-base px-5 sm:px-7 py-3.5 sm:py-4">
+              <span>Explore Sector Services</span>
+            </a>
+          </div>
+
+          <!-- Trust Verification Strip (2x4 Grid on Mobile, Flex Pills on Desktop) -->
+          <div class="pt-5 sm:pt-6 border-t border-slate-800/80">
+            <div class="grid grid-cols-2 sm:flex sm:flex-wrap items-stretch sm:items-center gap-2">
+              {trustStrip.map((item) => (
+                <span class="px-2.5 sm:px-3 py-2 sm:py-1.5 rounded-lg bg-slate-900/90 border border-slate-800 text-[11px] sm:text-xs text-slate-300 font-medium flex items-center justify-center sm:justify-start text-center sm:text-left leading-tight">
+                  {item}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Unique Sector Hero Image -->
+        <div class="lg:col-span-5 min-w-0">
+          <div class="relative rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-700/80 shadow-2xl shadow-brand-500/15 bg-slate-900 group">
+            <div class="relative">
+              <img
+                src="/images/lucknow-real-estate-seo/hero-real-estate-seo-lucknow.webp"
+                alt="NK Digital Tech real estate SEO dashboard showing organic traffic and lead conversions for luxury Lucknow properties"
+                width="960"
+                height="540"
+                fetchpriority="high"
+                decoding="async"
+                class="w-full aspect-[16/10] sm:aspect-auto sm:h-72 md:h-[380px] lg:h-[400px] object-cover object-center group-hover:scale-105 transition-transform duration-500"
+              />
+              <div class="hidden sm:block absolute inset-0 bg-gradient-to-t from-[#050a14] via-transparent to-transparent opacity-80"></div>
+            </div>
+            <div class="relative sm:absolute sm:bottom-4 sm:left-4 sm:right-4 glass-card border-t sm:border border-slate-800 sm:rounded-2xl p-3.5 sm:p-4">
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-1">
+                <span class="text-xs font-bold text-white">Lucknow Property Pipeline</span>
+                <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-400">
+                  <span class="w-2 h-2 rounded-full bg-emerald-400 flex-shrink-0"></span>
+                  +310% Site Visits
+                </span>
+              </div>
+              <p class="text-[11px] sm:text-xs text-slate-300 text-justify hyphens-auto [text-align-last:left] leading-relaxed">
+                Targeted organic search funnels capturing ultra-luxury inquiries across Amar Shaheed Path, DLF Phase 5 and Sultanpur Road Corridor.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 2: INTRODUCTION (CRISP WHITE CONTRAST SECTION + TEAM IMAGE)
+  ===================================================================== -->
+  <section class="relative surface-white py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns: Concise 2-Paragraph Unique Copy -->
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-light mb-3.5 sm:mb-4">Lucknow Real Estate Search Authority</div>
+          <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-snug sm:leading-tight mb-4 sm:mb-6">
+            Dominate Google & AI Search Across <span class="gradient-text-dark">Lucknow High-Growth Property Belts</span>
+          </h2>
+          <div class="space-y-4 sm:space-y-5 text-slate-700 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            <p>
+              Lucknow real estate is among India's most competitive property markets. High-net-worth buyers and NRI investors search daily for luxury homes along Amar Shaheed Path, Gomti Nagar Extension, and Sultanpur Road Corridor. Yet many developers rely heavily on expensive property portals that sell recycled, low-intent leads.
+            </p>
+            <p>
+              NK Digital Tech changes this dynamic. We build search-optimized project pages, Google Map listings, and structured property data that establish your brand as a trusted name in Lucknow. From UP RERA-registered new launches to AI recommendations, our real estate SEO converts online searches into scheduled site visits.
+            </p>
+          </div>
+          <div class="mt-6 sm:mt-8 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
+            <a href="#contact" class="btn-primary w-full sm:w-auto min-h-[48px]">
+              <span>Claim Your Lucknow Market Share</span>
+              <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+              </svg>
+            </a>
+            <a href="#why-us" class="btn-secondary-light w-full sm:w-auto min-h-[48px]">
+              <span>Why NK Digital Tech</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Unique Team Image + Stats -->
+        <div class="lg:col-span-5 space-y-4 sm:space-y-5 min-w-0">
+          <div class="rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-200 shadow-lg bg-slate-100">
+            <img
+              src="/images/lucknow-real-estate-seo/team-real-estate-seo-lucknow.webp"
+              alt="NK Digital Tech Lucknow real estate SEO consulting team analyzing property search data and buyer acquisition metrics"
+              width="800"
+              height="533"
+              class="w-full aspect-[16/10] sm:aspect-auto sm:h-64 lg:h-72 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="grid grid-cols-2 gap-3 sm:gap-4">
+            {[{"val":"310%+","label":"Organic Site Visits","sub":"Verified luxury buyer inquiries"},{"val":"Top 3","label":"Map Pack Placement","sub":"Local site office rankings"},{"val":"68%","label":"Portal Cost Savings","sub":"Direct client acquisition"},{"val":"94%","label":"UP RERA Compliance","sub":"Strict regulatory alignment"}].map((stat) => (
+              <div class="elevated-card rounded-xl sm:rounded-2xl p-3.5 sm:p-4 min-w-0">
+                <div class="font-display font-black text-xl sm:text-2xl text-brand-600 mb-0.5">{stat.val}</div>
+                <div class="text-[11px] sm:text-xs font-bold text-slate-900 leading-snug">{stat.label}</div>
+                <div class="text-[10.5px] sm:text-[11px] text-slate-500 leading-snug mt-0.5">{stat.sub}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 3: PROBLEM STATEMENT (DEEP INDIGO DARK CONTRAST SECTION)
+  ===================================================================== -->
+  <section class="relative surface-indigo py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="max-w-7xl mx-auto relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns: Problem Statement Justified Copy -->
+        <div class="lg:col-span-7 min-w-0">
+          <div class="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-3.5 py-1 sm:py-1.5 rounded-full text-[10px] sm:text-xs font-bold uppercase tracking-wider sm:tracking-widest bg-amber-500/10 border border-amber-500/30 text-amber-300 max-w-full leading-snug mb-4 sm:mb-5">
+            <svg class="w-4 h-4 text-amber-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+            </svg>
+            <span>The Lucknow Real Estate Search Challenge</span>
+          </div>
+
+          <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-white tracking-tight leading-snug sm:leading-tight mb-4 sm:mb-6">
+            Why Generic SEO Fails Luxury Lucknow Real Estate Firms
+          </h2>
+
+          <div class="space-y-4 sm:space-y-5 text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            <p>
+              Standard SEO agencies treat luxury penthouses on Amar Shaheed Path like generic properties, chasing empty clicks that never turn into site visits. Meanwhile, property portals control search results and resell the exact same buyer inquiry to multiple rival brokers at high bidding costs.
+            </p>
+            <p>
+              In Lucknow today, buyers check builder backgrounds in DLF Phase 5, ask ChatGPT about local road connectivity, and read Google Map reviews before visiting a sales gallery. If your firm lacks dedicated corridor pages and AI visibility, serious buyers never find you.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Diagnostic Comparison Cards -->
+        <div class="lg:col-span-5 space-y-3.5 sm:space-y-4 min-w-0">
+          <div class="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6 border-l-4 border-l-rose-500">
+            <div class="flex flex-wrap items-center justify-between gap-1.5 mb-2">
+              <span class="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-rose-400">Generic Agency Approach</span>
+              <span class="text-[11px] sm:text-xs text-slate-400">High Portal Costs & Shared Leads</span>
+            </div>
+            <h3 class="font-display font-bold text-[15px] sm:text-base text-white mb-2 leading-snug">Wasted Ad Spend & Recycled Portal Leads</h3>
+            <p class="text-xs text-slate-300 leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+              Relying on generic national keywords, broken blog articles, and paid aggregator portals that auction shared buyer leads to multiple competitors at steep margins.
+            </p>
+          </div>
+
+          <div class="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6 border-l-4 border-l-emerald-400">
+            <div class="flex flex-wrap items-center justify-between gap-1.5 mb-2">
+              <span class="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-emerald-400">NK Digital Tech System</span>
+              <span class="text-[11px] sm:text-xs text-brand-300">Direct Ultra-Luxury Acquisition</span>
+            </div>
+            <h3 class="font-display font-bold text-[15px] sm:text-base text-white mb-2 leading-snug">Exclusive HNI & NRI Search Dominance</h3>
+            <p class="text-xs text-slate-300 leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+              Building a direct buyer pipeline through local corridor pages, top Google Map rankings, and verified AI recommendations that generate private site visits.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 4: SERVICES (LIGHT COOL ALABASTER CONTRAST + SERVICES IMAGE)
+  ===================================================================== -->
+  <section id="services" class="relative surface-cool py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <!-- Services Header with Unique Services Image -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 items-center mb-9 sm:mb-16">
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-light mb-3">Tailored Lucknow Real Estate SEO Disciplines</div>
+          <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-snug sm:leading-tight mb-3 sm:mb-4">
+            Full-Funnel Organic Search Architecture for Lucknow Developers
+          </h2>
+          <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            Our real estate SEO strategies are built around Lucknow's distinct micro-markets, investor demographics, and strict UP RERA compliance guidelines.
+          </p>
+        </div>
+        <div class="lg:col-span-5 min-w-0">
+          <div class="rounded-2xl overflow-hidden border border-slate-200 shadow-md bg-white">
+            <img
+              src="/images/lucknow-real-estate-seo/services-real-estate-seo-lucknow.webp"
+              alt="NK Digital Tech team executing technical real estate SEO and local schema architecture for Lucknow property developments"
+              width="800"
+              height="450"
+              class="w-full aspect-[16/9] sm:aspect-auto sm:h-56 lg:h-64 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- 3 Columns x 2 Rows Grid Layout -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-7">
+        {services.map((s) => (
+          <div class="elevated-card rounded-2xl p-5 sm:p-7 flex flex-col justify-between group sm:hover:-translate-y-1">
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-4 sm:mb-6">
+                <div class={`w-11 h-11 sm:w-12 sm:h-12 rounded-xl border flex items-center justify-center flex-shrink-0 ${s.iconStyle}`}>
+                  <Fragment set:html={s.icon} />
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class={`text-[10.5px] sm:text-[11px] font-semibold px-2.5 py-1 rounded-md ${s.badgeColor}`}>
+                    {s.category}
+                  </span>
+                  <span class="font-display font-black text-base sm:text-lg text-slate-300">{s.num}</span>
+                </div>
+              </div>
+
+              <h3 class="font-display font-bold text-[17px] sm:text-xl text-slate-900 mb-2.5 sm:mb-3 leading-snug group-hover:text-brand-600 transition-colors">
+                {s.title}
+              </h3>
+
+              <p class="text-slate-600 text-[13px] sm:text-sm leading-relaxed mb-4 sm:mb-6 text-justify hyphens-auto [text-align-last:left]">
+                {s.body}
+              </p>
+            </div>
+
+            <div>
+              <div class={`rounded-xl border p-3.5 sm:p-4 mb-3.5 sm:mb-5 ${s.impactStyle}`}>
+                <div class="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-slate-900 mb-1">
+                  <svg class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                  </svg>
+                  <span>Commercial Impact</span>
+                </div>
+                <p class="text-xs text-slate-700 leading-relaxed font-medium text-justify hyphens-auto [text-align-last:left]">
+                  {s.impact}
+                </p>
+              </div>
+
+              <a href={s.href} class="inline-flex items-center gap-2 py-2 min-h-[40px] text-xs font-bold text-brand-600 hover:text-brand-700 no-underline hover:no-underline group-hover:gap-3 transition-all">
+                <span>{s.cta}</span>
+                <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 5: REGIONAL LOCATIONS (DARK NAVY + LUCKNOW CORRIDORS)
+  ===================================================================== -->
+  <section id="locations" class="relative surface-navy py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <!-- Regional Header with Unique Locations Image -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 items-center mb-9 sm:mb-16">
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-dark mb-3">Lucknow Real Estate Micro-Markets</div>
+          <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-white tracking-tight leading-snug sm:leading-tight mb-3 sm:mb-4">
+            Dominating Key Property Belts Across Lucknow
+          </h2>
+          <p class="text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            Lucknow real estate is hyper-segmented. We tailor keyword clusters and localized landing pages for each critical development corridor.
+          </p>
+        </div>
+        <div class="lg:col-span-5 min-w-0">
+          <div class="rounded-2xl overflow-hidden border border-slate-700/80 shadow-xl bg-slate-900">
+            <img
+              src="/images/lucknow-real-estate-seo/locations-real-estate-seo-lucknow.webp"
+              alt="Map of Lucknow showing strategic real estate growth corridors including Amar Shaheed Path, Vibhuti Khand, and Sultanpur Road Corridor"
+              width="800"
+              height="450"
+              class="w-full aspect-[16/9] sm:aspect-auto sm:h-56 lg:h-64 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- 1 Row x 4 Columns Responsive Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+        {cities.map((c) => (
+          <div class="glass-card rounded-2xl p-5 sm:p-6 flex flex-col justify-between group sm:hover:-translate-y-1">
+            <div>
+              <div class={`h-1 w-full bg-gradient-to-r ${c.accent} rounded-full mb-4 sm:mb-5`}></div>
+
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-3.5 sm:mb-4">
+                <span class="px-2.5 py-1 rounded-md bg-slate-800 border border-slate-700 text-[11px] font-bold uppercase tracking-wider text-brand-300">
+                  {c.hub}
+                </span>
+                <span class="text-xs font-semibold text-slate-400">{c.city}</span>
+              </div>
+
+              <h3 class="font-display font-bold text-base sm:text-lg text-white mb-2.5 sm:mb-3 leading-snug">
+                <a href={c.href} class="hover:text-brand-300 no-underline hover:no-underline transition-colors">{c.keyword}</a>
+              </h3>
+
+              <p class="text-slate-300 text-[13px] sm:text-sm leading-relaxed mb-4 sm:mb-5 text-justify hyphens-auto [text-align-last:left]">
+                {c.desc}
+              </p>
+            </div>
+
+            <div class="pt-3.5 sm:pt-4 border-t border-slate-800">
+              <p class="text-[11px] text-slate-400 mb-3 sm:mb-4 leading-normal">
+                <strong class="text-slate-300">Key Corridors:</strong> {c.corridor}
+              </p>
+              <a href={c.href} class="inline-flex items-center gap-1.5 py-2 min-h-[40px] text-xs font-bold text-brand-400 hover:text-brand-300 no-underline hover:no-underline group-hover:gap-2.5 transition-all">
+                <span>{c.cta}</span>
+                <svg class="w-3.5 h-3.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 6: WHY NK DIGITAL TECH (CRISP WHITE CONTRAST SECTION)
+  ===================================================================== -->
+  <section id="why-us" class="relative surface-white py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-14 text-left sm:text-center">
+        <div class="badge-light mb-3">The NK Digital Tech Advantage</div>
+        <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-snug sm:leading-tight mb-3 sm:mb-4">
+          Why Lucknow Developers Choose NK Digital Tech
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed mb-4 text-justify hyphens-auto [text-align-last:left]">
+          We do not sell generic web traffic. We deliver exclusive high-net-worth buyer pipelines that reduce portal dependency and accelerate sales velocity.
+        </p>
+        <p class="text-slate-700 font-semibold text-xs sm:text-sm">
+          Comparing Generic Agency Execution Against NK Digital Tech Real Estate SEO
+        </p>
+      </div>
+
+      <!-- Desktop Comparison Matrix -->
+      <div class="hidden md:block overflow-hidden rounded-2xl border border-slate-200 shadow-lg">
+        <table class="w-full text-left border-collapse">
+          <thead>
+            <tr class="bg-slate-900 text-white">
+              <th class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-slate-300 w-1/4">
+                Evaluation Criteria
+              </th>
+              <th class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-rose-300 w-[37.5%] border-l border-slate-800">
+                Typical Agency Approach
+              </th>
+              <th class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-brand-300 w-[37.5%] border-l border-slate-800 bg-slate-950">
+                NK Digital Tech Real Estate Engine
+              </th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200 text-sm">
+            {comparison.map((row, idx) => (
+              <tr class={idx % 2 === 0 ? 'bg-white' : 'bg-slate-50/80'}>
+                <td class="py-5 px-6 font-display font-bold text-slate-900">
+                  {row.metric}
+                </td>
+                <td class="py-5 px-6 text-slate-600 border-l border-slate-200">
+                  <div class="flex items-start gap-2.5">
+                    <svg class="w-4 h-4 text-rose-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                    <span class="text-justify">{row.typical}</span>
+                  </div>
+                </td>
+                <td class="py-5 px-6 text-slate-900 font-medium border-l border-slate-200 bg-sky-50/40">
+                  <div class="flex items-start gap-2.5">
+                    <svg class="w-4 h-4 text-emerald-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span class="text-justify">{row.nk}</span>
+                  </div>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Mobile Comparison Cards -->
+      <div class="md:hidden space-y-3.5">
+        {comparison.map((row) => (
+          <div class="elevated-card rounded-2xl p-4 space-y-2.5">
+            <h3 class="font-display font-bold text-slate-900 text-[15px] leading-snug">{row.metric}</h3>
+            <div class="rounded-xl bg-rose-50 border border-rose-100 p-3">
+              <div class="flex items-center gap-1.5 mb-1">
+                <svg class="w-3.5 h-3.5 text-rose-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+                <p class="text-[10px] font-bold uppercase tracking-wider text-rose-600">Typical Agency Approach</p>
+              </div>
+              <p class="text-xs text-slate-700 leading-relaxed text-justify hyphens-auto [text-align-last:left]">{row.typical}</p>
+            </div>
+            <div class="rounded-xl bg-sky-50 border border-sky-200 p-3">
+              <div class="flex items-center gap-1.5 mb-1">
+                <svg class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                </svg>
+                <p class="text-[10px] font-bold uppercase tracking-wider text-brand-600">NK Digital Tech Real Estate Engine</p>
+              </div>
+              <p class="text-xs text-slate-900 font-semibold leading-relaxed text-justify hyphens-auto [text-align-last:left]">{row.nk}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 7: SECTOR VERTICALS WE SCALE (LIGHT SLATE 3x2 GRID)
+  ===================================================================== -->
+  <section id="industries" class="relative surface-slate py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-16 text-left sm:text-center">
+        <div class="badge-light mb-3">Sector Segmentation</div>
+        <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-snug sm:leading-tight mb-3 sm:mb-4">
+          Tailored Organic Roadmaps by Property Vertical
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          Different real estate asset classes require distinct digital acquisition funnels. Here is how we optimize for each Lucknow property sector.
+        </p>
+      </div>
+
+      <!-- 3 Columns x 2 Rows Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-7">
+        {propertySegments.map((ind) => (
+          <div class={`elevated-card rounded-2xl p-5 sm:p-7 border-t-4 ${ind.accentBorder} flex flex-col justify-between sm:hover:-translate-y-1`}>
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-4 sm:mb-5">
+                <div class={`w-10 h-10 sm:w-11 sm:h-11 rounded-xl border flex items-center justify-center flex-shrink-0 ${ind.iconBg}`}>
+                  <Fragment set:html={ind.icon} />
+                </div>
+                <span class="text-[11px] font-semibold text-slate-600 bg-slate-100 px-2.5 py-1 rounded-md">
+                  {ind.sector}
+                </span>
+              </div>
+
+              <h3 class="font-display font-bold text-[17px] sm:text-xl text-slate-900 mb-3 sm:mb-4 leading-snug">
+                {ind.title}
+              </h3>
+
+              <div class="mb-4 sm:mb-5">
+                <p class="text-[11px] font-bold uppercase tracking-wider text-brand-600 mb-1.5">
+                  Search &amp; AI Strategy
+                </p>
+                <p class="text-slate-600 text-[13px] sm:text-sm leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+                  {ind.focus}
+                </p>
+              </div>
+            </div>
+
+            <div class="rounded-xl bg-emerald-50/70 border border-emerald-200/80 p-3.5 sm:p-4">
+              <p class="text-[11px] font-bold uppercase tracking-wider text-emerald-700 mb-1">
+                Commercial Result
+              </p>
+              <p class="text-slate-800 text-xs font-medium leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+                {ind.outcome}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 8: HOW WE WORK (CRISP WHITE CONTRAST SECTION - 4 STAGES)
+  ===================================================================== -->
+  <section class="relative surface-white py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-16 text-left sm:text-center">
+        <div class="badge-light mb-3">Our 4 Stage Execution</div>
+        <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-snug sm:leading-tight mb-3 sm:mb-4">
+          Our 4-Stage Real Estate SEO Execution Roadmap
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          From initial corridor audit to continuous AI search domination, our systematic roadmap drives compounding pipeline growth for your Lucknow developments.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-7">
+        {stages.map((s) => (
+          <div class="elevated-card rounded-2xl p-5 sm:p-8 relative overflow-hidden group sm:hover:-translate-y-1">
+            <div class="flex items-center justify-between gap-4 mb-3.5 sm:mb-5">
+              <span class={`inline-flex items-center px-2.5 sm:px-3 py-1 rounded-lg text-xs font-bold uppercase tracking-wider text-white bg-gradient-to-r ${s.accent}`}>
+                {s.num}
+              </span>
+              <span class="font-display font-black text-3xl sm:text-4xl text-slate-200 group-hover:text-slate-300 transition-colors">
+                {s.step}
+              </span>
+            </div>
+            <h3 class="font-display font-bold text-[17px] sm:text-xl text-slate-900 mb-2.5 sm:mb-3 leading-snug">
+              {s.title}
+            </h3>
+            <p class="text-slate-600 text-[13px] sm:text-sm leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+              {s.body}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 9: CONCLUSION / PARTNER SECTION (DARK INDIGO + GROWTH IMAGE)
+  ===================================================================== -->
+  <section class="relative surface-indigo py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-7 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns: Conclusion Paragraphs (Justified) -->
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-dark mb-3.5 sm:mb-4">Sustain Long-Term Market Leadership</div>
+          <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-white tracking-tight leading-snug sm:leading-tight mb-4 sm:mb-6">
+            Turn Lucknow Search Traffic into Booked Property Allotments
+          </h2>
+          <div class="space-y-4 sm:space-y-5 text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            <p>
+              In Lucknow's active property market, digital visibility is about building real buyer trust. When your developments rank at the top of Google, lead local Google Map searches, and earn citations on AI platforms, your sales team attracts serious investors directly.
+            </p>
+            <p>
+              NK Digital Tech helps developers outrank generic listing portals and capture direct buyer inquiries without high portal fees. Partner with our real estate specialists to drive steady sales.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Unique Growth Image -->
+        <div class="lg:col-span-5 min-w-0">
+          <div class="rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-700/80 shadow-2xl bg-slate-900">
+            <img
+              src="/images/lucknow-real-estate-seo/growth-real-estate-seo-lucknow.webp"
+              alt="NK Digital Tech real estate search marketing results showing exponential growth in luxury property inquiries across Lucknow"
+              width="800"
+              height="450"
+              class="w-full aspect-[16/10] sm:aspect-auto sm:h-64 lg:h-72 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 10: FAQ (LIGHT COOL SLATE CONTRAST SECTION)
+  ===================================================================== -->
+  <section id="faq" class="relative surface-cool py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-left sm:text-center mb-9 sm:mb-14">
+        <div class="badge-light mb-3">Questions Asked on Google, ChatGPT &amp; Gemini</div>
+        <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-snug sm:leading-tight mb-3 sm:mb-4">
+          Frequently Asked Real Estate SEO Questions
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          Clear, factual answers regarding search engine optimization, timeline expectations, and commercial outcomes for Lucknow property firms.
+        </p>
+      </div>
+
+      <div class="space-y-3 sm:space-y-4">
+        {faqs.map((f, i) => (
+          <details class="elevated-card rounded-2xl group overflow-hidden" open={i === 0}>
+            <summary class="flex items-start sm:items-center justify-between gap-3 sm:gap-4 px-4 sm:px-6 py-4 sm:py-5 min-h-[54px] select-none">
+              <div class="flex items-start sm:items-center gap-2.5 sm:gap-3.5 text-left min-w-0">
+                <span class="w-6 h-6 sm:w-7 sm:h-7 rounded-lg bg-sky-50 border border-sky-200 text-brand-600 font-display font-bold text-xs flex items-center justify-center flex-shrink-0 mt-0.5 sm:mt-0">
+                  0{i + 1}
+                </span>
+                <span class="font-display font-bold text-slate-900 text-[14px] sm:text-base md:text-lg leading-snug">
+                  {f.q}
+                </span>
+              </div>
+              <span class="faq-icon w-7 h-7 sm:w-8 sm:h-8 rounded-full border border-slate-200 text-slate-600 flex items-center justify-center flex-shrink-0 mt-0.5 sm:mt-0">
+                <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                </svg>
+              </span>
+            </summary>
+            <div class="px-4 sm:px-6 pb-5 sm:pb-6 pt-3 text-slate-600 text-[13px] sm:text-sm md:text-base leading-relaxed border-t border-slate-100 text-justify hyphens-auto [text-align-last:left]">
+              {f.a}
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 11: SHORT 2 TO 3 LINE CALL TO ACTION BANNER (LAST SECTION)
+  ===================================================================== -->
+  <section id="contact" class="relative surface-dark py-12 pb-24 sm:py-16 lg:py-20 px-4 sm:px-6 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-5xl mx-auto">
+      <div class="rounded-2xl sm:rounded-3xl bg-gradient-to-r from-brand-600 via-brand-700 to-accent-700 p-6 sm:p-10 md:p-12 text-center text-white shadow-2xl border border-white/15 relative overflow-hidden">
+        <div class="relative z-10 max-w-2xl mx-auto">
+          <h2 class="font-display font-black text-[1.45rem] sm:text-3xl md:text-4xl text-white tracking-tight leading-snug mb-3 sm:mb-4">
+            Ready to Dominate Lucknow Real Estate Search?
+          </h2>
+
+          <p class="text-sky-50 text-[13px] sm:text-sm md:text-base leading-relaxed mb-6 sm:mb-8">
+            Partner with NK Digital Tech to capture verified luxury homebuyers, command Google Map rankings, and lead AI recommendations across Lucknow.
+          </p>
+
+          <a
+            href="/contact-us/"
+            class="inline-flex w-full sm:w-auto min-h-[48px] items-center justify-center gap-2 sm:gap-3 px-5 sm:px-8 py-3.5 sm:py-4 rounded-xl bg-white text-slate-950 hover:bg-sky-50 no-underline hover:no-underline font-display font-bold text-sm sm:text-base shadow-xl transition-all duration-300 active:scale-95 text-center leading-snug"
+          >
+            <span>Claim Your Free Lucknow Property SEO Audit</span>
+            <svg class="w-4 h-4 sm:w-5 sm:h-5 text-brand-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mobile Sticky Bottom Quick Action Bar -->
+  <div class="sm:hidden fixed bottom-0 inset-x-0 z-40 bg-[#050a14]/95 backdrop-blur-xl border-t border-slate-800 px-3.5 pt-2.5 pb-[max(0.625rem,env(safe-area-inset-bottom))] shadow-[0_-8px_24px_rgba(0,0,0,0.45)]">
+    <div class="flex items-center gap-2.5">
+      <a
+        href="/contact-us/"
+        class="btn-primary flex-1 min-h-[44px] py-2.5 px-4 text-xs font-bold rounded-xl no-underline hover:no-underline"
+      >
+        <span>Book Property SEO Audit</span>
+        <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+        </svg>
+      </a>
+      <a
+        href="#services"
+        class="btn-secondary-dark min-h-[44px] py-2.5 px-3.5 text-xs font-semibold rounded-xl flex-shrink-0 no-underline hover:no-underline"
+      >
+        <span>Services</span>
+      </a>
+    </div>
+  </div>
+
+</Layout>

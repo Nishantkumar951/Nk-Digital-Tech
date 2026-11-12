@@ -1,0 +1,1072 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import '../../styles/global.css';
+
+const pageTitle = "Best SEO for SaaS Companies in Lucknow | NK Digital Tech";
+const pageDescription = "Need SEO for SaaS Companies in Lucknow? NK Digital Tech drives qualified software demos, product signups, Google rankings and ChatGPT citations.";
+const pageCanonical = "https://www.nkdigitaltech.net/best-seo-company-in-lucknow/SaaS-Technology-Companies/";
+
+const services = [
+  {
+    "num": "01",
+    "category": "Comparison SEO",
+    "icon": "<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z\"/></svg>",
+    "iconStyle": "bg-sky-50 border-sky-200 text-brand-600",
+    "impactStyle": "bg-sky-50/80 border-sky-200/80 text-slate-800",
+    "badgeColor": "text-brand-600 bg-sky-100/80",
+    "title": "Competitor Alternative & Comparison Pages",
+    "body": "We build objective, high-converting 'Vs' and 'Alternative to' landing pages that intercept buyers actively looking to replace incumbent software vendors.",
+    "impact": "High-intent demo requests with rapid deal cycle velocity and high close rates.",
+    "cta": "Explore Comparison SEO",
+    "href": "/best-seo-company-in-lucknow/"
+  },
+  {
+    "num": "02",
+    "category": "Programmatic SEO",
+    "icon": "<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4\"/></svg>",
+    "iconStyle": "bg-emerald-50 border-emerald-200 text-emerald-600",
+    "impactStyle": "bg-emerald-50/80 border-emerald-200/80 text-slate-800",
+    "badgeColor": "text-emerald-700 bg-emerald-100/80",
+    "title": "Programmatic Integrations & Template Hubs",
+    "body": "We scale hundreds of targeted landing pages for third-party integrations, file converter tools, and industry templates to capture specific functional workflows.",
+    "impact": "Exponential organic traffic growth across long-tail product queries.",
+    "cta": "Discover Programmatic SaaS SEO",
+    "href": "/website-development-company-in-lucknow/"
+  },
+  {
+    "num": "03",
+    "category": "GEO & AI Search",
+    "icon": "<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M13 10V3L4 14h7v7l9-11h-7z\"/></svg>",
+    "iconStyle": "bg-purple-50 border-purple-200 text-purple-600",
+    "impactStyle": "bg-purple-50/80 border-purple-200/80 text-slate-800",
+    "badgeColor": "text-purple-700 bg-purple-100/80",
+    "title": "Generative Engine Optimization (GEO)",
+    "body": "When enterprise tech evaluators query ChatGPT or Perplexity for the best B2B software solutions, our entity optimizations place your product as the cited recommendation.",
+    "impact": "Direct software evaluations originating from AI-assisted procurement tools.",
+    "cta": "Learn Generative SaaS Optimization",
+    "href": "/geo-services-in-lucknow/"
+  },
+  {
+    "num": "04",
+    "category": "Technical Schema",
+    "icon": "<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z\"/></svg>",
+    "iconStyle": "bg-amber-50 border-amber-200 text-amber-600",
+    "impactStyle": "bg-amber-50/80 border-amber-200/80 text-slate-800",
+    "badgeColor": "text-amber-700 bg-amber-100/80",
+    "title": "SoftwareApplication & TechArticle Schema",
+    "body": "We implement advanced SoftwareApplication, OperatingSystem, and HowTo schemas alongside Core Web Vitals optimization for interactive software documentation.",
+    "impact": "Rich snippet star ratings, pricing previews, and instant technical indexing.",
+    "cta": "Review Technical SaaS Architecture",
+    "href": "/website-development-company-in-lucknow/"
+  },
+  {
+    "num": "05",
+    "category": "International Expansion",
+    "icon": "<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z\"/></svg>",
+    "iconStyle": "bg-blue-50 border-blue-200 text-blue-600",
+    "impactStyle": "bg-blue-50/80 border-blue-200/80 text-slate-800",
+    "badgeColor": "text-blue-700 bg-blue-100/80",
+    "title": "Global Multi-Region SaaS Expansion",
+    "body": "We optimize international search structures with proper hreflang tags, localized currency pricing tables, and regional compliance pages for North America and Europe.",
+    "impact": "High-value USD and EUR billing software accounts from global enterprises.",
+    "cta": "Explore Global SaaS Growth",
+    "href": "/best-digital-marketing-company-in-lucknow/"
+  },
+  {
+    "num": "06",
+    "category": "AEO & Technical Snippets",
+    "icon": "<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z\"/></svg>",
+    "iconStyle": "bg-rose-50 border-rose-200 text-rose-600",
+    "impactStyle": "bg-rose-50/80 border-rose-200/80 text-slate-800",
+    "badgeColor": "text-rose-700 bg-rose-100/80",
+    "title": "AEO Answer Snippets for Software Features",
+    "body": "We capture high-intent question searches around API rate limits, SOC 2 compliance, data migration steps, and software pricing models.",
+    "impact": "Dominating Google's zero-click featured answers during software evaluation stages.",
+    "cta": "See AEO SaaS Framework",
+    "href": "/aeo-services-in-lucknow/"
+  }
+];
+
+const cities = [
+  {
+    "hub": "Corridor 01",
+    "city": "Vibhuti Khand & Gomti Nagar IT Corridor",
+    "corridor": "Vibhuti Khand • Gomti Nagar • Summit Building • Cyber Heights",
+    "keyword": "B2B SaaS & Cloud Platform SEO",
+    "desc": "We help growing software companies in Vibhuti Khand capture high-intent commercial keywords and outrank venture-funded incumbents across global search markets.",
+    "cta": "Audit Vibhuti Khand Rankings",
+    "href": "#contact",
+    "accent": "from-brand-500 to-sky-400"
+  },
+  {
+    "hub": "Corridor 02",
+    "city": "Chak Ganjaria & HCL IT City",
+    "corridor": "Chak Ganjaria • HCL IT City • Sultanpur Road • Meditech Enclave",
+    "keyword": "Enterprise Tech & AI Startup SEO",
+    "desc": "Capturing enterprise procurement teams and CTOs searching for AI-powered workflow automation, cloud security solutions, and custom software systems.",
+    "cta": "Explore IT City Growth",
+    "href": "#contact",
+    "accent": "from-accent-500 to-violet-400"
+  },
+  {
+    "hub": "Corridor 03",
+    "city": "Hazratganj & Central Lucknow Tech Hubs",
+    "corridor": "Hazratganj • Rana Pratap Marg • Sapru Marg • Ashok Marg",
+    "keyword": "Fintech & Edtech Software SEO",
+    "desc": "Dominating search rankings for digital lending systems, payment gateways, school management software, and enterprise accounting platforms.",
+    "cta": "Scale Software Signups",
+    "href": "#contact",
+    "accent": "from-cyan-500 to-teal-400"
+  },
+  {
+    "hub": "Corridor 04",
+    "city": "Amar Shaheed Path Tech Enclaves",
+    "corridor": "Shaheed Path • Sushant Golf City • Omaxe City • Kisan Path",
+    "keyword": "Vertical SaaS & Mobile App Tech SEO",
+    "desc": "Attracting vertical SaaS customers and technology buyers searching for specialized CRM, supply chain tracking, and business management software platforms.",
+    "cta": "Capture SaaS Demos",
+    "href": "#contact",
+    "accent": "from-emerald-500 to-green-400"
+  }
+];
+
+const comparison = [
+  {
+    "metric": "Target Search Intent",
+    "typical": "Vague informational blog posts that bring casual students with zero software purchasing authority.",
+    "nk": "Bottom-of-funnel competitor comparisons, software alternative hubs, and technical workflow landing pages."
+  },
+  {
+    "metric": "Conversion Architecture",
+    "typical": "Generic newsletter popups that generate low-value contact emails with minimal sales intent.",
+    "nk": "Simple demo booking forms, ROI calculators, and smooth self-serve free trial signups."
+  },
+  {
+    "metric": "AI & Generative Discovery",
+    "typical": "Zero presence when prospective enterprise buyers query ChatGPT or Perplexity for software evaluations.",
+    "nk": "Structured entity schemas and knowledge graph citations that ensure AI engines recommend your software first."
+  },
+  {
+    "metric": "Technical Documentation SEO",
+    "typical": "Leaving developer documentation and API guides unindexed behind clumsy subdomains.",
+    "nk": "Fully indexed, lightning-fast developer documentation with structured HowTo schemas and code blocks."
+  },
+  {
+    "metric": "Paid Ad Dependency",
+    "typical": "Endless reliance on escalating Google Search ad bids with rising Customer Acquisition Costs.",
+    "nk": "Compounding organic search assets that permanently lower blended CAC and improve venture economics."
+  },
+  {
+    "metric": "Commercial Accountability",
+    "typical": "Reporting website impressions and bounce rates with zero visibility into actual pipeline revenue.",
+    "nk": "Direct CRM integration tracking organic sessions to qualified sales pipeline, demo completions, and closed ARR."
+  }
+];
+
+const propertySegments = [
+  {
+    "sector": "Enterprise Cloud",
+    "title": "ERP, CRM & Data Governance Platforms",
+    "focus": "Corporate IT leaders and enterprise architects in Vibhuti Khand search for SOC 2 Type II compliance, multi-tenant cloud architecture, and legacy system migration tools.",
+    "outcome": "High-ticket enterprise RFPs and multi-seat annual subscription contracts with six-figure deal sizes.",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10\"/></svg>",
+    "accentBorder": "border-t-brand-500",
+    "iconBg": "bg-sky-50 text-brand-600 border-sky-200"
+  },
+  {
+    "sector": "Vertical B2B SaaS",
+    "title": "Real Estate, Healthcare & Logistics Tech",
+    "focus": "Industry operators search for niche compliance workflows, broker automation software, patient scheduling portals, and fleet telematics systems in Lucknow.",
+    "outcome": "Dominant market share within specialized industry verticals and high customer lifetime value (LTV).",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z\"/></svg>",
+    "accentBorder": "border-t-purple-500",
+    "iconBg": "bg-purple-50 text-purple-600 border-purple-200"
+  },
+  {
+    "sector": "Fintech & Payments",
+    "title": "B2B Billing, Invoicing & Payroll Tech",
+    "focus": "Finance directors and corporate controllers search for automated GST reconciliation, corporate credit card management, and cross-border vendor remittance APIs.",
+    "outcome": "High recurring processing volumes and sticky financial software subscriptions.",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z\"/></svg>",
+    "accentBorder": "border-t-emerald-500",
+    "iconBg": "bg-emerald-50 text-emerald-600 border-emerald-200"
+  },
+  {
+    "sector": "HR Tech & Workforce",
+    "title": "Applicant Tracking & Performance Management",
+    "focus": "Chief People Officers and talent acquisition leaders search for AI resume screening, remote team payroll, employee engagement surveys, and automated onboarding.",
+    "outcome": "Rapid corporate HR department signups with per-employee-per-month (PEPM) expansion revenue.",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z\"/></svg>",
+    "accentBorder": "border-t-amber-500",
+    "iconBg": "bg-amber-50 text-amber-600 border-amber-200"
+  },
+  {
+    "sector": "Generative AI & LLMs",
+    "title": "AI Copilots & Workflow Automation Tools",
+    "focus": "Developers and product teams search for proprietary LLM fine-tuning, automated content workflows, and AI customer support agent integrations.",
+    "outcome": "Rapid developer platform adoption, API consumption tiers, and self-serve product upgrades.",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M13 10V3L4 14h7v7l9-11h-7z\"/></svg>",
+    "accentBorder": "border-t-blue-500",
+    "iconBg": "bg-blue-50 text-blue-600 border-blue-200"
+  },
+  {
+    "sector": "Cybersecurity & DevOps",
+    "title": "Cloud Security, SIEM & CI/CD Pipelines",
+    "focus": "CISOs and DevOps teams search for automated vulnerability scanners, Kubernetes monitoring, zero-trust network access, and endpoint protection solutions.",
+    "outcome": "High-value annual software security licenses with low churn and predictable expansion.",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z\"/></svg>",
+    "accentBorder": "border-t-rose-500",
+    "iconBg": "bg-rose-50 text-rose-600 border-rose-200"
+  }
+];
+
+const stages = [
+  {
+    "num": "01",
+    "step": "AUDIT",
+    "title": "Product Taxonomy & ICP Search Diagnostic",
+    "body": "We audit your existing organic search rankings, identify high-intent buyer personas (ICPs), map out competitor comparison gaps, and evaluate technical site speed.",
+    "accent": "from-brand-600 to-sky-500"
+  },
+  {
+    "num": "02",
+    "step": "FOUNDATION",
+    "title": "Comparison Architecture & Technical Schemas",
+    "body": "We deploy bottom-of-funnel 'Vs' comparison pages, build product integration directories, and implement SoftwareApplication and HowTo schemas.",
+    "accent": "from-accent-600 to-violet-500"
+  },
+  {
+    "num": "03",
+    "step": "EXPANSION",
+    "title": "Generative AI Search & Authoritative Backlinks",
+    "body": "We inject structured product citations into ChatGPT and Gemini repositories and secure high-authority backlinks from leading SaaS publications and software blogs.",
+    "accent": "from-emerald-600 to-teal-500"
+  },
+  {
+    "num": "04",
+    "step": "SCALE",
+    "title": "Pipeline Revenue Attribution & Global Expansion",
+    "body": "We connect organic search performance directly to your CRM to track demo requests, trial signups, and closed-won ARR, continuously scaling high-performing funnels.",
+    "accent": "from-amber-600 to-rose-500"
+  }
+];
+
+const faqs = [
+  {
+    "q": "How does B2B SaaS SEO differ from traditional e-commerce or local SEO?",
+    "a": "B2B SaaS SEO is built around complex, multi-stakeholder buyer journeys with longer sales cycles. Rather than optimizing for direct purchases or foot traffic, it focuses on bottom-of-funnel software comparison queries, integration hubs, product migration workflows, and programmatic landing pages that convert corporate decision-makers into booked demos and free trials."
+  },
+  {
+    "q": "Can SEO help a Lucknow SaaS startup compete against established global software brands?",
+    "a": "Yes. Major global software companies often suffer from bloated legacy websites, poor technical architectures, and slow content publishing velocity. By focusing on modern product-led SEO, specialized alternative pages, and hyper-targeted workflow queries, an agile Lucknow SaaS platform can consistently outrank global incumbents."
+  },
+  {
+    "q": "How do you optimize a software company for ChatGPT, Gemini, and Perplexity?",
+    "a": "Generative Engine Optimization (GEO) involves structuring your software's entity data, earning citations in trusted developer forums, publishing transparent comparison benchmarks, and deploying structured schema. When buyers ask AI assistants for software recommendations, this structured footprint ensures your product is cited."
+  },
+  {
+    "q": "What role do competitor comparison pages play in SaaS search marketing?",
+    "a": "Competitor comparison and software alternative pages are the highest-converting assets on a SaaS website. Buyers searching for 'Competitor Alternative' or 'Brand A vs Brand B' have already completed their initial research and are ready to evaluate or purchase. Dominating these queries captures deals right at the finish line."
+  },
+  {
+    "q": "How do you track whether organic search is actually generating closed ARR?",
+    "a": "We integrate analytics with your CRM (such as HubSpot or Salesforce), tracking the initial organic search referral source through lead forms, demo completions, opportunity stages, and finalized subscription contracts to measure exact pipeline revenue."
+  },
+  {
+    "q": "How long does it take for a SaaS company to see measurable pipeline growth from SEO?",
+    "a": "Bottom-of-funnel competitor comparison pages and technical fixes often begin driving qualified demo requests within 60 to 90 days. Comprehensive programmatic SEO campaigns and high-volume product keywords reach maximum velocity within 4 to 6 months."
+  },
+  {
+    "q": "Do you optimize developer-facing software documentation and APIs?",
+    "a": "Yes. Developer-friendly documentation is a powerful organic acquisition channel. We ensure your documentation is crawlable, fast, mobile-responsive, and properly indexed with syntax-highlighted code blocks and technical schema markups."
+  },
+  {
+    "q": "What key metrics do you track to evaluate SaaS SEO success?",
+    "a": "We track qualified product demo requests, free trial signups, Product Qualified Leads (PQLs), Customer Acquisition Cost (CAC) reduction, and organic pipeline ARR."
+  }
+];
+
+const trustStrip = [
+  "High-Value Product Demo Inbound",
+  "Vibhuti Khand Tech Dominance",
+  "Chak Ganjaria IT City Scale",
+  "Google Search Top Rankings",
+  "ChatGPT & Gemini Citations",
+  "Low Blended Acquisition Cost",
+  "Zero Low-Quality Click Waste",
+  "Global Enterprise Search Reach"
+];
+
+const sectorSchemaService = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "SEO for SaaS Companies in Lucknow",
+  "serviceType": "SaaS & B2B Tech SEO Services",
+  "provider": {
+    "@type": "ProfessionalService",
+    "name": "NK Digital Tech",
+    "url": "https://www.nkdigitaltech.net/",
+    "email": "nkdigitaltech1@gmail.com",
+    "telephone": "+91-80521-89051",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Lucknow",
+      "addressRegion": "Uttar Pradesh",
+      "addressCountry": "IN"
+    }
+  },
+  "areaServed": [
+    "Lucknow",
+    "Vibhuti Khand",
+    "Gomti Nagar",
+    "Chak Ganjaria",
+    "HCL IT City",
+    "Amar Shaheed Path",
+    "Hazratganj",
+    "Uttar Pradesh"
+],
+  "description": pageDescription,
+  "url": pageCanonical
+});
+
+const sectorSchemaFAQ = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map((item) => ({
+    "@type": "Question",
+    "name": item.q,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": item.a
+    }
+  }))
+});
+
+const sectorSchemaBreadcrumb = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.nkdigitaltech.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Best SEO Company in Lucknow",
+      "item": "https://www.nkdigitaltech.net/best-seo-company-in-lucknow/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "SEO for SaaS Companies in Lucknow",
+      "item": pageCanonical
+    }
+  ]
+});
+---
+
+<Layout
+  title={pageTitle}
+  description={pageDescription}
+  canonical={pageCanonical}
+  ogImage="https://www.nkdigitaltech.net/images/lucknow-saas-seo/hero-saas-seo-lucknow.webp"
+  preloadImage="/images/lucknow-saas-seo/hero-saas-seo-lucknow.webp"
+  hideLocationsNav={false}
+  customSchemaLocalBusiness={sectorSchemaService}
+  customSchemaFAQ={sectorSchemaFAQ}
+  customSchemaBreadcrumb={sectorSchemaBreadcrumb}
+  utilityTagline="Award-Winning SaaS & Tech SEO Agency in Lucknow"
+  brandSubtitle="SEO, AEO & GEO Solutions for B2B Software & Cloud Platforms"
+  footerBio="NK Digital Tech delivers specialized search engine optimization, Answer Engine Optimization (AEO), and Generative Engine Optimization (GEO) for software providers, B2B SaaS platforms, and cloud technology companies across Lucknow and Uttar Pradesh."
+  footerCoreDisciplines={[
+    { label: 'Best Digital Marketing Company in Lucknow', href: '/best-digital-marketing-company-in-lucknow/' },
+    { label: 'Best SEO Company in Lucknow', href: '/best-seo-company-in-lucknow/' },
+    { label: 'Local SEO Services in Lucknow', href: '/local-seo-services-in-lucknow/' },
+    { label: 'AI SEO Company in Lucknow', href: '/ai-seo-company-in-lucknow/' },
+    { label: 'AEO Services in Lucknow', href: '/aeo-services-in-lucknow/' },
+    { label: 'Website Development Company in Lucknow', href: '/website-development-company-in-lucknow/' },
+  ]}
+  footerTagline="Dominating Google Search, Google Map Pack & AI Answers for Lucknow SaaS Companies"
+>
+
+  <!-- =====================================================================
+       SECTION 1: HERO (DARK SURFACE WITH UNIQUE SECTOR SEO HERO IMAGE)
+  ===================================================================== -->
+  <section class="relative surface-dark overflow-hidden pt-8 pb-12 sm:pt-16 sm:pb-20 lg:pt-20 lg:pb-24 border-b border-slate-800/80">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="absolute inset-0 mesh-glow pointer-events-none"></div>
+    <div class="absolute -top-36 -left-36 w-96 h-96 bg-brand-500/20 rounded-full blur-[130px] pointer-events-none"></div>
+    <div class="absolute top-1/4 -right-36 w-96 h-96 bg-accent-500/20 rounded-full blur-[130px] pointer-events-none"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-7 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns: Headline & CTA -->
+        <div class="lg:col-span-7 text-left min-w-0">
+          <div class="badge-dark mb-4 sm:mb-6">
+            <span class="w-2 h-2 rounded-full bg-brand-400 animate-ping flex-shrink-0"></span>
+            <span class="min-w-0">Rank #1 on Google, Maps & AI Engines for Lucknow SaaS & Tech</span>
+          </div>
+
+          <h1 class="font-display text-[1.95rem] sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-[1.15] sm:leading-[1.1] mb-4 sm:mb-6 text-glow">
+            SEO for SaaS Companies <br />
+            <span class="gradient-text-light">in Lucknow</span>
+          </h1>
+
+          <p class="text-[13.5px] sm:text-base md:text-lg text-slate-300 leading-relaxed mb-6 sm:mb-8 font-normal text-justify hyphens-auto [text-align-last:left]">
+            Looking for modern <strong class="text-white font-semibold">SEO for SaaS Companies in Lucknow</strong>? NK Digital Tech drives product signups and high-intent software demos through three proven channels: <strong class="text-white font-semibold">SEO</strong> for top Google and Map Pack rankings, <strong class="text-white font-semibold">AEO</strong> for direct voice answer snippets, and <strong class="text-white font-semibold">GEO</strong> so ChatGPT and Gemini recommend your platform first.
+          </p>
+
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 mb-7 sm:mb-10">
+            <a href="#contact" class="btn-primary w-full sm:w-auto min-h-[48px] text-sm sm:text-base px-5 sm:px-8 py-3.5 sm:py-4">
+              <span>Book SaaS Growth Audit</span>
+              <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+              </svg>
+            </a>
+            <a href="#services" class="btn-secondary-dark w-full sm:w-auto min-h-[48px] text-sm sm:text-base px-5 sm:px-7 py-3.5 sm:py-4">
+              <span>Explore Tech SEO Framework</span>
+            </a>
+          </div>
+
+          <!-- Trust Verification Strip (2x4 Grid on Mobile, Flex Pills on Desktop) -->
+          <div class="pt-5 sm:pt-6 border-t border-slate-800/80">
+            <div class="grid grid-cols-2 sm:flex sm:flex-wrap items-stretch sm:items-center gap-2">
+              {trustStrip.map((item) => (
+                <span class="px-2.5 sm:px-3 py-2 sm:py-1.5 rounded-lg bg-slate-900/90 border border-slate-800 text-[11px] sm:text-xs text-slate-300 font-medium flex items-center justify-center sm:justify-start text-center sm:text-left leading-tight">
+                  {item}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Unique Sector Hero Image -->
+        <div class="lg:col-span-5 min-w-0">
+          <div class="relative rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-700/80 shadow-2xl shadow-brand-500/15 bg-slate-900 group">
+            <div class="relative">
+              <img
+                src="/images/lucknow-saas-seo/hero-saas-seo-lucknow.webp"
+                alt="NK Digital Tech SaaS SEO analytics dashboard showing demo conversions and global organic pipeline growth for Lucknow tech company"
+                width="960"
+                height="540"
+                fetchpriority="high"
+                decoding="async"
+                class="w-full aspect-[16/10] sm:aspect-auto sm:h-72 md:h-[380px] lg:h-[400px] object-cover object-center group-hover:scale-105 transition-transform duration-500"
+              />
+              <div class="hidden sm:block absolute inset-0 bg-gradient-to-t from-[#050a14] via-transparent to-transparent opacity-80"></div>
+            </div>
+            <div class="relative sm:absolute sm:bottom-4 sm:left-4 sm:right-4 glass-card border-t sm:border border-slate-800 sm:rounded-2xl p-3.5 sm:p-4">
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-1">
+                <span class="text-xs font-bold text-white">Vibhuti Khand SaaS Funnel</span>
+                <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-400">
+                  <span class="w-2 h-2 rounded-full bg-emerald-400 flex-shrink-0"></span>
+                  +360% Trial Signups
+                </span>
+              </div>
+              <p class="text-[11px] sm:text-xs text-slate-300 text-justify hyphens-auto [text-align-last:left] leading-relaxed">
+                High-intent B2B enterprise software evaluations across Vibhuti Khand, Horizon Center, and international tech hubs.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 2: INTRODUCTION (CRISP WHITE CONTRAST SECTION + TEAM IMAGE)
+  ===================================================================== -->
+  <section class="relative surface-white py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns: Concise 2-Paragraph Unique Copy -->
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-light mb-3.5 sm:mb-4">B2B SaaS Search Authority</div>
+          <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-snug sm:leading-tight mb-4 sm:mb-6">
+            Accelerate Enterprise Software ARR & Free Trials Across <span class="gradient-text-dark">Lucknow & Global Markets</span>
+          </h2>
+          <div class="space-y-4 sm:space-y-5 text-slate-700 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            <p>
+              Lucknow's DLF Vibhuti Khand and Cyber Park are home to leading enterprise software and SaaS companies. Yet many tech teams get stuck paying high costs for Google Ads and software directories, while their own organic website search traffic remains small.
+            </p>
+            <p>
+              NK Digital Tech builds sustainable organic search systems for SaaS companies. We create product comparison pages, optimize software search queries, and ensure ChatGPT and Gemini recommend your platform, turning online searches into qualified software sales.
+            </p>
+          </div>
+          <div class="mt-6 sm:mt-8 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
+            <a href="#contact" class="btn-primary w-full sm:w-auto min-h-[48px]">
+              <span>Scale Your SaaS Pipeline</span>
+              <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+              </svg>
+            </a>
+            <a href="#why-us" class="btn-secondary-light w-full sm:w-auto min-h-[48px]">
+              <span>Why NK Digital Tech</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Unique Team Image + Stats -->
+        <div class="lg:col-span-5 space-y-4 sm:space-y-5 min-w-0">
+          <div class="rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-200 shadow-lg bg-slate-100">
+            <img
+              src="/images/lucknow-saas-seo/team-saas-seo-lucknow.webp"
+              alt="NK Digital Tech SaaS SEO specialists reviewing software comparison architecture and pipeline metrics in Lucknow"
+              width="800"
+              height="533"
+              class="w-full aspect-[16/10] sm:aspect-auto sm:h-64 lg:h-72 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="grid grid-cols-2 gap-3 sm:gap-4">
+            {[{"val":"360%+","label":"Demo Inquiries","sub":"Verified enterprise evaluations"},{"val":"62%","label":"CAC Reduction","sub":"Lower organic acquisition cost"},{"val":"$2.4M+","label":"ARR Influenced","sub":"Annual pipeline attribution"},{"val":"Top 3","label":"Alternative Queries","sub":"Competitor comparison rankings"}].map((stat) => (
+              <div class="elevated-card rounded-xl sm:rounded-2xl p-3.5 sm:p-4 min-w-0">
+                <div class="font-display font-black text-xl sm:text-2xl text-brand-600 mb-0.5">{stat.val}</div>
+                <div class="text-[11px] sm:text-xs font-bold text-slate-900 leading-snug">{stat.label}</div>
+                <div class="text-[10.5px] sm:text-[11px] text-slate-500 leading-snug mt-0.5">{stat.sub}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 3: PROBLEM STATEMENT (DEEP INDIGO DARK CONTRAST SECTION)
+  ===================================================================== -->
+  <section class="relative surface-indigo py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="max-w-7xl mx-auto relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns: Problem Statement Justified Copy -->
+        <div class="lg:col-span-7 min-w-0">
+          <div class="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-3.5 py-1 sm:py-1.5 rounded-full text-[10px] sm:text-xs font-bold uppercase tracking-wider sm:tracking-widest bg-amber-500/10 border border-amber-500/30 text-amber-300 max-w-full leading-snug mb-4 sm:mb-5">
+            <svg class="w-4 h-4 text-amber-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+            </svg>
+            <span>The SaaS Growth Dilemma</span>
+          </div>
+
+          <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-white tracking-tight leading-snug sm:leading-tight mb-4 sm:mb-6">
+            Why Generic SEO Tactics Fail Fast-Growing Software Companies
+          </h2>
+
+          <div class="space-y-4 sm:space-y-5 text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            <p>
+              Traditional SEO agencies treat B2B software companies like lifestyle blogs, publishing generic articles that attract students rather than buyers. Meanwhile, high-intent buyer searches like software comparisons, feature lists, and integration guides are completely neglected.
+            </p>
+            <p>
+              Enterprise buyers and tech leaders evaluate software integrations, security features, and product differences directly on Google and AI tools. If your software lacks clear comparison pages and strong AI visibility, you lose valuable business accounts to competitors who are easier to find.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Diagnostic Comparison Cards -->
+        <div class="lg:col-span-5 space-y-3.5 sm:space-y-4 min-w-0">
+          <div class="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6 border-l-4 border-l-rose-500">
+            <div class="flex flex-wrap items-center justify-between gap-1.5 mb-2">
+              <span class="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-rose-400">Generic Blog SEO</span>
+              <span class="text-[11px] sm:text-xs text-slate-400">Empty Traffic & Zero Demos</span>
+            </div>
+            <h3 class="font-display font-bold text-[15px] sm:text-base text-white mb-2 leading-snug">High Website Pageviews With Stagnant ARR</h3>
+            <p class="text-xs text-slate-300 leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+              Relying on generic informational blog posts that bring casual readers rather than corporate decision-makers looking to purchase software solutions.
+            </p>
+          </div>
+
+          <div class="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6 border-l-4 border-l-emerald-400">
+            <div class="flex flex-wrap items-center justify-between gap-1.5 mb-2">
+              <span class="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-emerald-400">NK Digital Tech System</span>
+              <span class="text-[11px] sm:text-xs text-brand-300">Product-Led Bottom-of-Funnel SEO</span>
+            </div>
+            <h3 class="font-display font-bold text-[15px] sm:text-base text-white mb-2 leading-snug">Direct High-Value Enterprise Pipeline</h3>
+            <p class="text-xs text-slate-300 leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+              Capturing high-intent buyers through competitor comparison matrices, integration hubs, and generative AI recommendations that drive qualified sales demos.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 4: SERVICES (LIGHT COOL ALABASTER CONTRAST + SERVICES IMAGE)
+  ===================================================================== -->
+  <section id="services" class="relative surface-cool py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <!-- Services Header with Unique Services Image -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 items-center mb-9 sm:mb-16">
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-light mb-3">Tailored Lucknow SaaS SEO Disciplines</div>
+          <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-snug sm:leading-tight mb-3 sm:mb-4">
+            Full-Funnel Organic Search Architecture for B2B Software
+          </h2>
+          <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            We structure our SaaS search methodologies around your exact buyer personas, integration ecosystems, and recurring revenue milestones.
+          </p>
+        </div>
+        <div class="lg:col-span-5 min-w-0">
+          <div class="rounded-2xl overflow-hidden border border-slate-200 shadow-md bg-white">
+            <img
+              src="/images/lucknow-saas-seo/services-saas-seo-lucknow.webp"
+              alt="NK Digital Tech technical developers deploying software schema and comparison architecture for Lucknow SaaS platform"
+              width="800"
+              height="450"
+              class="w-full aspect-[16/9] sm:aspect-auto sm:h-56 lg:h-64 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- 3 Columns x 2 Rows Grid Layout -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-7">
+        {services.map((s) => (
+          <div class="elevated-card rounded-2xl p-5 sm:p-7 flex flex-col justify-between group sm:hover:-translate-y-1">
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-4 sm:mb-6">
+                <div class={`w-11 h-11 sm:w-12 sm:h-12 rounded-xl border flex items-center justify-center flex-shrink-0 ${s.iconStyle}`}>
+                  <Fragment set:html={s.icon} />
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class={`text-[10.5px] sm:text-[11px] font-semibold px-2.5 py-1 rounded-md ${s.badgeColor}`}>
+                    {s.category}
+                  </span>
+                  <span class="font-display font-black text-base sm:text-lg text-slate-300">{s.num}</span>
+                </div>
+              </div>
+
+              <h3 class="font-display font-bold text-[17px] sm:text-xl text-slate-900 mb-2.5 sm:mb-3 leading-snug group-hover:text-brand-600 transition-colors">
+                {s.title}
+              </h3>
+
+              <p class="text-slate-600 text-[13px] sm:text-sm leading-relaxed mb-4 sm:mb-6 text-justify hyphens-auto [text-align-last:left]">
+                {s.body}
+              </p>
+            </div>
+
+            <div>
+              <div class={`rounded-xl border p-3.5 sm:p-4 mb-3.5 sm:mb-5 ${s.impactStyle}`}>
+                <div class="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-slate-900 mb-1">
+                  <svg class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                  </svg>
+                  <span>Commercial Impact</span>
+                </div>
+                <p class="text-xs text-slate-700 leading-relaxed font-medium text-justify hyphens-auto [text-align-last:left]">
+                  {s.impact}
+                </p>
+              </div>
+
+              <a href={s.href} class="inline-flex items-center gap-2 py-2 min-h-[40px] text-xs font-bold text-brand-600 hover:text-brand-700 no-underline hover:no-underline group-hover:gap-3 transition-all">
+                <span>{s.cta}</span>
+                <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 5: REGIONAL LOCATIONS (DARK NAVY + LUCKNOW CORRIDORS)
+  ===================================================================== -->
+  <section id="locations" class="relative surface-navy py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <!-- Regional Header with Unique Locations Image -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 items-center mb-9 sm:mb-16">
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-dark mb-3">Lucknow Tech Corridors</div>
+          <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-white tracking-tight leading-snug sm:leading-tight mb-3 sm:mb-4">
+            Dominating Enterprise Tech Belts Across Lucknow
+          </h2>
+          <p class="text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            Lucknow's tech ecosystem spans high-density commercial towers and modern tech parks. We capture enterprise software demand across every major corridor.
+          </p>
+        </div>
+        <div class="lg:col-span-5 min-w-0">
+          <div class="rounded-2xl overflow-hidden border border-slate-700/80 shadow-xl bg-slate-900">
+            <img
+              src="/images/lucknow-saas-seo/locations-saas-seo-lucknow.webp"
+              alt="Map of Lucknow showing tech innovation clusters including DLF Vibhuti Khand and Cyber Park"
+              width="800"
+              height="450"
+              class="w-full aspect-[16/9] sm:aspect-auto sm:h-56 lg:h-64 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- 1 Row x 4 Columns Responsive Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+        {cities.map((c) => (
+          <div class="glass-card rounded-2xl p-5 sm:p-6 flex flex-col justify-between group sm:hover:-translate-y-1">
+            <div>
+              <div class={`h-1 w-full bg-gradient-to-r ${c.accent} rounded-full mb-4 sm:mb-5`}></div>
+
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-3.5 sm:mb-4">
+                <span class="px-2.5 py-1 rounded-md bg-slate-800 border border-slate-700 text-[11px] font-bold uppercase tracking-wider text-brand-300">
+                  {c.hub}
+                </span>
+                <span class="text-xs font-semibold text-slate-400">{c.city}</span>
+              </div>
+
+              <h3 class="font-display font-bold text-base sm:text-lg text-white mb-2.5 sm:mb-3 leading-snug">
+                <a href={c.href} class="hover:text-brand-300 no-underline hover:no-underline transition-colors">{c.keyword}</a>
+              </h3>
+
+              <p class="text-slate-300 text-[13px] sm:text-sm leading-relaxed mb-4 sm:mb-5 text-justify hyphens-auto [text-align-last:left]">
+                {c.desc}
+              </p>
+            </div>
+
+            <div class="pt-3.5 sm:pt-4 border-t border-slate-800">
+              <p class="text-[11px] text-slate-400 mb-3 sm:mb-4 leading-normal">
+                <strong class="text-slate-300">Key Corridors:</strong> {c.corridor}
+              </p>
+              <a href={c.href} class="inline-flex items-center gap-1.5 py-2 min-h-[40px] text-xs font-bold text-brand-400 hover:text-brand-300 no-underline hover:no-underline group-hover:gap-2.5 transition-all">
+                <span>{c.cta}</span>
+                <svg class="w-3.5 h-3.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 6: WHY NK DIGITAL TECH (CRISP WHITE CONTRAST SECTION)
+  ===================================================================== -->
+  <section id="why-us" class="relative surface-white py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-14 text-left sm:text-center">
+        <div class="badge-light mb-3">The NK Digital Tech Advantage</div>
+        <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-snug sm:leading-tight mb-3 sm:mb-4">
+          Why Lucknow SaaS Founders Partner with NK Digital Tech
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed mb-4 text-justify hyphens-auto [text-align-last:left]">
+          We do not produce superficial blog content. We build compounding product-led organic search engines that lower Customer Acquisition Cost (CAC) and accelerate Net Revenue Retention.
+        </p>
+        <p class="text-slate-700 font-semibold text-xs sm:text-sm">
+          Comparing Generic Agencies Against NK Digital Tech B2B SaaS Search Strategy
+        </p>
+      </div>
+
+      <!-- Desktop Comparison Matrix -->
+      <div class="hidden md:block overflow-hidden rounded-2xl border border-slate-200 shadow-lg">
+        <table class="w-full text-left border-collapse">
+          <thead>
+            <tr class="bg-slate-900 text-white">
+              <th class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-slate-300 w-1/4">
+                Evaluation Criteria
+              </th>
+              <th class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-rose-300 w-[37.5%] border-l border-slate-800">
+                Typical Agency Approach
+              </th>
+              <th class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-brand-300 w-[37.5%] border-l border-slate-800 bg-slate-950">
+                NK Digital Tech SaaS Engine
+              </th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200 text-sm">
+            {comparison.map((row, idx) => (
+              <tr class={idx % 2 === 0 ? 'bg-white' : 'bg-slate-50/80'}>
+                <td class="py-5 px-6 font-display font-bold text-slate-900">
+                  {row.metric}
+                </td>
+                <td class="py-5 px-6 text-slate-600 border-l border-slate-200">
+                  <div class="flex items-start gap-2.5">
+                    <svg class="w-4 h-4 text-rose-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                    <span class="text-justify">{row.typical}</span>
+                  </div>
+                </td>
+                <td class="py-5 px-6 text-slate-900 font-medium border-l border-slate-200 bg-sky-50/40">
+                  <div class="flex items-start gap-2.5">
+                    <svg class="w-4 h-4 text-emerald-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span class="text-justify">{row.nk}</span>
+                  </div>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Mobile Comparison Cards -->
+      <div class="md:hidden space-y-3.5">
+        {comparison.map((row) => (
+          <div class="elevated-card rounded-2xl p-4 space-y-2.5">
+            <h3 class="font-display font-bold text-slate-900 text-[15px] leading-snug">{row.metric}</h3>
+            <div class="rounded-xl bg-rose-50 border border-rose-100 p-3">
+              <div class="flex items-center gap-1.5 mb-1">
+                <svg class="w-3.5 h-3.5 text-rose-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+                <p class="text-[10px] font-bold uppercase tracking-wider text-rose-600">Typical Agency Approach</p>
+              </div>
+              <p class="text-xs text-slate-700 leading-relaxed text-justify hyphens-auto [text-align-last:left]">{row.typical}</p>
+            </div>
+            <div class="rounded-xl bg-sky-50 border border-sky-200 p-3">
+              <div class="flex items-center gap-1.5 mb-1">
+                <svg class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                </svg>
+                <p class="text-[10px] font-bold uppercase tracking-wider text-brand-600">NK Digital Tech SaaS Engine</p>
+              </div>
+              <p class="text-xs text-slate-900 font-semibold leading-relaxed text-justify hyphens-auto [text-align-last:left]">{row.nk}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 7: SECTOR VERTICALS WE SCALE (LIGHT SLATE 3x2 GRID)
+  ===================================================================== -->
+  <section id="industries" class="relative surface-slate py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-16 text-left sm:text-center">
+        <div class="badge-light mb-3">SaaS Vertical Specialization</div>
+        <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-snug sm:leading-tight mb-3 sm:mb-4">
+          Tailored SEO Roadmaps for Every Software Category
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          Different software business models require distinct search funnels and conversion mechanics. Here is how we optimize each SaaS vertical in Lucknow.
+        </p>
+      </div>
+
+      <!-- 3 Columns x 2 Rows Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-7">
+        {propertySegments.map((ind) => (
+          <div class={`elevated-card rounded-2xl p-5 sm:p-7 border-t-4 ${ind.accentBorder} flex flex-col justify-between sm:hover:-translate-y-1`}>
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-4 sm:mb-5">
+                <div class={`w-10 h-10 sm:w-11 sm:h-11 rounded-xl border flex items-center justify-center flex-shrink-0 ${ind.iconBg}`}>
+                  <Fragment set:html={ind.icon} />
+                </div>
+                <span class="text-[11px] font-semibold text-slate-600 bg-slate-100 px-2.5 py-1 rounded-md">
+                  {ind.sector}
+                </span>
+              </div>
+
+              <h3 class="font-display font-bold text-[17px] sm:text-xl text-slate-900 mb-3 sm:mb-4 leading-snug">
+                {ind.title}
+              </h3>
+
+              <div class="mb-4 sm:mb-5">
+                <p class="text-[11px] font-bold uppercase tracking-wider text-brand-600 mb-1.5">
+                  Search &amp; AI Strategy
+                </p>
+                <p class="text-slate-600 text-[13px] sm:text-sm leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+                  {ind.focus}
+                </p>
+              </div>
+            </div>
+
+            <div class="rounded-xl bg-emerald-50/70 border border-emerald-200/80 p-3.5 sm:p-4">
+              <p class="text-[11px] font-bold uppercase tracking-wider text-emerald-700 mb-1">
+                Commercial Result
+              </p>
+              <p class="text-slate-800 text-xs font-medium leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+                {ind.outcome}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 8: HOW WE WORK (CRISP WHITE CONTRAST SECTION - 4 STAGES)
+  ===================================================================== -->
+  <section class="relative surface-white py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-9 sm:mb-16 text-left sm:text-center">
+        <div class="badge-light mb-3">Our 4 Stage Execution</div>
+        <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-snug sm:leading-tight mb-3 sm:mb-4">
+          Our 4-Stage B2B SaaS SEO Roadmap
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          From initial product taxonomy audit to continuous AI search domination, here is how we build compounding ARR growth for your Lucknow software company.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-7">
+        {stages.map((s) => (
+          <div class="elevated-card rounded-2xl p-5 sm:p-8 relative overflow-hidden group sm:hover:-translate-y-1">
+            <div class="flex items-center justify-between gap-4 mb-3.5 sm:mb-5">
+              <span class={`inline-flex items-center px-2.5 sm:px-3 py-1 rounded-lg text-xs font-bold uppercase tracking-wider text-white bg-gradient-to-r ${s.accent}`}>
+                {s.num}
+              </span>
+              <span class="font-display font-black text-3xl sm:text-4xl text-slate-200 group-hover:text-slate-300 transition-colors">
+                {s.step}
+              </span>
+            </div>
+            <h3 class="font-display font-bold text-[17px] sm:text-xl text-slate-900 mb-2.5 sm:mb-3 leading-snug">
+              {s.title}
+            </h3>
+            <p class="text-slate-600 text-[13px] sm:text-sm leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+              {s.body}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 9: CONCLUSION / PARTNER SECTION (DARK INDIGO + GROWTH IMAGE)
+  ===================================================================== -->
+  <section class="relative surface-indigo py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-7 sm:gap-10 lg:gap-12 items-center">
+        <!-- Left 7 Columns: Conclusion Paragraphs (Justified) -->
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-dark mb-3.5 sm:mb-4">Scale Your Software Platform</div>
+          <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-white tracking-tight leading-snug sm:leading-tight mb-4 sm:mb-6">
+            Turn Technical Search Traffic into Predictable Recurring Revenue
+          </h2>
+          <div class="space-y-4 sm:space-y-5 text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+            <p>
+              In enterprise software, customer acquisition efficiency drives healthy growth. Relying only on paid ads leads to rising customer costs each year. When your software ranks for product comparisons on Google and earns recommendations from AI engines, your sales team connects directly with qualified business buyers.
+            </p>
+            <p>
+              NK Digital Tech turns organic search into a predictable customer acquisition channel for SaaS companies. We help you outrank global competitors and scale revenue steadily through focused software SEO.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Unique Growth Image -->
+        <div class="lg:col-span-5 min-w-0">
+          <div class="rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-700/80 shadow-2xl bg-slate-900">
+            <img
+              src="/images/lucknow-saas-seo/growth-saas-seo-lucknow.webp"
+              alt="NK Digital Tech SaaS SEO case study showing exponential growth in organic demo requests and software pipeline in Lucknow"
+              width="800"
+              height="450"
+              class="w-full aspect-[16/10] sm:aspect-auto sm:h-64 lg:h-72 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 10: FAQ (LIGHT COOL SLATE CONTRAST SECTION)
+  ===================================================================== -->
+  <section id="faq" class="relative surface-cool py-12 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-left sm:text-center mb-9 sm:mb-14">
+        <div class="badge-light mb-3">Questions Asked on Google, ChatGPT &amp; Gemini</div>
+        <h2 class="font-display font-extrabold text-[1.45rem] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-snug sm:leading-tight mb-3 sm:mb-4">
+          Frequently Asked SaaS SEO Questions
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-justify hyphens-auto [text-align-last:left]">
+          Clear, factual answers regarding search strategy, pipeline attribution, and commercial outcomes for Lucknow software companies.
+        </p>
+      </div>
+
+      <div class="space-y-3 sm:space-y-4">
+        {faqs.map((f, i) => (
+          <details class="elevated-card rounded-2xl group overflow-hidden" open={i === 0}>
+            <summary class="flex items-start sm:items-center justify-between gap-3 sm:gap-4 px-4 sm:px-6 py-4 sm:py-5 min-h-[54px] select-none">
+              <div class="flex items-start sm:items-center gap-2.5 sm:gap-3.5 text-left min-w-0">
+                <span class="w-6 h-6 sm:w-7 sm:h-7 rounded-lg bg-sky-50 border border-sky-200 text-brand-600 font-display font-bold text-xs flex items-center justify-center flex-shrink-0 mt-0.5 sm:mt-0">
+                  0{i + 1}
+                </span>
+                <span class="font-display font-bold text-slate-900 text-[14px] sm:text-base md:text-lg leading-snug">
+                  {f.q}
+                </span>
+              </div>
+              <span class="faq-icon w-7 h-7 sm:w-8 sm:h-8 rounded-full border border-slate-200 text-slate-600 flex items-center justify-center flex-shrink-0 mt-0.5 sm:mt-0">
+                <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                </svg>
+              </span>
+            </summary>
+            <div class="px-4 sm:px-6 pb-5 sm:pb-6 pt-3 text-slate-600 text-[13px] sm:text-sm md:text-base leading-relaxed border-t border-slate-100 text-justify hyphens-auto [text-align-last:left]">
+              {f.a}
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 11: SHORT 2 TO 3 LINE CALL TO ACTION BANNER (LAST SECTION)
+  ===================================================================== -->
+  <section id="contact" class="relative surface-dark py-12 pb-24 sm:py-16 lg:py-20 px-4 sm:px-6 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-5xl mx-auto">
+      <div class="rounded-2xl sm:rounded-3xl bg-gradient-to-r from-brand-600 via-brand-700 to-accent-700 p-6 sm:p-10 md:p-12 text-center text-white shadow-2xl border border-white/15 relative overflow-hidden">
+        <div class="relative z-10 max-w-2xl mx-auto">
+          <h2 class="font-display font-black text-[1.45rem] sm:text-3xl md:text-4xl text-white tracking-tight leading-snug mb-3 sm:mb-4">
+            Ready to Scale Your Lucknow SaaS Organic Pipeline?
+          </h2>
+
+          <p class="text-sky-50 text-[13px] sm:text-sm md:text-base leading-relaxed mb-6 sm:mb-8">
+            Partner with NK Digital Tech to capture qualified enterprise demos, outrank global software incumbents, and lead AI recommendations across Lucknow.
+          </p>
+
+          <a
+            href="/contact-us/"
+            class="inline-flex w-full sm:w-auto min-h-[48px] items-center justify-center gap-2 sm:gap-3 px-5 sm:px-8 py-3.5 sm:py-4 rounded-xl bg-white text-slate-950 hover:bg-sky-50 no-underline hover:no-underline font-display font-bold text-sm sm:text-base shadow-xl transition-all duration-300 active:scale-95 text-center leading-snug"
+          >
+            <span>Claim Your Free SaaS SEO Growth Audit</span>
+            <svg class="w-4 h-4 sm:w-5 sm:h-5 text-brand-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mobile Sticky Bottom Quick Action Bar -->
+  <div class="sm:hidden fixed bottom-0 inset-x-0 z-40 bg-[#050a14]/95 backdrop-blur-xl border-t border-slate-800 px-3.5 pt-2.5 pb-[max(0.625rem,env(safe-area-inset-bottom))] shadow-[0_-8px_24px_rgba(0,0,0,0.45)]">
+    <div class="flex items-center gap-2.5">
+      <a
+        href="/contact-us/"
+        class="btn-primary flex-1 min-h-[44px] py-2.5 px-4 text-xs font-bold rounded-xl no-underline hover:no-underline"
+      >
+        <span>Book SaaS Growth Audit</span>
+        <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+        </svg>
+      </a>
+      <a
+        href="#services"
+        class="btn-secondary-dark min-h-[44px] py-2.5 px-3.5 text-xs font-semibold rounded-xl flex-shrink-0 no-underline hover:no-underline"
+      >
+        <span>Services</span>
+      </a>
+    </div>
+  </div>
+
+</Layout>

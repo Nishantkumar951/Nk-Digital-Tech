@@ -1,0 +1,1028 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import '../../styles/global.css';
+
+const pageTitle = "Digital Marketing for Educational Institutes in Lucknow | NK";
+const pageDescription = "Need Digital Marketing for Educational Institutes in Lucknow? NK Digital Tech drives direct school admissions, coaching batch signups and college inquiries.";
+const pageCanonical = "https://www.nkdigitaltech.net/best-digital-marketing-company-in-lucknow/Educational-Institutes/";
+
+const services = [
+  {
+    "num": "01",
+    "category": "Course & Coaching SEO",
+    "icon": "<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z\"/></svg>",
+    "iconStyle": "bg-sky-50 border-sky-200 text-brand-600",
+    "impactStyle": "bg-sky-50/80 border-sky-200/80 text-slate-800",
+    "badgeColor": "text-brand-600 bg-sky-100/80",
+    "title": "Coaching Centre Digital Marketing in Lucknow",
+    "body": "Through coaching centre digital marketing in Lucknow, we build dedicated syllabus, faculty and test series pages that outrank generic directories.",
+    "impact": "Brings motivated aspirants directly to your counselling desk all year.",
+    "cta": "View Best SEO Company in Lucknow",
+    "href": "/best-seo-company-in-lucknow/"
+  },
+  {
+    "num": "02",
+    "category": "Campus Google Maps",
+    "icon": "<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z\"/><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M15 11a3 3 0 11-6 0 3 3 0 016 0z\"/></svg>",
+    "iconStyle": "bg-emerald-50 border-emerald-200 text-emerald-600",
+    "impactStyle": "bg-emerald-50/80 border-emerald-200/80 text-slate-800",
+    "badgeColor": "text-emerald-700 bg-emerald-100/80",
+    "title": "Local Map Rankings for Branches & Schools",
+    "body": "We optimise Google Business Profiles, campus tour photos and parent reviews across Kapoorthala, Aliganj, Hazratganj and Gomti Nagar branches.",
+    "impact": "Drives higher parent calls and campus direction taps.",
+    "cta": "View Local SEO Services in Lucknow",
+    "href": "/local-seo-services-in-lucknow/"
+  },
+  {
+    "num": "03",
+    "category": "Fast Admission Websites",
+    "icon": "<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M13 10V3L4 14h7v7l9-11h-7z\"/></svg>",
+    "iconStyle": "bg-cyan-50 border-cyan-200 text-cyan-700",
+    "impactStyle": "bg-cyan-50/80 border-cyan-200/80 text-slate-800",
+    "badgeColor": "text-cyan-700 bg-cyan-100/80",
+    "title": "Mobile Prospectus & Instant Demo Forms",
+    "body": "We replace 20 MB brochure downloads with fast HTML batch tables, faculty bios and quick WhatsApp counselling booking forms.",
+    "impact": "Increases completed student admission enquiries across every device.",
+    "cta": "View Website Development Company in Lucknow",
+    "href": "/website-development-company-in-lucknow/"
+  },
+  {
+    "num": "04",
+    "category": "Fee & Syllabus AEO",
+    "icon": "<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z\"/></svg>",
+    "iconStyle": "bg-amber-50 border-amber-200 text-amber-600",
+    "impactStyle": "bg-amber-50/80 border-amber-200/80 text-slate-800",
+    "badgeColor": "text-amber-700 bg-amber-100/80",
+    "title": "Fee Structure & Eligibility Answer Boxes",
+    "body": "We structure clear 50 word answer blocks and FAQ schema for nursery age criteria, coaching fees and scholarship test dates.",
+    "impact": "Captures parent attention directly at the top of Google results.",
+    "cta": "View AEO Services in Lucknow",
+    "href": "/aeo-services-in-lucknow/"
+  },
+  {
+    "num": "05",
+    "category": "AI Campus Citations (GEO)",
+    "icon": "<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z\"/></svg>",
+    "iconStyle": "bg-violet-50 border-violet-200 text-accent-600",
+    "impactStyle": "bg-violet-50/80 border-violet-200/80 text-slate-800",
+    "badgeColor": "text-accent-600 bg-violet-100/80",
+    "title": "University Admission Marketing in Lucknow for AI",
+    "body": "Our university admission marketing in Lucknow uses EducationalOrganization and Course schema so ChatGPT and Gemini recommend your degree programs.",
+    "impact": "Places your institute in AI comparison lists across UP and North India.",
+    "cta": "View AI SEO Company in Lucknow",
+    "href": "/ai-seo-company-in-lucknow/"
+  },
+  {
+    "num": "06",
+    "category": "EdTech & Preschool Growth",
+    "icon": "<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253\"/></svg>",
+    "iconStyle": "bg-indigo-50 border-indigo-200 text-indigo-600",
+    "impactStyle": "bg-indigo-50/80 border-indigo-200/80 text-slate-800",
+    "badgeColor": "text-indigo-700 bg-indigo-100/80",
+    "title": "EdTech & Early Learning Campaigns",
+    "body": "From an edtech digital marketing agency in Lucknow plan for online cohorts to a preschool marketing agency in Lucknow for local daycares, we match local demand.",
+    "impact": "Builds steady parent calls and online trial class signups.",
+    "cta": "Request Admission Growth Audit",
+    "href": "#contact"
+  }
+];
+
+const cities = [
+  {
+    "hub": "Edu Hub 01",
+    "city": "Aliganj & Kapoorthala",
+    "corridor": "Kapoorthala Crossing • Aliganj • Purania",
+    "keyword": "UPSC, JEE, NEET & Banking Coaching",
+    "desc": "We put coaching centres at the top of student searches for mock tests, foundation batches and hostel friendly study hubs.",
+    "cta": "Audit Aliganj Visibility",
+    "href": "#contact",
+    "accent": "from-brand-500 to-sky-400"
+  },
+  {
+    "hub": "Edu Hub 02",
+    "city": "Hazratganj & Lalbagh",
+    "corridor": "Hazratganj • Ashok Marg • Narhi",
+    "keyword": "Skill Institutes, Law & Commerce Batches",
+    "desc": "We connect skill academies, design institutes and CA/CS coaching centres with college students across central Lucknow.",
+    "cta": "Audit Hazratganj Visibility",
+    "href": "#contact",
+    "accent": "from-accent-500 to-violet-400"
+  },
+  {
+    "hub": "Edu Hub 03",
+    "city": "Gomti Nagar & Indira Nagar",
+    "corridor": "Patrakarpuram • Vibhuti Khand • Munshipulia",
+    "keyword": "CBSE/ICSE Schools & Preschools",
+    "desc": "We help local schools and preschools capture nearby parent inquiries for nursery admissions and transport routes.",
+    "cta": "Explore Lucknow Local SEO",
+    "href": "/local-seo-services-in-lucknow/",
+    "accent": "from-cyan-500 to-teal-400"
+  },
+  {
+    "hub": "Edu Hub 04",
+    "city": "Faizabad Road & Sitapur Road",
+    "corridor": "BBD Belt • Chinhat • Jankipuram • IIM Road",
+    "keyword": "B.Tech, Pharmacy & Degree Colleges",
+    "desc": "We attract UP and Bihar degree aspirants searching for placement records, hostel facilities and campus visits.",
+    "cta": "Audit College Inquiries",
+    "href": "#contact",
+    "accent": "from-emerald-500 to-green-400"
+  }
+];
+
+const comparison = [
+  {
+    "metric": "Lead Ownership",
+    "typical": "Paid directories sharing inquiries with 6 competing colleges",
+    "nk": "100% direct student calls and campus visit bookings"
+  },
+  {
+    "metric": "Prospectus Access",
+    "typical": "20 MB PDFs failing to load on student mobile phones",
+    "nk": "Sub 2 second HTML syllabus and fee overview pages"
+  },
+  {
+    "metric": "Fee Transparency",
+    "typical": "Unclear pages hiding admission dates and scholarship info",
+    "nk": "Clear AEO tables capturing parent Google snippets"
+  },
+  {
+    "metric": "Branch Maps",
+    "typical": "Incomplete campus pins with outdated timings",
+    "nk": "Top 3 Google Map Pack across Aliganj, Hazratganj & Gomti Nagar"
+  },
+  {
+    "metric": "AI Search Citations",
+    "typical": "Excluded from ChatGPT top coaching & school answers",
+    "nk": "Structured Course schema recommended by Gemini & ChatGPT"
+  },
+  {
+    "metric": "Admission ROI",
+    "typical": "Rising ad spend before every exam session",
+    "nk": "Year round organic admission flow across all seasons"
+  }
+];
+
+const sectorSegments = [
+  {
+    "sector": "K 12 Schools",
+    "title": "CBSE, ICSE & International Schools",
+    "focus": "Our digital marketing for schools in Lucknow highlights safe campus photos, teacher ratios, sports labs and admission dates.",
+    "outcome": "Higher parent school tour bookings and direct nursery seats.",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5\"/></svg>",
+    "accentBorder": "border-t-brand-500",
+    "iconBg": "bg-sky-50 text-brand-600 border-sky-200"
+  },
+  {
+    "sector": "Test Prep Coaching",
+    "title": "UPSC, JEE, NEET & CUET Academies",
+    "focus": "Highlights verified toppers, faculty experience and demo batch calendars cleanly across Google Search and Maps.",
+    "outcome": "Full foundation and repeater batches with lower ad spend.",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z\"/></svg>",
+    "accentBorder": "border-t-amber-500",
+    "iconBg": "bg-amber-50 text-amber-600 border-amber-200"
+  },
+  {
+    "sector": "Higher Education",
+    "title": "Colleges, Law & Management Campuses",
+    "focus": "Through digital marketing for colleges in Lucknow and university admission marketing in Lucknow, we rank placement reports and MBA/BBA pages.",
+    "outcome": "Direct outstation applications across Uttar Pradesh districts.",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M12 14l9-5-9-5-9 5 9 5z\"/></svg>",
+    "accentBorder": "border-t-cyan-500",
+    "iconBg": "bg-cyan-50 text-cyan-700 border-cyan-200"
+  },
+  {
+    "sector": "Early Childhood",
+    "title": "Play Schools, Daycares & Montessori Centres",
+    "focus": "Through a preschool marketing agency in Lucknow plan, we build hyper local Map Pack trust among working parents within 5 km.",
+    "outcome": "Consistent toddler batch enrollments all year round.",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z\"/></svg>",
+    "accentBorder": "border-t-emerald-500",
+    "iconBg": "bg-emerald-50 text-emerald-600 border-emerald-200"
+  },
+  {
+    "sector": "Skill & Tech Training",
+    "title": "Coding, Spoken English & Study Abroad",
+    "focus": "Targets graduates seeking job placement courses, IELTS coaching and visa counselling in Hazratganj and Gomti Nagar.",
+    "outcome": "High value career counselling bookings and batch signups.",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4\"/></svg>",
+    "accentBorder": "border-t-indigo-500",
+    "iconBg": "bg-indigo-50 text-indigo-600 border-indigo-200"
+  },
+  {
+    "sector": "Online Cohorts",
+    "title": "EdTech Startups & Hybrid Learning Apps",
+    "focus": "As an edtech digital marketing agency in Lucknow, we rank free mock tests, study guides and live webinar signups nationwide.",
+    "outcome": "Lower customer acquisition costs and steady online trial leads.",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z\"/></svg>",
+    "accentBorder": "border-t-rose-500",
+    "iconBg": "bg-rose-50 text-rose-600 border-rose-200"
+  }
+];
+
+const stages = [
+  {
+    "num": "Stage 01",
+    "step": "01",
+    "title": "Course Website & Directory Leak Audit",
+    "body": "We review slow PDF prospectuses, form drop offs and branch Google Business listings against top Lucknow competitors.",
+    "accent": "from-brand-600 to-sky-500"
+  },
+  {
+    "num": "Stage 02",
+    "step": "02",
+    "title": "Admission Keywords & Schema Architecture",
+    "body": "We map exam, grade and district searches and implement Course, EducationalOrganization and FAQ structured data.",
+    "accent": "from-accent-600 to-violet-500"
+  },
+  {
+    "num": "Stage 03",
+    "step": "03",
+    "title": "Fast Program Pages & Map Pack Launch",
+    "body": "We build crisp HTML course guides, fee clarity snippets and updated branch Map profiles across Lucknow.",
+    "accent": "from-cyan-600 to-teal-500"
+  },
+  {
+    "num": "Stage 04",
+    "step": "04",
+    "title": "Admission Call Tracking & AI Optimisation",
+    "body": "We review prospectus requests, demo class bookings and ChatGPT citations every two weeks to grow verified admissions.",
+    "accent": "from-emerald-600 to-green-500"
+  }
+];
+
+const faqs = [
+  {
+    "q": "Why invest in Digital Marketing for Educational Institutes in Lucknow instead of portal ads?",
+    "a": "Listing portals often share student inquiries across several competing institutes. Digital Marketing for Educational Institutes in Lucknow builds your own search rankings, Map Pack leadership and AI citations so parents contact your campus exclusively."
+  },
+  {
+    "q": "Can you promote multiple coaching or school branches across Lucknow?",
+    "a": "Yes. We create dedicated local pages and verified Google Business Profiles for each branch in Aliganj, Hazratganj, Gomti Nagar or Indira Nagar so nearby families call their closest campus."
+  },
+  {
+    "q": "How do AI tools like ChatGPT decide which Lucknow coaching or college to suggest?",
+    "a": "AI assistants read structured Course schema, clear placement or exam result data, consistent local citations and authentic student reviews. We organise all of these clearly on your website."
+  },
+  {
+    "q": "When should we start SEO before our next Lucknow admission cycle?",
+    "a": "Starting 3 to 4 months ahead of peak admission months works best, as Map Pack fixes bring inquiries in 4 to 6 weeks while broad organic course rankings compound ahead of exam results."
+  },
+  {
+    "q": "Do you also rebuild slow school and coaching websites?",
+    "a": "Yes. As a Website Development Company in Lucknow, we replace slow brochure heavy websites with sub two second mobile pages featuring instant WhatsApp and demo booking forms."
+  }
+];
+
+const trustStrip = [
+  "Direct Admission Enquiries",
+  "Zero Portal Lead Leakage",
+  "Top 3 Map Pack Campuses",
+  "ChatGPT & AI Answers",
+  "Fee & Syllabus Snippets",
+  "Fast Mobile Course Pages",
+  "Prospectus Download Forms",
+  "Counsellor Call Tracking"
+];
+
+const sectorDMServiceSchema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Digital Marketing for Educational Institutes in Lucknow",
+  "serviceType": "Sector Digital Marketing, Search Engine Optimisation & AI Search Growth",
+  "provider": {
+    "@type": "ProfessionalService",
+    "name": "NK Digital Tech",
+    "url": "https://www.nkdigitaltech.net/",
+    "email": "nkdigitaltech1@gmail.com",
+    "telephone": "+91-80521-89051",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Lucknow",
+      "addressRegion": "Uttar Pradesh",
+      "addressCountry": "IN"
+    }
+  },
+  "areaServed": ["Lucknow","Aliganj","Kapoorthala","Hazratganj","Gomti Nagar","Indira Nagar","Faizabad Road","Sitapur Road"],
+  "description": pageDescription,
+  "url": pageCanonical
+});
+
+const sectorDMFAQSchema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map((item) => ({
+    "@type": "Question",
+    "name": item.q,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": item.a
+    }
+  }))
+});
+
+const sectorDMBreadcrumbSchema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.nkdigitaltech.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Best Digital Marketing Company in Lucknow",
+      "item": "https://www.nkdigitaltech.net/best-digital-marketing-company-in-lucknow/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Digital Marketing for Educational Institutes in Lucknow",
+      "item": pageCanonical
+    }
+  ]
+});
+---
+
+<Layout
+  title={pageTitle}
+  description={pageDescription}
+  canonical={pageCanonical}
+  ogImage="https://www.nkdigitaltech.net/images/lucknow-education-dm/hero-education-dm-lucknow.webp"
+  preloadImage="/images/lucknow-education-dm/hero-education-dm-lucknow.webp"
+  hideLocationsNav={false}
+  customSchemaLocalBusiness={sectorDMServiceSchema}
+  customSchemaFAQ={sectorDMFAQSchema}
+  customSchemaBreadcrumb={sectorDMBreadcrumbSchema}
+  utilityTagline={"Digital Marketing for Educational Institutes in Lucknow • Aliganj, Hazratganj & Gomti Nagar"}
+  brandSubtitle={"Lucknow • Education Digital Marketing"}
+  footerBio={"NK Digital Tech provides Digital Marketing for Educational Institutes in Lucknow, helping schools, coaching centres and universities win direct student admissions."}
+  footerCoreDisciplines={[
+    { label: 'Best Digital Marketing Company in Lucknow', href: '/best-digital-marketing-company-in-lucknow/' },
+    { label: 'Best SEO Company in Lucknow', href: '/best-seo-company-in-lucknow/' },
+    { label: 'Local SEO Services in Lucknow', href: '/local-seo-services-in-lucknow/' },
+    { label: 'AI SEO Company in Lucknow', href: '/ai-seo-company-in-lucknow/' },
+    { label: 'AEO Services in Lucknow', href: '/aeo-services-in-lucknow/' },
+    { label: 'Website Development Company in Lucknow', href: '/website-development-company-in-lucknow/' },
+  ]}
+  footerTagline={"Built for Direct Education Growth in Lucknow"}
+>
+
+  <!-- =====================================================================
+       SECTION 1: HERO (DARK SURFACE)
+  ===================================================================== -->
+  <section class="relative surface-dark overflow-hidden pt-5 pb-9 sm:pt-16 sm:pb-20 lg:pt-20 lg:pb-24 border-b border-slate-800/80">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="absolute inset-0 mesh-glow pointer-events-none"></div>
+    <div class="absolute -top-24 -left-24 sm:-top-36 sm:-left-36 w-56 h-56 sm:w-96 sm:h-96 bg-brand-500/20 rounded-full blur-[80px] sm:blur-[130px] pointer-events-none"></div>
+    <div class="absolute top-1/4 -right-24 sm:-right-36 w-56 h-56 sm:w-96 sm:h-96 bg-accent-500/20 rounded-full blur-[80px] sm:blur-[130px] pointer-events-none"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-10 lg:gap-12 items-center">
+        <div class="lg:col-span-7 text-left min-w-0">
+          <div class="badge-dark mb-3 sm:mb-6 py-1.5 px-2.5 sm:px-3.5">
+            <span class="w-2 h-2 rounded-full bg-brand-400 animate-ping flex-shrink-0"></span>
+            <span class="min-w-0 break-words">Lucknow Admission SEO • Map Pack &amp; AEO • Direct Campus Visits</span>
+          </div>
+
+          <h1 class="font-display text-[clamp(1.62rem,6.5vw,2.35rem)] sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-[1.15] sm:leading-[1.1] mb-3.5 sm:mb-6 text-glow break-words">
+            Digital Marketing for Educational <br />
+            <span class="gradient-text-light">Institutes in Lucknow</span>
+          </h1>
+
+          <p class="text-sm sm:text-lg text-slate-300 leading-[1.68] sm:leading-relaxed mb-5 sm:mb-8 font-normal text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+            Need steady <strong class="text-white font-semibold">Digital Marketing for Educational Institutes in Lucknow</strong> that fills classrooms before every admission window closes? NK Digital Tech helps schools, colleges and coaching centres grow through <strong class="text-white font-semibold">education SEO and admission marketing in Lucknow</strong>, Google Map Pack visibility and AI search answers so parents and students enquire with you first.
+          </p>
+
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-4 mb-5 sm:mb-10">
+            <a href="#contact" class="btn-primary w-full sm:w-auto min-h-[50px] text-[13.5px] sm:text-base px-4 sm:px-8 py-3.5 sm:py-4">
+              <span>Claim Free Admission Audit</span>
+              <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+              </svg>
+            </a>
+            <a href="#services" class="btn-secondary-dark w-full sm:w-auto min-h-[48px] text-[13.5px] sm:text-base px-4 sm:px-7 py-3.5 sm:py-4">
+              <span>Explore Six Education Pillars</span>
+            </a>
+          </div>
+
+          <div class="pt-5 sm:pt-6 border-t border-slate-800/80">
+            <div class="grid grid-cols-2 sm:flex sm:flex-wrap items-stretch sm:items-center gap-2">
+              {trustStrip.map((item) => (
+                <span class="px-2.5 sm:px-3 py-2 sm:py-1.5 min-h-[42px] sm:min-h-0 rounded-lg bg-slate-900/90 border border-slate-800 text-[11px] sm:text-xs text-slate-300 font-medium flex items-center justify-center sm:justify-start text-center sm:text-left leading-tight break-words">
+                  {item}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 min-w-0">
+          <div class="relative rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-700/80 shadow-2xl shadow-brand-500/15 bg-slate-900 group">
+            <div class="relative">
+              <img
+                src="/images/lucknow-education-dm/hero-education-dm-lucknow.webp"
+                alt="Digital Marketing for Educational Institutes in Lucknow Modern University Campus and Classrooms"
+                width="960"
+                height="540"
+                sizes="(max-width: 1024px) 100vw, 42vw"
+                fetchpriority="high"
+                decoding="async"
+                class="w-full aspect-[16/9] sm:aspect-auto sm:h-72 md:h-[380px] lg:h-[400px] object-cover object-center sm:group-hover:scale-105 transition-transform duration-500"
+              />
+              <div class="hidden sm:block absolute inset-0 bg-gradient-to-t from-[#050a14] via-transparent to-transparent opacity-80"></div>
+            </div>
+            <div class="relative sm:absolute sm:bottom-4 sm:left-4 sm:right-4 glass-card border-t sm:border border-slate-800 sm:rounded-2xl p-3.5 sm:p-4">
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-1">
+                <span class="text-xs font-bold text-white">Higher Direct Admissions</span>
+                <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-400">
+                  <span class="w-2 h-2 rounded-full bg-emerald-400 flex-shrink-0"></span>
+                  Lower Cost Per Seat
+                </span>
+              </div>
+              <p class="text-[11px] sm:text-xs text-slate-300 text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left] leading-snug">
+                Turns Kapoorthala, Aliganj, Hazratganj and Gomti Nagar student searches into direct campus walk ins.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 2: INTRODUCTION (CRISP WHITE)
+  ===================================================================== -->
+  <section class="relative surface-white py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200 overflow-hidden">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-7 sm:gap-10 lg:gap-12 items-center">
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-light mb-3.5 sm:mb-4">Direct Student &amp; Parent Inquiries</div>
+          <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-4 sm:mb-6 break-words">
+            How Digital Marketing for Educational Institutes in Lucknow <span class="gradient-text-dark">Increases Direct Admissions</span>
+          </h2>
+          <div class="space-y-4 sm:space-y-5 text-slate-700 text-[13.5px] sm:text-base leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+            <p>Parents comparing CBSE and ICSE schools in Gomti Nagar and Indira Nagar, or students choosing JEE, NEET and UPSC coaching in Aliganj and Hazratganj, check batch timings, past results and fee details online before stepping onto campus. Partnering with our <strong>education digital marketing agency in Lucknow</strong> puts your genuine track record directly in front of families.</p>
+            <p>Supported by the <a href="/best-digital-marketing-company-in-lucknow/" class="text-brand-600 hover:text-brand-700 font-semibold no-underline hover:no-underline">Best Digital Marketing Company in Lucknow</a> and <a href="/best-seo-company-in-lucknow/" class="text-brand-600 hover:text-brand-700 font-semibold no-underline hover:no-underline">Best SEO Company in Lucknow</a>, we act as a dedicated <strong>digital marketing company for coaching institutes in Lucknow</strong> and <strong>student admission lead generation agency in Lucknow</strong> that fills seats directly.</p>
+          </div>
+          <div class="mt-6 sm:mt-8 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
+            <a href="#contact" class="btn-primary w-full sm:w-auto min-h-[48px]">
+              <span>Talk to an Education Strategist</span>
+              <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+              </svg>
+            </a>
+            <a href="#why-us" class="btn-secondary-light w-full sm:w-auto min-h-[48px]">
+              <span>Compare Direct Search vs Directories</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 space-y-4 sm:space-y-5 min-w-0">
+          <div class="rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-200 shadow-lg bg-slate-100">
+            <img
+              src="/images/lucknow-education-dm/team-education-dm-lucknow.webp"
+              alt="Education Digital Marketing Agency in Lucknow Counsellors Reviewing Admission Plans"
+              width="800"
+              height="533"
+              sizes="(max-width: 1024px) 100vw, 42vw"
+              class="w-full aspect-[16/10] sm:aspect-auto sm:h-64 lg:h-72 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="grid grid-cols-2 gap-2.5 sm:gap-4">
+            {[{"val":"3.6x","label":"Campus Walk Ins","sub":"Peak school & coaching admission seasons"},{"val":"62%","label":"Lower Seat Cost","sub":"Through organic search & Map Pack calls"},{"val":"Top 3","label":"Local Map Rankings","sub":"Hazratganj, Aliganj & Gomti Nagar"},{"val":"< 2 Sec","label":"Course Page Speed","sub":"Fast fee & prospectus forms on phones"}].map((stat) => (
+              <div class="elevated-card rounded-xl sm:rounded-2xl p-3 sm:p-4 min-w-0 flex flex-col justify-between">
+                <div class="font-display font-black text-[1.1rem] sm:text-2xl text-brand-600 mb-0.5 leading-tight break-words">{stat.val}</div>
+                <div class="text-[11px] sm:text-xs font-bold text-slate-900 leading-snug">{stat.label}</div>
+                <div class="text-[10.5px] sm:text-[11px] text-slate-500 leading-snug mt-0.5">{stat.sub}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 3: PROBLEM STATEMENT (DEEP INDIGO)
+  ===================================================================== -->
+  <section class="relative surface-indigo py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="max-w-7xl mx-auto relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-7 sm:gap-10 lg:gap-12 items-center">
+        <div class="lg:col-span-7 min-w-0">
+          <div class="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-3.5 py-1 sm:py-1.5 rounded-full text-[10px] sm:text-xs font-bold uppercase tracking-wider sm:tracking-widest bg-amber-500/10 border border-amber-500/30 text-amber-300 max-w-full leading-snug mb-4 sm:mb-5">
+            <svg class="w-4 h-4 text-amber-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+            </svg>
+            <span>Fixing Portal Costs &amp; Slow Course Sites</span>
+          </div>
+
+          <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-white tracking-tight leading-[1.22] sm:leading-tight mb-4 sm:mb-6 break-words">
+            Why Listing Portals &amp; Heavy PDFs Hurt Lucknow Admissions
+          </h2>
+
+          <div class="space-y-4 sm:space-y-5 text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+            <p>Schools, private colleges and coaching centres in Lucknow face two big admission leaks. First, national education directories rank above your official campus site and push parents to competing colleges unless you pay steep lead fees. Second, heavy PDF prospectuses fail to open neatly on budget Android phones, causing busy parents to leave without calling.</p>
+            <p>Students also ask ChatGPT and Gemini direct questions like "which coaching in Kapoorthala has small batch sizes and high selection rates?". Without clear results tables and guidance from an <a href="/ai-seo-company-in-lucknow/" class="text-brand-300 hover:text-white font-semibold no-underline hover:no-underline">AI SEO Company in Lucknow</a>, AI summaries leave your institute out.</p>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 space-y-3.5 sm:space-y-4 min-w-0">
+          <div class="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6 border-l-4 border-l-rose-500 min-w-0">
+            <div class="flex flex-wrap items-center justify-between gap-1.5 mb-2">
+              <span class="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-rose-400">Paid Portals / Slow Prospectus</span>
+              <span class="text-[11px] sm:text-xs text-slate-400">Shared Leads &amp; High Fees</span>
+            </div>
+            <h3 class="font-display font-bold text-[15px] sm:text-base text-white mb-2 leading-snug">Rented Directory Leads &amp; Unclear Course Pages</h3>
+            <p class="text-xs text-slate-300 leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+              Pays education portals for shared student data that goes to five rivals while slow website menus hide fees and admission dates.
+            </p>
+          </div>
+
+          <div class="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6 border-l-4 border-l-emerald-400 min-w-0">
+            <div class="flex flex-wrap items-center justify-between gap-1.5 mb-2">
+              <span class="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-emerald-400">NK Digital Tech Admissions</span>
+              <span class="text-[11px] sm:text-xs text-brand-300">Owned Client Pipeline</span>
+            </div>
+            <h3 class="font-display font-bold text-[15px] sm:text-base text-white mb-2 leading-snug">Owned Campus Search, Maps &amp; AI Trust</h3>
+            <p class="text-xs text-slate-300 leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+              Combines fast HTML course tables, Google Map Pack branch pages and verified selection proof so families apply directly.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 4: SERVICES (LIGHT COOL)
+  ===================================================================== -->
+  <section id="services" class="relative surface-cool py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200 overflow-hidden scroll-mt-16 sm:scroll-mt-20">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 items-center mb-8 sm:mb-16">
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-light mb-3">Our Six Pillar Admission System</div>
+          <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4 break-words">
+            Focused Education Marketing Services in Lucknow
+          </h2>
+          <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+            From <strong>digital marketing for schools in Lucknow</strong> and <strong>digital marketing for colleges in Lucknow</strong> to full coaching and edtech campaigns, our six pillars cover every step of how students choose courses.
+          </p>
+        </div>
+        <div class="lg:col-span-5 min-w-0">
+          <div class="rounded-2xl overflow-hidden border border-slate-200 shadow-md bg-white">
+            <img
+              src="/images/lucknow-education-dm/services-education-dm-lucknow.webp"
+              alt="Coaching Centre Digital Marketing in Lucknow Prospectus and Syllabus Strategy"
+              width="800"
+              height="450"
+              sizes="(max-width: 1024px) 100vw, 42vw"
+              class="w-full aspect-[16/9] sm:aspect-auto sm:h-56 lg:h-64 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-7">
+        {services.map((s) => (
+          <div class="elevated-card rounded-2xl p-4 sm:p-7 flex flex-col justify-between group sm:hover:-translate-y-1 min-w-0">
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-4 sm:mb-6">
+                <div class={`w-11 h-11 sm:w-12 sm:h-12 rounded-xl border flex items-center justify-center flex-shrink-0 ${s.iconStyle}`}>
+                  <Fragment set:html={s.icon} />
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class={`text-[10.5px] sm:text-[11px] font-semibold px-2.5 py-1 rounded-md ${s.badgeColor}`}>
+                    {s.category}
+                  </span>
+                  <span class="font-display font-black text-base sm:text-lg text-slate-300">{s.num}</span>
+                </div>
+              </div>
+
+              <h3 class="font-display font-bold text-[17px] sm:text-xl text-slate-900 mb-2.5 sm:mb-3 leading-snug group-hover:text-brand-600 transition-colors">
+                {s.title}
+              </h3>
+
+              <p class="text-slate-600 text-[13px] sm:text-sm leading-relaxed mb-4 sm:mb-6 text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+                {s.body}
+              </p>
+            </div>
+
+            <div>
+              <div class={`rounded-xl border p-3.5 sm:p-4 mb-3.5 sm:mb-5 ${s.impactStyle}`}>
+                <div class="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-slate-900 mb-1">
+                  <svg class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                  </svg>
+                  <span>Commercial Impact</span>
+                </div>
+                <p class="text-xs text-slate-700 leading-relaxed font-medium text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+                  {s.impact}
+                </p>
+              </div>
+
+              <a href={s.href} class="w-full sm:w-auto inline-flex items-center justify-between sm:justify-start gap-2 rounded-xl sm:rounded-none bg-slate-50 active:bg-sky-50 sm:bg-transparent border border-slate-200/80 sm:border-0 px-3.5 sm:px-0 py-2.5 min-h-[46px] sm:min-h-0 text-xs font-bold text-brand-600 hover:text-brand-700 no-underline hover:no-underline group-hover:gap-3 transition-all">
+                <span>{s.cta}</span>
+                <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 5: REGIONAL LOCATIONS (DARK NAVY)
+  ===================================================================== -->
+  <section id="locations" class="relative surface-navy py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden scroll-mt-16 sm:scroll-mt-20">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 items-center mb-8 sm:mb-16">
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-dark mb-3">Sector &amp; Corridor Targeting Across Lucknow</div>
+          <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-white tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4 break-words">
+            Campus &amp; Coaching Centre Targeting Across Lucknow Hubs
+          </h2>
+          <p class="text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+            Student and parent searches shift sharply between coaching hubs in Aliganj, schools in Gomti Nagar and colleges on Sitapur or Faizabad Road. We pair <a href="/local-seo-services-in-lucknow/" class="text-brand-300 hover:text-white font-semibold no-underline hover:no-underline">Local SEO Services in Lucknow</a> with focused branch pages.
+          </p>
+        </div>
+        <div class="lg:col-span-5 min-w-0">
+          <div class="rounded-2xl overflow-hidden border border-slate-700/80 shadow-xl bg-slate-900">
+            <img
+              src="/images/lucknow-education-dm/locations-education-dm-lucknow.webp"
+              alt="Students Walking Through Modern Educational Hub Campus in Lucknow"
+              width="800"
+              height="450"
+              sizes="(max-width: 1024px) 100vw, 42vw"
+              class="w-full aspect-[16/9] sm:aspect-auto sm:h-56 lg:h-64 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+        {cities.map((c) => (
+          <div class="glass-card rounded-2xl p-4 sm:p-6 flex flex-col justify-between group sm:hover:-translate-y-1 min-w-0">
+            <div>
+              <div class={`h-1 w-full bg-gradient-to-r ${c.accent} rounded-full mb-4 sm:mb-5`}></div>
+
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-3.5 sm:mb-4">
+                <span class="px-2.5 py-1 rounded-md bg-slate-800 border border-slate-700 text-[11px] font-bold uppercase tracking-wider text-brand-300">
+                  {c.hub}
+                </span>
+                <span class="text-xs font-semibold text-slate-400">{c.city}</span>
+              </div>
+
+              <h3 class="font-display font-bold text-base sm:text-lg text-white mb-2.5 sm:mb-3 leading-snug">
+                <a href={c.href} class="hover:text-brand-300 no-underline hover:no-underline transition-colors">{c.keyword}</a>
+              </h3>
+
+              <p class="text-slate-300 text-[13px] sm:text-sm leading-relaxed mb-4 sm:mb-5 text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+                {c.desc}
+              </p>
+            </div>
+
+            <div class="pt-3.5 sm:pt-4 border-t border-slate-800">
+              <p class="text-[11px] text-slate-400 mb-3 sm:mb-4 leading-normal">
+                <strong class="text-slate-300">Key Belts:</strong> {c.corridor}
+              </p>
+              <a href={c.href} class="w-full sm:w-auto inline-flex items-center justify-between sm:justify-start gap-1.5 rounded-xl sm:rounded-none bg-slate-800/90 active:bg-slate-800 sm:bg-transparent border border-slate-700/80 sm:border-0 px-3.5 sm:px-0 py-2.5 min-h-[44px] sm:min-h-0 text-xs font-bold text-brand-400 hover:text-brand-300 no-underline hover:no-underline group-hover:gap-2.5 transition-all">
+                <span>{c.cta}</span>
+                <svg class="w-3.5 h-3.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 6: WHY NK DIGITAL TECH (CRISP WHITE)
+  ===================================================================== -->
+  <section id="why-us" class="relative surface-white py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200 overflow-hidden scroll-mt-16 sm:scroll-mt-20">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-8 sm:mb-14 text-left sm:text-center">
+        <div class="badge-light mb-3">Why Lucknow Educators Trust NK Digital Tech</div>
+        <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4 break-words">
+          Trusted Growth Partner for Education Digital Marketing in Lucknow
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed mb-4 text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+          Parents choose campuses they trust online. We unite clear program websites with <a href="/aeo-services-in-lucknow/" class="text-brand-600 hover:text-brand-700 font-semibold no-underline hover:no-underline">AEO Services in Lucknow</a> so families book campus tours directly.
+        </p>
+        <p class="text-slate-700 font-semibold text-xs sm:text-sm">
+          Compare our Lucknow sector growth engine against typical directory plans and generic agencies:
+        </p>
+      </div>
+
+      <div class="hidden md:block overflow-hidden rounded-2xl border border-slate-200 shadow-lg">
+        <table class="w-full text-left border-collapse">
+          <thead>
+            <tr class="bg-slate-900 text-white">
+              <th class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-slate-300 w-1/4">
+                Evaluation Criteria
+              </th>
+              <th class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-rose-300 w-[37.5%] border-l border-slate-800">
+                Paid Portals / Slow Prospectus
+              </th>
+              <th class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-brand-300 w-[37.5%] border-l border-slate-800 bg-slate-950">
+                NK Digital Tech Admissions
+              </th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200 text-sm">
+            {comparison.map((row, idx) => (
+              <tr class={idx % 2 === 0 ? 'bg-white' : 'bg-slate-50/80'}>
+                <td class="py-5 px-6 font-display font-bold text-slate-900">
+                  {row.metric}
+                </td>
+                <td class="py-5 px-6 text-slate-600 border-l border-slate-200">
+                  <div class="flex items-start gap-2.5">
+                    <svg class="w-4 h-4 text-rose-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                    <span class="text-justify">{row.typical}</span>
+                  </div>
+                </td>
+                <td class="py-5 px-6 text-slate-900 font-medium border-l border-slate-200 bg-sky-50/40">
+                  <div class="flex items-start gap-2.5">
+                    <svg class="w-4 h-4 text-emerald-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span class="text-justify">{row.nk}</span>
+                  </div>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <div class="md:hidden space-y-3.5">
+        {comparison.map((row) => (
+          <div class="elevated-card rounded-2xl p-4 space-y-3 min-w-0">
+            <h3 class="font-display font-bold text-slate-900 text-sm pb-2 border-b border-slate-100 leading-snug">{row.metric}</h3>
+            <div class="rounded-xl bg-rose-50 border border-rose-100 p-3">
+              <div class="flex items-center gap-1.5 mb-1">
+                <svg class="w-3.5 h-3.5 text-rose-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+                <p class="text-[10px] font-bold uppercase tracking-wider text-rose-600">Paid Portals / Slow Prospectus</p>
+              </div>
+              <p class="text-xs text-slate-700 leading-relaxed">{row.typical}</p>
+            </div>
+            <div class="rounded-xl bg-sky-50 border border-sky-200 p-3">
+              <div class="flex items-center gap-1.5 mb-1">
+                <svg class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                </svg>
+                <p class="text-[10px] font-bold uppercase tracking-wider text-brand-600">NK Digital Tech Admissions</p>
+              </div>
+              <p class="text-xs text-slate-900 font-semibold leading-relaxed">{row.nk}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 7: VERTICAL SEGMENTS WE SCALE (LIGHT SLATE 3x2 GRID)
+  ===================================================================== -->
+  <section id="industries" class="relative surface-slate py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200 overflow-hidden scroll-mt-16 sm:scroll-mt-20">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-8 sm:mb-16 text-left sm:text-center">
+        <div class="badge-light mb-3">Focused Business Segments</div>
+        <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4 break-words">
+          Focused Admission Plans for Six Lucknow Education Segments
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+          Whether you run a preschool chain, K 12 school, test prep brand, degree college or edtech startup, we align search visibility with admission goals.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-7">
+        {sectorSegments.map((ind) => (
+          <div class={`elevated-card rounded-2xl p-4 sm:p-7 border-t-4 ${ind.accentBorder} flex flex-col justify-between sm:hover:-translate-y-1 min-w-0`}>
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-4 sm:mb-5">
+                <div class={`w-10 h-10 sm:w-11 sm:h-11 rounded-xl border flex items-center justify-center flex-shrink-0 ${ind.iconBg}`}>
+                  <Fragment set:html={ind.icon} />
+                </div>
+                <span class="text-[11px] font-semibold text-slate-600 bg-slate-100 px-2.5 py-1 rounded-md">
+                  {ind.sector}
+                </span>
+              </div>
+
+              <h3 class="font-display font-bold text-[17px] sm:text-xl text-slate-900 mb-3 sm:mb-4 leading-snug">
+                {ind.title}
+              </h3>
+
+              <div class="mb-4 sm:mb-5">
+                <p class="text-[11px] font-bold uppercase tracking-wider text-brand-600 mb-1.5">
+                  Digital Growth Focus
+                </p>
+                <p class="text-slate-600 text-[13px] sm:text-sm leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+                  {ind.focus}
+                </p>
+              </div>
+            </div>
+
+            <div class="rounded-xl bg-emerald-50/70 border border-emerald-200/80 p-3.5 sm:p-4">
+              <p class="text-[11px] font-bold uppercase tracking-wider text-emerald-700 mb-1">
+                Verified Outcome
+              </p>
+              <p class="text-slate-800 text-xs font-medium leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+                {ind.outcome}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 8: HOW WE WORK (CRISP WHITE - 4 STAGES)
+  ===================================================================== -->
+  <section class="relative surface-white py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200 overflow-hidden">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-8 sm:mb-16 text-left sm:text-center">
+        <div class="badge-light mb-3">Our 4 Stage Execution</div>
+        <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4 break-words">
+          How We Scale Admissions for Lucknow Institutes
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+          Our four step plan prepares your website, Google Map profiles and AI citations before peak exam and nursery admission windows begin.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-7">
+        {stages.map((st) => (
+          <div class="elevated-card rounded-2xl p-4 sm:p-8 relative overflow-hidden group sm:hover:-translate-y-1 min-w-0">
+            <div class="flex items-center justify-between gap-4 mb-3.5 sm:mb-5">
+              <span class={`inline-flex items-center px-2.5 sm:px-3 py-1 rounded-lg text-xs font-bold uppercase tracking-wider text-white bg-gradient-to-r ${st.accent}`}>
+                {st.num}
+              </span>
+              <span class="font-display font-black text-3xl sm:text-4xl text-slate-200 group-hover:text-slate-300 transition-colors">
+                {st.step}
+              </span>
+            </div>
+            <h3 class="font-display font-bold text-[17px] sm:text-xl text-slate-900 mb-2.5 sm:mb-3 leading-snug">
+              {st.title}
+            </h3>
+            <p class="text-slate-600 text-[13px] sm:text-sm leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+              {st.body}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 9: CONCLUSION / PARTNER SECTION (DARK INDIGO + GROWTH IMAGE)
+  ===================================================================== -->
+  <section class="relative surface-indigo py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-7 sm:gap-10 lg:gap-12 items-center">
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-dark mb-3.5 sm:mb-4">Build Predictable Admission Seasons</div>
+          <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-white tracking-tight leading-[1.22] sm:leading-tight mb-4 sm:mb-6 break-words">
+            Grow Direct Campus Enquiries With Digital Marketing for Educational Institutes in Lucknow
+          </h2>
+          <div class="space-y-4 sm:space-y-5 text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+            <p>Depending purely on education portals or seasonal newspaper ads pushes up admission costs every year. Parents and students across Lucknow search Google, Maps, ChatGPT and Gemini daily to compare results, fees and distance.</p>
+            <p>Choosing NK Digital Tech for <strong class="text-white font-semibold">Digital Marketing for Educational Institutes in Lucknow</strong> pairs dedicated education strategists with a fast <a href="/website-development-company-in-lucknow/" class="text-brand-300 hover:text-white font-semibold no-underline hover:no-underline">Website Development Company in Lucknow</a> so families enroll with you directly.</p>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 min-w-0">
+          <div class="rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-700/80 shadow-2xl bg-slate-900">
+            <img
+              src="/images/lucknow-education-dm/growth-education-dm-lucknow.webp"
+              alt="Happy Parents Meeting School Admission Counsellor on Lucknow Campus"
+              width="800"
+              height="450"
+              sizes="(max-width: 1024px) 100vw, 42vw"
+              class="w-full aspect-[16/10] sm:aspect-auto sm:h-64 lg:h-72 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 10: FAQ (LIGHT COOL SLATE)
+  ===================================================================== -->
+  <section id="faq" class="relative surface-cool py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200 overflow-hidden scroll-mt-16 sm:scroll-mt-20">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-left sm:text-center mb-8 sm:mb-14">
+        <div class="badge-light mb-3">Questions Asked on Google, ChatGPT &amp; Gemini</div>
+        <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4 break-words">
+          Frequently Asked Questions About Digital Marketing for Educational Institutes in Lucknow
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+          Direct answers for school trustees, coaching directors and university admission heads in Lucknow.
+        </p>
+      </div>
+
+      <div class="space-y-3 sm:space-y-4">
+        {faqs.map((f, i) => (
+          <details class="elevated-card rounded-2xl group overflow-hidden" open={i === 0}>
+            <summary class="flex items-start sm:items-center justify-between gap-3 sm:gap-4 px-4 sm:px-6 py-4 sm:py-5 min-h-[54px] select-none">
+              <div class="flex items-start sm:items-center gap-2.5 sm:gap-3.5 text-left min-w-0">
+                <span class="w-6 h-6 sm:w-7 sm:h-7 rounded-lg bg-sky-50 border border-sky-200 text-brand-600 font-display font-bold text-xs flex items-center justify-center flex-shrink-0 mt-0.5 sm:mt-0">
+                  0{i + 1}
+                </span>
+                <span class="font-display font-bold text-slate-900 text-[14px] sm:text-base md:text-lg leading-snug break-words">
+                  {f.q}
+                </span>
+              </div>
+              <span class="faq-icon w-7 h-7 sm:w-8 sm:h-8 rounded-full border border-slate-200 text-slate-600 flex items-center justify-center flex-shrink-0 mt-0.5 sm:mt-0">
+                <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                </svg>
+              </span>
+            </summary>
+            <div class="px-4 sm:px-6 pb-5 sm:pb-6 pt-3 text-slate-600 text-[13px] sm:text-sm md:text-base leading-relaxed border-t border-slate-100 text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+              {f.a}
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 11: SHORT CTA BANNER (LAST SECTION)
+  ===================================================================== -->
+  <section id="contact" class="relative surface-dark py-10 pb-28 sm:py-16 lg:py-20 px-4 sm:px-6 overflow-hidden scroll-mt-16 sm:scroll-mt-20">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-5xl mx-auto">
+      <div class="rounded-2xl sm:rounded-3xl bg-gradient-to-r from-brand-600 via-brand-700 to-accent-700 p-6 sm:p-10 md:p-12 text-center text-white shadow-2xl border border-white/15 relative overflow-hidden">
+        <div class="relative z-10 max-w-2xl mx-auto">
+          <h2 class="font-display font-black text-[clamp(1.38rem,5.4vw,1.85rem)] sm:text-3xl md:text-4xl text-white tracking-tight leading-[1.2] sm:leading-snug mb-3 sm:mb-4 break-words">
+            Ready to Increase Direct Student Admissions in Lucknow?
+          </h2>
+
+          <p class="text-sky-50 text-[13px] sm:text-sm md:text-base leading-relaxed mb-6 sm:mb-8 text-left sm:text-center">
+            Claim a free audit of your course pages, branch Google Maps and AI search presence before the next admission cycle.
+          </p>
+
+          <a
+            href="/contact-us/"
+            class="inline-flex w-full sm:w-auto min-h-[50px] items-center justify-center gap-2 sm:gap-3 px-5 sm:px-8 py-3.5 sm:py-4 rounded-xl bg-white text-slate-950 hover:bg-sky-50 no-underline hover:no-underline font-display font-bold text-sm sm:text-base shadow-xl transition-all duration-300 active:scale-95 text-center leading-snug"
+          >
+            <span>Claim Free Admission Audit</span>
+            <svg class="w-4 h-4 sm:w-5 sm:h-5 text-brand-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mobile Sticky Bottom Quick Action Bar -->
+  <div class="mobile-sticky-cta sm:hidden fixed bottom-0 inset-x-0 z-40 bg-[#050a14]/95 backdrop-blur-xl border-t border-slate-800 px-3.5 pt-2.5 pb-[max(0.625rem,env(safe-area-inset-bottom))] shadow-[0_-8px_24px_rgba(0,0,0,0.45)] transition-all duration-300">
+    <div class="flex items-center gap-2.5">
+      <a
+        href="/contact-us/"
+        class="btn-primary flex-1 min-h-[44px] py-2.5 px-4 text-xs font-bold rounded-xl no-underline hover:no-underline"
+      >
+        <span>Claim Free Admission Audit</span>
+        <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+        </svg>
+      </a>
+      <a
+        href="#services"
+        class="btn-secondary-dark min-h-[44px] py-2.5 px-3.5 text-xs font-semibold rounded-xl flex-shrink-0 no-underline hover:no-underline"
+      >
+        <span>Services</span>
+      </a>
+    </div>
+  </div>
+
+</Layout>

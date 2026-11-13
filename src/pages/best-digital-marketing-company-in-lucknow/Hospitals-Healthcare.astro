@@ -1,0 +1,1028 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import '../../styles/global.css';
+
+const pageTitle = "Digital Marketing for Hospitals & Healthcare in Lucknow | NK";
+const pageDescription = "Need Digital Marketing for Hospitals & Healthcare in Lucknow? NK Digital Tech drives direct OPD appointments, Map Pack calls and trusted patient care info.";
+const pageCanonical = "https://www.nkdigitaltech.net/best-digital-marketing-company-in-lucknow/Hospitals-Healthcare/";
+
+const services = [
+  {
+    "num": "01",
+    "category": "Treatment & Department SEO",
+    "icon": "<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z\"/></svg>",
+    "iconStyle": "bg-sky-50 border-sky-200 text-brand-600",
+    "impactStyle": "bg-sky-50/80 border-sky-200/80 text-slate-800",
+    "badgeColor": "text-brand-600 bg-sky-100/80",
+    "title": "Multispeciality & Department Treatment Pages",
+    "body": "Pairing multispeciality hospital marketing in Lucknow with orthopaedic and eye clinic marketing in Lucknow, we rank clear doctor backed care guides.",
+    "impact": "Outranks middleman directories and brings patients directly to your hospital.",
+    "cta": "View Best SEO Company in Lucknow",
+    "href": "/best-seo-company-in-lucknow/"
+  },
+  {
+    "num": "02",
+    "category": "Clinic Map Pack Dominance",
+    "icon": "<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z\"/><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M15 11a3 3 0 11-6 0 3 3 0 016 0z\"/></svg>",
+    "iconStyle": "bg-emerald-50 border-emerald-200 text-emerald-600",
+    "impactStyle": "bg-emerald-50/80 border-emerald-200/80 text-slate-800",
+    "badgeColor": "text-emerald-700 bg-emerald-100/80",
+    "title": "Doctor Google Maps Ranking in Lucknow",
+    "body": "Our doctor Google Maps ranking in Lucknow system structures clinic hours, department pins and genuine patient reviews across Lucknow localities.",
+    "impact": "Drives immediate phone calls and map direction clicks from nearby families.",
+    "cta": "View Local SEO Services in Lucknow",
+    "href": "/local-seo-services-in-lucknow/"
+  },
+  {
+    "num": "03",
+    "category": "Fast Appointment Websites",
+    "icon": "<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M13 10V3L4 14h7v7l9-11h-7z\"/></svg>",
+    "iconStyle": "bg-cyan-50 border-cyan-200 text-cyan-700",
+    "impactStyle": "bg-cyan-50/80 border-cyan-200/80 text-slate-800",
+    "badgeColor": "text-cyan-700 bg-cyan-100/80",
+    "title": "Mobile Doctor Lookup & Instant OPD Booking",
+    "body": "We build calm sub two second mobile sites showing doctor qualifications, OPD slots and one tap WhatsApp or phone appointment booking.",
+    "impact": "Helps anxious families book care smoothly in seconds.",
+    "cta": "View Website Development Company in Lucknow",
+    "href": "/website-development-company-in-lucknow/"
+  },
+  {
+    "num": "04",
+    "category": "Patient Question AEO",
+    "icon": "<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z\"/></svg>",
+    "iconStyle": "bg-amber-50 border-amber-200 text-amber-600",
+    "impactStyle": "bg-amber-50/80 border-amber-200/80 text-slate-800",
+    "badgeColor": "text-amber-700 bg-amber-100/80",
+    "title": "Clear Symptom, Recovery & Insurance FAQs",
+    "body": "We craft doctor reviewed 50 word answer blocks on surgery recovery, fasting rules and cashless insurance panels using FAQ schema.",
+    "impact": "Earns top Google answer spots while reassuring worried patients.",
+    "cta": "View AEO Services in Lucknow",
+    "href": "/aeo-services-in-lucknow/"
+  },
+  {
+    "num": "05",
+    "category": "AI Care Trust (GEO)",
+    "icon": "<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z\"/></svg>",
+    "iconStyle": "bg-violet-50 border-violet-200 text-accent-600",
+    "impactStyle": "bg-violet-50/80 border-violet-200/80 text-slate-800",
+    "badgeColor": "text-accent-600 bg-violet-100/80",
+    "title": "Physician, Hospital & MedicalClinic Schema",
+    "body": "We set up verified Physician, MedicalClinic and Hospital JSON LD data so ChatGPT and Gemini highlight your doctors and facilities.",
+    "impact": "Positions your clinic as a trusted medical authority inside AI answers.",
+    "cta": "View AI SEO Company in Lucknow",
+    "href": "/ai-seo-company-in-lucknow/"
+  },
+  {
+    "num": "06",
+    "category": "Specialty & Lab Campaigns",
+    "icon": "<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z\"/></svg>",
+    "iconStyle": "bg-indigo-50 border-indigo-200 text-indigo-600",
+    "impactStyle": "bg-indigo-50/80 border-indigo-200/80 text-slate-800",
+    "badgeColor": "text-indigo-700 bg-indigo-100/80",
+    "title": "Diagnostics, Dental & IVF Growth Systems",
+    "body": "Combining diagnostic lab digital marketing in Lucknow with dental and IVF clinic marketing in Lucknow fills high priority specialty schedules.",
+    "impact": "Drives home sample bookings and specialty consultations consistently.",
+    "cta": "Request Hospital Growth Audit",
+    "href": "#contact"
+  }
+];
+
+const cities = [
+  {
+    "hub": "Med Hub 01",
+    "city": "Vibhuti Khand & Gomti Nagar",
+    "corridor": "Vibhuti Khand • Patrakarpuram • Shaheed Path Hospitals",
+    "keyword": "Tertiary Care, IVF, Dental & Ortho Centres",
+    "desc": "We capture direct OPD and surgical second opinion queries across Lucknow premier medical belt.",
+    "cta": "Audit Gomti Nagar Clinic",
+    "href": "#contact",
+    "accent": "from-brand-500 to-sky-400"
+  },
+  {
+    "hub": "Med Hub 02",
+    "city": "Aliganj, Mahanagar & Indira Nagar",
+    "corridor": "Aliganj • Mahanagar • Indira Nagar Clinics",
+    "keyword": "Family Clinics, Eye Centres & Diagnostics",
+    "desc": "We connect neighbourhood specialty clinics and blood test centres with daily family appointment searches.",
+    "cta": "Audit Aliganj Visibility",
+    "href": "#contact",
+    "accent": "from-accent-500 to-violet-400"
+  },
+  {
+    "hub": "Med Hub 03",
+    "city": "Chowk & Hazratganj",
+    "corridor": "KGMU Belt • Chowk • Hazratganj Chambers",
+    "keyword": "Senior Consultant Clinics & Pharmacy Labs",
+    "desc": "We help established doctor chambers rank above directories for patient lookups and OPD directions.",
+    "cta": "Explore Lucknow Local SEO",
+    "href": "/local-seo-services-in-lucknow/",
+    "accent": "from-cyan-500 to-teal-400"
+  },
+  {
+    "hub": "Med Hub 04",
+    "city": "Raebareli Road & Regional UP",
+    "corridor": "Raebareli Road • SGPGI Belt • Surrounding Districts",
+    "keyword": "Referral Specialties & Surgical Hubs",
+    "desc": "We guide outstation patients travelling into Lucknow cleanly with transparent pre visit checklists.",
+    "cta": "Audit Regional Patient Flow",
+    "href": "#contact",
+    "accent": "from-emerald-500 to-green-400"
+  }
+];
+
+const comparison = [
+  {
+    "metric": "Patient Ownership",
+    "typical": "Paid directories taking commissions & showing rival doctors",
+    "nk": "100% direct phone & WhatsApp bookings at your reception"
+  },
+  {
+    "metric": "Medical Trust (YMYL)",
+    "typical": "Generic unreviewed copy hurting search rankings",
+    "nk": "Doctor reviewed factual treatment guides & clean bios"
+  },
+  {
+    "metric": "Map Pack Presence",
+    "typical": "Wrong OPD hours and ungrouped clinic pins",
+    "nk": "Top 3 Lucknow Map Pack rankings per specialty & branch"
+  },
+  {
+    "metric": "Mobile Booking",
+    "typical": "Broken appointment popups losing anxious patients",
+    "nk": "Sub 2 second doctor lookup & one tap call scheduling"
+  },
+  {
+    "metric": "AI Care Citations",
+    "typical": "Missing from ChatGPT Lucknow specialist lists",
+    "nk": "Verified Physician & Hospital schema cited by AI search"
+  },
+  {
+    "metric": "Growth Sustainability",
+    "typical": "Short term ads stopping the moment budget pauses",
+    "nk": "steady growing organic patient flow across departments"
+  }
+];
+
+const sectorSegments = [
+  {
+    "sector": "Hospitals & Surgical",
+    "title": "Multispeciality, Ortho & Cardiac Centres",
+    "focus": "Highlights NABH standards, surgeon credentials, cashless TPA lists and dedicated department care guides.",
+    "outcome": "Higher direct surgical & specialist OPD consultations.",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5\"/></svg>",
+    "accentBorder": "border-t-brand-500",
+    "iconBg": "bg-sky-50 text-brand-600 border-sky-200"
+  },
+  {
+    "sector": "Dental & Derma",
+    "title": "Cosmetic Dentistry, Implants & Skin Clinics",
+    "focus": "Our dental and IVF clinic marketing in Lucknow pairs calm before/after education with strong local Map Pack calls.",
+    "outcome": "Consistent direct smile design & skin consultation bookings.",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z\"/></svg>",
+    "accentBorder": "border-t-amber-500",
+    "iconBg": "bg-amber-50 text-amber-600 border-amber-200"
+  },
+  {
+    "sector": "Maternity & Fertility",
+    "title": "IVF Centres, Gynaecology & Child Care",
+    "focus": "Provides empathetic, easy to understand care explanations, ethical clarity and private doctor appointment flows.",
+    "outcome": "Direct couple consultations with higher family trust.",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z\"/></svg>",
+    "accentBorder": "border-t-cyan-500",
+    "iconBg": "bg-cyan-50 text-cyan-700 border-cyan-200"
+  },
+  {
+    "sector": "Diagnostic Labs",
+    "title": "Pathology, MRI, CT Scan & Home Collection",
+    "focus": "Our diagnostic lab digital marketing in Lucknow ranks fasting checkup packages, NABL quality proof and home blood test booking.",
+    "outcome": "Daily direct diagnostic walk ins & home collection slots.",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z\"/></svg>",
+    "accentBorder": "border-t-emerald-500",
+    "iconBg": "bg-emerald-50 text-emerald-600 border-emerald-200"
+  },
+  {
+    "sector": "Eye & ENT Centres",
+    "title": "Cataract, LASIK & Hearing Care Clinics",
+    "focus": "Clearly explains modern eye lens choices and quick procedure times so seniors and young patients book evaluations comfortably.",
+    "outcome": "Direct surgery screening bookings across Lucknow localities.",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M15 12a3 3 0 11-6 0 3 3 0 016 0z\"/><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z\"/></svg>",
+    "accentBorder": "border-t-indigo-500",
+    "iconBg": "bg-indigo-50 text-indigo-600 border-indigo-200"
+  },
+  {
+    "sector": "Independent Doctors",
+    "title": "Solo Specialist Chambers & Rehab Clinics",
+    "focus": "Builds dedicated doctor brand websites and Google Maps visibility so patients book right with you, not third party portals.",
+    "outcome": "Consistent private OPD growth independent of third party apps.",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z\"/></svg>",
+    "accentBorder": "border-t-rose-500",
+    "iconBg": "bg-rose-50 text-rose-600 border-rose-200"
+  }
+];
+
+const stages = [
+  {
+    "num": "Stage 01",
+    "step": "01",
+    "title": "Portal Leak, Speed & Clinic Map Audit",
+    "body": "We inspect where patients drop off on mobile sites and fix wrong OPD hours on Google Maps.",
+    "accent": "from-brand-600 to-sky-500"
+  },
+  {
+    "num": "Stage 02",
+    "step": "02",
+    "title": "Treatment Keywords & Medical Schema",
+    "body": "We map specialty searches with Physician, Hospital and FAQ schema aligned to YMYL care quality.",
+    "accent": "from-accent-600 to-violet-500"
+  },
+  {
+    "num": "Stage 03",
+    "step": "03",
+    "title": "Doctor Bios, FAQs & Map Rollout",
+    "body": "We launch fast department guides, one tap OPD booking buttons and branch Google Map improvements.",
+    "accent": "from-cyan-600 to-teal-500"
+  },
+  {
+    "num": "Stage 04",
+    "step": "04",
+    "title": "OPD Call Tracking & AI Citation Checks",
+    "body": "We review patient calls, WhatsApp appointment bookings and AI health search visibility every two weeks.",
+    "accent": "from-emerald-600 to-green-500"
+  }
+];
+
+const faqs = [
+  {
+    "q": "Why use Digital Marketing for Hospitals & Healthcare in Lucknow instead of only doctor listing apps?",
+    "a": "Listing apps charge high booking fees and show competing doctors side by side on your own profile. Digital Marketing for Hospitals & Healthcare in Lucknow puts your official clinic website and Google Map pin first so patients call you directly."
+  },
+  {
+    "q": "How do you handle YMYL medical content accuracy?",
+    "a": "Every treatment and symptom article is structured cleanly in simple patient friendly language for your doctors to approve, backed by clear Physician bio links and MedicalClinic schema."
+  },
+  {
+    "q": "Can multi branch clinics and diagnostic labs across Lucknow rank in every area?",
+    "a": "Yes. We create separate clinic pages and verified Google Business Profiles for Vibhuti Khand, Aliganj, Chowk, Mahanagar and Raebareli Road so local families reach their nearest centre."
+  },
+  {
+    "q": "How do Lucknow hospitals earn citations in ChatGPT and Google AI Overviews?",
+    "a": "Consistent hospital credentials, department clarity, cashless TPA lists, authentic patient reviews and Physician/Hospital structured data help AI tools suggest your centre accurately."
+  },
+  {
+    "q": "How soon do clinic Map Pack and website improvements raise OPD appointments?",
+    "a": "Google Business Profile and booking button improvements commonly lift OPD calls within 3 to 6 weeks, while broader treatment rankings build steady patient volume over 3 to 6 months."
+  }
+];
+
+const trustStrip = [
+  "Direct OPD Appointments",
+  "Zero Doctor Portal Cuts",
+  "Top 3 Clinic Map Pack",
+  "YMYL Safe Health Pages",
+  "Physician & Hospital Schema",
+  "One Tap Appointment Forms",
+  "Multi Branch Clinic Growth",
+  "Gomti Nagar, Aliganj & Chowk"
+];
+
+const sectorDMServiceSchema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Digital Marketing for Hospitals & Healthcare in Lucknow",
+  "serviceType": "Sector Digital Marketing, Search Engine Optimisation & AI Search Growth",
+  "provider": {
+    "@type": "ProfessionalService",
+    "name": "NK Digital Tech",
+    "url": "https://www.nkdigitaltech.net/",
+    "email": "nkdigitaltech1@gmail.com",
+    "telephone": "+91-80521-89051",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Lucknow",
+      "addressRegion": "Uttar Pradesh",
+      "addressCountry": "IN"
+    }
+  },
+  "areaServed": ["Lucknow","Vibhuti Khand","Gomti Nagar","Aliganj","Chowk","Mahanagar","Raebareli Road","Uttar Pradesh"],
+  "description": pageDescription,
+  "url": pageCanonical
+});
+
+const sectorDMFAQSchema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map((item) => ({
+    "@type": "Question",
+    "name": item.q,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": item.a
+    }
+  }))
+});
+
+const sectorDMBreadcrumbSchema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.nkdigitaltech.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Best Digital Marketing Company in Lucknow",
+      "item": "https://www.nkdigitaltech.net/best-digital-marketing-company-in-lucknow/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Digital Marketing for Hospitals & Healthcare in Lucknow",
+      "item": pageCanonical
+    }
+  ]
+});
+---
+
+<Layout
+  title={pageTitle}
+  description={pageDescription}
+  canonical={pageCanonical}
+  ogImage="https://www.nkdigitaltech.net/images/lucknow-hospitals-dm/hero-hospitals-dm-lucknow.webp"
+  preloadImage="/images/lucknow-hospitals-dm/hero-hospitals-dm-lucknow.webp"
+  hideLocationsNav={false}
+  customSchemaLocalBusiness={sectorDMServiceSchema}
+  customSchemaFAQ={sectorDMFAQSchema}
+  customSchemaBreadcrumb={sectorDMBreadcrumbSchema}
+  utilityTagline={"Digital Marketing for Hospitals & Healthcare in Lucknow • Vibhuti Khand, Aliganj & Chowk"}
+  brandSubtitle={"Lucknow • Healthcare Digital Marketing"}
+  footerBio={"NK Digital Tech delivers ethical Digital Marketing for Hospitals & Healthcare in Lucknow, helping hospitals, clinics and labs grow direct OPD footfall."}
+  footerCoreDisciplines={[
+    { label: 'Best Digital Marketing Company in Lucknow', href: '/best-digital-marketing-company-in-lucknow/' },
+    { label: 'Best SEO Company in Lucknow', href: '/best-seo-company-in-lucknow/' },
+    { label: 'Local SEO Services in Lucknow', href: '/local-seo-services-in-lucknow/' },
+    { label: 'AI SEO Company in Lucknow', href: '/ai-seo-company-in-lucknow/' },
+    { label: 'AEO Services in Lucknow', href: '/aeo-services-in-lucknow/' },
+    { label: 'Website Development Company in Lucknow', href: '/website-development-company-in-lucknow/' },
+  ]}
+  footerTagline={"Built for Direct Patient Trust in Lucknow"}
+>
+
+  <!-- =====================================================================
+       SECTION 1: HERO (DARK SURFACE)
+  ===================================================================== -->
+  <section class="relative surface-dark overflow-hidden pt-5 pb-9 sm:pt-16 sm:pb-20 lg:pt-20 lg:pb-24 border-b border-slate-800/80">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="absolute inset-0 mesh-glow pointer-events-none"></div>
+    <div class="absolute -top-24 -left-24 sm:-top-36 sm:-left-36 w-56 h-56 sm:w-96 sm:h-96 bg-brand-500/20 rounded-full blur-[80px] sm:blur-[130px] pointer-events-none"></div>
+    <div class="absolute top-1/4 -right-24 sm:-right-36 w-56 h-56 sm:w-96 sm:h-96 bg-accent-500/20 rounded-full blur-[80px] sm:blur-[130px] pointer-events-none"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-10 lg:gap-12 items-center">
+        <div class="lg:col-span-7 text-left min-w-0">
+          <div class="badge-dark mb-3 sm:mb-6 py-1.5 px-2.5 sm:px-3.5">
+            <span class="w-2 h-2 rounded-full bg-brand-400 animate-ping flex-shrink-0"></span>
+            <span class="min-w-0 break-words">Lucknow Healthcare SEO • Doctor Map Pack • Direct OPD Appointments</span>
+          </div>
+
+          <h1 class="font-display text-[clamp(1.62rem,6.5vw,2.35rem)] sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-[1.15] sm:leading-[1.1] mb-3.5 sm:mb-6 text-glow break-words">
+            Digital Marketing for Hospitals <br />
+            <span class="gradient-text-light">&amp; Healthcare in Lucknow</span>
+          </h1>
+
+          <p class="text-sm sm:text-lg text-slate-300 leading-[1.68] sm:leading-relaxed mb-5 sm:mb-8 font-normal text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+            Need ethical, clear <strong class="text-white font-semibold">Digital Marketing for Hospitals & Healthcare in Lucknow</strong> that brings direct OPD bookings instead of portal middlemen? NK Digital Tech helps hospitals, clinics and diagnostic labs across Gomti Nagar, Aliganj and Chowk grow with <strong class="text-white font-semibold">medical SEO and OPD growth in Lucknow</strong>, verified Doctor Maps and clear AI treatment answers.
+          </p>
+
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-4 mb-5 sm:mb-10">
+            <a href="#contact" class="btn-primary w-full sm:w-auto min-h-[50px] text-[13.5px] sm:text-base px-4 sm:px-8 py-3.5 sm:py-4">
+              <span>Claim Free Hospital Growth Audit</span>
+              <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+              </svg>
+            </a>
+            <a href="#services" class="btn-secondary-dark w-full sm:w-auto min-h-[48px] text-[13.5px] sm:text-base px-4 sm:px-7 py-3.5 sm:py-4">
+              <span>Explore Six Healthcare Pillars</span>
+            </a>
+          </div>
+
+          <div class="pt-5 sm:pt-6 border-t border-slate-800/80">
+            <div class="grid grid-cols-2 sm:flex sm:flex-wrap items-stretch sm:items-center gap-2">
+              {trustStrip.map((item) => (
+                <span class="px-2.5 sm:px-3 py-2 sm:py-1.5 min-h-[42px] sm:min-h-0 rounded-lg bg-slate-900/90 border border-slate-800 text-[11px] sm:text-xs text-slate-300 font-medium flex items-center justify-center sm:justify-start text-center sm:text-left leading-tight break-words">
+                  {item}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 min-w-0">
+          <div class="relative rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-700/80 shadow-2xl shadow-brand-500/15 bg-slate-900 group">
+            <div class="relative">
+              <img
+                src="/images/lucknow-hospitals-dm/hero-hospitals-dm-lucknow.webp"
+                alt="Digital Marketing for Hospitals & Healthcare in Lucknow Modern Multispeciality Lobby"
+                width="960"
+                height="540"
+                sizes="(max-width: 1024px) 100vw, 42vw"
+                fetchpriority="high"
+                decoding="async"
+                class="w-full aspect-[16/9] sm:aspect-auto sm:h-72 md:h-[380px] lg:h-[400px] object-cover object-center sm:group-hover:scale-105 transition-transform duration-500"
+              />
+              <div class="hidden sm:block absolute inset-0 bg-gradient-to-t from-[#050a14] via-transparent to-transparent opacity-80"></div>
+            </div>
+            <div class="relative sm:absolute sm:bottom-4 sm:left-4 sm:right-4 glass-card border-t sm:border border-slate-800 sm:rounded-2xl p-3.5 sm:p-4">
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-1">
+                <span class="text-xs font-bold text-white">Steady Direct OPD Footfall</span>
+                <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-400">
+                  <span class="w-2 h-2 rounded-full bg-emerald-400 flex-shrink-0"></span>
+                  YMYL Safe &amp; Patient Clear
+                </span>
+              </div>
+              <p class="text-[11px] sm:text-xs text-slate-300 text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left] leading-snug">
+                Turns Gomti Nagar, Aliganj and Raebareli Road symptom searches into booked patient visits.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 2: INTRODUCTION (CRISP WHITE)
+  ===================================================================== -->
+  <section class="relative surface-white py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200 overflow-hidden">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-7 sm:gap-10 lg:gap-12 items-center">
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-light mb-3.5 sm:mb-4">Direct Patient Appointment Pipeline</div>
+          <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-4 sm:mb-6 break-words">
+            How Digital Marketing for Hospitals &amp; Healthcare in Lucknow <span class="gradient-text-dark">Grows Direct Patient Trust</span>
+          </h2>
+          <div class="space-y-4 sm:space-y-5 text-slate-700 text-[13.5px] sm:text-base leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+            <p>Patients and families across Lucknow rarely visit a specialist without first checking doctor degrees, treatment steps, OPD timings and genuine clinic reviews online. When someone searches for knee replacement, dental implants, IVF care or home sample collection, partnering with our <strong>healthcare digital marketing agency in Lucknow</strong> connects them directly with your desk.</p>
+            <p>Backed by the <a href="/best-digital-marketing-company-in-lucknow/" class="text-brand-600 hover:text-brand-700 font-semibold no-underline hover:no-underline">Best Digital Marketing Company in Lucknow</a> and <a href="/best-seo-company-in-lucknow/" class="text-brand-600 hover:text-brand-700 font-semibold no-underline hover:no-underline">Best SEO Company in Lucknow</a>, we serve as a caring <strong>hospital marketing company in Lucknow</strong> providing honest <strong>digital marketing for doctors in Lucknow</strong> across every specialty.</p>
+          </div>
+          <div class="mt-6 sm:mt-8 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
+            <a href="#contact" class="btn-primary w-full sm:w-auto min-h-[48px]">
+              <span>Talk to a Healthcare Strategist</span>
+              <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+              </svg>
+            </a>
+            <a href="#why-us" class="btn-secondary-light w-full sm:w-auto min-h-[48px]">
+              <span>Compare Direct OPD vs Doctor Portals</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 space-y-4 sm:space-y-5 min-w-0">
+          <div class="rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-200 shadow-lg bg-slate-100">
+            <img
+              src="/images/lucknow-hospitals-dm/team-hospitals-dm-lucknow.webp"
+              alt="Medical Directors and Strategists Reviewing Clinic OPD Growth in Lucknow"
+              width="800"
+              height="533"
+              sizes="(max-width: 1024px) 100vw, 42vw"
+              class="w-full aspect-[16/10] sm:aspect-auto sm:h-64 lg:h-72 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="grid grid-cols-2 gap-2.5 sm:gap-4">
+            {[{"val":"3.9x","label":"Direct OPD Bookings","sub":"Zero appointment portal referral fees"},{"val":"Top 3","label":"Google Map Pack","sub":"Vibhuti Khand, Aliganj, Chowk & Mahanagar"},{"val":"< 2 Sec","label":"Mobile Site Speed","sub":"Easy doctor lookup & call taps on phones"},{"val":"100%","label":"Patient Data Ownership","sub":"Booked right onto your hospital desk"}].map((stat) => (
+              <div class="elevated-card rounded-xl sm:rounded-2xl p-3 sm:p-4 min-w-0 flex flex-col justify-between">
+                <div class="font-display font-black text-[1.1rem] sm:text-2xl text-brand-600 mb-0.5 leading-tight break-words">{stat.val}</div>
+                <div class="text-[11px] sm:text-xs font-bold text-slate-900 leading-snug">{stat.label}</div>
+                <div class="text-[10.5px] sm:text-[11px] text-slate-500 leading-snug mt-0.5">{stat.sub}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 3: PROBLEM STATEMENT (DEEP INDIGO)
+  ===================================================================== -->
+  <section class="relative surface-indigo py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="max-w-7xl mx-auto relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-7 sm:gap-10 lg:gap-12 items-center">
+        <div class="lg:col-span-7 min-w-0">
+          <div class="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-3.5 py-1 sm:py-1.5 rounded-full text-[10px] sm:text-xs font-bold uppercase tracking-wider sm:tracking-widest bg-amber-500/10 border border-amber-500/30 text-amber-300 max-w-full leading-snug mb-4 sm:mb-5">
+            <svg class="w-4 h-4 text-amber-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+            </svg>
+            <span>Fixing Portal Cuts &amp; Confusing Hospital Sites</span>
+          </div>
+
+          <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-white tracking-tight leading-[1.22] sm:leading-tight mb-4 sm:mb-6 break-words">
+            Why Health Directories &amp; Slow Websites Cost Lucknow Clinics OPD Visits
+          </h2>
+
+          <div class="space-y-4 sm:space-y-5 text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+            <p>Doctors, clinics and multispeciality hospitals in Lucknow face two regular hurdles. First, national medical portals rank for your own doctor names and charge hefty per appointment commissions while listing rival clinics right next to you. Second, slow hospital websites with hard to find OPD schedules force stressed families to call elsewhere.</p>
+            <p>Families also ask ChatGPT and Google AI Overviews clear questions about treatment recovery, diagnostic prep and reliable specialists in Lucknow. Without accurate Physician schema and guidance from an <a href="/ai-seo-company-in-lucknow/" class="text-brand-300 hover:text-white font-semibold no-underline hover:no-underline">AI SEO Company in Lucknow</a>, AI answers miss trusted local clinics.</p>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 space-y-3.5 sm:space-y-4 min-w-0">
+          <div class="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6 border-l-4 border-l-rose-500 min-w-0">
+            <div class="flex flex-wrap items-center justify-between gap-1.5 mb-2">
+              <span class="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-rose-400">Doctor Portals / Slow Site</span>
+              <span class="text-[11px] sm:text-xs text-slate-400">Shared Patients &amp; Commissions</span>
+            </div>
+            <h3 class="font-display font-bold text-[15px] sm:text-base text-white mb-2 leading-snug">Rented Portal Listings &amp; Hard to Book OPD</h3>
+            <p class="text-xs text-slate-300 leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+              Pays commissions to portals showing rival specialists alongside yours while clunky mobile menus hide doctor timings and fees.
+            </p>
+          </div>
+
+          <div class="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6 border-l-4 border-l-emerald-400 min-w-0">
+            <div class="flex flex-wrap items-center justify-between gap-1.5 mb-2">
+              <span class="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-emerald-400">NK Digital Tech Healthcare</span>
+              <span class="text-[11px] sm:text-xs text-brand-300">Owned Client Pipeline</span>
+            </div>
+            <h3 class="font-display font-bold text-[15px] sm:text-base text-white mb-2 leading-snug">Fast Doctor Profiles, Maps &amp; Calm Clarity</h3>
+            <p class="text-xs text-slate-300 leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+              Combines doctor credential pages, top Map Pack calls and clean medical FAQs so patients book directly with your reception desk.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 4: SERVICES (LIGHT COOL)
+  ===================================================================== -->
+  <section id="services" class="relative surface-cool py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200 overflow-hidden scroll-mt-16 sm:scroll-mt-20">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 items-center mb-8 sm:mb-16">
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-light mb-3">Our Six Pillar Healthcare Growth Engine</div>
+          <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4 break-words">
+            Patient Friendly Healthcare Marketing Services in Lucknow
+          </h2>
+          <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+            From <strong>clinic patient lead generation in Lucknow</strong> and diagnostic labs to <strong>multispeciality hospital marketing in Lucknow</strong>, our six pillars turn online searches into confident OPD visits.
+          </p>
+        </div>
+        <div class="lg:col-span-5 min-w-0">
+          <div class="rounded-2xl overflow-hidden border border-slate-200 shadow-md bg-white">
+            <img
+              src="/images/lucknow-hospitals-dm/services-hospitals-dm-lucknow.webp"
+              alt="Hospital Marketing Company in Lucknow Modern Consultation Room and Care Desk"
+              width="800"
+              height="450"
+              sizes="(max-width: 1024px) 100vw, 42vw"
+              class="w-full aspect-[16/9] sm:aspect-auto sm:h-56 lg:h-64 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-7">
+        {services.map((s) => (
+          <div class="elevated-card rounded-2xl p-4 sm:p-7 flex flex-col justify-between group sm:hover:-translate-y-1 min-w-0">
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-4 sm:mb-6">
+                <div class={`w-11 h-11 sm:w-12 sm:h-12 rounded-xl border flex items-center justify-center flex-shrink-0 ${s.iconStyle}`}>
+                  <Fragment set:html={s.icon} />
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class={`text-[10.5px] sm:text-[11px] font-semibold px-2.5 py-1 rounded-md ${s.badgeColor}`}>
+                    {s.category}
+                  </span>
+                  <span class="font-display font-black text-base sm:text-lg text-slate-300">{s.num}</span>
+                </div>
+              </div>
+
+              <h3 class="font-display font-bold text-[17px] sm:text-xl text-slate-900 mb-2.5 sm:mb-3 leading-snug group-hover:text-brand-600 transition-colors">
+                {s.title}
+              </h3>
+
+              <p class="text-slate-600 text-[13px] sm:text-sm leading-relaxed mb-4 sm:mb-6 text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+                {s.body}
+              </p>
+            </div>
+
+            <div>
+              <div class={`rounded-xl border p-3.5 sm:p-4 mb-3.5 sm:mb-5 ${s.impactStyle}`}>
+                <div class="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-slate-900 mb-1">
+                  <svg class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                  </svg>
+                  <span>Commercial Impact</span>
+                </div>
+                <p class="text-xs text-slate-700 leading-relaxed font-medium text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+                  {s.impact}
+                </p>
+              </div>
+
+              <a href={s.href} class="w-full sm:w-auto inline-flex items-center justify-between sm:justify-start gap-2 rounded-xl sm:rounded-none bg-slate-50 active:bg-sky-50 sm:bg-transparent border border-slate-200/80 sm:border-0 px-3.5 sm:px-0 py-2.5 min-h-[46px] sm:min-h-0 text-xs font-bold text-brand-600 hover:text-brand-700 no-underline hover:no-underline group-hover:gap-3 transition-all">
+                <span>{s.cta}</span>
+                <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 5: REGIONAL LOCATIONS (DARK NAVY)
+  ===================================================================== -->
+  <section id="locations" class="relative surface-navy py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden scroll-mt-16 sm:scroll-mt-20">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 items-center mb-8 sm:mb-16">
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-dark mb-3">Sector &amp; Corridor Targeting Across Lucknow</div>
+          <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-white tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4 break-words">
+            Patient Acquisition Across Key Lucknow Medical Corridors
+          </h2>
+          <p class="text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+            Patients look for trusted specialists close to home across Vibhuti Khand, Aliganj, Chowk and Raebareli Road. We pair <a href="/local-seo-services-in-lucknow/" class="text-brand-300 hover:text-white font-semibold no-underline hover:no-underline">Local SEO Services in Lucknow</a> with clear clinic hubs.
+          </p>
+        </div>
+        <div class="lg:col-span-5 min-w-0">
+          <div class="rounded-2xl overflow-hidden border border-slate-700/80 shadow-xl bg-slate-900">
+            <img
+              src="/images/lucknow-hospitals-dm/locations-hospitals-dm-lucknow.webp"
+              alt="Clean Multispeciality Hospital Campus in Vibhuti Khand Gomti Nagar Lucknow"
+              width="800"
+              height="450"
+              sizes="(max-width: 1024px) 100vw, 42vw"
+              class="w-full aspect-[16/9] sm:aspect-auto sm:h-56 lg:h-64 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+        {cities.map((c) => (
+          <div class="glass-card rounded-2xl p-4 sm:p-6 flex flex-col justify-between group sm:hover:-translate-y-1 min-w-0">
+            <div>
+              <div class={`h-1 w-full bg-gradient-to-r ${c.accent} rounded-full mb-4 sm:mb-5`}></div>
+
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-3.5 sm:mb-4">
+                <span class="px-2.5 py-1 rounded-md bg-slate-800 border border-slate-700 text-[11px] font-bold uppercase tracking-wider text-brand-300">
+                  {c.hub}
+                </span>
+                <span class="text-xs font-semibold text-slate-400">{c.city}</span>
+              </div>
+
+              <h3 class="font-display font-bold text-base sm:text-lg text-white mb-2.5 sm:mb-3 leading-snug">
+                <a href={c.href} class="hover:text-brand-300 no-underline hover:no-underline transition-colors">{c.keyword}</a>
+              </h3>
+
+              <p class="text-slate-300 text-[13px] sm:text-sm leading-relaxed mb-4 sm:mb-5 text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+                {c.desc}
+              </p>
+            </div>
+
+            <div class="pt-3.5 sm:pt-4 border-t border-slate-800">
+              <p class="text-[11px] text-slate-400 mb-3 sm:mb-4 leading-normal">
+                <strong class="text-slate-300">Key Belts:</strong> {c.corridor}
+              </p>
+              <a href={c.href} class="w-full sm:w-auto inline-flex items-center justify-between sm:justify-start gap-1.5 rounded-xl sm:rounded-none bg-slate-800/90 active:bg-slate-800 sm:bg-transparent border border-slate-700/80 sm:border-0 px-3.5 sm:px-0 py-2.5 min-h-[44px] sm:min-h-0 text-xs font-bold text-brand-400 hover:text-brand-300 no-underline hover:no-underline group-hover:gap-2.5 transition-all">
+                <span>{c.cta}</span>
+                <svg class="w-3.5 h-3.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 6: WHY NK DIGITAL TECH (CRISP WHITE)
+  ===================================================================== -->
+  <section id="why-us" class="relative surface-white py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200 overflow-hidden scroll-mt-16 sm:scroll-mt-20">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-8 sm:mb-14 text-left sm:text-center">
+        <div class="badge-light mb-3">Why Lucknow Doctors &amp; Hospitals Choose NK Digital Tech</div>
+        <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4 break-words">
+          Trustworthy Partner for Digital Marketing for Hospitals &amp; Healthcare in Lucknow
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed mb-4 text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+          Medical websites must earn trust calmly and make booking simple on phones. Pairing factual doctor bios with <a href="/aeo-services-in-lucknow/" class="text-brand-600 hover:text-brand-700 font-semibold no-underline hover:no-underline">AEO Services in Lucknow</a> keeps patient appointments coming straight to your clinic.
+        </p>
+        <p class="text-slate-700 font-semibold text-xs sm:text-sm">
+          Compare our Lucknow sector growth engine against typical directory plans and generic agencies:
+        </p>
+      </div>
+
+      <div class="hidden md:block overflow-hidden rounded-2xl border border-slate-200 shadow-lg">
+        <table class="w-full text-left border-collapse">
+          <thead>
+            <tr class="bg-slate-900 text-white">
+              <th class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-slate-300 w-1/4">
+                Evaluation Criteria
+              </th>
+              <th class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-rose-300 w-[37.5%] border-l border-slate-800">
+                Doctor Portals / Slow Site
+              </th>
+              <th class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-brand-300 w-[37.5%] border-l border-slate-800 bg-slate-950">
+                NK Digital Tech Healthcare
+              </th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200 text-sm">
+            {comparison.map((row, idx) => (
+              <tr class={idx % 2 === 0 ? 'bg-white' : 'bg-slate-50/80'}>
+                <td class="py-5 px-6 font-display font-bold text-slate-900">
+                  {row.metric}
+                </td>
+                <td class="py-5 px-6 text-slate-600 border-l border-slate-200">
+                  <div class="flex items-start gap-2.5">
+                    <svg class="w-4 h-4 text-rose-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                    <span class="text-justify">{row.typical}</span>
+                  </div>
+                </td>
+                <td class="py-5 px-6 text-slate-900 font-medium border-l border-slate-200 bg-sky-50/40">
+                  <div class="flex items-start gap-2.5">
+                    <svg class="w-4 h-4 text-emerald-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span class="text-justify">{row.nk}</span>
+                  </div>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <div class="md:hidden space-y-3.5">
+        {comparison.map((row) => (
+          <div class="elevated-card rounded-2xl p-4 space-y-3 min-w-0">
+            <h3 class="font-display font-bold text-slate-900 text-sm pb-2 border-b border-slate-100 leading-snug">{row.metric}</h3>
+            <div class="rounded-xl bg-rose-50 border border-rose-100 p-3">
+              <div class="flex items-center gap-1.5 mb-1">
+                <svg class="w-3.5 h-3.5 text-rose-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+                <p class="text-[10px] font-bold uppercase tracking-wider text-rose-600">Doctor Portals / Slow Site</p>
+              </div>
+              <p class="text-xs text-slate-700 leading-relaxed">{row.typical}</p>
+            </div>
+            <div class="rounded-xl bg-sky-50 border border-sky-200 p-3">
+              <div class="flex items-center gap-1.5 mb-1">
+                <svg class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                </svg>
+                <p class="text-[10px] font-bold uppercase tracking-wider text-brand-600">NK Digital Tech Healthcare</p>
+              </div>
+              <p class="text-xs text-slate-900 font-semibold leading-relaxed">{row.nk}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 7: VERTICAL SEGMENTS WE SCALE (LIGHT SLATE 3x2 GRID)
+  ===================================================================== -->
+  <section id="industries" class="relative surface-slate py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200 overflow-hidden scroll-mt-16 sm:scroll-mt-20">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-8 sm:mb-16 text-left sm:text-center">
+        <div class="badge-light mb-3">Focused Business Segments</div>
+        <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4 break-words">
+          Focused Growth Plans for Six Lucknow Healthcare Segments
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+          Whether you lead a multispeciality hospital, dental studio, eye hospital, IVF centre or diagnostic lab chain, we support ethical patient growth.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-7">
+        {sectorSegments.map((ind) => (
+          <div class={`elevated-card rounded-2xl p-4 sm:p-7 border-t-4 ${ind.accentBorder} flex flex-col justify-between sm:hover:-translate-y-1 min-w-0`}>
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-4 sm:mb-5">
+                <div class={`w-10 h-10 sm:w-11 sm:h-11 rounded-xl border flex items-center justify-center flex-shrink-0 ${ind.iconBg}`}>
+                  <Fragment set:html={ind.icon} />
+                </div>
+                <span class="text-[11px] font-semibold text-slate-600 bg-slate-100 px-2.5 py-1 rounded-md">
+                  {ind.sector}
+                </span>
+              </div>
+
+              <h3 class="font-display font-bold text-[17px] sm:text-xl text-slate-900 mb-3 sm:mb-4 leading-snug">
+                {ind.title}
+              </h3>
+
+              <div class="mb-4 sm:mb-5">
+                <p class="text-[11px] font-bold uppercase tracking-wider text-brand-600 mb-1.5">
+                  Digital Growth Focus
+                </p>
+                <p class="text-slate-600 text-[13px] sm:text-sm leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+                  {ind.focus}
+                </p>
+              </div>
+            </div>
+
+            <div class="rounded-xl bg-emerald-50/70 border border-emerald-200/80 p-3.5 sm:p-4">
+              <p class="text-[11px] font-bold uppercase tracking-wider text-emerald-700 mb-1">
+                Verified Outcome
+              </p>
+              <p class="text-slate-800 text-xs font-medium leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+                {ind.outcome}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 8: HOW WE WORK (CRISP WHITE - 4 STAGES)
+  ===================================================================== -->
+  <section class="relative surface-white py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200 overflow-hidden">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-8 sm:mb-16 text-left sm:text-center">
+        <div class="badge-light mb-3">Our 4 Stage Execution</div>
+        <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4 break-words">
+          Our 4 Stage Execution for Lucknow Hospitals &amp; Clinics
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+          We organise doctor profiles, symptom FAQs and local clinic Maps around effortless patient booking.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-7">
+        {stages.map((st) => (
+          <div class="elevated-card rounded-2xl p-4 sm:p-8 relative overflow-hidden group sm:hover:-translate-y-1 min-w-0">
+            <div class="flex items-center justify-between gap-4 mb-3.5 sm:mb-5">
+              <span class={`inline-flex items-center px-2.5 sm:px-3 py-1 rounded-lg text-xs font-bold uppercase tracking-wider text-white bg-gradient-to-r ${st.accent}`}>
+                {st.num}
+              </span>
+              <span class="font-display font-black text-3xl sm:text-4xl text-slate-200 group-hover:text-slate-300 transition-colors">
+                {st.step}
+              </span>
+            </div>
+            <h3 class="font-display font-bold text-[17px] sm:text-xl text-slate-900 mb-2.5 sm:mb-3 leading-snug">
+              {st.title}
+            </h3>
+            <p class="text-slate-600 text-[13px] sm:text-sm leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+              {st.body}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 9: CONCLUSION / PARTNER SECTION (DARK INDIGO + GROWTH IMAGE)
+  ===================================================================== -->
+  <section class="relative surface-indigo py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-7 sm:gap-10 lg:gap-12 items-center">
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-dark mb-3.5 sm:mb-4">Grow Direct Patient Trust</div>
+          <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-white tracking-tight leading-[1.22] sm:leading-tight mb-4 sm:mb-6 break-words">
+            Increase Direct OPD Visits With Digital Marketing for Hospitals &amp; Healthcare in Lucknow
+          </h2>
+          <div class="space-y-4 sm:space-y-5 text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+            <p>Sharing patient bookings with commission portals reduces clinic loyalty and puts rivals right next to your doctors. Families across Lucknow want clear doctor credentials, easy phone booking and reliable clinic Maps.</p>
+            <p>Choosing NK Digital Tech for <strong class="text-white font-semibold">Digital Marketing for Hospitals & Healthcare in Lucknow</strong> pairs medical search strategists with a reliable <a href="/website-development-company-in-lucknow/" class="text-brand-300 hover:text-white font-semibold no-underline hover:no-underline">Website Development Company in Lucknow</a> focused on direct patient trust.</p>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 min-w-0">
+          <div class="rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-700/80 shadow-2xl bg-slate-900">
+            <img
+              src="/images/lucknow-hospitals-dm/growth-hospitals-dm-lucknow.webp"
+              alt="Caring Lucknow Doctor Explaining Health Plan Clearly to Smiling Family"
+              width="800"
+              height="450"
+              sizes="(max-width: 1024px) 100vw, 42vw"
+              class="w-full aspect-[16/10] sm:aspect-auto sm:h-64 lg:h-72 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 10: FAQ (LIGHT COOL SLATE)
+  ===================================================================== -->
+  <section id="faq" class="relative surface-cool py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200 overflow-hidden scroll-mt-16 sm:scroll-mt-20">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-left sm:text-center mb-8 sm:mb-14">
+        <div class="badge-light mb-3">Questions Asked on Google, ChatGPT &amp; Gemini</div>
+        <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4 break-words">
+          Frequently Asked Questions About Digital Marketing for Hospitals &amp; Healthcare in Lucknow
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+          Honest answers for hospital medical superintendents, diagnostic lab directors and specialist doctors in Lucknow.
+        </p>
+      </div>
+
+      <div class="space-y-3 sm:space-y-4">
+        {faqs.map((f, i) => (
+          <details class="elevated-card rounded-2xl group overflow-hidden" open={i === 0}>
+            <summary class="flex items-start sm:items-center justify-between gap-3 sm:gap-4 px-4 sm:px-6 py-4 sm:py-5 min-h-[54px] select-none">
+              <div class="flex items-start sm:items-center gap-2.5 sm:gap-3.5 text-left min-w-0">
+                <span class="w-6 h-6 sm:w-7 sm:h-7 rounded-lg bg-sky-50 border border-sky-200 text-brand-600 font-display font-bold text-xs flex items-center justify-center flex-shrink-0 mt-0.5 sm:mt-0">
+                  0{i + 1}
+                </span>
+                <span class="font-display font-bold text-slate-900 text-[14px] sm:text-base md:text-lg leading-snug break-words">
+                  {f.q}
+                </span>
+              </div>
+              <span class="faq-icon w-7 h-7 sm:w-8 sm:h-8 rounded-full border border-slate-200 text-slate-600 flex items-center justify-center flex-shrink-0 mt-0.5 sm:mt-0">
+                <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                </svg>
+              </span>
+            </summary>
+            <div class="px-4 sm:px-6 pb-5 sm:pb-6 pt-3 text-slate-600 text-[13px] sm:text-sm md:text-base leading-relaxed border-t border-slate-100 text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+              {f.a}
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 11: SHORT CTA BANNER (LAST SECTION)
+  ===================================================================== -->
+  <section id="contact" class="relative surface-dark py-10 pb-28 sm:py-16 lg:py-20 px-4 sm:px-6 overflow-hidden scroll-mt-16 sm:scroll-mt-20">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-5xl mx-auto">
+      <div class="rounded-2xl sm:rounded-3xl bg-gradient-to-r from-brand-600 via-brand-700 to-accent-700 p-6 sm:p-10 md:p-12 text-center text-white shadow-2xl border border-white/15 relative overflow-hidden">
+        <div class="relative z-10 max-w-2xl mx-auto">
+          <h2 class="font-display font-black text-[clamp(1.38rem,5.4vw,1.85rem)] sm:text-3xl md:text-4xl text-white tracking-tight leading-[1.2] sm:leading-snug mb-3 sm:mb-4 break-words">
+            Ready to Grow Direct OPD Bookings &amp; Clinic Trust in Lucknow?
+          </h2>
+
+          <p class="text-sky-50 text-[13px] sm:text-sm md:text-base leading-relaxed mb-6 sm:mb-8 text-left sm:text-center">
+            Claim a free audit of your hospital website, doctor Google Maps and patient booking journey.
+          </p>
+
+          <a
+            href="/contact-us/"
+            class="inline-flex w-full sm:w-auto min-h-[50px] items-center justify-center gap-2 sm:gap-3 px-5 sm:px-8 py-3.5 sm:py-4 rounded-xl bg-white text-slate-950 hover:bg-sky-50 no-underline hover:no-underline font-display font-bold text-sm sm:text-base shadow-xl transition-all duration-300 active:scale-95 text-center leading-snug"
+          >
+            <span>Claim Free Hospital Audit</span>
+            <svg class="w-4 h-4 sm:w-5 sm:h-5 text-brand-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mobile Sticky Bottom Quick Action Bar -->
+  <div class="mobile-sticky-cta sm:hidden fixed bottom-0 inset-x-0 z-40 bg-[#050a14]/95 backdrop-blur-xl border-t border-slate-800 px-3.5 pt-2.5 pb-[max(0.625rem,env(safe-area-inset-bottom))] shadow-[0_-8px_24px_rgba(0,0,0,0.45)] transition-all duration-300">
+    <div class="flex items-center gap-2.5">
+      <a
+        href="/contact-us/"
+        class="btn-primary flex-1 min-h-[44px] py-2.5 px-4 text-xs font-bold rounded-xl no-underline hover:no-underline"
+      >
+        <span>Claim Free Hospital Audit</span>
+        <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+        </svg>
+      </a>
+      <a
+        href="#services"
+        class="btn-secondary-dark min-h-[44px] py-2.5 px-3.5 text-xs font-semibold rounded-xl flex-shrink-0 no-underline hover:no-underline"
+      >
+        <span>Services</span>
+      </a>
+    </div>
+  </div>
+
+</Layout>

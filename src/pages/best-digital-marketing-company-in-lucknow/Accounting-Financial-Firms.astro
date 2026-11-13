@@ -1,0 +1,1028 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import '../../styles/global.css';
+
+const pageTitle = "Digital Marketing for CA & Financial Firms in Lucknow | NK";
+const pageDescription = "Need Digital Marketing for CA & Financial Firms in Lucknow? NK Digital Tech brings corporate audit, GST, tax advisory and virtual CFO retainers cleanly.";
+const pageCanonical = "https://www.nkdigitaltech.net/best-digital-marketing-company-in-lucknow/Accounting-Financial-Firms/";
+
+const services = [
+  {
+    "num": "01",
+    "category": "Corporate Advisory SEO",
+    "icon": "<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z\"/></svg>",
+    "iconStyle": "bg-sky-50 border-sky-200 text-brand-600",
+    "impactStyle": "bg-sky-50/80 border-sky-200/80 text-slate-800",
+    "badgeColor": "text-brand-600 bg-sky-100/80",
+    "title": "Audit, Company Setup & GST SEO",
+    "body": "Through audit and GST firm marketing in Lucknow, we publish clear informational pages on corporate filings, internal controls and business compliance.",
+    "impact": "Attracts private limited companies and growing firms seeking annual retainers.",
+    "cta": "View Best SEO Company in Lucknow",
+    "href": "/best-seo-company-in-lucknow/"
+  },
+  {
+    "num": "02",
+    "category": "Local Office Google Maps",
+    "icon": "<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z\"/><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M15 11a3 3 0 11-6 0 3 3 0 016 0z\"/></svg>",
+    "iconStyle": "bg-emerald-50 border-emerald-200 text-emerald-600",
+    "impactStyle": "bg-emerald-50/80 border-emerald-200/80 text-slate-800",
+    "badgeColor": "text-emerald-700 bg-emerald-100/80",
+    "title": "Chartered Accountant Local Marketing in Lucknow",
+    "body": "Our chartered accountant local marketing in Lucknow aligns your Google Map profile, office directions and service areas across Hazratganj, Ashok Marg and Gomti Nagar.",
+    "impact": "Drives verified phone calls and office appointment bookings from nearby businesses.",
+    "cta": "View Local SEO Services in Lucknow",
+    "href": "/local-seo-services-in-lucknow/"
+  },
+  {
+    "num": "03",
+    "category": "Credible Practice Websites",
+    "icon": "<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M13 10V3L4 14h7v7l9-11h-7z\"/></svg>",
+    "iconStyle": "bg-cyan-50 border-cyan-200 text-cyan-700",
+    "impactStyle": "bg-cyan-50/80 border-cyan-200/80 text-slate-800",
+    "badgeColor": "text-cyan-700 bg-cyan-100/80",
+    "title": "Fast, Respectful Partner & Practice Sites",
+    "body": "We build clean informational websites with partner bios, sector experience tables and neat consultation scheduling without loud sales popups.",
+    "impact": "Creates instant professional trust when directors verify your practice.",
+    "cta": "View Website Development Company in Lucknow",
+    "href": "/website-development-company-in-lucknow/"
+  },
+  {
+    "num": "04",
+    "category": "Compliance Answer Boxes",
+    "icon": "<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z\"/></svg>",
+    "iconStyle": "bg-amber-50 border-amber-200 text-amber-600",
+    "impactStyle": "bg-amber-50/80 border-amber-200/80 text-slate-800",
+    "badgeColor": "text-amber-700 bg-amber-100/80",
+    "title": "Tax, Audit Limit & MSME Answer Snippets",
+    "body": "We publish simple 50 word summaries on tax audit turnover rules, GST return calendars and startup registration checklists using FAQ schema.",
+    "impact": "Wins top featured boxes when Lucknow business owners check compliance rules.",
+    "cta": "View AEO Services in Lucknow",
+    "href": "/aeo-services-in-lucknow/"
+  },
+  {
+    "num": "05",
+    "category": "AI Practice Citations (GEO)",
+    "icon": "<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z\"/></svg>",
+    "iconStyle": "bg-violet-50 border-violet-200 text-accent-600",
+    "impactStyle": "bg-violet-50/80 border-violet-200/80 text-slate-800",
+    "badgeColor": "text-accent-600 bg-violet-100/80",
+    "title": "Virtual CFO Marketing Agency in Lucknow",
+    "body": "Through our virtual CFO marketing agency in Lucknow setup and AccountingService schema, ChatGPT and Gemini suggest your firm for board advisory.",
+    "impact": "Places your practice in executive search results across Uttar Pradesh.",
+    "cta": "View AI SEO Company in Lucknow",
+    "href": "/ai-seo-company-in-lucknow/"
+  },
+  {
+    "num": "06",
+    "category": "Wealth & Investment Growth",
+    "icon": "<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z\"/></svg>",
+    "iconStyle": "bg-indigo-50 border-indigo-200 text-indigo-600",
+    "impactStyle": "bg-indigo-50/80 border-indigo-200/80 text-slate-800",
+    "badgeColor": "text-indigo-700 bg-indigo-100/80",
+    "title": "Wealth & Investment Advisory Digital Growth",
+    "body": "Combining wealth management marketing agency in Lucknow content with investment advisory digital marketing in Lucknow draws portfolio review inquiries.",
+    "impact": "Attracts senior doctors, industrial owners and NRI investors across Lucknow.",
+    "cta": "Request Practice Growth Audit",
+    "href": "#contact"
+  }
+];
+
+const cities = [
+  {
+    "hub": "Hub 01",
+    "city": "Hazratganj & Ashok Marg",
+    "corridor": "Hazratganj • Sapru Marg • Ashok Marg • Jopling Road",
+    "keyword": "Established CA Firms & Corporate Audits",
+    "desc": "We strengthen longstanding commercial practices seeking company audits, ROC filings and institutional retainers.",
+    "cta": "Audit Hazratganj Visibility",
+    "href": "#contact",
+    "accent": "from-brand-500 to-sky-400"
+  },
+  {
+    "hub": "Hub 02",
+    "city": "Vibhuti Khand & Gomti Nagar",
+    "corridor": "Vibhuti Khand • Summit Building • Patrakarpuram",
+    "keyword": "Virtual CFOs, Startups & Wealth Advisory",
+    "desc": "We connect modern financial advisors with tech startups, private hospitals and high net worth families.",
+    "cta": "Audit Gomti Nagar Leads",
+    "href": "#contact",
+    "accent": "from-accent-500 to-violet-400"
+  },
+  {
+    "hub": "Hub 03",
+    "city": "Alambagh, Amausi & Chowk",
+    "corridor": "Alambagh • Kanpur Road • Chowk Trading Hub",
+    "keyword": "GST Filings, Wholesale Tax & Project Finance",
+    "desc": "We help local tax and accounting offices win recurring monthly GST and bookkeeping clients among traders and factories.",
+    "cta": "Explore Lucknow Local SEO",
+    "href": "/local-seo-services-in-lucknow/",
+    "accent": "from-cyan-500 to-teal-400"
+  },
+  {
+    "hub": "Hub 04",
+    "city": "Indira Nagar & Mahanagar",
+    "corridor": "Mahanagar • Aliganj • Indira Nagar • Faizabad Road",
+    "keyword": "Personal Wealth, NRI Tax & Family Offices",
+    "desc": "We capture searches from senior salaried executives, doctors and families planning long term wealth and estate tax.",
+    "cta": "Audit Family Wealth Reach",
+    "href": "#contact",
+    "accent": "from-emerald-500 to-green-400"
+  }
+];
+
+const comparison = [
+  {
+    "metric": "Lead Fit",
+    "typical": "One time discount ITR bargain shoppers",
+    "nk": "Corporate monthly GST, audit & virtual CFO retainers"
+  },
+  {
+    "metric": "Professional Tone",
+    "typical": "Pushy ad popups violating advisory dignity",
+    "nk": "Clean educational guides aligned with ICAI standards"
+  },
+  {
+    "metric": "AI Search Visibility",
+    "typical": "Missing when founders ask ChatGPT for Lucknow CAs",
+    "nk": "Structured AccountingService schema cited by AI search"
+  },
+  {
+    "metric": "Local Office Trust",
+    "typical": "Unverified office pins with outdated numbers",
+    "nk": "Top 3 Google Map Pack rankings in Hazratganj & Gomti Nagar"
+  },
+  {
+    "metric": "Sector Depth",
+    "typical": "Generic tax pages with no industry focus",
+    "nk": "Dedicated compliance pages for factories, builders & doctors"
+  },
+  {
+    "metric": "Growth Trend",
+    "typical": "Busy only in July & September tax deadlines",
+    "nk": "Steady year round advisory and corporate retainer inquiries"
+  }
+];
+
+const sectorSegments = [
+  {
+    "sector": "CA Practices",
+    "title": "Company Audit, Assurance & Tax Practices",
+    "focus": "Presents partner credentials, industry audit verticals and clean corporate compliance calendars cleanly.",
+    "outcome": "Direct private limited audit & corporate retainer inquiries.",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z\"/></svg>",
+    "accentBorder": "border-t-brand-500",
+    "iconBg": "bg-sky-50 text-brand-600 border-sky-200"
+  },
+  {
+    "sector": "Virtual CFO",
+    "title": "MIS, Budgeting & Fundraising Advisory",
+    "focus": "Positions your advisory desk in front of funded Lucknow startups and mid size builders needing monthly CFO oversight.",
+    "outcome": "High value monthly advisory retainers with growth companies.",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M13 7h8m0 0v8m0-8l-8 8-4-4-6 6\"/></svg>",
+    "accentBorder": "border-t-amber-500",
+    "iconBg": "bg-amber-50 text-amber-600 border-amber-200"
+  },
+  {
+    "sector": "GST & Tax Consultants",
+    "title": "Monthly Bookkeeping, Notices & E Way Bills",
+    "focus": "Through tax consultant digital marketing in Lucknow, we rank practical GST notice resolution and MSME compliance guides.",
+    "outcome": "Steady recurring SME bookkeeping & tax accounts.",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z\"/></svg>",
+    "accentBorder": "border-t-cyan-500",
+    "iconBg": "bg-cyan-50 text-cyan-700 border-cyan-200"
+  },
+  {
+    "sector": "Wealth Advisors",
+    "title": "Mutual Fund Distributors & Financial Planners",
+    "focus": "As a wealth management marketing agency in Lucknow partner, we highlight goal based planning, retirement calculators and clear disclosures.",
+    "outcome": "Verified SIP and portfolio review appointments from HNI families.",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z\"/></svg>",
+    "accentBorder": "border-t-emerald-500",
+    "iconBg": "bg-emerald-50 text-emerald-600 border-emerald-200"
+  },
+  {
+    "sector": "Startup & ROC Desks",
+    "title": "Company Registration, Trademark & Startup India",
+    "focus": "Captures founders in Lucknow searching private limited incorporation, DPIIT benefits and investor due diligence checklists.",
+    "outcome": "New founder relationships that convert into annual accounting clients.",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5\"/></svg>",
+    "accentBorder": "border-t-indigo-500",
+    "iconBg": "bg-indigo-50 text-indigo-600 border-indigo-200"
+  },
+  {
+    "sector": "Project Finance",
+    "title": "SME Loans, CMA Data & Subsidy Advisory",
+    "focus": "Attracts Lucknow factory owners and hoteliers looking for bankable CMA reports, UP industrial subsidies and working capital advisory.",
+    "outcome": "Direct project finance and business loan advisory contracts.",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z\"/></svg>",
+    "accentBorder": "border-t-rose-500",
+    "iconBg": "bg-rose-50 text-rose-600 border-rose-200"
+  }
+];
+
+const stages = [
+  {
+    "num": "Stage 01",
+    "step": "01",
+    "title": "Firm Website, Guideline & Map Audit",
+    "body": "We review existing pages, local Map Pack rankings and educational gaps against top advisory firms in Lucknow.",
+    "accent": "from-brand-600 to-sky-500"
+  },
+  {
+    "num": "Stage 02",
+    "step": "02",
+    "title": "Practice Keyword Plan & Schema Setup",
+    "body": "We map corporate tax, audit and wealth queries and set up AccountingService, FAQ and LocalBusiness JSON LD data.",
+    "accent": "from-accent-600 to-violet-500"
+  },
+  {
+    "num": "Stage 03",
+    "step": "03",
+    "title": "Clean Advisory Hubs & Map Rollout",
+    "body": "Our team launches fast educational guides, partner credential pages and verified Google Business updates.",
+    "accent": "from-cyan-600 to-teal-500"
+  },
+  {
+    "num": "Stage 04",
+    "step": "04",
+    "title": "Retainer Tracking & AI Citation Checks",
+    "body": "We review booked corporate consultations and ChatGPT/Gemini advisory mentions every two weeks.",
+    "accent": "from-emerald-600 to-green-500"
+  }
+];
+
+const faqs = [
+  {
+    "q": "Is Digital Marketing for CA & Financial Firms in Lucknow compliant with professional guidelines?",
+    "a": "Yes. We strictly avoid flashy ads, exaggerated claims or discount promotions, focusing instead on informational websites, clear compliance guides, partner credentials and verified Google Map office listings."
+  },
+  {
+    "q": "How do CA firms attract corporate retainers instead of low fee individual tax calls?",
+    "a": "We build dedicated informational pages around corporate company audit, virtual CFO MIS reporting, ROC compliance and factory GST advisory so business owners find you for annual retainers."
+  },
+  {
+    "q": "How does local Map Pack visibility help offices in Hazratganj and Vibhuti Khand?",
+    "a": "Many founders prefer meeting an advisor near their office. Ranking in the top three Google Map spots in Hazratganj and Gomti Nagar drives direct office appointment calls."
+  },
+  {
+    "q": "Can ChatGPT and Gemini mention our accounting or wealth advisory firm?",
+    "a": "Yes. By structuring clean AccountingService schema, authentic educational articles and consistent local business listings, AI tools cite your practice accurately when businesses search Lucknow advisors."
+  },
+  {
+    "q": "How soon do financial practices start noticing quality business inquiries?",
+    "a": "Google Business Profile and informational page fixes normally lift appointment calls within 4 to 8 weeks, while steady organic rankings build strong retainer flow over 3 to 6 months."
+  }
+];
+
+const trustStrip = [
+  "Corporate Audit Retainers",
+  "ICAI Respectful Websites",
+  "Top 3 Hazratganj Maps",
+  "ChatGPT Practice Citations",
+  "Tax & GST Answer Boxes",
+  "Virtual CFO Lead Flows",
+  "Zero Flashy Ad Hype",
+  "Hazratganj & Vibhuti Khand"
+];
+
+const sectorDMServiceSchema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Digital Marketing for CA & Financial Firms in Lucknow",
+  "serviceType": "Sector Digital Marketing, Search Engine Optimisation & AI Search Growth",
+  "provider": {
+    "@type": "ProfessionalService",
+    "name": "NK Digital Tech",
+    "url": "https://www.nkdigitaltech.net/",
+    "email": "nkdigitaltech1@gmail.com",
+    "telephone": "+91-80521-89051",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Lucknow",
+      "addressRegion": "Uttar Pradesh",
+      "addressCountry": "IN"
+    }
+  },
+  "areaServed": ["Lucknow","Hazratganj","Ashok Marg","Vibhuti Khand","Gomti Nagar","Indira Nagar","Alambagh","Uttar Pradesh"],
+  "description": pageDescription,
+  "url": pageCanonical
+});
+
+const sectorDMFAQSchema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map((item) => ({
+    "@type": "Question",
+    "name": item.q,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": item.a
+    }
+  }))
+});
+
+const sectorDMBreadcrumbSchema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.nkdigitaltech.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Best Digital Marketing Company in Lucknow",
+      "item": "https://www.nkdigitaltech.net/best-digital-marketing-company-in-lucknow/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Digital Marketing for CA & Financial Firms in Lucknow",
+      "item": pageCanonical
+    }
+  ]
+});
+---
+
+<Layout
+  title={pageTitle}
+  description={pageDescription}
+  canonical={pageCanonical}
+  ogImage="https://www.nkdigitaltech.net/images/lucknow-accounting-dm/hero-accounting-dm-lucknow.webp"
+  preloadImage="/images/lucknow-accounting-dm/hero-accounting-dm-lucknow.webp"
+  hideLocationsNav={false}
+  customSchemaLocalBusiness={sectorDMServiceSchema}
+  customSchemaFAQ={sectorDMFAQSchema}
+  customSchemaBreadcrumb={sectorDMBreadcrumbSchema}
+  utilityTagline={"Digital Marketing for CA & Financial Firms in Lucknow • Hazratganj & Vibhuti Khand"}
+  brandSubtitle={"Lucknow • Financial Digital Marketing"}
+  footerBio={"NK Digital Tech provides respectful Digital Marketing for CA & Financial Firms in Lucknow, helping Chartered Accountants and advisors in Hazratganj and Gomti Nagar win corporate retainers."}
+  footerCoreDisciplines={[
+    { label: 'Best Digital Marketing Company in Lucknow', href: '/best-digital-marketing-company-in-lucknow/' },
+    { label: 'Best SEO Company in Lucknow', href: '/best-seo-company-in-lucknow/' },
+    { label: 'Local SEO Services in Lucknow', href: '/local-seo-services-in-lucknow/' },
+    { label: 'AI SEO Company in Lucknow', href: '/ai-seo-company-in-lucknow/' },
+    { label: 'AEO Services in Lucknow', href: '/aeo-services-in-lucknow/' },
+    { label: 'Website Development Company in Lucknow', href: '/website-development-company-in-lucknow/' },
+  ]}
+  footerTagline={"Built for Trusted Advisory Growth in Lucknow"}
+>
+
+  <!-- =====================================================================
+       SECTION 1: HERO (DARK SURFACE)
+  ===================================================================== -->
+  <section class="relative surface-dark overflow-hidden pt-5 pb-9 sm:pt-16 sm:pb-20 lg:pt-20 lg:pb-24 border-b border-slate-800/80">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="absolute inset-0 mesh-glow pointer-events-none"></div>
+    <div class="absolute -top-24 -left-24 sm:-top-36 sm:-left-36 w-56 h-56 sm:w-96 sm:h-96 bg-brand-500/20 rounded-full blur-[80px] sm:blur-[130px] pointer-events-none"></div>
+    <div class="absolute top-1/4 -right-24 sm:-right-36 w-56 h-56 sm:w-96 sm:h-96 bg-accent-500/20 rounded-full blur-[80px] sm:blur-[130px] pointer-events-none"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-10 lg:gap-12 items-center">
+        <div class="lg:col-span-7 text-left min-w-0">
+          <div class="badge-dark mb-3 sm:mb-6 py-1.5 px-2.5 sm:px-3.5">
+            <span class="w-2 h-2 rounded-full bg-brand-400 animate-ping flex-shrink-0"></span>
+            <span class="min-w-0 break-words">Lucknow CA &amp; Finance SEO • ICAI Friendly • Corporate Retainers</span>
+          </div>
+
+          <h1 class="font-display text-[clamp(1.62rem,6.5vw,2.35rem)] sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-[1.15] sm:leading-[1.1] mb-3.5 sm:mb-6 text-glow break-words">
+            Digital Marketing for CA &amp; <br />
+            <span class="gradient-text-light">Financial Firms in Lucknow</span>
+          </h1>
+
+          <p class="text-sm sm:text-lg text-slate-300 leading-[1.68] sm:leading-relaxed mb-5 sm:mb-8 font-normal text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+            Looking for respectful <strong class="text-white font-semibold">Digital Marketing for CA & Financial Firms in Lucknow</strong> that attracts business owners instead of low fee calls? NK Digital Tech helps Chartered Accountants, tax advisors and wealth firms grow through <strong class="text-white font-semibold">accounting SEO and client acquisition in Lucknow</strong>, Google Map trust and ChatGPT citations across Hazratganj and Vibhuti Khand.
+          </p>
+
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-4 mb-5 sm:mb-10">
+            <a href="#contact" class="btn-primary w-full sm:w-auto min-h-[50px] text-[13.5px] sm:text-base px-4 sm:px-8 py-3.5 sm:py-4">
+              <span>Claim Free Practice Growth Audit</span>
+              <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+              </svg>
+            </a>
+            <a href="#services" class="btn-secondary-dark w-full sm:w-auto min-h-[48px] text-[13.5px] sm:text-base px-4 sm:px-7 py-3.5 sm:py-4">
+              <span>Explore Six Finance Pillars</span>
+            </a>
+          </div>
+
+          <div class="pt-5 sm:pt-6 border-t border-slate-800/80">
+            <div class="grid grid-cols-2 sm:flex sm:flex-wrap items-stretch sm:items-center gap-2">
+              {trustStrip.map((item) => (
+                <span class="px-2.5 sm:px-3 py-2 sm:py-1.5 min-h-[42px] sm:min-h-0 rounded-lg bg-slate-900/90 border border-slate-800 text-[11px] sm:text-xs text-slate-300 font-medium flex items-center justify-center sm:justify-start text-center sm:text-left leading-tight break-words">
+                  {item}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 min-w-0">
+          <div class="relative rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-700/80 shadow-2xl shadow-brand-500/15 bg-slate-900 group">
+            <div class="relative">
+              <img
+                src="/images/lucknow-accounting-dm/hero-accounting-dm-lucknow.webp"
+                alt="Digital Marketing for CA & Financial Firms in Lucknow Executive Advisory Boardroom"
+                width="960"
+                height="540"
+                sizes="(max-width: 1024px) 100vw, 42vw"
+                fetchpriority="high"
+                decoding="async"
+                class="w-full aspect-[16/9] sm:aspect-auto sm:h-72 md:h-[380px] lg:h-[400px] object-cover object-center sm:group-hover:scale-105 transition-transform duration-500"
+              />
+              <div class="hidden sm:block absolute inset-0 bg-gradient-to-t from-[#050a14] via-transparent to-transparent opacity-80"></div>
+            </div>
+            <div class="relative sm:absolute sm:bottom-4 sm:left-4 sm:right-4 glass-card border-t sm:border border-slate-800 sm:rounded-2xl p-3.5 sm:p-4">
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-1">
+                <span class="text-xs font-bold text-white">Steady Business Retainers</span>
+                <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-400">
+                  <span class="w-2 h-2 rounded-full bg-emerald-400 flex-shrink-0"></span>
+                  ICAI Aligned &amp; Respectful
+                </span>
+              </div>
+              <p class="text-[11px] sm:text-xs text-slate-300 text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left] leading-snug">
+                Turns GST, corporate audit and virtual CFO searches into trusted Lucknow client meetings.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 2: INTRODUCTION (CRISP WHITE)
+  ===================================================================== -->
+  <section class="relative surface-white py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200 overflow-hidden">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-7 sm:gap-10 lg:gap-12 items-center">
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-light mb-3.5 sm:mb-4">Respectful Financial Client Growth</div>
+          <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-4 sm:mb-6 break-words">
+            How Digital Marketing for CA &amp; Financial Firms in Lucknow <span class="gradient-text-dark">Attracts Corporate Retainers</span>
+          </h2>
+          <div class="space-y-4 sm:space-y-5 text-slate-700 text-[13.5px] sm:text-base leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+            <p>Factory owners in Amausi, real estate developers on Shaheed Path and growing startups in Vibhuti Khand check a financial advisor online long before sharing balance sheets or tax filings. They search Google for firm credentials, read compliance guides and ask AI tools for trusted local advisors. Partnering with our <strong>digital marketing agency for CA firms in Lucknow</strong> turns your practice expertise into steady business inquiries.</p>
+            <p>Backed by the <a href="/best-digital-marketing-company-in-lucknow/" class="text-brand-600 hover:text-brand-700 font-semibold no-underline hover:no-underline">Best Digital Marketing Company in Lucknow</a> and <a href="/best-seo-company-in-lucknow/" class="text-brand-600 hover:text-brand-700 font-semibold no-underline hover:no-underline">Best SEO Company in Lucknow</a>, we provide clear <strong>financial services digital marketing in Lucknow</strong> and focused <strong>accounting firm lead generation in Lucknow</strong> without loud promotional hype.</p>
+          </div>
+          <div class="mt-6 sm:mt-8 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
+            <a href="#contact" class="btn-primary w-full sm:w-auto min-h-[48px]">
+              <span>Talk to a Practice Growth Advisor</span>
+              <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+              </svg>
+            </a>
+            <a href="#why-us" class="btn-secondary-light w-full sm:w-auto min-h-[48px]">
+              <span>Compare Referrals vs Search Trust</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 space-y-4 sm:space-y-5 min-w-0">
+          <div class="rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-200 shadow-lg bg-slate-100">
+            <img
+              src="/images/lucknow-accounting-dm/team-accounting-dm-lucknow.webp"
+              alt="Chartered Accountant Partners Reviewing Corporate Audit Strategy in Lucknow"
+              width="800"
+              height="533"
+              sizes="(max-width: 1024px) 100vw, 42vw"
+              class="w-full aspect-[16/10] sm:aspect-auto sm:h-64 lg:h-72 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="grid grid-cols-2 gap-2.5 sm:gap-4">
+            {[{"val":"3.3x","label":"Business Retainer Calls","sub":"Corporate tax, audit & virtual CFO leads"},{"val":"100%","label":"Guideline Safe","sub":"Clean informational & firm profile layout"},{"val":"Top 3","label":"Map Pack Visibility","sub":"Hazratganj, Ashok Marg & Gomti Nagar"},{"val":"< 2 Sec","label":"Advisory Site Speed","sub":"Clean, reassuring mobile reading flow"}].map((stat) => (
+              <div class="elevated-card rounded-xl sm:rounded-2xl p-3 sm:p-4 min-w-0 flex flex-col justify-between">
+                <div class="font-display font-black text-[1.1rem] sm:text-2xl text-brand-600 mb-0.5 leading-tight break-words">{stat.val}</div>
+                <div class="text-[11px] sm:text-xs font-bold text-slate-900 leading-snug">{stat.label}</div>
+                <div class="text-[10.5px] sm:text-[11px] text-slate-500 leading-snug mt-0.5">{stat.sub}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 3: PROBLEM STATEMENT (DEEP INDIGO)
+  ===================================================================== -->
+  <section class="relative surface-indigo py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="max-w-7xl mx-auto relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-7 sm:gap-10 lg:gap-12 items-center">
+        <div class="lg:col-span-7 min-w-0">
+          <div class="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-3.5 py-1 sm:py-1.5 rounded-full text-[10px] sm:text-xs font-bold uppercase tracking-wider sm:tracking-widest bg-amber-500/10 border border-amber-500/30 text-amber-300 max-w-full leading-snug mb-4 sm:mb-5">
+            <svg class="w-4 h-4 text-amber-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+            </svg>
+            <span>Fixing Outdated Websites &amp; Small ITR Inquiries</span>
+          </div>
+
+          <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-white tracking-tight leading-[1.22] sm:leading-tight mb-4 sm:mb-6 break-words">
+            Why Outdated Firm Websites Lose Corporate Retainers in Lucknow
+          </h2>
+
+          <div class="space-y-4 sm:space-y-5 text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+            <p>Respected CA practices and financial advisors in Hazratganj, Sapru Marg and Gomti Nagar often struggle with two online gaps. First, dated websites with missing service clarity fail to show corporate depth, pushing business owners toward large national firms. Second, unclear pages attract only basic individual tax return price shoppers instead of monthly corporate retainers.</p>
+            <p>Business directors now ask ChatGPT and Gemini practical questions about GST audit rules, company incorporation and wealth structuring in Uttar Pradesh. Without clean informational pages and guidance from an <a href="/ai-seo-company-in-lucknow/" class="text-brand-300 hover:text-white font-semibold no-underline hover:no-underline">AI SEO Company in Lucknow</a>, AI search leaves reputable Lucknow firms unmentioned.</p>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 space-y-3.5 sm:space-y-4 min-w-0">
+          <div class="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6 border-l-4 border-l-rose-500 min-w-0">
+            <div class="flex flex-wrap items-center justify-between gap-1.5 mb-2">
+              <span class="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-rose-400">Referrals Only / Dated Site</span>
+              <span class="text-[11px] sm:text-xs text-slate-400">Low Value Seasonal Traffic</span>
+            </div>
+            <h3 class="font-display font-bold text-[15px] sm:text-base text-white mb-2 leading-snug">Basic Static Pages &amp; Hidden Practice Depth</h3>
+            <p class="text-xs text-slate-300 leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+              Fails to show partner credentials, audit experience or advisory guides, leaving business retainers to larger Delhi NCR brands.
+            </p>
+          </div>
+
+          <div class="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6 border-l-4 border-l-emerald-400 min-w-0">
+            <div class="flex flex-wrap items-center justify-between gap-1.5 mb-2">
+              <span class="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-emerald-400">NK Digital Tech CA Growth</span>
+              <span class="text-[11px] sm:text-xs text-brand-300">Owned Client Pipeline</span>
+            </div>
+            <h3 class="font-display font-bold text-[15px] sm:text-base text-white mb-2 leading-snug">Clean Authority, Maps &amp; AI Trust</h3>
+            <p class="text-xs text-slate-300 leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+              Combines crisp educational guides, local Hazratganj Map Pack rankings and clean schema so business founders schedule direct reviews.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 4: SERVICES (LIGHT COOL)
+  ===================================================================== -->
+  <section id="services" class="relative surface-cool py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200 overflow-hidden scroll-mt-16 sm:scroll-mt-20">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 items-center mb-8 sm:mb-16">
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-light mb-3">Our Six Pillar Advisory Growth Engine</div>
+          <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4 break-words">
+            Focused Digital Growth Services for Lucknow CA &amp; Finance Firms
+          </h2>
+          <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+            From <strong>tax consultant digital marketing in Lucknow</strong> and <strong>audit and GST firm marketing in Lucknow</strong> to wealth advisory growth, we help serious practices attract matching clients.
+          </p>
+        </div>
+        <div class="lg:col-span-5 min-w-0">
+          <div class="rounded-2xl overflow-hidden border border-slate-200 shadow-md bg-white">
+            <img
+              src="/images/lucknow-accounting-dm/services-accounting-dm-lucknow.webp"
+              alt="Financial Services Digital Marketing in Lucknow Tax Portfolio and Laptop Desk"
+              width="800"
+              height="450"
+              sizes="(max-width: 1024px) 100vw, 42vw"
+              class="w-full aspect-[16/9] sm:aspect-auto sm:h-56 lg:h-64 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-7">
+        {services.map((s) => (
+          <div class="elevated-card rounded-2xl p-4 sm:p-7 flex flex-col justify-between group sm:hover:-translate-y-1 min-w-0">
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-4 sm:mb-6">
+                <div class={`w-11 h-11 sm:w-12 sm:h-12 rounded-xl border flex items-center justify-center flex-shrink-0 ${s.iconStyle}`}>
+                  <Fragment set:html={s.icon} />
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class={`text-[10.5px] sm:text-[11px] font-semibold px-2.5 py-1 rounded-md ${s.badgeColor}`}>
+                    {s.category}
+                  </span>
+                  <span class="font-display font-black text-base sm:text-lg text-slate-300">{s.num}</span>
+                </div>
+              </div>
+
+              <h3 class="font-display font-bold text-[17px] sm:text-xl text-slate-900 mb-2.5 sm:mb-3 leading-snug group-hover:text-brand-600 transition-colors">
+                {s.title}
+              </h3>
+
+              <p class="text-slate-600 text-[13px] sm:text-sm leading-relaxed mb-4 sm:mb-6 text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+                {s.body}
+              </p>
+            </div>
+
+            <div>
+              <div class={`rounded-xl border p-3.5 sm:p-4 mb-3.5 sm:mb-5 ${s.impactStyle}`}>
+                <div class="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-slate-900 mb-1">
+                  <svg class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                  </svg>
+                  <span>Commercial Impact</span>
+                </div>
+                <p class="text-xs text-slate-700 leading-relaxed font-medium text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+                  {s.impact}
+                </p>
+              </div>
+
+              <a href={s.href} class="w-full sm:w-auto inline-flex items-center justify-between sm:justify-start gap-2 rounded-xl sm:rounded-none bg-slate-50 active:bg-sky-50 sm:bg-transparent border border-slate-200/80 sm:border-0 px-3.5 sm:px-0 py-2.5 min-h-[46px] sm:min-h-0 text-xs font-bold text-brand-600 hover:text-brand-700 no-underline hover:no-underline group-hover:gap-3 transition-all">
+                <span>{s.cta}</span>
+                <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 5: REGIONAL LOCATIONS (DARK NAVY)
+  ===================================================================== -->
+  <section id="locations" class="relative surface-navy py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden scroll-mt-16 sm:scroll-mt-20">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 items-center mb-8 sm:mb-16">
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-dark mb-3">Sector &amp; Corridor Targeting Across Lucknow</div>
+          <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-white tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4 break-words">
+            Financial Hub Visibility Across Key Lucknow Commercial Zones
+          </h2>
+          <p class="text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+            Financial advisory demand spans legacy Hazratganj offices, Vibhuti Khand corporate hubs, Amausi business parks and Indira Nagar traders. We pair <a href="/local-seo-services-in-lucknow/" class="text-brand-300 hover:text-white font-semibold no-underline hover:no-underline">Local SEO Services in Lucknow</a> with zone specific authority pages.
+          </p>
+        </div>
+        <div class="lg:col-span-5 min-w-0">
+          <div class="rounded-2xl overflow-hidden border border-slate-700/80 shadow-xl bg-slate-900">
+            <img
+              src="/images/lucknow-accounting-dm/locations-accounting-dm-lucknow.webp"
+              alt="Commercial Corporate Towers and Financial District in Hazratganj and Vibhuti Khand Lucknow"
+              width="800"
+              height="450"
+              sizes="(max-width: 1024px) 100vw, 42vw"
+              class="w-full aspect-[16/9] sm:aspect-auto sm:h-56 lg:h-64 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+        {cities.map((c) => (
+          <div class="glass-card rounded-2xl p-4 sm:p-6 flex flex-col justify-between group sm:hover:-translate-y-1 min-w-0">
+            <div>
+              <div class={`h-1 w-full bg-gradient-to-r ${c.accent} rounded-full mb-4 sm:mb-5`}></div>
+
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-3.5 sm:mb-4">
+                <span class="px-2.5 py-1 rounded-md bg-slate-800 border border-slate-700 text-[11px] font-bold uppercase tracking-wider text-brand-300">
+                  {c.hub}
+                </span>
+                <span class="text-xs font-semibold text-slate-400">{c.city}</span>
+              </div>
+
+              <h3 class="font-display font-bold text-base sm:text-lg text-white mb-2.5 sm:mb-3 leading-snug">
+                <a href={c.href} class="hover:text-brand-300 no-underline hover:no-underline transition-colors">{c.keyword}</a>
+              </h3>
+
+              <p class="text-slate-300 text-[13px] sm:text-sm leading-relaxed mb-4 sm:mb-5 text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+                {c.desc}
+              </p>
+            </div>
+
+            <div class="pt-3.5 sm:pt-4 border-t border-slate-800">
+              <p class="text-[11px] text-slate-400 mb-3 sm:mb-4 leading-normal">
+                <strong class="text-slate-300">Key Belts:</strong> {c.corridor}
+              </p>
+              <a href={c.href} class="w-full sm:w-auto inline-flex items-center justify-between sm:justify-start gap-1.5 rounded-xl sm:rounded-none bg-slate-800/90 active:bg-slate-800 sm:bg-transparent border border-slate-700/80 sm:border-0 px-3.5 sm:px-0 py-2.5 min-h-[44px] sm:min-h-0 text-xs font-bold text-brand-400 hover:text-brand-300 no-underline hover:no-underline group-hover:gap-2.5 transition-all">
+                <span>{c.cta}</span>
+                <svg class="w-3.5 h-3.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 6: WHY NK DIGITAL TECH (CRISP WHITE)
+  ===================================================================== -->
+  <section id="why-us" class="relative surface-white py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200 overflow-hidden scroll-mt-16 sm:scroll-mt-20">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-8 sm:mb-14 text-left sm:text-center">
+        <div class="badge-light mb-3">Why Lucknow Financial Firms Trust NK Digital Tech</div>
+        <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4 break-words">
+          Respectful Growth Partner for Digital Marketing for CA &amp; Financial Firms in Lucknow
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed mb-4 text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+          We respect strict professional standards while making your services easy to find online. We combine clean firm websites with <a href="/aeo-services-in-lucknow/" class="text-brand-600 hover:text-brand-700 font-semibold no-underline hover:no-underline">AEO Services in Lucknow</a> so business leaders call you directly.
+        </p>
+        <p class="text-slate-700 font-semibold text-xs sm:text-sm">
+          Compare our Lucknow sector growth engine against typical directory plans and generic agencies:
+        </p>
+      </div>
+
+      <div class="hidden md:block overflow-hidden rounded-2xl border border-slate-200 shadow-lg">
+        <table class="w-full text-left border-collapse">
+          <thead>
+            <tr class="bg-slate-900 text-white">
+              <th class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-slate-300 w-1/4">
+                Evaluation Criteria
+              </th>
+              <th class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-rose-300 w-[37.5%] border-l border-slate-800">
+                Referrals Only / Dated Site
+              </th>
+              <th class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-brand-300 w-[37.5%] border-l border-slate-800 bg-slate-950">
+                NK Digital Tech CA Growth
+              </th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200 text-sm">
+            {comparison.map((row, idx) => (
+              <tr class={idx % 2 === 0 ? 'bg-white' : 'bg-slate-50/80'}>
+                <td class="py-5 px-6 font-display font-bold text-slate-900">
+                  {row.metric}
+                </td>
+                <td class="py-5 px-6 text-slate-600 border-l border-slate-200">
+                  <div class="flex items-start gap-2.5">
+                    <svg class="w-4 h-4 text-rose-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                    <span class="text-justify">{row.typical}</span>
+                  </div>
+                </td>
+                <td class="py-5 px-6 text-slate-900 font-medium border-l border-slate-200 bg-sky-50/40">
+                  <div class="flex items-start gap-2.5">
+                    <svg class="w-4 h-4 text-emerald-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span class="text-justify">{row.nk}</span>
+                  </div>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <div class="md:hidden space-y-3.5">
+        {comparison.map((row) => (
+          <div class="elevated-card rounded-2xl p-4 space-y-3 min-w-0">
+            <h3 class="font-display font-bold text-slate-900 text-sm pb-2 border-b border-slate-100 leading-snug">{row.metric}</h3>
+            <div class="rounded-xl bg-rose-50 border border-rose-100 p-3">
+              <div class="flex items-center gap-1.5 mb-1">
+                <svg class="w-3.5 h-3.5 text-rose-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+                <p class="text-[10px] font-bold uppercase tracking-wider text-rose-600">Referrals Only / Dated Site</p>
+              </div>
+              <p class="text-xs text-slate-700 leading-relaxed">{row.typical}</p>
+            </div>
+            <div class="rounded-xl bg-sky-50 border border-sky-200 p-3">
+              <div class="flex items-center gap-1.5 mb-1">
+                <svg class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                </svg>
+                <p class="text-[10px] font-bold uppercase tracking-wider text-brand-600">NK Digital Tech CA Growth</p>
+              </div>
+              <p class="text-xs text-slate-900 font-semibold leading-relaxed">{row.nk}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 7: VERTICAL SEGMENTS WE SCALE (LIGHT SLATE 3x2 GRID)
+  ===================================================================== -->
+  <section id="industries" class="relative surface-slate py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200 overflow-hidden scroll-mt-16 sm:scroll-mt-20">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-8 sm:mb-16 text-left sm:text-center">
+        <div class="badge-light mb-3">Focused Business Segments</div>
+        <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4 break-words">
+          Tailored Digital Strategies for Six Finance &amp; Advisory Segments
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+          Whether you run a multi partner CA practice, GST consulting desk, virtual CFO studio or SEBI advisory office, we match your ideal clients.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-7">
+        {sectorSegments.map((ind) => (
+          <div class={`elevated-card rounded-2xl p-4 sm:p-7 border-t-4 ${ind.accentBorder} flex flex-col justify-between sm:hover:-translate-y-1 min-w-0`}>
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-4 sm:mb-5">
+                <div class={`w-10 h-10 sm:w-11 sm:h-11 rounded-xl border flex items-center justify-center flex-shrink-0 ${ind.iconBg}`}>
+                  <Fragment set:html={ind.icon} />
+                </div>
+                <span class="text-[11px] font-semibold text-slate-600 bg-slate-100 px-2.5 py-1 rounded-md">
+                  {ind.sector}
+                </span>
+              </div>
+
+              <h3 class="font-display font-bold text-[17px] sm:text-xl text-slate-900 mb-3 sm:mb-4 leading-snug">
+                {ind.title}
+              </h3>
+
+              <div class="mb-4 sm:mb-5">
+                <p class="text-[11px] font-bold uppercase tracking-wider text-brand-600 mb-1.5">
+                  Digital Growth Focus
+                </p>
+                <p class="text-slate-600 text-[13px] sm:text-sm leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+                  {ind.focus}
+                </p>
+              </div>
+            </div>
+
+            <div class="rounded-xl bg-emerald-50/70 border border-emerald-200/80 p-3.5 sm:p-4">
+              <p class="text-[11px] font-bold uppercase tracking-wider text-emerald-700 mb-1">
+                Verified Outcome
+              </p>
+              <p class="text-slate-800 text-xs font-medium leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+                {ind.outcome}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 8: HOW WE WORK (CRISP WHITE - 4 STAGES)
+  ===================================================================== -->
+  <section class="relative surface-white py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200 overflow-hidden">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-8 sm:mb-16 text-left sm:text-center">
+        <div class="badge-light mb-3">Our 4 Stage Execution</div>
+        <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4 break-words">
+          Our 4 Stage Execution for Lucknow Financial Firms
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+          We build respectful, informative websites and local authority that turn online searches into long term business retainers.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-7">
+        {stages.map((st) => (
+          <div class="elevated-card rounded-2xl p-4 sm:p-8 relative overflow-hidden group sm:hover:-translate-y-1 min-w-0">
+            <div class="flex items-center justify-between gap-4 mb-3.5 sm:mb-5">
+              <span class={`inline-flex items-center px-2.5 sm:px-3 py-1 rounded-lg text-xs font-bold uppercase tracking-wider text-white bg-gradient-to-r ${st.accent}`}>
+                {st.num}
+              </span>
+              <span class="font-display font-black text-3xl sm:text-4xl text-slate-200 group-hover:text-slate-300 transition-colors">
+                {st.step}
+              </span>
+            </div>
+            <h3 class="font-display font-bold text-[17px] sm:text-xl text-slate-900 mb-2.5 sm:mb-3 leading-snug">
+              {st.title}
+            </h3>
+            <p class="text-slate-600 text-[13px] sm:text-sm leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+              {st.body}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 9: CONCLUSION / PARTNER SECTION (DARK INDIGO + GROWTH IMAGE)
+  ===================================================================== -->
+  <section class="relative surface-indigo py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-7 sm:gap-10 lg:gap-12 items-center">
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-dark mb-3.5 sm:mb-4">Grow High Trust Practice Revenue</div>
+          <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-white tracking-tight leading-[1.22] sm:leading-tight mb-4 sm:mb-6 break-words">
+            Attract Long Term Retainers With Digital Marketing for CA &amp; Financial Firms in Lucknow
+          </h2>
+          <div class="space-y-4 sm:space-y-5 text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+            <p>Word of mouth stays vital, yet business directors across Lucknow always inspect your digital footprint before handing over company audits or tax advisory work. A clear, helpful website backed by strong Maps visibility completes the trust loop.</p>
+            <p>Choosing NK Digital Tech for <strong class="text-white font-semibold">Digital Marketing for CA & Financial Firms in Lucknow</strong> pairs respectful messaging with a reliable <a href="/website-development-company-in-lucknow/" class="text-brand-300 hover:text-white font-semibold no-underline hover:no-underline">Website Development Company in Lucknow</a> so corporate clients choose your desk confidently.</p>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 min-w-0">
+          <div class="rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-700/80 shadow-2xl bg-slate-900">
+            <img
+              src="/images/lucknow-accounting-dm/growth-accounting-dm-lucknow.webp"
+              alt="Confident Lucknow Business Owner Meeting Financial Advisor After Tax Review"
+              width="800"
+              height="450"
+              sizes="(max-width: 1024px) 100vw, 42vw"
+              class="w-full aspect-[16/10] sm:aspect-auto sm:h-64 lg:h-72 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 10: FAQ (LIGHT COOL SLATE)
+  ===================================================================== -->
+  <section id="faq" class="relative surface-cool py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200 overflow-hidden scroll-mt-16 sm:scroll-mt-20">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-left sm:text-center mb-8 sm:mb-14">
+        <div class="badge-light mb-3">Questions Asked on Google, ChatGPT &amp; Gemini</div>
+        <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4 break-words">
+          Frequently Asked Questions About Digital Marketing for CA &amp; Financial Firms in Lucknow
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+          Clear answers for Chartered Accountants, GST consultants and wealth advisors growing their practice in Lucknow.
+        </p>
+      </div>
+
+      <div class="space-y-3 sm:space-y-4">
+        {faqs.map((f, i) => (
+          <details class="elevated-card rounded-2xl group overflow-hidden" open={i === 0}>
+            <summary class="flex items-start sm:items-center justify-between gap-3 sm:gap-4 px-4 sm:px-6 py-4 sm:py-5 min-h-[54px] select-none">
+              <div class="flex items-start sm:items-center gap-2.5 sm:gap-3.5 text-left min-w-0">
+                <span class="w-6 h-6 sm:w-7 sm:h-7 rounded-lg bg-sky-50 border border-sky-200 text-brand-600 font-display font-bold text-xs flex items-center justify-center flex-shrink-0 mt-0.5 sm:mt-0">
+                  0{i + 1}
+                </span>
+                <span class="font-display font-bold text-slate-900 text-[14px] sm:text-base md:text-lg leading-snug break-words">
+                  {f.q}
+                </span>
+              </div>
+              <span class="faq-icon w-7 h-7 sm:w-8 sm:h-8 rounded-full border border-slate-200 text-slate-600 flex items-center justify-center flex-shrink-0 mt-0.5 sm:mt-0">
+                <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                </svg>
+              </span>
+            </summary>
+            <div class="px-4 sm:px-6 pb-5 sm:pb-6 pt-3 text-slate-600 text-[13px] sm:text-sm md:text-base leading-relaxed border-t border-slate-100 text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+              {f.a}
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 11: SHORT CTA BANNER (LAST SECTION)
+  ===================================================================== -->
+  <section id="contact" class="relative surface-dark py-10 pb-28 sm:py-16 lg:py-20 px-4 sm:px-6 overflow-hidden scroll-mt-16 sm:scroll-mt-20">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-5xl mx-auto">
+      <div class="rounded-2xl sm:rounded-3xl bg-gradient-to-r from-brand-600 via-brand-700 to-accent-700 p-6 sm:p-10 md:p-12 text-center text-white shadow-2xl border border-white/15 relative overflow-hidden">
+        <div class="relative z-10 max-w-2xl mx-auto">
+          <h2 class="font-display font-black text-[clamp(1.38rem,5.4vw,1.85rem)] sm:text-3xl md:text-4xl text-white tracking-tight leading-[1.2] sm:leading-snug mb-3 sm:mb-4 break-words">
+            Ready to Attract More Corporate Audits &amp; Advisory Retainers in Lucknow?
+          </h2>
+
+          <p class="text-sky-50 text-[13px] sm:text-sm md:text-base leading-relaxed mb-6 sm:mb-8 text-left sm:text-center">
+            Claim a confidential audit of your practice website, Hazratganj/Gomti Nagar Map visibility and AI search presence.
+          </p>
+
+          <a
+            href="/contact-us/"
+            class="inline-flex w-full sm:w-auto min-h-[50px] items-center justify-center gap-2 sm:gap-3 px-5 sm:px-8 py-3.5 sm:py-4 rounded-xl bg-white text-slate-950 hover:bg-sky-50 no-underline hover:no-underline font-display font-bold text-sm sm:text-base shadow-xl transition-all duration-300 active:scale-95 text-center leading-snug"
+          >
+            <span>Claim Free Practice Audit</span>
+            <svg class="w-4 h-4 sm:w-5 sm:h-5 text-brand-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mobile Sticky Bottom Quick Action Bar -->
+  <div class="mobile-sticky-cta sm:hidden fixed bottom-0 inset-x-0 z-40 bg-[#050a14]/95 backdrop-blur-xl border-t border-slate-800 px-3.5 pt-2.5 pb-[max(0.625rem,env(safe-area-inset-bottom))] shadow-[0_-8px_24px_rgba(0,0,0,0.45)] transition-all duration-300">
+    <div class="flex items-center gap-2.5">
+      <a
+        href="/contact-us/"
+        class="btn-primary flex-1 min-h-[44px] py-2.5 px-4 text-xs font-bold rounded-xl no-underline hover:no-underline"
+      >
+        <span>Claim Free Practice Audit</span>
+        <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+        </svg>
+      </a>
+      <a
+        href="#services"
+        class="btn-secondary-dark min-h-[44px] py-2.5 px-3.5 text-xs font-semibold rounded-xl flex-shrink-0 no-underline hover:no-underline"
+      >
+        <span>Services</span>
+      </a>
+    </div>
+  </div>
+
+</Layout>

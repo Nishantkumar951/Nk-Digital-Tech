@@ -1,0 +1,1028 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import '../../styles/global.css';
+
+const pageTitle = "Digital Marketing for Ecommerce Business in Lucknow | NK";
+const pageDescription = "Need Digital Marketing for Ecommerce Business in Lucknow? NK Digital Tech scales direct D2C store orders, Product schema and store visits across Hazratganj & Chowk.";
+const pageCanonical = "https://www.nkdigitaltech.net/best-digital-marketing-company-in-lucknow/Ecommerce-Businesses/";
+
+const services = [
+  {
+    "num": "01",
+    "category": "Collection & Product SEO",
+    "icon": "<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z\"/></svg>",
+    "iconStyle": "bg-sky-50 border-sky-200 text-brand-600",
+    "impactStyle": "bg-sky-50/80 border-sky-200/80 text-slate-800",
+    "badgeColor": "text-brand-600 bg-sky-100/80",
+    "title": "Shopify & Chikankari Brand Product SEO",
+    "body": "Combining Shopify store digital marketing in Lucknow with Chikankari and ethnic brand marketing in Lucknow, we rank high margin collection pages.",
+    "impact": "Brings nationwide shoppers straight to your website instead of marketplaces.",
+    "cta": "View Best SEO Company in Lucknow",
+    "href": "/best-seo-company-in-lucknow/"
+  },
+  {
+    "num": "02",
+    "category": "Showroom Footfall Maps",
+    "icon": "<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z\"/><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M15 11a3 3 0 11-6 0 3 3 0 016 0z\"/></svg>",
+    "iconStyle": "bg-emerald-50 border-emerald-200 text-emerald-600",
+    "impactStyle": "bg-emerald-50/80 border-emerald-200/80 text-slate-800",
+    "badgeColor": "text-emerald-700 bg-emerald-100/80",
+    "title": "Hazratganj Showroom Digital Marketing in Lucknow",
+    "body": "Our Hazratganj showroom digital marketing in Lucknow drives Google Map Pack direction clicks and festive store visits across Lucknow.",
+    "impact": "Turns local online product searches into instant showroom walk ins.",
+    "cta": "View Local SEO Services in Lucknow",
+    "href": "/local-seo-services-in-lucknow/"
+  },
+  {
+    "num": "03",
+    "category": "Store Speed & CRO",
+    "icon": "<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M13 10V3L4 14h7v7l9-11h-7z\"/></svg>",
+    "iconStyle": "bg-cyan-50 border-cyan-200 text-cyan-700",
+    "impactStyle": "bg-cyan-50/80 border-cyan-200/80 text-slate-800",
+    "badgeColor": "text-cyan-700 bg-cyan-100/80",
+    "title": "Ecommerce Conversion Rate Optimisation in Lucknow",
+    "body": "Through ecommerce conversion rate optimisation in Lucknow, we compress product media, simplify mobile filters and speed up UPI and COD checkout.",
+    "impact": "Reduces cart abandonment and lifts revenue per website visitor.",
+    "cta": "View Website Development Company in Lucknow",
+    "href": "/website-development-company-in-lucknow/"
+  },
+  {
+    "num": "04",
+    "category": "Buying Guide AEO",
+    "icon": "<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z\"/></svg>",
+    "iconStyle": "bg-amber-50 border-amber-200 text-amber-600",
+    "impactStyle": "bg-amber-50/80 border-amber-200/80 text-slate-800",
+    "badgeColor": "text-amber-700 bg-amber-100/80",
+    "title": "Size, Fabric & Gift Box Answer Snippets",
+    "body": "We add crisp 50 word fabric care, sizing and shipping FAQs with schema so Google answer boxes link shoppers directly to your products.",
+    "impact": "Builds confidence in first time buyers across India.",
+    "cta": "View AEO Services in Lucknow",
+    "href": "/aeo-services-in-lucknow/"
+  },
+  {
+    "num": "05",
+    "category": "AI Shopping Citations (GEO)",
+    "icon": "<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z\"/></svg>",
+    "iconStyle": "bg-violet-50 border-violet-200 text-accent-600",
+    "impactStyle": "bg-violet-50/80 border-violet-200/80 text-slate-800",
+    "badgeColor": "text-accent-600 bg-violet-100/80",
+    "title": "ChatGPT & Gemini Product Recommendations",
+    "body": "We configure Product, AggregateRating and Offer schema across your SKU catalogue so AI assistants cite your brand when buyers shop.",
+    "impact": "Wins free referral clicks from AI shopping guides.",
+    "cta": "View AI SEO Company in Lucknow",
+    "href": "/ai-seo-company-in-lucknow/"
+  },
+  {
+    "num": "06",
+    "category": "Retention & Average Order Value",
+    "icon": "<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z\"/></svg>",
+    "iconStyle": "bg-indigo-50 border-indigo-200 text-indigo-600",
+    "impactStyle": "bg-indigo-50/80 border-indigo-200/80 text-slate-800",
+    "badgeColor": "text-indigo-700 bg-indigo-100/80",
+    "title": "WhatsApp Repeat Orders & Bundles",
+    "body": "We set up festive bundle pages, cart recovery prompts and clear store pickup options to grow basket value and repeat buyers.",
+    "impact": "Turns first time buyers into loyal multi order customers.",
+    "cta": "Request Store Revenue Audit",
+    "href": "#contact"
+  }
+];
+
+const cities = [
+  {
+    "hub": "Retail Hub 01",
+    "city": "Hazratganj & Janpath",
+    "corridor": "Hazratganj • Janpath Market • MG Road",
+    "keyword": "Chikankari Flagships, Bridal & Luxury Retail",
+    "desc": "We elevate heritage showrooms and designer labels onto top national Google Shopping and Map Pack results.",
+    "cta": "Audit Hazratganj Store",
+    "href": "#contact",
+    "accent": "from-brand-500 to-sky-400"
+  },
+  {
+    "hub": "Retail Hub 02",
+    "city": "Aminabad & Chowk",
+    "corridor": "Aminabad • Chowk Heritage Market • Yahiyaganj",
+    "keyword": "Ethnic Apparel, Jewellery & Artisan Wholesale",
+    "desc": "We turn wholesale and direct retail catalogues into searchable national D2C brands with bulk enquiry flows.",
+    "cta": "Audit Chowk Brand SEO",
+    "href": "#contact",
+    "accent": "from-accent-500 to-violet-400"
+  },
+  {
+    "hub": "Retail Hub 03",
+    "city": "Gomti Nagar & Palassio Belt",
+    "corridor": "Patrakarpuram • Phoenix Palassio • LuLu Mall Belt",
+    "keyword": "Modern D2C Brands & Lifestyle Stores",
+    "desc": "We connect modern boutiques, bakeries and lifestyle showrooms with high spending Gomti Nagar shoppers.",
+    "cta": "Explore Lucknow Local SEO",
+    "href": "/local-seo-services-in-lucknow/",
+    "accent": "from-cyan-500 to-teal-400"
+  },
+  {
+    "hub": "Retail Hub 04",
+    "city": "Pan India & Export D2C",
+    "corridor": "Shipped From Lucknow Across India & Diaspora",
+    "keyword": "National Online Orders & Festive Gifting",
+    "desc": "We capture non brand product searches across metro cities so your Lucknow brand sells daily without marketplace fees.",
+    "cta": "Audit Pan India Orders",
+    "href": "#contact",
+    "accent": "from-emerald-500 to-green-400"
+  }
+];
+
+const comparison = [
+  {
+    "metric": "Profit Margin",
+    "typical": "25% to 35% lost to marketplace fees & returns",
+    "nk": "Direct D2C orders keeping full customer margin"
+  },
+  {
+    "metric": "Store Speed",
+    "typical": "Slow 6+ second product pages dropping mobile buyers",
+    "nk": "Sub 2 second WebP lookbooks and instant cart flows"
+  },
+  {
+    "metric": "Product Discovery",
+    "typical": "Unstructured titles invisible on Google Shopping",
+    "nk": "Rich Product, Price & Stock schema on every SKU"
+  },
+  {
+    "metric": "AI Shopping Trust",
+    "typical": "Never mentioned when users ask ChatGPT for ethnic brands",
+    "nk": "Verified review & collection citations inside AI answers"
+  },
+  {
+    "metric": "Local Store Visits",
+    "typical": "Web store disconnected from Lucknow showrooms",
+    "nk": "Showroom Map Pack links driving festive walk ins"
+  },
+  {
+    "metric": "Customer Data",
+    "typical": "Owned entirely by third party selling portals",
+    "nk": "Owned email, SMS and WhatsApp customer list"
+  }
+];
+
+const sectorSegments = [
+  {
+    "sector": "Chikankari & Ethnic",
+    "title": "Chikankari Kurtis, Sarees & Bridal Couture",
+    "focus": "Ranks handloom fabric guides, wedding lookbooks and exact size charts for shoppers across India and overseas.",
+    "outcome": "Direct website orders and bridal video appointments.",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z\"/></svg>",
+    "accentBorder": "border-t-brand-500",
+    "iconBg": "bg-sky-50 text-brand-600 border-sky-200"
+  },
+  {
+    "sector": "Fine Jewellery",
+    "title": "Gold, Diamond & Polki Heritage Showrooms",
+    "focus": "Pairs high clarity WebP jewellery galleries with live Lucknow Map Pack trust for bridal shopping visits.",
+    "outcome": "Higher showroom trial visits and online collection orders.",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z\"/></svg>",
+    "accentBorder": "border-t-amber-500",
+    "iconBg": "bg-amber-50 text-amber-600 border-amber-200"
+  },
+  {
+    "sector": "Food & Attar D2C",
+    "title": "Artisan Sweets, Tea, Honey & Attar Brands",
+    "focus": "Captures nationwide festive gifting, corporate hamper and niche perfume searches directly onto fast D2C bundles.",
+    "outcome": "Recurring subscription boxes and bulk corporate gifting deals.",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4\"/></svg>",
+    "accentBorder": "border-t-cyan-500",
+    "iconBg": "bg-cyan-50 text-cyan-700 border-cyan-200"
+  },
+  {
+    "sector": "Footwear & Leather",
+    "title": "Leather Goods, Footwear & Accessory Stores",
+    "focus": "Builds clean product variations, customer review badges and search friendly SKU descriptions across Shopify.",
+    "outcome": "Lower ad return costs and steady daily online cart checkouts.",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z\"/></svg>",
+    "accentBorder": "border-t-emerald-500",
+    "iconBg": "bg-emerald-50 text-emerald-600 border-emerald-200"
+  },
+  {
+    "sector": "Home & Decor",
+    "title": "Furniture, Carpets & Lighting Brands",
+    "focus": "Connects room decor shoppers across Lucknow and nearby UP cities with clear dimension tables and showroom trial pins.",
+    "outcome": "High ticket furniture orders online and in store.",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3\"/></svg>",
+    "accentBorder": "border-t-indigo-500",
+    "iconBg": "bg-indigo-50 text-indigo-600 border-indigo-200"
+  },
+  {
+    "sector": "Electronics & Appliances",
+    "title": "Local Electronics, Gadgets & Pharmacy Chains",
+    "focus": "Pairs same day Lucknow delivery promises with hyper local Map visibility across Hazratganj, Alambagh and Gomti Nagar.",
+    "outcome": "Higher local cash on delivery orders and in store pickups.",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M13 10V3L4 14h7v7l9-11h-7z\"/></svg>",
+    "accentBorder": "border-t-rose-500",
+    "iconBg": "bg-rose-50 text-rose-600 border-rose-200"
+  }
+];
+
+const stages = [
+  {
+    "num": "Stage 01",
+    "step": "01",
+    "title": "Store Speed, Checkout & Schema Audit",
+    "body": "We fix broken product tags, heavy gallery images and mobile checkout steps causing shoppers to abandon carts.",
+    "accent": "from-brand-600 to-sky-500"
+  },
+  {
+    "num": "Stage 02",
+    "step": "02",
+    "title": "Collection Keywords & Product JSON LD",
+    "body": "We map buying intent category terms and set up rich Product, Offer and Review schema across every SKU.",
+    "accent": "from-accent-600 to-violet-500"
+  },
+  {
+    "num": "Stage 03",
+    "step": "03",
+    "title": "Fast Category Hubs & Showroom Maps",
+    "body": "We launch clean collection pages, festive gift guides and upgraded Google Business profiles for retail stores.",
+    "accent": "from-cyan-600 to-teal-500"
+  },
+  {
+    "num": "Stage 04",
+    "step": "04",
+    "title": "Order Tracking & AI Shopping Growth",
+    "body": "We review website checkout conversion, organic sales growth and ChatGPT product citations every two weeks.",
+    "accent": "from-emerald-600 to-green-500"
+  }
+];
+
+const faqs = [
+  {
+    "q": "Why invest in Digital Marketing for Ecommerce Business in Lucknow alongside marketplaces?",
+    "a": "Marketplaces charge heavy commissions and keep customer loyalty to themselves. Digital Marketing for Ecommerce Business in Lucknow builds free organic traffic, Product schema and AI shopping citations that drive profitable orders directly on your website."
+  },
+  {
+    "q": "Can you help both online Shopify stores and physical showrooms in Hazratganj or Gomti Nagar?",
+    "a": "Yes. We combine national D2C product SEO with local Google Map Pack store optimisation so you earn online shipping orders across India alongside daily showroom footfall in Lucknow."
+  },
+  {
+    "q": "How does store speed improve ecommerce sales on mobile phones?",
+    "a": "Shoppers leave within seconds if product photos stall on mobile 4G. Compressing catalogues into fast WebP formats and cleaning scripts lifts completed checkouts immediately."
+  },
+  {
+    "q": "How do Lucknow ethnic or specialty D2C brands appear in ChatGPT shopping answers?",
+    "a": "We set up clean Product schema, clear fabric and pricing FAQs and verified review signals so AI assistants recommend your D2C brand directly when buyers ask for authentic Indian products."
+  },
+  {
+    "q": "How soon do D2C ecommerce SEO and conversion improvements impact sales?",
+    "a": "Checkout and mobile speed improvements boost conversion within weeks, while category Google Shopping visibility and organic D2C orders grow strongly over 3 to 6 months."
+  }
+];
+
+const trustStrip = [
+  "Direct D2C Website Sales",
+  "Zero Marketplace Commission",
+  "Google Shopping Product Schema",
+  "ChatGPT Shopping Citations",
+  "Sub 2 Sec Mobile Storefront",
+  "Chikankari & Heritage Reach",
+  "Hazratganj & Palassio Maps",
+  "Higher Checkout Completion"
+];
+
+const sectorDMServiceSchema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Digital Marketing for Ecommerce Business in Lucknow",
+  "serviceType": "Sector Digital Marketing, Search Engine Optimisation & AI Search Growth",
+  "provider": {
+    "@type": "ProfessionalService",
+    "name": "NK Digital Tech",
+    "url": "https://www.nkdigitaltech.net/",
+    "email": "nkdigitaltech1@gmail.com",
+    "telephone": "+91-80521-89051",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Lucknow",
+      "addressRegion": "Uttar Pradesh",
+      "addressCountry": "IN"
+    }
+  },
+  "areaServed": ["Lucknow","Hazratganj","Aminabad","Chowk","Gomti Nagar","Uttar Pradesh","Pan India"],
+  "description": pageDescription,
+  "url": pageCanonical
+});
+
+const sectorDMFAQSchema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map((item) => ({
+    "@type": "Question",
+    "name": item.q,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": item.a
+    }
+  }))
+});
+
+const sectorDMBreadcrumbSchema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.nkdigitaltech.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Best Digital Marketing Company in Lucknow",
+      "item": "https://www.nkdigitaltech.net/best-digital-marketing-company-in-lucknow/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Digital Marketing for Ecommerce Business in Lucknow",
+      "item": pageCanonical
+    }
+  ]
+});
+---
+
+<Layout
+  title={pageTitle}
+  description={pageDescription}
+  canonical={pageCanonical}
+  ogImage="https://www.nkdigitaltech.net/images/lucknow-ecommerce-dm/hero-ecommerce-dm-lucknow.webp"
+  preloadImage="/images/lucknow-ecommerce-dm/hero-ecommerce-dm-lucknow.webp"
+  hideLocationsNav={false}
+  customSchemaLocalBusiness={sectorDMServiceSchema}
+  customSchemaFAQ={sectorDMFAQSchema}
+  customSchemaBreadcrumb={sectorDMBreadcrumbSchema}
+  utilityTagline={"Digital Marketing for Ecommerce Business in Lucknow • Hazratganj, Chowk & Gomti Nagar"}
+  brandSubtitle={"Lucknow • Ecommerce Digital Marketing"}
+  footerBio={"NK Digital Tech delivers Digital Marketing for Ecommerce Business in Lucknow, helping D2C brands, Chikankari houses and retail showrooms scale direct online revenue."}
+  footerCoreDisciplines={[
+    { label: 'Best Digital Marketing Company in Lucknow', href: '/best-digital-marketing-company-in-lucknow/' },
+    { label: 'Best SEO Company in Lucknow', href: '/best-seo-company-in-lucknow/' },
+    { label: 'Local SEO Services in Lucknow', href: '/local-seo-services-in-lucknow/' },
+    { label: 'AI SEO Company in Lucknow', href: '/ai-seo-company-in-lucknow/' },
+    { label: 'AEO Services in Lucknow', href: '/aeo-services-in-lucknow/' },
+    { label: 'Website Development Company in Lucknow', href: '/website-development-company-in-lucknow/' },
+  ]}
+  footerTagline={"Built for Profitable D2C Growth in Lucknow"}
+>
+
+  <!-- =====================================================================
+       SECTION 1: HERO (DARK SURFACE)
+  ===================================================================== -->
+  <section class="relative surface-dark overflow-hidden pt-5 pb-9 sm:pt-16 sm:pb-20 lg:pt-20 lg:pb-24 border-b border-slate-800/80">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="absolute inset-0 mesh-glow pointer-events-none"></div>
+    <div class="absolute -top-24 -left-24 sm:-top-36 sm:-left-36 w-56 h-56 sm:w-96 sm:h-96 bg-brand-500/20 rounded-full blur-[80px] sm:blur-[130px] pointer-events-none"></div>
+    <div class="absolute top-1/4 -right-24 sm:-right-36 w-56 h-56 sm:w-96 sm:h-96 bg-accent-500/20 rounded-full blur-[80px] sm:blur-[130px] pointer-events-none"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-10 lg:gap-12 items-center">
+        <div class="lg:col-span-7 text-left min-w-0">
+          <div class="badge-dark mb-3 sm:mb-6 py-1.5 px-2.5 sm:px-3.5">
+            <span class="w-2 h-2 rounded-full bg-brand-400 animate-ping flex-shrink-0"></span>
+            <span class="min-w-0 break-words">Lucknow D2C &amp; Retail SEO • Direct Website Orders • Store Footfall</span>
+          </div>
+
+          <h1 class="font-display text-[clamp(1.62rem,6.5vw,2.35rem)] sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-[1.15] sm:leading-[1.1] mb-3.5 sm:mb-6 text-glow break-words">
+            Digital Marketing for Ecommerce <br />
+            <span class="gradient-text-light">Business in Lucknow</span>
+          </h1>
+
+          <p class="text-sm sm:text-lg text-slate-300 leading-[1.68] sm:leading-relaxed mb-5 sm:mb-8 font-normal text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+            Growing an online brand or heritage showroom with <strong class="text-white font-semibold">Digital Marketing for Ecommerce Business in Lucknow</strong>? NK Digital Tech helps D2C founders, Chikankari houses and multi city retailers win commission free website sales through <strong class="text-white font-semibold">ecommerce product SEO agency in Lucknow</strong> execution, AI shopping citations and faster checkouts.
+          </p>
+
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-4 mb-5 sm:mb-10">
+            <a href="#contact" class="btn-primary w-full sm:w-auto min-h-[50px] text-[13.5px] sm:text-base px-4 sm:px-8 py-3.5 sm:py-4">
+              <span>Claim Free Store Revenue Audit</span>
+              <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+              </svg>
+            </a>
+            <a href="#services" class="btn-secondary-dark w-full sm:w-auto min-h-[48px] text-[13.5px] sm:text-base px-4 sm:px-7 py-3.5 sm:py-4">
+              <span>Explore Six Retail Pillars</span>
+            </a>
+          </div>
+
+          <div class="pt-5 sm:pt-6 border-t border-slate-800/80">
+            <div class="grid grid-cols-2 sm:flex sm:flex-wrap items-stretch sm:items-center gap-2">
+              {trustStrip.map((item) => (
+                <span class="px-2.5 sm:px-3 py-2 sm:py-1.5 min-h-[42px] sm:min-h-0 rounded-lg bg-slate-900/90 border border-slate-800 text-[11px] sm:text-xs text-slate-300 font-medium flex items-center justify-center sm:justify-start text-center sm:text-left leading-tight break-words">
+                  {item}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 min-w-0">
+          <div class="relative rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-700/80 shadow-2xl shadow-brand-500/15 bg-slate-900 group">
+            <div class="relative">
+              <img
+                src="/images/lucknow-ecommerce-dm/hero-ecommerce-dm-lucknow.webp"
+                alt="Digital Marketing for Ecommerce Business in Lucknow Ethnic Boutique and Order Fulfillment"
+                width="960"
+                height="540"
+                sizes="(max-width: 1024px) 100vw, 42vw"
+                fetchpriority="high"
+                decoding="async"
+                class="w-full aspect-[16/9] sm:aspect-auto sm:h-72 md:h-[380px] lg:h-[400px] object-cover object-center sm:group-hover:scale-105 transition-transform duration-500"
+              />
+              <div class="hidden sm:block absolute inset-0 bg-gradient-to-t from-[#050a14] via-transparent to-transparent opacity-80"></div>
+            </div>
+            <div class="relative sm:absolute sm:bottom-4 sm:left-4 sm:right-4 glass-card border-t sm:border border-slate-800 sm:rounded-2xl p-3.5 sm:p-4">
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-1">
+                <span class="text-xs font-bold text-white">Higher Commission Free Orders</span>
+                <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-400">
+                  <span class="w-2 h-2 rounded-full bg-emerald-400 flex-shrink-0"></span>
+                  D2C &amp; Store Footfall
+                </span>
+              </div>
+              <p class="text-[11px] sm:text-xs text-slate-300 text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left] leading-snug">
+                Turns Hazratganj, Aminabad and Pan India shopping searches into direct Shopify &amp; D2C sales.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 2: INTRODUCTION (CRISP WHITE)
+  ===================================================================== -->
+  <section class="relative surface-white py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200 overflow-hidden">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-7 sm:gap-10 lg:gap-12 items-center">
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-light mb-3.5 sm:mb-4">Direct Online Store &amp; Retail Growth</div>
+          <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-4 sm:mb-6 break-words">
+            How Digital Marketing for Ecommerce Business in Lucknow <span class="gradient-text-dark">Scales Profitable Orders</span>
+          </h2>
+          <div class="space-y-4 sm:space-y-5 text-slate-700 text-[13.5px] sm:text-base leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+            <p>Shoppers buying Lucknow Chikankari apparel, bridal jewellery, packaged foods or electronics compare prices, fabric photos and local showroom reviews across Google Shopping, Instagram and ChatGPT before placing an order. Partnering with our <strong>ecommerce digital marketing agency in Lucknow</strong> captures ready buyers right on your own online store.</p>
+            <p>Powered by the <a href="/best-digital-marketing-company-in-lucknow/" class="text-brand-600 hover:text-brand-700 font-semibold no-underline hover:no-underline">Best Digital Marketing Company in Lucknow</a> and <a href="/best-seo-company-in-lucknow/" class="text-brand-600 hover:text-brand-700 font-semibold no-underline hover:no-underline">Best SEO Company in Lucknow</a>, our team serves as a growth driven <strong>D2C brand marketing agency in Lucknow</strong> and trusted <strong>online store marketing company in Lucknow</strong> focused on net profit.</p>
+          </div>
+          <div class="mt-6 sm:mt-8 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
+            <a href="#contact" class="btn-primary w-full sm:w-auto min-h-[48px]">
+              <span>Talk to an Ecommerce Strategist</span>
+              <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+              </svg>
+            </a>
+            <a href="#why-us" class="btn-secondary-light w-full sm:w-auto min-h-[48px]">
+              <span>Compare Own Store vs Marketplaces</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 space-y-4 sm:space-y-5 min-w-0">
+          <div class="rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-200 shadow-lg bg-slate-100">
+            <img
+              src="/images/lucknow-ecommerce-dm/team-ecommerce-dm-lucknow.webp"
+              alt="D2C Brand Marketing Agency in Lucknow Retail Team Reviewing Store Analytics"
+              width="800"
+              height="533"
+              sizes="(max-width: 1024px) 100vw, 42vw"
+              class="w-full aspect-[16/10] sm:aspect-auto sm:h-64 lg:h-72 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="grid grid-cols-2 gap-2.5 sm:gap-4">
+            {[{"val":"4.1x","label":"Direct D2C Orders","sub":"Commission free organic store sales"},{"val":"38%","label":"Cart Recovery Lift","sub":"Fast WebP product pages & quick checkout"},{"val":"Top 3","label":"Showroom Maps","sub":"Hazratganj, Gomti Nagar & Chowk stores"},{"val":"24x7","label":"AI Product Citations","sub":"Visible in ChatGPT & AI shopping lists"}].map((stat) => (
+              <div class="elevated-card rounded-xl sm:rounded-2xl p-3 sm:p-4 min-w-0 flex flex-col justify-between">
+                <div class="font-display font-black text-[1.1rem] sm:text-2xl text-brand-600 mb-0.5 leading-tight break-words">{stat.val}</div>
+                <div class="text-[11px] sm:text-xs font-bold text-slate-900 leading-snug">{stat.label}</div>
+                <div class="text-[10.5px] sm:text-[11px] text-slate-500 leading-snug mt-0.5">{stat.sub}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 3: PROBLEM STATEMENT (DEEP INDIGO)
+  ===================================================================== -->
+  <section class="relative surface-indigo py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="max-w-7xl mx-auto relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-7 sm:gap-10 lg:gap-12 items-center">
+        <div class="lg:col-span-7 min-w-0">
+          <div class="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-3.5 py-1 sm:py-1.5 rounded-full text-[10px] sm:text-xs font-bold uppercase tracking-wider sm:tracking-widest bg-amber-500/10 border border-amber-500/30 text-amber-300 max-w-full leading-snug mb-4 sm:mb-5">
+            <svg class="w-4 h-4 text-amber-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+            </svg>
+            <span>Fixing Marketplace Cuts &amp; Slow Checkout Pages</span>
+          </div>
+
+          <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-white tracking-tight leading-[1.22] sm:leading-tight mb-4 sm:mb-6 break-words">
+            Why Marketplace Commissions &amp; Slow Mobile Stores Hurt Lucknow Brands
+          </h2>
+
+          <div class="space-y-4 sm:space-y-5 text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+            <p>Retailers and D2C makers across Hazratganj, Aminabad and Gomti Nagar face two heavy profit leaks. First, selling solely through large online marketplaces hands away 25% to 35% of margin plus full customer data, making repeat sales nearly impossible. Second, unoptimised product photos slow Shopify and WooCommerce pages down, causing buyers to abandon carts.</p>
+            <p>Shoppers now ask ChatGPT and Google AI Overviews prompts like "authentic Lucknow Chikankari kurtis or handcrafted brass gift boxes online". Without rich Product schema and guidance from an <a href="/ai-seo-company-in-lucknow/" class="text-brand-300 hover:text-white font-semibold no-underline hover:no-underline">AI SEO Company in Lucknow</a>, AI search links shoppers only to third party third party portals.</p>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 space-y-3.5 sm:space-y-4 min-w-0">
+          <div class="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6 border-l-4 border-l-rose-500 min-w-0">
+            <div class="flex flex-wrap items-center justify-between gap-1.5 mb-2">
+              <span class="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-rose-400">Marketplace Cuts / Slow Store</span>
+              <span class="text-[11px] sm:text-xs text-slate-400">High Commission &amp; Cart Drops</span>
+            </div>
+            <h3 class="font-display font-bold text-[15px] sm:text-base text-white mb-2 leading-snug">Rented Marketplace Traffic &amp; Clunky Mobile UX</h3>
+            <p class="text-xs text-slate-300 leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+              Loses 30% margin per order to marketplaces while slow mobile galleries and missing Product schema block free Google buyers.
+            </p>
+          </div>
+
+          <div class="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6 border-l-4 border-l-emerald-400 min-w-0">
+            <div class="flex flex-wrap items-center justify-between gap-1.5 mb-2">
+              <span class="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-emerald-400">NK Digital Tech Ecommerce</span>
+              <span class="text-[11px] sm:text-xs text-brand-300">Owned Client Pipeline</span>
+            </div>
+            <h3 class="font-display font-bold text-[15px] sm:text-base text-white mb-2 leading-snug">Fast D2C Store, Product SEO &amp; AI Shopping</h3>
+            <p class="text-xs text-slate-300 leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+              Combines fast WebP product pages, Google Shopping schema and showroom Maps so shoppers buy directly on your site or visit your store.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 4: SERVICES (LIGHT COOL)
+  ===================================================================== -->
+  <section id="services" class="relative surface-cool py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200 overflow-hidden scroll-mt-16 sm:scroll-mt-20">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 items-center mb-8 sm:mb-16">
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-light mb-3">Our Six Pillar Retail &amp; D2C Engine</div>
+          <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4 break-words">
+            Focused Ecommerce Marketing Services in Lucknow
+          </h2>
+          <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+            As a practical <strong>online sales growth agency in Lucknow</strong> delivering both D2C store orders and <strong>retail and online store marketing in Lucknow</strong>, our six pillars cover every step from search to checkout.
+          </p>
+        </div>
+        <div class="lg:col-span-5 min-w-0">
+          <div class="rounded-2xl overflow-hidden border border-slate-200 shadow-md bg-white">
+            <img
+              src="/images/lucknow-ecommerce-dm/services-ecommerce-dm-lucknow.webp"
+              alt="Shopify Store Digital Marketing in Lucknow Studio Product Flat Lay and Catalog"
+              width="800"
+              height="450"
+              sizes="(max-width: 1024px) 100vw, 42vw"
+              class="w-full aspect-[16/9] sm:aspect-auto sm:h-56 lg:h-64 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-7">
+        {services.map((s) => (
+          <div class="elevated-card rounded-2xl p-4 sm:p-7 flex flex-col justify-between group sm:hover:-translate-y-1 min-w-0">
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-4 sm:mb-6">
+                <div class={`w-11 h-11 sm:w-12 sm:h-12 rounded-xl border flex items-center justify-center flex-shrink-0 ${s.iconStyle}`}>
+                  <Fragment set:html={s.icon} />
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class={`text-[10.5px] sm:text-[11px] font-semibold px-2.5 py-1 rounded-md ${s.badgeColor}`}>
+                    {s.category}
+                  </span>
+                  <span class="font-display font-black text-base sm:text-lg text-slate-300">{s.num}</span>
+                </div>
+              </div>
+
+              <h3 class="font-display font-bold text-[17px] sm:text-xl text-slate-900 mb-2.5 sm:mb-3 leading-snug group-hover:text-brand-600 transition-colors">
+                {s.title}
+              </h3>
+
+              <p class="text-slate-600 text-[13px] sm:text-sm leading-relaxed mb-4 sm:mb-6 text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+                {s.body}
+              </p>
+            </div>
+
+            <div>
+              <div class={`rounded-xl border p-3.5 sm:p-4 mb-3.5 sm:mb-5 ${s.impactStyle}`}>
+                <div class="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-slate-900 mb-1">
+                  <svg class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                  </svg>
+                  <span>Commercial Impact</span>
+                </div>
+                <p class="text-xs text-slate-700 leading-relaxed font-medium text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+                  {s.impact}
+                </p>
+              </div>
+
+              <a href={s.href} class="w-full sm:w-auto inline-flex items-center justify-between sm:justify-start gap-2 rounded-xl sm:rounded-none bg-slate-50 active:bg-sky-50 sm:bg-transparent border border-slate-200/80 sm:border-0 px-3.5 sm:px-0 py-2.5 min-h-[46px] sm:min-h-0 text-xs font-bold text-brand-600 hover:text-brand-700 no-underline hover:no-underline group-hover:gap-3 transition-all">
+                <span>{s.cta}</span>
+                <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 5: REGIONAL LOCATIONS (DARK NAVY)
+  ===================================================================== -->
+  <section id="locations" class="relative surface-navy py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden scroll-mt-16 sm:scroll-mt-20">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 items-center mb-8 sm:mb-16">
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-dark mb-3">Sector &amp; Corridor Targeting Across Lucknow</div>
+          <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-white tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4 break-words">
+            Online &amp; Store Growth Across Lucknow Retail Markets &amp; National Shipping
+          </h2>
+          <p class="text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+            Whether customers buy online from Mumbai or walk into Hazratganj and Patrakarpuram showrooms, we connect <a href="/local-seo-services-in-lucknow/" class="text-brand-300 hover:text-white font-semibold no-underline hover:no-underline">Local SEO Services in Lucknow</a> with national store growth.
+          </p>
+        </div>
+        <div class="lg:col-span-5 min-w-0">
+          <div class="rounded-2xl overflow-hidden border border-slate-700/80 shadow-xl bg-slate-900">
+            <img
+              src="/images/lucknow-ecommerce-dm/locations-ecommerce-dm-lucknow.webp"
+              alt="Busy Modern Retail Boulevard and Boutique Storefronts in Hazratganj Lucknow"
+              width="800"
+              height="450"
+              sizes="(max-width: 1024px) 100vw, 42vw"
+              class="w-full aspect-[16/9] sm:aspect-auto sm:h-56 lg:h-64 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+        {cities.map((c) => (
+          <div class="glass-card rounded-2xl p-4 sm:p-6 flex flex-col justify-between group sm:hover:-translate-y-1 min-w-0">
+            <div>
+              <div class={`h-1 w-full bg-gradient-to-r ${c.accent} rounded-full mb-4 sm:mb-5`}></div>
+
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-3.5 sm:mb-4">
+                <span class="px-2.5 py-1 rounded-md bg-slate-800 border border-slate-700 text-[11px] font-bold uppercase tracking-wider text-brand-300">
+                  {c.hub}
+                </span>
+                <span class="text-xs font-semibold text-slate-400">{c.city}</span>
+              </div>
+
+              <h3 class="font-display font-bold text-base sm:text-lg text-white mb-2.5 sm:mb-3 leading-snug">
+                <a href={c.href} class="hover:text-brand-300 no-underline hover:no-underline transition-colors">{c.keyword}</a>
+              </h3>
+
+              <p class="text-slate-300 text-[13px] sm:text-sm leading-relaxed mb-4 sm:mb-5 text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+                {c.desc}
+              </p>
+            </div>
+
+            <div class="pt-3.5 sm:pt-4 border-t border-slate-800">
+              <p class="text-[11px] text-slate-400 mb-3 sm:mb-4 leading-normal">
+                <strong class="text-slate-300">Key Belts:</strong> {c.corridor}
+              </p>
+              <a href={c.href} class="w-full sm:w-auto inline-flex items-center justify-between sm:justify-start gap-1.5 rounded-xl sm:rounded-none bg-slate-800/90 active:bg-slate-800 sm:bg-transparent border border-slate-700/80 sm:border-0 px-3.5 sm:px-0 py-2.5 min-h-[44px] sm:min-h-0 text-xs font-bold text-brand-400 hover:text-brand-300 no-underline hover:no-underline group-hover:gap-2.5 transition-all">
+                <span>{c.cta}</span>
+                <svg class="w-3.5 h-3.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 6: WHY NK DIGITAL TECH (CRISP WHITE)
+  ===================================================================== -->
+  <section id="why-us" class="relative surface-white py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200 overflow-hidden scroll-mt-16 sm:scroll-mt-20">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-8 sm:mb-14 text-left sm:text-center">
+        <div class="badge-light mb-3">Why Lucknow Retail &amp; D2C Founders Choose Us</div>
+        <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4 break-words">
+          Profit Driven Partner for Digital Marketing for Ecommerce Business in Lucknow
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed mb-4 text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+          Gross sales mean little if marketplace cuts eat profits. We join conversion focused store design with <a href="/aeo-services-in-lucknow/" class="text-brand-600 hover:text-brand-700 font-semibold no-underline hover:no-underline">AEO Services in Lucknow</a> so buyers purchase directly.
+        </p>
+        <p class="text-slate-700 font-semibold text-xs sm:text-sm">
+          Compare our Lucknow sector growth engine against typical directory plans and generic agencies:
+        </p>
+      </div>
+
+      <div class="hidden md:block overflow-hidden rounded-2xl border border-slate-200 shadow-lg">
+        <table class="w-full text-left border-collapse">
+          <thead>
+            <tr class="bg-slate-900 text-white">
+              <th class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-slate-300 w-1/4">
+                Evaluation Criteria
+              </th>
+              <th class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-rose-300 w-[37.5%] border-l border-slate-800">
+                Marketplace Cuts / Slow Store
+              </th>
+              <th class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-brand-300 w-[37.5%] border-l border-slate-800 bg-slate-950">
+                NK Digital Tech Ecommerce
+              </th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200 text-sm">
+            {comparison.map((row, idx) => (
+              <tr class={idx % 2 === 0 ? 'bg-white' : 'bg-slate-50/80'}>
+                <td class="py-5 px-6 font-display font-bold text-slate-900">
+                  {row.metric}
+                </td>
+                <td class="py-5 px-6 text-slate-600 border-l border-slate-200">
+                  <div class="flex items-start gap-2.5">
+                    <svg class="w-4 h-4 text-rose-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                    <span class="text-justify">{row.typical}</span>
+                  </div>
+                </td>
+                <td class="py-5 px-6 text-slate-900 font-medium border-l border-slate-200 bg-sky-50/40">
+                  <div class="flex items-start gap-2.5">
+                    <svg class="w-4 h-4 text-emerald-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span class="text-justify">{row.nk}</span>
+                  </div>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <div class="md:hidden space-y-3.5">
+        {comparison.map((row) => (
+          <div class="elevated-card rounded-2xl p-4 space-y-3 min-w-0">
+            <h3 class="font-display font-bold text-slate-900 text-sm pb-2 border-b border-slate-100 leading-snug">{row.metric}</h3>
+            <div class="rounded-xl bg-rose-50 border border-rose-100 p-3">
+              <div class="flex items-center gap-1.5 mb-1">
+                <svg class="w-3.5 h-3.5 text-rose-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+                <p class="text-[10px] font-bold uppercase tracking-wider text-rose-600">Marketplace Cuts / Slow Store</p>
+              </div>
+              <p class="text-xs text-slate-700 leading-relaxed">{row.typical}</p>
+            </div>
+            <div class="rounded-xl bg-sky-50 border border-sky-200 p-3">
+              <div class="flex items-center gap-1.5 mb-1">
+                <svg class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                </svg>
+                <p class="text-[10px] font-bold uppercase tracking-wider text-brand-600">NK Digital Tech Ecommerce</p>
+              </div>
+              <p class="text-xs text-slate-900 font-semibold leading-relaxed">{row.nk}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 7: VERTICAL SEGMENTS WE SCALE (LIGHT SLATE 3x2 GRID)
+  ===================================================================== -->
+  <section id="industries" class="relative surface-slate py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200 overflow-hidden scroll-mt-16 sm:scroll-mt-20">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-8 sm:mb-16 text-left sm:text-center">
+        <div class="badge-light mb-3">Focused Business Segments</div>
+        <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4 break-words">
+          Tailored Ecommerce Plans for Six Lucknow Retail Segments
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+          Whether you sell handloom Chikankari online, launch D2C wellness foods or run a multi showroom retail brand, we match shopper intent.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-7">
+        {sectorSegments.map((ind) => (
+          <div class={`elevated-card rounded-2xl p-4 sm:p-7 border-t-4 ${ind.accentBorder} flex flex-col justify-between sm:hover:-translate-y-1 min-w-0`}>
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-4 sm:mb-5">
+                <div class={`w-10 h-10 sm:w-11 sm:h-11 rounded-xl border flex items-center justify-center flex-shrink-0 ${ind.iconBg}`}>
+                  <Fragment set:html={ind.icon} />
+                </div>
+                <span class="text-[11px] font-semibold text-slate-600 bg-slate-100 px-2.5 py-1 rounded-md">
+                  {ind.sector}
+                </span>
+              </div>
+
+              <h3 class="font-display font-bold text-[17px] sm:text-xl text-slate-900 mb-3 sm:mb-4 leading-snug">
+                {ind.title}
+              </h3>
+
+              <div class="mb-4 sm:mb-5">
+                <p class="text-[11px] font-bold uppercase tracking-wider text-brand-600 mb-1.5">
+                  Digital Growth Focus
+                </p>
+                <p class="text-slate-600 text-[13px] sm:text-sm leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+                  {ind.focus}
+                </p>
+              </div>
+            </div>
+
+            <div class="rounded-xl bg-emerald-50/70 border border-emerald-200/80 p-3.5 sm:p-4">
+              <p class="text-[11px] font-bold uppercase tracking-wider text-emerald-700 mb-1">
+                Verified Outcome
+              </p>
+              <p class="text-slate-800 text-xs font-medium leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+                {ind.outcome}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 8: HOW WE WORK (CRISP WHITE - 4 STAGES)
+  ===================================================================== -->
+  <section class="relative surface-white py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200 overflow-hidden">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-8 sm:mb-16 text-left sm:text-center">
+        <div class="badge-light mb-3">Our 4 Stage Execution</div>
+        <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4 break-words">
+          Our 4 Stage Execution for Lucknow Ecommerce Brands
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+          We turn slow websites and costly marketplace dependence into fast direct online revenue engines.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-7">
+        {stages.map((st) => (
+          <div class="elevated-card rounded-2xl p-4 sm:p-8 relative overflow-hidden group sm:hover:-translate-y-1 min-w-0">
+            <div class="flex items-center justify-between gap-4 mb-3.5 sm:mb-5">
+              <span class={`inline-flex items-center px-2.5 sm:px-3 py-1 rounded-lg text-xs font-bold uppercase tracking-wider text-white bg-gradient-to-r ${st.accent}`}>
+                {st.num}
+              </span>
+              <span class="font-display font-black text-3xl sm:text-4xl text-slate-200 group-hover:text-slate-300 transition-colors">
+                {st.step}
+              </span>
+            </div>
+            <h3 class="font-display font-bold text-[17px] sm:text-xl text-slate-900 mb-2.5 sm:mb-3 leading-snug">
+              {st.title}
+            </h3>
+            <p class="text-slate-600 text-[13px] sm:text-sm leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+              {st.body}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 9: CONCLUSION / PARTNER SECTION (DARK INDIGO + GROWTH IMAGE)
+  ===================================================================== -->
+  <section class="relative surface-indigo py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-7 sm:gap-10 lg:gap-12 items-center">
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-dark mb-3.5 sm:mb-4">Keep Full Store Profit Margins</div>
+          <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-white tracking-tight leading-[1.22] sm:leading-tight mb-4 sm:mb-6 break-words">
+            Scale Direct Online Orders With Digital Marketing for Ecommerce Business in Lucknow
+          </h2>
+          <div class="space-y-4 sm:space-y-5 text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+            <p>Every sale handed to a third party marketplace costs 25% to 35% of your hard earned margin and hides your brand behind generic listings. Shoppers across India actively search Google and AI tools for authentic regional brands.</p>
+            <p>Choosing NK Digital Tech for <strong class="text-white font-semibold">Digital Marketing for Ecommerce Business in Lucknow</strong> unites D2C search strategists with a fast <a href="/website-development-company-in-lucknow/" class="text-brand-300 hover:text-white font-semibold no-underline hover:no-underline">Website Development Company in Lucknow</a> so orders land directly on your own store.</p>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 min-w-0">
+          <div class="rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-700/80 shadow-2xl bg-slate-900">
+            <img
+              src="/images/lucknow-ecommerce-dm/growth-ecommerce-dm-lucknow.webp"
+              alt="Smiling Lucknow Boutique Founder Preparing Direct Online Customer Orders"
+              width="800"
+              height="450"
+              sizes="(max-width: 1024px) 100vw, 42vw"
+              class="w-full aspect-[16/10] sm:aspect-auto sm:h-64 lg:h-72 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 10: FAQ (LIGHT COOL SLATE)
+  ===================================================================== -->
+  <section id="faq" class="relative surface-cool py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200 overflow-hidden scroll-mt-16 sm:scroll-mt-20">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-left sm:text-center mb-8 sm:mb-14">
+        <div class="badge-light mb-3">Questions Asked on Google, ChatGPT &amp; Gemini</div>
+        <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4 break-words">
+          Frequently Asked Questions About Digital Marketing for Ecommerce Business in Lucknow
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+          Practical answers for D2C founders, Shopify store owners and Hazratganj/Chowk retail brands.
+        </p>
+      </div>
+
+      <div class="space-y-3 sm:space-y-4">
+        {faqs.map((f, i) => (
+          <details class="elevated-card rounded-2xl group overflow-hidden" open={i === 0}>
+            <summary class="flex items-start sm:items-center justify-between gap-3 sm:gap-4 px-4 sm:px-6 py-4 sm:py-5 min-h-[54px] select-none">
+              <div class="flex items-start sm:items-center gap-2.5 sm:gap-3.5 text-left min-w-0">
+                <span class="w-6 h-6 sm:w-7 sm:h-7 rounded-lg bg-sky-50 border border-sky-200 text-brand-600 font-display font-bold text-xs flex items-center justify-center flex-shrink-0 mt-0.5 sm:mt-0">
+                  0{i + 1}
+                </span>
+                <span class="font-display font-bold text-slate-900 text-[14px] sm:text-base md:text-lg leading-snug break-words">
+                  {f.q}
+                </span>
+              </div>
+              <span class="faq-icon w-7 h-7 sm:w-8 sm:h-8 rounded-full border border-slate-200 text-slate-600 flex items-center justify-center flex-shrink-0 mt-0.5 sm:mt-0">
+                <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                </svg>
+              </span>
+            </summary>
+            <div class="px-4 sm:px-6 pb-5 sm:pb-6 pt-3 text-slate-600 text-[13px] sm:text-sm md:text-base leading-relaxed border-t border-slate-100 text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+              {f.a}
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 11: SHORT CTA BANNER (LAST SECTION)
+  ===================================================================== -->
+  <section id="contact" class="relative surface-dark py-10 pb-28 sm:py-16 lg:py-20 px-4 sm:px-6 overflow-hidden scroll-mt-16 sm:scroll-mt-20">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-5xl mx-auto">
+      <div class="rounded-2xl sm:rounded-3xl bg-gradient-to-r from-brand-600 via-brand-700 to-accent-700 p-6 sm:p-10 md:p-12 text-center text-white shadow-2xl border border-white/15 relative overflow-hidden">
+        <div class="relative z-10 max-w-2xl mx-auto">
+          <h2 class="font-display font-black text-[clamp(1.38rem,5.4vw,1.85rem)] sm:text-3xl md:text-4xl text-white tracking-tight leading-[1.2] sm:leading-snug mb-3 sm:mb-4 break-words">
+            Ready to Grow Commission Free D2C Sales &amp; Store Visits in Lucknow?
+          </h2>
+
+          <p class="text-sky-50 text-[13px] sm:text-sm md:text-base leading-relaxed mb-6 sm:mb-8 text-left sm:text-center">
+            Claim a free audit of your online store speed, Product schema and showroom Map rankings.
+          </p>
+
+          <a
+            href="/contact-us/"
+            class="inline-flex w-full sm:w-auto min-h-[50px] items-center justify-center gap-2 sm:gap-3 px-5 sm:px-8 py-3.5 sm:py-4 rounded-xl bg-white text-slate-950 hover:bg-sky-50 no-underline hover:no-underline font-display font-bold text-sm sm:text-base shadow-xl transition-all duration-300 active:scale-95 text-center leading-snug"
+          >
+            <span>Claim Free Store Audit</span>
+            <svg class="w-4 h-4 sm:w-5 sm:h-5 text-brand-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mobile Sticky Bottom Quick Action Bar -->
+  <div class="mobile-sticky-cta sm:hidden fixed bottom-0 inset-x-0 z-40 bg-[#050a14]/95 backdrop-blur-xl border-t border-slate-800 px-3.5 pt-2.5 pb-[max(0.625rem,env(safe-area-inset-bottom))] shadow-[0_-8px_24px_rgba(0,0,0,0.45)] transition-all duration-300">
+    <div class="flex items-center gap-2.5">
+      <a
+        href="/contact-us/"
+        class="btn-primary flex-1 min-h-[44px] py-2.5 px-4 text-xs font-bold rounded-xl no-underline hover:no-underline"
+      >
+        <span>Claim Free Store Audit</span>
+        <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+        </svg>
+      </a>
+      <a
+        href="#services"
+        class="btn-secondary-dark min-h-[44px] py-2.5 px-3.5 text-xs font-semibold rounded-xl flex-shrink-0 no-underline hover:no-underline"
+      >
+        <span>Services</span>
+      </a>
+    </div>
+  </div>
+
+</Layout>

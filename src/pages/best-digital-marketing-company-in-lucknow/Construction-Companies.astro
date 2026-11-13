@@ -1,0 +1,1028 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import '../../styles/global.css';
+
+const pageTitle = "Digital Marketing for Construction Companies in Lucknow | NK";
+const pageDescription = "Need Digital Marketing for Construction Companies in Lucknow? NK Digital Tech wins direct turnkey villa, warehouse, PEB shed and commercial civil tenders.";
+const pageCanonical = "https://www.nkdigitaltech.net/best-digital-marketing-company-in-lucknow/Construction-Companies/";
+
+const services = [
+  {
+    "num": "01",
+    "category": "Turnkey & Commercial SEO",
+    "icon": "<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z\"/></svg>",
+    "iconStyle": "bg-sky-50 border-sky-200 text-brand-600",
+    "impactStyle": "bg-sky-50/80 border-sky-200/80 text-slate-800",
+    "badgeColor": "text-brand-600 bg-sky-100/80",
+    "title": "Commercial Building & Villa Contractor SEO",
+    "body": "Combining commercial building contractor marketing in Lucknow with villa and bungalow contractor marketing in Lucknow, we rank service pages per project type.",
+    "impact": "Draws plot owners and developers ready to issue turnkey build enquiries.",
+    "cta": "View Best SEO Company in Lucknow",
+    "href": "/best-seo-company-in-lucknow/"
+  },
+  {
+    "num": "02",
+    "category": "Office & Yard Map Pack",
+    "icon": "<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z\"/><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M15 11a3 3 0 11-6 0 3 3 0 016 0z\"/></svg>",
+    "iconStyle": "bg-emerald-50 border-emerald-200 text-emerald-600",
+    "impactStyle": "bg-emerald-50/80 border-emerald-200/80 text-slate-800",
+    "badgeColor": "text-emerald-700 bg-emerald-100/80",
+    "title": "Lucknow Google Map Pack Dominance",
+    "body": "We optimise your Google Business Profile with real handover photos, site equipment galleries and client reviews across Lucknow zones.",
+    "impact": "Generates daily phone calls from local families and site managers.",
+    "cta": "View Local SEO Services in Lucknow",
+    "href": "/local-seo-services-in-lucknow/"
+  },
+  {
+    "num": "03",
+    "category": "Fast Contractor Websites",
+    "icon": "<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M13 10V3L4 14h7v7l9-11h-7z\"/></svg>",
+    "iconStyle": "bg-cyan-50 border-cyan-200 text-cyan-700",
+    "impactStyle": "bg-cyan-50/80 border-cyan-200/80 text-slate-800",
+    "badgeColor": "text-cyan-700 bg-cyan-100/80",
+    "title": "Credible Project Galleries & Cost Tables",
+    "body": "We build sub two second websites displaying completed sq ft totals, safety certifications and clear turnkey specification tiers.",
+    "impact": "Builds instant buyer trust when investors evaluate contractors.",
+    "cta": "View Website Development Company in Lucknow",
+    "href": "/website-development-company-in-lucknow/"
+  },
+  {
+    "num": "04",
+    "category": "Build Rate Answer Boxes",
+    "icon": "<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z\"/></svg>",
+    "iconStyle": "bg-amber-50 border-amber-200 text-amber-600",
+    "impactStyle": "bg-amber-50/80 border-amber-200/80 text-slate-800",
+    "badgeColor": "text-amber-700 bg-amber-100/80",
+    "title": "Construction Cost & Material Answer Snippets",
+    "body": "We publish clear 50 word breakdowns on Lucknow per sq ft construction rates, steel grades and handover timelines with FAQ schema.",
+    "impact": "Captures top Google boxes and filters serious build budgets early.",
+    "cta": "View AEO Services in Lucknow",
+    "href": "/aeo-services-in-lucknow/"
+  },
+  {
+    "num": "05",
+    "category": "AI Tender Shortlists (GEO)",
+    "icon": "<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z\"/></svg>",
+    "iconStyle": "bg-violet-50 border-violet-200 text-accent-600",
+    "impactStyle": "bg-violet-50/80 border-violet-200/80 text-slate-800",
+    "badgeColor": "text-accent-600 bg-violet-100/80",
+    "title": "GeneralContractor Schema & ChatGPT Trust",
+    "body": "We implement GeneralContractor and Project JSON LD data so ChatGPT and Gemini suggest your firm for industrial and residential builds.",
+    "impact": "Wins vendor shortlists on AI procurement checks across UP.",
+    "cta": "View AI SEO Company in Lucknow",
+    "href": "/ai-seo-company-in-lucknow/"
+  },
+  {
+    "num": "06",
+    "category": "Industrial & Shed Pipelines",
+    "icon": "<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M3 21h18M5 21V7l8-4v18M19 21V11l-6-4\"/></svg>",
+    "iconStyle": "bg-indigo-50 border-indigo-200 text-indigo-600",
+    "impactStyle": "bg-indigo-50/80 border-indigo-200/80 text-slate-800",
+    "badgeColor": "text-indigo-700 bg-indigo-100/80",
+    "title": "Warehouse & PEB Shed Marketing in Lucknow",
+    "body": "With warehouse construction marketing in Lucknow and PEB and industrial shed marketing in Lucknow, we win large logistics and cold storage tenders.",
+    "impact": "Brings multi acre PEB and industrial civil tenders straight to your team.",
+    "cta": "Request Contractor Audit",
+    "href": "#contact"
+  }
+];
+
+const cities = [
+  {
+    "hub": "Build Belt 01",
+    "city": "Gomti Nagar Extension & Shaheed Path",
+    "corridor": "Gomti Nagar Extension • Sushant Golf City • Shaheed Path",
+    "keyword": "Luxury Villas & Commercial Towers",
+    "desc": "We connect turnkey contractors with residential plot owners and commercial mall or office developers.",
+    "cta": "Audit Shaheed Path Leads",
+    "href": "#contact",
+    "accent": "from-brand-500 to-sky-400"
+  },
+  {
+    "hub": "Build Belt 02",
+    "city": "Kanpur Road & Outer Ring Road",
+    "corridor": "Kanpur Road • Outer Ring Road • Nadarganj Logistics",
+    "keyword": "Warehouses, Cold Chains & PEB Sheds",
+    "desc": "We rank structural contractors and PEB shed builders directly before logistics parks and factory groups.",
+    "cta": "Audit Kanpur Road Leads",
+    "href": "#contact",
+    "accent": "from-accent-500 to-violet-400"
+  },
+  {
+    "hub": "Build Belt 03",
+    "city": "Sultanpur Road & Faizabad Road",
+    "corridor": "Sultanpur Road • Anora • Chinhat • Barabanki Link",
+    "keyword": "Township Infra, Roads & Institutional Campuses",
+    "desc": "We position civil firms for boundary walls, college buildings, hospitals and society clubhouses.",
+    "cta": "Explore Lucknow Local SEO",
+    "href": "/local-seo-services-in-lucknow/",
+    "accent": "from-cyan-500 to-teal-400"
+  },
+  {
+    "hub": "Build Belt 04",
+    "city": "Central Lucknow Redevelopment",
+    "corridor": "Hazratganj • Mahanagar • Aliganj • Indira Nagar",
+    "keyword": "Old House Rebuilds & Boutique Showrooms",
+    "desc": "We capture direct homeowner searches for structural house reconstruction and multi floor builder flats.",
+    "cta": "Audit Central Rebuild Leads",
+    "href": "#contact",
+    "accent": "from-emerald-500 to-green-400"
+  }
+];
+
+const comparison = [
+  {
+    "metric": "Lead Source",
+    "typical": "Subcontracted jobs via brokers with thin margins",
+    "nk": "Direct plot owner & corporate developer project RFPs"
+  },
+  {
+    "metric": "Site Proof",
+    "typical": "No completed project specs, photos or handover metrics",
+    "nk": "Crisp WebP before & after site timelines with build sizes"
+  },
+  {
+    "metric": "Cost Filtering",
+    "typical": "Unqualified calls asking unclear per sq ft rates",
+    "nk": "Clear Material + Turnkey rate tables pre qualifying callers"
+  },
+  {
+    "metric": "Local Map Visibility",
+    "typical": "Missing contractor Google Business pin & site reviews",
+    "nk": "Top 3 Lucknow Map Pack rankings across construction zones"
+  },
+  {
+    "metric": "AI Vendor Discovery",
+    "typical": "Invisible when businesses ask ChatGPT for PEB or civil teams",
+    "nk": "Clean GeneralContractor schema cited by Gemini & ChatGPT"
+  },
+  {
+    "metric": "Pipeline Stability",
+    "typical": "Feast or famine gap months between handovers",
+    "nk": "Steady monthly pipeline of new home & shed enquiries"
+  }
+];
+
+const sectorSegments = [
+  {
+    "sector": "Turnkey Homes",
+    "title": "Luxury Villa, Duplex & Plot Builders",
+    "focus": "Ranks transparent turnkey packages (Standard, Premium, Luxury per sq ft specs) for Lucknow residential plot owners.",
+    "outcome": "Consistent direct house construction contracts without middlemen.",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3\"/></svg>",
+    "accentBorder": "border-t-brand-500",
+    "iconBg": "bg-sky-50 text-brand-600 border-sky-200"
+  },
+  {
+    "sector": "PEB & Warehouses",
+    "title": "Industrial Sheds, Godowns & Cold Stores",
+    "focus": "Presents clear steel tonnage, wide roof design and floor load capacity metrics for manufacturing and logistics heads.",
+    "outcome": "Direct multi crore warehouse & industrial shed RFQs.",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M3 21h18M5 21V7l8-4v18M19 21V11l-6-4\"/></svg>",
+    "accentBorder": "border-t-amber-500",
+    "iconBg": "bg-amber-50 text-amber-600 border-amber-200"
+  },
+  {
+    "sector": "Commercial Civil",
+    "title": "Showrooms, Hospitals & College Campuses",
+    "focus": "Highlights institutional safety records, RCC structural timelines and finished commercial facades cleanly.",
+    "outcome": "Shortlist invites for private institutional tenders.",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5\"/></svg>",
+    "accentBorder": "border-t-cyan-500",
+    "iconBg": "bg-cyan-50 text-cyan-700 border-cyan-200"
+  },
+  {
+    "sector": "Infra & Roads",
+    "title": "EPC Contractors, Culverts & Township Infra",
+    "focus": "Documents heavy machinery fleets, road paving capacity and government vendor compliance cleanly online.",
+    "outcome": "Direct developer JV partnerships and civil tender invites.",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4\"/></svg>",
+    "accentBorder": "border-t-emerald-500",
+    "iconBg": "bg-emerald-50 text-emerald-600 border-emerald-200"
+  },
+  {
+    "sector": "Structural Repair",
+    "title": "Waterproofing, Retrofitting & Demolition",
+    "focus": "Captures urgent commercial plant and society maintenance searches for RCC retrofitting and structural repairs.",
+    "outcome": "Steady fast turnaround commercial maintenance contracts.",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z\"/></svg>",
+    "accentBorder": "border-t-indigo-500",
+    "iconBg": "bg-indigo-50 text-indigo-600 border-indigo-200"
+  },
+  {
+    "sector": "Architect-Build Firms",
+    "title": "Design + Build Turnkey Partnerships",
+    "focus": "Pairs architectural layout approvals and 3D views with civil execution under one roof for hassle free home builds.",
+    "outcome": "Full end to end villa and commercial contracts.",
+    "icon": "<svg class=\"w-5 h-5 sm:w-6 sm:h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6z\"/></svg>",
+    "accentBorder": "border-t-rose-500",
+    "iconBg": "bg-rose-50 text-rose-600 border-rose-200"
+  }
+];
+
+const stages = [
+  {
+    "num": "Stage 01",
+    "step": "01",
+    "title": "Portfolio, Speed & Broker Gap Audit",
+    "body": "We inspect missing project specs, slow photos and Map Pack rankings across competing Lucknow builders.",
+    "accent": "from-brand-600 to-sky-500"
+  },
+  {
+    "num": "Stage 02",
+    "step": "02",
+    "title": "Build Keywords & Contractor Schema",
+    "body": "We map residential turnkey, PEB and EPC keywords with GeneralContractor and FAQ structured data.",
+    "accent": "from-accent-600 to-violet-500"
+  },
+  {
+    "num": "Stage 03",
+    "step": "03",
+    "title": "Spec Tiers, Gallery & Map Rollout",
+    "body": "We launch fast project case studies, material comparison tables and updated Google Business profiles.",
+    "accent": "from-cyan-600 to-teal-500"
+  },
+  {
+    "num": "Stage 04",
+    "step": "04",
+    "title": "Tender Call & AI Visibility Reviews",
+    "body": "We track plot visit inquiries, BOQ uploads and ChatGPT vendor recommendations every two weeks.",
+    "accent": "from-emerald-600 to-green-500"
+  }
+];
+
+const faqs = [
+  {
+    "q": "Why invest in Digital Marketing for Construction Companies in Lucknow if we already work through references?",
+    "a": "Personal references are limited and brokers often cut into profit margins. Digital Marketing for Construction Companies in Lucknow puts your completed projects in front of plot owners and corporate investors searching directly on Google and ChatGPT."
+  },
+  {
+    "q": "Do turnkey house builders get good direct leads through Google search?",
+    "a": "Yes. Plot owners in Gomti Nagar Extension, Shaheed Path and Indira Nagar search daily for turnkey house construction rates with material. Clear tier pages and fast galleries convert those searchers into direct meetings."
+  },
+  {
+    "q": "Can you help EPC and PEB warehouse contractors attract industrial projects?",
+    "a": "Yes. We create dedicated structural specification, steel capacity and industrial shed portfolio pages targeting logistics operators along Kanpur Road, Chinhat and Uttar Pradesh."
+  },
+  {
+    "q": "Why include construction material specifications and per sq ft tables online?",
+    "a": "Honest specification tables showing cement, steel and finish standards answer buyer questions upfront, filter low budget bargain hunters and capture top Google answer boxes."
+  },
+  {
+    "q": "How soon do construction digital marketing campaigns generate qualified inquiries?",
+    "a": "Google Map Pack fixes and fast inquiry landing pages typically grow phone calls within 4 to 8 weeks, while full commercial and villa organic rankings build steady momentum over 3 to 6 months."
+  }
+];
+
+const trustStrip = [
+  "Direct Commercial RFPs",
+  "Turnkey Villa Inquiries",
+  "PEB & Warehouse Leads",
+  "Top 3 Builder Map Pack",
+  "ChatGPT Vendor Citations",
+  "Fast Case Study Sites",
+  "UP RERA & Safety Clarity",
+  "Cost Per Sq Ft Answer Boxes"
+];
+
+const sectorDMServiceSchema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Digital Marketing for Construction Companies in Lucknow",
+  "serviceType": "Sector Digital Marketing, Search Engine Optimisation & AI Search Growth",
+  "provider": {
+    "@type": "ProfessionalService",
+    "name": "NK Digital Tech",
+    "url": "https://www.nkdigitaltech.net/",
+    "email": "nkdigitaltech1@gmail.com",
+    "telephone": "+91-80521-89051",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Lucknow",
+      "addressRegion": "Uttar Pradesh",
+      "addressCountry": "IN"
+    }
+  },
+  "areaServed": ["Lucknow","Gomti Nagar Extension","Amar Shaheed Path","Kanpur Road","Outer Ring Road","Sultanpur Road","Uttar Pradesh"],
+  "description": pageDescription,
+  "url": pageCanonical
+});
+
+const sectorDMFAQSchema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map((item) => ({
+    "@type": "Question",
+    "name": item.q,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": item.a
+    }
+  }))
+});
+
+const sectorDMBreadcrumbSchema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.nkdigitaltech.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Best Digital Marketing Company in Lucknow",
+      "item": "https://www.nkdigitaltech.net/best-digital-marketing-company-in-lucknow/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Digital Marketing for Construction Companies in Lucknow",
+      "item": pageCanonical
+    }
+  ]
+});
+---
+
+<Layout
+  title={pageTitle}
+  description={pageDescription}
+  canonical={pageCanonical}
+  ogImage="https://www.nkdigitaltech.net/images/lucknow-construction-dm/hero-construction-dm-lucknow.webp"
+  preloadImage="/images/lucknow-construction-dm/hero-construction-dm-lucknow.webp"
+  hideLocationsNav={false}
+  customSchemaLocalBusiness={sectorDMServiceSchema}
+  customSchemaFAQ={sectorDMFAQSchema}
+  customSchemaBreadcrumb={sectorDMBreadcrumbSchema}
+  utilityTagline={"Digital Marketing for Construction Companies in Lucknow • Shaheed Path, Kanpur Road & Gomti Nagar"}
+  brandSubtitle={"Lucknow • Construction Digital Marketing"}
+  footerBio={"NK Digital Tech delivers Digital Marketing for Construction Companies in Lucknow, helping civil contractors, turnkey home builders and PEB firms win direct contracts."}
+  footerCoreDisciplines={[
+    { label: 'Best Digital Marketing Company in Lucknow', href: '/best-digital-marketing-company-in-lucknow/' },
+    { label: 'Best SEO Company in Lucknow', href: '/best-seo-company-in-lucknow/' },
+    { label: 'Local SEO Services in Lucknow', href: '/local-seo-services-in-lucknow/' },
+    { label: 'AI SEO Company in Lucknow', href: '/ai-seo-company-in-lucknow/' },
+    { label: 'AEO Services in Lucknow', href: '/aeo-services-in-lucknow/' },
+    { label: 'Website Development Company in Lucknow', href: '/website-development-company-in-lucknow/' },
+  ]}
+  footerTagline={"Built for Direct Construction Contracts in Lucknow"}
+>
+
+  <!-- =====================================================================
+       SECTION 1: HERO (DARK SURFACE)
+  ===================================================================== -->
+  <section class="relative surface-dark overflow-hidden pt-5 pb-9 sm:pt-16 sm:pb-20 lg:pt-20 lg:pb-24 border-b border-slate-800/80">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="absolute inset-0 mesh-glow pointer-events-none"></div>
+    <div class="absolute -top-24 -left-24 sm:-top-36 sm:-left-36 w-56 h-56 sm:w-96 sm:h-96 bg-brand-500/20 rounded-full blur-[80px] sm:blur-[130px] pointer-events-none"></div>
+    <div class="absolute top-1/4 -right-24 sm:-right-36 w-56 h-56 sm:w-96 sm:h-96 bg-accent-500/20 rounded-full blur-[80px] sm:blur-[130px] pointer-events-none"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-10 lg:gap-12 items-center">
+        <div class="lg:col-span-7 text-left min-w-0">
+          <div class="badge-dark mb-3 sm:mb-6 py-1.5 px-2.5 sm:px-3.5">
+            <span class="w-2 h-2 rounded-full bg-brand-400 animate-ping flex-shrink-0"></span>
+            <span class="min-w-0 break-words">Lucknow EPC &amp; Civil SEO • Direct Tenders • Turnkey Home &amp; Shed Leads</span>
+          </div>
+
+          <h1 class="font-display text-[clamp(1.62rem,6.5vw,2.35rem)] sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-[1.15] sm:leading-[1.1] mb-3.5 sm:mb-6 text-glow break-words">
+            Digital Marketing for Construction <br />
+            <span class="gradient-text-light">Companies in Lucknow</span>
+          </h1>
+
+          <p class="text-sm sm:text-lg text-slate-300 leading-[1.68] sm:leading-relaxed mb-5 sm:mb-8 font-normal text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+            Looking for dependable <strong class="text-white font-semibold">Digital Marketing for Construction Companies in Lucknow</strong> that brings serious turnkey projects instead of broker cuts? NK Digital Tech builds fast contractor portfolios, <strong class="text-white font-semibold">construction SEO and tender lead generation in Lucknow</strong>, and AI citations across Outer Ring Road, Kanpur Road and Gomti Nagar.
+          </p>
+
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-4 mb-5 sm:mb-10">
+            <a href="#contact" class="btn-primary w-full sm:w-auto min-h-[50px] text-[13.5px] sm:text-base px-4 sm:px-8 py-3.5 sm:py-4">
+              <span>Claim Free Contractor Audit</span>
+              <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+              </svg>
+            </a>
+            <a href="#services" class="btn-secondary-dark w-full sm:w-auto min-h-[48px] text-[13.5px] sm:text-base px-4 sm:px-7 py-3.5 sm:py-4">
+              <span>Explore Six Construction Pillars</span>
+            </a>
+          </div>
+
+          <div class="pt-5 sm:pt-6 border-t border-slate-800/80">
+            <div class="grid grid-cols-2 sm:flex sm:flex-wrap items-stretch sm:items-center gap-2">
+              {trustStrip.map((item) => (
+                <span class="px-2.5 sm:px-3 py-2 sm:py-1.5 min-h-[42px] sm:min-h-0 rounded-lg bg-slate-900/90 border border-slate-800 text-[11px] sm:text-xs text-slate-300 font-medium flex items-center justify-center sm:justify-start text-center sm:text-left leading-tight break-words">
+                  {item}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 min-w-0">
+          <div class="relative rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-700/80 shadow-2xl shadow-brand-500/15 bg-slate-900 group">
+            <div class="relative">
+              <img
+                src="/images/lucknow-construction-dm/hero-construction-dm-lucknow.webp"
+                alt="Digital Marketing for Construction Companies in Lucknow Modern Commercial Site Build"
+                width="960"
+                height="540"
+                sizes="(max-width: 1024px) 100vw, 42vw"
+                fetchpriority="high"
+                decoding="async"
+                class="w-full aspect-[16/9] sm:aspect-auto sm:h-72 md:h-[380px] lg:h-[400px] object-cover object-center sm:group-hover:scale-105 transition-transform duration-500"
+              />
+              <div class="hidden sm:block absolute inset-0 bg-gradient-to-t from-[#050a14] via-transparent to-transparent opacity-80"></div>
+            </div>
+            <div class="relative sm:absolute sm:bottom-4 sm:left-4 sm:right-4 glass-card border-t sm:border border-slate-800 sm:rounded-2xl p-3.5 sm:p-4">
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-1">
+                <span class="text-xs font-bold text-white">Direct Turnkey Contracts</span>
+                <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-400">
+                  <span class="w-2 h-2 rounded-full bg-emerald-400 flex-shrink-0"></span>
+                  Zero Broker Margin Cuts
+                </span>
+              </div>
+              <p class="text-[11px] sm:text-xs text-slate-300 text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left] leading-snug">
+                Turns Kanpur Road, Outer Ring Road and Shaheed Path searches into direct RFPs &amp; build contracts.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 2: INTRODUCTION (CRISP WHITE)
+  ===================================================================== -->
+  <section class="relative surface-white py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200 overflow-hidden">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-7 sm:gap-10 lg:gap-12 items-center">
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-light mb-3.5 sm:mb-4">Direct Construction Inquiry Pipeline</div>
+          <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-4 sm:mb-6 break-words">
+            How Digital Marketing for Construction Companies in Lucknow <span class="gradient-text-dark">Wins High Value Tenders</span>
+          </h2>
+          <div class="space-y-4 sm:space-y-5 text-slate-700 text-[13.5px] sm:text-base leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+            <p>Plot owners planning luxury bungalows in Gomti Nagar Extension, logistics firms building warehouses on Kanpur Road and developers contracting commercial towers on Shaheed Path inspect verified contractor portfolios online before inviting bids. Partnering with our <strong>construction digital marketing agency in Lucknow</strong> puts your completed civil work directly before project owners.</p>
+            <p>Backed by the <a href="/best-digital-marketing-company-in-lucknow/" class="text-brand-600 hover:text-brand-700 font-semibold no-underline hover:no-underline">Best Digital Marketing Company in Lucknow</a> and <a href="/best-seo-company-in-lucknow/" class="text-brand-600 hover:text-brand-700 font-semibold no-underline hover:no-underline">Best SEO Company in Lucknow</a>, our team serves as a focused <strong>civil contractor marketing company in Lucknow</strong> and reliable partner for <strong>EPC company digital marketing in Lucknow</strong>.</p>
+          </div>
+          <div class="mt-6 sm:mt-8 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
+            <a href="#contact" class="btn-primary w-full sm:w-auto min-h-[48px]">
+              <span>Talk to a Construction Strategist</span>
+              <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+              </svg>
+            </a>
+            <a href="#why-us" class="btn-secondary-light w-full sm:w-auto min-h-[48px]">
+              <span>See How Direct RFQs Beat Brokers</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 space-y-4 sm:space-y-5 min-w-0">
+          <div class="rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-200 shadow-lg bg-slate-100">
+            <img
+              src="/images/lucknow-construction-dm/team-construction-dm-lucknow.webp"
+              alt="Civil build design Directors and Strategists Reviewing Construction Site Plans in Lucknow"
+              width="800"
+              height="533"
+              sizes="(max-width: 1024px) 100vw, 42vw"
+              class="w-full aspect-[16/10] sm:aspect-auto sm:h-64 lg:h-72 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="grid grid-cols-2 gap-2.5 sm:gap-4">
+            {[{"val":"3.8x","label":"Direct Build Inquiries","sub":"Turnkey homes, commercial & sheds"},{"val":"100%","label":"Direct Client Bids","sub":"Zero intermediary broker commissions"},{"val":"Top 3","label":"Map Pack Visibility","sub":"Gomti Nagar, Shaheed Path & Kanpur Road"},{"val":"< 2 Sec","label":"Project Site Speed","sub":"Crisp WebP handovers & BOQ clarity"}].map((stat) => (
+              <div class="elevated-card rounded-xl sm:rounded-2xl p-3 sm:p-4 min-w-0 flex flex-col justify-between">
+                <div class="font-display font-black text-[1.1rem] sm:text-2xl text-brand-600 mb-0.5 leading-tight break-words">{stat.val}</div>
+                <div class="text-[11px] sm:text-xs font-bold text-slate-900 leading-snug">{stat.label}</div>
+                <div class="text-[10.5px] sm:text-[11px] text-slate-500 leading-snug mt-0.5">{stat.sub}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 3: PROBLEM STATEMENT (DEEP INDIGO)
+  ===================================================================== -->
+  <section class="relative surface-indigo py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="max-w-7xl mx-auto relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-7 sm:gap-10 lg:gap-12 items-center">
+        <div class="lg:col-span-7 min-w-0">
+          <div class="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-3.5 py-1 sm:py-1.5 rounded-full text-[10px] sm:text-xs font-bold uppercase tracking-wider sm:tracking-widest bg-amber-500/10 border border-amber-500/30 text-amber-300 max-w-full leading-snug mb-4 sm:mb-5">
+            <svg class="w-4 h-4 text-amber-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+            </svg>
+            <span>Fixing Broker Dependence &amp; Weak Portfolio Sites</span>
+          </div>
+
+          <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-white tracking-tight leading-[1.22] sm:leading-tight mb-4 sm:mb-6 break-words">
+            Why Subcontractor Networks &amp; Dated Sites Cost Lucknow Builders Contracts
+          </h2>
+
+          <div class="space-y-4 sm:space-y-5 text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+            <p>Capable civil contractors and PEB builders in Lucknow often depend too heavily on middlemen and personal references, which cuts profit margins and leaves machinery idle between projects. Meanwhile, plot owners and corporate investors search Google every day for trusted builders with clear per sq ft build packages and completed handover galleries.</p>
+            <p>Industrial heads and developers now ask ChatGPT and Gemini prompts like "top turnkey commercial and warehouse contractors in Lucknow". Without clean project schema and support from an <a href="/ai-seo-company-in-lucknow/" class="text-brand-300 hover:text-white font-semibold no-underline hover:no-underline">AI SEO Company in Lucknow</a>, AI recommendations highlight national competitors instead of you.</p>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 space-y-3.5 sm:space-y-4 min-w-0">
+          <div class="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6 border-l-4 border-l-rose-500 min-w-0">
+            <div class="flex flex-wrap items-center justify-between gap-1.5 mb-2">
+              <span class="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-rose-400">Middleman Referrals / Dated Site</span>
+              <span class="text-[11px] sm:text-xs text-slate-400">Low Margins &amp; Idle Teams</span>
+            </div>
+            <h3 class="font-display font-bold text-[15px] sm:text-base text-white mb-2 leading-snug">Hidden Project Proof &amp; Broker Commission Cuts</h3>
+            <p class="text-xs text-slate-300 leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+              Loses direct commercial tenders and luxury villa builds because buyers cannot verify your completed work, team capacity or build pricing.
+            </p>
+          </div>
+
+          <div class="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6 border-l-4 border-l-emerald-400 min-w-0">
+            <div class="flex flex-wrap items-center justify-between gap-1.5 mb-2">
+              <span class="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-emerald-400">NK Digital Tech Construction</span>
+              <span class="text-[11px] sm:text-xs text-brand-300">Owned Client Pipeline</span>
+            </div>
+            <h3 class="font-display font-bold text-[15px] sm:text-base text-white mb-2 leading-snug">Owned Portfolio Proof, Maps &amp; AI Citations</h3>
+            <p class="text-xs text-slate-300 leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+              Combines crisp WebP project timelines, local Map Pack visibility and cost FAQ blocks so project owners call your bidding desk directly.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 4: SERVICES (LIGHT COOL)
+  ===================================================================== -->
+  <section id="services" class="relative surface-cool py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200 overflow-hidden scroll-mt-16 sm:scroll-mt-20">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 items-center mb-8 sm:mb-16">
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-light mb-3">Our Six Pillar Construction Growth System</div>
+          <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4 break-words">
+            Focused Digital Marketing Services for Lucknow Construction Firms
+          </h2>
+          <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+            From <strong>turnkey builder lead generation in Lucknow</strong> and <strong>infrastructure company digital agency in Lucknow</strong> support to PEB shed pipelines, we win high margin projects.
+          </p>
+        </div>
+        <div class="lg:col-span-5 min-w-0">
+          <div class="rounded-2xl overflow-hidden border border-slate-200 shadow-md bg-white">
+            <img
+              src="/images/lucknow-construction-dm/services-construction-dm-lucknow.webp"
+              alt="EPC Company Digital Marketing in Lucknow Blueprints Helmet and Project Tablet"
+              width="800"
+              height="450"
+              sizes="(max-width: 1024px) 100vw, 42vw"
+              class="w-full aspect-[16/9] sm:aspect-auto sm:h-56 lg:h-64 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-7">
+        {services.map((s) => (
+          <div class="elevated-card rounded-2xl p-4 sm:p-7 flex flex-col justify-between group sm:hover:-translate-y-1 min-w-0">
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-4 sm:mb-6">
+                <div class={`w-11 h-11 sm:w-12 sm:h-12 rounded-xl border flex items-center justify-center flex-shrink-0 ${s.iconStyle}`}>
+                  <Fragment set:html={s.icon} />
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class={`text-[10.5px] sm:text-[11px] font-semibold px-2.5 py-1 rounded-md ${s.badgeColor}`}>
+                    {s.category}
+                  </span>
+                  <span class="font-display font-black text-base sm:text-lg text-slate-300">{s.num}</span>
+                </div>
+              </div>
+
+              <h3 class="font-display font-bold text-[17px] sm:text-xl text-slate-900 mb-2.5 sm:mb-3 leading-snug group-hover:text-brand-600 transition-colors">
+                {s.title}
+              </h3>
+
+              <p class="text-slate-600 text-[13px] sm:text-sm leading-relaxed mb-4 sm:mb-6 text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+                {s.body}
+              </p>
+            </div>
+
+            <div>
+              <div class={`rounded-xl border p-3.5 sm:p-4 mb-3.5 sm:mb-5 ${s.impactStyle}`}>
+                <div class="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-slate-900 mb-1">
+                  <svg class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                  </svg>
+                  <span>Commercial Impact</span>
+                </div>
+                <p class="text-xs text-slate-700 leading-relaxed font-medium text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+                  {s.impact}
+                </p>
+              </div>
+
+              <a href={s.href} class="w-full sm:w-auto inline-flex items-center justify-between sm:justify-start gap-2 rounded-xl sm:rounded-none bg-slate-50 active:bg-sky-50 sm:bg-transparent border border-slate-200/80 sm:border-0 px-3.5 sm:px-0 py-2.5 min-h-[46px] sm:min-h-0 text-xs font-bold text-brand-600 hover:text-brand-700 no-underline hover:no-underline group-hover:gap-3 transition-all">
+                <span>{s.cta}</span>
+                <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 5: REGIONAL LOCATIONS (DARK NAVY)
+  ===================================================================== -->
+  <section id="locations" class="relative surface-navy py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden scroll-mt-16 sm:scroll-mt-20">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 items-center mb-8 sm:mb-16">
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-dark mb-3">Sector &amp; Corridor Targeting Across Lucknow</div>
+          <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-white tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4 break-words">
+            Civil &amp; Infrastructure Growth Across Key Lucknow Corridors
+          </h2>
+          <p class="text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+            Building demand runs strong from luxury plot bungalows in Gomti Nagar Extension to logistics sheds on Kanpur Road and Outer Ring Road. We pair <a href="/local-seo-services-in-lucknow/" class="text-brand-300 hover:text-white font-semibold no-underline hover:no-underline">Local SEO Services in Lucknow</a> with zone pages.
+          </p>
+        </div>
+        <div class="lg:col-span-5 min-w-0">
+          <div class="rounded-2xl overflow-hidden border border-slate-700/80 shadow-xl bg-slate-900">
+            <img
+              src="/images/lucknow-construction-dm/locations-construction-dm-lucknow.webp"
+              alt="Highway Flyover Infrastructure and Commercial Tower Construction in Lucknow"
+              width="800"
+              height="450"
+              sizes="(max-width: 1024px) 100vw, 42vw"
+              class="w-full aspect-[16/9] sm:aspect-auto sm:h-56 lg:h-64 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+        {cities.map((c) => (
+          <div class="glass-card rounded-2xl p-4 sm:p-6 flex flex-col justify-between group sm:hover:-translate-y-1 min-w-0">
+            <div>
+              <div class={`h-1 w-full bg-gradient-to-r ${c.accent} rounded-full mb-4 sm:mb-5`}></div>
+
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-3.5 sm:mb-4">
+                <span class="px-2.5 py-1 rounded-md bg-slate-800 border border-slate-700 text-[11px] font-bold uppercase tracking-wider text-brand-300">
+                  {c.hub}
+                </span>
+                <span class="text-xs font-semibold text-slate-400">{c.city}</span>
+              </div>
+
+              <h3 class="font-display font-bold text-base sm:text-lg text-white mb-2.5 sm:mb-3 leading-snug">
+                <a href={c.href} class="hover:text-brand-300 no-underline hover:no-underline transition-colors">{c.keyword}</a>
+              </h3>
+
+              <p class="text-slate-300 text-[13px] sm:text-sm leading-relaxed mb-4 sm:mb-5 text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+                {c.desc}
+              </p>
+            </div>
+
+            <div class="pt-3.5 sm:pt-4 border-t border-slate-800">
+              <p class="text-[11px] text-slate-400 mb-3 sm:mb-4 leading-normal">
+                <strong class="text-slate-300">Key Belts:</strong> {c.corridor}
+              </p>
+              <a href={c.href} class="w-full sm:w-auto inline-flex items-center justify-between sm:justify-start gap-1.5 rounded-xl sm:rounded-none bg-slate-800/90 active:bg-slate-800 sm:bg-transparent border border-slate-700/80 sm:border-0 px-3.5 sm:px-0 py-2.5 min-h-[44px] sm:min-h-0 text-xs font-bold text-brand-400 hover:text-brand-300 no-underline hover:no-underline group-hover:gap-2.5 transition-all">
+                <span>{c.cta}</span>
+                <svg class="w-3.5 h-3.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 6: WHY NK DIGITAL TECH (CRISP WHITE)
+  ===================================================================== -->
+  <section id="why-us" class="relative surface-white py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200 overflow-hidden scroll-mt-16 sm:scroll-mt-20">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-8 sm:mb-14 text-left sm:text-center">
+        <div class="badge-light mb-3">Why Lucknow Contractors Pick NK Digital Tech</div>
+        <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4 break-words">
+          Practical Partner for Digital Marketing for Construction Companies in Lucknow
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed mb-4 text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+          We turn real site handovers, material checklists and cost calculators into direct contract enquiries. Uniting crisp portfolios with <a href="/aeo-services-in-lucknow/" class="text-brand-600 hover:text-brand-700 font-semibold no-underline hover:no-underline">AEO Services in Lucknow</a> keeps your bidding desk busy.
+        </p>
+        <p class="text-slate-700 font-semibold text-xs sm:text-sm">
+          Compare our Lucknow sector growth engine against typical directory plans and generic agencies:
+        </p>
+      </div>
+
+      <div class="hidden md:block overflow-hidden rounded-2xl border border-slate-200 shadow-lg">
+        <table class="w-full text-left border-collapse">
+          <thead>
+            <tr class="bg-slate-900 text-white">
+              <th class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-slate-300 w-1/4">
+                Evaluation Criteria
+              </th>
+              <th class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-rose-300 w-[37.5%] border-l border-slate-800">
+                Middleman Referrals / Dated Site
+              </th>
+              <th class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-brand-300 w-[37.5%] border-l border-slate-800 bg-slate-950">
+                NK Digital Tech Construction
+              </th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200 text-sm">
+            {comparison.map((row, idx) => (
+              <tr class={idx % 2 === 0 ? 'bg-white' : 'bg-slate-50/80'}>
+                <td class="py-5 px-6 font-display font-bold text-slate-900">
+                  {row.metric}
+                </td>
+                <td class="py-5 px-6 text-slate-600 border-l border-slate-200">
+                  <div class="flex items-start gap-2.5">
+                    <svg class="w-4 h-4 text-rose-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                    <span class="text-justify">{row.typical}</span>
+                  </div>
+                </td>
+                <td class="py-5 px-6 text-slate-900 font-medium border-l border-slate-200 bg-sky-50/40">
+                  <div class="flex items-start gap-2.5">
+                    <svg class="w-4 h-4 text-emerald-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span class="text-justify">{row.nk}</span>
+                  </div>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <div class="md:hidden space-y-3.5">
+        {comparison.map((row) => (
+          <div class="elevated-card rounded-2xl p-4 space-y-3 min-w-0">
+            <h3 class="font-display font-bold text-slate-900 text-sm pb-2 border-b border-slate-100 leading-snug">{row.metric}</h3>
+            <div class="rounded-xl bg-rose-50 border border-rose-100 p-3">
+              <div class="flex items-center gap-1.5 mb-1">
+                <svg class="w-3.5 h-3.5 text-rose-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+                <p class="text-[10px] font-bold uppercase tracking-wider text-rose-600">Middleman Referrals / Dated Site</p>
+              </div>
+              <p class="text-xs text-slate-700 leading-relaxed">{row.typical}</p>
+            </div>
+            <div class="rounded-xl bg-sky-50 border border-sky-200 p-3">
+              <div class="flex items-center gap-1.5 mb-1">
+                <svg class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                </svg>
+                <p class="text-[10px] font-bold uppercase tracking-wider text-brand-600">NK Digital Tech Construction</p>
+              </div>
+              <p class="text-xs text-slate-900 font-semibold leading-relaxed">{row.nk}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 7: VERTICAL SEGMENTS WE SCALE (LIGHT SLATE 3x2 GRID)
+  ===================================================================== -->
+  <section id="industries" class="relative surface-slate py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200 overflow-hidden scroll-mt-16 sm:scroll-mt-20">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-8 sm:mb-16 text-left sm:text-center">
+        <div class="badge-light mb-3">Focused Business Segments</div>
+        <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4 break-words">
+          Tailored Growth Strategies for Six Lucknow Construction Verticals
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+          Whether you erect turnkey villas, commercial complexes, warehouse PEB sheds or hospital blocks, we shape pages around project buyers.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-7">
+        {sectorSegments.map((ind) => (
+          <div class={`elevated-card rounded-2xl p-4 sm:p-7 border-t-4 ${ind.accentBorder} flex flex-col justify-between sm:hover:-translate-y-1 min-w-0`}>
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-4 sm:mb-5">
+                <div class={`w-10 h-10 sm:w-11 sm:h-11 rounded-xl border flex items-center justify-center flex-shrink-0 ${ind.iconBg}`}>
+                  <Fragment set:html={ind.icon} />
+                </div>
+                <span class="text-[11px] font-semibold text-slate-600 bg-slate-100 px-2.5 py-1 rounded-md">
+                  {ind.sector}
+                </span>
+              </div>
+
+              <h3 class="font-display font-bold text-[17px] sm:text-xl text-slate-900 mb-3 sm:mb-4 leading-snug">
+                {ind.title}
+              </h3>
+
+              <div class="mb-4 sm:mb-5">
+                <p class="text-[11px] font-bold uppercase tracking-wider text-brand-600 mb-1.5">
+                  Digital Growth Focus
+                </p>
+                <p class="text-slate-600 text-[13px] sm:text-sm leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+                  {ind.focus}
+                </p>
+              </div>
+            </div>
+
+            <div class="rounded-xl bg-emerald-50/70 border border-emerald-200/80 p-3.5 sm:p-4">
+              <p class="text-[11px] font-bold uppercase tracking-wider text-emerald-700 mb-1">
+                Verified Outcome
+              </p>
+              <p class="text-slate-800 text-xs font-medium leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+                {ind.outcome}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 8: HOW WE WORK (CRISP WHITE - 4 STAGES)
+  ===================================================================== -->
+  <section class="relative surface-white py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200 overflow-hidden">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-8 sm:mb-16 text-left sm:text-center">
+        <div class="badge-light mb-3">Our 4 Stage Execution</div>
+        <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4 break-words">
+          Our 4 Stage Execution for Lucknow Construction Firms
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+          We turn real civil experience into fast proof filled pages and direct site visit inquiries.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-7">
+        {stages.map((st) => (
+          <div class="elevated-card rounded-2xl p-4 sm:p-8 relative overflow-hidden group sm:hover:-translate-y-1 min-w-0">
+            <div class="flex items-center justify-between gap-4 mb-3.5 sm:mb-5">
+              <span class={`inline-flex items-center px-2.5 sm:px-3 py-1 rounded-lg text-xs font-bold uppercase tracking-wider text-white bg-gradient-to-r ${st.accent}`}>
+                {st.num}
+              </span>
+              <span class="font-display font-black text-3xl sm:text-4xl text-slate-200 group-hover:text-slate-300 transition-colors">
+                {st.step}
+              </span>
+            </div>
+            <h3 class="font-display font-bold text-[17px] sm:text-xl text-slate-900 mb-2.5 sm:mb-3 leading-snug">
+              {st.title}
+            </h3>
+            <p class="text-slate-600 text-[13px] sm:text-sm leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+              {st.body}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 9: CONCLUSION / PARTNER SECTION (DARK INDIGO + GROWTH IMAGE)
+  ===================================================================== -->
+  <section class="relative surface-indigo py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-7 sm:gap-10 lg:gap-12 items-center">
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-dark mb-3.5 sm:mb-4">Build Direct Contract Flow</div>
+          <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-white tracking-tight leading-[1.22] sm:leading-tight mb-4 sm:mb-6 break-words">
+            Win More Direct Contracts With Digital Marketing for Construction Companies in Lucknow
+          </h2>
+          <div class="space-y-4 sm:space-y-5 text-slate-300 text-[13.5px] sm:text-base leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+            <p>Waiting on broker references shrinks unit margins and leaves project pipelines unpredictable. Plot owners, warehouse operators and corporate investors in Lucknow search Google and AI tools first to check real construction proof.</p>
+            <p>Choosing NK Digital Tech for <strong class="text-white font-semibold">Digital Marketing for Construction Companies in Lucknow</strong> connects your company with an experienced <a href="/website-development-company-in-lucknow/" class="text-brand-300 hover:text-white font-semibold no-underline hover:no-underline">Website Development Company in Lucknow</a> built to earn direct construction enquiries.</p>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 min-w-0">
+          <div class="rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-700/80 shadow-2xl bg-slate-900">
+            <img
+              src="/images/lucknow-construction-dm/growth-construction-dm-lucknow.webp"
+              alt="Indian Construction Founder and Corporate Developer Shaking Hands Outside New Lucknow Tower"
+              width="800"
+              height="450"
+              sizes="(max-width: 1024px) 100vw, 42vw"
+              class="w-full aspect-[16/10] sm:aspect-auto sm:h-64 lg:h-72 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 10: FAQ (LIGHT COOL SLATE)
+  ===================================================================== -->
+  <section id="faq" class="relative surface-cool py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200 overflow-hidden scroll-mt-16 sm:scroll-mt-20">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-left sm:text-center mb-8 sm:mb-14">
+        <div class="badge-light mb-3">Questions Asked on Google, ChatGPT &amp; Gemini</div>
+        <h2 class="font-display font-extrabold text-[clamp(1.34rem,5.3vw,1.75rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4 break-words">
+          Frequently Asked Questions About Digital Marketing for Construction Companies in Lucknow
+        </h2>
+        <p class="text-slate-600 text-[13.5px] sm:text-base leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+          Clear answers for civil contractors, turnkey home builders and EPC infrastructure companies in Lucknow.
+        </p>
+      </div>
+
+      <div class="space-y-3 sm:space-y-4">
+        {faqs.map((f, i) => (
+          <details class="elevated-card rounded-2xl group overflow-hidden" open={i === 0}>
+            <summary class="flex items-start sm:items-center justify-between gap-3 sm:gap-4 px-4 sm:px-6 py-4 sm:py-5 min-h-[54px] select-none">
+              <div class="flex items-start sm:items-center gap-2.5 sm:gap-3.5 text-left min-w-0">
+                <span class="w-6 h-6 sm:w-7 sm:h-7 rounded-lg bg-sky-50 border border-sky-200 text-brand-600 font-display font-bold text-xs flex items-center justify-center flex-shrink-0 mt-0.5 sm:mt-0">
+                  0{i + 1}
+                </span>
+                <span class="font-display font-bold text-slate-900 text-[14px] sm:text-base md:text-lg leading-snug break-words">
+                  {f.q}
+                </span>
+              </div>
+              <span class="faq-icon w-7 h-7 sm:w-8 sm:h-8 rounded-full border border-slate-200 text-slate-600 flex items-center justify-center flex-shrink-0 mt-0.5 sm:mt-0">
+                <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                </svg>
+              </span>
+            </summary>
+            <div class="px-4 sm:px-6 pb-5 sm:pb-6 pt-3 text-slate-600 text-[13px] sm:text-sm md:text-base leading-relaxed border-t border-slate-100 text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+              {f.a}
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 11: SHORT CTA BANNER (LAST SECTION)
+  ===================================================================== -->
+  <section id="contact" class="relative surface-dark py-10 pb-28 sm:py-16 lg:py-20 px-4 sm:px-6 overflow-hidden scroll-mt-16 sm:scroll-mt-20">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-5xl mx-auto">
+      <div class="rounded-2xl sm:rounded-3xl bg-gradient-to-r from-brand-600 via-brand-700 to-accent-700 p-6 sm:p-10 md:p-12 text-center text-white shadow-2xl border border-white/15 relative overflow-hidden">
+        <div class="relative z-10 max-w-2xl mx-auto">
+          <h2 class="font-display font-black text-[clamp(1.38rem,5.4vw,1.85rem)] sm:text-3xl md:text-4xl text-white tracking-tight leading-[1.2] sm:leading-snug mb-3 sm:mb-4 break-words">
+            Ready to Win Direct Turnkey Builds &amp; Commercial Tenders in Lucknow?
+          </h2>
+
+          <p class="text-sky-50 text-[13px] sm:text-sm md:text-base leading-relaxed mb-6 sm:mb-8 text-left sm:text-center">
+            Claim a free audit of your contractor portfolio speed, Google Maps ranking and AI search visibility.
+          </p>
+
+          <a
+            href="/contact-us/"
+            class="inline-flex w-full sm:w-auto min-h-[50px] items-center justify-center gap-2 sm:gap-3 px-5 sm:px-8 py-3.5 sm:py-4 rounded-xl bg-white text-slate-950 hover:bg-sky-50 no-underline hover:no-underline font-display font-bold text-sm sm:text-base shadow-xl transition-all duration-300 active:scale-95 text-center leading-snug"
+          >
+            <span>Claim Free Contractor Audit</span>
+            <svg class="w-4 h-4 sm:w-5 sm:h-5 text-brand-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mobile Sticky Bottom Quick Action Bar -->
+  <div class="mobile-sticky-cta sm:hidden fixed bottom-0 inset-x-0 z-40 bg-[#050a14]/95 backdrop-blur-xl border-t border-slate-800 px-3.5 pt-2.5 pb-[max(0.625rem,env(safe-area-inset-bottom))] shadow-[0_-8px_24px_rgba(0,0,0,0.45)] transition-all duration-300">
+    <div class="flex items-center gap-2.5">
+      <a
+        href="/contact-us/"
+        class="btn-primary flex-1 min-h-[44px] py-2.5 px-4 text-xs font-bold rounded-xl no-underline hover:no-underline"
+      >
+        <span>Claim Free Contractor Audit</span>
+        <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+        </svg>
+      </a>
+      <a
+        href="#services"
+        class="btn-secondary-dark min-h-[44px] py-2.5 px-3.5 text-xs font-semibold rounded-xl flex-shrink-0 no-underline hover:no-underline"
+      >
+        <span>Services</span>
+      </a>
+    </div>
+  </div>
+
+</Layout>

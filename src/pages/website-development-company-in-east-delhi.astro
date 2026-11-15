@@ -1,0 +1,1088 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '../styles/global.css';
+
+const pageTitle = 'Website Development Company in East Delhi | NK Digital Tech';
+const pageDescription = 'Looking for a top website development company in East Delhi? NK Digital Tech builds fast, custom websites with clean code that win leads from Google and AI.';
+const pageCanonical = 'https://www.nkdigitaltech.net/website-development-company-in-east-delhi/';
+
+const webDevEastDelhiFooterDisciplines = [
+  { label: 'Website Design and Development', href: '/website-development-company-in-delhi/' },
+  { label: 'East Delhi Digital Marketing', href: '/digital-marketing-company-in-east-delhi/' },
+  { label: 'East Delhi SEO Services', href: '/best-seo-company-in-east-delhi/' },
+  { label: 'Local Map Pack Optimization', href: '/local-seo-services-in-delhi/' },
+  { label: 'AI Search & LLM Citations', href: '/ai-seo-company-in-delhi/' },
+  { label: 'Delhi NCR Web Solutions', href: '/best-website-development-company-in-delhi-ncr/' },
+];
+
+const clients = [
+  {
+    name: 'Creative Academy',
+    sector: 'Coaching & Entrance Exam Platform',
+    region: 'Laxmi Nagar & Nirman Vihar',
+    logo: '/images/clients/creative-academy.webp',
+  },
+  {
+    name: 'Vision',
+    sector: 'Optical & Eye Care Clinic Locator',
+    region: 'Preet Vihar & Mayur Vihar',
+    logo: '/images/clients/vision.webp',
+  },
+  {
+    name: 'Propertyways',
+    sector: 'Commercial Space & Floor Listings',
+    region: 'Patparganj & District Centre',
+    logo: '/images/clients/propertyways.webp',
+  },
+  {
+    name: 'Aangan',
+    sector: 'Bridal Fashion & Appointment Booking',
+    region: 'Vikas Marg & Vivek Vihar',
+    logo: '/images/clients/aangan.webp',
+  },
+  {
+    name: 'VP Infra',
+    sector: 'Turnkey Construction & Projects Hub',
+    region: 'Karkardooma & Anand Vihar',
+    logo: '/images/clients/vp-infra.webp',
+  },
+];
+
+const services = [
+  {
+    num: '01',
+    category: 'Custom Code Builds',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>`,
+    iconStyle: 'bg-sky-50 border-sky-200 text-brand-600',
+    impactStyle: 'bg-sky-50/80 border-sky-200/80 text-slate-800',
+    badgeColor: 'text-brand-600 bg-sky-100/80',
+    title: 'Custom Websites for East Delhi Enterprises',
+    body: 'When you work with a skilled web developer in east delhi from our team, we build lightweight frontend code on modern tools like Astro and React with clean HTML, fast styling, and zero heavy plugins.',
+    impact: 'Passes Google Core Web Vitals with 95+ scores and loads in under 1.5 seconds on mobile data.',
+    cta: 'Discuss Your Custom Website',
+    href: '#contact',
+  },
+  {
+    num: '02',
+    category: 'Search & AI Visibility',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>`,
+    iconStyle: 'bg-emerald-50 border-emerald-200 text-emerald-600',
+    impactStyle: 'bg-emerald-50/80 border-emerald-200/80 text-slate-800',
+    badgeColor: 'text-emerald-700 bg-emerald-100/80',
+    title: 'SEO, AEO & AI Ready Page Architecture',
+    body: 'Every business page features clear heading hierarchy, direct answer paragraphs, comparison tables, and clean JSON-LD schema so your services get found on Google search and cited by AI engines.',
+    impact: 'Helps your business earn top rankings on Google and direct recommendations in ChatGPT and Gemini.',
+    cta: 'Explore Search Ready Structure',
+    href: '#contact',
+  },
+  {
+    num: '03',
+    category: 'Clean CMS & Publishing',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>`,
+    iconStyle: 'bg-violet-50 border-violet-200 text-accent-600',
+    impactStyle: 'bg-violet-50/80 border-violet-200/80 text-slate-800',
+    badgeColor: 'text-accent-600 bg-violet-100/80',
+    title: 'Easy Admin Publishing & Content Management',
+    body: 'For business owners requiring website designing in east delhi with simple content updates, we create clean dashboards without confusing builders so your staff can update services and notices in minutes.',
+    impact: 'Enables quick daily content updates without slowing down your server or breaking mobile layouts.',
+    cta: 'Explore Publishing Solutions',
+    href: '#contact',
+  },
+  {
+    num: '04',
+    category: 'Retail & Showroom Sites',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>`,
+    iconStyle: 'bg-amber-50 border-amber-200 text-amber-600',
+    impactStyle: 'bg-amber-50/80 border-amber-200/80 text-slate-800',
+    badgeColor: 'text-amber-700 bg-amber-100/80',
+    title: 'Online Catalogues & Showroom Inquiries',
+    body: 'As a reliable web design company in east delhi, we design digital product showcases and store pages with fast image loading, UPI payment buttons, GST invoice support, and direct WhatsApp customer inquiries.',
+    impact: 'Increases customer trust and drives steady walk-ins to your physical East Delhi showroom or store.',
+    cta: 'Launch Your Product Catalogue',
+    href: '#contact',
+  },
+  {
+    num: '05',
+    category: 'B2B & Lead Generation',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>`,
+    iconStyle: 'bg-indigo-50 border-indigo-200 text-indigo-600',
+    impactStyle: 'bg-indigo-50/80 border-indigo-200/80 text-slate-800',
+    badgeColor: 'text-indigo-700 bg-indigo-100/80',
+    title: 'High-Converting B2B & Factory Web Portals',
+    body: 'As a full-service web development company in east delhi, we build corporate portals for manufacturers in Patparganj and consultancies in Karkardooma featuring technical specification tables and fast quote forms.',
+    impact: 'Transforms casual visitors into verified commercial purchase inquiries and phone consultations.',
+    cta: 'Build a B2B Lead Engine',
+    href: '#contact',
+  },
+  {
+    num: '06',
+    category: 'Redesign & Speed Fixes',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>`,
+    iconStyle: 'bg-cyan-50 border-cyan-200 text-cyan-700',
+    impactStyle: 'bg-cyan-50/80 border-cyan-200/80 text-slate-800',
+    badgeColor: 'text-cyan-700 bg-cyan-100/80',
+    title: 'Legacy Website Revamp & Speed Upgrades',
+    body: 'Consult with an expert website designer in east delhi to replace slow, outdated layouts with clean code, modern WebP images, 301 redirect mapping, and full security safeguards.',
+    impact: 'Protects all established search rankings while delivering an instant speed boost on smartphones.',
+    cta: 'Request Website Speed Review',
+    href: '#contact',
+  },
+];
+
+const zones = [
+  {
+    hub: 'Corridor 01',
+    area: 'Laxmi Nagar & Nirman Vihar',
+    corridor: 'Vikas Marg • Laxmi Nagar Metro • Nirman Vihar • Shakarpur',
+    keyword: 'Website Development in Laxmi Nagar',
+    desc: 'We construct fast student batch portals, CA practice hubs, and commerce websites for educational institutes and financial consultancies across Vikas Marg and Laxmi Nagar.',
+    cta: 'Plan Laxmi Nagar Website',
+    href: '#contact',
+    accent: 'from-brand-500 to-sky-400',
+  },
+  {
+    hub: 'Corridor 02',
+    area: 'Preet Vihar & Karkardooma',
+    corridor: 'Preet Vihar Market • Karkardooma Courts • CBD Ground • Dayanand Vihar',
+    keyword: 'Website Development in Preet Vihar',
+    desc: 'We launch professional websites for law chambers, diagnostic centers, dental clinics, and lifestyle showrooms across Preet Vihar and the Karkardooma institutional belt.',
+    cta: 'Plan Preet Vihar Website',
+    href: '#contact',
+    accent: 'from-accent-500 to-violet-400',
+  },
+  {
+    hub: 'Corridor 03',
+    area: 'Patparganj Industrial Area',
+    corridor: 'Patparganj Industrial Area • Hasanpur Depot • Ghazipur • IP Extension',
+    keyword: 'Industrial Web Development in Patparganj',
+    desc: 'We code searchable product specification catalogues and request-for-quote funnels for packaging factories, electronics fabricators, and export warehouses in Patparganj.',
+    cta: 'Plan Patparganj Website',
+    href: '#contact',
+    accent: 'from-cyan-500 to-teal-400',
+  },
+  {
+    hub: 'Corridor 04',
+    area: 'Mayur Vihar & Trans Yamuna',
+    corridor: 'Mayur Vihar Phase 1 & 2 • Anand Vihar • Surajmal Vihar • Vivek Vihar',
+    keyword: 'Website Development in Mayur Vihar',
+    desc: 'We build modern web platforms, healthcare directories, and retail showrooms for local doctors, retail stores, and service specialists across Trans Yamuna residential hubs.',
+    cta: 'Plan Mayur Vihar Website',
+    href: '#contact',
+    accent: 'from-emerald-500 to-green-400',
+  },
+];
+
+const comparison = [
+  {
+    metric: 'Code Architecture',
+    typical: 'Heavy pre-made templates with 40+ plugins slowing down browsers',
+    nk: 'Clean, handwritten static code with sub-1.5 second loading speed',
+  },
+  {
+    metric: 'Search & AI Readiness',
+    typical: 'Basic meta tags added as an afterthought after site is completed',
+    nk: 'Built from ground up for Google SEO, Answer Engine snippets, and AI citations',
+  },
+  {
+    metric: 'Asset Ownership',
+    typical: 'Agencies lock hosting credentials and charge recurring ransom fees',
+    nk: 'You get 100% full administrative ownership of domain, code, and hosting accounts',
+  },
+  {
+    metric: 'Mobile Optimization',
+    typical: 'Generic responsive shrinking with awkward text sizes on mobile screens',
+    nk: 'Mobile-first layout with 44px tap targets, sticky contact bars, and WebP graphics',
+  },
+  {
+    metric: 'Ongoing Maintenance',
+    typical: 'Slow ticket systems with unhelpful junior support staff',
+    nk: 'Direct access to senior developers with rapid 4-hour turnaround on updates',
+  },
+  {
+    metric: 'Commercial Lead Focus',
+    typical: 'Pretty graphic layouts that generate zero customer phone calls',
+    nk: 'Conversion-focused layouts with direct WhatsApp and phone call buttons',
+  },
+];
+
+const industries = [
+  {
+    sector: 'Coaching & Education',
+    title: 'Exam Academies & Institutes',
+    focus: 'Batch schedule calendars, syllabus download captures, faculty credential cards, and one-tap WhatsApp registration for competitive exam centers.',
+    outcome: 'Increased student walk-ins and direct admissions for coaching centers in Laxmi Nagar and Nirman Vihar.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"/></svg>`,
+    accentBorder: 'border-t-brand-500',
+    iconBg: 'bg-sky-50 text-brand-600 border-sky-200',
+  },
+  {
+    sector: 'Manufacturing & B2B',
+    title: 'Industrial Plants & Exporters',
+    focus: 'Technical specification tables, machine capacities, ISO certificates, and fast request-for-quote forms for procurement managers.',
+    outcome: 'Consistent wholesale vendor inquiries and bulk orders for factories in Patparganj Industrial Area.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>`,
+    accentBorder: 'border-t-emerald-500',
+    iconBg: 'bg-emerald-50 text-emerald-600 border-emerald-200',
+  },
+  {
+    sector: 'Legal & CA Chambers',
+    title: 'Law Advocates & Chartered Accountants',
+    focus: 'Bar Council compliant practice descriptions, partner profiles, tax compliance guides, and secure consultation request forms.',
+    outcome: 'High-value corporate retainers and client advisory bookings across Preet Vihar and Karkardooma courts.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"/></svg>`,
+    accentBorder: 'border-t-accent-500',
+    iconBg: 'bg-violet-50 text-accent-600 border-violet-200',
+  },
+  {
+    sector: 'Healthcare & Clinics',
+    title: 'Doctors, Dentists & Diagnostic Centers',
+    focus: 'Department guides, verified doctor profiles, cashless insurance panel lists, and fast mobile appointment bookings.',
+    outcome: 'Steady local patient OPD bookings and telephone consultations from families across Preet Vihar and Mayur Vihar.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>`,
+    accentBorder: 'border-t-rose-500',
+    iconBg: 'bg-rose-50 text-rose-600 border-rose-200',
+  },
+  {
+    sector: 'Real Estate & Builders',
+    title: 'Property Consultants & Floor Builders',
+    focus: 'Builder floor photo galleries, floor plan schematics, RERA details, and one-tap WhatsApp site visit scheduling.',
+    outcome: 'Direct homebuyer inquiries and weekend property viewings across Nirman Vihar, Anand Vihar, and Surajmal Vihar.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>`,
+    accentBorder: 'border-t-cyan-500',
+    iconBg: 'bg-cyan-50 text-cyan-700 border-cyan-200',
+  },
+  {
+    sector: 'Retail & Boutiques',
+    title: 'Apparel Boutiques & Showrooms',
+    focus: 'Fast lookbook photo galleries, collection showcases, Google Map showroom directions, and instant WhatsApp customer chat.',
+    outcome: 'Increased footfall and bridal appointment bookings for retail stores along Vikas Marg and Trans Yamuna.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>`,
+    accentBorder: 'border-t-amber-500',
+    iconBg: 'bg-amber-50 text-amber-600 border-amber-200',
+  },
+];
+
+const faqs = [
+  {
+    q: 'How Much Does Website Development Cost in East Delhi?',
+    a: 'Website development costs in East Delhi vary based on page count and business features. A single-page business landing page starts from ₹8,000 to ₹18,000. A standard corporate website of 5 to 10 pages for a coaching academy, clinic, or CA firm typically ranges between ₹22,000 and ₹48,000. Custom B2B portals and product catalogue websites range from ₹45,000 to ₹1,20,000. NK Digital Tech provides clear, transparent pricing with no hidden charges.',
+  },
+  {
+    q: 'How Do You Help Our East Delhi Website Get Quoted on ChatGPT and Gemini?',
+    a: 'AI engines like ChatGPT, Gemini, and Google AI Overviews read structured, factual data. We structure your website with clear direct answers, validated JSON-LD schema, open robot access, and accurate business citations. When users ask AI models for recommended service providers in East Delhi, your website provides the verified data needed for direct citations.',
+  },
+  {
+    q: 'Why Is Mobile Speed Important for Small Businesses in East Delhi?',
+    a: 'Over 75% of local searches across Laxmi Nagar, Preet Vihar, and Mayur Vihar happen on mobile phones. If your website takes more than two seconds to load, potential clients will tap back to Google and call your competitor. A fast website built with clean code keeps visitors engaged and converts them into phone inquiries.',
+  },
+  {
+    q: 'What Is the Difference Between a Pre-Made Template and Custom Clean Code?',
+    a: 'Pre-made templates often bundle unneeded scripts and heavy plugins that slow down mobile page loading and create security vulnerabilities. Custom clean code uses lightweight HTML, CSS, and modern static frameworks like Astro. It loads in under one second, requires zero plugin maintenance, and delivers superior Google Core Web Vitals.',
+  },
+  {
+    q: 'How Long Does It Take to Build and Launch Our New Website?',
+    a: 'A typical business website of 6 to 10 pages is designed, reviewed, tested, and launched in two to three weeks. More complex B2B catalogues or dynamic portals take three to five weeks. We provide a milestone roadmap on day one so you know exactly when each stage completes.',
+  },
+  {
+    q: 'Do We Get Complete Ownership of Our Website Code and Hosting?',
+    a: 'Yes, 100%. NK Digital Tech hands over all administrative credentials, domain access, code files, and hosting logins upon project completion. You own every digital asset completely without any lock-in or recurring proprietary platform fees.',
+  },
+  {
+    q: 'Can You Rebuild Our Outdated Website Without Losing Established Rankings?',
+    a: 'Yes. During every website redesign, our team performs a complete URL audit. We map all old URLs through proper 301 redirects, retain your existing metadata, and preserve established search equity so your Google visibility remains protected throughout launch.',
+  },
+  {
+    q: 'How Does an SEO-Friendly Web Structure Generate Daily Inquiries?',
+    a: 'An SEO-friendly website is organized around how local customers search on Google and AI tools. By pairing clear service pages with prominent click-to-call buttons, WhatsApp triggers, and local schema markup, your website turns casual visitors into direct customer phone inquiries.',
+  },
+];
+
+const schemaService = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Website Development Company in East Delhi",
+  "serviceType": "Custom Web Development, Website Design & Local Business Web Solutions",
+  "provider": {
+    "@type": "ProfessionalService",
+    "name": "NK Digital Tech",
+    "url": "https://www.nkdigitaltech.net/",
+    "email": "nkdigitaltech1@gmail.com",
+    "telephone": "+91-80521-89051",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "East Delhi",
+      "addressRegion": "Delhi",
+      "addressCountry": "IN"
+    }
+  },
+  "areaServed": ["East Delhi", "Laxmi Nagar", "Preet Vihar", "Patparganj", "Mayur Vihar", "Karkardooma", "Anand Vihar", "Delhi NCR"],
+  "description": pageDescription,
+  "url": pageCanonical
+});
+
+const schemaFAQ = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map((f) => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": f.a
+    }
+  }))
+});
+
+const schemaBreadcrumb = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.nkdigitaltech.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Website Development Company in Delhi",
+      "item": "https://www.nkdigitaltech.net/website-development-company-in-delhi/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Website Development Company in East Delhi",
+      "item": pageCanonical
+    }
+  ]
+});
+---
+
+<Layout
+  title={pageTitle}
+  description={pageDescription}
+  canonical={pageCanonical}
+  ogImage="https://www.nkdigitaltech.net/images/web-dev-east-delhi/website-development-company-east-delhi-hero.webp"
+  preloadImage="/images/web-dev-east-delhi/website-development-company-east-delhi-hero.webp"
+  useRootNavLinks={true}
+  customSchemaLocalBusiness={schemaService}
+  customSchemaFAQ={schemaFAQ}
+  customSchemaBreadcrumb={schemaBreadcrumb}
+  utilityTagline="Custom Web Development • Sub-Second Speed • SEO & AI Ready • East Delhi"
+  footerBio="Trusted Website Development Company in East Delhi building fast, mobile first SEO, AEO and GEO optimised websites that turn Google searches and ChatGPT, Gemini and Perplexity citations into daily buyer leads."
+  footerCoreDisciplines={webDevEastDelhiFooterDisciplines}
+  footerTagline="Website Development Company in East Delhi"
+>
+
+  <!-- =====================================================================
+       SECTION 1: HERO SECTION (DARK SURFACE)
+  ===================================================================== -->
+  <section class="relative surface-dark overflow-hidden pt-8 pb-14 sm:pt-16 sm:pb-20 lg:pt-20 lg:pb-24 border-b border-slate-800/80">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="absolute inset-0 mesh-glow pointer-events-none"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
+      <nav aria-label="Breadcrumb" class="flex items-center gap-2 text-xs text-slate-400 mb-5 sm:mb-6">
+        <a href="/" class="hover:text-brand-400 transition-colors">Home</a>
+        <span class="text-slate-600">/</span>
+        <a href="/website-development-company-in-delhi/" class="hover:text-brand-400 transition-colors">Delhi</a>
+        <span class="text-slate-600">/</span>
+        <span class="text-brand-400 font-semibold">Website Development Company in East Delhi</span>
+      </nav>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+        <!-- Left Hero Content -->
+        <div class="lg:col-span-7 text-left min-w-0">
+          <div class="badge-dark mb-4 sm:mb-6">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse flex-shrink-0"></span>
+            <span>Sub-Second Load Speed • Google Core Web Vitals 95+ • Clean Custom Code</span>
+          </div>
+
+          <h1 class="font-display text-[clamp(1.75rem,6.5vw,2.75rem)] sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-[1.12] sm:leading-[1.1] mb-4 sm:mb-6 text-glow break-words">
+            Website Development Company in <br />
+            <span class="gradient-text-light">East Delhi</span>
+          </h1>
+
+          <p class="text-slate-300 text-sm sm:text-base lg:text-lg leading-relaxed mb-6 sm:mb-8 text-left sm:text-justify max-w-2xl">
+            Looking for a dependable <strong class="text-white font-semibold">Website Development Company in East Delhi</strong> that builds websites for real business growth? NK Digital Tech creates fast, secure, and mobile-friendly websites designed to rank high on Google and earn citations in ChatGPT, Gemini, and modern AI search engines.
+          </p>
+
+          <div class="flex flex-col sm:flex-row gap-3.5 sm:gap-4 mb-8 sm:mb-10">
+            <a href="#contact" class="btn-primary">
+              <span>Book Free Web Consultation</span>
+              <svg class="w-4 h-4 ml-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+              </svg>
+            </a>
+            <a href="tel:+918052189051" class="btn-secondary-dark">
+              <span>Call +91 80521 89051</span>
+            </a>
+          </div>
+
+          <!-- Trust Badges Strip -->
+          <div class="pt-6 border-t border-slate-800/80 grid grid-cols-3 gap-3 sm:gap-6 text-center sm:text-left">
+            <div>
+              <span class="font-display font-extrabold text-xl sm:text-2xl text-white block">Sub 1.5s</span>
+              <span class="text-xs text-slate-400">Mobile Speed</span>
+            </div>
+            <div>
+              <span class="font-display font-extrabold text-xl sm:text-2xl text-white block">100%</span>
+              <span class="text-xs text-slate-400">Code Ownership</span>
+            </div>
+            <div>
+              <span class="font-display font-extrabold text-xl sm:text-2xl text-white block">Zero</span>
+              <span class="text-xs text-slate-400">Template Bloat</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Hero Image with Floating Highlights Card -->
+        <div class="lg:col-span-5 min-w-0">
+          <div class="relative rounded-2xl overflow-hidden glass-card border border-slate-700/80 shadow-2xl p-2 sm:p-3">
+            <div class="relative aspect-[16/10] w-full overflow-hidden rounded-xl bg-slate-900">
+              <img
+                src="/images/web-dev-east-delhi/website-development-company-east-delhi-hero.webp"
+                alt="Website Development Company in East Delhi Web Developers Reviewing Code in Tech Studio"
+                width="1200"
+                height="675"
+                sizes="(max-width: 1024px) 100vw, 42vw"
+                class="w-full h-full object-cover"
+                loading="eager"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+              <div class="absolute bottom-3 left-3 right-3 text-left">
+                <span class="inline-block px-2.5 py-1 rounded-md bg-brand-600/90 text-white text-[10px] font-bold uppercase tracking-wider mb-1">
+                  East Delhi Tech Studio
+                </span>
+                <p class="text-xs font-semibold text-white truncate">
+                  Building conversion-ready websites for Laxmi Nagar, Preet Vihar &amp; Patparganj
+                </p>
+              </div>
+            </div>
+
+            <!-- Floating Metrics Card -->
+            <div class="mt-3 p-3.5 sm:p-4 rounded-xl bg-slate-900/90 border border-slate-800 text-left">
+              <div class="flex items-center justify-between gap-2 mb-2">
+                <span class="text-xs font-bold text-slate-300">Google Core Web Vitals</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-bold bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
+                  Grade A Pass
+                </span>
+              </div>
+              <p class="text-xs text-slate-400 leading-relaxed text-left sm:text-justify">
+                Clean HTML structure, optimized WebP graphics, and responsive mobile architecture that turn visitors into verified business inquiries.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 2: PROBLEM & SOLUTION NARRATIVE (WHITE SURFACE)
+  ===================================================================== -->
+  <section class="surface-white py-14 sm:py-20 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+        <div class="lg:col-span-6 min-w-0">
+          <span class="badge-light mb-3">Why Traditional Web Design Fails</span>
+          <h2 class="font-display font-black text-2xl sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-tight mb-5">
+            Most Business Websites Look Nice but <span class="gradient-text-dark">Fail to Bring Real Leads</span>
+          </h2>
+          <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-4 text-left sm:text-justify">
+            Many business owners hiring a website designing company in laxmi nagar or website designing company in preet vihar end up with heavy, slow templates loaded with unnecessary plugins. These pages take six seconds to load on mobile connections, bury direct phone numbers behind multi-level navigation menus, and fail to rank when nearby customers search on Google.
+          </p>
+          <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-6 text-left sm:text-justify">
+            As a premier <a href="/best-seo-company-in-delhi-ncr/" class="text-brand-600 hover:text-brand-700 font-semibold underline decoration-brand-300">Best SEO Company in Delhi NCR</a> and recognized <a href="/best-seo-company-in-east-delhi/" class="text-brand-600 hover:text-brand-700 font-semibold underline decoration-brand-300">Best SEO Company in East Delhi</a> partner, NK Digital Tech takes a completely different path. When you work with the best website designing company in east delhi, your website is built with clean frontend code, rapid mobile speeds, and search-focused structure so it works as an active sales channel for your company.
+          </p>
+          <div class="grid grid-cols-2 gap-4 pt-2 border-t border-slate-100">
+            <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200">
+              <span class="font-display font-bold text-lg text-slate-900 block mb-0.5">Under 1.5s</span>
+              <span class="text-xs text-slate-500">Average mobile load time</span>
+            </div>
+            <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200">
+              <span class="font-display font-bold text-lg text-slate-900 block mb-0.5">3x Higher</span>
+              <span class="text-xs text-slate-500">Form and phone conversion rate</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Side: Solution Cards -->
+        <div class="lg:col-span-6 min-w-0 space-y-4">
+          <div class="p-5 sm:p-6 rounded-2xl border border-slate-200 bg-slate-50 hover:bg-white hover:shadow-lg transition-all">
+            <div class="flex items-center gap-3 mb-2.5">
+              <div class="w-9 h-9 rounded-xl bg-brand-50 border border-brand-200 text-brand-600 flex items-center justify-center font-bold text-sm">
+                01
+              </div>
+              <h3 class="font-display font-bold text-base sm:text-lg text-slate-900">
+                Lightweight Clean Code Architecture
+              </h3>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed text-left sm:text-justify">
+              We eliminate bloated third-party page builders. Every website developer in east delhi on our team handwrites clean HTML, CSS, and code for high performance and smooth mobile reading across Trans Yamuna markets.
+            </p>
+          </div>
+
+          <div class="p-5 sm:p-6 rounded-2xl border border-slate-200 bg-slate-50 hover:bg-white hover:shadow-lg transition-all">
+            <div class="flex items-center gap-3 mb-2.5">
+              <div class="w-9 h-9 rounded-xl bg-violet-50 border border-violet-200 text-accent-600 flex items-center justify-center font-bold text-sm">
+                02
+              </div>
+              <h3 class="font-display font-bold text-base sm:text-lg text-slate-900">
+                Engineered for Google and AI Discovery
+              </h3>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed text-left sm:text-justify">
+              In coordination with our <a href="/ai-seo-company-in-delhi/" class="text-brand-600 hover:text-brand-700 font-semibold underline decoration-brand-300">AI SEO Company in Delhi</a> specialists, your pages feature clear question-and-answer blocks, schema markup, and verifiable business facts that help search crawlers and AI assistants cite your brand.
+            </p>
+          </div>
+
+          <div class="p-5 sm:p-6 rounded-2xl border border-slate-200 bg-slate-50 hover:bg-white hover:shadow-lg transition-all">
+            <div class="flex items-center gap-3 mb-2.5">
+              <div class="w-9 h-9 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-600 flex items-center justify-center font-bold text-sm">
+                03
+              </div>
+              <h3 class="font-display font-bold text-base sm:text-lg text-slate-900">
+                Local Map Pack &amp; Inbound Conversion Ready
+              </h3>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed text-left sm:text-justify">
+              Supported by our <a href="/local-seo-services-in-delhi/" class="text-brand-600 hover:text-brand-700 font-semibold underline decoration-brand-300">Local SEO Services in Delhi</a> team, we integrate accurate NAP details, click-to-call buttons, and Google Map embeds that drive customer footfall and direct phone inquiries.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 3: CORE WEBSITE DEVELOPMENT SERVICES (SLATE SURFACE)
+  ===================================================================== -->
+  <section id="services" class="surface-slate py-14 sm:py-20 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
+        <span class="badge-light mb-2.5">Our Development Capabilities</span>
+        <h2 class="font-display font-black text-2xl sm:text-3xl lg:text-4xl text-slate-900 tracking-tight mb-3">
+          Complete Web Solutions from a Trusted <span class="gradient-text-dark">Web Development Company in East Delhi</span>
+        </h2>
+        <p class="text-sm sm:text-base text-slate-600 leading-relaxed text-left sm:text-justify">
+          As an established website designing company in east delhi, we build custom corporate portals, high-converting admission landing pages, and secure product catalogues tailored to your business goals.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7">
+        {services.map((item) => (
+          <div class="elevated-card rounded-2xl p-6 sm:p-7 flex flex-col justify-between group">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-xs font-black tracking-widest text-slate-400">{item.num}</span>
+                <span class={`inline-block px-2.5 py-0.5 rounded-md text-[11px] font-bold ${item.badgeColor}`}>
+                  {item.category}
+                </span>
+              </div>
+              <div class={`w-12 h-12 rounded-xl flex items-center justify-center border mb-5 ${item.iconStyle}`} set:html={item.icon} />
+              <h3 class="font-display font-bold text-lg sm:text-xl text-slate-900 leading-snug mb-3 group-hover:text-brand-600 transition-colors">
+                {item.title}
+              </h3>
+              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4 text-left sm:text-justify">
+                {item.body}
+              </p>
+            </div>
+            <div class="pt-4 border-t border-slate-100">
+              <p class="text-xs text-slate-700 font-medium mb-3">
+                <strong class="text-slate-900">Commercial Impact:</strong> {item.impact}
+              </p>
+              <a href={item.href} class="inline-flex items-center gap-1.5 text-xs font-bold text-brand-600 hover:text-brand-700 min-h-[36px]">
+                <span>{item.cta}</span>
+                <svg class="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 4: COMPARISON TABLE (WHITE SURFACE)
+  ===================================================================== -->
+  <section class="surface-white py-14 sm:py-20 border-b border-slate-200">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+      <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
+        <span class="badge-light mb-2.5">Transparent Web Standards</span>
+        <h2 class="font-display font-black text-2xl sm:text-3xl lg:text-4xl text-slate-900 tracking-tight mb-3">
+          Comparing Normal Web Vendors with <span class="gradient-text-dark">NK Digital Tech</span>
+        </h2>
+        <p class="text-sm sm:text-base text-slate-600 leading-relaxed text-left sm:text-justify">
+          Discover why businesses across East Delhi choose our developers to create permanent digital assets instead of disposable templates.
+        </p>
+      </div>
+
+      <div class="elevated-card rounded-2xl overflow-hidden border border-slate-200 shadow-sm">
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-xs sm:text-sm">
+            <thead class="bg-slate-900 text-white font-display text-xs uppercase tracking-wider">
+              <tr>
+                <th class="py-4 px-4 sm:px-6 font-bold">Key Technical Factor</th>
+                <th class="py-4 px-4 sm:px-6 font-bold text-rose-300">Typical Agency in Delhi</th>
+                <th class="py-4 px-4 sm:px-6 font-bold text-emerald-300">NK Digital Tech Standards</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-200 text-slate-700">
+              {comparison.map((row) => (
+                <tr class="hover:bg-slate-50 transition-colors">
+                  <td class="py-4 px-4 sm:px-6 font-bold text-slate-900 whitespace-nowrap sm:whitespace-normal">
+                    {row.metric}
+                  </td>
+                  <td class="py-4 px-4 sm:px-6 text-slate-600 text-left sm:text-justify">
+                    <span class="inline-flex items-center text-rose-600 font-bold mr-1.5">&#10005;</span>
+                    {row.typical}
+                  </td>
+                  <td class="py-4 px-4 sm:px-6 text-slate-900 font-medium bg-emerald-50/50 text-left sm:text-justify">
+                    <span class="inline-flex items-center text-emerald-600 font-bold mr-1.5">&#10003;</span>
+                    {row.nk}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 5: REGIONAL LOCATIONS (DARK NAVY SURFACE)
+  ===================================================================== -->
+  <section id="locations" class="relative surface-navy scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 items-center mb-7 sm:mb-16">
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-dark mb-3">Four East Delhi Business Corridors</div>
+          <h2 class="font-display font-extrabold text-[clamp(1.32rem,5.2vw,1.72rem)] sm:text-3xl lg:text-4xl text-white tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4">
+            Search Ready Website Development Across <span class="gradient-text-light">Laxmi Nagar, Preet Vihar, Patparganj and Mayur Vihar</span>
+          </h2>
+          <p class="text-slate-300 text-[14px] sm:text-base leading-[1.7] sm:leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+            Local buyers in East Delhi search for exact neighborhood locations on both Google and conversational AI assistants. Whether a parent is searching for an entrance coaching academy in Laxmi Nagar, an advocate requires a law chamber site in Karkardooma, or an industrial packaging factory in Patparganj needs quotation leads, dedicated local corridors build immediate trust. We coordinate with our <a href="/website-development-company-in-delhi/" class="text-brand-300 hover:text-white active:opacity-80 font-semibold transition-colors">Website Development Company in Delhi</a> and <a href="/best-website-development-company-in-delhi-ncr/" class="text-brand-300 hover:text-white active:opacity-80 font-semibold transition-colors">Best Website Development Company in Delhi NCR</a> hubs so your website captures demand across every commercial district.
+          </p>
+        </div>
+        <div class="lg:col-span-5 min-w-0">
+          <div class="rounded-2xl overflow-hidden border border-slate-700/80 shadow-xl bg-slate-900">
+            <img
+              src="/images/delhi/local-seo-services-delhi.webp"
+              alt="Website Development Company in East Delhi Serving Laxmi Nagar Preet Vihar Patparganj and Mayur Vihar"
+              width="800"
+              height="450"
+              sizes="(max-width: 1024px) 100vw, 42vw"
+              class="w-full aspect-[16/9] sm:aspect-auto sm:h-56 lg:h-64 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5 sm:gap-6">
+        {zones.map((z) => (
+          <div class="glass-card rounded-2xl p-4 sm:p-6 flex flex-col justify-between group sm:hover:-translate-y-1 min-w-0">
+            <div>
+              <div class={`h-1 w-full bg-gradient-to-r ${z.accent} rounded-full mb-3.5 sm:mb-5`} />
+
+              <div class="flex flex-wrap items-center justify-between gap-1.5 sm:gap-2 mb-3 sm:mb-4">
+                <span class="px-2.5 py-1 rounded-md bg-slate-800 border border-slate-700 text-[10.5px] sm:text-[11px] font-bold uppercase tracking-wider text-brand-300 flex-shrink-0">
+                  {z.hub}
+                </span>
+                <span class="text-[11px] sm:text-xs font-semibold text-slate-400 leading-snug break-words">
+                  {z.area}
+                </span>
+              </div>
+
+              <h3 class="font-display font-bold text-[16.5px] sm:text-lg text-white mb-2 sm:mb-3 leading-snug">
+                <a href={z.href} class="inline-flex items-center min-h-[44px] sm:min-h-0 py-1 sm:py-0.5 text-white hover:text-brand-300 transition-colors">
+                  {z.keyword}
+                </a>
+              </h3>
+
+              <p class="text-slate-300 text-[13.5px] sm:text-sm leading-[1.68] sm:leading-relaxed mb-4 sm:mb-5 text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+                {z.desc}
+              </p>
+            </div>
+
+            <div class="pt-3.5 sm:pt-4 border-t border-slate-800">
+              <p class="text-[11px] text-slate-400 mb-3 sm:mb-4 leading-normal">
+                <strong class="text-slate-300">Key Hubs:</strong> {z.corridor}
+              </p>
+              <a
+                href={z.href}
+                class="w-full sm:w-auto inline-flex items-center justify-between sm:justify-start gap-2 rounded-xl sm:rounded-none bg-slate-900/90 active:bg-slate-800 sm:bg-transparent border border-slate-700/80 sm:border-0 px-3.5 sm:px-0 py-2.5 min-h-[48px] sm:min-h-0 text-xs font-bold text-brand-400 hover:text-brand-300 group-hover:gap-2.5 transition-all"
+              >
+                <span class="text-left leading-snug">{z.cta}</span>
+                <svg class="w-3.5 h-3.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 6: KEY INDUSTRIES SERVED (WHITE SURFACE)
+  ===================================================================== -->
+  <section id="industries" class="surface-white py-14 sm:py-20 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
+        <span class="badge-light mb-2.5">Domain-Specific Architecture</span>
+        <h2 class="font-display font-black text-2xl sm:text-3xl lg:text-4xl text-slate-900 tracking-tight mb-3">
+          Web Development Built for <span class="gradient-text-dark">Key East Delhi Industries</span>
+        </h2>
+        <p class="text-sm sm:text-base text-slate-600 leading-relaxed text-left sm:text-justify">
+          Every commercial sector has unique customer expectations. We build websites tailored to how clients research, evaluate, and contact local businesses in East Delhi.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7">
+        {industries.map((ind) => (
+          <div class={`elevated-card rounded-2xl p-6 sm:p-7 flex flex-col justify-between border-t-4 ${ind.accentBorder}`}>
+            <div>
+              <div class="flex items-center gap-3 mb-4">
+                <div class={`w-10 h-10 rounded-xl flex items-center justify-center border ${ind.iconBg}`} set:html={ind.icon} />
+                <div>
+                  <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 block">Industry Solution</span>
+                  <h3 class="font-display font-bold text-base sm:text-lg text-slate-900 leading-snug">
+                    {ind.title}
+                  </h3>
+                </div>
+              </div>
+              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4 text-left sm:text-justify">
+                {ind.focus}
+              </p>
+            </div>
+            <div class="pt-3 border-t border-slate-100">
+              <span class="text-xs font-semibold text-slate-900 block mb-1">Expected Lead Outcome:</span>
+              <p class="text-xs text-slate-600 text-left sm:text-justify">
+                {ind.outcome}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 7: STEP-BY-STEP DEVELOPMENT PROCESS (SLATE SURFACE)
+  ===================================================================== -->
+  <section class="surface-slate py-14 sm:py-20 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
+        <span class="badge-light mb-2.5">Predictable Delivery Roadmap</span>
+        <h2 class="font-display font-black text-2xl sm:text-3xl lg:text-4xl text-slate-900 tracking-tight mb-3">
+          Our Four-Stage <span class="gradient-text-dark">Website Development Process</span>
+        </h2>
+        <p class="text-sm sm:text-base text-slate-600 leading-relaxed text-left sm:text-justify">
+          From first planning discussion to live production launch, we follow a transparent development cycle that finishes projects on schedule and within budget.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-xl bg-brand-50 text-brand-600 font-display font-bold text-base flex items-center justify-center mb-4">
+              01
+            </div>
+            <h3 class="font-display font-bold text-base sm:text-lg text-slate-900 mb-2">
+              Discovery &amp; Wireframing
+            </h3>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed text-left sm:text-justify">
+              We study your competitors, target keywords, customer journey, and conversion funnels to map out exact page layouts before coding.
+            </p>
+          </div>
+          <span class="text-[11px] font-semibold text-brand-600 mt-4 block">Stage 1: Days 1 to 4</span>
+        </div>
+
+        <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-xl bg-violet-50 text-accent-600 font-display font-bold text-base flex items-center justify-center mb-4">
+              02
+            </div>
+            <h3 class="font-display font-bold text-base sm:text-lg text-slate-900 mb-2">
+              UI Design &amp; Clean Coding
+            </h3>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed text-left sm:text-justify">
+              Our developers craft clean, accessible HTML, CSS, and interactive components. We configure responsive typography, mobile layouts, and WebP graphics.
+            </p>
+          </div>
+          <span class="text-[11px] font-semibold text-accent-600 mt-4 block">Stage 2: Days 5 to 12</span>
+        </div>
+
+        <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 font-display font-bold text-base flex items-center justify-center mb-4">
+              03
+            </div>
+            <h3 class="font-display font-bold text-base sm:text-lg text-slate-900 mb-2">
+              SEO, Speed &amp; AI Auditing
+            </h3>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed text-left sm:text-justify">
+              We validate JSON-LD structured schema, verify Google Core Web Vitals, test contact forms, and review readability against Google and AI crawler standards.
+            </p>
+          </div>
+          <span class="text-[11px] font-semibold text-emerald-600 mt-4 block">Stage 3: Days 13 to 16</span>
+        </div>
+
+        <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-xl bg-amber-50 text-amber-700 font-display font-bold text-base flex items-center justify-center mb-4">
+              04
+            </div>
+            <h3 class="font-display font-bold text-base sm:text-lg text-slate-900 mb-2">
+              Launch &amp; Full Handover
+            </h3>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed text-left sm:text-justify">
+              We deploy your site to fast CDN servers, connect Google Search Console and GA4, and hand over 100% full administrative passwords and source code.
+            </p>
+          </div>
+          <span class="text-[11px] font-semibold text-amber-700 mt-4 block">Stage 4: Day 17 Onward</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 8: INTEGRATED DIGITAL MARKETING SERVICES IN NCR (WHITE SURFACE)
+  ===================================================================== -->
+  <section class="surface-white py-14 sm:py-20 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
+        <span class="badge-light mb-2.5">Full-Service Growth Partner</span>
+        <h2 class="font-display font-black text-2xl sm:text-3xl lg:text-4xl text-slate-900 tracking-tight mb-3">
+          Connect Your New Website to <span class="gradient-text-dark">Proven Search Growth</span>
+        </h2>
+        <p class="text-sm sm:text-base text-slate-600 leading-relaxed text-left sm:text-justify">
+          A great website needs qualified visitors. Pair your custom website development with our specialized digital growth campaigns across East Delhi and the wider capital region.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="p-6 rounded-2xl border border-slate-200 bg-slate-50 flex flex-col justify-between">
+          <div>
+            <h3 class="font-display font-bold text-lg text-slate-900 mb-2">
+              East Delhi Digital Marketing
+            </h3>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4 text-left sm:text-justify">
+              Drive consistent customer inquiries across Vikas Marg, Preet Vihar, and Patparganj with our dedicated <a href="/digital-marketing-company-in-east-delhi/" class="text-brand-600 hover:text-brand-700 font-semibold underline decoration-brand-300">Digital Marketing Company in East Delhi</a> specialists.
+            </p>
+          </div>
+          <a href="/digital-marketing-company-in-east-delhi/" class="text-xs font-bold text-brand-600 hover:text-brand-700">
+            Explore East Delhi Campaigns →
+          </a>
+        </div>
+
+        <div class="p-6 rounded-2xl border border-slate-200 bg-slate-50 flex flex-col justify-between">
+          <div>
+            <h3 class="font-display font-bold text-lg text-slate-900 mb-2">
+              Delhi Citywide Authority
+            </h3>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4 text-left sm:text-justify">
+              Scale your brand authority across South, West, North, and Central Delhi with our <a href="/best-digital-marketing-agency-in-delhi/" class="text-brand-600 hover:text-brand-700 font-semibold underline decoration-brand-300">Best Digital Marketing Agency in Delhi</a> strategists.
+            </p>
+          </div>
+          <a href="/best-digital-marketing-agency-in-delhi/" class="text-xs font-bold text-brand-600 hover:text-brand-700">
+            Explore Delhi Hub →
+          </a>
+        </div>
+
+        <div class="p-6 rounded-2xl border border-slate-200 bg-slate-50 flex flex-col justify-between">
+          <div>
+            <h3 class="font-display font-bold text-lg text-slate-900 mb-2">
+              Local Map Pack Rankings
+            </h3>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4 text-left sm:text-justify">
+              Capture high-intent neighborhood footfall and instant phone calls with our verified <a href="/local-seo-services-in-delhi/" class="text-brand-600 hover:text-brand-700 font-semibold underline decoration-brand-300">Local SEO Services in Delhi</a> optimization campaigns.
+            </p>
+          </div>
+          <a href="/local-seo-services-in-delhi/" class="text-xs font-bold text-brand-600 hover:text-brand-700">
+            Explore Local Maps Hub →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 9: AI SEARCH & GOOGLE FAQS (SLATE SURFACE)
+  ===================================================================== -->
+  <section id="faq" class="surface-slate py-14 sm:py-20 border-b border-slate-200">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-10 sm:mb-12">
+        <span class="badge-light mb-2.5">AI Search &amp; Google Questions</span>
+        <h2 class="font-display font-black text-2xl sm:text-3xl lg:text-4xl text-slate-900 tracking-tight mb-3">
+          Frequently Asked <span class="gradient-text-dark">Questions</span>
+        </h2>
+        <p class="text-sm sm:text-base text-slate-600 leading-relaxed text-left sm:text-justify">
+          Get direct, factual answers to common questions about website pricing, development timelines, mobile speed optimization, and generative AI search visibility in East Delhi.
+        </p>
+      </div>
+
+      <div class="space-y-3.5">
+        {faqs.map((item) => (
+          <details class="group bg-white rounded-2xl border border-slate-200 shadow-sm p-4 sm:p-6 transition-all">
+            <summary class="flex items-center justify-between gap-4 font-display font-bold text-sm sm:text-base text-slate-900 cursor-pointer">
+              <span>{item.q}</span>
+              <span class="faq-icon w-7 h-7 rounded-lg border border-slate-200 bg-slate-50 text-slate-600 flex items-center justify-center flex-shrink-0 text-sm font-bold">
+                +
+              </span>
+            </summary>
+            <p class="mt-3.5 pt-3.5 border-t border-slate-100 text-xs sm:text-sm text-slate-600 leading-relaxed text-left sm:text-justify">
+              {item.a}
+            </p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 10: CONCLUSION & CONTACT CONSULTATION (DARK SURFACE)
+  ===================================================================== -->
+  <section id="contact" class="relative surface-dark py-14 sm:py-20 lg:py-24 pb-28 sm:pb-20 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="absolute inset-0 mesh-glow pointer-events-none"></div>
+
+    <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+        <!-- Left Side: Conclusion Text -->
+        <div class="lg:col-span-6 text-left min-w-0">
+          <span class="badge-dark mb-4">Start Your Web Project Today</span>
+          <h2 class="font-display font-black text-2xl sm:text-4xl text-white tracking-tight leading-tight mb-4">
+            Partner With a Trusted <span class="gradient-text-light">Website Development Company in East Delhi</span>
+          </h2>
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-4 text-left sm:text-justify">
+            In conclusion, your business website is your primary digital storefront. Slow loading speeds, broken mobile layouts, and missing schema markup cause you to lose potential customers every single day. Choosing NK Digital Tech as your website development company in East Delhi ensures clean code, sub-second load times, and a foundation built for long-term Google search and AI engine recommendations.
+          </p>
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-6 text-left sm:text-justify">
+            Together with our <a href="/best-seo-company-in-east-delhi/" class="text-brand-300 hover:text-white font-semibold underline decoration-brand-400">Best SEO Company in East Delhi</a> specialists, we ensure your business is positioned to lead across both traditional search results and new conversational answer platforms.
+          </p>
+
+          <div class="space-y-3 pt-4 border-t border-slate-800 text-xs sm:text-sm text-slate-300">
+            <div class="flex items-center gap-3">
+              <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+              <span>Direct Phone Consultation: <a href="tel:+918052189051" class="text-white font-bold hover:text-brand-300">+91 80521 89051</a></span>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="w-2 h-2 rounded-full bg-brand-400"></span>
+              <span>Official Email: <a href="mailto:nkdigitaltech1@gmail.com" class="text-white font-bold hover:text-brand-300">nkdigitaltech1@gmail.com</a></span>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="w-2 h-2 rounded-full bg-cyan-400"></span>
+              <span>Serving Laxmi Nagar, Preet Vihar, Patparganj &amp; Mayur Vihar</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Side: Contact Card / Quick Form -->
+        <div class="lg:col-span-6 min-w-0">
+          <div class="glass-card rounded-2xl p-6 sm:p-8 border border-slate-700/80 shadow-2xl">
+            <h3 class="font-display font-bold text-xl text-white mb-2">
+              Request Your Free Website Proposal
+            </h3>
+            <p class="text-xs sm:text-sm text-slate-300 mb-6 text-left sm:text-justify">
+              Tell us about your website requirements. We will analyze your current digital presence and provide a clear, fixed-price plan within 4 business hours.
+            </p>
+
+            <form
+              action="https://formsubmit.co/nkdigitaltech1@gmail.com"
+              method="POST"
+              class="space-y-4 text-left"
+            >
+              <input type="hidden" name="_subject" value="New Website Development Inquiry (East Delhi)" />
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_next" value="https://www.nkdigitaltech.net/contact-us/" />
+
+              <div>
+                <label for="contact-name" class="block text-xs font-semibold text-slate-300 mb-1">Your Full Name *</label>
+                <input
+                  id="contact-name"
+                  type="text"
+                  name="Full_Name"
+                  required
+                  placeholder="Enter your name"
+                  class="w-full px-4 py-2.5 rounded-xl bg-slate-900/90 border border-slate-700 text-sm text-white placeholder:text-slate-500 focus:outline-none focus:border-brand-400 min-h-[44px]"
+                />
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="contact-phone" class="block text-xs font-semibold text-slate-300 mb-1">Mobile Number *</label>
+                  <input
+                    id="contact-phone"
+                    type="tel"
+                    name="Mobile_Number"
+                    required
+                    pattern="[0-9]{10}"
+                    placeholder="10-digit mobile"
+                    class="w-full px-4 py-2.5 rounded-xl bg-slate-900/90 border border-slate-700 text-sm text-white placeholder:text-slate-500 focus:outline-none focus:border-brand-400 min-h-[44px]"
+                  />
+                </div>
+                <div>
+                  <label for="contact-service" class="block text-xs font-semibold text-slate-300 mb-1">Website Type</label>
+                  <select
+                    id="contact-service"
+                    name="Website_Type"
+                    class="w-full px-3 py-2.5 rounded-xl bg-slate-900/90 border border-slate-700 text-sm text-white focus:outline-none focus:border-brand-400 min-h-[44px]"
+                  >
+                    <option value="Corporate Website">Corporate Website</option>
+                    <option value="Coaching Admission Portal">Coaching Admission Portal</option>
+                    <option value="Online Product Catalogue">Online Product Catalogue</option>
+                    <option value="Website Redesign">Website Redesign &amp; Speed Fix</option>
+                    <option value="Custom Web App">Custom Web App</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label for="contact-message" class="block text-xs font-semibold text-slate-300 mb-1">Brief Requirements</label>
+                <textarea
+                  id="contact-message"
+                  name="Message"
+                  rows="3"
+                  placeholder="Share details like page count, target audience, or current website link"
+                  class="w-full px-4 py-2.5 rounded-xl bg-slate-900/90 border border-slate-700 text-sm text-white placeholder:text-slate-500 focus:outline-none focus:border-brand-400"
+                ></textarea>
+              </div>
+
+              <button type="submit" class="btn-primary w-full min-h-[48px] py-3.5">
+                <span>Submit Website Inquiry</span>
+                <svg class="w-4 h-4 ml-1.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mobile Sticky Bottom CTA Bar -->
+  <div class="mobile-sticky-cta md:hidden fixed bottom-0 inset-x-0 z-40 bg-[#050a14]/95 backdrop-blur-lg border-t border-slate-800 px-3 py-2.5 flex items-center gap-2 transition-all duration-300">
+    <a href="tel:+918052189051" class="flex-1 min-h-[44px] inline-flex items-center justify-center gap-1.5 rounded-xl bg-slate-900 border border-slate-700 text-white text-xs font-semibold">
+      <span>Call Now</span>
+    </a>
+    <a href="https://wa.me/918052189051?text=Hi%20NK%20Digital%20Tech%2C%20I%20am%20looking%20for%20a%20Website%20Development%20Company%20in%20East%20Delhi." target="_blank" rel="noopener noreferrer" class="flex-1 min-h-[44px] inline-flex items-center justify-center gap-1.5 rounded-xl bg-emerald-600 text-white text-xs font-semibold">
+      <span>WhatsApp</span>
+    </a>
+    <a href="#contact" class="flex-1 min-h-[44px] inline-flex items-center justify-center gap-1.5 rounded-xl bg-gradient-to-r from-brand-500 to-accent-600 text-white text-xs font-bold">
+      <span>Free Quote</span>
+    </a>
+  </div>
+
+</Layout>
+

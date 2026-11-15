@@ -1,0 +1,1036 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '../styles/global.css';
+
+const pageTitle = 'Website Development Company in Delhi NCR | NK Digital Tech';
+const pageDescription = 'Looking for a top website development company in Delhi NCR? NK Digital Tech builds fast, custom websites with clean code that rank high and bring real leads.';
+const pageCanonical = 'https://www.nkdigitaltech.net/website-development-company-in-delhi-ncr/';
+
+const clients = [
+  {
+    name: 'Vision',
+    sector: 'Optical Retail & Healthcare Portal',
+    region: 'Delhi NCR',
+    logo: '/images/clients/vision.webp',
+  },
+  {
+    name: 'Aangan',
+    sector: 'Premium Apparel & Retail Store',
+    region: 'Delhi NCR',
+    logo: '/images/clients/aangan.webp',
+  },
+  {
+    name: 'Propertyways',
+    sector: 'Commercial & Real Estate Portal',
+    region: 'Gurgaon & Delhi NCR',
+    logo: '/images/clients/propertyways.webp',
+  },
+  {
+    name: 'Creative Academy',
+    sector: 'Education & Admissions Platform',
+    region: 'Delhi NCR',
+    logo: '/images/clients/creative-academy.webp',
+  },
+  {
+    name: 'VP Infra',
+    sector: 'Civil Construction & Projects Portal',
+    region: 'Noida & Delhi NCR',
+    logo: '/images/clients/vp-infra.webp',
+  },
+];
+
+const services = [
+  {
+    num: '01',
+    category: 'Custom & Corporate',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>`,
+    iconStyle: 'bg-sky-50 border-sky-200 text-brand-600',
+    impactStyle: 'bg-sky-50/80 border-sky-200/80 text-slate-800',
+    badgeColor: 'text-brand-600 bg-sky-100/80',
+    title: 'Custom Web Development Services in Delhi NCR',
+    body: 'As a trusted corporate website design company in Delhi, we handwrite lightweight frontend code on Astro, Next.js, and modern frameworks with clean HTML, fast CSS, and zero bloated plugins.',
+    impact: 'Passes Google Core Web Vitals with 95+ mobile scores and loads in under 1.5 seconds on 4G connections.',
+    cta: 'Discuss Your Custom Website',
+    href: '#contact',
+  },
+  {
+    num: '02',
+    category: 'Search & AI Visibility',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>`,
+    iconStyle: 'bg-violet-50 border-violet-200 text-accent-600',
+    impactStyle: 'bg-violet-50/80 border-violet-200/80 text-slate-800',
+    badgeColor: 'text-accent-600 bg-violet-100/80',
+    title: 'SEO, AEO & AI Ready Web Architecture',
+    body: 'We build websites engineered for both search engines and generative AI tools. Every page includes clear H1 to H3 hierarchy, direct answer boxes, structured tables, and clean JSON-LD schema.',
+    impact: 'Helps your pages rank on Google organic search and earn direct recommendations in ChatGPT, Gemini, and AI Overviews.',
+    cta: 'Learn About Search Ready Code',
+    href: '#contact',
+  },
+  {
+    num: '03',
+    category: 'CMS & Easy Publishing',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>`,
+    iconStyle: 'bg-emerald-50 border-emerald-200 text-emerald-600',
+    impactStyle: 'bg-emerald-50/80 border-emerald-200/80 text-slate-800',
+    badgeColor: 'text-emerald-700 bg-emerald-100/80',
+    title: 'WordPress Website Development in Delhi NCR',
+    body: 'Need an easy dashboard for your marketing team? Our WordPress builds avoid heavy pre-made themes and sluggish page builders. We code clean, secure templates that are simple to manage.',
+    impact: 'Your team can update text, add blog posts, and upload case studies in minutes without breaking page speed.',
+    cta: 'Explore Fast WordPress Builds',
+    href: '#contact',
+  },
+  {
+    num: '04',
+    category: 'E-Commerce & Online Stores',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>`,
+    iconStyle: 'bg-amber-50 border-amber-200 text-amber-600',
+    impactStyle: 'bg-amber-50/80 border-amber-200/80 text-slate-800',
+    badgeColor: 'text-amber-700 bg-amber-100/80',
+    title: 'Ecommerce Website Development Company in Delhi',
+    body: 'As a specialised shopify website development company in delhi, we develop fast online shopping stores with Razorpay, UPI, Shiprocket, clear product schema, and friction-free mobile checkouts.',
+    impact: 'Higher cart conversion rates, fast product page discovery on Google Shopping, and smooth customer checkout.',
+    cta: 'Launch Your E-Commerce Store',
+    href: '#contact',
+  },
+  {
+    num: '05',
+    category: 'B2B & Lead Generation',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>`,
+    iconStyle: 'bg-indigo-50 border-indigo-200 text-indigo-600',
+    impactStyle: 'bg-indigo-50/80 border-indigo-200/80 text-slate-800',
+    badgeColor: 'text-indigo-700 bg-indigo-100/80',
+    title: 'High-Converting B2B Corporate Portals',
+    body: 'We design corporate websites with clear conversion paths, fast inquiry forms, interactive service calculators, and direct WhatsApp routing for manufacturers, consultants, and law firms.',
+    impact: 'Turns casual web visitors into qualified commercial leads, phone calls, and direct request-for-quote submissions.',
+    cta: 'Build a B2B Lead Engine',
+    href: '#contact',
+  },
+  {
+    num: '06',
+    category: 'Website Redesign & Speed Fixes',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>`,
+    iconStyle: 'bg-rose-50 border-rose-200 text-rose-600',
+    impactStyle: 'bg-rose-50/80 border-rose-200/80 text-slate-800',
+    badgeColor: 'text-rose-700 bg-rose-100/80',
+    title: 'Affordable Website Development in Delhi NCR',
+    body: 'Is your current website slow, outdated, or failing to convert? We rebuild heavy legacy websites into clean, modern platforms while preserving all your established search rankings and URLs.',
+    impact: 'Instant 60% reduction in bounce rate, faster mobile loading, and renewed brand credibility across Delhi NCR.',
+    cta: 'Request Website Speed Review',
+    href: '#contact',
+  },
+];
+
+const comparison = [
+  {
+    metric: 'Code Architecture',
+    typical: 'Heavy pre-made templates with 40+ plugins slowing down browsers',
+    nk: 'Clean, handwritten static code with sub-1.5 second loading speed',
+  },
+  {
+    metric: 'Search & AI Readiness',
+    typical: 'Basic meta tags added as an afterthought after site is completed',
+    nk: 'Built from ground up for Google SEO, Answer Engine snippets, and AI citations',
+  },
+  {
+    metric: 'Asset Ownership',
+    typical: 'Agencies lock hosting credentials and charge recurring ransom fees',
+    nk: 'You get 100% full administrative ownership of domain, code, and hosting accounts',
+  },
+  {
+    metric: 'Mobile Optimization',
+    typical: 'Generic responsive shrinking with awkward text sizes on mobile screens',
+    nk: 'Mobile-first layout with 44px tap targets, sticky contact bars, and WebP graphics',
+  },
+  {
+    metric: 'Ongoing Maintenance',
+    typical: 'Slow ticket systems with unhelpful junior support staff',
+    nk: 'Direct access to senior developers with rapid 4-hour turnaround on updates',
+  },
+  {
+    metric: 'Commercial Lead Focus',
+    typical: 'Pretty graphic layouts that generate zero customer phone calls',
+    nk: 'Conversion-engineered layouts with direct WhatsApp and phone call buttons',
+  },
+];
+
+const regionalHubs = [
+  {
+    hub: 'Corridor 01',
+    city: 'Delhi',
+    corridor: 'Connaught Place • Nehru Place • Okhla • South Extension',
+    keyword: 'Web Development Company in Delhi',
+    desc: 'We engineer high-performance business websites for corporate offices, retail brands, healthcare centers, and exporters across South, Central, West, and North Delhi.',
+    cta: 'Explore Delhi Services',
+    href: '/website-development-company-in-delhi/',
+    accent: 'from-brand-500 to-sky-400',
+  },
+  {
+    hub: 'Corridor 02',
+    city: 'Noida',
+    corridor: 'Sector 62 • Sector 18 • Greater Noida Expressway • Ecotech',
+    keyword: 'Website Development in Noida',
+    desc: 'From tech startups in Sector 62 to manufacturing plants in Ecotech, we deliver custom web development that drives commercial vendor inquiries and B2B orders.',
+    cta: 'Explore Noida Services',
+    href: '/website-development-company-in-noida/',
+    accent: 'from-accent-500 to-violet-400',
+  },
+  {
+    hub: 'Corridor 03',
+    city: 'Gurgaon',
+    corridor: 'DLF Cyber City • Golf Course Road • Sohna Road • Udyog Vihar',
+    keyword: 'Website Development in Gurgaon',
+    desc: 'We construct world-class digital platforms for corporate enterprises, SaaS companies, finance consultancies, and luxury real estate builders in Gurugram.',
+    cta: 'Explore Gurgaon Services',
+    href: '/website-development-company-in-gurgaon/',
+    accent: 'from-cyan-500 to-teal-400',
+  },
+  {
+    hub: 'Corridor 04',
+    city: 'Faridabad & Ghaziabad',
+    corridor: 'Industrial Area • Mathura Road • Mohan Nagar • Raj Nagar',
+    keyword: 'Industrial Web Development in NCR',
+    desc: 'We build durable, searchable product specification catalogues and quotation funnels for factories, fabrication units, and supply chain firms across NCR.',
+    cta: 'Explore Industrial Web Design',
+    href: '#contact',
+    accent: 'from-emerald-500 to-green-400',
+  },
+];
+
+const industries = [
+  {
+    sector: 'Real Estate & Builders',
+    title: 'Real Estate Developers & Brokers',
+    focus: 'Fast project showcase pages, interactive location maps, RERA approval blocks, and one-tap WhatsApp brochure requests for residential and commercial projects.',
+    outcome: 'Direct weekend site visit bookings and exclusive buyer inquiries without relying on expensive property portals.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>`,
+    accentBorder: 'border-t-brand-500',
+    iconBg: 'bg-sky-50 text-brand-600 border-sky-200',
+  },
+  {
+    sector: 'Manufacturing & Exports',
+    title: 'Industrial Units & B2B Factories',
+    focus: 'HTML specification tables with material grades, ISO certifications, machine capacities, and quick Request-for-Quote forms for procurement officers.',
+    outcome: 'Qualified OEM quotation inquiries and national distributor partnerships directly from Google search.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>`,
+    accentBorder: 'border-t-emerald-500',
+    iconBg: 'bg-emerald-50 text-emerald-600 border-emerald-200',
+  },
+  {
+    sector: 'Healthcare & Hospitals',
+    title: 'Hospitals, Clinics & Doctors',
+    focus: 'Patient-friendly department layouts, doctor credential cards, Cashless TPA insurance panels, and fast mobile doctor appointment booking forms.',
+    outcome: 'Increased OPD bookings, patient trust, and emergency room calls through structured local healthcare schema.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>`,
+    accentBorder: 'border-t-rose-500',
+    iconBg: 'bg-rose-50 text-rose-600 border-rose-200',
+  },
+  {
+    sector: 'Legal & Accounting',
+    title: 'Law Firms & CA Practices',
+    focus: 'Ethical, Bar Council compliant practice pages, partner biographies, direct tax and corporate law guides, and encrypted consultation forms.',
+    outcome: 'Steady corporate client retainers, high-trust advisory mandates, and executive inbound inquiries in Delhi NCR.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"/></svg>`,
+    accentBorder: 'border-t-accent-500',
+    iconBg: 'bg-violet-50 text-accent-600 border-violet-200',
+  },
+  {
+    sector: 'Retail & E-Commerce',
+    title: 'D2C Brands & Retail Showrooms',
+    focus: 'Sub-second catalogue browsing, instant UPI payments, automated stock sync, and localized showroom visit funnels.',
+    outcome: 'Higher cart checkouts, reduced customer acquisition cost, and steady weekend store visits across NCR malls.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>`,
+    accentBorder: 'border-t-amber-500',
+    iconBg: 'bg-amber-50 text-amber-600 border-amber-200',
+  },
+  {
+    sector: 'Education & Academies',
+    title: 'Colleges, Schools & Institutes',
+    focus: 'Course curriculum modules, fee calculator widgets, prospectus download captures, and direct student admission inquiry portals.',
+    outcome: 'Increased verified student enrollments, campus tour bookings, and strong local authority.',
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"/></svg>`,
+    accentBorder: 'border-t-cyan-500',
+    iconBg: 'bg-cyan-50 text-cyan-700 border-cyan-200',
+  },
+];
+
+const faqs = [
+  {
+    q: 'How Much Does It Cost to Build a Business Website in Delhi NCR?',
+    a: 'Website development costs in Delhi NCR generally depend on your project scope and platform. A single-page marketing landing page typically ranges between ₹8,000 and ₹20,000. A standard 6 to 10 page corporate business website ranges between ₹25,000 and ₹55,000. Custom dynamic web applications or full e-commerce stores with payment gateways range from ₹50,000 to ₹1,50,000+. NK Digital Tech provides clear, fixed-price proposals with no hidden monthly fees.',
+  },
+  {
+    q: 'How Do You Ensure Our New Website Gets Cited in ChatGPT, Gemini, and Google AI Overviews?',
+    a: 'Generative AI models and Google AI Overviews rely on factual, structured information to answer user prompts. We design your website with clear, direct answer paragraphs, structured HTML tables, validated JSON-LD schema (Organization, Service, and LocalBusiness), open robot access for AI crawlers like GPTBot and PerplexityBot, and verified business facts that AI engines can easily read and cite.',
+  },
+  {
+    q: 'Why Is Fast Mobile Speed Critical for Business Websites in Delhi NCR?',
+    a: 'More than 70% of business inquiries and customer visits in Delhi, Gurgaon, and Noida originate from smartphones on mobile data networks. If your website takes longer than three seconds to load, over half of those visitors will leave immediately for a competitor. Google also uses mobile page speed as a primary ranking signal in its search algorithm.',
+  },
+  {
+    q: 'What Is the Difference Between a Custom Coded Website and a WordPress Template?',
+    a: 'A pre-made WordPress template often comes bloated with dozens of unneeded scripts, third-party plugins, and messy database calls that slow down your pages and create security risks. A custom coded website, built on modern static frameworks like Astro or React, loads in under one second, requires zero routine plugin updates, and cannot be hacked through common WordPress vulnerabilities.',
+  },
+  {
+    q: 'How Long Does It Take to Design, Develop, and Launch a Website?',
+    a: 'A standard corporate website of 5 to 10 pages is typically delivered in two to three weeks from wireframe approval to final launch. More complex e-commerce stores or custom B2B web portals with product databases generally take three to five weeks. We share a clear milestone schedule before work begins and keep you updated weekly.',
+  },
+  {
+    q: 'Do You Give Us Full Ownership of the Website Code, Domain, and Hosting?',
+    a: 'Yes, 100%. Unlike agencies that lock client websites into proprietary servers or retain administrative passwords, NK Digital Tech hands over complete administrative access to your domain, code repository, hosting server, and analytics accounts upon final project delivery. You own every digital asset completely.',
+  },
+  {
+    q: 'Can You Redesign an Old Website Without Losing Existing Google Rankings?',
+    a: 'Yes. When we rebuild an existing website, our team performs a complete URL audit to ensure every established page is either matched exactly or mapped through clean 301 redirects. We retain your existing meta tags, schema structure, and high-ranking content so your search visibility remains protected throughout the launch.',
+  },
+  {
+    q: 'How Does an SEO-Friendly Website Design Generate Direct Customer Inquiries?',
+    a: 'An SEO-friendly website is designed around what your actual customers search for on Google. By creating dedicated landing pages for your core services, placing clear phone call and WhatsApp buttons where mobile eyes naturally look, and delivering fast page speeds, your website converts casual searchers into paying clients.',
+  },
+];
+
+const schemaService = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Website Development Company in Delhi NCR",
+  "serviceType": "Custom Web Development, Corporate Website Design & E-Commerce Web Engineering",
+  "provider": {
+    "@type": "ProfessionalService",
+    "name": "NK Digital Tech",
+    "url": "https://www.nkdigitaltech.net/",
+    "email": "nkdigitaltech1@gmail.com",
+    "telephone": "+91-80521-89051",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Delhi",
+      "addressRegion": "Delhi NCR",
+      "addressCountry": "IN"
+    }
+  },
+  "areaServed": ["Delhi", "Noida", "Gurgaon", "Faridabad", "Ghaziabad", "Delhi NCR"],
+  "description": pageDescription,
+  "url": pageCanonical
+});
+
+const schemaFAQ = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map((f) => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": f.a
+    }
+  }))
+});
+
+const schemaBreadcrumb = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.nkdigitaltech.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Website Development Company in Delhi NCR",
+      "item": pageCanonical
+    }
+  ]
+});
+---
+
+<Layout
+  title={pageTitle}
+  description={pageDescription}
+  canonical={pageCanonical}
+  ogImage="https://www.nkdigitaltech.net/images/web-dev-delhi-ncr/website-development-company-delhi-ncr-hero.webp"
+  preloadImage="/images/web-dev-delhi-ncr/website-development-company-delhi-ncr-hero.webp"
+  useRootNavLinks={true}
+  customSchemaLocalBusiness={schemaService}
+  customSchemaFAQ={schemaFAQ}
+  customSchemaBreadcrumb={schemaBreadcrumb}
+  utilityTagline="Custom Web Development • Sub-Second Speed • SEO & AI Ready • Delhi NCR"
+  footerTagline="Website Development Company in Delhi NCR"
+>
+
+  <!-- =====================================================================
+       SECTION 1: HERO SECTION (DARK SURFACE)
+  ===================================================================== -->
+  <section class="relative surface-dark overflow-hidden pt-8 pb-14 sm:pt-16 sm:pb-20 lg:pt-20 lg:pb-24 border-b border-slate-800/80">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="absolute inset-0 mesh-glow pointer-events-none"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
+      <nav aria-label="Breadcrumb" class="flex items-center gap-2 text-xs text-slate-400 mb-5 sm:mb-6">
+        <a href="/" class="hover:text-brand-400 transition-colors">Home</a>
+        <span class="text-slate-600">/</span>
+        <span class="text-brand-400 font-semibold">Website Development Company in Delhi NCR</span>
+      </nav>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+        <!-- Left Hero Content -->
+        <div class="lg:col-span-7 text-left min-w-0">
+          <div class="badge-dark mb-4 sm:mb-6">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse flex-shrink-0"></span>
+            <span>Sub-Second Load Speed • Google Core Web Vitals 95+ • Clean Custom Code</span>
+          </div>
+
+          <h1 class="font-display text-[clamp(1.75rem,6.5vw,2.75rem)] sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-[1.12] sm:leading-[1.1] mb-4 sm:mb-6 text-glow break-words">
+            Website Development Company in <br />
+            <span class="gradient-text-light">Delhi NCR</span>
+          </h1>
+
+          <p class="text-slate-300 text-sm sm:text-base lg:text-lg leading-relaxed mb-6 sm:mb-8 text-left sm:text-justify max-w-2xl">
+            Looking for a dependable <strong class="text-white font-semibold">Website Development Company in Delhi NCR</strong> that builds websites for real business growth? NK Digital Tech engineers fast, secure, and mobile-friendly websites designed to rank high on Google and earn citations in ChatGPT, Gemini, and modern AI search engines.
+          </p>
+
+          <div class="flex flex-col sm:flex-row gap-3.5 sm:gap-4 mb-8 sm:mb-10">
+            <a href="#contact" class="btn-primary">
+              <span>Book Free Web Consultation</span>
+              <svg class="w-4 h-4 ml-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+              </svg>
+            </a>
+            <a href="tel:+918052189051" class="btn-secondary-dark">
+              <span>Call +91 80521 89051</span>
+            </a>
+          </div>
+
+          <!-- Trust Badges Strip -->
+          <div class="pt-6 border-t border-slate-800/80 grid grid-cols-3 gap-3 sm:gap-6 text-center sm:text-left">
+            <div>
+              <span class="font-display font-extrabold text-xl sm:text-2xl text-white block">Sub 1.5s</span>
+              <span class="text-xs text-slate-400">Mobile Speed</span>
+            </div>
+            <div>
+              <span class="font-display font-extrabold text-xl sm:text-2xl text-white block">100%</span>
+              <span class="text-xs text-slate-400">Code Ownership</span>
+            </div>
+            <div>
+              <span class="font-display font-extrabold text-xl sm:text-2xl text-white block">Zero</span>
+              <span class="text-xs text-slate-400">Template Bloat</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Hero Image with Floating Highlights Card -->
+        <div class="lg:col-span-5 min-w-0">
+          <div class="relative rounded-2xl overflow-hidden glass-card border border-slate-700/80 shadow-2xl p-2 sm:p-3">
+            <div class="relative aspect-[16/10] w-full overflow-hidden rounded-xl bg-slate-900">
+              <img
+                src="/images/web-dev-delhi-ncr/website-development-company-delhi-ncr-hero.webp"
+                alt="Website Development Company in Delhi NCR Indian Software Engineers Reviewing Code"
+                width="1200"
+                height="670"
+                sizes="(max-width: 1024px) 100vw, 42vw"
+                class="w-full h-full object-cover"
+                loading="eager"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+              <div class="absolute bottom-3 left-3 right-3 text-left">
+                <span class="inline-block px-2.5 py-1 rounded-md bg-brand-600/90 text-white text-[10px] font-bold uppercase tracking-wider mb-1">
+                  Delhi NCR Tech Studio
+                </span>
+                <p class="text-xs font-semibold text-white truncate">
+                  Engineering conversion-ready websites for Delhi, Noida & Gurgaon
+                </p>
+              </div>
+            </div>
+
+            <!-- Floating Metrics Card -->
+            <div class="mt-3 p-3.5 sm:p-4 rounded-xl bg-slate-900/90 border border-slate-800 text-left">
+              <div class="flex items-center justify-between gap-2 mb-2">
+                <span class="text-xs font-bold text-slate-300">Google Core Web Vitals</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-bold bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
+                  Grade A Pass
+                </span>
+              </div>
+              <p class="text-xs text-slate-400 leading-relaxed text-left sm:text-justify">
+                Clean HTML structure, optimized WebP graphics, and responsive mobile architecture that turn visitors into verified business inquiries.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 2: PROBLEM & SOLUTION NARRATIVE (WHITE SURFACE)
+  ===================================================================== -->
+  <section class="surface-white py-14 sm:py-20 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+        <div class="lg:col-span-6 min-w-0">
+          <span class="badge-light mb-3">Why Traditional Web Design Fails</span>
+          <h2 class="font-display font-black text-2xl sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-tight mb-5">
+            Most Business Websites Look Nice but <span class="gradient-text-dark">Fail to Bring Real Leads</span>
+          </h2>
+          <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-4 text-left sm:text-justify">
+            Many business owners across Delhi, Noida, and Gurgaon invest money in a web design company in delhi ncr, only to receive a heavy WordPress theme loaded with forty different plugins. The site takes six seconds to load on mobile data, buries contact numbers behind confusing menus, and fails to appear on Google search results.
+          </p>
+          <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-6 text-left sm:text-justify">
+            As a premier <a href="/best-seo-company-in-delhi-ncr/" class="text-brand-600 hover:text-brand-700 font-semibold underline decoration-brand-300">Best SEO Company in Delhi NCR</a>, recognised best web development company in delhi, and established website designing company in delhi, NK Digital Tech takes a completely different path. We combine clean frontend coding, lightning-fast server responses, and search-focused structure from day one so your website functions as an active sales asset for your business.
+          </p>
+          <div class="grid grid-cols-2 gap-4 pt-2 border-t border-slate-100">
+            <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200">
+              <span class="font-display font-bold text-lg text-slate-900 block mb-0.5">Under 1.5s</span>
+              <span class="text-xs text-slate-500">Average mobile load time</span>
+            </div>
+            <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200">
+              <span class="font-display font-bold text-lg text-slate-900 block mb-0.5">3x Higher</span>
+              <span class="text-xs text-slate-500">Form and phone conversion rate</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Side: Solution Cards -->
+        <div class="lg:col-span-6 min-w-0 space-y-4">
+          <div class="p-5 sm:p-6 rounded-2xl border border-slate-200 bg-slate-50 hover:bg-white hover:shadow-lg transition-all">
+            <div class="flex items-center gap-3 mb-2.5">
+              <div class="w-9 h-9 rounded-xl bg-brand-50 border border-brand-200 text-brand-600 flex items-center justify-center font-bold text-sm">
+                01
+              </div>
+              <h3 class="font-display font-bold text-base sm:text-lg text-slate-900">
+                Lightweight Clean Code Architecture
+              </h3>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed text-left sm:text-justify">
+              We eliminate bloated third-party page builders. Every line of HTML, CSS, and JavaScript is handwritten for high performance and smooth mobile reading across Delhi NCR.
+            </p>
+          </div>
+
+          <div class="p-5 sm:p-6 rounded-2xl border border-slate-200 bg-slate-50 hover:bg-white hover:shadow-lg transition-all">
+            <div class="flex items-center gap-3 mb-2.5">
+              <div class="w-9 h-9 rounded-xl bg-violet-50 border border-violet-200 text-accent-600 flex items-center justify-center font-bold text-sm">
+                02
+              </div>
+              <h3 class="font-display font-bold text-base sm:text-lg text-slate-900">
+                Engineered for Google and AI Discovery
+              </h3>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed text-left sm:text-justify">
+              In coordination with our <a href="/ai-seo-company-in-delhi-ncr/" class="text-brand-600 hover:text-brand-700 font-semibold underline decoration-brand-300">AI SEO Company in Delhi NCR</a> and <a href="/aeo-services-in-delhi-ncr/" class="text-brand-600 hover:text-brand-700 font-semibold underline decoration-brand-300">AEO Services in Delhi NCR</a> teams, your pages feature structured question-and-answer blocks, schema markup, and clear facts that help search crawlers and AI assistants cite your company.
+            </p>
+          </div>
+
+          <div class="p-5 sm:p-6 rounded-2xl border border-slate-200 bg-slate-50 hover:bg-white hover:shadow-lg transition-all">
+            <div class="flex items-center gap-3 mb-2.5">
+              <div class="w-9 h-9 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-600 flex items-center justify-center font-bold text-sm">
+                03
+              </div>
+              <h3 class="font-display font-bold text-base sm:text-lg text-slate-900">
+                Local Map Pack & Inbound Conversion Ready
+              </h3>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed text-left sm:text-justify">
+              Supported by our <a href="/local-seo-services-in-delhi-ncr/" class="text-brand-600 hover:text-brand-700 font-semibold underline decoration-brand-300">Local SEO Services in Delhi NCR</a> team, we integrate accurate NAP details, click-to-call buttons, and Google Map embeds that drive customer footfall and phone inquiries.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 3: CORE WEBSITE DEVELOPMENT SERVICES (SLATE SURFACE)
+  ===================================================================== -->
+  <section id="services" class="surface-slate py-14 sm:py-20 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
+        <span class="badge-light mb-2.5">Our Development Capabilities</span>
+        <h2 class="font-display font-black text-2xl sm:text-3xl lg:text-4xl text-slate-900 tracking-tight mb-3">
+          Complete Web Solutions from a Leading <span class="gradient-text-dark">Web Development Company in Delhi</span>
+        </h2>
+        <p class="text-sm sm:text-base text-slate-600 leading-relaxed text-left sm:text-justify">
+          Whether you need a custom corporate portal, a high-converting landing page, or a secure e-commerce shopping platform, we deliver reliable web engineering tailored to your industry.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7">
+        {services.map((item) => (
+          <div class="elevated-card rounded-2xl p-6 sm:p-7 flex flex-col justify-between group">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-xs font-black tracking-widest text-slate-400">{item.num}</span>
+                <span class={`inline-block px-2.5 py-0.5 rounded-md text-[11px] font-bold ${item.badgeColor}`}>
+                  {item.category}
+                </span>
+              </div>
+              <div class={`w-12 h-12 rounded-xl flex items-center justify-center border mb-5 ${item.iconStyle}`} set:html={item.icon} />
+              <h3 class="font-display font-bold text-lg sm:text-xl text-slate-900 leading-snug mb-3 group-hover:text-brand-600 transition-colors">
+                {item.title}
+              </h3>
+              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4 text-left sm:text-justify">
+                {item.body}
+              </p>
+            </div>
+            <div class="pt-4 border-t border-slate-100">
+              <p class="text-xs text-slate-700 font-medium mb-3">
+                <strong class="text-slate-900">Commercial Impact:</strong> {item.impact}
+              </p>
+              <a href={item.href} class="inline-flex items-center gap-1.5 text-xs font-bold text-brand-600 hover:text-brand-700 min-h-[36px]">
+                <span>{item.cta}</span>
+                <svg class="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 4: COMPARISON TABLE (WHITE SURFACE)
+  ===================================================================== -->
+  <section class="surface-white py-14 sm:py-20 border-b border-slate-200">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+      <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
+        <span class="badge-light mb-2.5">Transparent Web Engineering</span>
+        <h2 class="font-display font-black text-2xl sm:text-3xl lg:text-4xl text-slate-900 tracking-tight mb-3">
+          Comparing Typical Agencies with <span class="gradient-text-dark">NK Digital Tech</span>
+        </h2>
+        <p class="text-sm sm:text-base text-slate-600 leading-relaxed text-left sm:text-justify">
+          See why corporate brands and expanding businesses across Delhi NCR trust our developers to build long-term digital foundations instead of disposable templates.
+        </p>
+      </div>
+
+      <div class="elevated-card rounded-2xl overflow-hidden border border-slate-200 shadow-sm">
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-xs sm:text-sm">
+            <thead class="bg-slate-900 text-white font-display text-xs uppercase tracking-wider">
+              <tr>
+                <th class="py-4 px-4 sm:px-6 font-bold">Key Technical Factor</th>
+                <th class="py-4 px-4 sm:px-6 font-bold text-rose-300">Typical Agency in Delhi NCR</th>
+                <th class="py-4 px-4 sm:px-6 font-bold text-emerald-300">NK Digital Tech Standards</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-200 text-slate-700">
+              {comparison.map((row) => (
+                <tr class="hover:bg-slate-50 transition-colors">
+                  <td class="py-4 px-4 sm:px-6 font-bold text-slate-900 whitespace-nowrap sm:whitespace-normal">
+                    {row.metric}
+                  </td>
+                  <td class="py-4 px-4 sm:px-6 text-slate-600 text-left sm:text-justify">
+                    <span class="inline-flex items-center text-rose-600 font-bold mr-1.5">&#10005;</span>
+                    {row.typical}
+                  </td>
+                  <td class="py-4 px-4 sm:px-6 text-slate-900 font-medium bg-emerald-50/50 text-left sm:text-justify">
+                    <span class="inline-flex items-center text-emerald-600 font-bold mr-1.5">&#10003;</span>
+                    {row.nk}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 5: REGIONAL HUBS ACROSS DELHI NCR (SLATE SURFACE)
+  ===================================================================== -->
+  <section id="locations" class="surface-slate py-14 sm:py-20 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
+        <span class="badge-light mb-2.5">Regional Coverage</span>
+        <h2 class="font-display font-black text-2xl sm:text-3xl lg:text-4xl text-slate-900 tracking-tight mb-3">
+          Serving Businesses Across <span class="gradient-text-dark">Every NCR Corridor</span>
+        </h2>
+        <p class="text-sm sm:text-base text-slate-600 leading-relaxed text-left sm:text-justify">
+          Our website development company in Delhi NCR deploys dedicated web strategies for regional businesses across South Delhi, Central Delhi, Noida Expressway, Cyber City Gurugram, and industrial Faridabad.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
+        {regionalHubs.map((hub) => (
+          <div class="elevated-card rounded-2xl p-5 sm:p-6 flex flex-col justify-between group">
+            <div>
+              <span class="text-[11px] font-black uppercase tracking-wider text-slate-400 block mb-1">
+                {hub.hub}
+              </span>
+              <h3 class="font-display font-bold text-lg sm:text-xl text-slate-900 group-hover:text-brand-600 transition-colors mb-2">
+                {hub.city}
+              </h3>
+              <p class="text-xs text-brand-600 font-semibold mb-3">
+                {hub.corridor}
+              </p>
+              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4 text-left sm:text-justify">
+                {hub.desc}
+              </p>
+            </div>
+            <div class="pt-3 border-t border-slate-100">
+              <a href={hub.href} class="inline-flex items-center gap-1.5 text-xs font-bold text-brand-600 hover:text-brand-700 min-h-[36px]">
+                <span>{hub.cta}</span>
+                <svg class="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 6: KEY INDUSTRIES SERVED (WHITE SURFACE)
+  ===================================================================== -->
+  <section id="industries" class="surface-white py-14 sm:py-20 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
+        <span class="badge-light mb-2.5">Domain-Specific Architecture</span>
+        <h2 class="font-display font-black text-2xl sm:text-3xl lg:text-4xl text-slate-900 tracking-tight mb-3">
+          Web Engineering Built for <span class="gradient-text-dark">Key Delhi NCR Industries</span>
+        </h2>
+        <p class="text-sm sm:text-base text-slate-600 leading-relaxed text-left sm:text-justify">
+          Every commercial sector has unique customer expectations. We engineer websites tailored to how real clients research, evaluate, and contact service providers in Delhi NCR.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7">
+        {industries.map((ind) => (
+          <div class={`elevated-card rounded-2xl p-6 sm:p-7 flex flex-col justify-between border-t-4 ${ind.accentBorder}`}>
+            <div>
+              <div class="flex items-center gap-3 mb-4">
+                <div class={`w-10 h-10 rounded-xl flex items-center justify-center border ${ind.iconBg}`} set:html={ind.icon} />
+                <div>
+                  <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 block">Industry Solution</span>
+                  <h3 class="font-display font-bold text-base sm:text-lg text-slate-900 leading-snug">
+                    {ind.title}
+                  </h3>
+                </div>
+              </div>
+              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4 text-left sm:text-justify">
+                {ind.focus}
+              </p>
+            </div>
+            <div class="pt-3 border-t border-slate-100">
+              <span class="text-xs font-semibold text-slate-900 block mb-1">Expected Lead Outcome:</span>
+              <p class="text-xs text-slate-600 text-left sm:text-justify">
+                {ind.outcome}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 7: STEP-BY-STEP DEVELOPMENT PROCESS (SLATE SURFACE)
+  ===================================================================== -->
+  <section class="surface-slate py-14 sm:py-20 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
+        <span class="badge-light mb-2.5">Predictable Delivery Roadmap</span>
+        <h2 class="font-display font-black text-2xl sm:text-3xl lg:text-4xl text-slate-900 tracking-tight mb-3">
+          Our Four-Stage <span class="gradient-text-dark">Website Development Process</span>
+        </h2>
+        <p class="text-sm sm:text-base text-slate-600 leading-relaxed text-left sm:text-justify">
+          From first wireframe to live production launch, we follow a transparent development cycle that finishes projects on schedule and within budget.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-xl bg-brand-50 text-brand-600 font-display font-bold text-base flex items-center justify-center mb-4">
+              01
+            </div>
+            <h3 class="font-display font-bold text-base sm:text-lg text-slate-900 mb-2">
+              Discovery & Wireframing
+            </h3>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed text-left sm:text-justify">
+              We study your competitors, target keywords, customer journey, and conversion funnels to map out exact page layouts before coding.
+            </p>
+          </div>
+          <span class="text-[11px] font-semibold text-brand-600 mt-4 block">Stage 1: Days 1 to 4</span>
+        </div>
+
+        <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-xl bg-violet-50 text-accent-600 font-display font-bold text-base flex items-center justify-center mb-4">
+              02
+            </div>
+            <h3 class="font-display font-bold text-base sm:text-lg text-slate-900 mb-2">
+              UI Design & Clean Coding
+            </h3>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed text-left sm:text-justify">
+              Our engineers craft clean, accessible HTML, CSS, and interactive components. We configure responsive typography, mobile layouts, and WebP graphics.
+            </p>
+          </div>
+          <span class="text-[11px] font-semibold text-accent-600 mt-4 block">Stage 2: Days 5 to 12</span>
+        </div>
+
+        <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 font-display font-bold text-base flex items-center justify-center mb-4">
+              03
+            </div>
+            <h3 class="font-display font-bold text-base sm:text-lg text-slate-900 mb-2">
+              SEO, Speed & AI Auditing
+            </h3>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed text-left sm:text-justify">
+              We validate JSON-LD structured schema, verify Google Core Web Vitals, test contact forms, and review readability against Google and AI crawler standards.
+            </p>
+          </div>
+          <span class="text-[11px] font-semibold text-emerald-600 mt-4 block">Stage 3: Days 13 to 16</span>
+        </div>
+
+        <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-xl bg-amber-50 text-amber-700 font-display font-bold text-base flex items-center justify-center mb-4">
+              04
+            </div>
+            <h3 class="font-display font-bold text-base sm:text-lg text-slate-900 mb-2">
+              Launch & Full Handover
+            </h3>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed text-left sm:text-justify">
+              We deploy your site to fast CDN servers, connect Google Search Console and GA4, and hand over 100% full administrative passwords and source code.
+            </p>
+          </div>
+          <span class="text-[11px] font-semibold text-amber-700 mt-4 block">Stage 4: Day 17 Onward</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 8: INTEGRATED DIGITAL MARKETING SERVICES IN NCR (WHITE SURFACE)
+  ===================================================================== -->
+  <section class="surface-white py-14 sm:py-20 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
+        <span class="badge-light mb-2.5">Full-Service Growth Partner</span>
+        <h2 class="font-display font-black text-2xl sm:text-3xl lg:text-4xl text-slate-900 tracking-tight mb-3">
+          Connect Your New Website to <span class="gradient-text-dark">Proven Search Growth</span>
+        </h2>
+        <p class="text-sm sm:text-base text-slate-600 leading-relaxed text-left sm:text-justify">
+          A great website needs qualified visitors. Pair your custom website development with our specialized digital growth campaigns across Delhi, Noida, and Gurgaon.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="p-6 rounded-2xl border border-slate-200 bg-slate-50 flex flex-col justify-between">
+          <div>
+            <h3 class="font-display font-bold text-lg text-slate-900 mb-2">
+              Delhi Digital Marketing
+            </h3>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4 text-left sm:text-justify">
+              Build commanding local and regional rankings with our <a href="/best-digital-marketing-agency-in-delhi/" class="text-brand-600 hover:text-brand-700 font-semibold underline decoration-brand-300">Best Digital Marketing Agency in Delhi</a> team, driving consistent high-intent client inquiries.
+            </p>
+          </div>
+          <a href="/best-digital-marketing-agency-in-delhi/" class="text-xs font-bold text-brand-600 hover:text-brand-700">
+            Explore Delhi Hub →
+          </a>
+        </div>
+
+        <div class="p-6 rounded-2xl border border-slate-200 bg-slate-50 flex flex-col justify-between">
+          <div>
+            <h3 class="font-display font-bold text-lg text-slate-900 mb-2">
+              Noida Growth Campaigns
+            </h3>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4 text-left sm:text-justify">
+              Scale your IT, manufacturing, or commercial enterprise with our <a href="/best-digital-marketing-agency-in-noida/" class="text-brand-600 hover:text-brand-700 font-semibold underline decoration-brand-300">Best Digital Marketing Agency in Noida</a> specialists across Expressway and industrial belts.
+            </p>
+          </div>
+          <a href="/best-digital-marketing-agency-in-noida/" class="text-xs font-bold text-brand-600 hover:text-brand-700">
+            Explore Noida Hub →
+          </a>
+        </div>
+
+        <div class="p-6 rounded-2xl border border-slate-200 bg-slate-50 flex flex-col justify-between">
+          <div>
+            <h3 class="font-display font-bold text-lg text-slate-900 mb-2">
+              Gurgaon Corporate Search
+            </h3>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4 text-left sm:text-justify">
+              Position your corporate enterprise or tech firm at the forefront of search with our <a href="/best-digital-marketing-agency-in-gurgaon/" class="text-brand-600 hover:text-brand-700 font-semibold underline decoration-brand-300">Best Digital Marketing Agency in Gurgaon</a> strategists in Cyber City.
+            </p>
+          </div>
+          <a href="/best-digital-marketing-agency-in-gurgaon/" class="text-xs font-bold text-brand-600 hover:text-brand-700">
+            Explore Gurgaon Hub →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 9: AI SEARCH & GOOGLE FAQS (SLATE SURFACE)
+  ===================================================================== -->
+  <section id="faq" class="surface-slate py-14 sm:py-20 border-b border-slate-200">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-10 sm:mb-12">
+        <span class="badge-light mb-2.5">AI Search & Google Questions</span>
+        <h2 class="font-display font-black text-2xl sm:text-3xl lg:text-4xl text-slate-900 tracking-tight mb-3">
+          Frequently Asked <span class="gradient-text-dark">Questions</span>
+        </h2>
+        <p class="text-sm sm:text-base text-slate-600 leading-relaxed text-left sm:text-justify">
+          Get direct, factual answers to common questions about website pricing, development timelines, speed optimization, and generative AI search visibility in Delhi NCR.
+        </p>
+      </div>
+
+      <div class="space-y-3.5">
+        {faqs.map((item) => (
+          <details class="group bg-white rounded-2xl border border-slate-200 shadow-sm p-4 sm:p-6 transition-all">
+            <summary class="flex items-center justify-between gap-4 font-display font-bold text-sm sm:text-base text-slate-900 cursor-pointer">
+              <span>{item.q}</span>
+              <span class="faq-icon w-7 h-7 rounded-lg border border-slate-200 bg-slate-50 text-slate-600 flex items-center justify-center flex-shrink-0 text-sm font-bold">
+                +
+              </span>
+            </summary>
+            <p class="mt-3.5 pt-3.5 border-t border-slate-100 text-xs sm:text-sm text-slate-600 leading-relaxed text-left sm:text-justify">
+              {item.a}
+            </p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 10: CONCLUSION & CONTACT CONSULTATION (DARK SURFACE)
+  ===================================================================== -->
+  <section id="contact" class="relative surface-dark py-14 sm:py-20 lg:py-24 pb-28 sm:pb-20 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="absolute inset-0 mesh-glow pointer-events-none"></div>
+
+    <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+        <!-- Left Side: Conclusion Text -->
+        <div class="lg:col-span-6 text-left min-w-0">
+          <span class="badge-dark mb-4">Start Your Web Project Today</span>
+          <h2 class="font-display font-black text-2xl sm:text-4xl text-white tracking-tight leading-tight mb-4">
+            Partner With a Trusted <span class="gradient-text-light">Website Development Company in Delhi NCR</span>
+          </h2>
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-4 text-left sm:text-justify">
+            In conclusion, your business website is your most valuable digital showroom. Slow loading speeds, broken mobile layouts, and missing search schema cost you paying customers every single day. Choosing NK Digital Tech as your website development company in Delhi NCR guarantees clean code, rapid mobile speeds, and a foundation built for long-term Google and AI visibility.
+          </p>
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-6 text-left sm:text-justify">
+            Alongside our <a href="/geo-services-in-delhi-ncr/" class="text-brand-300 hover:text-white font-semibold underline decoration-brand-400">GEO Services in Delhi NCR</a> team, we make sure your business is positioned to lead across both traditional search engines and emerging generative answer models.
+          </p>
+
+          <div class="space-y-3 pt-4 border-t border-slate-800 text-xs sm:text-sm text-slate-300">
+            <div class="flex items-center gap-3">
+              <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+              <span>Direct Phone Consultation: <a href="tel:+918052189051" class="text-white font-bold hover:text-brand-300">+91 80521 89051</a></span>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="w-2 h-2 rounded-full bg-brand-400"></span>
+              <span>Official Email: <a href="mailto:nkdigitaltech1@gmail.com" class="text-white font-bold hover:text-brand-300">nkdigitaltech1@gmail.com</a></span>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="w-2 h-2 rounded-full bg-cyan-400"></span>
+              <span>Serving Delhi, Noida, Gurgaon, Faridabad & Ghaziabad</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Side: Contact Card / Quick Form -->
+        <div class="lg:col-span-6 min-w-0">
+          <div class="glass-card rounded-2xl p-6 sm:p-8 border border-slate-700/80 shadow-2xl">
+            <h3 class="font-display font-bold text-xl text-white mb-2">
+              Request Your Free Website Proposal
+            </h3>
+            <p class="text-xs sm:text-sm text-slate-300 mb-6 text-left sm:text-justify">
+              Tell us about your website requirements. We will analyze your current digital presence and provide a clear, fixed-price plan within 4 business hours.
+            </p>
+
+            <form
+              action="https://formsubmit.co/nkdigitaltech1@gmail.com"
+              method="POST"
+              class="space-y-4 text-left"
+            >
+              <input type="hidden" name="_subject" value="New Website Development Inquiry (Delhi NCR)" />
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_next" value="https://www.nkdigitaltech.net/contact-us/" />
+
+              <div>
+                <label for="contact-name" class="block text-xs font-semibold text-slate-300 mb-1">Your Full Name *</label>
+                <input
+                  id="contact-name"
+                  type="text"
+                  name="Full_Name"
+                  required
+                  placeholder="Enter your name"
+                  class="w-full px-4 py-2.5 rounded-xl bg-slate-900/90 border border-slate-700 text-sm text-white placeholder:text-slate-500 focus:outline-none focus:border-brand-400 min-h-[44px]"
+                />
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="contact-phone" class="block text-xs font-semibold text-slate-300 mb-1">Mobile Number *</label>
+                  <input
+                    id="contact-phone"
+                    type="tel"
+                    name="Mobile_Number"
+                    required
+                    pattern="[0-9]{10}"
+                    placeholder="10-digit mobile"
+                    class="w-full px-4 py-2.5 rounded-xl bg-slate-900/90 border border-slate-700 text-sm text-white placeholder:text-slate-500 focus:outline-none focus:border-brand-400 min-h-[44px]"
+                  />
+                </div>
+                <div>
+                  <label for="contact-service" class="block text-xs font-semibold text-slate-300 mb-1">Website Type</label>
+                  <select
+                    id="contact-service"
+                    name="Website_Type"
+                    class="w-full px-3 py-2.5 rounded-xl bg-slate-900/90 border border-slate-700 text-sm text-white focus:outline-none focus:border-brand-400 min-h-[44px]"
+                  >
+                    <option value="Corporate Website">Corporate Website</option>
+                    <option value="E-Commerce Store">E-Commerce Store</option>
+                    <option value="Custom Web App">Custom Web App</option>
+                    <option value="Website Redesign">Website Redesign & Speed Fix</option>
+                    <option value="WordPress CMS">WordPress CMS Website</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label for="contact-message" class="block text-xs font-semibold text-slate-300 mb-1">Brief Requirements</label>
+                <textarea
+                  id="contact-message"
+                  name="Message"
+                  rows="3"
+                  placeholder="Share details like page count, target audience, or current website link"
+                  class="w-full px-4 py-2.5 rounded-xl bg-slate-900/90 border border-slate-700 text-sm text-white placeholder:text-slate-500 focus:outline-none focus:border-brand-400"
+                ></textarea>
+              </div>
+
+              <button type="submit" class="btn-primary w-full min-h-[48px] py-3.5">
+                <span>Submit Website Inquiry</span>
+                <svg class="w-4 h-4 ml-1.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mobile Sticky Bottom CTA Bar -->
+  <div class="mobile-sticky-cta md:hidden fixed bottom-0 inset-x-0 z-40 bg-[#050a14]/95 backdrop-blur-lg border-t border-slate-800 px-3 py-2.5 flex items-center gap-2 transition-all duration-300">
+    <a href="tel:+918052189051" class="flex-1 min-h-[44px] inline-flex items-center justify-center gap-1.5 rounded-xl bg-slate-900 border border-slate-700 text-white text-xs font-semibold">
+      <span>Call Now</span>
+    </a>
+    <a href="https://wa.me/918052189051?text=Hi%20NK%20Digital%20Tech%2C%20I%20am%20looking%20for%20a%20Website%20Development%20Company%20in%20Delhi%20NCR." target="_blank" rel="noopener noreferrer" class="flex-1 min-h-[44px] inline-flex items-center justify-center gap-1.5 rounded-xl bg-emerald-600 text-white text-xs font-semibold">
+      <span>WhatsApp</span>
+    </a>
+    <a href="#contact" class="flex-1 min-h-[44px] inline-flex items-center justify-center gap-1.5 rounded-xl bg-gradient-to-r from-brand-500 to-accent-600 text-white text-xs font-bold">
+      <span>Free Quote</span>
+    </a>
+  </div>
+
+</Layout>

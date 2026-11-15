@@ -1,0 +1,373 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '../styles/global.css';
+
+const pageTitle = 'SEO, AI Search & Digital Marketing Blog | NK Digital Tech';
+const pageDescription = 'Read practical guides on Organic SEO, AI Search Visibility (ChatGPT, Gemini, Google AI Overviews), AEO, GEO, Local Map Pack and web conversion by NK Digital Tech.';
+const pageCanonical = 'https://www.nkdigitaltech.net/blog/';
+
+interface BlogPost {
+  id: string;
+  category: string;
+  badgeClass: string;
+  datePublished: string;
+  dateLabel: string;
+  readTime: string;
+  image: string;
+  imageAlt: string;
+  title: string;
+  excerpt: string;
+  takeaways: string[];
+  relatedLabel: string;
+  relatedHref: string;
+}
+
+const categories = [
+  'All Guides',
+  'AI Search & GEO',
+  'Local SEO & Maps',
+  'AEO & Answer Snippets',
+  'Website Speed & CRO',
+  'Organic SEO',
+  'Industry Growth',
+];
+
+const blogPosts: BlogPost[] = [];
+
+const customSchemaLocalBusiness = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "NK Digital Tech SEO & AI Search Blog",
+  "url": pageCanonical,
+  "description": pageDescription,
+  "inLanguage": "en-IN",
+  "publisher": {
+    "@type": "Organization",
+    "name": "NK Digital Tech",
+    "url": "https://www.nkdigitaltech.net/",
+    "email": "nkdigitaltech1@gmail.com",
+    "telephone": "+91-80521-89051"
+  },
+  "blogPost": blogPosts.map((post) => ({
+    "@type": "BlogPosting",
+    "headline": post.title,
+    "description": post.excerpt,
+    "datePublished": post.datePublished,
+    "dateModified": post.datePublished,
+    "image": `https://www.nkdigitaltech.net${post.image}`,
+    "url": `${pageCanonical}#${post.id}`,
+    "author": {
+      "@type": "Organization",
+      "name": "NK Digital Tech"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "NK Digital Tech"
+    }
+  }))
+});
+
+const hubLinks = [
+  {
+    title: 'Delhi Digital Marketing Hub',
+    desc: '12 industry strategies and hyper-local corridors across Delhi.',
+    href: '/best-digital-marketing-agency-in-delhi/',
+  },
+  {
+    title: 'Noida Digital Marketing Hub',
+    desc: 'IT, SaaS, manufacturing and real estate growth in Noida & Expressway.',
+    href: '/best-digital-marketing-agency-in-noida/',
+  },
+  {
+    title: 'Gurgaon Digital Marketing Hub',
+    desc: 'Enterprise Cyber City, healthcare, finance and D2C search growth.',
+    href: '/best-digital-marketing-agency-in-gurgaon/',
+  },
+  {
+    title: 'Lucknow Digital Marketing Hub',
+    desc: 'Gomti Nagar, Hazratganj and Shaheed Path business growth.',
+    href: '/best-digital-marketing-company-in-lucknow/',
+  },
+];
+---
+
+<Layout
+  title={pageTitle}
+  description={pageDescription}
+  canonical={pageCanonical}
+  ogImage="https://www.nkdigitaltech.net/images/hero-best-digital-marketing-company-delhi-ncr.webp"
+  useRootNavLinks={true}
+  customSchemaLocalBusiness={customSchemaLocalBusiness}
+  utilityTagline="NK Digital Tech Blog • Practical SEO, AI Search (GEO), AEO & Local Map Guides"
+  footerTagline="Practical Search, AI Search & Digital Growth Insights"
+>
+
+  <!-- =====================================================================
+       SECTION 1: BLOG HERO (DARK SURFACE)
+  ===================================================================== -->
+  <section class="relative surface-dark overflow-hidden pt-6 pb-10 sm:pt-14 sm:pb-16 lg:pt-16 lg:pb-20 border-b border-slate-800/80">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="absolute inset-0 mesh-glow pointer-events-none"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="max-w-3xl text-left min-w-0">
+        <div class="badge-dark mb-3 sm:mb-5">
+          <span class="w-2 h-2 rounded-full bg-brand-400 animate-ping flex-shrink-0"></span>
+          <span>NK Digital Tech Editorial • Search, AI &amp; Growth Guides</span>
+        </div>
+
+        <h1 class="font-display text-[clamp(1.62rem,6.5vw,2.35rem)] sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-[1.15] sm:leading-[1.1] text-glow break-words">
+          Search, AI Visibility &amp; <br />
+          <span class="gradient-text-light">Digital Growth Blog</span>
+        </h1>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 2: BLOG ARTICLES GRID / CLEAN EMPTY STATE (WHITE SURFACE)
+  ===================================================================== -->
+  <section id="articles-grid" class="surface-white py-12 sm:py-16 lg:py-20 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-5 mb-8 sm:mb-10">
+        <div>
+          <span class="badge-light mb-2.5">Latest Search &amp; AI Insights</span>
+          <h2 class="font-display font-black text-2xl sm:text-3xl lg:text-4xl text-slate-900 tracking-tight">
+            All Marketing &amp; <span class="gradient-text-dark">Growth Articles</span>
+          </h2>
+        </div>
+
+        <!-- Search Input -->
+        <div class="w-full lg:w-80">
+          <label for="blog-search-input" class="sr-only">Search articles</label>
+          <div class="relative">
+            <svg class="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+            </svg>
+            <input
+              id="blog-search-input"
+              type="search"
+              placeholder="Search articles by keyword"
+              class="w-full pl-10 pr-4 py-2.5 min-h-[44px] rounded-xl border border-slate-300 bg-slate-50 text-sm text-slate-800 placeholder:text-slate-400 focus:outline-none focus:border-brand-500 focus:bg-white transition-colors"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- Category Filter Pills -->
+      <div id="blog-filter-bar" class="flex flex-wrap gap-2 mb-8 sm:mb-10" role="group" aria-label="Filter articles by category">
+        {categories.map((cat, idx) => (
+          <button
+            type="button"
+            data-filter={cat}
+            class={`blog-filter-btn px-3.5 py-2 min-h-[40px] rounded-xl text-xs sm:text-sm font-semibold border transition-all ${
+              idx === 0
+                ? 'bg-brand-600 text-white border-brand-600 shadow-sm'
+                : 'bg-slate-50 text-slate-700 border-slate-200 hover:border-brand-400 hover:text-brand-700'
+            }`}
+          >
+            {cat}
+          </button>
+        ))}
+      </div>
+
+      <!-- Article Cards Grid -->
+      {blogPosts.length > 0 && (
+        <div id="blog-cards-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7">
+          {blogPosts.map((post) => (
+            <article
+              class="blog-card elevated-card rounded-2xl overflow-hidden flex flex-col justify-between"
+              data-category={post.category}
+              data-search={`${post.title} ${post.excerpt} ${post.category} ${post.takeaways.join(' ')}`.toLowerCase()}
+            >
+              <div>
+                <div class="aspect-[16/10] w-full overflow-hidden bg-slate-100">
+                  <img
+                    src={post.image}
+                    alt={post.imageAlt}
+                    width="800"
+                    height="500"
+                    loading="lazy"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                  />
+                </div>
+                <div class="p-5 sm:p-6">
+                  <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+                    <span class={`inline-flex items-center px-2.5 py-1 rounded-lg border text-[11px] font-bold ${post.badgeClass}`}>
+                      {post.category}
+                    </span>
+                    <span class="text-[11px] font-medium text-slate-500">{post.dateLabel} • {post.readTime}</span>
+                  </div>
+
+                  <h3 class="font-display font-bold text-lg sm:text-xl text-slate-900 leading-snug mb-2.5">
+                    <a href={`#${post.id}`} class="hover:text-brand-600 transition-colors">
+                      {post.title}
+                    </a>
+                  </h3>
+
+                  <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
+                    {post.excerpt}
+                  </p>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+      )}
+
+      <!-- Clean Empty State -->
+      <div id="blog-empty-state" class={`${blogPosts.length === 0 ? '' : 'hidden '}rounded-2xl border border-dashed border-slate-300 bg-slate-50/80 px-6 py-12 sm:py-16 text-center max-w-3xl mx-auto`}>
+        <div class="w-12 h-12 rounded-2xl bg-brand-50 border border-brand-200 text-brand-600 flex items-center justify-center mx-auto mb-4">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"/>
+          </svg>
+        </div>
+        <h3 class="font-display font-bold text-xl sm:text-2xl text-slate-900 mb-2">
+          No Blog Posts Published Yet
+        </h3>
+        <p class="text-sm sm:text-base text-slate-600 leading-relaxed mb-6 max-w-xl mx-auto">
+          This blog section is ready for new articles. In the meantime, explore our city digital marketing hubs or request a free website and AI visibility review.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+          <a href="/contact-us/" class="btn-primary w-full sm:w-auto">
+            <span>Request Free Site &amp; AI Audit</span>
+          </a>
+          <a href="/" class="btn-secondary-light w-full sm:w-auto">
+            <span>Back to Home</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 3: REGIONAL HUB DIRECTORY (SLATE SURFACE)
+  ===================================================================== -->
+  <section class="surface-slate py-12 sm:py-16 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="text-center max-w-2xl mx-auto mb-8 sm:mb-10">
+        <span class="badge-light mb-2">City Growth Centers</span>
+        <h2 class="font-display font-black text-2xl sm:text-3xl text-slate-900 tracking-tight">
+          Explore Sector Guides by <span class="gradient-text-dark">City Hub</span>
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+        {hubLinks.map((hub) => (
+          <a href={hub.href} class="elevated-card rounded-2xl p-5 flex flex-col justify-between group">
+            <div>
+              <h3 class="font-display font-bold text-base sm:text-lg text-slate-900 group-hover:text-brand-600 transition-colors mb-1.5">
+                {hub.title}
+              </h3>
+              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
+                {hub.desc}
+              </p>
+            </div>
+            <span class="inline-flex items-center gap-1.5 text-xs font-bold text-brand-600">
+              <span>Explore Hub</span>
+              <svg class="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+              </svg>
+            </span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 4: CONSULTATION CTA (DARK SURFACE)
+  ===================================================================== -->
+  <section id="contact" class="relative surface-dark py-12 sm:py-16 lg:py-20 pb-28 sm:pb-20 overflow-hidden">
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="absolute inset-0 mesh-glow pointer-events-none"></div>
+
+    <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center">
+      <span class="badge-dark mb-3">Free Website &amp; AI Search Audit</span>
+      <h2 class="font-display font-black text-2xl sm:text-4xl text-white tracking-tight mb-4">
+        Want Us to Grow Your Search &amp; AI Visibility <span class="gradient-text-light">For Your Business?</span>
+      </h2>
+      <p class="text-sm sm:text-base text-slate-300 leading-relaxed mb-7 max-w-2xl mx-auto">
+        Speak directly with our senior SEO and AI Search team. We audit your speed, Google Map rankings, schema and customer pipeline, then share a clear 90-day plan at zero cost.
+      </p>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-3.5 sm:gap-4">
+        <a href="/contact-us/" class="btn-primary w-full sm:w-auto">
+          <span>Book Free Strategy Call</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18"/>
+          </svg>
+        </a>
+        <a href="tel:+918052189051" class="btn-secondary-dark w-full sm:w-auto">
+          <span>Call +91 80521 89051</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mobile Sticky Bottom CTA Bar -->
+  <div class="mobile-sticky-cta md:hidden fixed bottom-0 inset-x-0 z-40 bg-[#050a14]/95 backdrop-blur-lg border-t border-slate-800 px-3 py-2.5 flex items-center gap-2 transition-all duration-300">
+    <a href="tel:+918052189051" class="flex-1 min-h-[44px] inline-flex items-center justify-center gap-1.5 rounded-xl bg-slate-900 border border-slate-700 text-white text-xs font-semibold">
+      <span>Call Now</span>
+    </a>
+    <a href="https://wa.me/918052189051" target="_blank" rel="noopener noreferrer" class="flex-1 min-h-[44px] inline-flex items-center justify-center gap-1.5 rounded-xl bg-emerald-600 text-white text-xs font-semibold">
+      <span>WhatsApp</span>
+    </a>
+    <a href="/contact-us/" class="flex-1 min-h-[44px] inline-flex items-center justify-center gap-1.5 rounded-xl bg-gradient-to-r from-brand-500 to-accent-600 text-white text-xs font-bold">
+      <span>Free Audit</span>
+    </a>
+  </div>
+
+  <script is:inline>
+    (function () {
+      const buttons = document.querySelectorAll('.blog-filter-btn');
+      const cards = document.querySelectorAll('.blog-card');
+      const searchInput = document.getElementById('blog-search-input');
+      const emptyState = document.getElementById('blog-empty-state');
+      let activeCategory = 'All Guides';
+
+      function applyFilters() {
+        const query = (searchInput && searchInput.value ? searchInput.value : '').trim().toLowerCase();
+        let visibleCount = 0;
+
+        cards.forEach(function (card) {
+          const cat = card.getAttribute('data-category') || '';
+          const text = card.getAttribute('data-search') || '';
+          const matchesCat = activeCategory === 'All Guides' || cat === activeCategory;
+          const matchesSearch = !query || text.indexOf(query) !== -1;
+
+          if (matchesCat && matchesSearch) {
+            card.classList.remove('hidden');
+            visibleCount++;
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+
+        if (emptyState) {
+          if (visibleCount === 0) emptyState.classList.remove('hidden');
+          else emptyState.classList.add('hidden');
+        }
+      }
+
+      buttons.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          activeCategory = btn.getAttribute('data-filter') || 'All Guides';
+          buttons.forEach(function (other) {
+            const isSelected = other === btn;
+            other.className = isSelected
+              ? 'blog-filter-btn px-3.5 py-2 min-h-[40px] rounded-xl text-xs sm:text-sm font-semibold border transition-all bg-brand-600 text-white border-brand-600 shadow-sm'
+              : 'blog-filter-btn px-3.5 py-2 min-h-[40px] rounded-xl text-xs sm:text-sm font-semibold border transition-all bg-slate-50 text-slate-700 border-slate-200 hover:border-brand-400 hover:text-brand-700';
+          });
+          applyFilters();
+        });
+      });
+
+      if (searchInput) {
+        searchInput.addEventListener('input', applyFilters);
+      }
+    })();
+  </script>
+
+</Layout>

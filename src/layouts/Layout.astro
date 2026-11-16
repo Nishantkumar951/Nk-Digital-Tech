@@ -170,13 +170,14 @@ if (customSchemaBreadcrumb) {
   const eastKeys = ['laxmi-nagar', 'mayur-vihar', 'preet-vihar', 'patparganj', 'vivek-vihar', 'shahdara', 'krishna-nagar', 'gandhi-nagar', 'shakarpur', 'ip-extension', 'karkardooma', 'nirman-vihar'];
 
   const isDM = urlPath.includes('digital-marketing');
+  const isWebDev = urlPath.includes('website-development') || urlPath.includes('website-designing');
 
   if (southKeys.some(k => urlPath.includes(k))) {
     items.push({
       "@type": "ListItem",
       "position": 2,
-      "name": isDM ? "South Delhi Digital Marketing" : "South Delhi SEO",
-      "item": isDM ? "https://www.nkdigitaltech.net/digital-marketing-company-in-south-delhi/" : "https://www.nkdigitaltech.net/best-seo-company-in-south-delhi/"
+      "name": isWebDev ? "South Delhi Website Development" : (isDM ? "South Delhi Digital Marketing" : "South Delhi SEO"),
+      "item": isWebDev ? "https://www.nkdigitaltech.net/website-development-company-in-south-delhi/" : (isDM ? "https://www.nkdigitaltech.net/digital-marketing-company-in-south-delhi/" : "https://www.nkdigitaltech.net/best-seo-company-in-south-delhi/")
     });
     items.push({
       "@type": "ListItem",
@@ -188,8 +189,8 @@ if (customSchemaBreadcrumb) {
     items.push({
       "@type": "ListItem",
       "position": 2,
-      "name": isDM ? "North Delhi Digital Marketing" : "North Delhi SEO",
-      "item": isDM ? "https://www.nkdigitaltech.net/digital-marketing-company-in-north-delhi/" : "https://www.nkdigitaltech.net/best-seo-company-in-north-delhi/"
+      "name": isWebDev ? "North Delhi Website Development" : (isDM ? "North Delhi Digital Marketing" : "North Delhi SEO"),
+      "item": isWebDev ? "https://www.nkdigitaltech.net/website-development-company-in-north-delhi/" : (isDM ? "https://www.nkdigitaltech.net/digital-marketing-company-in-north-delhi/" : "https://www.nkdigitaltech.net/best-seo-company-in-north-delhi/")
     });
     items.push({
       "@type": "ListItem",
@@ -201,8 +202,8 @@ if (customSchemaBreadcrumb) {
     items.push({
       "@type": "ListItem",
       "position": 2,
-      "name": isDM ? "West Delhi Digital Marketing" : "West Delhi SEO",
-      "item": isDM ? "https://www.nkdigitaltech.net/digital-marketing-company-in-west-delhi/" : "https://www.nkdigitaltech.net/best-seo-company-in-west-delhi/"
+      "name": isWebDev ? "West Delhi Website Development" : (isDM ? "West Delhi Digital Marketing" : "West Delhi SEO"),
+      "item": isWebDev ? "https://www.nkdigitaltech.net/website-development-company-in-west-delhi/" : (isDM ? "https://www.nkdigitaltech.net/digital-marketing-company-in-west-delhi/" : "https://www.nkdigitaltech.net/best-seo-company-in-west-delhi/")
     });
     items.push({
       "@type": "ListItem",
@@ -214,8 +215,8 @@ if (customSchemaBreadcrumb) {
     items.push({
       "@type": "ListItem",
       "position": 2,
-      "name": isDM ? "East Delhi Digital Marketing" : "East Delhi SEO",
-      "item": isDM ? "https://www.nkdigitaltech.net/digital-marketing-company-in-east-delhi/" : "https://www.nkdigitaltech.net/best-seo-company-in-east-delhi/"
+      "name": isWebDev ? "East Delhi Website Development" : (isDM ? "East Delhi Digital Marketing" : "East Delhi SEO"),
+      "item": isWebDev ? "https://www.nkdigitaltech.net/website-development-company-in-east-delhi/" : (isDM ? "https://www.nkdigitaltech.net/digital-marketing-company-in-east-delhi/" : "https://www.nkdigitaltech.net/best-seo-company-in-east-delhi/")
     });
     items.push({
       "@type": "ListItem",
@@ -224,7 +225,6 @@ if (customSchemaBreadcrumb) {
       "item": canonical
     });
   } else if (urlPath.includes('south-delhi') || urlPath.includes('north-delhi') || urlPath.includes('west-delhi') || urlPath.includes('east-delhi')) {
-    const isWebDev = urlPath.includes('website-development');
     items.push({
       "@type": "ListItem",
       "position": 2,

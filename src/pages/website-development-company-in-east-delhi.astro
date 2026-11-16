@@ -557,9 +557,9 @@ const webDevEastDelhiSchemaFAQ = JSON.stringify({
           </div>
 
           <h1
-            class="font-display text-[clamp(1.62rem,6.6vw,2.35rem)] sm:text-5xl lg:text-[3.1rem] font-black tracking-tight text-white leading-[1.15] sm:leading-[1.1] mb-3 sm:mb-5 text-glow"
+            class="font-display text-[clamp(1.52rem,6.3vw,2.35rem)] sm:text-5xl lg:text-[3.1rem] font-black tracking-tight text-white leading-[1.15] sm:leading-[1.1] mb-3 sm:mb-5 text-glow"
           >
-            Website Development Company <span class="gradient-text-light"
+            Website Development Company <span class="gradient-text-light whitespace-nowrap"
               >in East Delhi</span
             >
           </h1>
@@ -631,7 +631,8 @@ const webDevEastDelhiSchemaFAQ = JSON.stringify({
                 alt="Website Development Company in East Delhi Developers Building Fast SEO AEO and GEO Ready Websites"
                 width="960"
                 height="540"
-                sizes="(max-width: 1024px) 100vw, 42vw"
+                sizes="(max-width: 639px) calc(100vw - 2rem), (max-width: 1024px) 100vw, 42vw"
+                loading="eager"
                 fetchpriority="high"
                 decoding="async"
                 class="w-full aspect-[16/9] sm:aspect-auto sm:h-64 md:h-[330px] lg:h-[350px] object-cover object-center sm:group-hover:scale-105 transition-transform duration-500"
@@ -1893,9 +1894,10 @@ const webDevEastDelhiSchemaFAQ = JSON.stringify({
   <style>
     @media (max-width: 639px) {
       .glass-card {
-        backdrop-filter: blur(8px);
-        -webkit-backdrop-filter: blur(8px);
+        backdrop-filter: blur(6px);
+        -webkit-backdrop-filter: blur(6px);
       }
+      #services,
       #locations,
       #why-us,
       #clients,
@@ -1904,7 +1906,11 @@ const webDevEastDelhiSchemaFAQ = JSON.stringify({
       #process,
       #faq {
         content-visibility: auto;
-        contain-intrinsic-size: auto 720px;
+        contain-intrinsic-size: auto 680px;
+      }
+      p a {
+        padding-top: 2px;
+        padding-bottom: 2px;
       }
       a,
       button,

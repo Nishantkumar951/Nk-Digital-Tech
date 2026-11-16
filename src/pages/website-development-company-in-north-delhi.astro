@@ -15,39 +15,6 @@ const northDelhiFooterDisciplines = [
   { label: 'Local SEO & Google Business Profile', href: '/local-seo-services-in-delhi/' },
 ];
 
-const clients = [
-  {
-    "name": "Nayan Opticals",
-    "sector": "Optical Showrooms & Eye Care",
-    "region": "Rohini & Pitampura, North Delhi",
-    "logo": "/images/clients/nayan-opticals.webp"
-  },
-  {
-    "name": "Vastra Villa",
-    "sector": "Designer Bridal & Ethnic Wear",
-    "region": "Kamla Nagar & Model Town",
-    "logo": "/images/clients/vastra-villa.webp"
-  },
-  {
-    "name": "Landsquare",
-    "sector": "Residential & Commercial Real Estate",
-    "region": "Rohini, Prashant Vihar & NSP",
-    "logo": "/images/clients/landsquare.webp"
-  },
-  {
-    "name": "Achievers Academy",
-    "sector": "Competitive Exam & Entrance Coaching",
-    "region": "Mukherjee Nagar & Rohini",
-    "logo": "/images/clients/achievers-academy.webp"
-  },
-  {
-    "name": "Buildcon Infratech",
-    "sector": "Industrial & Commercial Contractors",
-    "region": "Wazirpur & Bawana Industrial Belt",
-    "logo": "/images/clients/buildcon-infratech.webp"
-  }
-];
-
 const services = [
   {
     num: '01',
@@ -299,69 +266,6 @@ const industries = rawIndustries.map((item, idx) => ({
   ...industryIcons[idx],
 }));
 
-const testimonials = [
-  {
-    "quote": "Our chartered accountancy and corporate advisory firm in Netaji Subhash Place had a plain website that brought zero inquiries. NK Digital Tech rebuilt our site with dedicated pages for GST audit, company setup and NRI taxation. We now receive steady weekly calls from factory and showroom owners across North Delhi.",
-    "impact": "3.3x Increase in Corporate Advisory Inquiries",
-    "name": "CA Siddharth Bansal",
-    "title": "Senior Partner",
-    "company": "Bansal & Associates LLP",
-    "sector": "Netaji Subhash Place (NSP), North Delhi",
-    "initials": "SB",
-    "avatarGradient": "from-brand-500 to-sky-600"
-  },
-  {
-    "quote": "We manufacture stainless steel kitchenware and hotelware in Wazirpur Industrial Area. Earlier we relied only on trade directories where 15 competitors called the same buyer. Now our own fast catalog website ranks on Google and brings direct wholesale distributor inquiries from across India.",
-    "impact": "4.2x More Direct Wholesale Dealer Leads",
-    "name": "Ashok Kumar Jindal",
-    "title": "Managing Director",
-    "company": "Jindal Steelcraft India",
-    "sector": "Wazirpur Industrial Area, North Delhi",
-    "initials": "AJ",
-    "avatarGradient": "from-emerald-500 to-teal-600"
-  },
-  {
-    "quote": "Running a coaching institute in Mukherjee Nagar means thousands of students check our website on mobile phones during admission weeks. NK Digital Tech built a super fast website with easy batch schedules, demo booking and syllabus downloads. Student walk ins grew sharply this season.",
-    "impact": "3.8x Jump in Student Demo Registrations",
-    "name": "Pradeep Sharma",
-    "title": "Founder & Academic Head",
-    "company": "Sankalp Civil Services IAS",
-    "sector": "Mukherjee Nagar, North Delhi",
-    "initials": "PS",
-    "avatarGradient": "from-accent-500 to-violet-600"
-  },
-  {
-    "quote": "Our eye and dental centre in Rohini Sector 8 needed a clean, easy to use website for senior citizens and families. The team delivered a fast mobile site with clear doctor profiles, insurance panel lists and one tap WhatsApp booking. Patient calls from Rohini and Prashant Vihar have more than tripled.",
-    "impact": "3.5x Growth in Daily Clinic Appointments",
-    "name": "Dr. Naveen Garg",
-    "title": "Medical Director",
-    "company": "Garg Superspeciality Centre",
-    "sector": "Rohini Sector 8, North Delhi",
-    "initials": "NG",
-    "avatarGradient": "from-amber-500 to-orange-600"
-  },
-  {
-    "quote": "We run a designer bridal and ethnic showroom near Kohat Enclave in Pitampura. NK Digital Tech created a gorgeous lookbook website with WhatsApp video shopping and appointment booking. Brides from Model Town, Shalimar Bagh and Pitampura now shortlist our collection on their phones before visiting.",
-    "impact": "3.6x More Bridal Showroom Appointments",
-    "name": "Meenakshi Goyal",
-    "title": "Creative Founder",
-    "company": "Riwaaz Bridal Studio",
-    "sector": "Kohat Enclave, Pitampura, North Delhi",
-    "initials": "MG",
-    "avatarGradient": "from-rose-500 to-pink-600"
-  },
-  {
-    "quote": "Our wedding lawn and banquet venue on GT Karnal Road needed better direct bookings. NK Digital Tech built a fast venue showcase website with real event videos and a quick date check form. Families now contact our booking manager directly on WhatsApp without paying portal commissions.",
-    "impact": "3.7x Increase in Direct Wedding Date Inquiries",
-    "name": "Karanvir Dhillon",
-    "title": "Director",
-    "company": "Imperial Greens Farms & Banquets",
-    "sector": "GT Karnal Road, Alipur, North Delhi",
-    "initials": "KD",
-    "avatarGradient": "from-cyan-500 to-blue-600"
-  }
-];
-
 const stages = [
   {
     "num": "Week 01",
@@ -511,6 +415,8 @@ const northDelhiSchemaFAQ = JSON.stringify({
   canonical={pageCanonical}
   ogImage="https://www.nkdigitaltech.net/images/web-dev-north-delhi/website-development-company-north-delhi-hero.webp"
   preloadImage="/images/web-dev-north-delhi/website-development-company-north-delhi-hero.webp"
+  hideClientsNav={true}
+  hideTestimonialsNav={true}
   customSchemaLocalBusiness={northDelhiSchemaLocalBusiness}
   customSchemaFAQ={northDelhiSchemaFAQ}
   utilityTagline="Website Development Company in North Delhi • Fast Google & AI Ready Websites"
@@ -1277,77 +1183,6 @@ const northDelhiSchemaFAQ = JSON.stringify({
   </section>
 
   <!-- =====================================================================
-       SECTION 7: OUR CLIENTS (DARK INDIGO CONTRAST SECTION)
-  ===================================================================== -->
-  <section
-    id="clients"
-    class="relative surface-indigo scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden"
-  >
-    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
-    <div class="relative z-10 max-w-7xl mx-auto">
-      <div class="max-w-3xl mx-auto mb-7 sm:mb-14 text-left sm:text-center">
-        <div class="badge-dark mb-3">North Delhi Brands Growing Online</div>
-        <h2
-          class="font-display font-extrabold text-[clamp(1.32rem,5.2vw,1.72rem)] sm:text-3xl lg:text-4xl text-white tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4"
-        >
-          North Delhi Businesses Scaling Enquiries With Fast Search Ready Websites
-        </h2>
-        <p
-          class="text-slate-300 text-[14px] sm:text-base leading-[1.7] sm:leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]"
-        >
-          Eye care clinics, bridal showrooms, builder floor advisors, coaching academies and construction firms across North Delhi trust NK Digital Tech for fast websites that deliver consistent customer enquiries.
-        </p>
-      </div>
-
-      <div
-        class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2.5 sm:gap-5"
-      >
-        {
-          clients.map((client) => (
-            <div class="glass-card rounded-2xl p-3 sm:p-5 flex flex-col items-center text-center group sm:hover:-translate-y-1 last:col-span-2 sm:last:col-span-1 min-w-0">
-              <div class="w-full max-w-[200px] sm:max-w-none mx-auto h-14 sm:h-20 rounded-xl bg-white border border-slate-200 flex items-center justify-center p-2.5 sm:p-4 mb-2.5 sm:mb-4 shadow-sm">
-                <img
-                  src={client.logo}
-                  alt={`${client.name} Logo`}
-                  width="130"
-                  height="48"
-                  class="max-h-9 sm:max-h-12 w-auto object-contain"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </div>
-              <h3 class="font-display font-bold text-[13.5px] sm:text-base text-white mb-1 leading-snug">
-                {client.name}
-              </h3>
-              <p class="text-[11px] sm:text-xs text-slate-300 leading-snug mb-2.5 sm:mb-3 flex-grow">
-                {client.sector}
-              </p>
-              <span class="w-full sm:w-auto inline-flex items-center justify-center gap-1 text-[10px] sm:text-[11px] font-semibold text-brand-300 bg-brand-500/15 border border-brand-500/30 px-2 sm:px-2.5 py-1.5 sm:py-1 rounded-md leading-tight max-w-full">
-                <svg
-                  class="w-2.5 h-2.5 sm:w-3 sm:h-3 flex-shrink-0"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-                  />
-                </svg>
-                <span class="text-center leading-tight break-words">
-                  {client.region}
-                </span>
-              </span>
-            </div>
-          ))
-        }
-      </div>
-    </div>
-  </section>
-
-  <!-- =====================================================================
        SECTION 8: INDUSTRIES (LIGHT SLATE CONTRAST SECTION - 3x4 GRID)
   ===================================================================== -->
   <section
@@ -1418,110 +1253,6 @@ const northDelhiSchemaFAQ = JSON.stringify({
                 <p class="text-slate-800 text-[12.5px] sm:text-xs font-medium leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
                   {ind.outcome}
                 </p>
-              </div>
-            </div>
-          ))
-        }
-      </div>
-    </div>
-  </section>
-
-  <!-- =====================================================================
-       SECTION 9: TESTIMONIALS (DEEP NAVY CONTRAST SECTION - 3x2 GRID)
-  ===================================================================== -->
-  <section
-    id="testimonials"
-    class="relative surface-dark scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden"
-  >
-    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
-    <div class="absolute inset-0 mesh-glow pointer-events-none opacity-60">
-    </div>
-
-    <div class="relative z-10 max-w-7xl mx-auto">
-      <div class="max-w-3xl mx-auto mb-7 sm:mb-14 text-left sm:text-center">
-        <div class="badge-dark mb-3">Verified North Delhi Client Stories</div>
-        <h2
-          class="font-display font-extrabold text-[clamp(1.32rem,5.2vw,1.72rem)] sm:text-3xl lg:text-4xl text-white tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4"
-        >
-          How North Delhi Founders Grow Enquiries After Launching With Us
-        </h2>
-        <p
-          class="text-slate-300 text-[14px] sm:text-base leading-[1.7] sm:leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]"
-        >
-          Genuine feedback from factory directors in Wazirpur, CA partners in Netaji Subhash Place, hospital founders in Rohini and institute owners in Mukherjee Nagar who grew their business with us.
-        </p>
-      </div>
-
-      <div
-        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6"
-      >
-        {
-          testimonials.map((t) => (
-            <div class="glass-card rounded-2xl p-4 sm:p-6 flex flex-col justify-between sm:hover:-translate-y-1 min-w-0">
-              <div>
-                <div class="flex flex-wrap items-center justify-between gap-2 mb-3.5 sm:mb-4">
-                  <div class="flex items-center gap-0.5 sm:gap-1 flex-shrink-0">
-                    {[1, 2, 3, 4, 5].map(() => (
-                      <svg
-                        class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-amber-400"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                      >
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                      </svg>
-                    ))}
-                  </div>
-                  <span class="text-[10px] sm:text-[11px] font-semibold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-md">
-                    Verified Client Result
-                  </span>
-                </div>
-
-                <p class="text-slate-200 text-[13.5px] sm:text-sm leading-[1.68] sm:leading-relaxed italic mb-4 text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
-                  "{t.quote}"
-                </p>
-
-                <div class="rounded-xl bg-slate-900/90 border border-slate-700/80 px-3 py-2.5 mb-4 flex items-start sm:items-center gap-2">
-                  <svg
-                    class="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5 sm:mt-0"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2.5"
-                      d="M5 13l4 4L19 7"
-                    />
-                  </svg>
-                  <span class="text-[12.5px] sm:text-xs text-slate-200 font-semibold leading-snug break-words">
-                    {t.impact}
-                  </span>
-                </div>
-              </div>
-
-              <div class="flex items-center gap-3 pt-3.5 border-t border-slate-800">
-                <div
-                  class={`w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-gradient-to-br ${t.avatarGradient} flex items-center justify-center flex-shrink-0 shadow-md`}
-                >
-                  <span class="font-display font-bold text-xs sm:text-sm text-white tracking-wide">
-                    {t.initials}
-                  </span>
-                </div>
-                <div class="min-w-0">
-                  <h3 class="font-display font-bold text-white text-sm leading-snug break-words">
-                    {t.name}
-                  </h3>
-                  <p class="text-xs text-slate-300 leading-snug break-words">
-                    {t.title},{' '}
-                    <strong class="text-brand-400 font-semibold">
-                      {t.company}
-                    </strong>
-                  </p>
-                  <p class="text-[11px] text-slate-400 mt-0.5 leading-snug break-words">
-                    {t.sector}
-                  </p>
-                </div>
               </div>
             </div>
           ))
@@ -1782,9 +1513,7 @@ const northDelhiSchemaFAQ = JSON.stringify({
       #services,
       #locations,
       #why-us,
-      #clients,
       #industries,
-      #testimonials,
       #process,
       #faq {
         content-visibility: auto;

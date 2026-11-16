@@ -15,39 +15,6 @@ const webDevEastDelhiFooterDisciplines = [
   { label: 'Local SEO & Google Business Profile', href: '/local-seo-services-in-delhi/' },
 ];
 
-const clients = [
-  {
-    name: 'Vision',
-    sector: 'Optical Store & Eye Clinic Website',
-    region: 'Preet & Mayur Vihar',
-    logo: '/images/clients/vision.webp',
-  },
-  {
-    name: 'Aangan',
-    sector: 'Bridal Wear & Store Visit Booking',
-    region: 'Vikas Marg & Vivek Vihar',
-    logo: '/images/clients/aangan.webp',
-  },
-  {
-    name: 'Propertyways',
-    sector: 'Commercial Office & Floor Listings',
-    region: 'IP Ext & Patparganj',
-    logo: '/images/clients/propertyways.webp',
-  },
-  {
-    name: 'Creative Academy',
-    sector: 'Coaching Batch & Admission Website',
-    region: 'Laxmi & Nirman Vihar',
-    logo: '/images/clients/creative-academy.webp',
-  },
-  {
-    name: 'VP Infra',
-    sector: 'Building & Interior Project Website',
-    region: 'East Delhi',
-    logo: '/images/clients/vp-infra.webp',
-  },
-];
-
 const services = [
   {
     num: '01',
@@ -396,69 +363,6 @@ const industries = [
   }
 ];
 
-const testimonials = [
-  {
-    name: 'Karanvir Chadha',
-    initials: 'KC',
-    avatarGradient: 'from-brand-500 to-sky-400',
-    title: 'Managing Partner',
-    company: 'Chadha Commercial Estates',
-    sector: 'Office & Builder Floor Advisory, Preet Vihar',
-    impact: 'Opens in 1 second & 2.8x jump in direct buyer calls',
-    quote: 'Our old property website took seven seconds to open on phones and brought zero calls. NK Digital Tech built a fast new website with clear price tables, and now buyers find us on both Google and ChatGPT.',
-  },
-  {
-    name: 'Meenakshi Arora',
-    initials: 'MA',
-    avatarGradient: 'from-amber-500 to-orange-400',
-    title: 'Principal Designer',
-    company: 'Atelier Verve Interiors',
-    sector: 'Turnkey Home & Studio Design, Nirman Vihar',
-    impact: 'Shown in Google AI Answers & 2.5x studio visits',
-    quote: 'Other designers wanted to put heavy videos that froze on phones. NK Digital Tech built a fast photo gallery with clear room wise rate guides, and families across East Delhi now call us every week.',
-  },
-  {
-    name: 'Rajeev Oberoi',
-    initials: 'RO',
-    avatarGradient: 'from-emerald-500 to-teal-400',
-    title: 'Director',
-    company: 'Oberoi Electro Switchgears',
-    sector: 'Electrical Panel Manufacturing, Patparganj',
-    impact: '110 product pages on Google & daily wholesale enquiries',
-    quote: 'Turning our old PDF brochure into clear online product pages made a huge difference. Factory buyers searching on Google and AI tools now land directly on our machine details and send quote requests.',
-  },
-  {
-    name: 'CA Deepak Jindal',
-    initials: 'DJ',
-    avatarGradient: 'from-rose-500 to-pink-400',
-    title: 'Senior Partner',
-    company: 'Jindal Singhal & Associates',
-    sector: 'Chartered Accountants, Laxmi Nagar',
-    impact: 'Page one Google rankings & regular GST and audit calls',
-    quote: 'They registered our domain and hosting in our own firm name and wrote simple GST and audit pages without confusing words. Business owners asking ChatGPT and Google for East Delhi CAs now call us directly.',
-  },
-  {
-    name: 'Saurabh Sachdeva',
-    initials: 'SS',
-    avatarGradient: 'from-cyan-500 to-sky-400',
-    title: 'Founder',
-    company: 'Pragati Exam Forum',
-    sector: 'Competitive Coaching Centre, Laxmi Nagar',
-    impact: '2.3x growth in student admission calls and walk ins',
-    quote: 'Students check coaching batches on mobile phones, not laptops. Our new website opens instantly, shows clear fee and batch timing tables and brings daily WhatsApp messages from students and parents.',
-  },
-  {
-    name: 'Nidhi Taneja',
-    initials: 'NT',
-    avatarGradient: 'from-accent-500 to-violet-400',
-    title: 'Co Founder',
-    company: 'ZariHaus Pret',
-    sector: 'Ethnic Apparel Brand, Vikas Marg & Online',
-    impact: 'Fast online store & 3.1x jump in direct customer orders',
-    quote: 'Moving to a fast online shopping website with easy UPI payment and clear product photos doubled our mobile sales and started bringing free daily shoppers from Google search and AI tools.',
-  },
-];
-
 const stages = [
   {
     num: 'Stage 01',
@@ -594,6 +498,8 @@ const webDevEastDelhiSchemaFAQ = JSON.stringify({
   canonical={pageCanonical}
   ogImage="https://www.nkdigitaltech.net/images/web-dev-east-delhi/website-development-company-east-delhi-hero.webp"
   preloadImage="/images/web-dev-east-delhi/website-development-company-east-delhi-hero.webp"
+  hideClientsNav={true}
+  hideTestimonialsNav={true}
   customSchemaLocalBusiness={webDevEastDelhiSchemaLocalBusiness}
   customSchemaFAQ={webDevEastDelhiSchemaFAQ}
   utilityTagline="Website Development Company in East Delhi • Fast Google & AI Ready Websites"
@@ -1435,79 +1341,6 @@ const webDevEastDelhiSchemaFAQ = JSON.stringify({
   </section>
 
   <!-- =====================================================================
-       SECTION 7: OUR CLIENTS (DARK INDIGO CONTRAST SECTION)
-  ===================================================================== -->
-  <section
-    id="clients"
-    class="relative surface-indigo scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden"
-  >
-    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
-    <div class="relative z-10 max-w-7xl mx-auto">
-      <div class="max-w-3xl mx-auto mb-7 sm:mb-14 text-left sm:text-center">
-        <div class="badge-dark mb-3">East Delhi Brands Growing Online</div>
-        <h2
-          class="font-display font-extrabold text-[clamp(1.32rem,5.2vw,1.72rem)] sm:text-3xl lg:text-4xl text-white tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4"
-        >
-          East Delhi Businesses Scaling Enquiries With Fast Search Ready Websites
-        </h2>
-        <p
-          class="text-slate-300 text-[14px] sm:text-base leading-[1.7] sm:leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]"
-        >
-          Optical retail chains, bridal wear showrooms, commercial property advisors,
-          coaching institutes and building contractors across East Delhi trust NK Digital
-          Tech for clean websites that bring steady customer enquiries.
-        </p>
-      </div>
-
-      <div
-        class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2.5 sm:gap-5"
-      >
-        {
-          clients.map((client) => (
-            <div class="glass-card rounded-2xl p-3 sm:p-5 flex flex-col items-center text-center group sm:hover:-translate-y-1 last:col-span-2 sm:last:col-span-1 min-w-0">
-              <div class="w-full max-w-[200px] sm:max-w-none mx-auto h-14 sm:h-20 rounded-xl bg-white border border-slate-200 flex items-center justify-center p-2.5 sm:p-4 mb-2.5 sm:mb-4 shadow-sm">
-                <img
-                  src={client.logo}
-                  alt={`${client.name} Logo`}
-                  width="130"
-                  height="48"
-                  class="max-h-9 sm:max-h-12 w-auto object-contain"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </div>
-              <h3 class="font-display font-bold text-[13.5px] sm:text-base text-white mb-1 leading-snug">
-                {client.name}
-              </h3>
-              <p class="text-[11px] sm:text-xs text-slate-300 leading-snug mb-2.5 sm:mb-3 flex-grow">
-                {client.sector}
-              </p>
-              <span class="w-full sm:w-auto inline-flex items-center justify-center gap-1 text-[10px] sm:text-[11px] font-semibold text-brand-300 bg-brand-500/15 border border-brand-500/30 px-2 sm:px-2.5 py-1.5 sm:py-1 rounded-md leading-tight max-w-full">
-                <svg
-                  class="w-2.5 h-2.5 sm:w-3 sm:h-3 flex-shrink-0"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-                  />
-                </svg>
-                <span class="text-center leading-tight break-words">
-                  {client.region}
-                </span>
-              </span>
-            </div>
-          ))
-        }
-      </div>
-    </div>
-  </section>
-
-  <!-- =====================================================================
        SECTION 8: INDUSTRIES (LIGHT SLATE CONTRAST SECTION - 3x4 GRID)
   ===================================================================== -->
   <section
@@ -1582,112 +1415,6 @@ const webDevEastDelhiSchemaFAQ = JSON.stringify({
                 <p class="text-slate-800 text-[12.5px] sm:text-xs font-medium leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
                   {ind.outcome}
                 </p>
-              </div>
-            </div>
-          ))
-        }
-      </div>
-    </div>
-  </section>
-
-  <!-- =====================================================================
-       SECTION 9: TESTIMONIALS (DEEP NAVY CONTRAST SECTION - 3x2 GRID)
-  ===================================================================== -->
-  <section
-    id="testimonials"
-    class="relative surface-dark scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden"
-  >
-    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
-    <div class="absolute inset-0 mesh-glow pointer-events-none opacity-60">
-    </div>
-
-    <div class="relative z-10 max-w-7xl mx-auto">
-      <div class="max-w-3xl mx-auto mb-7 sm:mb-14 text-left sm:text-center">
-        <div class="badge-dark mb-3">Verified East Delhi Client Stories</div>
-        <h2
-          class="font-display font-extrabold text-[clamp(1.32rem,5.2vw,1.72rem)] sm:text-3xl lg:text-4xl text-white tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4"
-        >
-          How East Delhi Founders Grow Enquiries After Launching With Us
-        </h2>
-        <p
-          class="text-slate-300 text-[14px] sm:text-base leading-[1.7] sm:leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]"
-        >
-          Real feedback from property dealers, Nirman Vihar interior designers,
-          Patparganj factory owners, Laxmi Nagar CAs, coaching centres and retail
-          shop owners in East Delhi.
-        </p>
-      </div>
-
-      <div
-        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6"
-      >
-        {
-          testimonials.map((t) => (
-            <div class="glass-card rounded-2xl p-4 sm:p-6 flex flex-col justify-between sm:hover:-translate-y-1 min-w-0">
-              <div>
-                <div class="flex flex-wrap items-center justify-between gap-2 mb-3.5 sm:mb-4">
-                  <div class="flex items-center gap-0.5 sm:gap-1 flex-shrink-0">
-                    {[1, 2, 3, 4, 5].map(() => (
-                      <svg
-                        class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-amber-400"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                      >
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                      </svg>
-                    ))}
-                  </div>
-                  <span class="text-[10px] sm:text-[11px] font-semibold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-md">
-                    Verified Client Result
-                  </span>
-                </div>
-
-                <p class="text-slate-200 text-[13.5px] sm:text-sm leading-[1.68] sm:leading-relaxed italic mb-4 text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
-                  "{t.quote}"
-                </p>
-
-                <div class="rounded-xl bg-slate-900/90 border border-slate-700/80 px-3 py-2.5 mb-4 flex items-start sm:items-center gap-2">
-                  <svg
-                    class="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5 sm:mt-0"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2.5"
-                      d="M5 13l4 4L19 7"
-                    />
-                  </svg>
-                  <span class="text-[12.5px] sm:text-xs text-slate-200 font-semibold leading-snug break-words">
-                    {t.impact}
-                  </span>
-                </div>
-              </div>
-
-              <div class="flex items-center gap-3 pt-3.5 border-t border-slate-800">
-                <div
-                  class={`w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-gradient-to-br ${t.avatarGradient} flex items-center justify-center flex-shrink-0 shadow-md`}
-                >
-                  <span class="font-display font-bold text-xs sm:text-sm text-white tracking-wide">
-                    {t.initials}
-                  </span>
-                </div>
-                <div class="min-w-0">
-                  <h3 class="font-display font-bold text-white text-sm leading-snug break-words">
-                    {t.name}
-                  </h3>
-                  <p class="text-xs text-slate-300 leading-snug break-words">
-                    {t.title},{' '}
-                    <strong class="text-brand-400 font-semibold">
-                      {t.company}
-                    </strong>
-                  </p>
-                  <p class="text-[11px] text-slate-400 mt-0.5 leading-snug break-words">
-                    {t.sector}
-                  </p>
-                </div>
               </div>
             </div>
           ))
@@ -1971,9 +1698,7 @@ const webDevEastDelhiSchemaFAQ = JSON.stringify({
       #services,
       #locations,
       #why-us,
-      #clients,
       #industries,
-      #testimonials,
       #process,
       #faq {
         content-visibility: auto;

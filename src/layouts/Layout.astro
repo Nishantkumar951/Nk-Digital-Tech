@@ -224,11 +224,12 @@ if (customSchemaBreadcrumb) {
       "item": canonical
     });
   } else if (urlPath.includes('south-delhi') || urlPath.includes('north-delhi') || urlPath.includes('west-delhi') || urlPath.includes('east-delhi')) {
+    const isWebDev = urlPath.includes('website-development');
     items.push({
       "@type": "ListItem",
       "position": 2,
-      "name": isDM ? "Delhi Digital Marketing" : "Delhi SEO",
-      "item": isDM ? "https://www.nkdigitaltech.net/best-digital-marketing-agency-in-delhi/" : "https://www.nkdigitaltech.net/best-seo-company-in-delhi/"
+      "name": isWebDev ? "Delhi Website Development" : (isDM ? "Delhi Digital Marketing" : "Delhi SEO"),
+      "item": isWebDev ? "https://www.nkdigitaltech.net/website-development-company-in-delhi/" : (isDM ? "https://www.nkdigitaltech.net/best-digital-marketing-agency-in-delhi/" : "https://www.nkdigitaltech.net/best-seo-company-in-delhi/")
     });
     items.push({
       "@type": "ListItem",

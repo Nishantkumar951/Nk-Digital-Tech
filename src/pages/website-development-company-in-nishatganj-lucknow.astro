@@ -1,0 +1,1358 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '../styles/global.css';
+
+const pageTitle = "Website Development Company in Nishatganj, Lucknow | NK Digital Tech";
+const pageDescription = "Website Development Company in Nishatganj, Lucknow offering custom business websites, online stores, product catalogues & fast website redesign for local firms.";
+const pageCanonical = "https://www.nkdigitaltech.net/website-development-company-in-nishatganj-lucknow/";
+
+const areaFooterDisciplines = [
+  { label: 'Website Development Company in Lucknow', href: '/website-development-company-in-lucknow/' },
+  { label: 'Best Website Development Company in Delhi NCR', href: '/best-website-development-company-in-delhi-ncr/' },
+  { label: 'Best SEO Company in Lucknow', href: '/best-seo-company-in-lucknow/' },
+  { label: 'Local SEO Services in Lucknow', href: '/local-seo-services-in-lucknow/' },
+  { label: 'AI SEO Company in Lucknow', href: '/ai-seo-company-in-lucknow/' },
+  { label: 'Best Digital Marketing Company in Lucknow', href: '/best-digital-marketing-company-in-lucknow/' },
+  { label: 'Website Development Company in IT Chauraha', href: '/website-development-company-in-it-chauraha-lucknow/' },
+  { label: 'Website Development Company in Engineering College', href: '/website-development-company-in-engineering-college-lucknow/' },
+];
+
+const services = [
+  {
+    num: '01',
+    category: "Nishatganj Business Sites",
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>`,
+    iconStyle: 'bg-sky-50 border-sky-200 text-brand-600',
+    impactStyle: 'bg-sky-50/80 border-sky-200/80 text-slate-800',
+    badgeColor: 'text-brand-600 bg-sky-100/80',
+    title: "Custom Business Websites for Nishatganj Firms",
+    body: "As a trusted website development company in lucknow, we build clean, fast websites for corporate offices, coaching centres, clinics, interior studios and retail stores across Paper Mill Colony, Badshah Nagar Belt, New Hyderabad with real photos, clear service tables and under 1 second mobile loading.",
+    impact: "Builds instant buyer confidence across Nishatganj and scores 95+ on Google mobile speed checks.",
+    cta: "Plan Your Nishatganj Website",
+    href: '/contact-us/',
+  },
+  {
+    num: '02',
+    category: "Google & AI Ready",
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>`,
+    iconStyle: 'bg-emerald-50 border-emerald-200 text-emerald-600',
+    impactStyle: 'bg-emerald-50/80 border-emerald-200/80 text-slate-800',
+    badgeColor: 'text-emerald-700 bg-emerald-100/80',
+    title: "Google and AI Search Ready Setup in Nishatganj",
+    body: "Recognized as the best website development company in nishatganj, we write every page with clear headings, direct buyer answers and verified Nishatganj Pin 226007 details so Google and ChatGPT recommend your business.",
+    impact: "Helps your Nishatganj business appear on Google page one and inside AI assistant recommendations.",
+    cta: "Get Search Ready Setup",
+    href: '/contact-us/',
+  },
+  {
+    num: '03',
+    category: "Easy Self Editing",
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>`,
+    iconStyle: 'bg-violet-50 border-violet-200 text-accent-600',
+    impactStyle: 'bg-violet-50/80 border-violet-200/80 text-slate-800',
+    badgeColor: 'text-accent-600 bg-violet-100/80',
+    title: "Simple Admin Panel for Instant Daily Updates",
+    body: "Every website developer in nishatganj on our team builds a clean, easy to use admin dashboard so your staff can update prices, batches, photos or notices in minutes from a phone or laptop.",
+    impact: "Lets you update text and photos anytime without paying monthly developer fees for small changes.",
+    cta: "Request Easy Admin Demo",
+    href: '/contact-us/',
+  },
+  {
+    num: '04',
+    category: "Online Catalogues & Stores",
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>`,
+    iconStyle: 'bg-amber-50 border-amber-200 text-amber-600',
+    impactStyle: 'bg-amber-50/80 border-amber-200/80 text-slate-800',
+    badgeColor: 'text-amber-700 bg-amber-100/80',
+    title: "Online Store & Catalogue Websites in Nishatganj",
+    body: "Whether you sell retail products, Chikankari or wholesale goods in Nishatganj, our web design company in nishatganj builds fast online catalogues and shopping stores with UPI payments, GST bills and WhatsApp ordering.",
+    impact: "Turns mobile browsers in Nishatganj and across India into direct online orders and showroom visits.",
+    cta: "Start Your Nishatganj Online Store",
+    href: '/contact-us/',
+  },
+  {
+    num: '05',
+    category: "Mobile Lead Capture",
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>`,
+    iconStyle: 'bg-indigo-50 border-indigo-200 text-indigo-600',
+    impactStyle: 'bg-indigo-50/80 border-indigo-200/80 text-slate-800',
+    badgeColor: 'text-indigo-700 bg-indigo-100/80',
+    title: "Mobile Friendly Pages With Sticky Call & WhatsApp Bars",
+    body: "With our website designer in nishatganj team, every screen includes one tap phone call buttons, pre filled WhatsApp inquiry links and a simple 3 box callback form designed for smartphone users.",
+    impact: "Doubles the percentage of Nishatganj website visitors who actually call or message your team.",
+    cta: "Boost Mobile Website Leads",
+    href: '/contact-us/',
+  },
+  {
+    num: '06',
+    category: "Speed & Redesign",
+    icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>`,
+    iconStyle: 'bg-cyan-50 border-cyan-200 text-cyan-700',
+    impactStyle: 'bg-cyan-50/80 border-cyan-200/80 text-slate-800',
+    badgeColor: 'text-cyan-700 bg-cyan-100/80',
+    title: "Old Website Redesign & Speed Fix in Nishatganj",
+    body: "Through professional website development in nishatganj, we upgrade your slow, outdated website into a fast, modern sales tool while keeping all your existing web links and Google rankings safe.",
+    impact: "Fixes slow mobile loading and transforms an old website into a daily source of customer calls.",
+    cta: "Revamp Your Nishatganj Website",
+    href: '/contact-us/',
+  },
+];
+
+const comparison = [
+  {
+    "metric": "Before vs After Goal in Nishatganj",
+    "typical": "Before: A static online brochure that looks generic and brings zero phone calls from Nishatganj buyers.",
+    "nk": "After: As a leading website designing company in lucknow, we build a fast 24/7 lead generation website that ranks on Google and brings daily Nishatganj enquiries."
+  },
+  {
+    "metric": "Mobile Speed Across Paper Mill Colony",
+    "typical": "Before: Heavy copied templates that take 7 to 9 seconds to open on mobile networks across Paper Mill Colony and Badshah Nagar Belt.",
+    "nk": "After: Clean, lightweight pages that open in under 1 second on any Android phone, iPhone or laptop."
+  },
+  {
+    "metric": "Google Maps & AI Search Setup",
+    "typical": "Before: No local search setup for Nishatganj Pin 226007 and details locked inside unreadable PDF files.",
+    "nk": "After: Complete Google Search, Google Maps and ChatGPT answer setup for Nishatganj and nearby Lucknow pockets built in from day one."
+  },
+  {
+    "metric": "WhatsApp & Phone Call Capture",
+    "typical": "Before: Buried contact page with a long 10 box form that mobile visitors in a hurry never fill out.",
+    "nk": "After: Sticky one tap phone call and WhatsApp buttons plus a 10 second 3 box inquiry form on every page."
+  },
+  {
+    "metric": "Safety & Long Term Reliability",
+    "typical": "Before: Stitched together with 20+ free add ons that slow down, break forms or get hacked with spam.",
+    "nk": "After: Modern, secure website build with zero bloated add ons, free SSL security lock and automatic backups."
+  },
+  {
+    "metric": "Domain & Website Ownership",
+    "typical": "Before: Vendor locks your domain name and hosting inside their own account and demands high fees for access.",
+    "nk": "After: 100% full ownership. Your domain name, hosting account and all website files stay registered in your own name."
+  }
+];
+
+const industryIcons = [
+  { icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>`, accentBorder: "border-t-brand-500", iconBg: "bg-sky-50 text-brand-600 border-sky-200" },
+  { icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"/></svg>`, accentBorder: "border-t-amber-500", iconBg: "bg-amber-50 text-amber-600 border-amber-200" },
+  { icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"/></svg>`, accentBorder: "border-t-cyan-500", iconBg: "bg-cyan-50 text-cyan-700 border-cyan-200" },
+  { icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94-1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>`, accentBorder: "border-t-emerald-500", iconBg: "bg-emerald-50 text-emerald-600 border-emerald-200" },
+  { icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>`, accentBorder: "border-t-indigo-500", iconBg: "bg-indigo-50 text-indigo-600 border-indigo-200" },
+  { icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>`, accentBorder: "border-t-rose-500", iconBg: "bg-rose-50 text-rose-600 border-rose-200" },
+  { icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"/></svg>`, accentBorder: "border-t-accent-500", iconBg: "bg-violet-50 text-accent-600 border-violet-200" },
+  { icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>`, accentBorder: "border-t-pink-500", iconBg: "bg-pink-50 text-pink-600 border-pink-200" },
+  { icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 21h18M5 21V7l8-4v18M19 21V11l-6-4M9 9v.01M9 12v.01M9 15v.01M9 18v.01"/></svg>`, accentBorder: "border-t-orange-500", iconBg: "bg-orange-50 text-orange-600 border-orange-200" },
+  { icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>`, accentBorder: "border-t-purple-500", iconBg: "bg-purple-50 text-purple-600 border-purple-200" },
+  { icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>`, accentBorder: "border-t-red-500", iconBg: "bg-red-50 text-red-600 border-red-200" },
+  { icon: `<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>`, accentBorder: "border-t-teal-500", iconBg: "bg-teal-50 text-teal-700 border-teal-200" },
+];
+
+const rawIndustries = [
+  {
+    "sector": "Nishatganj Property Sites",
+    "title": "Real Estate & Township Builders",
+    "focus": "Fast property showcase websites for plots, builder floors and villas in Nishatganj (Paper Mill Colony, Badshah Nagar Belt) with floor plans, price tables and WhatsApp site visit booking.",
+    "outcome": "3.6x more direct buyer site visit calls in Nishatganj without broker portal commissions."
+  },
+  {
+    "sector": "Interior Portfolios",
+    "title": "Interior Design & Home Renovation",
+    "focus": "Visual portfolio websites for interior designers and modular kitchen studios serving Nishatganj and Paper Mill Colony with room wise photo galleries, cost estimators and consultation forms.",
+    "outcome": "3.5x increase in home and showroom renovation inquiries from Nishatganj families."
+  },
+  {
+    "sector": "Admission Portals",
+    "title": "Schools, Colleges & Coaching Institutes",
+    "focus": "High speed admission websites for UPSC, NEET, JEE, banking and computer institutes in Nishatganj with batch timetables, fee tables and instant demo class registration.",
+    "outcome": "3.8x jump in student walk ins and parent phone calls across Nishatganj ahead of new batches."
+  },
+  {
+    "sector": "Wholesale Catalogues",
+    "title": "Manufacturers & Wholesale Suppliers",
+    "focus": "Searchable online product catalogues for factories, wholesalers and traders in and around Nishatganj replacing heavy PDFs with clear specification tables and bulk quote forms.",
+    "outcome": "4.1x more wholesale dealer and institutional purchase inquiries from across UP and India."
+  },
+  {
+    "sector": "IT & Software Portals",
+    "title": "Software, IT & Business Consultants",
+    "focus": "Clean, trustworthy websites for IT providers, software teams and business consultancies in Nishatganj with solution pages, client proof and fast demo booking forms.",
+    "outcome": "3.3x growth in qualified business inquiries and software demo calls across Nishatganj."
+  },
+  {
+    "sector": "CA & Tax Websites",
+    "title": "CA Firms, GST & Tax Practitioners",
+    "focus": "Dedicated service pages for GST registration, company setup, income tax audit and compliance for chartered accountants and tax offices in Nishatganj (Paper Mill Colony).",
+    "outcome": "3.2x more monthly business retainers from Nishatganj traders, shop owners and founders."
+  },
+  {
+    "sector": "Legal Chamber Sites",
+    "title": "Advocates & Legal Documentation",
+    "focus": "Dignified, easy to read practice area websites for civil, property, family and corporate advocates serving clients across Nishatganj and Lucknow High Court.",
+    "outcome": "3.4x increase in verified chamber consultation bookings from Nishatganj residents."
+  },
+  {
+    "sector": "Online Stores",
+    "title": "Chikankari, Bridal & Jewellery Showrooms",
+    "focus": "Lookbook websites and full online stores with UPI checkout and WhatsApp ordering for Chikankari, bridal wear and jewellery showrooms in Nishatganj (Paper Mill Colony).",
+    "outcome": "3.7x higher showroom walk ins and direct online orders from Nishatganj and pan India shoppers."
+  },
+  {
+    "sector": "Civil & Material Sites",
+    "title": "Contractors, Plywood & Hardware Dealers",
+    "focus": "Project and material catalogue websites for civil contractors, waterproofing teams, timber, plywood and sanitaryware showrooms across Nishatganj and Badshah Nagar Belt.",
+    "outcome": "3.3x more bulk material quote requests and construction inquiries in Nishatganj."
+  },
+  {
+    "sector": "Venue & Banquet Sites",
+    "title": "Hotels, Banquet Halls & Wedding Lawns",
+    "focus": "Virtual venue tour websites with hall capacity charts, per plate menu inquiry forms and instant WhatsApp date availability checks for Nishatganj banquets and hotels.",
+    "outcome": "3.6x more direct family event and wedding venue bookings in Nishatganj without middlemen."
+  },
+  {
+    "sector": "Clinic & Lab Websites",
+    "title": "Hospitals, Dental, Eye & Pathology Labs",
+    "focus": "Patient friendly mobile websites for doctors, dental and eye clinics, and pathology labs in Nishatganj (Paper Mill Colony, Badshah Nagar Belt) with home sample and appointment booking.",
+    "outcome": "3.5x growth in daily patient appointment calls and morning sample bookings across Nishatganj."
+  },
+  {
+    "sector": "Local Service Websites",
+    "title": "Salons, Gyms, Packers & Home Services",
+    "focus": "Fast booking websites with service rate cards, customer reviews and one tap WhatsApp scheduling for salons, fitness clubs, packers and movers, and pest control teams in Nishatganj.",
+    "outcome": "3.2x increase in daily phone and WhatsApp service bookings from Nishatganj households."
+  }
+];
+const industries = rawIndustries.map((item, idx) => ({
+  ...item,
+  ...industryIcons[idx],
+}));
+
+const stages = [
+  {
+    "num": "Week 01",
+    "step": "01",
+    "title": "Nishatganj Buyer Search & Competitor Study",
+    "body": "We start by studying the exact words buyers in Nishatganj (Paper Mill Colony, Badshah Nagar Belt, New Hyderabad) type into Google and AI tools before calling a business like yours. We plan your page list, price or course tables and WhatsApp inquiry buttons around real local demand.",
+    "accent": "from-brand-500 to-sky-400"
+  },
+  {
+    "num": "Week 02",
+    "step": "02",
+    "title": "Mobile First Layout & Simple Plain English Copy",
+    "body": "Over 82% of customers in Nishatganj browse on mobile phones. We design clean, fast loading mobile screens with real photos, simple service explanations that any customer can understand, and sticky call and WhatsApp buttons.",
+    "accent": "from-emerald-500 to-teal-400"
+  },
+  {
+    "num": "Week 03",
+    "step": "03",
+    "title": "Fast Website Build & Nishatganj Google + AI Setup",
+    "body": "Our developers build your website for under 1 second opening speed, connect all enquiry forms to your WhatsApp and email, and add verified Nishatganj Pin 226007 business details so Google Search, Google Maps and ChatGPT recommend your site.",
+    "accent": "from-accent-500 to-violet-400"
+  },
+  {
+    "num": "Week 04",
+    "step": "04",
+    "title": "Speed Testing, Go Live & 100% Ownership Handover",
+    "body": "We test every page across Android phones, iPhones and laptops to confirm 95+ speed scores and working call buttons. Once approved, we launch your Nishatganj website live, submit it to Google and hand over 100% of your domain and admin logins.",
+    "accent": "from-amber-500 to-orange-400"
+  }
+];
+
+const faqs = [
+  {
+    "q": "How much does a Website Development Company in Nishatganj, Lucknow charge for a business website?",
+    "a": "A professional, mobile friendly business website in Nishatganj, Lucknow starts at ₹15,000 to ₹25,000 for a 6 to 10 page website for clinics, coaching institutes, builders, CA firms or local service providers. Larger wholesale catalogue portals, multi page showroom websites and online stores with UPI and card payments range from ₹35,000 to ₹1,25,000 depending on page count and features. Every package includes mobile speed setup, Google and AI search readiness, WhatsApp lead integration and 100% ownership."
+  },
+  {
+    "q": "What is the before and after effect of your website development services in Nishatganj?",
+    "a": "Before hiring us, most Nishatganj businesses have a slow template website that takes 7 to 9 seconds to open on mobile phones, hides prices inside PDF files and brings zero phone calls. After we build your new website, your pages open in under 1 second on any smartphone, show clear service and fee tables, include sticky one tap call and WhatsApp buttons, and start bringing daily enquiries from Google Search, Google Maps and AI tools like ChatGPT."
+  },
+  {
+    "q": "Why is professional website development in nishatganj better than a cheap ₹6,000 template?",
+    "a": "Cheap ₹6,000 websites use slow, copied templates that take 8 seconds to load on mobile data, look identical to dozens of other shops, and never show up on Google. Professional website development in nishatganj from NK Digital Tech gives you under 1 second mobile loading, custom pages for Paper Mill Colony, Badshah Nagar Belt, New Hyderabad, built in Google and AI search visibility, and sticky WhatsApp buttons that bring real customer calls."
+  },
+  {
+    "q": "Will my Nishatganj website show up on Google, Google Maps and AI tools like ChatGPT and Gemini?",
+    "a": "Yes. Every website we build includes complete Google Search setup, local location signals for Nishatganj (Pin 226007) and Paper Mill Colony, Badshah Nagar Belt, New Hyderabad, and clear question and answer blocks that AI tools like ChatGPT, Gemini and Perplexity read when recommending trusted Nishatganj businesses."
+  },
+  {
+    "q": "Can my own staff update prices, batches or photos on our Nishatganj website easily?",
+    "a": "Yes. Every web developer in nishatganj on our team sets up a clean, simple admin panel so you or your office staff can edit text, fees, batch dates or product photos in minutes from a laptop or phone without needing any coding knowledge."
+  },
+  {
+    "q": "Will I have 100% ownership of my domain name, hosting and website files?",
+    "a": "Absolutely. Unlike local vendors who lock your domain name in their personal account, we register or keep your domain name and web hosting 100% under your own business email. You receive all master admin logins and full ownership on launch day."
+  },
+  {
+    "q": "Can you redesign my old, slow Nishatganj website without losing my existing Google rankings?",
+    "a": "Yes. If your current website looks outdated, loads slowly on smartphones or brings zero enquiries, we can rebuild it with a fast, modern design while safely redirecting all your existing web addresses to the new pages so your past Google visibility stays protected."
+  },
+  {
+    "q": "How many days does it take to launch a website in Nishatganj, Lucknow and what support is included?",
+    "a": "Most business, clinic, real estate and coaching websites in Nishatganj (Paper Mill Colony, Badshah Nagar Belt) go live within 2 to 3 weeks, while larger online stores take 3 to 5 weeks. Every website includes 30 days of free post launch support plus affordable yearly care plans."
+  }
+];
+
+const trustStrip = [
+  "Nishatganj Pin 226007 Focus",
+  "95+ Mobile Speed Score",
+  "Google + Maps + AI Setup",
+  "100% Full Website Ownership"
+];
+
+const areaSchemaLocalBusiness = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'ProfessionalService',
+  name: 'NK Digital Tech Website Development Company in Nishatganj, Lucknow',
+  url: 'https://www.nkdigitaltech.net/website-development-company-in-nishatganj-lucknow/',
+  logo: 'https://www.nkdigitaltech.net/images/web-dev-lucknow/hero-website-development-lucknow.webp',
+  image: 'https://www.nkdigitaltech.net/images/web-dev-lucknow/hero-website-development-lucknow.webp',
+  description: 'NK Digital Tech is a trusted Website Development Company in Nishatganj, Lucknow (Pin 226007) building fast, mobile friendly websites prepared for Google Search, Google Maps and AI tools across Paper Mill Colony, Badshah Nagar Belt, New Hyderabad and Lucknow.',
+  email: 'nkdigitaltech1@gmail.com',
+  priceRange: '₹15,000 to ₹1,50,000',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Nishatganj, Lucknow',
+    postalCode: '226007',
+    addressRegion: 'Uttar Pradesh',
+    addressCountry: 'IN',
+  },
+  areaServed: [
+    { "@type": "Place", "name": "Nishatganj, Lucknow" },
+    { "@type": "Place", "name": "Paper Mill Colony" },
+    { "@type": "Place", "name": "Badshah Nagar Belt" },
+    { "@type": "Place", "name": "New Hyderabad" },
+    { "@type": "AdministrativeArea", "name": "Lucknow" }
+  ],
+  serviceType: [
+    'Website Development Company in Nishatganj, Lucknow',
+    'Website Designing Company in Nishatganj',
+    'Google and AI Ready Website Development',
+    'Custom Business Website Design in Nishatganj',
+    'Online Store Development in Nishatganj',
+    'Website Redesign Services in Nishatganj',
+  ],
+});
+
+const areaSchemaFAQ = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((item) => ({
+    '@type': 'Question',
+    name: item.q,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.a,
+    },
+  })),
+});
+---
+
+<Layout
+  title={pageTitle}
+  description={pageDescription}
+  canonical={pageCanonical}
+  ogImage="https://www.nkdigitaltech.net/images/web-dev-lucknow/hero-website-development-lucknow.webp"
+  preloadImage="/images/web-dev-lucknow/hero-website-development-lucknow.webp"
+  hideLocationsNav={true}
+  hideClientsNav={true}
+  hideTestimonialsNav={true}
+  customSchemaLocalBusiness={areaSchemaLocalBusiness}
+  customSchemaFAQ={areaSchemaFAQ}
+  utilityTagline="Website Development Company in Nishatganj, Lucknow • Fast Google & AI Ready Websites"
+  brandSubtitle="Fast Google & AI Websites"
+  footerBio="NK Digital Tech is a leading Website Development Company in Nishatganj, Lucknow building fast, mobile friendly websites that help local businesses rank on Google, Google Maps and AI search tools across Paper Mill Colony, Badshah Nagar Belt, New Hyderabad and Lucknow."
+  footerCoreDisciplines={areaFooterDisciplines}
+  footerTagline="Website Development Company in Nishatganj, Lucknow"
+>
+  <!-- =====================================================================
+       SECTION 1: HERO
+  ===================================================================== -->
+  <section
+    class="relative surface-dark overflow-hidden pt-4 pb-8 sm:pt-14 sm:pb-16 lg:pt-16 lg:pb-20 border-b border-slate-800/80"
+  >
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="absolute inset-0 mesh-glow pointer-events-none"></div>
+    <div
+      class="absolute -top-24 -left-24 sm:-top-36 sm:-left-36 w-56 h-56 sm:w-96 sm:h-96 bg-brand-500/20 rounded-full blur-[80px] sm:blur-[130px] pointer-events-none"
+    >
+    </div>
+    <div
+      class="absolute top-1/4 -right-24 sm:-right-36 w-56 h-56 sm:w-96 sm:h-96 bg-accent-500/20 rounded-full blur-[80px] sm:blur-[130px] pointer-events-none"
+    >
+    </div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
+      <div
+        class="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-10 lg:gap-12 items-center"
+      >
+        <div class="lg:col-span-7 text-left min-w-0">
+          <div
+            class="badge-dark mb-3 sm:mb-5 text-[10px] sm:text-xs py-1.5 px-2.5 sm:px-3.5"
+          >
+            <span
+              class="w-2 h-2 rounded-full bg-brand-400 animate-ping flex-shrink-0"
+            ></span>
+            <span class="min-w-0 break-words"
+              >Fast Mobile Websites &bull; Google &amp; AI Leads</span
+            >
+          </div>
+
+          <h1
+            class="font-display text-[clamp(1.52rem,6.3vw,2.35rem)] sm:text-5xl lg:text-[3.05rem] font-black tracking-tight text-white leading-[1.15] sm:leading-[1.1] mb-3 sm:mb-5 text-glow"
+          >
+            Website Development Company <span class="gradient-text-light"
+              >in Nishatganj, Lucknow</span
+            >
+          </h1>
+
+          <p
+            class="text-[14px] sm:text-base md:text-lg text-slate-300 leading-[1.68] sm:leading-relaxed mb-4 sm:mb-7 font-normal text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]"
+            set:html={`Looking for a reliable <strong>Website Development Company in Nishatganj, Lucknow</strong> that brings real customer calls? Across Paper Mill Colony, Badshah Nagar Belt, New Hyderabad, we build fast, mobile friendly websites with clear service pages and one tap WhatsApp buttons that rank on Google and get recommended by ChatGPT and Gemini.`}
+          />
+
+          <div
+            class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-4 mb-5 sm:mb-8"
+          >
+            <a
+              href="/contact-us/"
+              class="btn-primary w-full sm:w-auto min-h-[50px] text-[13.5px] sm:text-base px-4 sm:px-8 py-3.5 sm:py-4"
+            >
+              <span>Claim Nishatganj Website Audit</span>
+              <svg
+                class="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M14 5l7 7-7 7M3 12h18"></path>
+              </svg>
+            </a>
+            <a
+              href="#services"
+              class="btn-secondary-dark w-full sm:w-auto min-h-[48px] text-[13.5px] sm:text-base px-4 sm:px-7 py-3.5 sm:py-4"
+            >
+              <span>Explore Nishatganj Web Services</span>
+            </a>
+          </div>
+
+          <div class="pt-3.5 sm:pt-5 border-t border-slate-800/80">
+            <div
+              class="grid grid-cols-2 sm:flex sm:flex-wrap items-stretch sm:items-center gap-2"
+            >
+              {
+                trustStrip.map((item) => (
+                  <span class="px-2.5 sm:px-3 py-2 sm:py-1.5 min-h-[42px] sm:min-h-0 rounded-lg bg-slate-900/90 border border-slate-800 text-[11px] sm:text-xs text-slate-300 font-medium flex items-center justify-center sm:justify-start text-center sm:text-left leading-tight sm:leading-snug break-words">
+                    {item}
+                  </span>
+                ))
+              }
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 min-w-0">
+          <div
+            class="relative rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-700/80 shadow-2xl shadow-brand-500/15 bg-slate-900 group"
+          >
+            <div class="relative">
+              <img
+                src="/images/web-dev-lucknow/hero-website-development-lucknow.webp"
+                alt="Website Development Company in Nishatganj Lucknow Building Fast Mobile Friendly Websites"
+                width="960"
+                height="540"
+                sizes="(max-width: 1024px) 100vw, 42vw"
+                fetchpriority="high"
+                decoding="async"
+                class="w-full aspect-[16/9] sm:aspect-auto sm:h-64 md:h-[330px] lg:h-[350px] object-cover object-center sm:group-hover:scale-105 transition-transform duration-500"
+              />
+              <div
+                class="hidden sm:block absolute inset-0 bg-gradient-to-t from-[#050a14] via-transparent to-transparent opacity-80"
+              >
+              </div>
+            </div>
+            <div
+              class="relative sm:absolute sm:bottom-4 sm:left-4 sm:right-4 glass-card border-t sm:border border-slate-800 sm:rounded-2xl p-3.5 sm:p-4"
+            >
+              <div
+                class="flex flex-wrap items-center justify-between gap-1.5 mb-1"
+              >
+                <span class="text-xs font-bold text-white"
+                  >Nishatganj Google &amp; AI Ready Web</span
+                >
+                <span
+                  class="inline-flex items-center gap-1 text-[10.5px] sm:text-xs font-semibold text-emerald-400"
+                >
+                  <span
+                    class="w-2 h-2 rounded-full bg-emerald-400 flex-shrink-0"
+                  ></span>
+                  95+ Mobile Speed
+                </span>
+              </div>
+              <p
+                class="text-[12px] sm:text-xs text-slate-300 text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left] leading-relaxed"
+              >
+                Built for under 1 second mobile loading across Paper Mill Colony, Badshah Nagar Belt, New Hyderabad with sticky call and WhatsApp buttons.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 2: INTRODUCTION
+  ===================================================================== -->
+  <section
+    class="relative surface-white overflow-hidden py-10 sm:py-16 lg:py-20 px-4 sm:px-6 border-b border-slate-200"
+  >
+    <div class="max-w-7xl mx-auto">
+      <div
+        class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 lg:gap-12 items-center"
+      >
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-light mb-3 sm:mb-3.5">
+            Nishatganj Search &amp; AI Web Design
+          </div>
+          <h2
+            class="font-display font-extrabold text-[clamp(1.32rem,5.2vw,1.72rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3.5 sm:mb-5"
+          >
+            How Our Website Development Company in Nishatganj, Lucknow <span
+              class="gradient-text-dark"
+              >Turns Local Searches Into Daily Customer Calls</span
+            >
+          </h2>
+          <div
+            class="space-y-3.5 sm:space-y-4 text-slate-700 text-[14px] sm:text-base leading-[1.7] sm:leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]"
+          >
+            <p set:html={`In Nishatganj (Pin 226007), local buyers across Paper Mill Colony, Badshah Nagar Belt, New Hyderabad check Google Search, Google Maps and AI apps on their phones before calling. Working with our <a href="/website-development-company-in-lucknow/" class="text-brand-600 hover:text-brand-700 font-semibold transition-colors">Website Development Company in Lucknow</a> team ensures your business shows up first when local customers compare options.`} />
+            <p set:html={`Every page we build opens in under one second on mobile phones and features clear call and WhatsApp buttons. We pair clean mobile design with local search setup from our <a href="/best-seo-company-in-lucknow/" class="text-brand-600 hover:text-brand-700 font-semibold transition-colors">Best SEO Company in Lucknow</a> team to win daily enquiries across Paper Mill Colony and Badshah Nagar Belt.`} />
+          </div>
+          <div
+            class="mt-5 sm:mt-7 flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-4"
+          >
+            <a
+              href="/contact-us/"
+              class="btn-primary w-full sm:w-auto min-h-[48px]"
+            >
+              <span>Speak With Nishatganj Web Team</span>
+              <svg
+                class="w-4 h-4 flex-shrink-0"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M14 5l7 7-7 7M3 12h18"></path>
+              </svg>
+            </a>
+            <a
+              href="#why-us"
+              class="btn-secondary-light w-full sm:w-auto min-h-[48px]"
+            >
+              <span>See Before &amp; After Difference</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 space-y-3.5 sm:space-y-4 min-w-0">
+          <div
+            class="rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-200 shadow-lg bg-slate-100"
+          >
+            <img
+              src="/images/web-dev-lucknow/web-development-team-lucknow.webp"
+              alt="Website Development Company in Nishatganj Lucknow Team Planning Mobile Friendly Business Websites"
+              width="800"
+              height="533"
+              sizes="(max-width: 1024px) 100vw, 42vw"
+              class="w-full aspect-[16/9] sm:aspect-auto sm:h-56 lg:h-60 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="grid grid-cols-2 gap-2.5 sm:gap-3.5">
+            {
+              [
+                {
+                  val: '< 1 Sec',
+                  label: 'Mobile Page Speed',
+                  sub: 'Opens fast on any smartphone',
+                },
+                {
+                  val: '3 in 1',
+                  label: 'Google + Maps + AI',
+                  sub: 'Built into every Nishatganj page',
+                },
+                {
+                  val: 'AI Ready',
+                  label: 'ChatGPT & Gemini',
+                  sub: 'Clear facts AI tools recommend',
+                },
+                {
+                  val: '100%',
+                  label: 'Full Ownership',
+                  sub: 'Your domain, hosting & files',
+                },
+              ].map((stat) => (
+                <div class="elevated-card rounded-xl sm:rounded-2xl p-3 sm:p-3.5 min-w-0 flex flex-col justify-between">
+                  <div class="font-display font-black text-[1.05rem] sm:text-2xl text-brand-600 mb-0.5 leading-tight sm:whitespace-nowrap break-words">
+                    {stat.val}
+                  </div>
+                  <div>
+                    <div class="text-[11.5px] sm:text-xs font-bold text-slate-900 leading-snug">
+                      {stat.label}
+                    </div>
+                    <div class="text-[10.5px] sm:text-[11px] text-slate-500 leading-snug mt-0.5">
+                      {stat.sub}
+                    </div>
+                  </div>
+                </div>
+              ))
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 3: BEFORE AND AFTER EFFECT
+  ===================================================================== -->
+  <section
+    class="relative surface-indigo py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden"
+  >
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="max-w-7xl mx-auto relative z-10">
+      <div
+        class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 lg:gap-12 items-center"
+      >
+        <div class="lg:col-span-7 min-w-0">
+          <div
+            class="inline-flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3.5 py-1.5 rounded-xl sm:rounded-full text-[10px] sm:text-xs font-bold uppercase tracking-normal sm:tracking-widest bg-amber-500/10 border border-amber-500/30 text-amber-300 max-w-full leading-snug mb-4 sm:mb-5"
+          >
+            <svg
+              class="w-4 h-4 text-amber-400 flex-shrink-0"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
+              ></path>
+            </svg>
+            <span class="min-w-0 break-words"
+              >Before &amp; After Our Website Development Services</span
+            >
+          </div>
+
+          <h2
+            class="font-display font-extrabold text-[clamp(1.32rem,5.2vw,1.72rem)] sm:text-3xl lg:text-4xl text-white tracking-tight leading-[1.22] sm:leading-tight mb-4 sm:mb-6"
+          >
+            Before and After Effect of Our Website Development Services in Nishatganj, Lucknow
+          </h2>
+
+          <div
+            class="space-y-3.5 sm:space-y-4 text-slate-300 text-[14px] sm:text-base leading-[1.7] sm:leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]"
+          >
+            <p set:html={`Before working with us, most local websites in Nishatganj fail because they use slow, copied templates that take 7 to 9 seconds to open on mobile data across Paper Mill Colony, Badshah Nagar Belt, New Hyderabad. As a dedicated <strong>website designing company in nishatganj</strong>, we fix this by building lightweight pages that open in under one second on any smartphone.`} />
+            <p set:html={`After launching your new website with our <a href="/best-website-development-company-in-delhi-ncr/" class="text-brand-300 hover:text-white active:opacity-80 font-semibold transition-colors">Best Website Development Company in Delhi NCR</a> specialists, your business gets clear service and fee tables, local Nishatganj proof and direct WhatsApp inquiry buttons that turn mobile visitors into daily phone calls.`} />
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 space-y-3.5 sm:space-y-4 min-w-0">
+          <div
+            class="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6 border-l-4 border-l-rose-500 min-w-0"
+          >
+            <div
+              class="flex flex-wrap items-center justify-between gap-1.5 mb-2"
+            >
+              <span
+                class="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-rose-400"
+                >Before Our Website Services</span
+              >
+              <span class="text-[11px] sm:text-xs text-slate-400"
+                >Zero Enquiries</span
+              >
+            </div>
+            <h3
+              class="font-display font-bold text-[15px] sm:text-base text-white mb-2 leading-snug"
+            >
+              Slow Mobile Screens, Generic Copy &amp; Invisible in Nishatganj Searches
+            </h3>
+            <p
+              class="text-[12.5px] sm:text-xs text-slate-300 leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]"
+            >
+              Before: Built on heavy readymade themes that take 7 to 9 seconds to open on mobile data across Nishatganj, hides prices inside PDF files, lacks dedicated sections for Paper Mill Colony, Badshah Nagar Belt, New Hyderabad, and brings zero calls from Google or AI search.
+            </p>
+          </div>
+
+          <div
+            class="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6 border-l-4 border-l-emerald-400 min-w-0"
+          >
+            <div
+              class="flex flex-wrap items-center justify-between gap-1.5 mb-2"
+            >
+              <span
+                class="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-emerald-400"
+                >After Our Website Services</span
+              >
+              <span class="text-[11px] sm:text-xs text-brand-300"
+                >Daily Google + AI Calls</span
+              >
+            </div>
+            <h3
+              class="font-display font-bold text-[15px] sm:text-base text-white mb-2 leading-snug"
+            >
+              Under 1s Mobile Speed, Nishatganj Hub Signals &amp; One Tap WhatsApp Leads
+            </h3>
+            <p
+              class="text-[12.5px] sm:text-xs text-slate-300 leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]"
+            >
+              After: Built by our web development company in nishatganj for under 1 second mobile loading with clear service tables, verified Nishatganj Pin 226007 business details for Google and ChatGPT, and sticky one tap call and WhatsApp buttons.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 4: SERVICES (SHORT INTRO FOCUSED ONLY ON WEBSITE DEVELOPMENT)
+  ===================================================================== -->
+  <section
+    id="services"
+    class="relative surface-cool overflow-hidden scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200"
+  >
+    <div class="max-w-7xl mx-auto">
+      <div
+        class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 items-center mb-7 sm:mb-16"
+      >
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-light mb-3">Complete Nishatganj Website Services</div>
+          <h2
+            class="font-display font-extrabold text-[clamp(1.32rem,5.2vw,1.72rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4"
+          >
+            End to End Website Design and Development Services in Nishatganj, Lucknow
+          </h2>
+          <p
+            class="text-slate-600 text-[14px] sm:text-base leading-[1.7] sm:leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]"
+            set:html={`Our website development services in Nishatganj, Lucknow cover custom business websites, online shopping stores, searchable product catalogues, simple self editing admin panels and fast website redesigns. Every website is built for under 1 second mobile loading and one tap phone and WhatsApp enquiries.`}
+          />
+        </div>
+        <div class="lg:col-span-5 min-w-0">
+          <div
+            class="rounded-2xl overflow-hidden border border-slate-200 shadow-md bg-white"
+          >
+            <img
+              src="/images/web-dev-lucknow/seo-aeo-geo-website-lucknow.webp"
+              alt="Web Development Company in Nishatganj Lucknow Building Fast Google and AI Ready Websites"
+              width="800"
+              height="450"
+              sizes="(max-width: 1024px) 100vw, 42vw"
+              class="w-full aspect-[16/9] sm:aspect-auto sm:h-56 lg:h-64 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-7"
+      >
+        {
+          services.map((s) => (
+            <div class="elevated-card rounded-2xl p-4 sm:p-7 flex flex-col justify-between group sm:hover:-translate-y-1 min-w-0">
+              <div>
+                <div class="flex flex-wrap items-center justify-between gap-2 mb-3.5 sm:mb-6">
+                  <div
+                    class={`w-10 h-10 sm:w-12 sm:h-12 rounded-xl border flex items-center justify-center flex-shrink-0 ${s.iconStyle}`}
+                  >
+                    <Fragment set:html={s.icon} />
+                  </div>
+                  <div class="flex items-center gap-1.5 sm:gap-2 min-w-0 max-w-full">
+                    <span
+                      class={`text-[10.5px] sm:text-[11px] font-semibold px-2 sm:px-2.5 py-1 rounded-md leading-tight break-words ${s.badgeColor}`}
+                    >
+                      {s.category}
+                    </span>
+                    <span class="font-display font-black text-sm sm:text-lg text-slate-300 flex-shrink-0">
+                      {s.num}
+                    </span>
+                  </div>
+                </div>
+
+                <h3 class="font-display font-bold text-[16.5px] sm:text-xl text-slate-900 mb-2.5 sm:mb-3 leading-snug group-hover:text-brand-600 transition-colors">
+                  {s.title}
+                </h3>
+
+                <p class="text-slate-600 text-[13.5px] sm:text-sm leading-[1.68] sm:leading-relaxed mb-4 sm:mb-6 text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+                  {s.body}
+                </p>
+              </div>
+
+              <div>
+                <div
+                  class={`rounded-xl border p-3.5 sm:p-4 mb-3.5 sm:mb-5 ${s.impactStyle}`}
+                >
+                  <div class="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-slate-900 mb-1">
+                    <svg
+                      class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2.5"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                    <span>Business Lead Impact</span>
+                  </div>
+                  <p class="text-[12.5px] sm:text-xs text-slate-700 leading-relaxed font-medium text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+                    {s.impact}
+                  </p>
+                </div>
+
+                <a
+                  href={s.href}
+                  class="w-full sm:w-auto inline-flex items-center justify-between sm:justify-start gap-2 rounded-xl sm:rounded-none bg-slate-50 active:bg-sky-50 sm:bg-transparent border border-slate-200/80 sm:border-0 px-3.5 sm:px-0 py-2.5 min-h-[48px] sm:min-h-0 text-xs font-bold text-brand-600 hover:text-sky-700 group-hover:gap-3 transition-all"
+                >
+                  <span class="text-left leading-snug">{s.cta}</span>
+                  <svg
+                    class="w-4 h-4 flex-shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M14 5l7 7-7 7M3 12h18"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 5: WHY NK DIGITAL TECH (BEFORE VS AFTER COMPARISON)
+  ===================================================================== -->
+  <section
+    id="why-us"
+    class="relative surface-white overflow-hidden scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200"
+  >
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-7 sm:mb-14 text-left sm:text-center">
+        <div class="badge-light mb-3">Why Nishatganj Founders Pick Us</div>
+        <h2
+          class="font-display font-extrabold text-[clamp(1.32rem,5.2vw,1.72rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4"
+        >
+          Why Nishatganj Businesses Choose NK Digital Tech Over Normal Web Vendors
+        </h2>
+        <p
+          class="text-slate-600 text-[14px] sm:text-base leading-[1.7] sm:leading-relaxed mb-4 text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]"
+          set:html={`Instead of paying twice for a slow template website and a later rebuild, we get your website right from day one. We pair under 1 second mobile speed and clear Nishatganj service pages with <a href="/local-seo-services-in-lucknow/" class="text-brand-600 hover:text-brand-700 font-semibold transition-colors">Local SEO Services in Lucknow</a> map structure and one tap WhatsApp buttons.`}
+        />
+        <p class="text-slate-700 font-semibold text-xs sm:text-sm">
+          See the before and after difference between a normal Nishatganj web vendor and our Website System:
+        </p>
+      </div>
+
+      <div
+        class="hidden md:block overflow-hidden rounded-2xl border border-slate-200 shadow-lg"
+      >
+        <table class="w-full text-left border-collapse">
+          <thead>
+            <tr class="bg-slate-900 text-white">
+              <th
+                class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-slate-300 w-1/4"
+              >
+                What Matters Most
+              </th>
+              <th
+                class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-rose-300 w-[37.5%] border-l border-slate-800"
+              >
+                Before (Typical Nishatganj Web Shop)
+              </th>
+              <th
+                class="py-5 px-6 text-xs font-bold uppercase tracking-widest text-brand-300 w-[37.5%] border-l border-slate-800 bg-slate-950"
+              >
+                After (NK Digital Tech Nishatganj Web)
+              </th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200 text-sm">
+            {
+              comparison.map((row, idx) => (
+                <tr class={idx % 2 === 0 ? 'bg-white' : 'bg-slate-50/80'}>
+                  <td class="py-5 px-6 font-display font-bold text-slate-900">
+                    {row.metric}
+                  </td>
+                  <td class="py-5 px-6 text-slate-600 border-l border-slate-200">
+                    <div class="flex items-start gap-2.5">
+                      <svg
+                        class="w-4 h-4 text-rose-500 mt-0.5 flex-shrink-0"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M6 18L18 6M6 6l12 12"
+                        />
+                      </svg>
+                      <span>{row.typical}</span>
+                    </div>
+                  </td>
+                  <td class="py-5 px-6 text-slate-900 font-medium border-l border-slate-200 bg-sky-50/40">
+                    <div class="flex items-start gap-2.5">
+                      <svg
+                        class="w-4 h-4 text-emerald-600 mt-0.5 flex-shrink-0"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2.5"
+                          d="M5 13l4 4L19 7"
+                        />
+                      </svg>
+                      <span>{row.nk}</span>
+                    </div>
+                  </td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+
+      <div class="md:hidden space-y-3.5">
+        {
+          comparison.map((row) => (
+            <div class="elevated-card rounded-2xl p-4 space-y-2.5 min-w-0">
+              <h3 class="font-display font-bold text-slate-900 text-[15px] leading-snug pb-2 border-b border-slate-100">
+                {row.metric}
+              </h3>
+              <div class="rounded-xl bg-rose-50 border border-rose-100 p-3">
+                <div class="flex items-center gap-1.5 mb-1">
+                  <svg
+                    class="w-3.5 h-3.5 text-rose-500 flex-shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M6 18L18 6M6 6l12 12"
+                    />
+                  </svg>
+                  <p class="text-[10.5px] font-bold uppercase tracking-wider text-rose-600">
+                    Before (Typical Nishatganj Web Shop)
+                  </p>
+                </div>
+                <p class="text-[13px] text-slate-700 leading-[1.6] text-left">
+                  {row.typical}
+                </p>
+              </div>
+              <div class="rounded-xl bg-sky-50 border border-sky-200 p-3">
+                <div class="flex items-center gap-1.5 mb-1">
+                  <svg
+                    class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2.5"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  <p class="text-[10.5px] font-bold uppercase tracking-wider text-brand-600">
+                    After (NK Digital Tech)
+                  </p>
+                </div>
+                <p class="text-[13px] text-slate-900 font-semibold leading-[1.6] text-left">
+                  {row.nk}
+                </p>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 6: INDUSTRIES
+  ===================================================================== -->
+  <section
+    id="industries"
+    class="relative surface-slate overflow-hidden scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200"
+  >
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-7 sm:mb-14 text-left sm:text-center">
+        <div class="badge-light mb-3">Sector Tailored Nishatganj Websites</div>
+        <h2
+          class="font-display font-extrabold text-[clamp(1.32rem,5.2vw,1.72rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4"
+        >
+          Custom Google and AI Ready Websites Across Twelve Nishatganj Industries
+        </h2>
+        <p
+          class="text-slate-600 text-[14px] sm:text-base leading-[1.7] sm:leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]"
+          set:html={`Buyers in Nishatganj look for specific proof depending on what they are buying. We pair custom industry layouts for corporate offices, coaching centres, clinics, interior studios and retail stores with <a href="/ai-seo-company-in-lucknow/" class="text-brand-600 hover:text-brand-700 font-semibold transition-colors">AI SEO Company in Lucknow</a> answer blocks across Paper Mill Colony, Badshah Nagar Belt, New Hyderabad.`}
+        />
+      </div>
+
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3.5 sm:gap-6"
+      >
+        {
+          industries.map((ind) => (
+            <div
+              class={`elevated-card rounded-2xl p-4 sm:p-6 border-t-4 ${ind.accentBorder} flex flex-col justify-between sm:hover:-translate-y-1 md:last:col-span-2 lg:last:col-span-1 min-w-0`}
+            >
+              <div>
+                <div class="flex flex-wrap items-center justify-between gap-2 mb-3 sm:mb-4">
+                  <div
+                    class={`w-10 h-10 sm:w-11 sm:h-11 rounded-xl border flex items-center justify-center flex-shrink-0 ${ind.iconBg}`}
+                  >
+                    <Fragment set:html={ind.icon} />
+                  </div>
+                  <span class="text-[10.5px] sm:text-[11px] font-semibold text-slate-600 bg-slate-100 px-2.5 py-1 rounded-md leading-tight break-words max-w-full">
+                    {ind.sector}
+                  </span>
+                </div>
+
+                <h3 class="font-display font-bold text-[16.5px] sm:text-lg text-slate-900 mb-2 leading-snug">
+                  {ind.title}
+                </h3>
+
+                <p class="text-slate-600 text-[13.5px] sm:text-sm leading-[1.68] sm:leading-relaxed mb-3.5 sm:mb-4 text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+                  {ind.focus}
+                </p>
+              </div>
+
+              <div class="rounded-xl bg-emerald-50/70 border border-emerald-200/80 p-3 sm:p-3.5">
+                <div class="flex items-center gap-1.5 text-[10.5px] font-bold uppercase tracking-wider text-emerald-700 mb-0.5">
+                  <svg
+                    class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2.5"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  <span>Business Result</span>
+                </div>
+                <p class="text-slate-800 text-[12.5px] sm:text-xs font-medium leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+                  {ind.outcome}
+                </p>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 7: HOW WE WORK
+  ===================================================================== -->
+  <section
+    id="process"
+    class="relative surface-white overflow-hidden scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200"
+  >
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl mx-auto mb-7 sm:mb-16 text-left sm:text-center">
+        <div class="badge-light mb-3">Our 4 Step Nishatganj Website Process</div>
+        <h2
+          class="font-display font-extrabold text-[clamp(1.32rem,5.2vw,1.72rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4"
+        >
+          How We Plan, Build and Launch Your Nishatganj Website On Time
+        </h2>
+        <p
+          class="text-slate-600 text-[14px] sm:text-base leading-[1.7] sm:leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]"
+          set:html={`No confusing technical talk and no long delays. We follow four simple weekly steps and share live smartphone preview links on your WhatsApp so you can check every page of your Nishatganj website before launch.`}
+        />
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-7">
+        {
+          stages.map((s) => (
+            <div class="elevated-card rounded-2xl p-4 sm:p-8 relative overflow-hidden group sm:hover:-translate-y-1 min-w-0">
+              <div class="flex items-center justify-between gap-4 mb-3.5 sm:mb-5">
+                <span
+                  class={`inline-flex items-center px-2.5 sm:px-3 py-1 rounded-lg text-xs font-bold uppercase tracking-wider text-white bg-gradient-to-r ${s.accent}`}
+                >
+                  {s.num}
+                </span>
+                <span class="font-display font-black text-2xl sm:text-4xl text-slate-200 group-hover:text-slate-300 transition-colors">
+                  {s.step}
+                </span>
+              </div>
+              <h3 class="font-display font-bold text-[16.5px] sm:text-xl text-slate-900 mb-2.5 sm:mb-3 leading-snug">
+                {s.title}
+              </h3>
+              <p class="text-slate-600 text-[13.5px] sm:text-sm leading-[1.68] sm:leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+                {s.body}
+              </p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 8: PARTNER WITH NK DIGITAL TECH (CONCLUSION)
+  ===================================================================== -->
+  <section
+    class="relative surface-indigo py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-800/80 overflow-hidden"
+  >
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <div
+        class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 lg:gap-12 items-center"
+      >
+        <div class="lg:col-span-7 min-w-0">
+          <div class="badge-dark mb-3 sm:mb-4">
+            Built for Nishatganj Growth
+          </div>
+          <h2
+            class="font-display font-extrabold text-[clamp(1.32rem,5.2vw,1.72rem)] sm:text-3xl lg:text-4xl text-white tracking-tight leading-[1.22] sm:leading-tight mb-4 sm:mb-6"
+          >
+            Turn Your Nishatganj Website Into Your Strongest Source of Daily Customer Calls
+          </h2>
+          <div
+            class="space-y-3.5 sm:space-y-5 text-slate-300 text-[14px] sm:text-base leading-[1.7] sm:leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]"
+          >
+            <p set:html={`Every Google search, Google Maps check, ChatGPT recommendation and word of mouth referral in Nishatganj visits your website before deciding to call you. Working with our <a href="/best-digital-marketing-company-in-lucknow/" class="text-brand-300 hover:text-white active:opacity-80 font-semibold transition-colors">Best Digital Marketing Company in Lucknow</a> team ensures your business looks established, opens in under a second on phones and wins the first call.`} />
+            <p set:html={`When you partner with NK Digital Tech as your <strong>Website Development Company in Nishatganj, Lucknow</strong>, you get a fast, mobile friendly website set up for Google and AI search from day one along with 100% ownership of your domain name, hosting and website files. Request your free Nishatganj Website Audit today and turn local visitors into daily customer calls.`} />
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 min-w-0">
+          <div
+            class="rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-700/80 shadow-2xl bg-slate-900"
+          >
+            <img
+              src="/images/web-dev-lucknow/website-leads-lucknow.webp"
+              alt="Website Development Company in Nishatganj Lucknow Generating Daily Customer Leads"
+              width="800"
+              height="450"
+              sizes="(max-width: 1024px) 100vw, 42vw"
+              class="w-full aspect-[16/9] sm:aspect-auto sm:h-64 lg:h-72 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 9: FAQ
+  ===================================================================== -->
+  <section
+    id="faq"
+    class="relative surface-cool overflow-hidden scroll-mt-16 sm:scroll-mt-20 py-10 sm:py-20 lg:py-24 px-4 sm:px-6 border-b border-slate-200"
+  >
+    <div class="max-w-4xl mx-auto">
+      <div class="text-left sm:text-center mb-7 sm:mb-14">
+        <div class="badge-light mb-3">
+          Nishatganj Website Pricing, Speed &amp; AI FAQs
+        </div>
+        <h2
+          class="font-display font-extrabold text-[clamp(1.32rem,5.2vw,1.72rem)] sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-[1.22] sm:leading-tight mb-3 sm:mb-4"
+        >
+          Common Questions About Hiring a Website Development Company in Nishatganj, Lucknow
+        </h2>
+        <p
+          class="text-slate-600 text-[14px] sm:text-base leading-[1.7] sm:leading-relaxed text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]"
+        >
+          Clear, simple answers to the questions business owners ask on Google, ChatGPT and Gemini before starting a website project in Nishatganj.
+        </p>
+      </div>
+
+      <div class="space-y-3 sm:space-y-4">
+        {
+          faqs.map((f, i) => (
+            <details
+              class="elevated-card rounded-2xl group overflow-hidden"
+              open={i === 0}
+            >
+              <summary class="flex items-start sm:items-center justify-between gap-2.5 sm:gap-4 px-3.5 sm:px-6 py-4 sm:py-5 min-h-[56px] active:bg-sky-50/60 transition-colors select-none">
+                <div class="flex items-start sm:items-center gap-2.5 sm:gap-3.5 text-left min-w-0">
+                  <span class="w-6 h-6 sm:w-7 sm:h-7 rounded-lg bg-sky-50 border border-sky-200 text-brand-600 font-display font-bold text-xs flex items-center justify-center flex-shrink-0 mt-0.5 sm:mt-0">
+                    0{i + 1}
+                  </span>
+                  <span class="font-display font-bold text-slate-900 text-[14px] sm:text-base md:text-lg leading-[1.4] sm:leading-snug break-words">
+                    {f.q}
+                  </span>
+                </div>
+                <span class="faq-icon w-7 h-7 sm:w-8 sm:h-8 rounded-full border border-slate-200 text-slate-600 flex items-center justify-center flex-shrink-0 mt-0.5 sm:mt-0">
+                  <svg
+                    class="w-3.5 h-3.5 sm:w-4 sm:h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 4v16m8-8H4"
+                    />
+                  </svg>
+                </span>
+              </summary>
+              <div class="px-3.5 sm:px-6 pb-4 sm:pb-6 pt-3 text-slate-600 text-[13.5px] sm:text-sm md:text-base leading-[1.7] sm:leading-relaxed border-t border-slate-100 text-left sm:text-justify sm:hyphens-auto sm:[text-align-last:left]">
+                {f.a}
+              </div>
+            </details>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 10: CALL TO ACTION BANNER (LAST SECTION)
+  ===================================================================== -->
+  <section
+    id="contact"
+    class="relative surface-dark scroll-mt-16 sm:scroll-mt-20 pt-10 pb-12 sm:py-16 lg:py-20 px-4 sm:px-6 overflow-hidden"
+  >
+    <div class="absolute inset-0 grid-pattern-dark pointer-events-none"></div>
+    <div class="relative z-10 max-w-5xl mx-auto">
+      <div
+        class="rounded-2xl sm:rounded-3xl bg-gradient-to-r from-brand-600 via-brand-500 to-accent-600 p-5 sm:p-10 md:p-12 text-center text-white shadow-2xl border border-white/15 relative overflow-hidden"
+      >
+        <div class="relative z-10 max-w-2xl mx-auto">
+          <h2
+            class="font-display font-black text-[clamp(1.32rem,5.2vw,1.72rem)] sm:text-3xl md:text-4xl text-white tracking-tight leading-[1.22] sm:leading-snug mb-3 sm:mb-4"
+          >
+            Ready to Launch a Fast, Lead Generating Website in Nishatganj, Lucknow?
+          </h2>
+
+          <p
+            class="text-sky-50 text-[13.5px] sm:text-sm md:text-base leading-relaxed mb-5 sm:mb-8 text-center"
+          >
+            Speak directly with our Website Development Company in Nishatganj, Lucknow for a free 15 minute website speed, Google ranking and lead audit tailored to your business.
+          </p>
+
+          <a
+            href="/contact-us/"
+            class="inline-flex w-full sm:w-auto min-h-[52px] items-center justify-center gap-2 sm:gap-3 px-4 sm:px-8 py-3.5 sm:py-4 rounded-xl bg-white text-slate-950 hover:bg-sky-50 font-display font-bold text-[14px] sm:text-base shadow-xl transition-all duration-300 active:scale-[0.98] select-none text-center leading-snug"
+          >
+            <span>Claim Free Nishatganj Website Audit</span>
+            <svg
+              class="w-4 h-4 sm:w-5 sm:h-5 text-brand-600 flex-shrink-0"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M14 5l7 7-7 7M3 12h18"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mobile Sticky Bottom Quick Action Bar -->
+  <div
+    class="mobile-sticky-cta sm:hidden fixed bottom-0 inset-x-0 z-40 bg-[#050a14]/95 backdrop-blur-xl border-t border-slate-800 px-3 pt-2.5 pb-[max(0.7rem,env(safe-area-inset-bottom))] shadow-[0_-8px_24px_rgba(0,0,0,0.45)] transition-all duration-200"
+  >
+    <div class="flex items-center gap-2.5">
+      <a
+        href="/contact-us/"
+        class="btn-primary flex-1 min-h-[48px] py-2.5 px-3 text-[12.5px] font-bold rounded-xl whitespace-nowrap"
+      >
+        <span>Free Website Audit</span>
+        <svg
+          class="w-3.5 h-3.5 flex-shrink-0"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M14 5l7 7-7 7M3 12h18"></path>
+        </svg>
+      </a>
+      <a
+        href="#services"
+        class="btn-secondary-dark min-h-[48px] py-2.5 px-4 text-[12.5px] font-semibold rounded-xl flex-shrink-0 whitespace-nowrap"
+      >
+        <span>Services</span>
+      </a>
+    </div>
+  </div>
+
+  <style>
+    @media (max-width: 639px) {
+      .glass-card {
+        backdrop-filter: blur(6px);
+        -webkit-backdrop-filter: blur(6px);
+      }
+      #services,
+      #why-us,
+      #industries,
+      #process,
+      #faq {
+        content-visibility: auto;
+        contain-intrinsic-size: auto 680px;
+      }
+      p a {
+        padding-top: 2px;
+        padding-bottom: 2px;
+      }
+      a,
+      button,
+      summary {
+        touch-action: manipulation;
+        -webkit-tap-highlight-color: transparent;
+      }
+    }
+  </style>
+</Layout>
